@@ -73,26 +73,40 @@ const MediaComponent = ({
         description: "No description available",
       };
 
+    const formatTags = (tags) => {
+      if (Array.isArray(tags)) {
+        return tags.filter(Boolean).join(", ");
+      }
+      if (typeof tags === "string") {
+        const trimmed = tags.trim();
+        if (!trimmed) return "";
+        try {
+          const parsed = JSON.parse(trimmed);
+          if (Array.isArray(parsed)) {
+            return parsed.filter(Boolean).join(", ");
+          }
+        } catch {
+          // plain comma-separated or single tag string
+        }
+        return trimmed;
+      }
+      return "";
+    };
+
+    const tagsDescription = formatTags(media.tags) || "No description available";
+
     if (showAlt) {
       return {
         title:
           media.altTitle || media.title || media.file_name || "Untitled Media",
         description:
-          media.altDescription ||
-          media.description ||
-          (media.tags && media.tags.length > 0
-            ? media.tags.join(", ")
-            : "No description available"),
+          media.altDescription || media.description || tagsDescription,
       };
     }
 
     return {
       title: media.title || media.file_name || "Untitled Media",
-      description:
-        media.description ||
-        (media.tags && media.tags.length > 0
-          ? media.tags.join(", ")
-          : "No description available"),
+      description: media.description || tagsDescription,
     };
   };
 

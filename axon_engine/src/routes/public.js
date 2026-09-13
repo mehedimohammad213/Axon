@@ -16,53 +16,57 @@ const formSubmissionController = require('../controllers/formSubmissionControlle
 
 const router = express.Router();
 
-router.use(identifyPublicSite);
+// Site-key auth only for /public/* — do not apply to all /api requests
+// (CMS JWT routes must fall through to the protected stack).
+const siteRouter = express.Router();
+siteRouter.use(identifyPublicSite);
 
-router.get('/public/pages', publicPageController.index);
-router.get('/public/pages/:slug', publicPageController.show);
+siteRouter.get('/pages', publicPageController.index);
+siteRouter.get('/pages/:slug', publicPageController.show);
 
-router.get('/public/navbars', navbarController.index);
-router.get('/public/navbars/:id', navbarController.show);
-router.get('/public/navbar', navbarController.index);
+siteRouter.get('/navbars', navbarController.index);
+siteRouter.get('/navbars/:id', navbarController.show);
+siteRouter.get('/navbar', navbarController.index);
 
-router.get('/public/menus', menuController.index);
-router.get('/public/menus/:id', menuController.show);
+siteRouter.get('/menus', menuController.index);
+siteRouter.get('/menus/:id', menuController.show);
 
-router.get('/public/menuitems', menuItemController.index);
-router.get('/public/menuitems/:id', menuItemController.show);
+siteRouter.get('/menuitems', menuItemController.index);
+siteRouter.get('/menuitems/:id', menuItemController.show);
 
-router.get('/public/footers', footerController.index);
-router.get('/public/footers/:id', footerController.show);
+siteRouter.get('/footers', footerController.index);
+siteRouter.get('/footers/:id', footerController.show);
 
-router.get('/public/sliders', sliderController.index);
-router.get('/public/sliders/:id', sliderController.show);
+siteRouter.get('/sliders', sliderController.index);
+siteRouter.get('/sliders/:id', sliderController.show);
 
-router.get('/public/cards', cardController.index);
-router.get('/public/cards/:id', cardController.show);
+siteRouter.get('/cards', cardController.index);
+siteRouter.get('/cards/:id', cardController.show);
 
-router.get('/public/tables', tableController.index);
-router.get('/public/tables/:id', tableController.show);
+siteRouter.get('/tables', tableController.index);
+siteRouter.get('/tables/:id', tableController.show);
 
-router.get('/public/product-types', productTypeController.index);
-router.get('/public/product-types/:id', productTypeController.show);
+siteRouter.get('/product-types', productTypeController.index);
+siteRouter.get('/product-types/:id', productTypeController.show);
 
-router.get('/public/products', productController.index);
-router.get('/public/products/:id', productController.show);
+siteRouter.get('/products', productController.index);
+siteRouter.get('/products/:id', productController.show);
 
-router.get('/public/forms', formController.index);
-router.get('/public/forms/:id', formController.show);
+siteRouter.get('/forms', formController.index);
+siteRouter.get('/forms/:id', formController.show);
 
-router.get('/public/form_builder', formBuilderController.index);
-router.get('/public/form_builder/:id', formBuilderController.show);
+siteRouter.get('/form_builder', formBuilderController.index);
+siteRouter.get('/form_builder/:id', formBuilderController.show);
 
-router.get('/public/media/pageview', mediaController.pageview);
-router.get('/public/media', mediaController.index);
-router.get('/public/media/:id', mediaController.show);
+siteRouter.get('/media/pageview', mediaController.pageview);
+siteRouter.get('/media', mediaController.index);
+siteRouter.get('/media/:id', mediaController.show);
 
-router.get('/public/generated-models', generatedModelController.getGeneratedModels);
-router.get('/public/dynamic', dynamicController.index);
-router.get('/public/dynamic/:id', dynamicController.show);
+siteRouter.get('/generated-models', generatedModelController.getGeneratedModels);
+siteRouter.get('/dynamic', dynamicController.index);
+siteRouter.get('/dynamic/:id', dynamicController.show);
 
-router.post('/form-submission', formSubmissionController.store);
+router.use('/public', siteRouter);
+router.post('/form-submission', identifyPublicSite, formSubmissionController.store);
 
 module.exports = router;

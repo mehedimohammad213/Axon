@@ -71,9 +71,18 @@ const Menus = () => {
     }
 
     if (filters.menu_item_id) {
-      results = results.filter((menu) =>
-        menu.menu_items?.some((item) => item.id === filters.menu_item_id)
-      );
+      const filterId = String(filters.menu_item_id);
+      results = results.filter((menu) => {
+        if (Array.isArray(menu.menu_items) && menu.menu_items.length) {
+          return menu.menu_items.some(
+            (item) => String(item.id) === filterId
+          );
+        }
+        const ids = Array.isArray(menu.menu_item_ids)
+          ? menu.menu_item_ids
+          : [];
+        return ids.some((id) => String(id) === filterId);
+      });
     }
 
     return results;

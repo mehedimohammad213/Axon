@@ -1,9 +1,6 @@
 const createCrud = require('./crudFactory');
 const sliderController = require('./sliderController');
-
-const navbarController = createCrud('navbars', {
-  requiredOnCreate: ['title_en', 'logo_id', 'menu_id'],
-});
+const navbarController = require('./navbarController');
 
 const menuController = createCrud('menus', {
   jsonFields: ['menu_item_ids'],

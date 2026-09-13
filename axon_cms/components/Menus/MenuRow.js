@@ -1,6 +1,6 @@
 // components/Menus/MenuRow.js
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import {
   Input,
   Button,
@@ -34,6 +34,45 @@ const InfoRow = ({ label, children }) => (
   </div>
 );
 
+const parseMenuItemIds = (menuItemIds) => {
+  if (Array.isArray(menuItemIds)) return menuItemIds;
+
+  if (typeof menuItemIds === "string") {
+    try {
+      const parsed = JSON.parse(menuItemIds);
+      return Array.isArray(parsed) ? parsed : [];
+    } catch {
+      return [];
+    }
+  }
+
+  return [];
+};
+
+const normalizeMenuItemIds = (menu, menuItems = []) => {
+  const rawIds = Array.isArray(menu.menu_items) && menu.menu_items.length
+    ? menu.menu_items.map((item) => item.id)
+    : parseMenuItemIds(menu.menu_item_ids);
+
+  const menuItemIds = new Set(menuItems.map((item) => item.id));
+
+  return rawIds
+    .map((id) => {
+      if (menuItemIds.has(id)) return id;
+
+      const numericId = Number(id);
+      if (Number.isFinite(numericId) && menuItemIds.has(numericId)) {
+        return numericId;
+      }
+
+      const stringId = String(id);
+      if (menuItemIds.has(stringId)) return stringId;
+
+      return id;
+    })
+    .filter((id) => id !== undefined && id !== null);
+};
+
 const MenuRow = ({
   menu,
   menuItems,
@@ -43,21 +82,32 @@ const MenuRow = ({
   expandedMenuId,
   handleExpand,
 }) => {
-  const [editedMenuName, setEditedMenuName] = useState(menu.name);
-  const [editedMenuItemsIds, setEditedMenuItemsIds] = useState(
-    menu.menu_items?.map((item) => item.id) || []
+  const menuItemIds = useMemo(
+    () => normalizeMenuItemIds(menu, menuItems),
+    [menu, menuItems]
   );
+  const menuItemsById = useMemo(
+    () => new Map(menuItems.map((item) => [item.id, item])),
+    [menuItems]
+  );
+  const orderedMenuItems = useMemo(
+    () => menuItemIds.map((id) => menuItemsById.get(id)).filter(Boolean),
+    [menuItemIds, menuItemsById]
+  );
+
+  const [editedMenuName, setEditedMenuName] = useState(menu.name);
+  const [editedMenuItemsIds, setEditedMenuItemsIds] = useState(menuItemIds);
 
   const isEditing = editingMenuId === menu.id;
   const isExpanded = expandedMenuId === menu.id;
-  const menuItemsCount = menu.menu_items?.length || 0;
+  const menuItemsCount = orderedMenuItems.length || menuItemIds.length;
 
   useEffect(() => {
     if (isEditing) {
       setEditedMenuName(menu.name);
-      setEditedMenuItemsIds(menu.menu_items?.map((item) => item.id) || []);
+      setEditedMenuItemsIds(menuItemIds);
     }
-  }, [isEditing, menu]);
+  }, [isEditing, menu, menuItemIds]);
 
   const handleUpdate = async () => {
     try {
@@ -70,7 +120,15 @@ const MenuRow = ({
         message.success("Menu updated successfully");
         setMenus((prevMenus) =>
           prevMenus?.map((item) =>
-            item.id === menu.id ? { ...item, ...updatedMenu } : item
+            item.id === menu.id
+              ? {
+                  ...item,
+                  ...updatedMenu,
+                  menu_items: editedMenuItemsIds
+                    .map((id) => menuItemsById.get(id))
+                    .filter(Boolean),
+                }
+              : item
           )
         );
         setEditingMenuId(null);
@@ -167,7 +225,7 @@ const MenuRow = ({
               className="mt-2 flex flex-wrap gap-1.5"
               onClick={(e) => e.stopPropagation()}
             >
-              {menu.menu_items.slice(0, 3).map((item) => (
+              {orderedMenuItems.slice(0, 3).map((item) => (
                 <Tag
                   key={item.id}
                   className="m-0 inline-flex items-center rounded-md border-gray-200 bg-gray-50 px-2 py-0.5 text-xs text-gray-700"
@@ -252,7 +310,7 @@ const MenuRow = ({
                         </h4>
                       </div>
                       <ul className="space-y-2">
-                        {menu.menu_items.map((item) => (
+                        {orderedMenuItems.map((item) => (
                           <li
                             key={item.id}
                             className="flex flex-col gap-0.5 rounded-lg border border-gray-100 bg-gray-50/80 px-3 py-2.5 sm:flex-row sm:items-center sm:justify-between sm:gap-4"

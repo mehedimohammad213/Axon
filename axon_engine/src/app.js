@@ -55,13 +55,14 @@ function withOrgContext(req, res, next) {
 // Public auth (register, login)
 app.use('/api', withOrgContext, publicAuthRoutes);
 
+// Public site API (site key auth) — must run before JWT-protected routes,
+// otherwise authenticate() 401s every /api/* request that has no Bearer token.
+app.use('/api', withOrgContext, publicRoutes);
+
 // Protected CMS API (JWT + org context + permissions)
 const protectedStack = [withOrgContext, authenticate, ensureOrganizationContext, checkPermissions];
 app.use('/api', ...protectedStack, protectedAuthRoutes);
 app.use('/api', ...protectedStack, apiRoutes);
-
-// Public site API (site key auth)
-app.use('/api', withOrgContext, publicRoutes);
 
 // Backward compatibility for legacy dynamic routes
 app.use('/dynamic', (req, res) => {
