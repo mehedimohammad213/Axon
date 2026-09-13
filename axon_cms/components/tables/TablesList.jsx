@@ -1,103 +1,67 @@
 import React from "react";
-import { Button, Popconfirm, Table, Tag } from "antd";
-import { DeleteOutlined, EditOutlined, EyeOutlined } from "@ant-design/icons";
-import { getTableStats } from "./tableUtils";
+import { Empty, Button } from "antd";
+import { PlusOutlined, TableOutlined } from "@ant-design/icons";
+import TableRow from "./TableRow";
 
 const TablesList = ({
   tables,
+  expandedTableId,
+  handleExpand,
   onPreview,
   onEdit,
   onDelete,
+  onCreate,
 }) => {
-  const columns = [
-    {
-      title: "ID",
-      dataIndex: "id",
-      key: "id",
-      width: 80,
-      render: (id) => <Tag>{id}</Tag>,
-    },
-    {
-      title: "Title",
-      dataIndex: "title_en",
-      key: "title_en",
-      render: (title, record) => (
-        <div className="space-y-1">
-          <div className="font-medium text-gray-900">
-            {title || "Untitled Table"}
-          </div>
-          {record.page_name && (
-            <div className="text-xs text-gray-500">{record.page_name}</div>
-          )}
-        </div>
-      ),
-    },
-    {
-      title: "Columns",
-      key: "columns",
-      width: 110,
-      render: (_, record) => {
-        const { columnCount } = getTableStats(record);
-        return <Tag color="blue">{columnCount}</Tag>;
-      },
-    },
-    {
-      title: "Rows",
-      key: "rows",
-      width: 100,
-      render: (_, record) => {
-        const { rowCount } = getTableStats(record);
-        return <Tag>{rowCount}</Tag>;
-      },
-    },
-    {
-      title: "Status",
-      dataIndex: "status",
-      key: "status",
-      width: 110,
-      render: (status) =>
-        status === false || status === 0 ? (
-          <Tag color="default">Inactive</Tag>
-        ) : (
-          <Tag color="green">Active</Tag>
-        ),
-    },
-    {
-      title: "Actions",
-      key: "actions",
-      width: 220,
-      render: (_, record) => (
-        <div className="flex flex-wrap gap-2">
-          <Button icon={<EyeOutlined />} onClick={() => onPreview?.(record)}>
-            View
-          </Button>
-          <Button icon={<EditOutlined />} onClick={() => onEdit?.(record)}>
-            Edit
-          </Button>
-          <Popconfirm
-            title="Delete this table?"
-            description="This cannot be undone."
-            okText="Delete"
-            okButtonProps={{ danger: true }}
-            onConfirm={() => onDelete?.(record.id)}
-          >
-            <Button danger icon={<DeleteOutlined />}>
-              Delete
+  if (!tables.length) {
+    return (
+      <div className="mt-6 flex items-center justify-center rounded-2xl border border-dashed border-gray-200 bg-white py-16">
+        <Empty
+          image={
+            <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-light text-2xl text-brand-dark">
+              <TableOutlined />
+            </div>
+          }
+          description={
+            <div className="space-y-1">
+              <p className="text-base font-medium text-gray-800">
+                No tables yet
+              </p>
+              <p className="text-sm text-gray-500">
+                Create a reusable table to use in the page builder.
+              </p>
+            </div>
+          }
+        >
+          {onCreate && (
+            <Button
+              type="primary"
+              icon={<PlusOutlined />}
+              onClick={onCreate}
+              className="mt-2 bg-brand hover:bg-brand-dark"
+            >
+              Create table
             </Button>
-          </Popconfirm>
-        </div>
-      ),
-    },
-  ];
+          )}
+        </Empty>
+      </div>
+    );
+  }
 
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
-      <Table
-        rowKey="id"
-        columns={columns}
-        dataSource={tables}
-        pagination={false}
-      />
+    <div className="mt-6 space-y-4">
+      <div className="grid grid-cols-1 items-start gap-4 xl:grid-cols-2">
+        {tables.map((table) => (
+          <TableRow
+            key={table.id}
+            table={table}
+            expandedTableId={expandedTableId}
+            handleExpand={handleExpand}
+            onPreview={onPreview}
+            onEdit={onEdit}
+            onDelete={onDelete}
+          />
+        ))}
+      </div>
     </div>
   );
 };
