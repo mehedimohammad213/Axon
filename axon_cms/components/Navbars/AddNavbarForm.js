@@ -10,7 +10,14 @@ import AddMenuForm from "../Menus/AddMenuForm";
 import AddMenuItemForm from "../MenuItems/AddMenuItemForm";
 import Image from "next/image";
 
-const AddNavbarForm = ({ menus, fetchMenus, media, onCancel, fetchNavbars, onNavbarCreated }) => {
+const AddNavbarForm = ({
+  menus,
+  fetchMenus,
+  media,
+  onCancel,
+  fetchNavbars,
+  onNavbarCreated,
+}) => {
   const [newNavbarTitleEn, setNewNavbarTitleEn] = useState("");
   const [newNavbarTitleBn, setNewNavbarTitleBn] = useState("");
   const [newLogoId, setNewLogoId] = useState(null);
@@ -23,6 +30,7 @@ const AddNavbarForm = ({ menus, fetchMenus, media, onCancel, fetchNavbars, onNav
   const [isAddMenuOpen, setIsAddMenuOpen] = useState(false);
   const [isAddMenuItemOpen, setIsAddMenuItemOpen] = useState(false);
   const [selectedMenuName, setSelectedMenuName] = useState("");
+  const [saving, setSaving] = useState(false);
 
   const findMenuById = useCallback(
     (menuId, menusList = menus) =>
@@ -99,28 +107,22 @@ const AddNavbarForm = ({ menus, fetchMenus, media, onCancel, fetchNavbars, onNav
     fetchPages();
   }, [fetchMenuItems, fetchPages]);
 
-  useEffect(() => {
-    if (!newMenuId) {
-      setNewMenuItemIds([]);
+  const applyMenuSelection = (menuId) => {
+    setNewMenuId(menuId ?? null);
+    if (!menuId) {
+      setSelectedMenuName("");
       return;
     }
-    const selectedMenu = findMenuById(newMenuId);
-    if (!selectedMenu) {
-      return;
-    }
-    if (selectedMenu.menu_items?.length) {
+    const selectedMenu = findMenuById(menuId);
+    setSelectedMenuName(selectedMenu?.name || "");
+    if (selectedMenu?.menu_items?.length) {
       setNewMenuItemIds(selectedMenu.menu_items.map((item) => item.id));
-    } else if (selectedMenu.menu_item_ids) {
+    } else if (selectedMenu?.menu_item_ids) {
       setNewMenuItemIds(selectedMenu.menu_item_ids);
     } else {
       setNewMenuItemIds([]);
     }
-    if (selectedMenu.name) {
-      setSelectedMenuName(selectedMenu.name);
-    }
-    // Only reset when the selected menu changes so newly created items stay selected.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [newMenuId]);
+  };
 
   const resetForm = () => {
     setNewNavbarTitleEn("");
@@ -140,31 +142,58 @@ const AddNavbarForm = ({ menus, fetchMenus, media, onCancel, fetchNavbars, onNav
     onCancel();
   };
 
-  const handleAddNavbar = async () => {
-    if (!newNavbarTitleEn || !newLogoId || !newMenuId) {
-      message.error("Please fill in all required fields");
-      return;
-    }
-    try {
+  const ensureMenuId = async () => {
+    if (newMenuId) {
       const menu = await resolveMenuForUpdate(newMenuId);
       const menuName = menu?.name || selectedMenuName;
       if (!menuName) {
-        message.error("Selected menu could not be found. Please re-select the menu.");
-        return;
+        throw new Error("MENU_NOT_FOUND");
       }
+      await instance.put(`/menus/${newMenuId}`, {
+        name: menuName,
+        menu_item_ids: newMenuItemIds,
+      });
+      return newMenuId;
+    }
 
+    if (!newMenuItemIds.length) {
+      return null;
+    }
+
+    const menuName =
+      (newNavbarTitleEn && `${newNavbarTitleEn} Menu`) || "Navbar Menu";
+    const response = await instance.post("/menus", {
+      name: menuName,
+      menu_item_ids: newMenuItemIds,
+    });
+    if (response.status !== 201 || !response.data?.id) {
+      throw new Error("MENU_CREATE_FAILED");
+    }
+    await fetchMenus?.();
+    return response.data.id;
+  };
+
+  const handleAddNavbar = async () => {
+    if (!newNavbarTitleEn || !newLogoId) {
+      message.error("Please fill in title and logo");
+      return;
+    }
+    if (!newMenuId && !newMenuItemIds.length) {
+      message.error("Select at least one menu item (or assign an existing menu)");
+      return;
+    }
+
+    try {
+      setSaving(true);
+      const menuId = await ensureMenuId();
       const newNavbar = {
         title_en: newNavbarTitleEn,
         title_bn: newNavbarTitleBn,
         logo_id: newLogoId,
-        menu_id: newMenuId,
+        menu_id: menuId,
       };
       const response = await instance.post("/navbars", newNavbar);
       if (response.status === 201) {
-        await instance.put(`/menus/${newMenuId}`, {
-          name: menuName,
-          menu_item_ids: newMenuItemIds,
-        });
         message.success("Navbar created successfully");
         fetchNavbars?.();
         fetchMenus?.();
@@ -175,7 +204,17 @@ const AddNavbarForm = ({ menus, fetchMenus, media, onCancel, fetchNavbars, onNav
         message.error("Error creating navbar");
       }
     } catch (error) {
-      message.error("Error creating navbar");
+      if (error?.message === "MENU_NOT_FOUND") {
+        message.error(
+          "Selected menu could not be found. Please re-select the menu."
+        );
+      } else if (error?.message === "MENU_CREATE_FAILED") {
+        message.error("Could not create menu for selected items");
+      } else {
+        message.error("Error creating navbar");
+      }
+    } finally {
+      setSaving(false);
     }
   };
 
@@ -225,7 +264,28 @@ const AddNavbarForm = ({ menus, fetchMenus, media, onCancel, fetchNavbars, onNav
         <div>
           <div className="flex items-center justify-between mb-2">
             <label className="block text-sm font-semibold text-gray-700">
-              Assigned Menu
+              Menu Items — select multiple and drag to order
+            </label>
+            <Button
+              icon={<PlusCircleOutlined />}
+              onClick={() => setIsAddMenuItemOpen(true)}
+              className="h-9 px-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0 font-semibold shadow-md hover:shadow-lg transition-all rounded-lg text-xs"
+            >
+              Create Item
+            </Button>
+          </div>
+          <SortableMenuItemsPicker
+            menuItems={menuItems}
+            value={newMenuItemIds}
+            onChange={setNewMenuItemIds}
+          />
+        </div>
+
+        <div>
+          <div className="flex items-center justify-between mb-2">
+            <label className="block text-sm font-semibold text-gray-700">
+              Assigned Menu{" "}
+              <span className="font-normal text-gray-400">(optional)</span>
             </label>
             <Button
               icon={<PlusCircleOutlined />}
@@ -237,13 +297,9 @@ const AddNavbarForm = ({ menus, fetchMenus, media, onCancel, fetchNavbars, onNav
           </div>
           <Select
             showSearch
-            placeholder="Select a Menu"
+            placeholder="Leave empty to auto-create from selected items"
             optionFilterProp="children"
-            onChange={(value) => {
-              setNewMenuId(value ?? null);
-              const menu = findMenuById(value);
-              setSelectedMenuName(menu?.name || "");
-            }}
+            onChange={applyMenuSelection}
             className="w-full max-w-md [&_.ant-select-selector]:h-10 [&_.ant-select-selector]:border-2 [&_.ant-select-selector]:border-gray-200 [&_.ant-select-selector]:rounded-lg hover:[&_.ant-select-selector]:border-blue-300"
             allowClear
             value={newMenuId}
@@ -254,29 +310,11 @@ const AddNavbarForm = ({ menus, fetchMenus, media, onCancel, fetchNavbars, onNav
               </Select.Option>
             ))}
           </Select>
+          <p className="mt-1 text-xs text-gray-400">
+            Pick an existing menu to load its items, or skip and we&apos;ll
+            create one from your selected items.
+          </p>
         </div>
-
-        {newMenuId && (
-          <div>
-            <div className="flex items-center justify-between mb-2">
-              <label className="block text-sm font-semibold text-gray-700">
-                Menu Items — select and drag to order
-              </label>
-              <Button
-                icon={<PlusCircleOutlined />}
-                onClick={() => setIsAddMenuItemOpen(true)}
-                className="h-9 px-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0 font-semibold shadow-md hover:shadow-lg transition-all rounded-lg text-xs"
-              >
-                Create Item
-              </Button>
-            </div>
-            <SortableMenuItemsPicker
-              menuItems={menuItems}
-              value={newMenuItemIds}
-              onChange={setNewMenuItemIds}
-            />
-          </div>
-        )}
       </div>
 
       <div className="flex justify-end mt-4 gap-4">
@@ -290,6 +328,7 @@ const AddNavbarForm = ({ menus, fetchMenus, media, onCancel, fetchNavbars, onNav
         <Button
           icon={<PlusCircleOutlined />}
           onClick={handleAddNavbar}
+          loading={saving}
           className="h-11 px-6 bg-gradient-to-r from-brand to-brand-dark hover:from-brand-dark hover:to-blue-600 text-white border-0 font-semibold shadow-md hover:shadow-xl transition-all rounded-xl"
         >
           Create Navbar
@@ -343,7 +382,11 @@ const AddNavbarForm = ({ menus, fetchMenus, media, onCancel, fetchNavbars, onNav
         footer={null}
         title={
           <div className="flex items-center gap-2">
-            <img src="/icons/headless/menuitems.svg" alt="Menu Items" className="w-6" />
+            <img
+              src="/icons/headless/menuitems.svg"
+              alt="Menu Items"
+              className="w-6"
+            />
             <span>Add Menu Item</span>
           </div>
         }

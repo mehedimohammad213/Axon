@@ -206,12 +206,12 @@ const NavbarRow = ({
     }
   }, [isEditing, navbar.id]);
 
-  useEffect(() => {
-    if (!editedMenuId) {
-      setEditedMenuItemIds([]);
+  const applyMenuSelection = (menuId) => {
+    setEditedMenuId(menuId ?? null);
+    if (!menuId) {
       return;
     }
-    const selectedMenu = findMenuById(editedMenuId);
+    const selectedMenu = findMenuById(menuId);
     if (selectedMenu?.menu_items?.length) {
       setEditedMenuItemIds(selectedMenu.menu_items.map((item) => item.id));
     } else if (selectedMenu?.menu_item_ids) {
@@ -219,35 +219,62 @@ const NavbarRow = ({
     } else {
       setEditedMenuItemIds([]);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [editedMenuId]);
+  };
+
+  const ensureMenuId = async () => {
+    if (editedMenuId) {
+      const menu = await resolveMenuForUpdate(editedMenuId);
+      if (!menu?.name) {
+        throw new Error("MENU_NOT_FOUND");
+      }
+      await instance.put(`/menus/${editedMenuId}`, {
+        name: menu.name,
+        menu_item_ids: editedMenuItemIds,
+      });
+      return editedMenuId;
+    }
+
+    if (!editedMenuItemIds.length) {
+      return null;
+    }
+
+    const menuName =
+      (editedNavbarTitleEn && `${editedNavbarTitleEn} Menu`) || "Navbar Menu";
+    const response = await instance.post("/menus", {
+      name: menuName,
+      menu_item_ids: editedMenuItemIds,
+    });
+    if (response.status !== 201 || !response.data?.id) {
+      throw new Error("MENU_CREATE_FAILED");
+    }
+    return response.data.id;
+  };
 
   const handleUpdate = async () => {
+    if (!editedNavbarTitleEn || !editedLogoId) {
+      message.error("Please fill in title and logo");
+      return;
+    }
+    if (!editedMenuId && !editedMenuItemIds.length) {
+      message.error(
+        "Select at least one menu item (or assign an existing menu)"
+      );
+      return;
+    }
+
     try {
+      const menuId = await ensureMenuId();
       const updatedNavbar = {
         title_en: editedNavbarTitleEn,
         title_bn: editedNavbarTitleBn,
         logo_id: editedLogoId,
-        menu_id: editedMenuId,
+        menu_id: menuId,
       };
       const response = await instance.put(
         `/navbars/${navbar.id}`,
         updatedNavbar
       );
       if (response.status === 200) {
-        if (editedMenuId) {
-          const menu = await resolveMenuForUpdate(editedMenuId);
-          if (!menu?.name) {
-            message.error(
-              "Selected menu could not be found. Please re-select the menu."
-            );
-            return;
-          }
-          await instance.put(`/menus/${editedMenuId}`, {
-            name: menu.name,
-            menu_item_ids: editedMenuItemIds,
-          });
-        }
         message.success("Navbar updated successfully");
         setNavbars((prevNavbars) =>
           prevNavbars?.map((item) =>
@@ -256,12 +283,21 @@ const NavbarRow = ({
         );
         setEditingNavbarId(null);
         setSelectedLogoMedia(null);
+        setEditedMenuId(menuId);
         fetchNavbars();
       } else {
         message.error("Error updating navbar");
       }
-    } catch {
-      message.error("Error updating navbar");
+    } catch (error) {
+      if (error?.message === "MENU_NOT_FOUND") {
+        message.error(
+          "Selected menu could not be found. Please re-select the menu."
+        );
+      } else if (error?.message === "MENU_CREATE_FAILED") {
+        message.error("Could not create menu for selected items");
+      } else {
+        message.error("Error updating navbar");
+      }
     }
   };
 
@@ -452,15 +488,39 @@ const NavbarRow = ({
                   </div>
 
                   <div>
+                    <div className="mb-2 flex items-center justify-between">
+                      <label className="text-xs font-medium uppercase tracking-wide text-gray-400">
+                        Menu items — select multiple and drag to order
+                      </label>
+                      <Button
+                        icon={<PlusCircleOutlined />}
+                        onClick={() => setIsAddMenuItemOpen(true)}
+                        size="small"
+                        className="rounded-lg border-brand text-brand-dark hover:border-brand-dark"
+                      >
+                        Add item
+                      </Button>
+                    </div>
+                    <SortableMenuItemsPicker
+                      menuItems={menuItems}
+                      value={editedMenuItemIds}
+                      onChange={setEditedMenuItemIds}
+                    />
+                  </div>
+
+                  <div>
                     <label className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-gray-400">
-                      Assigned menu
+                      Assigned menu{" "}
+                      <span className="normal-case tracking-normal text-gray-300">
+                        (optional)
+                      </span>
                     </label>
                     <Select
                       showSearch
-                      placeholder="Select a menu"
+                      placeholder="Leave empty to auto-create from selected items"
                       optionFilterProp="children"
                       value={editedMenuId}
-                      onChange={(value) => setEditedMenuId(value)}
+                      onChange={applyMenuSelection}
                       className="w-full max-w-md"
                       allowClear
                     >
@@ -471,29 +531,6 @@ const NavbarRow = ({
                       ))}
                     </Select>
                   </div>
-
-                  {editedMenuId && (
-                    <div>
-                      <div className="mb-2 flex items-center justify-between">
-                        <label className="text-xs font-medium uppercase tracking-wide text-gray-400">
-                          Menu items — drag to order
-                        </label>
-                        <Button
-                          icon={<PlusCircleOutlined />}
-                          onClick={() => setIsAddMenuItemOpen(true)}
-                          size="small"
-                          className="rounded-lg border-brand text-brand-dark hover:border-brand-dark"
-                        >
-                          Add item
-                        </Button>
-                      </div>
-                      <SortableMenuItemsPicker
-                        menuItems={menuItems}
-                        value={editedMenuItemIds}
-                        onChange={setEditedMenuItemIds}
-                      />
-                    </div>
-                  )}
                 </div>
               ) : (
                 <div className="space-y-5">
