@@ -1,0 +1,1740 @@
+[
+  {
+    "id": 19,
+    "title_en": "Home Slider",
+    "title_bn": "হোম স্লাইডার",
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [
+      166,
+      75,
+      168,
+      167
+    ],
+    "status": 0,
+    "created_at": "2023-11-15T21:15:30.000000Z",
+    "updated_at": "2023-11-15T21:15:30.000000Z",
+    "medias": [
+      {
+        "id": 166,
+        "title": null,
+        "file_name": "mave_aygaz_T7N0sm.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_aygaz_T7N0sm.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2023-11-15T21:12:01.000000Z",
+        "updated_at": "2023-11-15T21:12:01.000000Z"
+      },
+      {
+        "id": 75,
+        "title": null,
+        "file_name": "mave_aygaz_UIx50v.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_aygaz_UIx50v.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2023-10-18T15:04:43.000000Z",
+        "updated_at": "2023-10-18T15:04:43.000000Z"
+      },
+      {
+        "id": 168,
+        "title": null,
+        "file_name": "mave_aygaz_hKJfbT.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_aygaz_hKJfbT.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2023-11-15T21:12:07.000000Z",
+        "updated_at": "2023-11-15T21:12:07.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "title_en": "home Slider march",
+    "title_bn": "home Slider march",
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [
+      218,
+      215,
+      214,
+      213
+    ],
+    "status": 0,
+    "created_at": "2024-03-07T15:24:58.000000Z",
+    "updated_at": "2024-03-18T13:04:28.000000Z",
+    "medias": [
+      {
+        "id": 218,
+        "title": null,
+        "file_name": "mave_aygaz_GgySYl.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_aygaz_GgySYl.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-03-18T07:46:46.000000Z",
+        "updated_at": "2024-03-18T07:46:46.000000Z"
+      },
+      {
+        "id": 215,
+        "title": null,
+        "file_name": "mave_aygaz_AvPudQ.jpg",
+        "file_type": "image/png",
+        "file_path": "media/mave_aygaz_AvPudQ.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-03-14T13:36:10.000000Z",
+        "updated_at": "2024-03-14T13:36:10.000000Z"
+      },
+      {
+        "id": 214,
+        "title": null,
+        "file_name": "mave_aygaz_qXpkMe.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_aygaz_qXpkMe.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-03-14T13:36:10.000000Z",
+        "updated_at": "2024-03-14T13:36:10.000000Z"
+      },
+      {
+        "id": 213,
+        "title": null,
+        "file_name": "mave_aygaz_rL34WD.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_aygaz_rL34WD.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-03-14T13:36:10.000000Z",
+        "updated_at": "2024-03-14T13:36:10.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "title_en": "Main Home Slider",
+    "title_bn": "মেইন হোম স্লাইডার",
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [
+      251,
+      250,
+      252,
+      211
+    ],
+    "status": 0,
+    "created_at": "2024-03-07T15:24:58.000000Z",
+    "updated_at": "2024-08-07T19:21:27.000000Z",
+    "medias": [
+      {
+        "id": 251,
+        "title": null,
+        "file_name": "mave_eb1idB.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_eb1idB.jpg",
+        "file_size": 627047,
+        "tags": null,
+        "created_at": "2024-08-07T19:19:20.000000Z",
+        "updated_at": "2024-08-07T19:19:20.000000Z"
+      },
+      {
+        "id": 250,
+        "title": null,
+        "file_name": "mave_bGwDX8.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_bGwDX8.jpg",
+        "file_size": 476393,
+        "tags": null,
+        "created_at": "2024-08-07T19:19:20.000000Z",
+        "updated_at": "2024-08-07T19:19:20.000000Z"
+      },
+      {
+        "id": 252,
+        "title": null,
+        "file_name": "mave_JanV0a.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_JanV0a.jpg",
+        "file_size": 784900,
+        "tags": null,
+        "created_at": "2024-08-07T19:19:21.000000Z",
+        "updated_at": "2024-08-07T19:19:21.000000Z"
+      },
+      {
+        "id": 211,
+        "title": null,
+        "file_name": "mave_aygaz_sDR03J.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_aygaz_sDR03J.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-02-22T10:23:58.000000Z",
+        "updated_at": "2024-02-22T10:23:58.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "title_en": "Home Slider for mobile device",
+    "title_bn": "new slider",
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [
+      260,
+      259,
+      261,
+      218
+    ],
+    "status": 0,
+    "created_at": "2024-03-07T17:02:43.000000Z",
+    "updated_at": "2024-08-07T21:11:28.000000Z",
+    "medias": [
+      {
+        "id": 260,
+        "title": null,
+        "file_name": "mave_1nm3WB.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_1nm3WB.jpg",
+        "file_size": 1004594,
+        "tags": null,
+        "created_at": "2024-08-07T21:10:16.000000Z",
+        "updated_at": "2024-08-07T21:10:16.000000Z"
+      },
+      {
+        "id": 259,
+        "title": null,
+        "file_name": "mave_Cpa9eS.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_Cpa9eS.jpg",
+        "file_size": 566648,
+        "tags": null,
+        "created_at": "2024-08-07T21:10:15.000000Z",
+        "updated_at": "2024-08-07T21:10:15.000000Z"
+      },
+      {
+        "id": 261,
+        "title": null,
+        "file_name": "mave_jxP8Mu.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_jxP8Mu.jpg",
+        "file_size": 1084854,
+        "tags": null,
+        "created_at": "2024-08-07T21:10:16.000000Z",
+        "updated_at": "2024-08-07T21:10:16.000000Z"
+      },
+      {
+        "id": 218,
+        "title": null,
+        "file_name": "mave_aygaz_GgySYl.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_aygaz_GgySYl.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-03-18T07:46:46.000000Z",
+        "updated_at": "2024-03-18T07:46:46.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "title_en": "Home Slider: Dummy",
+    "title_bn": "Home Slider: Dummy",
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [
+      178
+    ],
+    "status": 0,
+    "created_at": "2024-03-18T10:19:22.000000Z",
+    "updated_at": "2024-03-18T10:19:22.000000Z",
+    "medias": [
+      {
+        "id": 178,
+        "title": null,
+        "file_name": "mave_aygaz_RtLn6f",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_aygaz_RtLn6f.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2023-11-19T21:44:19.000000Z",
+        "updated_at": "2023-11-19T21:44:19.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "title_en": "New Slider",
+    "title_bn": "New Slider in Bangla",
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [
+      218,
+      220,
+      215,
+      214,
+      216
+    ],
+    "status": 0,
+    "created_at": "2024-03-19T09:27:24.000000Z",
+    "updated_at": "2024-03-19T09:28:42.000000Z",
+    "medias": [
+      {
+        "id": 218,
+        "title": null,
+        "file_name": "mave_aygaz_GgySYl.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_aygaz_GgySYl.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-03-18T07:46:46.000000Z",
+        "updated_at": "2024-03-18T07:46:46.000000Z"
+      },
+      {
+        "id": 220,
+        "title": null,
+        "file_name": "mave_aygaz_ZghJj3.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_aygaz_ZghJj3.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-03-18T09:34:20.000000Z",
+        "updated_at": "2024-03-18T09:34:20.000000Z"
+      },
+      {
+        "id": 215,
+        "title": null,
+        "file_name": "mave_aygaz_AvPudQ.jpg",
+        "file_type": "image/png",
+        "file_path": "media/mave_aygaz_AvPudQ.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-03-14T13:36:10.000000Z",
+        "updated_at": "2024-03-14T13:36:10.000000Z"
+      },
+      {
+        "id": 214,
+        "title": null,
+        "file_name": "mave_aygaz_qXpkMe.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_aygaz_qXpkMe.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-03-14T13:36:10.000000Z",
+        "updated_at": "2024-03-14T13:36:10.000000Z"
+      },
+      {
+        "id": 216,
+        "title": null,
+        "file_name": "mave_aygaz_UZzztH.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_aygaz_UZzztH.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-03-14T13:38:08.000000Z",
+        "updated_at": "2024-03-14T13:38:08.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "title_en": "First Csr",
+    "title_bn": "First Csr",
+    "description_en": "<p><span style=\"color: rgb(33, 37, 41);\">Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.</span></p>",
+    "description_bn": "<p><span style=\"color: rgb(33, 37, 41);\">Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.</span></p>",
+    "media_ids": [
+      301,
+      300,
+      299,
+      298,
+      294,
+      295,
+      296,
+      297
+    ],
+    "status": 0,
+    "created_at": "2024-09-29T15:07:32.000000Z",
+    "updated_at": "2024-09-30T10:28:00.000000Z",
+    "medias": [
+      {
+        "id": 301,
+        "title": null,
+        "file_name": "mave_FgqYUx.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_FgqYUx.jpg",
+        "file_size": 208830,
+        "tags": null,
+        "created_at": "2024-09-24T14:13:20.000000Z",
+        "updated_at": "2024-09-24T14:13:20.000000Z"
+      },
+      {
+        "id": 300,
+        "title": null,
+        "file_name": "mave_HjKrqW.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_HjKrqW.jpg",
+        "file_size": 142644,
+        "tags": null,
+        "created_at": "2024-09-24T14:13:20.000000Z",
+        "updated_at": "2024-09-24T14:13:20.000000Z"
+      },
+      {
+        "id": 299,
+        "title": null,
+        "file_name": "mave_vGlgC0.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_vGlgC0.jpg",
+        "file_size": 159894,
+        "tags": null,
+        "created_at": "2024-09-24T14:06:19.000000Z",
+        "updated_at": "2024-09-24T14:06:19.000000Z"
+      },
+      {
+        "id": 298,
+        "title": null,
+        "file_name": "mave_8Ityuq.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_8Ityuq.jpg",
+        "file_size": 164570,
+        "tags": null,
+        "created_at": "2024-09-24T14:06:19.000000Z",
+        "updated_at": "2024-09-24T14:06:19.000000Z"
+      },
+      {
+        "id": 294,
+        "title": null,
+        "file_name": "mave_X3keIh.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_X3keIh.jpg",
+        "file_size": 166413,
+        "tags": null,
+        "created_at": "2024-09-24T14:00:28.000000Z",
+        "updated_at": "2024-09-24T14:00:28.000000Z"
+      },
+      {
+        "id": 295,
+        "title": null,
+        "file_name": "mave_LpoV0G.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_LpoV0G.jpg",
+        "file_size": 104010,
+        "tags": null,
+        "created_at": "2024-09-24T14:06:18.000000Z",
+        "updated_at": "2024-09-24T14:06:18.000000Z"
+      },
+      {
+        "id": 296,
+        "title": null,
+        "file_name": "mave_PkgmGS.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_PkgmGS.jpg",
+        "file_size": 213689,
+        "tags": null,
+        "created_at": "2024-09-24T14:06:18.000000Z",
+        "updated_at": "2024-09-24T14:06:18.000000Z"
+      },
+      {
+        "id": 297,
+        "title": null,
+        "file_name": "mave_i7tm7R.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_i7tm7R.jpg",
+        "file_size": 189766,
+        "tags": null,
+        "created_at": "2024-09-24T14:06:18.000000Z",
+        "updated_at": "2024-09-24T14:06:18.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "title_en": "Second CSR",
+    "title_bn": "Second CSR",
+    "description_en": "<p><span style=\"color: rgb(33, 37, 41);\">Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.</span></p>",
+    "description_bn": "<p><span style=\"color: rgb(33, 37, 41);\">Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.</span></p>",
+    "media_ids": [
+      301,
+      300,
+      299,
+      298,
+      297,
+      295,
+      294,
+      296
+    ],
+    "status": 0,
+    "created_at": "2024-09-29T15:08:54.000000Z",
+    "updated_at": "2024-09-30T09:31:50.000000Z",
+    "medias": [
+      {
+        "id": 301,
+        "title": null,
+        "file_name": "mave_FgqYUx.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_FgqYUx.jpg",
+        "file_size": 208830,
+        "tags": null,
+        "created_at": "2024-09-24T14:13:20.000000Z",
+        "updated_at": "2024-09-24T14:13:20.000000Z"
+      },
+      {
+        "id": 300,
+        "title": null,
+        "file_name": "mave_HjKrqW.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_HjKrqW.jpg",
+        "file_size": 142644,
+        "tags": null,
+        "created_at": "2024-09-24T14:13:20.000000Z",
+        "updated_at": "2024-09-24T14:13:20.000000Z"
+      },
+      {
+        "id": 299,
+        "title": null,
+        "file_name": "mave_vGlgC0.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_vGlgC0.jpg",
+        "file_size": 159894,
+        "tags": null,
+        "created_at": "2024-09-24T14:06:19.000000Z",
+        "updated_at": "2024-09-24T14:06:19.000000Z"
+      },
+      {
+        "id": 298,
+        "title": null,
+        "file_name": "mave_8Ityuq.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_8Ityuq.jpg",
+        "file_size": 164570,
+        "tags": null,
+        "created_at": "2024-09-24T14:06:19.000000Z",
+        "updated_at": "2024-09-24T14:06:19.000000Z"
+      },
+      {
+        "id": 297,
+        "title": null,
+        "file_name": "mave_i7tm7R.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_i7tm7R.jpg",
+        "file_size": 189766,
+        "tags": null,
+        "created_at": "2024-09-24T14:06:18.000000Z",
+        "updated_at": "2024-09-24T14:06:18.000000Z"
+      },
+      {
+        "id": 295,
+        "title": null,
+        "file_name": "mave_LpoV0G.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_LpoV0G.jpg",
+        "file_size": 104010,
+        "tags": null,
+        "created_at": "2024-09-24T14:06:18.000000Z",
+        "updated_at": "2024-09-24T14:06:18.000000Z"
+      },
+      {
+        "id": 294,
+        "title": null,
+        "file_name": "mave_X3keIh.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_X3keIh.jpg",
+        "file_size": 166413,
+        "tags": null,
+        "created_at": "2024-09-24T14:00:28.000000Z",
+        "updated_at": "2024-09-24T14:00:28.000000Z"
+      },
+      {
+        "id": 296,
+        "title": null,
+        "file_name": "mave_PkgmGS.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_PkgmGS.jpg",
+        "file_size": 213689,
+        "tags": null,
+        "created_at": "2024-09-24T14:06:18.000000Z",
+        "updated_at": "2024-09-24T14:06:18.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "title_en": "updated slider",
+    "title_bn": "updated slider",
+    "description_en": "<p><span style=\"color: rgb(33, 37, 41);\">Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.</span></p>",
+    "description_bn": "<p><span style=\"color: rgb(33, 37, 41);\">Use border utilities to quickly style the border and border-radius of an element. Great for images, buttons, or any other element.</span></p>",
+    "media_ids": [
+      301,
+      292,
+      291,
+      290,
+      287,
+      288,
+      289,
+      286
+    ],
+    "status": 0,
+    "created_at": "2024-09-30T09:35:07.000000Z",
+    "updated_at": "2024-09-30T09:35:07.000000Z",
+    "medias": [
+      {
+        "id": 301,
+        "title": null,
+        "file_name": "mave_FgqYUx.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_FgqYUx.jpg",
+        "file_size": 208830,
+        "tags": null,
+        "created_at": "2024-09-24T14:13:20.000000Z",
+        "updated_at": "2024-09-24T14:13:20.000000Z"
+      },
+      {
+        "id": 292,
+        "title": null,
+        "file_name": "mave_s5pS6k.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_s5pS6k.jpg",
+        "file_size": 155163,
+        "tags": null,
+        "created_at": "2024-09-24T14:00:28.000000Z",
+        "updated_at": "2024-09-24T14:00:28.000000Z"
+      },
+      {
+        "id": 291,
+        "title": null,
+        "file_name": "mave_Y1kLXc.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_Y1kLXc.jpg",
+        "file_size": 143216,
+        "tags": null,
+        "created_at": "2024-09-24T14:00:28.000000Z",
+        "updated_at": "2024-09-24T14:00:28.000000Z"
+      },
+      {
+        "id": 290,
+        "title": null,
+        "file_name": "mave_5vfMIn.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_5vfMIn.jpg",
+        "file_size": 150725,
+        "tags": null,
+        "created_at": "2024-09-24T14:00:28.000000Z",
+        "updated_at": "2024-09-24T14:00:28.000000Z"
+      },
+      {
+        "id": 287,
+        "title": null,
+        "file_name": "mave_nPESNT.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_nPESNT.jpg",
+        "file_size": 185669,
+        "tags": null,
+        "created_at": "2024-09-24T13:57:11.000000Z",
+        "updated_at": "2024-09-24T13:57:11.000000Z"
+      },
+      {
+        "id": 288,
+        "title": null,
+        "file_name": "mave_OrYcfU.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_OrYcfU.jpg",
+        "file_size": 172709,
+        "tags": null,
+        "created_at": "2024-09-24T13:57:11.000000Z",
+        "updated_at": "2024-09-24T13:57:11.000000Z"
+      },
+      {
+        "id": 289,
+        "title": null,
+        "file_name": "mave_sUP093.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_sUP093.jpg",
+        "file_size": 206070,
+        "tags": null,
+        "created_at": "2024-09-24T13:57:11.000000Z",
+        "updated_at": "2024-09-24T13:57:11.000000Z"
+      },
+      {
+        "id": 286,
+        "title": null,
+        "file_name": "mave_8UBCG0.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_8UBCG0.jpg",
+        "file_size": 185482,
+        "tags": null,
+        "created_at": "2024-09-24T13:57:11.000000Z",
+        "updated_at": "2024-09-24T13:57:11.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "title_en": "Safety First: Handling Gas Appliances",
+    "title_bn": "নিরাপত্তা প্রথম: গ্যাস প্রযুক্তিগত যন্ত্রসমূহ ব্যবহার",
+    "description_en": "Description: Safety First: Handling Gas Appliances",
+    "description_bn": "Description_bn: নিরাপত্তা প্রথম: গ্যাস প্রযুক্তিগত যন্ত্রসমূহ ব্যবহার",
+    "media_ids": [
+      1,
+      2,
+      3
+    ],
+    "status": 0,
+    "created_at": "2024-09-30T09:38:22.000000Z",
+    "updated_at": "2024-09-30T09:38:22.000000Z",
+    "medias": [
+      {
+        "id": 2,
+        "title": null,
+        "file_name": "mave_aygaz_iJlMNh",
+        "file_type": "video/mp4",
+        "file_path": "media/mave_aygaz_iJlMNh.mp4",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2023-10-01T23:37:00.000000Z",
+        "updated_at": "2023-10-01T23:37:00.000000Z"
+      },
+      {
+        "id": 3,
+        "title": null,
+        "file_name": "mave_aygaz_T5teWz",
+        "file_type": "video/mp4",
+        "file_path": "media/mave_aygaz_T5teWz.mp4",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2023-10-01T23:37:00.000000Z",
+        "updated_at": "2023-10-01T23:37:00.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "title_en": "Spreading Smiles, Sharing Barakah",
+    "title_bn": "Barakah Box",
+    "description_en": "<p><strong>A token of appreciation for our valued partners across the nation.</strong></p><p><span class=\"ql-cursor\">﻿</span>Since its journey began in 2022, Aygaz United has been supported by countless dedicated retailers and distributors whose hard work has shaped the company’s success. As a gesture of appreciation, Aygaz United shared a small Ramadan gift package—the Barakah Box—with these valued partners. This humble effort reflects our gratitude, and if it brings even a smile to their faces, that is our greatest reward.</p>",
+    "description_bn": "<p>Ramadan packages distributed to retailers and distributors.</p><p>২০২২ সালে যাত্রা শুরু আইগ্যাস ইউনাইটেড এর এবং সেই শুরু থেকে বিভিন্ন ডিস্ট্রিবিউটর পয়েন্টে যারা অক্লান্ত পরিশ্রমের মাধ্যমে আমাদের আজকের এই অবস্থান তৈরি করে দিয়েছেন সেই সব পরিশ্রমী মানুষদের জন্য আইগ্যাস ইউনাইটেড এর পক্ষ থেকে ঈদ উপলক্ষে ছোট্ট একটি উপহার। আমাদের এই ক্ষুদ্র প্রয়াস যদি তাদের মুখে একটুও হাসি ফোটায়, তাতেই আমাদের সার্থকতা। সবাইকে ঈদ মুবারক!</p>",
+    "media_ids": [
+      310,
+      309,
+      308,
+      307
+    ],
+    "status": 0,
+    "created_at": "2024-10-22T13:35:56.000000Z",
+    "updated_at": "2025-11-04T07:53:51.000000Z",
+    "medias": [
+      {
+        "id": 310,
+        "title": null,
+        "file_name": "mave_urotLW.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_urotLW.jpg",
+        "file_size": 238494,
+        "tags": null,
+        "created_at": "2024-10-22T13:32:22.000000Z",
+        "updated_at": "2024-10-22T13:32:22.000000Z"
+      },
+      {
+        "id": 309,
+        "title": null,
+        "file_name": "mave_ZC8KwX.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_ZC8KwX.jpg",
+        "file_size": 218657,
+        "tags": null,
+        "created_at": "2024-10-22T13:32:22.000000Z",
+        "updated_at": "2024-10-22T13:32:22.000000Z"
+      },
+      {
+        "id": 308,
+        "title": null,
+        "file_name": "mave_sAVrJD.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_sAVrJD.jpg",
+        "file_size": 241344,
+        "tags": null,
+        "created_at": "2024-10-22T13:32:22.000000Z",
+        "updated_at": "2024-10-22T13:32:22.000000Z"
+      },
+      {
+        "id": 307,
+        "title": null,
+        "file_name": "mave_fj1DT1.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_fj1DT1.jpg",
+        "file_size": 171419,
+        "tags": null,
+        "created_at": "2024-10-22T13:32:22.000000Z",
+        "updated_at": "2024-10-22T13:32:22.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "title_en": "Flood Relief Support in Feni and Noakhali",
+    "title_bn": "Flood Relief",
+    "description_en": "<p><strong>Humanity is Our Strength</strong></p><p>&nbsp;In 2024, Aygaz United stood beside the flood-affected communities of Feni and Noakhali, providing essential relief support to those in need. Guided by compassion and a sense of responsibility, Aygaz United continues to remain by your side—today, tomorrow, and always—standing strong as a partner in times of adversity.</p>",
+    "description_bn": "<p>মানবতাই আমাদের শক্তি</p><p><br></p><p>ফেনী ও নোয়াখালী অঞ্চলে প্রয়োজনীয় সাহায্য নিয়ে বন্যাদুর্গতদের পাশে দাঁড়িয়েছিলো আইগ্যাস ইউনাইটেড। আইগ্যাস ইউনাইটেড সবসময় আপনার জন্য আছে, থাকবে, আপনার শক্তি হয়ে।</p><p>&nbsp;</p>",
+    "media_ids": [
+      314,
+      313,
+      312,
+      311
+    ],
+    "status": 0,
+    "created_at": "2024-10-22T13:42:31.000000Z",
+    "updated_at": "2025-11-04T07:48:39.000000Z",
+    "medias": [
+      {
+        "id": 314,
+        "title": null,
+        "file_name": "mave_N10FTV.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_N10FTV.jpg",
+        "file_size": 1446118,
+        "tags": null,
+        "created_at": "2024-10-22T13:41:21.000000Z",
+        "updated_at": "2024-10-22T13:41:21.000000Z"
+      },
+      {
+        "id": 313,
+        "title": null,
+        "file_name": "mave_1mVDhZ.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_1mVDhZ.jpg",
+        "file_size": 1405186,
+        "tags": null,
+        "created_at": "2024-10-22T13:41:20.000000Z",
+        "updated_at": "2024-10-22T13:41:20.000000Z"
+      },
+      {
+        "id": 312,
+        "title": null,
+        "file_name": "mave_bBpl7X.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_bBpl7X.jpg",
+        "file_size": 1804917,
+        "tags": null,
+        "created_at": "2024-10-22T13:38:25.000000Z",
+        "updated_at": "2024-10-22T13:38:25.000000Z"
+      },
+      {
+        "id": 311,
+        "title": null,
+        "file_name": "mave_UUJhjw.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_UUJhjw.jpg",
+        "file_size": 1494526,
+        "tags": null,
+        "created_at": "2024-10-22T13:38:24.000000Z",
+        "updated_at": "2024-10-22T13:38:24.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "title_en": "Main home Slider2.",
+    "title_bn": "Main home Slider2.",
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [
+      445,
+      371,
+      370,
+      372
+    ],
+    "status": 0,
+    "created_at": "2025-02-27T12:19:40.000000Z",
+    "updated_at": "2025-10-13T09:18:42.000000Z",
+    "medias": [
+      {
+        "id": 445,
+        "title": null,
+        "file_name": "mave_S3Jztz.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_S3Jztz.jpg",
+        "file_size": 872695,
+        "tags": null,
+        "created_at": "2025-10-13T09:17:34.000000Z",
+        "updated_at": "2025-10-13T09:17:34.000000Z"
+      },
+      {
+        "id": 371,
+        "title": null,
+        "file_name": "mave_fRnJ9F.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_fRnJ9F.webp",
+        "file_size": 40156,
+        "tags": null,
+        "created_at": "2025-02-27T12:18:47.000000Z",
+        "updated_at": "2025-02-27T12:18:47.000000Z"
+      },
+      {
+        "id": 370,
+        "title": null,
+        "file_name": "mave_5yv8db.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_5yv8db.webp",
+        "file_size": 20502,
+        "tags": null,
+        "created_at": "2025-02-27T12:18:46.000000Z",
+        "updated_at": "2025-02-27T12:18:46.000000Z"
+      },
+      {
+        "id": 372,
+        "title": null,
+        "file_name": "mave_MzDmy8.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_MzDmy8.webp",
+        "file_size": 51490,
+        "tags": null,
+        "created_at": "2025-02-27T12:18:47.000000Z",
+        "updated_at": "2025-02-27T12:18:47.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "title_en": "Mobile device2",
+    "title_bn": "Mobile device2",
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [
+      444,
+      375,
+      373,
+      374
+    ],
+    "status": 0,
+    "created_at": "2025-02-27T12:28:14.000000Z",
+    "updated_at": "2025-10-13T09:20:00.000000Z",
+    "medias": [
+      {
+        "id": 444,
+        "title": null,
+        "file_name": "mave_1fAg52.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_1fAg52.jpg",
+        "file_size": 186074,
+        "tags": null,
+        "created_at": "2025-10-13T09:17:34.000000Z",
+        "updated_at": "2025-10-13T09:17:34.000000Z"
+      },
+      {
+        "id": 375,
+        "title": null,
+        "file_name": "mave_jM8qFn.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_jM8qFn.webp",
+        "file_size": 62014,
+        "tags": null,
+        "created_at": "2025-02-27T12:27:06.000000Z",
+        "updated_at": "2025-02-27T12:27:06.000000Z"
+      },
+      {
+        "id": 373,
+        "title": null,
+        "file_name": "mave_rthPFe.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_rthPFe.webp",
+        "file_size": 30256,
+        "tags": null,
+        "created_at": "2025-02-27T12:27:06.000000Z",
+        "updated_at": "2025-02-27T12:27:06.000000Z"
+      },
+      {
+        "id": 374,
+        "title": null,
+        "file_name": "mave_J8nUr9.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_J8nUr9.webp",
+        "file_size": 82012,
+        "tags": null,
+        "created_at": "2025-02-27T12:27:06.000000Z",
+        "updated_at": "2025-02-27T12:27:06.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "title_en": "ইউনাইটেড অইগ্যাস এলপিজি লিমিটেড এর পক্ষ থেকে স্কুল ব্যাগ উপহার",
+    "title_bn": "ইউনাইটেড অইগ্যাস এলপিজি লিমিটেড এর পক্ষ থেকে স্কুল ব্যাগ উপহার",
+    "description_en": "<p><span style=\"color: rgb(5, 5, 5);\">মানবতার শক্তিতে বিশ্বাস করে ইউনাইটেড আইগ্যাস লিমিটেড। তাই সেই বিশ্বাসের শক্তি সবার মাঝে ছড়িয়ে দিতে পৌঁছে গিয়েছি দেশের বিভিন্ন প্রান্তের স্কুলগামী শিশুদের জন্য স্কুল ব্যাগ নিয়ে। এই উদ্যোগটি সফল করতে আমাদের সহযোগিতা করেছেন টার্কিশ কর্পোরেশন ও কোঅর্ডিনেশন এজেন্সি TiKA ও সমাজ সেবক সংস্থা SHI Bangladesh এবং ফেনীতে অবস্থিত আতাতুর্ক সরকারি মডেল হাই স্কুল। আমাদের এই ক্ষুদ্র প্রচেষ্টার মাধ্যমে নতুন প্রজন্ম যেন এগিয়ে যেতে পারে আগামীর পথে, নিশ্চিন্তে।</span></p>",
+    "description_bn": "<p><span style=\"color: rgb(5, 5, 5);\">মানবতার শক্তিতে বিশ্বাস করে ইউনাইটেড আইগ্যাস লিমিটেড। তাই সেই বিশ্বাসের শক্তি সবার মাঝে ছড়িয়ে দিতে পৌঁছে গিয়েছি দেশের বিভিন্ন প্রান্তের স্কুলগামী শিশুদের জন্য স্কুল ব্যাগ নিয়ে। এই উদ্যোগটি সফল করতে আমাদের সহযোগিতা করেছেন টার্কিশ কর্পোরেশন ও কোঅর্ডিনেশন এজেন্সি TiKA ও সমাজ সেবক সংস্থা SHI Bangladesh এবং ফেনীতে অবস্থিত আতাতুর্ক সরকারি মডেল হাই স্কুল। আমাদের এই ক্ষুদ্র প্রচেষ্টার মাধ্যমে নতুন প্রজন্ম যেন এগিয়ে যেতে পারে আগামীর পথে, নিশ্চিন্তে।</span></p>",
+    "media_ids": [
+      376,
+      380,
+      379,
+      378,
+      377,
+      382,
+      383,
+      384
+    ],
+    "status": 0,
+    "created_at": "2025-03-03T09:11:57.000000Z",
+    "updated_at": "2025-03-03T09:11:57.000000Z",
+    "medias": [
+      {
+        "id": 376,
+        "title": null,
+        "file_name": "mave_da0UBV.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_da0UBV.jpg",
+        "file_size": 510631,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:48.000000Z",
+        "updated_at": "2025-03-02T11:52:48.000000Z"
+      },
+      {
+        "id": 380,
+        "title": null,
+        "file_name": "mave_J3V4G4.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_J3V4G4.jpg",
+        "file_size": 557125,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:49.000000Z",
+        "updated_at": "2025-03-02T11:52:49.000000Z"
+      },
+      {
+        "id": 379,
+        "title": null,
+        "file_name": "mave_hmxuf9.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_hmxuf9.jpg",
+        "file_size": 554535,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:49.000000Z",
+        "updated_at": "2025-03-02T11:52:49.000000Z"
+      },
+      {
+        "id": 378,
+        "title": null,
+        "file_name": "mave_g3Vbk7.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_g3Vbk7.jpg",
+        "file_size": 549343,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:49.000000Z",
+        "updated_at": "2025-03-02T11:52:49.000000Z"
+      },
+      {
+        "id": 377,
+        "title": null,
+        "file_name": "mave_i8fjDp.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_i8fjDp.jpg",
+        "file_size": 523042,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:48.000000Z",
+        "updated_at": "2025-03-02T11:52:48.000000Z"
+      },
+      {
+        "id": 382,
+        "title": null,
+        "file_name": "mave_vjedgE.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_vjedgE.jpg",
+        "file_size": 612172,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:50.000000Z",
+        "updated_at": "2025-03-02T11:52:50.000000Z"
+      },
+      {
+        "id": 383,
+        "title": null,
+        "file_name": "mave_kRxLW6.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_kRxLW6.jpg",
+        "file_size": 734270,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:50.000000Z",
+        "updated_at": "2025-03-02T11:52:50.000000Z"
+      },
+      {
+        "id": 384,
+        "title": null,
+        "file_name": "mave_4YIg8o.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_4YIg8o.jpg",
+        "file_size": 696766,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:50.000000Z",
+        "updated_at": "2025-03-02T11:52:50.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "title_en": "Spreading the Gift of Education",
+    "title_bn": "ইউনাইটেড আইগ্যাস এলপিজি লিমিটেড এর পক্ষ থেকে স্কুল ব্যাগ উপহার",
+    "description_en": "<p><strong>Empowering Young Minds with the Spirit of Humanity.</strong></p><p><span class=\"ql-cursor\">﻿</span>Believing in the power of humanity, United Aygaz LPG Ltd. continues to spread that spirit across the nation. As part of this belief, the company reached out to school-going children in different regions of Bangladesh, distributing school bags to support their educational journey. This initiative was made possible through the support of the Turkish Cooperation and Coordination Agency (TİKA), SHI Bangladesh, and Atatürk Government Model High School, Feni. Through this humble effort, Aygaz United hopes to help the next generation move forward—toward a brighter and more confident tomorrow.</p>",
+    "description_bn": "<p><span style=\"color: rgb(5, 5, 5);\">মানবতার শক্তিতে বিশ্বাস করে ইউনাইটেড আইগ্যাস লিমিটেড। তাই সেই বিশ্বাসের শক্তি সবার মাঝে ছড়িয়ে দিতে পৌঁছে গিয়েছি দেশের বিভিন্ন প্রান্তের স্কুলগামী শিশুদের জন্য স্কুল ব্যাগ নিয়ে। এই উদ্যোগটি সফল করতে আমাদের সহযোগিতা করেছেন টার্কিশ কর্পোরেশন ও কোঅর্ডিনেশন এজেন্সি TiKA ও সমাজ সেবক সংস্থা SHI Bangladesh এবং ফেনীতে অবস্থিত আতাতুর্ক সরকারি মডেল হাই স্কুল। আমাদের এই ক্ষুদ্র প্রচেষ্টার মাধ্যমে নতুন প্রজন্ম যেন এগিয়ে যেতে পারে আগামীর পথে, নিশ্চিন্তে।</span></p>",
+    "media_ids": [
+      384,
+      383,
+      382,
+      381,
+      380,
+      379,
+      378,
+      377,
+      376
+    ],
+    "status": 0,
+    "created_at": "2025-03-03T09:38:55.000000Z",
+    "updated_at": "2025-11-04T07:51:26.000000Z",
+    "medias": [
+      {
+        "id": 384,
+        "title": null,
+        "file_name": "mave_4YIg8o.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_4YIg8o.jpg",
+        "file_size": 696766,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:50.000000Z",
+        "updated_at": "2025-03-02T11:52:50.000000Z"
+      },
+      {
+        "id": 383,
+        "title": null,
+        "file_name": "mave_kRxLW6.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_kRxLW6.jpg",
+        "file_size": 734270,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:50.000000Z",
+        "updated_at": "2025-03-02T11:52:50.000000Z"
+      },
+      {
+        "id": 382,
+        "title": null,
+        "file_name": "mave_vjedgE.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_vjedgE.jpg",
+        "file_size": 612172,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:50.000000Z",
+        "updated_at": "2025-03-02T11:52:50.000000Z"
+      },
+      {
+        "id": 381,
+        "title": null,
+        "file_name": "mave_xqG66E.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_xqG66E.jpg",
+        "file_size": 599074,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:49.000000Z",
+        "updated_at": "2025-03-02T11:52:49.000000Z"
+      },
+      {
+        "id": 380,
+        "title": null,
+        "file_name": "mave_J3V4G4.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_J3V4G4.jpg",
+        "file_size": 557125,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:49.000000Z",
+        "updated_at": "2025-03-02T11:52:49.000000Z"
+      },
+      {
+        "id": 379,
+        "title": null,
+        "file_name": "mave_hmxuf9.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_hmxuf9.jpg",
+        "file_size": 554535,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:49.000000Z",
+        "updated_at": "2025-03-02T11:52:49.000000Z"
+      },
+      {
+        "id": 378,
+        "title": null,
+        "file_name": "mave_g3Vbk7.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_g3Vbk7.jpg",
+        "file_size": 549343,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:49.000000Z",
+        "updated_at": "2025-03-02T11:52:49.000000Z"
+      },
+      {
+        "id": 377,
+        "title": null,
+        "file_name": "mave_i8fjDp.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_i8fjDp.jpg",
+        "file_size": 523042,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:48.000000Z",
+        "updated_at": "2025-03-02T11:52:48.000000Z"
+      },
+      {
+        "id": 376,
+        "title": null,
+        "file_name": "mave_da0UBV.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_da0UBV.jpg",
+        "file_size": 510631,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:48.000000Z",
+        "updated_at": "2025-03-02T11:52:48.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "title_en": "Quod placeat lorem",
+    "title_bn": "Sunt nisi non velit",
+    "description_en": "<h3>History, Purpose and Usage</h3><p><br></p><p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with:</p><blockquote>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”</blockquote><p><br></p><p>The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.</p><h2>The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum.</h2>",
+    "description_bn": "<h3>History, Purpose and Usage</h3><p><br></p><p>Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown typesetter in the 15th century who is thought to have scrambled parts of Cicero's De Finibus Bonorum et Malorum for use in a type specimen book. It usually begins with:</p><blockquote>“Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.”</blockquote><p><br></p><p>The purpose of lorem ipsum is to create a natural looking block of text (sentence, paragraph, page, etc.) that doesn't distract from the layout. A practice not without controversy, laying out pages with meaningless filler text can be very useful when the focus is meant to be on design, not content.</p><p>The passage experienced a surge in popularity during the 1960s when Letraset used it on their dry-transfer sheets, and again during the 90s as desktop publishers bundled the text with their software. Today it's seen all around the web; on templates, websites, and stock designs. Use our generator to get your own, or read on for the authoritative history of lorem ipsum.</p>",
+    "media_ids": [
+      142,
+      141,
+      140,
+      139,
+      145
+    ],
+    "status": 0,
+    "created_at": "2025-10-14T08:09:13.000000Z",
+    "updated_at": "2025-10-14T08:23:23.000000Z",
+    "medias": [
+      {
+        "id": 142,
+        "title": null,
+        "file_name": "mave_aygaz_ihJEPX.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_aygaz_ihJEPX.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2023-11-09T19:55:16.000000Z",
+        "updated_at": "2023-11-09T19:55:16.000000Z"
+      },
+      {
+        "id": 141,
+        "title": null,
+        "file_name": "mave_aygaz_hD4e4f.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_aygaz_hD4e4f.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2023-11-09T19:55:02.000000Z",
+        "updated_at": "2023-11-09T19:55:02.000000Z"
+      },
+      {
+        "id": 140,
+        "title": null,
+        "file_name": "mave_aygaz_FvVahp.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_aygaz_FvVahp.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2023-11-09T19:52:44.000000Z",
+        "updated_at": "2023-11-09T19:52:44.000000Z"
+      },
+      {
+        "id": 139,
+        "title": null,
+        "file_name": "mave_aygaz_AaRhJS.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_aygaz_AaRhJS.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2023-11-09T19:52:44.000000Z",
+        "updated_at": "2023-11-09T19:52:44.000000Z"
+      },
+      {
+        "id": 145,
+        "title": null,
+        "file_name": "mave_aygaz_6XOVss.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_aygaz_6XOVss.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2023-11-09T20:26:08.000000Z",
+        "updated_at": "2023-11-09T20:26:08.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "title_en": "demo",
+    "title_bn": "demo",
+    "description_en": "<p>demo</p>",
+    "description_bn": "<p>demo</p>",
+    "media_ids": [
+      473,
+      469,
+      467
+    ],
+    "status": 0,
+    "created_at": "2025-11-04T07:44:11.000000Z",
+    "updated_at": "2025-11-04T07:44:11.000000Z",
+    "medias": [
+      {
+        "id": 473,
+        "title": null,
+        "file_name": "mave_eYUKhT.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_eYUKhT.jpg",
+        "file_size": 872695,
+        "tags": null,
+        "created_at": "2025-10-19T05:21:40.000000Z",
+        "updated_at": "2025-10-19T05:21:40.000000Z"
+      },
+      {
+        "id": 469,
+        "title": null,
+        "file_name": "mave_5EOq66.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_5EOq66.jpg",
+        "file_size": 97160,
+        "tags": null,
+        "created_at": "2025-10-13T11:25:15.000000Z",
+        "updated_at": "2025-10-13T11:25:15.000000Z"
+      },
+      {
+        "id": 467,
+        "title": null,
+        "file_name": "mave_KtVPiK.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_KtVPiK.jpg",
+        "file_size": 1909537,
+        "tags": null,
+        "created_at": "2025-10-13T09:25:24.000000Z",
+        "updated_at": "2025-10-13T09:25:24.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "title_en": "Educational Development on Climate Week 2025",
+    "title_bn": "Educational Development on Climate Week 2025",
+    "description_en": "<p><strong>United Aygaz LPG Ltd. engages young learners through hands-on sustainability and climate education activities.</strong></p><p><span class=\"ql-cursor\">﻿</span>As part of Teach For Bangladesh’s Climate Week 2025, United Aygaz LPG Ltd. joined students and Fellows to promote environmental awareness and sustainable living. CEO Mr. Harun Ortaç inspired learners with his vision of working for society and improving lives. Aygaz United representatives visited schools in Dhaka and Chattogram, engaging students in ‘Waste to Resource,’ carbon footprint, and tree-planting activities—empowering young minds toward a greener, brighter Bangladesh.</p>",
+    "description_bn": "<p>As part of Teach For Bangladesh’s Climate Week 2025, United Aygaz LPG Ltd. joined students and Fellows to promote environmental awareness and sustainable living. CEO Mr. Harun Ortaç inspired learners with his vision of working for society and improving lives. Aygaz United representatives visited schools in Dhaka and Chattogram, engaging students in ‘Waste to Resource,’ carbon footprint, and tree-planting activities—empowering young minds toward a greener, brighter Bangladesh.</p>",
+    "media_ids": [
+      477,
+      487,
+      486,
+      485,
+      484,
+      480,
+      476,
+      481,
+      482,
+      483,
+      479,
+      478,
+      475,
+      474
+    ],
+    "status": 0,
+    "created_at": "2025-11-04T07:57:37.000000Z",
+    "updated_at": "2025-11-04T07:57:37.000000Z",
+    "medias": [
+      {
+        "id": 477,
+        "title": null,
+        "file_name": "mave_otgKQu.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_otgKQu.jpg",
+        "file_size": 1176566,
+        "tags": null,
+        "created_at": "2025-11-04T07:55:45.000000Z",
+        "updated_at": "2025-11-04T07:55:45.000000Z"
+      },
+      {
+        "id": 487,
+        "title": null,
+        "file_name": "mave_GXskHs.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_GXskHs.jpg",
+        "file_size": 820804,
+        "tags": null,
+        "created_at": "2025-11-04T07:55:47.000000Z",
+        "updated_at": "2025-11-04T07:55:47.000000Z"
+      },
+      {
+        "id": 486,
+        "title": null,
+        "file_name": "mave_ccniX9.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_ccniX9.jpg",
+        "file_size": 1389968,
+        "tags": null,
+        "created_at": "2025-11-04T07:55:47.000000Z",
+        "updated_at": "2025-11-04T07:55:47.000000Z"
+      },
+      {
+        "id": 485,
+        "title": null,
+        "file_name": "mave_IMLbuf.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_IMLbuf.jpg",
+        "file_size": 2073881,
+        "tags": null,
+        "created_at": "2025-11-04T07:55:47.000000Z",
+        "updated_at": "2025-11-04T07:55:47.000000Z"
+      },
+      {
+        "id": 484,
+        "title": null,
+        "file_name": "mave_YliehX.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_YliehX.jpg",
+        "file_size": 903325,
+        "tags": null,
+        "created_at": "2025-11-04T07:55:47.000000Z",
+        "updated_at": "2025-11-04T07:55:47.000000Z"
+      },
+      {
+        "id": 480,
+        "title": null,
+        "file_name": "mave_Cw4c1A.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_Cw4c1A.jpg",
+        "file_size": 1806539,
+        "tags": null,
+        "created_at": "2025-11-04T07:55:46.000000Z",
+        "updated_at": "2025-11-04T07:55:46.000000Z"
+      },
+      {
+        "id": 476,
+        "title": null,
+        "file_name": "mave_H9I5n7.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_H9I5n7.jpg",
+        "file_size": 1514150,
+        "tags": null,
+        "created_at": "2025-11-04T07:55:45.000000Z",
+        "updated_at": "2025-11-04T07:55:45.000000Z"
+      },
+      {
+        "id": 481,
+        "title": null,
+        "file_name": "mave_Lz1PUZ.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_Lz1PUZ.jpg",
+        "file_size": 1144195,
+        "tags": null,
+        "created_at": "2025-11-04T07:55:46.000000Z",
+        "updated_at": "2025-11-04T07:55:46.000000Z"
+      },
+      {
+        "id": 482,
+        "title": null,
+        "file_name": "mave_xQYaxT.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_xQYaxT.jpg",
+        "file_size": 933686,
+        "tags": null,
+        "created_at": "2025-11-04T07:55:47.000000Z",
+        "updated_at": "2025-11-04T07:55:47.000000Z"
+      },
+      {
+        "id": 483,
+        "title": null,
+        "file_name": "mave_YT1eGd.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_YT1eGd.jpg",
+        "file_size": 1556244,
+        "tags": null,
+        "created_at": "2025-11-04T07:55:47.000000Z",
+        "updated_at": "2025-11-04T07:55:47.000000Z"
+      },
+      {
+        "id": 479,
+        "title": null,
+        "file_name": "mave_R5vDpc.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_R5vDpc.jpg",
+        "file_size": 1861538,
+        "tags": null,
+        "created_at": "2025-11-04T07:55:46.000000Z",
+        "updated_at": "2025-11-04T07:55:46.000000Z"
+      },
+      {
+        "id": 478,
+        "title": null,
+        "file_name": "mave_1qLZPj.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_1qLZPj.jpg",
+        "file_size": 1339261,
+        "tags": null,
+        "created_at": "2025-11-04T07:55:45.000000Z",
+        "updated_at": "2025-11-04T07:55:45.000000Z"
+      },
+      {
+        "id": 475,
+        "title": null,
+        "file_name": "mave_LtlJxv.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_LtlJxv.jpg",
+        "file_size": 711676,
+        "tags": null,
+        "created_at": "2025-11-04T07:55:45.000000Z",
+        "updated_at": "2025-11-04T07:55:45.000000Z"
+      },
+      {
+        "id": 474,
+        "title": null,
+        "file_name": "mave_4GoMBg.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_4GoMBg.jpg",
+        "file_size": 936024,
+        "tags": null,
+        "created_at": "2025-11-04T07:55:45.000000Z",
+        "updated_at": "2025-11-04T07:55:45.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "title_en": "Spreading Smiles, Sharing Barakah.",
+    "title_bn": "Spreading Smiles, Sharing Barakah.",
+    "description_en": "<p><strong>A token of appreciation for our valued partners across the nation.</strong></p><p>﻿Since its journey began in 2022, Aygaz United has been supported by countless dedicated retailers and distributors whose hard work has shaped the company’s success. As a gesture of appreciation, Aygaz United shared a small Ramadan gift package—the Barakah Box—with these valued partners. This humble effort reflects our gratitude, and if it brings even a smile to their faces, that is our greatest reward.</p>",
+    "description_bn": "<p>A token of appreciation for our valued partners across the nation.</p><p><br></p><p>Since its journey began in 2022, Aygaz United has been supported by countless dedicated retailers and distributors whose hard work has shaped the company’s success. As a gesture of appreciation, Aygaz United shared a small Ramadan gift package—the Barakah Box—with these valued partners. This humble effort reflects our gratitude, and if it brings even a smile to their faces, that is our greatest reward.</p>",
+    "media_ids": [
+      310,
+      309,
+      308,
+      307
+    ],
+    "status": 0,
+    "created_at": "2025-11-04T08:12:10.000000Z",
+    "updated_at": "2025-11-04T12:53:19.000000Z",
+    "medias": [
+      {
+        "id": 310,
+        "title": null,
+        "file_name": "mave_urotLW.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_urotLW.jpg",
+        "file_size": 238494,
+        "tags": null,
+        "created_at": "2024-10-22T13:32:22.000000Z",
+        "updated_at": "2024-10-22T13:32:22.000000Z"
+      },
+      {
+        "id": 309,
+        "title": null,
+        "file_name": "mave_ZC8KwX.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_ZC8KwX.jpg",
+        "file_size": 218657,
+        "tags": null,
+        "created_at": "2024-10-22T13:32:22.000000Z",
+        "updated_at": "2024-10-22T13:32:22.000000Z"
+      },
+      {
+        "id": 308,
+        "title": null,
+        "file_name": "mave_sAVrJD.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_sAVrJD.jpg",
+        "file_size": 241344,
+        "tags": null,
+        "created_at": "2024-10-22T13:32:22.000000Z",
+        "updated_at": "2024-10-22T13:32:22.000000Z"
+      },
+      {
+        "id": 307,
+        "title": null,
+        "file_name": "mave_fj1DT1.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_fj1DT1.jpg",
+        "file_size": 171419,
+        "tags": null,
+        "created_at": "2024-10-22T13:32:22.000000Z",
+        "updated_at": "2024-10-22T13:32:22.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "title_en": "Flood Relief Support in Feni and Noakhali.",
+    "title_bn": "Flood Relief Support in Feni and Noakhali",
+    "description_en": "<p><strong>Humanity is Our Strength</strong></p><p><span class=\"ql-cursor\">﻿</span>In 2024, Aygaz United stood beside the flood-affected communities of Feni and Noakhali, providing essential relief support to those in need. Guided by compassion and a sense of responsibility, Aygaz United continues to remain by your side—today, tomorrow, and always—standing strong as a partner in times of adversity.</p>",
+    "description_bn": "<p>Humanity is Our Strength</p><p><br></p><p>In 2024, Aygaz United stood beside the flood-affected communities of Feni and Noakhali, providing essential relief support to those in need. Guided by compassion and a sense of responsibility, Aygaz United continues to remain by your side—today, tomorrow, and always—standing strong as a partner in times of adversity.</p>",
+    "media_ids": [
+      314,
+      313,
+      312,
+      311
+    ],
+    "status": 0,
+    "created_at": "2025-11-04T13:01:45.000000Z",
+    "updated_at": "2025-11-04T13:01:45.000000Z",
+    "medias": [
+      {
+        "id": 314,
+        "title": null,
+        "file_name": "mave_N10FTV.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_N10FTV.jpg",
+        "file_size": 1446118,
+        "tags": null,
+        "created_at": "2024-10-22T13:41:21.000000Z",
+        "updated_at": "2024-10-22T13:41:21.000000Z"
+      },
+      {
+        "id": 313,
+        "title": null,
+        "file_name": "mave_1mVDhZ.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_1mVDhZ.jpg",
+        "file_size": 1405186,
+        "tags": null,
+        "created_at": "2024-10-22T13:41:20.000000Z",
+        "updated_at": "2024-10-22T13:41:20.000000Z"
+      },
+      {
+        "id": 312,
+        "title": null,
+        "file_name": "mave_bBpl7X.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_bBpl7X.jpg",
+        "file_size": 1804917,
+        "tags": null,
+        "created_at": "2024-10-22T13:38:25.000000Z",
+        "updated_at": "2024-10-22T13:38:25.000000Z"
+      },
+      {
+        "id": 311,
+        "title": null,
+        "file_name": "mave_UUJhjw.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_UUJhjw.jpg",
+        "file_size": 1494526,
+        "tags": null,
+        "created_at": "2024-10-22T13:38:24.000000Z",
+        "updated_at": "2024-10-22T13:38:24.000000Z"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "title_en": "Spreading the Gift of Education.",
+    "title_bn": "Spreading the Gift of Education",
+    "description_en": "<p><strong>Empowering Young Minds with the Spirit of Humanity</strong></p><p><span class=\"ql-cursor\">﻿</span>Believing in the power of humanity, United Aygaz LPG Ltd. continues to spread that spirit across the nation. As part of this belief, the company reached out to school-going children in different regions of Bangladesh, distributing school bags to support their educational journey. This initiative was made possible through the support of the Turkish Cooperation and Coordination Agency (TİKA), SHI Bangladesh, and Atatürk Government Model High School, Feni. Through this humble effort, Aygaz United hopes to help the next generation move forward—toward a brighter and more confident tomorrow.</p>",
+    "description_bn": "<p><strong>Empowering Young Minds with the Spirit of Humanity</strong></p><p>Believing in the power of humanity, United Aygaz LPG Ltd. continues to spread that spirit across the nation. As part of this belief, the company reached out to school-going children in different regions of Bangladesh, distributing school bags to support their educational journey. This initiative was made possible through the support of the Turkish Cooperation and Coordination Agency (TİKA), SHI Bangladesh, and Atatürk Government Model High School, Feni. Through this humble effort, Aygaz United hopes to help the next generation move forward—toward a brighter and more confident tomorrow.</p>",
+    "media_ids": [
+      384,
+      383,
+      382,
+      381,
+      380,
+      379,
+      378,
+      377,
+      376
+    ],
+    "status": 0,
+    "created_at": "2025-11-04T13:07:18.000000Z",
+    "updated_at": "2025-11-04T13:07:18.000000Z",
+    "medias": [
+      {
+        "id": 384,
+        "title": null,
+        "file_name": "mave_4YIg8o.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_4YIg8o.jpg",
+        "file_size": 696766,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:50.000000Z",
+        "updated_at": "2025-03-02T11:52:50.000000Z"
+      },
+      {
+        "id": 383,
+        "title": null,
+        "file_name": "mave_kRxLW6.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_kRxLW6.jpg",
+        "file_size": 734270,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:50.000000Z",
+        "updated_at": "2025-03-02T11:52:50.000000Z"
+      },
+      {
+        "id": 382,
+        "title": null,
+        "file_name": "mave_vjedgE.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_vjedgE.jpg",
+        "file_size": 612172,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:50.000000Z",
+        "updated_at": "2025-03-02T11:52:50.000000Z"
+      },
+      {
+        "id": 381,
+        "title": null,
+        "file_name": "mave_xqG66E.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_xqG66E.jpg",
+        "file_size": 599074,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:49.000000Z",
+        "updated_at": "2025-03-02T11:52:49.000000Z"
+      },
+      {
+        "id": 380,
+        "title": null,
+        "file_name": "mave_J3V4G4.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_J3V4G4.jpg",
+        "file_size": 557125,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:49.000000Z",
+        "updated_at": "2025-03-02T11:52:49.000000Z"
+      },
+      {
+        "id": 379,
+        "title": null,
+        "file_name": "mave_hmxuf9.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_hmxuf9.jpg",
+        "file_size": 554535,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:49.000000Z",
+        "updated_at": "2025-03-02T11:52:49.000000Z"
+      },
+      {
+        "id": 378,
+        "title": null,
+        "file_name": "mave_g3Vbk7.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_g3Vbk7.jpg",
+        "file_size": 549343,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:49.000000Z",
+        "updated_at": "2025-03-02T11:52:49.000000Z"
+      },
+      {
+        "id": 377,
+        "title": null,
+        "file_name": "mave_i8fjDp.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_i8fjDp.jpg",
+        "file_size": 523042,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:48.000000Z",
+        "updated_at": "2025-03-02T11:52:48.000000Z"
+      },
+      {
+        "id": 376,
+        "title": null,
+        "file_name": "mave_da0UBV.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_da0UBV.jpg",
+        "file_size": 510631,
+        "tags": null,
+        "created_at": "2025-03-02T11:52:48.000000Z",
+        "updated_at": "2025-03-02T11:52:48.000000Z"
+      }
+    ]
+  }
+]

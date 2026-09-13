@@ -1,0 +1,2064 @@
+[
+  {
+    "id": 1,
+    "title": "Home",
+    "title_bn": "হোম",
+    "link": "/",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-03-11T10:22:59.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 2,
+    "title": "About",
+    "title_bn": "সম্পর্কিত",
+    "link": "/#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-01T09:24:06.000000Z",
+    "all_children": [
+      {
+        "id": 37,
+        "title": "About Us",
+        "title_bn": "About Us",
+        "link": "/about?pageId=10&pageName=About",
+        "parent_id": 2,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:40:19.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 38,
+        "title": "Company Profile",
+        "title_bn": "কোম্পানি প্রোফাইল",
+        "link": "/company-profile?pageId=19&pageName=Company-Profile",
+        "parent_id": 2,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:33:22.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 40,
+        "title": "Chairman's Message",
+        "title_bn": "চেয়ারম্যানের বাণী",
+        "link": "/chairman-message?pageId=118&pageName=Chairman-Message",
+        "parent_id": 2,
+        "created_at": null,
+        "updated_at": "2024-05-19T16:00:51.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 41,
+        "title": "Mission & Vision",
+        "title_bn": "মিশন ও ভিশন",
+        "link": "/mission-vision?pageId=12&pageName=Mission-Vision",
+        "parent_id": 2,
+        "created_at": null,
+        "updated_at": "2024-04-02T09:24:40.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 42,
+        "title": "Board of Directors",
+        "title_bn": "পরিচালনা পর্ষদ",
+        "link": "/board-of-directors?pageId=22&pageName=Board-of-Directors",
+        "parent_id": 2,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:33:01.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 43,
+        "title": "Audit Committee",
+        "title_bn": "অডিট কমিটি",
+        "link": "/audit-committee?pageId=25&pageName=Audit-Committee",
+        "parent_id": 2,
+        "created_at": null,
+        "updated_at": "2024-05-13T09:47:00.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 44,
+        "title": "Nomination & Remuneration Committee",
+        "title_bn": "মনোনয়ন ও পারিশ্রমিক কমিটি",
+        "link": "/nomination-remuneration-committee?pageId=26&pageName=Nomination-&-Remuneration-Committee",
+        "parent_id": 2,
+        "created_at": null,
+        "updated_at": "2024-05-13T10:01:02.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 45,
+        "title": "Shariah Council",
+        "title_bn": "শরিয়াহ কাউন্সিল",
+        "link": "/shariah-council?pageId=27&pageName=Shariah-Council",
+        "parent_id": 2,
+        "created_at": null,
+        "updated_at": "2024-05-13T10:04:27.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 48,
+        "title": "Our Leadership",
+        "title_bn": "আমাদের নেতৃত্ব",
+        "link": "/our-leadership?pageId=28&pageName=Our-Leadership",
+        "parent_id": 2,
+        "created_at": null,
+        "updated_at": "2024-04-02T09:33:17.000000Z",
+        "all_children": [
+          {
+            "id": 49,
+            "title": "Corporate Management",
+            "title_bn": "কর্পোরেট ব্যবস্থাপনা",
+            "link": "/corporate-management-?pageId=29&pageName=Corporate-Management",
+            "parent_id": 48,
+            "created_at": null,
+            "updated_at": "2024-04-22T13:50:04.000000Z",
+            "all_children": []
+          },
+          {
+            "id": 50,
+            "title": "Executives",
+            "title_bn": "এক্সিকিউটিভ",
+            "link": "/executives?pageId=30&pageName=Executives",
+            "parent_id": 48,
+            "created_at": null,
+            "updated_at": "2024-04-02T09:28:29.000000Z",
+            "all_children": []
+          },
+          {
+            "id": 51,
+            "title": "Agent Details",
+            "title_bn": "এজেন্টের বিবরণ",
+            "link": "/agent-details?pageId=31&pageName=Agent-Details",
+            "parent_id": 48,
+            "created_at": null,
+            "updated_at": "2024-04-02T10:32:29.000000Z",
+            "all_children": []
+          },
+          {
+            "id": 138,
+            "title": "Employees",
+            "title_bn": "কর্মচারী",
+            "link": "/employees?pageId=116&pageName=Employees",
+            "parent_id": 48,
+            "created_at": null,
+            "updated_at": null,
+            "all_children": []
+          }
+        ]
+      },
+      {
+        "id": 53,
+        "title": "Our Branches",
+        "title_bn": "আমাদের শাখাসমূহ",
+        "link": "/our-branches?pageId=33&pageName=Our-Branches",
+        "parent_id": 2,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:32:16.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 142,
+        "title": "Founder Chairman",
+        "title_bn": "N/A",
+        "link": "/founder-chairman-two?pageId=133&pageName=Founder-Chairman-Two",
+        "parent_id": 2,
+        "created_at": null,
+        "updated_at": "2024-11-10T15:09:12.000000Z",
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Mission & Vision",
+    "title_bn": "মিশন দৃষ্টি",
+    "link": "/mission&vision",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-03-11T10:23:20.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 5,
+    "title": "Contact",
+    "title_bn": "যোগাযোগ",
+    "link": "/contact?pageId=15&pageName=Contact",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-17T09:38:44.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 6,
+    "title": "Products",
+    "title_bn": "পণ্য",
+    "link": "/product",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-03-11T10:23:49.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 7,
+    "title": "Services",
+    "title_bn": "সেবা",
+    "link": "/service",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-03-11T10:24:00.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 10,
+    "title": "News",
+    "title_bn": "খবর",
+    "link": "#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-03-11T10:24:29.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 12,
+    "title": "User Portal",
+    "title_bn": "ব্যবহারকারী পোর্টাল",
+    "link": "#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-03-11T10:24:36.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 13,
+    "title": "Product 1",
+    "title_bn": "পণ্য ১",
+    "link": "#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-03-11T10:24:48.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 14,
+    "title": "Product 2",
+    "title_bn": "পণ্য ২",
+    "link": "#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-03-11T10:24:59.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 15,
+    "title": "Product 3",
+    "title_bn": "পণ্য ৩",
+    "link": "#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-03-11T10:25:04.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 16,
+    "title": "Product 4",
+    "title_bn": "পণ্য ৪",
+    "link": "#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-03-11T10:25:10.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 17,
+    "title": "Product 5",
+    "title_bn": "পণ্য ৫",
+    "link": "#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-03-11T10:25:21.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 18,
+    "title": "Claim Process",
+    "title_bn": "দাবি প্রক্রিয়া",
+    "link": "#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-03-11T10:25:32.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 19,
+    "title": "Premium Calculate",
+    "title_bn": "প্রিমিয়াম গণনা",
+    "link": "#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-03-11T10:25:41.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 20,
+    "title": "Policy Renewal",
+    "title_bn": "নীতি নবায়ন",
+    "link": "#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-03-11T10:25:51.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 21,
+    "title": "E-Services",
+    "title_bn": "ই-সেবা",
+    "link": "#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-03-11T10:26:00.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 23,
+    "title": "FAQ",
+    "title_bn": "প্রশ্ন",
+    "link": "#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-03-11T10:26:16.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 24,
+    "title": "Forms Download",
+    "title_bn": "ফর্ম ডাউনলোড করুন",
+    "link": "/forms-download?pageId=135&pageName=Forms-Download",
+    "parent_id": 137,
+    "created_at": null,
+    "updated_at": "2024-11-10T12:40:22.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 25,
+    "title": "Our Branches",
+    "title_bn": "আমাদের শাখা",
+    "link": "/our-branches?pageId=33&pageName=Our-Branches",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-10-09T12:21:28.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 26,
+    "title": "Contact Information",
+    "title_bn": "যোগাযোগের তথ্য",
+    "link": "/contact?pageId=15&pageName=Contact",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-10-01T13:55:51.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 27,
+    "title": "Enquiry Form",
+    "title_bn": "ইনকয়েরি ফরম",
+    "link": "/enquiry-form?pageId=132&pageName=Enquiry-Form",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-11-06T17:01:59.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 28,
+    "title": "Locate Us",
+    "title_bn": "আমাদের অবস্থান",
+    "link": "/contact?pageId=15&pageName=Contact",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-10-09T13:15:38.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 29,
+    "title": "Careers",
+    "title_bn": "কর্মজীবন",
+    "link": "/career?pageId=109&pageName=Career",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-10-01T15:10:46.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 32,
+    "title": "Shop",
+    "title_bn": "দোকান",
+    "link": "#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-03-11T10:28:22.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 34,
+    "title": "Committee Report",
+    "title_bn": "কমিটির রিপোর্ট",
+    "link": "/committee-report?pageId=16&pageName=Committee-Report",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:40:47.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 35,
+    "title": "Notice",
+    "title_bn": "নোটিশ",
+    "link": "/notice?pageId=17&pageName=Notice",
+    "parent_id": 126,
+    "created_at": null,
+    "updated_at": "2024-10-23T10:14:19.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 37,
+    "title": "About Us",
+    "title_bn": "About Us",
+    "link": "/about?pageId=10&pageName=About",
+    "parent_id": 2,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:40:19.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 38,
+    "title": "Company Profile",
+    "title_bn": "কোম্পানি প্রোফাইল",
+    "link": "/company-profile?pageId=19&pageName=Company-Profile",
+    "parent_id": 2,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:33:22.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 40,
+    "title": "Chairman's Message",
+    "title_bn": "চেয়ারম্যানের বাণী",
+    "link": "/chairman-message?pageId=118&pageName=Chairman-Message",
+    "parent_id": 2,
+    "created_at": null,
+    "updated_at": "2024-05-19T16:00:51.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 41,
+    "title": "Mission & Vision",
+    "title_bn": "মিশন ও ভিশন",
+    "link": "/mission-vision?pageId=12&pageName=Mission-Vision",
+    "parent_id": 2,
+    "created_at": null,
+    "updated_at": "2024-04-02T09:24:40.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 42,
+    "title": "Board of Directors",
+    "title_bn": "পরিচালনা পর্ষদ",
+    "link": "/board-of-directors?pageId=22&pageName=Board-of-Directors",
+    "parent_id": 2,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:33:01.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 43,
+    "title": "Audit Committee",
+    "title_bn": "অডিট কমিটি",
+    "link": "/audit-committee?pageId=25&pageName=Audit-Committee",
+    "parent_id": 2,
+    "created_at": null,
+    "updated_at": "2024-05-13T09:47:00.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 44,
+    "title": "Nomination & Remuneration Committee",
+    "title_bn": "মনোনয়ন ও পারিশ্রমিক কমিটি",
+    "link": "/nomination-remuneration-committee?pageId=26&pageName=Nomination-&-Remuneration-Committee",
+    "parent_id": 2,
+    "created_at": null,
+    "updated_at": "2024-05-13T10:01:02.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 45,
+    "title": "Shariah Council",
+    "title_bn": "শরিয়াহ কাউন্সিল",
+    "link": "/shariah-council?pageId=27&pageName=Shariah-Council",
+    "parent_id": 2,
+    "created_at": null,
+    "updated_at": "2024-05-13T10:04:27.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 48,
+    "title": "Our Leadership",
+    "title_bn": "আমাদের নেতৃত্ব",
+    "link": "/our-leadership?pageId=28&pageName=Our-Leadership",
+    "parent_id": 2,
+    "created_at": null,
+    "updated_at": "2024-04-02T09:33:17.000000Z",
+    "all_children": [
+      {
+        "id": 49,
+        "title": "Corporate Management",
+        "title_bn": "কর্পোরেট ব্যবস্থাপনা",
+        "link": "/corporate-management-?pageId=29&pageName=Corporate-Management",
+        "parent_id": 48,
+        "created_at": null,
+        "updated_at": "2024-04-22T13:50:04.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 50,
+        "title": "Executives",
+        "title_bn": "এক্সিকিউটিভ",
+        "link": "/executives?pageId=30&pageName=Executives",
+        "parent_id": 48,
+        "created_at": null,
+        "updated_at": "2024-04-02T09:28:29.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 51,
+        "title": "Agent Details",
+        "title_bn": "এজেন্টের বিবরণ",
+        "link": "/agent-details?pageId=31&pageName=Agent-Details",
+        "parent_id": 48,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:32:29.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 138,
+        "title": "Employees",
+        "title_bn": "কর্মচারী",
+        "link": "/employees?pageId=116&pageName=Employees",
+        "parent_id": 48,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "title": "Corporate Management",
+    "title_bn": "কর্পোরেট ব্যবস্থাপনা",
+    "link": "/corporate-management-?pageId=29&pageName=Corporate-Management",
+    "parent_id": 48,
+    "created_at": null,
+    "updated_at": "2024-04-22T13:50:04.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 50,
+    "title": "Executives",
+    "title_bn": "এক্সিকিউটিভ",
+    "link": "/executives?pageId=30&pageName=Executives",
+    "parent_id": 48,
+    "created_at": null,
+    "updated_at": "2024-04-02T09:28:29.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 51,
+    "title": "Agent Details",
+    "title_bn": "এজেন্টের বিবরণ",
+    "link": "/agent-details?pageId=31&pageName=Agent-Details",
+    "parent_id": 48,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:32:29.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 52,
+    "title": "Credit Rating",
+    "title_bn": "ক্রেডিট রেটিং",
+    "link": "/credit-rating?pageId=32&pageName=Credit-Rating",
+    "parent_id": 75,
+    "created_at": null,
+    "updated_at": "2024-08-01T12:18:34.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 53,
+    "title": "Our Branches",
+    "title_bn": "আমাদের শাখাসমূহ",
+    "link": "/our-branches?pageId=33&pageName=Our-Branches",
+    "parent_id": 2,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:32:16.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 55,
+    "title": "Product",
+    "title_bn": "প্ল্যান",
+    "link": "#",
+    "parent_id": 137,
+    "created_at": null,
+    "updated_at": "2024-06-02T12:54:25.000000Z",
+    "all_children": [
+      {
+        "id": 56,
+        "title": "Akok Bima",
+        "title_bn": "Akok Bima",
+        "link": "/akok-bima?pageId=34&pageName=AKOK-Bima",
+        "parent_id": 55,
+        "created_at": null,
+        "updated_at": "2024-11-12T12:14:44.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 57,
+        "title": "Takaful",
+        "title_bn": "Takaful",
+        "link": "/takaful?pageId=35&pageName=Takaful",
+        "parent_id": 55,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:32:01.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 58,
+        "title": "Micro Insurance",
+        "title_bn": "Micro Insurance",
+        "link": "/micro-insurance?pageId=36&pageName=Micro-Insurance",
+        "parent_id": 55,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:31:54.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 59,
+        "title": "Group Insurance",
+        "title_bn": "Group Insurance",
+        "link": "/group-insurance?pageId=37&pageName=Group-Insurance",
+        "parent_id": 55,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:31:46.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 60,
+        "title": "Health Insurance",
+        "title_bn": "Health Insurance",
+        "link": "/health-insurance?pageId=39&pageName=Health-Insurance",
+        "parent_id": 55,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:31:13.000000Z",
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "title": "Akok Bima",
+    "title_bn": "Akok Bima",
+    "link": "/akok-bima?pageId=34&pageName=AKOK-Bima",
+    "parent_id": 55,
+    "created_at": null,
+    "updated_at": "2024-11-12T12:14:44.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 57,
+    "title": "Takaful",
+    "title_bn": "Takaful",
+    "link": "/takaful?pageId=35&pageName=Takaful",
+    "parent_id": 55,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:32:01.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 58,
+    "title": "Micro Insurance",
+    "title_bn": "Micro Insurance",
+    "link": "/micro-insurance?pageId=36&pageName=Micro-Insurance",
+    "parent_id": 55,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:31:54.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 59,
+    "title": "Group Insurance",
+    "title_bn": "Group Insurance",
+    "link": "/group-insurance?pageId=37&pageName=Group-Insurance",
+    "parent_id": 55,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:31:46.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 60,
+    "title": "Health Insurance",
+    "title_bn": "Health Insurance",
+    "link": "/health-insurance?pageId=39&pageName=Health-Insurance",
+    "parent_id": 55,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:31:13.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 65,
+    "title": "Re-Insurance",
+    "title_bn": "Re-Insurance",
+    "link": "/re-insurance?pageId=43&pageName=Re-Insurance",
+    "parent_id": 137,
+    "created_at": null,
+    "updated_at": "2024-07-31T12:28:49.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 67,
+    "title": "Video Information on Insurance",
+    "title_bn": "Video Information on Insurance",
+    "link": "/video-information-on-insurance?pageId=46&pageName=Video-Information-on-Insurance",
+    "parent_id": 137,
+    "created_at": null,
+    "updated_at": "2024-06-03T11:53:50.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 68,
+    "title": "What is life insurance and why do you need it",
+    "title_bn": "বীমা কি এবং কেন প্রয়োজন ?",
+    "link": "/what-is-insurance-and-why-do-you-need-it??pageId=47&pageName=What-is-insurance-and-why-do-you-need-it?",
+    "parent_id": 0,
+    "created_at": null,
+    "updated_at": "2024-09-26T12:56:58.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 69,
+    "title": "What are the benefits of insurance",
+    "title_bn": "বীমা করলে কি কি সুবিধা ?",
+    "link": "/",
+    "parent_id": 0,
+    "created_at": null,
+    "updated_at": "2024-10-03T09:35:37.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 70,
+    "title": "Bancassurance",
+    "title_bn": "Bancassurance",
+    "link": "/#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 71,
+    "title": "Trustee",
+    "title_bn": "Trustee",
+    "link": "/#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": [
+      {
+        "id": 72,
+        "title": "Trustee Committee",
+        "title_bn": "Trustee Committee",
+        "link": "/trustee-committee?pageId=50&pageName=Trustee-Committee",
+        "parent_id": 71,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:23:25.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 140,
+        "title": "Information Memorandum and Prospectus",
+        "title_bn": "তথ্য স্মারকলিপি এবং প্রসপেক্টাস",
+        "link": "deed-of-trust?pageId=150&pageName=prof-information",
+        "parent_id": 71,
+        "created_at": null,
+        "updated_at": "2026-02-02T10:20:38.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 160,
+        "title": "Profile of Trustee",
+        "title_bn": "ট্রাস্টির প্রোফাইল",
+        "link": "/deed-of-trust?pageId=151&pageName=prof-trust",
+        "parent_id": 71,
+        "created_at": null,
+        "updated_at": "2026-01-29T05:18:41.000000Z",
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "title": "Trustee Committee",
+    "title_bn": "Trustee Committee",
+    "link": "/trustee-committee?pageId=50&pageName=Trustee-Committee",
+    "parent_id": 71,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:23:25.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 73,
+    "title": "IM of H.R. Textile Mills Limited",
+    "title_bn": "IM of H.R. Textile Mills Limited",
+    "link": "/im-of-hr-textile-mills-limited?pageId=51&pageName=IM-of-H.R.-Textile-Mills-Limited",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:23:12.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 74,
+    "title": "Deed of Trust H.R. Textile Zero Coupon Bond",
+    "title_bn": "Deed of Trust H.R. Textile Zero Coupon Bond",
+    "link": "/deed-of-trust-hr-textile-zero-coupon-bond",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2026-02-02T05:48:29.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 75,
+    "title": "Investor’s Relation",
+    "title_bn": "Investor’s Relation",
+    "link": "/#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": [
+      {
+        "id": 52,
+        "title": "Credit Rating",
+        "title_bn": "ক্রেডিট রেটিং",
+        "link": "/credit-rating?pageId=32&pageName=Credit-Rating",
+        "parent_id": 75,
+        "created_at": null,
+        "updated_at": "2024-08-01T12:18:34.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 77,
+        "title": "Share Holding Position",
+        "title_bn": "Share Holding Position",
+        "link": "/share-holding-position?pageId=53&pageName=Share-Holding-Position",
+        "parent_id": 75,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:22:26.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 78,
+        "title": "Dividend Distribution",
+        "title_bn": "Dividend Distribution",
+        "link": "/dividend-distribution-policy?pageId=54&pageName=Dividend-Distribution-Policy",
+        "parent_id": 75,
+        "created_at": null,
+        "updated_at": "2024-10-29T15:55:34.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 79,
+        "title": "Declaration for Buy and Sale",
+        "title_bn": "Declaration for Buy and Sale",
+        "link": "/declaration-for-buy-and-sale?pageId=55&pageName=Declaration-for-Buy-and-Sale",
+        "parent_id": 75,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:22:05.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 80,
+        "title": "Financial Statement",
+        "title_bn": "Financial Statement",
+        "link": "/financial-indicator?pageId=56&pageName=Financial-Indicator",
+        "parent_id": 75,
+        "created_at": null,
+        "updated_at": "2024-06-05T10:39:59.000000Z",
+        "all_children": [
+          {
+            "id": 81,
+            "title": "Annual Report",
+            "title_bn": "Annual Report",
+            "link": "/annual-report-2021?pageId=57&pageName=Annual-Report-2021",
+            "parent_id": 80,
+            "created_at": null,
+            "updated_at": "2024-07-31T13:08:46.000000Z",
+            "all_children": []
+          },
+          {
+            "id": 85,
+            "title": "Audited Financial Statement",
+            "title_bn": "Audited Financial Statement",
+            "link": "/hly-(un-audited)-2024?pageId=61&pageName=Hly-(Un-Audited)-2024",
+            "parent_id": 80,
+            "created_at": null,
+            "updated_at": "2024-10-16T15:26:49.000000Z",
+            "all_children": []
+          },
+          {
+            "id": 86,
+            "title": "Quarterly Report",
+            "title_bn": "Quarterly Report",
+            "link": "/qly-(un-audited)-2024?pageId=62&pageName=Qly-(Un-Audited)-2024",
+            "parent_id": 80,
+            "created_at": null,
+            "updated_at": "2024-07-31T13:10:50.000000Z",
+            "all_children": []
+          }
+        ]
+      },
+      {
+        "id": 114,
+        "title": "Unclaimed Dividend",
+        "title_bn": "Unclaimed Dividend",
+        "link": "/unclaimed-dividend?pageId=88&pageName=Unclaimed-Dividend",
+        "parent_id": 75,
+        "created_at": null,
+        "updated_at": "2024-09-25T15:36:31.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 134,
+        "title": "PSI",
+        "title_bn": "পিএসআই",
+        "link": "/psi?pageId=112&pageName=PSI",
+        "parent_id": 75,
+        "created_at": null,
+        "updated_at": "2024-07-30T11:12:46.000000Z",
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "title": "IPO",
+    "title_bn": "IPO",
+    "link": "/ipo?pageId=44&pageName=IPO",
+    "parent_id": 137,
+    "created_at": null,
+    "updated_at": "2024-06-02T13:57:37.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 77,
+    "title": "Share Holding Position",
+    "title_bn": "Share Holding Position",
+    "link": "/share-holding-position?pageId=53&pageName=Share-Holding-Position",
+    "parent_id": 75,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:22:26.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 78,
+    "title": "Dividend Distribution",
+    "title_bn": "Dividend Distribution",
+    "link": "/dividend-distribution-policy?pageId=54&pageName=Dividend-Distribution-Policy",
+    "parent_id": 75,
+    "created_at": null,
+    "updated_at": "2024-10-29T15:55:34.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 79,
+    "title": "Declaration for Buy and Sale",
+    "title_bn": "Declaration for Buy and Sale",
+    "link": "/declaration-for-buy-and-sale?pageId=55&pageName=Declaration-for-Buy-and-Sale",
+    "parent_id": 75,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:22:05.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 80,
+    "title": "Financial Statement",
+    "title_bn": "Financial Statement",
+    "link": "/financial-indicator?pageId=56&pageName=Financial-Indicator",
+    "parent_id": 75,
+    "created_at": null,
+    "updated_at": "2024-06-05T10:39:59.000000Z",
+    "all_children": [
+      {
+        "id": 81,
+        "title": "Annual Report",
+        "title_bn": "Annual Report",
+        "link": "/annual-report-2021?pageId=57&pageName=Annual-Report-2021",
+        "parent_id": 80,
+        "created_at": null,
+        "updated_at": "2024-07-31T13:08:46.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 85,
+        "title": "Audited Financial Statement",
+        "title_bn": "Audited Financial Statement",
+        "link": "/hly-(un-audited)-2024?pageId=61&pageName=Hly-(Un-Audited)-2024",
+        "parent_id": 80,
+        "created_at": null,
+        "updated_at": "2024-10-16T15:26:49.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 86,
+        "title": "Quarterly Report",
+        "title_bn": "Quarterly Report",
+        "link": "/qly-(un-audited)-2024?pageId=62&pageName=Qly-(Un-Audited)-2024",
+        "parent_id": 80,
+        "created_at": null,
+        "updated_at": "2024-07-31T13:10:50.000000Z",
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "title": "Annual Report",
+    "title_bn": "Annual Report",
+    "link": "/annual-report-2021?pageId=57&pageName=Annual-Report-2021",
+    "parent_id": 80,
+    "created_at": null,
+    "updated_at": "2024-07-31T13:08:46.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 82,
+    "title": "Annual Report 2022",
+    "title_bn": "Annual Report 2022",
+    "link": "/annual-report-2022?pageId=58&pageName=Annual-Report-2022",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:21:37.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 83,
+    "title": "Annual Report 2023",
+    "title_bn": "Annual Report 2023",
+    "link": "/annual-report-2023?pageId=59&pageName=Annual-Report-2023",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:21:29.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 84,
+    "title": "Yly (Un-Audited) 2024",
+    "title_bn": "Yly (Un-Audited) 2024",
+    "link": "/yly-(un-audited)-2024?pageId=60&pageName=Yly-(Un-Audited)-2024",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:21:21.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 85,
+    "title": "Audited Financial Statement",
+    "title_bn": "Audited Financial Statement",
+    "link": "/hly-(un-audited)-2024?pageId=61&pageName=Hly-(Un-Audited)-2024",
+    "parent_id": 80,
+    "created_at": null,
+    "updated_at": "2024-10-16T15:26:49.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 86,
+    "title": "Quarterly Report",
+    "title_bn": "Quarterly Report",
+    "link": "/qly-(un-audited)-2024?pageId=62&pageName=Qly-(Un-Audited)-2024",
+    "parent_id": 80,
+    "created_at": null,
+    "updated_at": "2024-07-31T13:10:50.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 87,
+    "title": "Compliance",
+    "title_bn": "Compliance",
+    "link": "/#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": [
+      {
+        "id": 88,
+        "title": "Compliance of Corporate Governance",
+        "title_bn": "Compliance of Corporate Governance",
+        "link": "/compliance-of-corporate-governance?pageId=63&pageName=Compliance-of-Corporate-Governance",
+        "parent_id": 87,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:20:53.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 89,
+        "title": "Code of Conduct",
+        "title_bn": "Code of Conduct",
+        "link": "/code-of-conduct?pageId=64&pageName=Code-of-Conduct",
+        "parent_id": 87,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:20:32.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 90,
+        "title": "Suddhachar",
+        "title_bn": "Suddhachar",
+        "link": "/suddhachar?pageId=65&pageName=Suddhachar",
+        "parent_id": 87,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:20:24.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 91,
+        "title": "Citizen Charter",
+        "title_bn": "Citizen Charter",
+        "link": "/citizen-charter?pageId=66&pageName=Citizen-Charter",
+        "parent_id": 87,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:20:18.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 92,
+        "title": "Information Rights",
+        "title_bn": "Information Rights",
+        "link": "/information-rights?pageId=142&pageName=information-rights",
+        "parent_id": 87,
+        "created_at": null,
+        "updated_at": "2025-06-26T04:54:39.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 93,
+        "title": "Policy Bonus",
+        "title_bn": "Policy Bonus",
+        "link": "/policy-bonus?pageId=68&pageName=Policy-Bonus",
+        "parent_id": 87,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:20:01.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 108,
+        "title": "Outstanding Claim",
+        "title_bn": "Outstanding Claim",
+        "link": "/outstanding-claim?pageId=82&pageName=Outstanding-Claim",
+        "parent_id": 87,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:18:13.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 141,
+        "title": "Dividend Distribution Compliance",
+        "title_bn": "N/A",
+        "link": "/dividend-distribution-compliance?pageId=134&pageName=Dividend-Distribution-Compliance",
+        "parent_id": 87,
+        "created_at": null,
+        "updated_at": "2025-07-29T09:37:37.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 159,
+        "title": "Regulatory Disclosures",
+        "title_bn": "নিয়ন্ত্রক প্রকাশনা",
+        "link": "/regulatory-disclosures?pageId=149&pageName=regulatory-disclosures",
+        "parent_id": 87,
+        "created_at": null,
+        "updated_at": "2025-07-29T12:05:38.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 161,
+        "title": "Claim Guidelines",
+        "title_bn": "বীমাদাবী নির্দেশিকা",
+        "link": "/compliance/claim-guidelines",
+        "parent_id": 87,
+        "created_at": null,
+        "updated_at": "2026-06-08T08:17:53.000000Z",
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "title": "Compliance of Corporate Governance",
+    "title_bn": "Compliance of Corporate Governance",
+    "link": "/compliance-of-corporate-governance?pageId=63&pageName=Compliance-of-Corporate-Governance",
+    "parent_id": 87,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:20:53.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 89,
+    "title": "Code of Conduct",
+    "title_bn": "Code of Conduct",
+    "link": "/code-of-conduct?pageId=64&pageName=Code-of-Conduct",
+    "parent_id": 87,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:20:32.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 90,
+    "title": "Suddhachar",
+    "title_bn": "Suddhachar",
+    "link": "/suddhachar?pageId=65&pageName=Suddhachar",
+    "parent_id": 87,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:20:24.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 91,
+    "title": "Citizen Charter",
+    "title_bn": "Citizen Charter",
+    "link": "/citizen-charter?pageId=66&pageName=Citizen-Charter",
+    "parent_id": 87,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:20:18.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 92,
+    "title": "Information Rights",
+    "title_bn": "Information Rights",
+    "link": "/information-rights?pageId=142&pageName=information-rights",
+    "parent_id": 87,
+    "created_at": null,
+    "updated_at": "2025-06-26T04:54:39.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 93,
+    "title": "Policy Bonus",
+    "title_bn": "Policy Bonus",
+    "link": "/policy-bonus?pageId=68&pageName=Policy-Bonus",
+    "parent_id": 87,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:20:01.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 94,
+    "title": "2008",
+    "title_bn": "2008",
+    "link": "/2008?pageId=69&pageName=2008",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:19:54.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 95,
+    "title": "2009",
+    "title_bn": "2009",
+    "link": "/2009?pageId=70&pageName=2009",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:19:42.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 96,
+    "title": "2010",
+    "title_bn": "2010",
+    "link": "/2010?pageId=71&pageName=2010",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:19:36.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 97,
+    "title": "2011",
+    "title_bn": "2011",
+    "link": "/2011?pageId=72&pageName=2011",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:19:23.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 98,
+    "title": "2012",
+    "title_bn": "2012",
+    "link": "/2012?pageId=73&pageName=2012",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:19:17.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 99,
+    "title": "2013",
+    "title_bn": "2013",
+    "link": "/2013?pageId=74&pageName=2013",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:19:06.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 100,
+    "title": "2014",
+    "title_bn": "2014",
+    "link": "/2014?pageId=75&pageName=2014",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:18:59.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 101,
+    "title": "2015",
+    "title_bn": "2015",
+    "link": "/2015?pageId=76&pageName=2015",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:18:53.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 102,
+    "title": "2016",
+    "title_bn": "2016",
+    "link": "/2016?pageId=77&pageName=2016",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:18:48.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 103,
+    "title": "2017",
+    "title_bn": "2017",
+    "link": "/2017?pageId=78&pageName=2017",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:18:40.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 104,
+    "title": "2018",
+    "title_bn": "2018",
+    "link": "/2018?pageId=79&pageName=2018",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:18:33.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 105,
+    "title": "2019",
+    "title_bn": "2019",
+    "link": "/2019?pageId=80&pageName=2019",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:18:27.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 106,
+    "title": "2020",
+    "title_bn": "2020",
+    "link": "/2020?pageId=81&pageName=2020",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:18:20.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 108,
+    "title": "Outstanding Claim",
+    "title_bn": "Outstanding Claim",
+    "link": "/outstanding-claim?pageId=82&pageName=Outstanding-Claim",
+    "parent_id": 87,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:18:13.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 109,
+    "title": "Full Maturity Claim",
+    "title_bn": "Full Maturity Claim",
+    "link": "/full-maturity-claim?pageId=83&pageName=Full-Maturity-Claim",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:18:07.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 110,
+    "title": "Paid-up Claim",
+    "title_bn": "Paid-up Claim",
+    "link": "/paid-up-claim?pageId=84&pageName=Paid-up-Claim",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:17:59.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 111,
+    "title": "S.B. Claim",
+    "title_bn": "S.B. Claim",
+    "link": "/sb-claim?pageId=85&pageName=S.B.-Claim",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:17:44.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 112,
+    "title": "Death Claim",
+    "title_bn": "Death Claim",
+    "link": "/death-claim?pageId=86&pageName=Death-Claim",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:17:36.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 113,
+    "title": "Surrender",
+    "title_bn": "Surrender",
+    "link": "/surrender?pageId=87&pageName=Surrender",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:17:29.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 114,
+    "title": "Unclaimed Dividend",
+    "title_bn": "Unclaimed Dividend",
+    "link": "/unclaimed-dividend?pageId=88&pageName=Unclaimed-Dividend",
+    "parent_id": 75,
+    "created_at": null,
+    "updated_at": "2024-09-25T15:36:31.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 115,
+    "title": "Unclaim Fraction Dividend 2008",
+    "title_bn": "Unclaim Fraction Dividend 2008",
+    "link": "/unclaim-fraction-dividend-2008?pageId=94&pageName=Unclaim-Fraction-Dividend-2008",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:17:09.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 116,
+    "title": "Unclaim Fraction Dividend 2009",
+    "title_bn": "Unclaim Fraction Dividend 2009",
+    "link": "/unclaim-fraction-dividend-2009?pageId=95&pageName=Unclaim-Fraction-Dividend-2009",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:16:48.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 117,
+    "title": "Unclaim Fraction Dividend 2010",
+    "title_bn": "Unclaim Fraction Dividend 2010",
+    "link": "/unclaim-fraction-dividend-2010?pageId=96&pageName=Unclaim-Fraction-Dividend-2010",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:16:28.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 118,
+    "title": "Unclaim Fraction Dividend 2011",
+    "title_bn": "Unclaim Fraction Dividend 2011",
+    "link": "/unclaim-fraction-dividend-2011?pageId=97&pageName=Unclaim-Fraction-Dividend-2011",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:16:18.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 119,
+    "title": "Unclaim Fraction Dividend 2012",
+    "title_bn": "Unclaim Fraction Dividend 2012",
+    "link": "/unclaim-fraction-dividend-2012?pageId=98&pageName=Unclaim-Fraction-Dividend-2012",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:16:09.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 120,
+    "title": "Unclaim Fraction Dividend 2013",
+    "title_bn": "Unclaim Fraction Dividend 2013",
+    "link": "/unclaim-fraction-dividend-2013?pageId=99&pageName=Unclaim-Fraction-Dividend-2013",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:15:58.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 121,
+    "title": "Unclaim Fraction Dividend 2014",
+    "title_bn": "Unclaim Fraction Dividend 2014",
+    "link": "/unclaim-fraction-dividend-2014?pageId=100&pageName=Unclaim-Fraction-Dividend-2014",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:15:47.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 122,
+    "title": "Unclaim Fraction Dividend 2015",
+    "title_bn": "Unclaim Fraction Dividend 2015",
+    "link": "/unclaim-fraction-dividend-2015?pageId=101&pageName=Unclaim-Fraction-Dividend-2015",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:15:23.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 123,
+    "title": "Unclaim Fraction Dividend 2016",
+    "title_bn": "Unclaim Fraction Dividend 2016",
+    "link": "/unclaim-fraction-dividend-2016?pageId=102&pageName=Unclaim-Fraction-Dividend-2016",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:15:10.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 124,
+    "title": "Unclaim Fraction Dividend 2017",
+    "title_bn": "Unclaim Fraction Dividend 2017",
+    "link": "/unclaim-fraction-dividend-2017?pageId=103&pageName=Unclaim-Fraction-Dividend-2017",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:14:57.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 125,
+    "title": "Unclaim Fraction Dividend 2018",
+    "title_bn": "Unclaim Fraction Dividend 2018",
+    "link": "/unclaim-fraction-dividend-2018?pageId=104&pageName=Unclaim-Fraction-Dividend-2018",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:14:49.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 126,
+    "title": "Media & Events",
+    "title_bn": "Media & Events",
+    "link": "/#",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": [
+      {
+        "id": 35,
+        "title": "Notice",
+        "title_bn": "নোটিশ",
+        "link": "/notice?pageId=17&pageName=Notice",
+        "parent_id": 126,
+        "created_at": null,
+        "updated_at": "2024-10-23T10:14:19.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 127,
+        "title": "Circular",
+        "title_bn": "বিজ্ঞপ্তি",
+        "link": "/circular?pageId=105&pageName=Circular",
+        "parent_id": 126,
+        "created_at": null,
+        "updated_at": "2024-10-23T09:12:51.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 128,
+        "title": "News",
+        "title_bn": "সংবাদ",
+        "link": "/news?pageId=106&pageName=News",
+        "parent_id": 126,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:14:29.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 129,
+        "title": "Photo Gallery",
+        "title_bn": "ছবির গ্যালারি",
+        "link": "/photo-gallery?pageId=107&pageName=Photo-Gallery",
+        "parent_id": 126,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:52:12.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 130,
+        "title": "Videos",
+        "title_bn": "ভিডিও",
+        "link": "/videos?pageId=108&pageName=Videos",
+        "parent_id": 126,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:14:15.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 131,
+        "title": "Career",
+        "title_bn": "করিয়ার",
+        "link": "/career?pageId=109&pageName=Career",
+        "parent_id": 126,
+        "created_at": null,
+        "updated_at": "2024-04-02T10:14:08.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 132,
+        "title": "Learning Center",
+        "title_bn": "Learning Center",
+        "link": "/learning-center?pageId=128&pageName=Learning-Center",
+        "parent_id": 126,
+        "created_at": null,
+        "updated_at": "2024-06-02T13:21:43.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 133,
+        "title": "E-Tender",
+        "title_bn": "ই-টেন্ডার",
+        "link": "/e-tender?pageId=111&pageName=E-Tender",
+        "parent_id": 126,
+        "created_at": null,
+        "updated_at": "2024-04-02T09:59:08.000000Z",
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "title": "Circular",
+    "title_bn": "বিজ্ঞপ্তি",
+    "link": "/circular?pageId=105&pageName=Circular",
+    "parent_id": 126,
+    "created_at": null,
+    "updated_at": "2024-10-23T09:12:51.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 128,
+    "title": "News",
+    "title_bn": "সংবাদ",
+    "link": "/news?pageId=106&pageName=News",
+    "parent_id": 126,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:14:29.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 129,
+    "title": "Photo Gallery",
+    "title_bn": "ছবির গ্যালারি",
+    "link": "/photo-gallery?pageId=107&pageName=Photo-Gallery",
+    "parent_id": 126,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:52:12.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 130,
+    "title": "Videos",
+    "title_bn": "ভিডিও",
+    "link": "/videos?pageId=108&pageName=Videos",
+    "parent_id": 126,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:14:15.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 131,
+    "title": "Career",
+    "title_bn": "করিয়ার",
+    "link": "/career?pageId=109&pageName=Career",
+    "parent_id": 126,
+    "created_at": null,
+    "updated_at": "2024-04-02T10:14:08.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 132,
+    "title": "Learning Center",
+    "title_bn": "Learning Center",
+    "link": "/learning-center?pageId=128&pageName=Learning-Center",
+    "parent_id": 126,
+    "created_at": null,
+    "updated_at": "2024-06-02T13:21:43.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 133,
+    "title": "E-Tender",
+    "title_bn": "ই-টেন্ডার",
+    "link": "/e-tender?pageId=111&pageName=E-Tender",
+    "parent_id": 126,
+    "created_at": null,
+    "updated_at": "2024-04-02T09:59:08.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 134,
+    "title": "PSI",
+    "title_bn": "পিএসআই",
+    "link": "/psi?pageId=112&pageName=PSI",
+    "parent_id": 75,
+    "created_at": null,
+    "updated_at": "2024-07-30T11:12:46.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 135,
+    "title": "Contact Us",
+    "title_bn": "Contact Us",
+    "link": "/contact-us?pageId=113&pageName=Contact-Us",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-05-19T16:15:00.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 136,
+    "title": "Bangabandhu Corner",
+    "title_bn": "Bangabandhu Corner",
+    "link": "/bangabandhu-corner?pageId=114&pageName=Bangabandhu-Corner",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T09:21:56.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 137,
+    "title": "Niloy",
+    "title_bn": "Niloy",
+    "link": "/niloy?pageId=115&pageName=niloy",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-04-02T09:08:08.000000Z",
+    "all_children": [
+      {
+        "id": 24,
+        "title": "Forms Download",
+        "title_bn": "ফর্ম ডাউনলোড করুন",
+        "link": "/forms-download?pageId=135&pageName=Forms-Download",
+        "parent_id": 137,
+        "created_at": null,
+        "updated_at": "2024-11-10T12:40:22.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 55,
+        "title": "Product",
+        "title_bn": "প্ল্যান",
+        "link": "#",
+        "parent_id": 137,
+        "created_at": null,
+        "updated_at": "2024-06-02T12:54:25.000000Z",
+        "all_children": [
+          {
+            "id": 56,
+            "title": "Akok Bima",
+            "title_bn": "Akok Bima",
+            "link": "/akok-bima?pageId=34&pageName=AKOK-Bima",
+            "parent_id": 55,
+            "created_at": null,
+            "updated_at": "2024-11-12T12:14:44.000000Z",
+            "all_children": []
+          },
+          {
+            "id": 57,
+            "title": "Takaful",
+            "title_bn": "Takaful",
+            "link": "/takaful?pageId=35&pageName=Takaful",
+            "parent_id": 55,
+            "created_at": null,
+            "updated_at": "2024-04-02T10:32:01.000000Z",
+            "all_children": []
+          },
+          {
+            "id": 58,
+            "title": "Micro Insurance",
+            "title_bn": "Micro Insurance",
+            "link": "/micro-insurance?pageId=36&pageName=Micro-Insurance",
+            "parent_id": 55,
+            "created_at": null,
+            "updated_at": "2024-04-02T10:31:54.000000Z",
+            "all_children": []
+          },
+          {
+            "id": 59,
+            "title": "Group Insurance",
+            "title_bn": "Group Insurance",
+            "link": "/group-insurance?pageId=37&pageName=Group-Insurance",
+            "parent_id": 55,
+            "created_at": null,
+            "updated_at": "2024-04-02T10:31:46.000000Z",
+            "all_children": []
+          },
+          {
+            "id": 60,
+            "title": "Health Insurance",
+            "title_bn": "Health Insurance",
+            "link": "/health-insurance?pageId=39&pageName=Health-Insurance",
+            "parent_id": 55,
+            "created_at": null,
+            "updated_at": "2024-04-02T10:31:13.000000Z",
+            "all_children": []
+          }
+        ]
+      },
+      {
+        "id": 65,
+        "title": "Re-Insurance",
+        "title_bn": "Re-Insurance",
+        "link": "/re-insurance?pageId=43&pageName=Re-Insurance",
+        "parent_id": 137,
+        "created_at": null,
+        "updated_at": "2024-07-31T12:28:49.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 67,
+        "title": "Video Information on Insurance",
+        "title_bn": "Video Information on Insurance",
+        "link": "/video-information-on-insurance?pageId=46&pageName=Video-Information-on-Insurance",
+        "parent_id": 137,
+        "created_at": null,
+        "updated_at": "2024-06-03T11:53:50.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 76,
+        "title": "IPO",
+        "title_bn": "IPO",
+        "link": "/ipo?pageId=44&pageName=IPO",
+        "parent_id": 137,
+        "created_at": null,
+        "updated_at": "2024-06-02T13:57:37.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 144,
+        "title": "Founder Chairman Two",
+        "title_bn": "Founder Chairman Two",
+        "link": "/founder-chairman-two?pageId=133&pageName=Founder-Chairman-Two",
+        "parent_id": 137,
+        "created_at": null,
+        "updated_at": "2024-11-10T16:12:58.000000Z",
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "title": "Employees",
+    "title_bn": "কর্মচারী",
+    "link": "/employees?pageId=116&pageName=Employees",
+    "parent_id": 48,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 140,
+    "title": "Information Memorandum and Prospectus",
+    "title_bn": "তথ্য স্মারকলিপি এবং প্রসপেক্টাস",
+    "link": "deed-of-trust?pageId=150&pageName=prof-information",
+    "parent_id": 71,
+    "created_at": null,
+    "updated_at": "2026-02-02T10:20:38.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 141,
+    "title": "Dividend Distribution Compliance",
+    "title_bn": "N/A",
+    "link": "/dividend-distribution-compliance?pageId=134&pageName=Dividend-Distribution-Compliance",
+    "parent_id": 87,
+    "created_at": null,
+    "updated_at": "2025-07-29T09:37:37.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 142,
+    "title": "Founder Chairman",
+    "title_bn": "N/A",
+    "link": "/founder-chairman-two?pageId=133&pageName=Founder-Chairman-Two",
+    "parent_id": 2,
+    "created_at": null,
+    "updated_at": "2024-11-10T15:09:12.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 143,
+    "title": "WebMail",
+    "title_bn": "WebMail",
+    "link": "http://mail.sandhanilife.com",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-11-11T17:35:29.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 144,
+    "title": "Founder Chairman Two",
+    "title_bn": "Founder Chairman Two",
+    "link": "/founder-chairman-two?pageId=133&pageName=Founder-Chairman-Two",
+    "parent_id": 137,
+    "created_at": null,
+    "updated_at": "2024-11-10T16:12:58.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 145,
+    "title": "FID",
+    "title_bn": "N/A",
+    "link": "https://fid.gov.bd/",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-11-07T16:04:40.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 148,
+    "title": "IDRA",
+    "title_bn": "N/A",
+    "link": "https://idra.org.bd/",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-11-07T16:13:07.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 149,
+    "title": "BSEC",
+    "title_bn": "N/A",
+    "link": "https://sec.gov.bd/",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-11-07T16:14:31.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 150,
+    "title": "DSE",
+    "title_bn": "N/A",
+    "link": "https://www.dsebd.org/",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-11-07T16:16:09.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 151,
+    "title": "CSE",
+    "title_bn": "N/A",
+    "link": "https://www.cse.com.bd/",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2024-11-07T16:17:46.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 153,
+    "title": "BIA",
+    "title_bn": "N/A",
+    "link": "https://biabd.org/",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2025-03-12T09:29:30.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 154,
+    "title": "Terms & Condition",
+    "title_bn": "টার্মস এন্ড কন্ডিশন",
+    "link": "/termsCondition",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2025-06-18T06:03:46.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 155,
+    "title": "Privacy Policy",
+    "title_bn": "প্রাইভেসি পলিসি",
+    "link": "/privacy-policy",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 156,
+    "title": "Return & Refund Policy",
+    "title_bn": "রিটার্নেএন্ড রিফান্ড পলিসি",
+    "link": "/returnRefundPolicy",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2025-06-18T06:24:41.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 159,
+    "title": "Regulatory Disclosures",
+    "title_bn": "নিয়ন্ত্রক প্রকাশনা",
+    "link": "/regulatory-disclosures?pageId=149&pageName=regulatory-disclosures",
+    "parent_id": 87,
+    "created_at": null,
+    "updated_at": "2025-07-29T12:05:38.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 160,
+    "title": "Profile of Trustee",
+    "title_bn": "ট্রাস্টির প্রোফাইল",
+    "link": "/deed-of-trust?pageId=151&pageName=prof-trust",
+    "parent_id": 71,
+    "created_at": null,
+    "updated_at": "2026-01-29T05:18:41.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 161,
+    "title": "Claim Guidelines",
+    "title_bn": "বীমাদাবী নির্দেশিকা",
+    "link": "/compliance/claim-guidelines",
+    "parent_id": 87,
+    "created_at": null,
+    "updated_at": "2026-06-08T08:17:53.000000Z",
+    "all_children": []
+  }
+]

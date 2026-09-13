@@ -1,0 +1,693 @@
+[
+  {
+    "id": 6,
+    "title_en": "abc",
+    "title_bn": null,
+    "menu_id": 3,
+    "logo_id": 202,
+    "created_at": "2023-10-09T04:10:51.000000Z",
+    "updated_at": "2024-01-02T19:33:40.000000Z",
+    "logo": null,
+    "menu": {
+      "id": 3,
+      "name": "Member Of",
+      "menu_item_ids": [
+        10,
+        11,
+        12
+      ],
+      "menu_items": [
+        {
+          "id": 10,
+          "title": "Sign Up",
+          "title_bn": "",
+          "link": "/signup",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        },
+        {
+          "id": 11,
+          "title": "Gallery",
+          "title_bn": "",
+          "link": "/gallery",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        },
+        {
+          "id": 12,
+          "title": "Testimonials",
+          "title_bn": "",
+          "link": "/testimonials",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        }
+      ]
+    }
+  },
+  {
+    "id": 19,
+    "title_en": "Demo Navbar",
+    "title_bn": null,
+    "menu_id": 8,
+    "logo_id": 203,
+    "created_at": "2023-10-18T21:53:42.000000Z",
+    "updated_at": "2024-01-02T19:33:47.000000Z",
+    "logo": null,
+    "menu": null
+  },
+  {
+    "id": 20,
+    "title_en": "Hello World",
+    "title_bn": "হ্যালো ওয়ার্ল্ড",
+    "menu_id": 1,
+    "logo_id": 204,
+    "created_at": "2023-11-15T02:23:26.000000Z",
+    "updated_at": "2024-01-02T19:33:54.000000Z",
+    "logo": null,
+    "menu": {
+      "id": 1,
+      "name": "Bottom Menu",
+      "menu_item_ids": [
+        15,
+        42,
+        27
+      ],
+      "menu_items": [
+        {
+          "id": 15,
+          "title": "PRIVACY POLICY",
+          "title_bn": "",
+          "link": "/privacy-policy",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2023-10-26T03:20:32.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 42,
+          "title": "COOKIES POLICY",
+          "title_bn": "",
+          "link": "/cookies-policies",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        },
+        {
+          "id": 27,
+          "title": "TERMS AND CONDITION",
+          "title_bn": "",
+          "link": "/terms-and-conditions",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2023-10-26T03:17:55.000000Z",
+          "all_children": []
+        }
+      ]
+    }
+  },
+  {
+    "id": 28,
+    "title_en": "engle",
+    "title_bn": "egedgdf",
+    "menu_id": 6,
+    "logo_id": 409,
+    "created_at": "2024-02-20T13:21:59.000000Z",
+    "updated_at": "2024-10-23T20:56:24.000000Z",
+    "logo": {
+      "id": 409,
+      "title": "bikes22.webp",
+      "file_name": "mave_BUq6ZB.webp",
+      "file_type": "image/webp",
+      "file_path": "media/mave_BUq6ZB.webp",
+      "file_size": null,
+      "tags": null,
+      "created_at": "2024-10-23T20:17:25.000000Z",
+      "updated_at": "2024-10-23T20:17:25.000000Z"
+    },
+    "menu": null
+  },
+  {
+    "id": 29,
+    "title_en": "Arcatec Navbar",
+    "title_bn": "Arcatec Navbar",
+    "menu_id": 14,
+    "logo_id": 418,
+    "created_at": "2024-05-30T15:25:33.000000Z",
+    "updated_at": "2024-10-24T17:07:47.000000Z",
+    "logo": {
+      "id": 418,
+      "title": "bikes21.webp",
+      "file_name": "mave_Ap2C4d.webp",
+      "file_type": "image/webp",
+      "file_path": "media/mave_Ap2C4d.webp",
+      "file_size": null,
+      "tags": null,
+      "created_at": "2024-10-23T20:17:25.000000Z",
+      "updated_at": "2024-10-23T20:17:25.000000Z"
+    },
+    "menu": {
+      "id": 14,
+      "name": "Arcatec",
+      "menu_item_ids": [
+        58,
+        62,
+        63,
+        76
+      ],
+      "menu_items": [
+        {
+          "id": 58,
+          "title": "Home",
+          "title_bn": "হোম",
+          "link": "/",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-09-25T22:58:56.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 62,
+          "title": "About Us",
+          "title_bn": "আমাদের সম্পর্কে",
+          "link": "/about",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-09-25T22:48:53.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 63,
+          "title": "PAGES",
+          "title_bn": "PAGES",
+          "link": "/#",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": [
+            {
+              "id": 64,
+              "title": "Pricing",
+              "title_bn": "Pricing",
+              "link": "/pricing?pageId=42&pageName=Pricing",
+              "parent_id": 63,
+              "created_at": null,
+              "updated_at": null,
+              "all_children": []
+            },
+            {
+              "id": 65,
+              "title": "Testimonial",
+              "title_bn": "Testimonial",
+              "link": "/testimonial?pageId=43&pageName=Testimonial",
+              "parent_id": 63,
+              "created_at": null,
+              "updated_at": null,
+              "all_children": []
+            },
+            {
+              "id": 69,
+              "title": "Team",
+              "title_bn": "Team",
+              "link": "/#",
+              "parent_id": 63,
+              "created_at": null,
+              "updated_at": null,
+              "all_children": [
+                {
+                  "id": 70,
+                  "title": "Team",
+                  "title_bn": "Team",
+                  "link": "/team?pageId=46&pageName=Team",
+                  "parent_id": 69,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 71,
+                  "title": "Team Details",
+                  "title_bn": "Team Details",
+                  "link": "/team-details?pageId=47&pageName=Team-Details",
+                  "parent_id": 69,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": [
+                    {
+                      "id": 77,
+                      "title": "Portfolio",
+                      "title_bn": "資料夾",
+                      "link": "/contact?pageId=51&pageName=Contact",
+                      "parent_id": 71,
+                      "created_at": null,
+                      "updated_at": null,
+                      "all_children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": 30,
+    "title_en": "Niloy",
+    "title_bn": "Niil",
+    "menu_id": 3,
+    "logo_id": 403,
+    "created_at": "2024-10-23T21:12:20.000000Z",
+    "updated_at": "2024-10-23T21:12:20.000000Z",
+    "logo": {
+      "id": 403,
+      "title": "Bike Crowd",
+      "file_name": "mave_F1kyTs.webp",
+      "file_type": "image/webp",
+      "file_path": "media/mave_F1kyTs.webp",
+      "file_size": null,
+      "tags": [
+        "bikes",
+        "people",
+        "helmet",
+        "car"
+      ],
+      "created_at": "2024-10-21T13:41:17.000000Z",
+      "updated_at": "2024-10-23T19:53:19.000000Z"
+    },
+    "menu": {
+      "id": 3,
+      "name": "Member Of",
+      "menu_item_ids": [
+        10,
+        11,
+        12
+      ],
+      "menu_items": [
+        {
+          "id": 10,
+          "title": "Sign Up",
+          "title_bn": "",
+          "link": "/signup",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        },
+        {
+          "id": 11,
+          "title": "Gallery",
+          "title_bn": "",
+          "link": "/gallery",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        },
+        {
+          "id": 12,
+          "title": "Testimonials",
+          "title_bn": "",
+          "link": "/testimonials",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        }
+      ]
+    }
+  },
+  {
+    "id": 31,
+    "title_en": "fwre4weg",
+    "title_bn": "ewrgtetrg",
+    "menu_id": 3,
+    "logo_id": 454,
+    "created_at": "2024-11-25T16:20:12.000000Z",
+    "updated_at": "2024-11-25T16:20:27.000000Z",
+    "logo": {
+      "id": 454,
+      "title": "Cover.png",
+      "file_name": "mave_jI12Nz.png",
+      "file_type": "image/png",
+      "file_path": "media/mave_jI12Nz.png",
+      "file_size": null,
+      "tags": [
+        "logo",
+        "colors"
+      ],
+      "created_at": "2024-11-19T00:03:53.000000Z",
+      "updated_at": "2024-12-24T20:04:05.000000Z"
+    },
+    "menu": {
+      "id": 3,
+      "name": "Member Of",
+      "menu_item_ids": [
+        10,
+        11,
+        12
+      ],
+      "menu_items": [
+        {
+          "id": 10,
+          "title": "Sign Up",
+          "title_bn": "",
+          "link": "/signup",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        },
+        {
+          "id": 11,
+          "title": "Gallery",
+          "title_bn": "",
+          "link": "/gallery",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        },
+        {
+          "id": 12,
+          "title": "Testimonials",
+          "title_bn": "",
+          "link": "/testimonials",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        }
+      ]
+    }
+  },
+  {
+    "id": 35,
+    "title_en": "Al Muslim Navbar",
+    "title_bn": "Al Muslim Navbar",
+    "menu_id": 2,
+    "logo_id": 552,
+    "created_at": "2025-03-23T15:55:44.000000Z",
+    "updated_at": "2026-01-11T19:29:24.000000Z",
+    "logo": {
+      "id": 552,
+      "title": "thumbnail_Zinnatur_Nahar.width-695.format-webp.webp",
+      "file_name": "mave_4Z6hDT.webp",
+      "file_type": "image/webp",
+      "file_path": "media/mave_4Z6hDT.webp",
+      "file_size": null,
+      "tags": null,
+      "created_at": "2025-11-23T23:25:22.000000Z",
+      "updated_at": "2025-11-23T23:25:22.000000Z"
+    },
+    "menu": {
+      "id": 2,
+      "name": "Header Menu",
+      "menu_item_ids": [
+        1,
+        2,
+        3
+      ],
+      "menu_items": [
+        {
+          "id": 2,
+          "title": "Pricing",
+          "title_bn": "Mullo",
+          "link": "/pricing",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-02-27T19:26:54.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 3,
+          "title": "FAQ",
+          "title_bn": "",
+          "link": "/faq",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        }
+      ]
+    }
+  },
+  {
+    "id": 36,
+    "title_en": "Sajida Main Nav",
+    "title_bn": "Sajida",
+    "menu_id": 24,
+    "logo_id": 523,
+    "created_at": "2025-09-24T21:20:28.000000Z",
+    "updated_at": "2025-09-25T17:13:38.000000Z",
+    "logo": {
+      "id": 523,
+      "title": "Logo (10).png",
+      "file_name": "mave_J50hDp.png",
+      "file_type": "image/png",
+      "file_path": "media/mave_J50hDp.png",
+      "file_size": null,
+      "tags": null,
+      "created_at": "2025-09-25T16:49:17.000000Z",
+      "updated_at": "2025-09-25T16:49:17.000000Z"
+    },
+    "menu": {
+      "id": 24,
+      "name": "sajeda 2",
+      "menu_item_ids": [
+        58,
+        62,
+        137,
+        135,
+        134,
+        139,
+        40
+      ],
+      "menu_items": [
+        {
+          "id": 58,
+          "title": "Home",
+          "title_bn": "হোম",
+          "link": "/",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-09-25T22:58:56.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 62,
+          "title": "About Us",
+          "title_bn": "আমাদের সম্পর্কে",
+          "link": "/about",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-09-25T22:48:53.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 137,
+          "title": "Our Services",
+          "title_bn": "আমাদের সেবাসমূহ",
+          "link": "/services",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-09-28T20:21:36.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 135,
+          "title": "Specialists",
+          "title_bn": "বিশেষজ্ঞবৃন্দ",
+          "link": "/specialists",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-09-25T20:58:32.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 134,
+          "title": "Success Stories",
+          "title_bn": "সাফল্যের গল্প",
+          "link": "/stories",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2026-04-27T16:57:52.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 40,
+          "title": "Contact Us",
+          "title_bn": "যোগাযোগ করুন",
+          "link": "/contact",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-09-30T18:50:46.000000Z",
+          "all_children": []
+        }
+      ]
+    }
+  },
+  {
+    "id": 37,
+    "title_en": "SajidaOne",
+    "title_bn": "SajidaOne",
+    "menu_id": 25,
+    "logo_id": 521,
+    "created_at": "2025-09-25T15:20:23.000000Z",
+    "updated_at": "2025-09-25T16:48:17.000000Z",
+    "logo": {
+      "id": 521,
+      "title": "Group 1000001711.png",
+      "file_name": "mave_Re5cnr.png",
+      "file_type": "image/png",
+      "file_path": "media/mave_Re5cnr.png",
+      "file_size": null,
+      "tags": null,
+      "created_at": "2025-09-25T16:47:35.000000Z",
+      "updated_at": "2025-09-25T16:47:35.000000Z"
+    },
+    "menu": {
+      "id": 25,
+      "name": "sajida",
+      "menu_item_ids": [
+        140,
+        142,
+        143
+      ],
+      "menu_items": [
+        {
+          "id": 140,
+          "title": "Ambulance",
+          "title_bn": "এ্যাম্বুলেন্স",
+          "link": "/ambulance",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2026-03-12T00:16:53.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 142,
+          "title": "Emergency Call",
+          "title_bn": "জরুরি কল",
+          "link": "/emergency-call",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-09-25T21:00:57.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 143,
+          "title": "Appointment",
+          "title_bn": "অ্যাপয়েন্টমেন্ট",
+          "link": "http://182.163.120.3:8886/sfords/r/chms/app/appt-online",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2026-02-25T14:48:12.000000Z",
+          "all_children": []
+        }
+      ]
+    }
+  },
+  {
+    "id": 38,
+    "title_en": "Sajida Main Nav Bangla",
+    "title_bn": "sajida",
+    "menu_id": 24,
+    "logo_id": 559,
+    "created_at": "2026-02-26T12:03:54.000000Z",
+    "updated_at": "2026-02-26T12:04:37.000000Z",
+    "logo": {
+      "id": 559,
+      "title": "35a9c39e-0c08-4be9-931d-5783e0b1e84f.jpeg",
+      "file_name": "mave_YIxKZZ.jpg",
+      "file_type": "image/jpeg",
+      "file_path": "media/mave_YIxKZZ.jpg",
+      "file_size": null,
+      "tags": null,
+      "created_at": "2026-02-25T15:06:37.000000Z",
+      "updated_at": "2026-02-25T15:06:37.000000Z"
+    },
+    "menu": {
+      "id": 24,
+      "name": "sajeda 2",
+      "menu_item_ids": [
+        58,
+        62,
+        137,
+        135,
+        134,
+        139,
+        40
+      ],
+      "menu_items": [
+        {
+          "id": 58,
+          "title": "Home",
+          "title_bn": "হোম",
+          "link": "/",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-09-25T22:58:56.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 62,
+          "title": "About Us",
+          "title_bn": "আমাদের সম্পর্কে",
+          "link": "/about",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-09-25T22:48:53.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 137,
+          "title": "Our Services",
+          "title_bn": "আমাদের সেবাসমূহ",
+          "link": "/services",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-09-28T20:21:36.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 135,
+          "title": "Specialists",
+          "title_bn": "বিশেষজ্ঞবৃন্দ",
+          "link": "/specialists",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-09-25T20:58:32.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 134,
+          "title": "Success Stories",
+          "title_bn": "সাফল্যের গল্প",
+          "link": "/stories",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2026-04-27T16:57:52.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 40,
+          "title": "Contact Us",
+          "title_bn": "যোগাযোগ করুন",
+          "link": "/contact",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-09-30T18:50:46.000000Z",
+          "all_children": []
+        }
+      ]
+    }
+  }
+]

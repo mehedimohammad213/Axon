@@ -1,0 +1,4670 @@
+[
+  {
+    "id": 9,
+    "slug": "privacy-policy",
+    "type": "Page",
+    "favicon_id": 10,
+    "page_name_en": "Privacy Policy",
+    "page_name_bn": "Privacy Policy",
+    "head": {
+      "title": "Privacy Policy",
+      "description": null,
+      "keywords": [],
+      "image": null,
+      "imageAlt": null
+    },
+    "body": [
+      {
+        "_id": "section-1774774591683-tamop86nh",
+        "title": "Section 1",
+        "data": [
+          {
+            "_id": "component-1774774598939-yet730mn3",
+            "type": "title",
+            "value": "<p>Introduction to Privacy:</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 0
+          },
+          {
+            "_id": "component-1774774705026-ena1lfmwl",
+            "type": "description",
+            "value": "<p>Centre for Action Research–Barind (CARB) is committed to protecting your privacy and ensuring that your personal information is handled in a safe and responsible manner.</p><p><br></p><p>This Privacy Policy explains how we collect, use, and protect information when you use the Barind platform. It applies only to this website and its services, and does not cover any external websites or third-party services.</p><p><br></p><p>By using this website, you agree to the collection and use of information in accordance with this Privacy Policy.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 1
+          },
+          {
+            "_id": "component-1774774733212-60ioejftq",
+            "type": "title",
+            "value": "<p>Collection of Personal Information:</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 2
+          },
+          {
+            "_id": "component-1774774822059-14c7ag0c4",
+            "type": "description",
+            "value": "<p>Centre for Action Research–Barind (CARB) collects personal information only when it is voluntarily provided by users.</p><p><br></p><p>This may include:</p><ul><li>Name</li><li>Email address</li><li>Phone number</li><li>Address (if required for donations or communication)</li></ul><p><br></p><p>This information is collected for purposes such as:</p><ul><li>Processing donations</li><li>Providing access to research materials and resources</li><li>Communicating updates, acknowledgements, or relevant information</li></ul><p><br></p><p>CARB does not collect any unnecessary technical information about your device, and we do not knowingly collect sensitive personal data beyond what is required for our services.</p><p>We may provide links to external websites. Users are encouraged to review the privacy policies of those websites, as CARB is not responsible for their data practices.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 3
+          },
+          {
+            "_id": "component-1774774989291-zrppvkzzu",
+            "type": "title",
+            "value": "<p>Use of Personal Information:</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 4
+          },
+          {
+            "_id": "component-1774775011763-2m4dbasnt",
+            "type": "description",
+            "value": "<p>Centre for Action Research–Barind (CARB) uses the personal information collected from users for the following purposes:</p><ul><li>To process donations and related transactions</li><li>To provide access to research materials and resources</li><li>To communicate acknowledgements, updates, and relevant information about our programs and initiatives</li><li>To improve our services and understand user needs</li></ul><p><br></p><p>CARB does not sell, rent, or lease personal information to third parties.</p><p><br></p><p>We may use trusted third-party service providers (such as payment processors or communication tools) to support our operations. These providers are given only the information necessary to perform their services and are required to keep such information confidential.</p><p><br></p><p>CARB does not collect or use sensitive personal information unless explicitly required and provided with user consent.</p><p><br></p><p>We may disclose personal information if required to do so by law, or in good faith where such action is necessary to:</p><ul><li>Comply with legal obligations</li><li>Protect and defend the rights or property of CARB</li><li>Ensure the safety of users or the public</li></ul><p><br></p><p>Information collected may be stored and processed within Bangladesh or in locations where our service providers operate. By using this platform, you consent to such processing where applicable.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 5
+          },
+          {
+            "_id": "component-1774775143491-1ibwlugso",
+            "type": "title",
+            "value": "<p>Control of Personal Information:</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 6
+          },
+          {
+            "_id": "component-1774775174523-hdayqd7ic",
+            "type": "description",
+            "value": "<p>Centre for Action Research–Barind (CARB) respects your right to control your personal information.</p><p><br></p><p>You may request to update, correct, or remove your personal information by contacting us through the provided communication channels. We will make reasonable efforts to respond to such requests in a timely manner.</p><p><br></p><p>If you no longer wish to receive communications from us, you may opt out at any time by following the unsubscribe instructions included in our emails or by contacting us directly.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 7
+          },
+          {
+            "_id": "component-1774775237199-al76rg5z7",
+            "type": "title",
+            "value": "<p>Security of Personal Information:</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 8
+          },
+          {
+            "_id": "component-1774775248603-ejbmbe5wr",
+            "type": "description",
+            "value": "<p>Centre for Action Research–Barind (CARB) is committed to protecting your personal information and maintaining appropriate security measures.</p><p><br></p><p>We implement reasonable technical and organizational safeguards to protect personal data from unauthorized access, misuse, loss, or disclosure. This includes secure systems, controlled access, and the use of trusted payment gateways for processing transactions.</p><p><br></p><p>When sensitive information (such as payment details) is transmitted, it is handled through secure, encrypted channels provided by our payment service providers.</p><p>However, while we strive to protect your information, no method of transmission over the Internet or electronic storage is completely secure. Therefore, absolute security cannot be guaranteed.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 9
+          },
+          {
+            "_id": "component-1774775544240-becjhtt05",
+            "type": "title",
+            "value": "<p>Payment Security:</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 10
+          },
+          {
+            "_id": "component-1774775560091-pdadssekj",
+            "type": "description",
+            "value": "<p>All payments made through the Barind platform are processed through secure and trusted payment gateways (such as SSLCommerz).</p><p><br></p><p>CARB does not store or process sensitive payment information such as card details. All payment data is handled directly by the payment gateway using secure encryption and industry-standard security protocols.</p><p><br></p><p>Users are advised to review the privacy and security policies of the respective payment service providers when making transactions.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 11
+          },
+          {
+            "_id": "component-1774775598747-eqqwh5zhs",
+            "type": "title",
+            "value": "<p>Cookies Policy:</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 12
+          },
+          {
+            "_id": "component-1774775608307-fc4tq3k75",
+            "type": "description",
+            "value": "<p>The Barind platform may use cookies and similar technologies to enhance user experience, analyze website traffic, and improve our services.</p><p><br></p><p>Cookies are small data files stored on your device that help us understand user behavior and preferences. You may choose to disable cookies through your browser settings; however, some features of the website may not function properly.</p><p><br></p><p>By using this website, you consent to the use of cookies in accordance with this policy.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 13
+          }
+        ]
+      }
+    ],
+    "additional": [
+      {
+        "pageType": "Page",
+        "metaTitle": "Privacy Policy",
+        "metaDescription": null,
+        "keywords": [],
+        "metaImage": null,
+        "metaImageAlt": null
+      }
+    ],
+    "status": 1,
+    "created_at": "2026-03-29T08:56:08.000000Z",
+    "updated_at": "2026-03-29T09:13:49.000000Z",
+    "favicon_mave": {
+      "id": 10,
+      "title": "671c2af4d32aa0afbd66e2e471839ea3b2347848 (1).jpg",
+      "file_name": "mave_zTAysq.jpg",
+      "file_type": "image/jpeg",
+      "file_path": "media/mave_zTAysq.jpg",
+      "file_size": null,
+      "tags": null,
+      "created_at": "2026-02-16T10:36:55.000000Z",
+      "updated_at": "2026-02-16T10:36:55.000000Z"
+    },
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  },
+  {
+    "id": 8,
+    "slug": "terms-and-conditions",
+    "type": "Page",
+    "favicon_id": 10,
+    "page_name_en": "terms & conditions",
+    "page_name_bn": "terms & conditions",
+    "head": {
+      "title": "terms & conditions",
+      "description": null,
+      "keywords": [],
+      "image": null,
+      "imageAlt": null
+    },
+    "body": [
+      {
+        "_id": "section-1774767014394-athbpj63i",
+        "title": "Section 1",
+        "data": [
+          {
+            "_id": "component-1774767099046-fn0u6p2fk",
+            "type": "title",
+            "value": "<p>Conditions of Use:</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 0
+          },
+          {
+            "_id": "component-1774767124442-f8db7o3hb",
+            "type": "description",
+            "value": "<p>By accessing and using the Barind platform, you acknowledge that you have read, understood, and agreed to comply with these Terms and Conditions. We encourage all users to review these terms carefully before using the website or making any contributions.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 1
+          },
+          {
+            "_id": "component-1774767216844-5yzzpj93o",
+            "type": "title",
+            "value": "<p>Trademarks:</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 2
+          },
+          {
+            "_id": "component-1774767259589-fn21ueo97",
+            "type": "description",
+            "value": "<p>The name “Barind”, “Centre for Action Research–Barind (CARB)”, and all related names, logos, and visual identities displayed on this website are the exclusive property of CARB.</p><p>These trademarks may not be used:</p><ul><li>In connection with any product or service that is not affiliated with CARB</li><li>In any manner that may mislead, confuse, or deceive users</li><li>In any way that may harm the reputation or credibility of CARB</li></ul><p>Unauthorized use of any trademarks, branding, or trade dress is strictly prohibited.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 3
+          },
+          {
+            "_id": "component-1774767542004-l65acyixl",
+            "type": "title",
+            "value": "<p>Copyright:</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 4
+          },
+          {
+            "_id": "component-1774767624395-th14l44wh",
+            "type": "description",
+            "value": "<p>All content available on this website—including text, graphics, logos, icons, images, audio and video materials, digital downloads, and software—is the property of Centre for Action Research–Barind (CARB), unless otherwise stated.</p><p><br></p><p>This content is protected under applicable copyright laws of Bangladesh and international copyright regulations.</p><p><br></p><p>No part of this website may be reproduced, distributed, modified, or used for commercial purposes without prior written permission from CARB. Unauthorized use may result in appropriate legal action.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 5
+          },
+          {
+            "_id": "component-1774767647187-dmrlglbwv",
+            "type": "title",
+            "value": "<p>Protecting Your Account:</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 6
+          },
+          {
+            "_id": "component-1774767671702-2mrw5g33c",
+            "type": "description",
+            "value": "<p>CARB grants users a limited, non-exclusive, and non-transferable license to access and use the Barind platform for personal, non-commercial purposes.</p><p>This license does not permit:</p><p><br></p><ul><li>Downloading, copying, or modifying any content (except for standard web browsing and caching)</li><li>Reproducing, duplicating, or exploiting any part of the website for commercial purposes</li><li>Collecting or using content such as logos, text, images, or data without prior written consent</li><li>Using CARB’s name, trademarks, or content in any misleading or unauthorized manner</li></ul><p><br></p><p>Any unauthorized use of this website will result in the termination of this license.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 7
+          },
+          {
+            "_id": "component-1774774337402-t1ojdnqc6",
+            "type": "title",
+            "value": "<p>Limitation of Liability:</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 8
+          },
+          {
+            "_id": "component-1774774270211-14d9udzds",
+            "type": "description",
+            "value": "<p>The Barind platform is provided on an “as is” and “as available” basis. CARB makes no warranties, express or implied, regarding the operation, availability, or accuracy of the website or its content.</p><p><br></p><p>We do not guarantee that the website, servers, or communications will be free from errors, interruptions, or harmful components such as viruses.</p><p><br></p><p>CARB shall not be liable for any damages arising from the use or inability to use this website, including but not limited to direct, indirect, incidental, or consequential damages.</p><p><br></p><p>Use of the platform is at your own discretion and risk.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 8
+          },
+          {
+            "_id": "component-1774768076291-2u1pvmf7q",
+            "type": "title",
+            "value": "<p>Refund Policy:</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 9
+          },
+          {
+            "_id": "component-1774768089947-t6pslyfoe",
+            "type": "description",
+            "value": "<p>Donations made through the Barind platform are generally voluntary and non-refundable.</p><p><br></p><p>However, a donor may request a refund within <strong>ten (10) days</strong> of the donation date, provided that:</p><p><br></p><ul><li>A valid reason is presented, along with appropriate supporting information</li><li>The donated amount has not yet been allocated or utilized for any project or activity</li><li><br></li></ul><p>If a donation has already been committed, allocated, or used for a specific program or initiative, it will <strong>not be eligible for a refund</strong>.</p><p><br></p><p>All refund requests are subject to review and approval by CARB.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 10
+          },
+          {
+            "_id": "component-1774770430455-01dnes8y0",
+            "type": "title",
+            "value": "<p>Governing Law:</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 11
+          },
+          {
+            "_id": "component-1774770444856-kfa4d08pw",
+            "type": "description",
+            "value": "<p>By accessing and using the Barind platform, you agree that these Terms and Conditions shall be governed by and interpreted in accordance with the laws of Bangladesh.</p><p>Any disputes arising from the use of this website shall be subject to the jurisdiction of the courts of Bangladesh.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 12
+          },
+          {
+            "_id": "component-1774773679542-d5fipz9x4",
+            "type": "title",
+            "value": "<p>Changes to Terms:</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 13
+          },
+          {
+            "_id": "component-1774773704225-3k7h60qob",
+            "type": "description",
+            "value": "<p>CARB reserves the right to update or modify these Terms and Conditions at any time.</p><p><br></p><p>Any changes will become effective upon being published on this website. Continued use of the platform after such changes constitutes your acceptance of the revised terms.</p><p><br></p><p>These updates do not affect any rights or obligations arising from prior use of the website.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 14
+          }
+        ]
+      }
+    ],
+    "additional": [
+      {
+        "pageType": "Page",
+        "metaTitle": "terms & conditions",
+        "metaDescription": null,
+        "keywords": [],
+        "metaImage": null,
+        "metaImageAlt": null
+      }
+    ],
+    "status": 1,
+    "created_at": "2026-03-29T06:49:47.000000Z",
+    "updated_at": "2026-03-29T08:52:32.000000Z",
+    "favicon_mave": {
+      "id": 10,
+      "title": "671c2af4d32aa0afbd66e2e471839ea3b2347848 (1).jpg",
+      "file_name": "mave_zTAysq.jpg",
+      "file_type": "image/jpeg",
+      "file_path": "media/mave_zTAysq.jpg",
+      "file_size": null,
+      "tags": null,
+      "created_at": "2026-02-16T10:36:55.000000Z",
+      "updated_at": "2026-02-16T10:36:55.000000Z"
+    },
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  },
+  {
+    "id": 7,
+    "slug": "donate",
+    "type": "Page",
+    "favicon_id": 10,
+    "page_name_en": "Donate",
+    "page_name_bn": "Donate",
+    "head": {
+      "title": "Donate",
+      "description": null,
+      "keywords": [],
+      "image": null,
+      "imageAlt": null
+    },
+    "body": [
+      {
+        "_id": "section-1772513590171-8379ji1t0",
+        "title": "Header Section",
+        "data": [
+          {
+            "_id": "component-1772513657411-rlgxz1qg8",
+            "type": "title",
+            "value": "<p>Donate today | Invest in resilience | Restore Dignity</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 0
+          },
+          {
+            "_id": "component-1772513667067-3oddw64ju",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 118,
+              "title": "Farmer_of_Bangladesh.jpg",
+              "file_name": "mave_671qAt.jpg",
+              "file_type": "image/jpeg",
+              "file_path": "media/mave_671qAt.jpg",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2026-03-05T09:35:02.000000Z",
+              "updated_at": "2026-03-05T09:35:02.000000Z"
+            },
+            "sectionIndex": 0,
+            "index": 1,
+            "id": 118
+          }
+        ]
+      },
+      {
+        "_id": "section-1772511331728-45slm9n7e",
+        "title": "Your Donation Section",
+        "data": [
+          {
+            "_id": "component-1772513460971-73aqcwexh",
+            "type": "infobox",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Your donation could help:",
+              "description": null,
+              "secondTitle": null,
+              "secondDescription": null,
+              "altTitle": null,
+              "altDescription": null,
+              "media": [],
+              "infoItems": [
+                {
+                  "id": 1772513501325,
+                  "title": "General Donation",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 106,
+                      "title": "Jungle+green.png",
+                      "file_name": "mave_DMKG4t.png",
+                      "file_type": "image/png",
+                      "file_path": "media/mave_DMKG4t.png",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-03T04:22:09.000000Z",
+                      "updated_at": "2026-03-03T04:22:09.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1772513528784,
+                  "title": "Sponsor a Farmer",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 105,
+                      "title": "reduce-pollution.webp",
+                      "file_name": "mave_FNw3rq.webp",
+                      "file_type": "image/webp",
+                      "file_path": "media/mave_FNw3rq.webp",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-03T04:22:09.000000Z",
+                      "updated_at": "2026-03-03T04:22:09.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1772513547664,
+                  "title": "Adopt a Bigha",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 104,
+                      "title": "protect-nature.webp",
+                      "file_name": "mave_drXPeY.webp",
+                      "file_type": "image/webp",
+                      "file_path": "media/mave_drXPeY.webp",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-03T04:22:08.000000Z",
+                      "updated_at": "2026-03-03T04:22:08.000000Z"
+                    }
+                  ]
+                }
+              ],
+              "layout": "horizontal",
+              "font": "Arial",
+              "color": "#000000",
+              "background": "#ffffff",
+              "showAltContent": false
+            },
+            "sectionIndex": 1,
+            "index": 0
+          }
+        ]
+      },
+      {
+        "_id": "section-1772513184445-9tbmzivc2",
+        "title": "Future of Donation Section",
+        "data": [
+          {
+            "_id": "component-1772513201831-axx79830c",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Standing with farmers for a resilient future",
+              "altTitle": null,
+              "description": "<p>Farming communities in the Barind region face growing challenges—from water scarcity and climate uncertainty to limited access to resources and financial support. Yet farmers remain at the heart of food security, environmental stewardship, and rural livelihoods. By standing with them, we can help ensure that those who nurture the land are able to sustain their families and communities with dignity.</p><p><br></p><p>Thousands of farmers are already working with CARB to build stronger, more resilient livelihoods—but many more still need support. Every contribution helps expand access to training, water-efficient farming, fair financing, and farmer-centered solutions. By supporting Barind, you are helping farmers grow with confidence, stability, and hope for the future.</p>",
+              "altDescription": null,
+              "linkType": "independent",
+              "link": "/",
+              "linkPageId": null,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": false,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 2,
+            "index": 0
+          }
+        ]
+      },
+      {
+        "_id": "section-1772513241407-vml6vdvmr",
+        "title": "Support Us Section",
+        "data": [
+          {
+            "_id": "component-1772515139379-9rjesybl7",
+            "type": "slider",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 10,
+              "type": "card",
+              "title_en": "Other ways you can support us",
+              "title_bn": ".",
+              "description_en": "<p>.</p>",
+              "description_bn": "<p>.</p>",
+              "media_ids": [],
+              "card_ids": [
+                13,
+                14
+              ],
+              "additional": null,
+              "status": 0,
+              "created_at": "2026-03-07T07:27:32.000000Z",
+              "updated_at": "2026-03-07T07:27:32.000000Z",
+              "medias": [],
+              "cards": [
+                {
+                  "id": 13,
+                  "page_name": null,
+                  "media_ids": 119,
+                  "title_en": "Sponsor a Farmer",
+                  "title_bn": null,
+                  "description_en": "<p>Support a small or landless farmer with the resources they need to cultivate their land and secure their livelihood. Your sponsorship helps provide access to seeds, water-efficient farming solutions, training, and guidance—enabling farmers to grow food, sustain their families, and build a more resilient future.</p>",
+                  "description_bn": null,
+                  "link_url": "/FIND OUT MORE",
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": 0,
+                  "created_at": "2026-03-03T04:35:13.000000Z",
+                  "updated_at": "2026-03-07T08:26:31.000000Z",
+                  "media_files": {
+                    "id": 119,
+                    "title": "BRAC_ShamimHossain-8594.jpg",
+                    "file_name": "mave_G5z3fi.jpg",
+                    "file_type": "image/jpeg",
+                    "file_path": "media/mave_G5z3fi.jpg",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2026-03-07T07:14:12.000000Z",
+                    "updated_at": "2026-03-07T07:14:12.000000Z"
+                  }
+                },
+                {
+                  "id": 14,
+                  "page_name": null,
+                  "media_ids": 120,
+                  "title_en": "Partner With Farmers",
+                  "title_bn": null,
+                  "description_en": "<p>Join hands with Barind to strengthen farming communities across the region. Through partnerships and shared support, we can expand sustainable agriculture, improve access to essential resources, and help farmers adapt to climate challenges while protecting the land they depend on.</p>",
+                  "description_bn": null,
+                  "link_url": "/FIND OUT MORE",
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": 0,
+                  "created_at": "2026-03-03T04:37:36.000000Z",
+                  "updated_at": "2026-03-07T08:26:59.000000Z",
+                  "media_files": {
+                    "id": 120,
+                    "title": "BRAC_ShamimHossain-8754.jpg",
+                    "file_name": "mave_7bi08f.jpg",
+                    "file_type": "image/jpeg",
+                    "file_path": "media/mave_7bi08f.jpg",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2026-03-07T07:14:45.000000Z",
+                    "updated_at": "2026-03-07T07:14:45.000000Z"
+                  }
+                }
+              ],
+              "config": {
+                "autoplay": true,
+                "dots": false,
+                "effect": "scroll",
+                "speed": 500,
+                "height": 400
+              }
+            },
+            "sectionIndex": 3,
+            "index": 0,
+            "id": 10
+          }
+        ]
+      },
+      {
+        "_id": "section-1774781441586-0mkwniohk",
+        "title": "paywith",
+        "data": [
+          {
+            "_id": "component-1774781459922-ngwe4u4j4",
+            "type": "gallery",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "images": [
+                {
+                  "id": 131,
+                  "title": "visa.png",
+                  "file_name": "mave_cS51E5.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_cS51E5.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-03-29T10:51:15.000000Z",
+                  "updated_at": "2026-03-29T10:51:15.000000Z"
+                },
+                {
+                  "id": 132,
+                  "title": "masturd.png",
+                  "file_name": "mave_cgHGRT.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_cgHGRT.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-03-29T10:51:15.000000Z",
+                  "updated_at": "2026-03-29T10:51:15.000000Z"
+                },
+                {
+                  "id": 130,
+                  "title": "american.png",
+                  "file_name": "mave_DXkE99.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_DXkE99.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-03-29T10:51:15.000000Z",
+                  "updated_at": "2026-03-29T10:51:15.000000Z"
+                },
+                {
+                  "id": 136,
+                  "title": "brac.png",
+                  "file_name": "mave_4clSyJ.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_4clSyJ.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-03-29T10:51:15.000000Z",
+                  "updated_at": "2026-03-29T10:51:15.000000Z"
+                },
+                {
+                  "id": 127,
+                  "title": "some.png",
+                  "file_name": "mave_gV91O0.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_gV91O0.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-03-29T10:51:15.000000Z",
+                  "updated_at": "2026-03-29T10:51:15.000000Z"
+                },
+                {
+                  "id": 126,
+                  "title": "city.png",
+                  "file_name": "mave_0MOgxW.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_0MOgxW.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-03-29T10:51:15.000000Z",
+                  "updated_at": "2026-03-29T10:51:15.000000Z"
+                },
+                {
+                  "id": 135,
+                  "title": "bankasia.png",
+                  "file_name": "mave_ZcHWiG.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_ZcHWiG.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-03-29T10:51:15.000000Z",
+                  "updated_at": "2026-03-29T10:51:15.000000Z"
+                },
+                {
+                  "id": 133,
+                  "title": "islami.png",
+                  "file_name": "mave_04tzVu.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_04tzVu.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-03-29T10:51:15.000000Z",
+                  "updated_at": "2026-03-29T10:51:15.000000Z"
+                },
+                {
+                  "id": 125,
+                  "title": "ab bank.png",
+                  "file_name": "mave_wzNYJ8.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_wzNYJ8.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-03-29T10:51:15.000000Z",
+                  "updated_at": "2026-03-29T10:51:15.000000Z"
+                },
+                {
+                  "id": 129,
+                  "title": "q cash.png",
+                  "file_name": "mave_QBI7wg.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_QBI7wg.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-03-29T10:51:15.000000Z",
+                  "updated_at": "2026-03-29T10:51:15.000000Z"
+                },
+                {
+                  "id": 139,
+                  "title": "fast cash.png",
+                  "file_name": "mave_UR3J4g.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_UR3J4g.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-03-29T10:51:15.000000Z",
+                  "updated_at": "2026-03-29T10:51:15.000000Z"
+                },
+                {
+                  "id": 137,
+                  "title": "mtb.png",
+                  "file_name": "mave_hVu5YV.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_hVu5YV.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-03-29T10:51:15.000000Z",
+                  "updated_at": "2026-03-29T10:51:15.000000Z"
+                },
+                {
+                  "id": 138,
+                  "title": "bkash.png",
+                  "file_name": "mave_8qUEoe.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_8qUEoe.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-03-29T10:51:15.000000Z",
+                  "updated_at": "2026-03-29T10:51:15.000000Z"
+                },
+                {
+                  "id": 128,
+                  "title": "dbbl mo bile.png",
+                  "file_name": "mave_m00LIx.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_m00LIx.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-03-29T10:51:15.000000Z",
+                  "updated_at": "2026-03-29T10:51:15.000000Z"
+                },
+                {
+                  "id": 134,
+                  "title": "islamic mobile.png",
+                  "file_name": "mave_oRiNAR.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_oRiNAR.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-03-29T10:51:15.000000Z",
+                  "updated_at": "2026-03-29T10:51:15.000000Z"
+                },
+                {
+                  "id": 124,
+                  "title": "mycash.png",
+                  "file_name": "mave_COUXBU.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_COUXBU.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-03-29T10:51:14.000000Z",
+                  "updated_at": "2026-03-29T10:51:14.000000Z"
+                }
+              ],
+              "layout": "grid",
+              "altTitle": null,
+              "settings": {
+                "columns": 3,
+                "spacing": 16,
+                "hoverEffect": "scale",
+                "borderRadius": "8px",
+                "shadow": "sm"
+              }
+            },
+            "sectionIndex": 4,
+            "index": 0,
+            "id": "component-1774781459922-ngwe4u4j4"
+          }
+        ]
+      }
+    ],
+    "additional": [
+      {
+        "pageType": "Page",
+        "metaTitle": "Donate",
+        "metaDescription": null,
+        "keywords": [],
+        "metaImage": null,
+        "metaImageAlt": null
+      }
+    ],
+    "status": 1,
+    "created_at": "2026-03-03T04:15:20.000000Z",
+    "updated_at": "2026-03-29T10:53:15.000000Z",
+    "favicon_mave": {
+      "id": 10,
+      "title": "671c2af4d32aa0afbd66e2e471839ea3b2347848 (1).jpg",
+      "file_name": "mave_zTAysq.jpg",
+      "file_type": "image/jpeg",
+      "file_path": "media/mave_zTAysq.jpg",
+      "file_size": null,
+      "tags": null,
+      "created_at": "2026-02-16T10:36:55.000000Z",
+      "updated_at": "2026-02-16T10:36:55.000000Z"
+    },
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  },
+  {
+    "id": 6,
+    "slug": "about-us",
+    "type": "Page",
+    "favicon_id": 10,
+    "page_name_en": "About Us",
+    "page_name_bn": "About Us",
+    "head": {
+      "title": "Our Work",
+      "description": null,
+      "keywords": [],
+      "image": null,
+      "imageAlt": null
+    },
+    "body": [
+      {
+        "_id": "section-1771325675674-45ivm8sxm",
+        "title": "Our Anchors Section",
+        "data": [
+          {
+            "_id": "component-1771326131341-w0p4zhv71",
+            "type": "title",
+            "value": "<p><strong style=\"color: rgb(125, 54, 9);\">Our Anchors</strong></p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "large",
+              "primaryColor": "#186340",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "bold",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 0
+          },
+          {
+            "_id": "component-1771326224626-3xvyu3wab",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 58,
+              "title": "OW6A8862 (1).JPG",
+              "file_name": "mave_45hrg9.jpg",
+              "file_type": "image/jpeg",
+              "file_path": "media/mave_45hrg9.jpg",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2026-02-26T03:42:34.000000Z",
+              "updated_at": "2026-02-26T03:42:34.000000Z"
+            },
+            "sectionIndex": 0,
+            "index": 1,
+            "id": 58
+          },
+          {
+            "_id": "component-1772077424766-jexwj2upq",
+            "type": "menu",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 5,
+              "name": "Menu List",
+              "menu_item_ids": [
+                15,
+                16,
+                17,
+                18
+              ],
+              "menu_items": [
+                {
+                  "id": 15,
+                  "title": "Vision, Mission and Values",
+                  "title_bn": "N/A",
+                  "link": "/vision-mission-and-values",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 16,
+                  "title": "Who we are",
+                  "title_bn": "N/A",
+                  "link": "/who-we-are",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 17,
+                  "title": "What shapes us",
+                  "title_bn": "N/A",
+                  "link": "/what-shapes-us",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 18,
+                  "title": "How we do what we do",
+                  "title_bn": "N/A",
+                  "link": "/how-we-do-what-we-do",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                }
+              ],
+              "altTitle": null
+            },
+            "sectionIndex": 0,
+            "index": 2,
+            "id": 5,
+            "menuMode": "horizontal",
+            "menuTheme": "light"
+          }
+        ]
+      },
+      {
+        "_id": "section-1772078164631-6rdtoa3mg",
+        "title": "Vision, Mission and Values",
+        "data": [
+          {
+            "_id": "component-1772078193023-eikuadahu",
+            "type": "title",
+            "value": "<h3>Vision, Mission and Values</h3>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 1,
+            "index": 0
+          },
+          {
+            "_id": "component-1772078220048-3tdux3o1g",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 59,
+              "title": "DJI_0011 (1).JPEG",
+              "file_name": "mave_MbBP28.jpg",
+              "file_type": "image/jpeg",
+              "file_path": "media/mave_MbBP28.jpg",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2026-02-26T03:58:11.000000Z",
+              "updated_at": "2026-02-26T03:58:11.000000Z"
+            },
+            "sectionIndex": 1,
+            "index": 1,
+            "id": 59
+          },
+          {
+            "_id": "component-1772078316629-rn79h5vet",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Vision",
+              "altTitle": null,
+              "description": "<p>Farmers everywhere have the knowledge, resources, and freedom to build sustainable agricultural livelihoods and protect our planet.</p>",
+              "altDescription": "<p>GREEN</p>",
+              "linkType": "independent",
+              "link": "/",
+              "linkPageId": null,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": false,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 1,
+            "index": 2
+          },
+          {
+            "_id": "component-1772078530176-amuoon1xb",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Mission",
+              "altTitle": null,
+              "description": "<p>Empower landless farmers to break away from exploitative and oppressive systems that perpetuate poverty. Our interventions aim enable farmers with technical and financial support backed by action based research to become self-reilant and independent.</p>",
+              "altDescription": "<p>ORANGE</p>",
+              "linkType": "independent",
+              "link": "/",
+              "linkPageId": null,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": false,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 1,
+            "index": 3
+          },
+          {
+            "_id": "component-1772080568082-x89mkt8qm",
+            "type": "slider",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 5,
+              "type": "card",
+              "title_en": "Values",
+              "title_bn": "Values",
+              "description_en": "<p>.</p>",
+              "description_bn": "<p>.</p>",
+              "media_ids": [],
+              "card_ids": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "additional": null,
+              "status": 0,
+              "created_at": "2026-02-26T04:38:50.000000Z",
+              "updated_at": "2026-03-01T10:02:15.000000Z",
+              "medias": [],
+              "cards": [
+                {
+                  "id": 1,
+                  "page_name": null,
+                  "media_ids": 60,
+                  "title_en": "Agility",
+                  "title_bn": null,
+                  "description_en": "<p><span style=\"color: rgb(0, 114, 207);\">We are agile like water, flowing through uncertainties with determination to support farmers and marginalized communities.</span></p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": 0,
+                  "created_at": "2026-02-26T04:30:26.000000Z",
+                  "updated_at": "2026-02-26T04:30:26.000000Z",
+                  "media_files": {
+                    "id": 60,
+                    "title": "11-removebg-preview.png",
+                    "file_name": "mave_p8LZ2S.png",
+                    "file_type": "image/png",
+                    "file_path": "media/mave_p8LZ2S.png",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2026-02-26T04:28:00.000000Z",
+                    "updated_at": "2026-02-26T04:28:00.000000Z"
+                  }
+                },
+                {
+                  "id": 2,
+                  "page_name": null,
+                  "media_ids": 61,
+                  "title_en": "Learning",
+                  "title_bn": null,
+                  "description_en": "<p><span style=\"color: rgb(0, 114, 207);\">We are curious like a new bud, growing beyond our comfort zone, with strong roots and a zeal to thrive despite challenges.</span></p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": 0,
+                  "created_at": "2026-02-26T04:31:14.000000Z",
+                  "updated_at": "2026-02-26T04:31:14.000000Z",
+                  "media_files": {
+                    "id": 61,
+                    "title": "22-removebg-preview.png",
+                    "file_name": "mave_1iKLjI.png",
+                    "file_type": "image/png",
+                    "file_path": "media/mave_1iKLjI.png",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2026-02-26T04:31:06.000000Z",
+                    "updated_at": "2026-02-26T04:31:06.000000Z"
+                  }
+                },
+                {
+                  "id": 3,
+                  "page_name": null,
+                  "media_ids": 62,
+                  "title_en": "Accountability",
+                  "title_bn": null,
+                  "description_en": "<p><span style=\"color: rgb(0, 114, 207);\">We are as steadfast as a mountain, taking full responsibility for our actions and cultivating our relationships diligently.</span></p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": 0,
+                  "created_at": "2026-02-26T04:31:57.000000Z",
+                  "updated_at": "2026-02-26T04:31:57.000000Z",
+                  "media_files": {
+                    "id": 62,
+                    "title": "33-removebg-preview.png",
+                    "file_name": "mave_mtGAHj.png",
+                    "file_type": "image/png",
+                    "file_path": "media/mave_mtGAHj.png",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2026-02-26T04:31:47.000000Z",
+                    "updated_at": "2026-02-26T04:31:47.000000Z"
+                  }
+                },
+                {
+                  "id": 4,
+                  "page_name": null,
+                  "media_ids": 63,
+                  "title_en": "Innovation",
+                  "title_bn": null,
+                  "description_en": "<p><span style=\"color: rgb(0, 114, 207);\">We are open-minded and eager to understand complex issues, approaching the unknown with an explorer's sense of adventure.</span></p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": 0,
+                  "created_at": "2026-02-26T04:32:41.000000Z",
+                  "updated_at": "2026-02-26T04:32:41.000000Z",
+                  "media_files": {
+                    "id": 63,
+                    "title": "44-removebg-preview.png",
+                    "file_name": "mave_HPzb2v.png",
+                    "file_type": "image/png",
+                    "file_path": "media/mave_HPzb2v.png",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2026-02-26T04:32:32.000000Z",
+                    "updated_at": "2026-02-26T04:32:32.000000Z"
+                  }
+                }
+              ],
+              "config": {
+                "autoplay": true,
+                "dots": false,
+                "effect": "scroll",
+                "speed": 500,
+                "height": 400
+              }
+            },
+            "sectionIndex": 1,
+            "index": 4,
+            "id": 5
+          }
+        ]
+      },
+      {
+        "_id": "section-1772081546254-njsnoz5i1",
+        "title": "Who we are",
+        "data": [
+          {
+            "_id": "component-1772081591541-h7lnz0yz4",
+            "type": "title",
+            "value": "<p>Who we are</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 2,
+            "index": 0
+          },
+          {
+            "_id": "component-1772081604059-vmwpt9un9",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 68,
+              "title": "IMG_1114-_1 (1).jpeg",
+              "file_name": "mave_tpk1Sw.jpg",
+              "file_type": "image/jpeg",
+              "file_path": "media/mave_tpk1Sw.jpg",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2026-02-26T05:48:51.000000Z",
+              "updated_at": "2026-02-26T05:48:51.000000Z"
+            },
+            "sectionIndex": 2,
+            "index": 1,
+            "id": 68
+          },
+          {
+            "_id": "component-1772095373492-vlkk31so9",
+            "type": "title",
+            "value": "<p>Bangladesh is a pioneer in NGO activities, but few of them include the agriculture sector.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 2,
+            "index": 2
+          },
+          {
+            "_id": "component-1772095390028-xfazcpb94",
+            "type": "description",
+            "value": "<p>In the drought-prone Barind tract of northwestern Bangladesh, where 75% of the population relies on farming, poor soil, erratic rainfall, and limited water result in low yields. Farmers often turn to local mohazons —moneylenders who can take half of their harvest, perpetuating a cycle of poverty, malnutrition, and lack of social mobility.</p><p><br></p><p>To address this issue, Dr. M. Asaduzzaman and local visionaries founded the Centre for Action Research-Barind (CARB) in 1998. CARB aims to free small and marginal farmers, especially borga chashi, from exploitation by offering agriculture-focused microcredit and sustainable farming support.</p><p><br></p><p>Over the past 25 years, CARB has worked across Rajshahi, Naogaon, and Chapai Nawabganj, empowering thousands of farmers with tailored financial services, technical assistance, and action-based research. Unlike many microfinance organizations, CARB dared to invest in agriculture—a risk few would take—and proved it can be both impactful and sustainable. Its programs directly improve agricultural productivity, enhance food security, and contribute to Bangladesh’s broader rural economy, where agriculture accounts for 19% of the national GDP.</p><p><br></p><p>Today, CARB, with support from its partners, expands its reach, envisioning a future in which farmers have sustainable livelihoods and communities thrive with dignity and opportunity.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 2,
+            "index": 3
+          }
+        ]
+      },
+      {
+        "_id": "section-1772082158405-8x8kbueii",
+        "title": "What shapes us",
+        "data": [
+          {
+            "_id": "component-1772082175471-0eize7fzf",
+            "type": "title",
+            "value": "<p><strong style=\"color: rgb(125, 54, 9);\">What shapes us</strong></p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 3,
+            "index": 0
+          },
+          {
+            "_id": "component-1772082191057-9xwk3vaf8",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 69,
+              "title": "Indo-Gangetic_Plain.jpg",
+              "file_name": "mave_iuhjJQ.jpg",
+              "file_type": "image/jpeg",
+              "file_path": "media/mave_iuhjJQ.jpg",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2026-02-26T05:49:56.000000Z",
+              "updated_at": "2026-02-26T05:49:56.000000Z"
+            },
+            "sectionIndex": 3,
+            "index": 1,
+            "id": 69
+          },
+          {
+            "_id": "component-1772082520774-k3t7tp4lh",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "The Barind Landscape",
+              "altTitle": null,
+              "description": "<p><span style=\"color: rgb(123, 74, 0);\">The Barind landscape, located in northwestern Bangladesh, is a drought-prone upland area marked by its hard clay soils, unpredictable rainfall, and scarce surface water. It is home to thousands of marginal farming and climate migrant families who grapple with resource constraints, declining groundwater levels, and escalating climate pressures. Agriculture in this region is both vital and precarious—heavily reliant on irrigation and susceptible to </span><span class=\"ql-cursor\">﻿</span><span style=\"color: rgb(123, 74, 0);\">drought, rising temperatures, and soil degradation.</span></p>",
+              "altDescription": null,
+              "linkType": "independent",
+              "link": "/",
+              "linkPageId": null,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": false,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 3,
+            "index": 2
+          },
+          {
+            "_id": "component-1772082951752-c56stiws7",
+            "type": "iconlist",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "items": [
+                {
+                  "id": 1772083000321,
+                  "icon": "far fa-bookmark",
+                  "text": "Resilience and adaption",
+                  "altText": "Despite these challenges, the Barind is a hub of resilience and innovation. Climate-adaptive farming, water-efficient practices, and community-driven solutions play a crucial role in ensuring livelihoods, food security, and a sustainable future."
+                },
+                {
+                  "id": 1772083027530,
+                  "icon": "far fa-bookmark",
+                  "text": "Struggles of Marginal Farmers",
+                  "altText": "Landless and marginal farmers in the Barind region, where over 75% of the population depends on agriculture, face significant hurdles. Many have limited access to credit and often resort to borrowing from local moneylenders who charge exorbitant interest rates—up to 50% of their harvest."
+                }
+              ],
+              "orientation": "vertical",
+              "iconSize": 24,
+              "iconColor": "#000000",
+              "showAltContent": false
+            },
+            "sectionIndex": 3,
+            "index": 3
+          },
+          {
+            "_id": "component-1772083079576-93yqr5wqe",
+            "type": "description",
+            "value": "<p>Inadequate access to quality inputs and training results in low yields, perpetuating rural poverty that affects more than 21% of the population in northwestern Bangladesh. Excluded from most formal financial systems, these farmers remain vulnerable to cycles of debt, food insecurity, and increasing climate stress.</p><p><br></p><p>Barind Tract (or Barind Plains) is situated within the broader Ganges Plain region, specifically forming an elevated terrace within the Bengal Basin. Here, limited surface water and heavy reliance on rice cultivation have led to nearly 2,500 hours of groundwater pumping annually, extracting an estimated 800–1,000 million cubic meters of water to irrigate roughly 500,000 hectares. With rising temperatures and erratic rainfall, groundwater levels in deep tube wells are declining by 0.3–0.5 meters each year. The region’s complex hydrogeology—thick clay layers and fine sand strata—makes aquifer recharge even more difficult.</p><p><br></p><p>This ecological stress is the very backdrop of CARB’s existence and mission. Founded in the heart of the Barind, CARB operates as a ground-zero research and action hub—continuously monitoring groundwater, testing regenerative agriculture models, and translating field evidence into innovation. Our goal is long-term ecological sustainability: restoring soil health, reducing water dependence, and building climate-resilient farming systems that protect both farmer livelihoods and the future of the aquifer.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 3,
+            "index": 4
+          }
+        ]
+      },
+      {
+        "_id": "section-1772083194142-c3jd35s66",
+        "title": "How we do what we do",
+        "data": [
+          {
+            "_id": "component-1772083215996-9pfajp188",
+            "type": "title",
+            "value": "<p><strong style=\"color: rgb(125, 54, 9);\">How we do what we do</strong></p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 4,
+            "index": 0
+          },
+          {
+            "_id": "component-1772083228279-d5c9npgq5",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 67,
+              "title": "IMG_110.jpeg",
+              "file_name": "mave_qTWdyq.jpg",
+              "file_type": "image/jpeg",
+              "file_path": "media/mave_qTWdyq.jpg",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2026-02-26T05:28:39.000000Z",
+              "updated_at": "2026-02-26T05:28:39.000000Z"
+            },
+            "sectionIndex": 4,
+            "index": 1,
+            "id": 67
+          },
+          {
+            "_id": "component-1772083750464-998f0sx8i",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Our Approach",
+              "altTitle": null,
+              "description": "<p><span style=\"color: rgb(125, 54, 9);\">CARB’s solutions are designed to be flexible, scalable, and transformative for rural farming communities. Its flexibility lies in tailoring services to seasonal demands—whether it’s a small loan for irrigation water, access to drought-resilient seeds, or training on new farming techniques—ensuring every farmer receives what they need, when they need it.</span></p><p><br></p><p><span style=\"color: rgb(125, 54, 9);\">CARB’s strategic framework addresses the complex, interlinked challenges faced by marginalized farmers.</span></p><p><br></p><p><span style=\"color: rgb(125, 54, 9);\">By grounding its approach in action-based research, CARB ensures solutions are evidence-driven and responsive to real needs. </span></p><p><br></p><p><span style=\"color: rgb(125, 54, 9);\">Through locally appropriate projects, it tackles specific environmental, social, and economic barriers, while organizational feasibility guarantees that these interventions remain sustainable, scalable, and impactful over time.</span></p>",
+              "altDescription": null,
+              "linkType": "independent",
+              "link": "/",
+              "linkPageId": null,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": false,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 4,
+            "index": 2
+          },
+          {
+            "_id": "component-1772085648819-ykqr3yxsw",
+            "type": "accordion",
+            "value": null,
+            "settings": [],
+            "_mave": [
+              {
+                "title": "Skills building on agriculture",
+                "altTitle": "Adoption of technology, as relevant | Crop diversification | Agriculture product marketing",
+                "content": null,
+                "altContent": null,
+                "contentType": "text",
+                "tags": [],
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                }
+              },
+              {
+                "title": "Sustainable agricultural adaptation",
+                "altTitle": "Conservation of natural resources | Water management",
+                "content": null,
+                "altContent": null,
+                "contentType": "text",
+                "tags": [],
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                }
+              },
+              {
+                "title": "Tailored rural development support",
+                "altTitle": "Income-generating activities | Welfare of the poor and handicapped | Sanitation and water supply | Greater employment of women",
+                "content": null,
+                "altContent": null,
+                "contentType": "text",
+                "tags": [],
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                }
+              },
+              {
+                "title": "Access to appropriate financing",
+                "altTitle": "Crop insurance/credit | Microfinance",
+                "content": null,
+                "altContent": null,
+                "contentType": "text",
+                "tags": [],
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                }
+              }
+            ],
+            "sectionIndex": 4,
+            "index": 3,
+            "id": "component-1772085648819-ykqr3yxsw"
+          },
+          {
+            "_id": "component-1772085908223-z946gyk7q",
+            "type": "description",
+            "value": "<p><span style=\"color: rgba(79,49,57,var(--O42jJQ,1));\">CARB’s programmatic pillars translate strategy into action. It integrates climate-smart and water-saving practices to enhance resilience in drought conditions, while also advocating for policy reforms and building coalitions to address systemic gaps. Collectively, these efforts work to promote farmers' well-being and livelihoods.</span></p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 4,
+            "index": 4
+          }
+        ]
+      }
+    ],
+    "additional": [
+      {
+        "pageType": "Page",
+        "metaTitle": "About Us",
+        "metaDescription": null,
+        "keywords": [],
+        "metaImage": null,
+        "metaImageAlt": null
+      }
+    ],
+    "status": 1,
+    "created_at": "2026-02-26T03:28:56.000000Z",
+    "updated_at": "2026-03-01T10:03:01.000000Z",
+    "favicon_mave": {
+      "id": 10,
+      "title": "671c2af4d32aa0afbd66e2e471839ea3b2347848 (1).jpg",
+      "file_name": "mave_zTAysq.jpg",
+      "file_type": "image/jpeg",
+      "file_path": "media/mave_zTAysq.jpg",
+      "file_size": null,
+      "tags": null,
+      "created_at": "2026-02-16T10:36:55.000000Z",
+      "updated_at": "2026-02-16T10:36:55.000000Z"
+    },
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  },
+  {
+    "id": 5,
+    "slug": "contact",
+    "type": "Page",
+    "favicon_id": 10,
+    "page_name_en": "Get Involved",
+    "page_name_bn": "Get Involved",
+    "head": {
+      "title": "Contact",
+      "description": null,
+      "keywords": [],
+      "image": null,
+      "imageAlt": null
+    },
+    "body": [
+      {
+        "_id": "section-1771924267244-aay010vr1",
+        "title": "Get involved Section",
+        "data": [
+          {
+            "_id": "component-1771924298735-z96mxb6ls",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 46,
+              "title": "2d9889ed66da0ca3b2cc8f3611ec8aceef70cc97.jpg",
+              "file_name": "mave_QBhrA9.jpg",
+              "file_type": "image/jpeg",
+              "file_path": "media/mave_QBhrA9.jpg",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2026-02-24T08:37:45.000000Z",
+              "updated_at": "2026-02-24T08:37:45.000000Z"
+            },
+            "sectionIndex": 0,
+            "index": 1,
+            "id": 46
+          },
+          {
+            "_id": "component-1771924282709-sid1c6dz8",
+            "type": "title",
+            "value": "<p>Contact Us</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 1
+          }
+        ]
+      },
+      {
+        "_id": "section-1771994990069-wk2pae2up",
+        "title": "input form",
+        "data": [
+          {
+            "_id": "component-1771995001700-p4nr1gn79",
+            "type": "title",
+            "value": "<p>Contact Us</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 1,
+            "index": 0
+          },
+          {
+            "_id": "component-1771995028108-t2c2ini3i",
+            "type": "form",
+            "value": null,
+            "settings": [],
+            "_mave": true,
+            "sectionIndex": 1,
+            "index": 1,
+            "data": {
+              "formId": 1,
+              "title": "Get involved form",
+              "description": "<p>Get involved form</p>",
+              "elements": [
+                {
+                  "type": "input",
+                  "label": "name",
+                  "icon": {
+                    "type": [],
+                    "key": null,
+                    "ref": null,
+                    "props": [],
+                    "_owner": null
+                  },
+                  "element_type": "input",
+                  "input_type": "text",
+                  "placeholder": "Enter your text",
+                  "updated_on": "1771924640478",
+                  "options": [],
+                  "divisionLabel": "Select Division",
+                  "districtLabel": "Select District",
+                  "required": false,
+                  "content": null,
+                  "mediaId": null
+                },
+                {
+                  "type": "input",
+                  "label": "email",
+                  "icon": {
+                    "type": [],
+                    "key": null,
+                    "ref": null,
+                    "props": [],
+                    "_owner": null
+                  },
+                  "element_type": "input",
+                  "input_type": "email",
+                  "placeholder": "Enter your email",
+                  "updated_on": "1771924685141",
+                  "options": [],
+                  "divisionLabel": "Select Division",
+                  "districtLabel": "Select District",
+                  "required": false,
+                  "content": null,
+                  "mediaId": null
+                },
+                {
+                  "type": "input",
+                  "label": "phoneNumber",
+                  "icon": {
+                    "type": [],
+                    "key": null,
+                    "ref": null,
+                    "props": [],
+                    "_owner": null
+                  },
+                  "element_type": "input",
+                  "input_type": "tel",
+                  "placeholder": "Enter a phone number",
+                  "updated_on": "1771924700646",
+                  "options": [],
+                  "divisionLabel": "Select Division",
+                  "districtLabel": "Select District",
+                  "required": false,
+                  "content": null,
+                  "mediaId": null
+                },
+                {
+                  "type": "input",
+                  "label": "subject",
+                  "icon": {
+                    "type": [],
+                    "key": null,
+                    "ref": null,
+                    "props": [],
+                    "_owner": null
+                  },
+                  "element_type": "input",
+                  "input_type": "text",
+                  "placeholder": "Enter your text",
+                  "updated_on": "1771924726086",
+                  "options": [],
+                  "divisionLabel": "Select Division",
+                  "districtLabel": "Select District",
+                  "required": false,
+                  "content": null,
+                  "mediaId": null
+                },
+                {
+                  "type": "textarea",
+                  "label": "message",
+                  "icon": {
+                    "type": [],
+                    "key": null,
+                    "ref": null,
+                    "props": [],
+                    "_owner": null
+                  },
+                  "element_type": "textarea",
+                  "placeholder": "Enter your message",
+                  "updated_on": "1771924749670",
+                  "options": [],
+                  "divisionLabel": "Select Division",
+                  "districtLabel": "Select District",
+                  "required": false,
+                  "content": null,
+                  "mediaId": null
+                }
+              ],
+              "attributes": {
+                "component_id": "get_involved_form",
+                "component_class": "form, bg-light",
+                "method": "POST",
+                "action_url": "https://carb.etherstaging.xyz/api/form-submission?form_id=1",
+                "enctype": "multipart/form-data"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "additional": [
+      {
+        "pageType": "Page",
+        "metaTitle": "Get Involved",
+        "metaDescription": null,
+        "keywords": [],
+        "metaImage": null,
+        "metaImageAlt": null
+      }
+    ],
+    "status": 1,
+    "created_at": "2026-02-24T09:05:13.000000Z",
+    "updated_at": "2026-03-07T06:45:12.000000Z",
+    "favicon_mave": {
+      "id": 10,
+      "title": "671c2af4d32aa0afbd66e2e471839ea3b2347848 (1).jpg",
+      "file_name": "mave_zTAysq.jpg",
+      "file_type": "image/jpeg",
+      "file_path": "media/mave_zTAysq.jpg",
+      "file_size": null,
+      "tags": null,
+      "created_at": "2026-02-16T10:36:55.000000Z",
+      "updated_at": "2026-02-16T10:36:55.000000Z"
+    },
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  },
+  {
+    "id": 4,
+    "slug": "about-us",
+    "type": "Page",
+    "favicon_id": 10,
+    "page_name_en": "About Us a",
+    "page_name_bn": "About Us a",
+    "head": {
+      "title": "About Us",
+      "description": null,
+      "keywords": [],
+      "image": null,
+      "imageAlt": null
+    },
+    "body": [
+      {
+        "_id": "section-1771922146508-w6ryjulme",
+        "title": "Header Section",
+        "data": [
+          {
+            "_id": "component-1771922183878-ll6a2wm90",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 46,
+              "title": "2d9889ed66da0ca3b2cc8f3611ec8aceef70cc97.jpg",
+              "file_name": "mave_QBhrA9.jpg",
+              "file_type": "image/jpeg",
+              "file_path": "media/mave_QBhrA9.jpg",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2026-02-24T08:37:45.000000Z",
+              "updated_at": "2026-02-24T08:37:45.000000Z"
+            },
+            "sectionIndex": 0,
+            "index": 0,
+            "id": 46
+          },
+          {
+            "_id": "component-1771922317725-1c41q7m3v",
+            "type": "title",
+            "value": "<p>About Us</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 1
+          }
+        ]
+      },
+      {
+        "_id": "section-1771922554822-q3wkllfsj",
+        "title": "Carb Mission Sectiion",
+        "data": [
+          {
+            "_id": "component-1771922817653-9mjr941qs",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Our Mission",
+              "altTitle": null,
+              "description": "<p>CARB Mission</p>",
+              "altDescription": "<p>CARB works with people who face a lot of hardships in running their day to day life. Among these people there are landless farmers, farmers with a very scanty amount of lands, agricultural labour’s and people living under poverty line. Very often their lives are dominated by extreme poverty. During the cultivation season they are incapable of buying seeds, fertilizers irrigation water, pesticides etc. As a result they are bound to take loan from moneylenders at a very high rate of interest. After harvest they awfully realize that more than 50% of their crops have been exhausted to repay the loan and its interest. So their permanent companion is poverty and stringency. There is no way out this curse. CARB has come forward to tear this net of curse. CARB sincerely wish to elevate the socio-economic condition of the farmers. CARB is always in search of friends and organizations that are eager to expand their helping hands for the eradication of poverty and elevation of socio-economic status of the poor farmers of Barind tract.</p>",
+              "linkType": "independent",
+              "link": "/",
+              "linkPageId": null,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": false,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 1,
+            "index": 0
+          },
+          {
+            "_id": "component-1771922885652-kxvg7melj",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 47,
+              "title": "image.png",
+              "file_name": "mave_TApA0G.png",
+              "file_type": "image/png",
+              "file_path": "media/mave_TApA0G.png",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2026-02-24T08:48:16.000000Z",
+              "updated_at": "2026-02-24T08:48:16.000000Z"
+            },
+            "sectionIndex": 1,
+            "index": 1,
+            "id": 47
+          }
+        ]
+      },
+      {
+        "_id": "section-1771923110388-41xxzd3ya",
+        "title": "Carb Vission Section",
+        "data": [
+          {
+            "_id": "component-1771923122501-89l6slqen",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Our Vission",
+              "altTitle": null,
+              "description": "<p>CARB Vission</p>",
+              "altDescription": "<p>It wishes the minimization of poverty stringency among the poor, landless cultivators and marginal peasants. CARB dreams of a society which is free from hunger, poverty and the oppression of the local</p><p>moneylenders. Its aim is to save the farmers from any sort of interest imposed by well to do moneylenders who encircle the poor by the curse of high rate of interest. The main features of CARB’s activities are the elevation of socio economic condition of the poor farmers, minimization of environmental degradation by massive afforestation, removal of all sorts of exploitation based on age, sex, religion and ethnicity. It also wants the empowerment of female and sex-equality. To achieve its goal CARB invites co-operation from like-minded organization.</p>",
+              "linkType": "independent",
+              "link": "/",
+              "linkPageId": null,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": false,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 2,
+            "index": 0
+          },
+          {
+            "_id": "component-1771923270285-uzfbgrf2j",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 48,
+              "title": "d100c691cbb823f937c96b01b1686f3f49002d3c.jpg",
+              "file_name": "mave_kEo1mc.jpg",
+              "file_type": "image/jpeg",
+              "file_path": "media/mave_kEo1mc.jpg",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2026-02-24T08:55:10.000000Z",
+              "updated_at": "2026-02-24T08:55:10.000000Z"
+            },
+            "sectionIndex": 2,
+            "index": 1,
+            "id": 48
+          }
+        ]
+      },
+      {
+        "_id": "section-1771923433125-n0tno4s0s",
+        "title": "Meet Our Executive Committee Section",
+        "data": [
+          {
+            "_id": "component-1771923524661-2wlhv828x",
+            "type": "infobox",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Our Team",
+              "description": null,
+              "secondTitle": "Meet Our Executive Committee",
+              "secondDescription": null,
+              "altTitle": null,
+              "altDescription": null,
+              "media": [],
+              "infoItems": [
+                {
+                  "id": 1771923640247,
+                  "title": "Nusrat Razee",
+                  "description": "<p>Chairman</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 49,
+                      "title": "ce38f98805cc5157bca0cec39b1dd61f8849110d.jpg",
+                      "file_name": "mave_khbsSr.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_khbsSr.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-02-24T09:00:32.000000Z",
+                      "updated_at": "2026-02-24T09:00:32.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1771923704077,
+                  "title": "Md. Ataur Rahman",
+                  "description": "<p>Vice-Chairman</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 50,
+                      "title": "f6752dd377382e4ec97c79a2dff7f1ae988439ae.jpg",
+                      "file_name": "mave_UoP6nE.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_UoP6nE.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-02-24T09:01:30.000000Z",
+                      "updated_at": "2026-02-24T09:01:30.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1771923762059,
+                  "title": "Md. Hayatuzzaman",
+                  "description": "<p>General Secretary</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 51,
+                      "title": "984b0abfb65cb1b374343cca85bc1709a57bddeb.jpg",
+                      "file_name": "mave_nnzk4F.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_nnzk4F.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-02-24T09:02:29.000000Z",
+                      "updated_at": "2026-02-24T09:02:29.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1771923837885,
+                  "title": "Most. Masuda Khatun",
+                  "description": "<p>Joint Secretary</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 52,
+                      "title": "44c82e30064066399c452a34a7bb5eb0a671e519.jpg",
+                      "file_name": "mave_Wyzabu.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_Wyzabu.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-02-24T09:03:45.000000Z",
+                      "updated_at": "2026-02-24T09:03:45.000000Z"
+                    }
+                  ]
+                }
+              ],
+              "layout": "horizontal",
+              "font": "Arial",
+              "color": "#000000",
+              "background": "#ffffff",
+              "showAltContent": false
+            },
+            "sectionIndex": 3,
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "additional": [
+      {
+        "pageType": "Page",
+        "metaTitle": "About Us",
+        "metaDescription": null,
+        "keywords": [],
+        "metaImage": null,
+        "metaImageAlt": null
+      }
+    ],
+    "status": 1,
+    "created_at": "2026-02-24T08:30:43.000000Z",
+    "updated_at": "2026-02-26T03:32:37.000000Z",
+    "favicon_mave": {
+      "id": 10,
+      "title": "671c2af4d32aa0afbd66e2e471839ea3b2347848 (1).jpg",
+      "file_name": "mave_zTAysq.jpg",
+      "file_type": "image/jpeg",
+      "file_path": "media/mave_zTAysq.jpg",
+      "file_size": null,
+      "tags": null,
+      "created_at": "2026-02-16T10:36:55.000000Z",
+      "updated_at": "2026-02-16T10:36:55.000000Z"
+    },
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  },
+  {
+    "id": 3,
+    "slug": "our-work",
+    "type": "Page",
+    "favicon_id": 10,
+    "page_name_en": "Our Work",
+    "page_name_bn": "Our Work",
+    "head": {
+      "title": "Our Work",
+      "description": null,
+      "keywords": [],
+      "image": null,
+      "imageAlt": null
+    },
+    "body": [
+      {
+        "_id": "section-1771325675674-45ivm8sxm",
+        "title": "What We Care About",
+        "data": [
+          {
+            "_id": "component-1771326131341-w0p4zhv71",
+            "type": "title",
+            "value": "<p>What We Care About</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "large",
+              "primaryColor": "#186340",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "bold",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 0
+          },
+          {
+            "_id": "component-1771326224626-3xvyu3wab",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 79,
+              "title": "OW6A861.jpeg",
+              "file_name": "mave_BCG4Cq.jpg",
+              "file_type": "image/jpeg",
+              "file_path": "media/mave_BCG4Cq.jpg",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2026-03-01T04:01:42.000000Z",
+              "updated_at": "2026-03-01T04:01:42.000000Z"
+            },
+            "sectionIndex": 0,
+            "index": 1,
+            "id": 79
+          },
+          {
+            "_id": "component-1771326989908-gn143ja32",
+            "type": "menu",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 5,
+              "name": "Menu List",
+              "menu_item_ids": [
+                9,
+                11,
+                12,
+                13,
+                14
+              ],
+              "menu_items": [
+                {
+                  "id": 9,
+                  "title": "Empowering Farmers",
+                  "title_bn": "N/A",
+                  "link": "/empowering-farmers",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 11,
+                  "title": "Regenerative Agriculture",
+                  "title_bn": "N/A",
+                  "link": "/regenerative-agriculture",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 12,
+                  "title": "Safe Water",
+                  "title_bn": "N/A",
+                  "link": "/safe-water",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 13,
+                  "title": "Flexible Financing",
+                  "title_bn": "N/A",
+                  "link": "/flexible-financing",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 14,
+                  "title": "Research and Advocacy",
+                  "title_bn": "N/A",
+                  "link": "/research-and-advocacy",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                }
+              ],
+              "altTitle": null
+            },
+            "sectionIndex": 0,
+            "index": 2,
+            "id": 5,
+            "menuMode": "horizontal",
+            "menuTheme": "light"
+          }
+        ]
+      },
+      {
+        "_id": "section-1771328018126-lfp71rne7",
+        "title": "Question section",
+        "data": [
+          {
+            "_id": "component-1771328035509-s9j4svdfa",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "What does Farmer-centric solutions mean at CARB?",
+              "altTitle": "Designing solutions that reflect farmers’ lived realities, respect their dignity, and enable them to build stable livelihoods  On Their Own Terms.",
+              "description": "<p>It Means</p>",
+              "altDescription": "<p>On Their Own Terms.</p>",
+              "linkType": "independent",
+              "link": "/",
+              "linkPageId": null,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#16693a",
+              "altTitleColor": "#000000",
+              "isDualColor": true,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "right",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 2,
+            "index": 0
+          }
+        ]
+      },
+      {
+        "_id": "section-1771390675606-ja9o7w5t0",
+        "title": "CARB supports farmer empowerment section",
+        "data": [
+          {
+            "_id": "component-1771391009406-mkwkim6jr",
+            "type": "infobox",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "CARB supports farmer empowerment by:",
+              "description": null,
+              "secondTitle": null,
+              "secondDescription": null,
+              "altTitle": null,
+              "altDescription": null,
+              "media": [],
+              "infoItems": [
+                {
+                  "id": 1771391093158,
+                  "title": "Organizing landless and marginalized farmers into community groups and platforms",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "link": null,
+                  "altTitle": "/card-one",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 37,
+                      "title": "a7ccee2c97c707123eb4c7cae1b4c782895fb414.jpg",
+                      "file_name": "mave_ANpkWb.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_ANpkWb.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-02-18T04:59:00.000000Z",
+                      "updated_at": "2026-02-18T04:59:00.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1771391138641,
+                  "title": "Strengthening farmers’ confidence, skills, and role in local decision-making",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "/card-two",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 38,
+                      "title": "b32ee8f7f40ec53b4bf8b0ad930557bb88eeea9f.jpg",
+                      "file_name": "mave_3ExvOH.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_3ExvOH.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-02-18T05:00:19.000000Z",
+                      "updated_at": "2026-02-18T05:00:19.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1771391167542,
+                  "title": "Providing technical guidance, access to inputs, and collective bargaining power",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "/card-three",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 37,
+                      "title": "a7ccee2c97c707123eb4c7cae1b4c782895fb414.jpg",
+                      "file_name": "mave_ANpkWb.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_ANpkWb.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-02-18T04:59:00.000000Z",
+                      "updated_at": "2026-02-18T04:59:00.000000Z"
+                    }
+                  ]
+                }
+              ],
+              "layout": "horizontal",
+              "font": "Arial",
+              "color": "#000000",
+              "background": "#ffffff",
+              "showAltContent": false
+            },
+            "sectionIndex": 3,
+            "index": 0
+          }
+        ]
+      },
+      {
+        "_id": "section-1772346683006-byzseph7h",
+        "title": "Empowering Farmers",
+        "data": [
+          {
+            "_id": "component-1772356797395-y7dnl81be",
+            "type": "card",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 5,
+              "page_name": null,
+              "media_ids": 94,
+              "title_en": "Empowering Farmers",
+              "title_bn": null,
+              "description_en": "<p>CARB’s work is rooted in the belief that farmers themselves must be at the center of solutions to rural poverty and climate vulnerability. Since 1998, CARB has worked closely with Borga Chashi (landless tenant farmers), small and marginal farmers, and climate migrants who move inland from flood-affected chars in search of stability and livelihoods.</p><p><br></p><p>We have learned that when farmers are treated not as beneficiaries but as partners—trusted with decision-making, supported with appropriate tools, and organized collectively—their ability to withstand economic and environmental shocks increases significantly.</p>",
+              "description_bn": "<p>In contrast, interventions that overlook farmer realities—such as insecure land access, seasonal income cycles, and climate displacement—often fail to deliver lasting change. CARB prioritizes farmer centricity by organizing farmers, strengthening their agency, and ensuring their voices guide program design and implementation.</p>",
+              "link_url": null,
+              "additional": {
+                "tags": []
+              },
+              "status": 0,
+              "created_at": "2026-03-01T09:11:34.000000Z",
+              "updated_at": "2026-03-02T07:14:12.000000Z",
+              "media_files": {
+                "id": 94,
+                "file_name": "mave_uscLIA.jpg",
+                "file_type": "image/jpeg",
+                "file_path": "media/mave_uscLIA.jpg"
+              },
+              "config": {
+                "showDescription": true,
+                "showImage": true,
+                "layout": "horizontal"
+              }
+            },
+            "sectionIndex": 3,
+            "index": 0,
+            "id": 5
+          },
+          {
+            "_id": "component-1772347481065-3xlc7rihd",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "What does   Farmer-centric solutions mean   at CARB?",
+              "altTitle": "Designing solutions that reflect farmers’ lived realities, respect their dignity, and enable them to build stable livelihoods",
+              "description": "<p>It Means</p>",
+              "altDescription": "<p>On Their Own Terms.</p>",
+              "linkType": "independent",
+              "link": "/",
+              "linkPageId": null,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": true,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 3,
+            "index": 1
+          },
+          {
+            "_id": "component-1772356904156-arniorllx",
+            "type": "infobox",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "CARB supports farmer empowerment by:",
+              "description": null,
+              "secondTitle": null,
+              "secondDescription": null,
+              "altTitle": null,
+              "altDescription": null,
+              "media": [],
+              "infoItems": [
+                {
+                  "id": 1772357301019,
+                  "title": "Organizing landless and marginalized farmers into community groups and platforms",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "card-one",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 88,
+                      "title": "mave_ANpkWb.jpg",
+                      "file_name": "mave_N0iLlP.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_N0iLlP.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-01T09:28:06.000000Z",
+                      "updated_at": "2026-03-01T09:28:06.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1772357403599,
+                  "title": "Strengthening farmers’ confidence, skills, and role in local decision-making",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "card-two",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 89,
+                      "title": "mave_3ExvOH.jpg",
+                      "file_name": "mave_ZYvepZ.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_ZYvepZ.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-01T09:29:41.000000Z",
+                      "updated_at": "2026-03-01T09:29:41.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1772358222820,
+                  "title": "Providing technical guidance, access to inputs, and collective bargaining power",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "card-three",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 90,
+                      "title": "666.png",
+                      "file_name": "mave_VUANfj.png",
+                      "file_type": "image/png",
+                      "file_path": "media/mave_VUANfj.png",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-01T09:41:03.000000Z",
+                      "updated_at": "2026-03-01T09:41:03.000000Z"
+                    }
+                  ]
+                }
+              ],
+              "layout": "horizontal",
+              "font": "Arial",
+              "color": "#000000",
+              "background": "#ffffff",
+              "showAltContent": false
+            },
+            "sectionIndex": 4,
+            "index": 2
+          }
+        ]
+      },
+      {
+        "_id": "section-1772358279762-2k1ioz6q3",
+        "title": "Regenerative Agriculture",
+        "data": [
+          {
+            "_id": "component-1772358279762-gyy85t9pb",
+            "type": "card",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 6,
+              "page_name": null,
+              "media_ids": 33,
+              "title_en": "Regenerative Agriculture",
+              "title_bn": null,
+              "description_en": "<p>CARB recognizes that long-term farmer resilience depends on the health of land and water systems. In the drought-prone Barind tract, poor soil, erratic rainfall, and water-intensive cropping patterns have undermined both productivity and environmental sustainability.</p><p><br></p><p>Over decades of field-based work, CARB has learned that regenerative and climate-adaptive agriculture is most effective when farmers have access to knowledge, quality inputs, and ongoing support, rather than one-time interventions.</p>",
+              "description_bn": "<p>CARB promotes regenerative agriculture as a practical pathway—one that restores soil fertility, reduces pressure on groundwater, and helps farmers adapt to changing climatic conditions while maintaining income security.</p><p><br></p>",
+              "link_url": null,
+              "additional": {
+                "tags": []
+              },
+              "status": 1,
+              "created_at": "2026-03-01T09:13:29.000000Z",
+              "updated_at": "2026-03-01T09:13:29.000000Z",
+              "media_files": {
+                "id": 33,
+                "file_name": "mave_o623Kx.jpg",
+                "file_type": "image/jpeg",
+                "file_path": "media/mave_o623Kx.jpg"
+              },
+              "config": {
+                "showDescription": true,
+                "showImage": true,
+                "layout": "horizontal"
+              }
+            },
+            "sectionIndex": 5,
+            "index": 0,
+            "id": 6
+          },
+          {
+            "_id": "component-1772358279762-in17p1jzh",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "What does regenerative agriculture mean at CARB?",
+              "altTitle": "Supporting farmers to adopt practices that improve livelihood while protecting natural resources for future generations.",
+              "description": "<p>It Means</p>",
+              "altDescription": "<p><br></p>",
+              "linkType": "independent",
+              "link": "/",
+              "linkPageId": null,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": true,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 4,
+            "index": 1
+          },
+          {
+            "_id": "component-1772358279762-042dcy80r",
+            "type": "infobox",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "CARB advances regenerative agriculture by:",
+              "description": null,
+              "secondTitle": null,
+              "secondDescription": null,
+              "altTitle": null,
+              "altDescription": null,
+              "media": [],
+              "infoItems": [
+                {
+                  "id": 1772357301019,
+                  "title": "Promoting crop diversification and providing access to quality, climate- resilient seeds",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "card-four",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 91,
+                      "title": "777.png",
+                      "file_name": "mave_2orfzK.png",
+                      "file_type": "image/png",
+                      "file_path": "media/mave_2orfzK.png",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-01T10:11:34.000000Z",
+                      "updated_at": "2026-03-01T10:11:34.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1772357403599,
+                  "title": "Supporting soil testing, green manuring, fertility management, and training on smart agriculture techniques",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "card-five",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 92,
+                      "title": "IMG_093.jpeg",
+                      "file_name": "mave_GUxUHh.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_GUxUHh.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-01T10:18:36.000000Z",
+                      "updated_at": "2026-03-01T10:18:36.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1772358222820,
+                  "title": "Integrating water- saving and conservation practices into everyday farming",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "card-three",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 110,
+                      "title": "1 (1).jpg",
+                      "file_name": "mave_7VSCTp.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_7VSCTp.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-03T05:40:55.000000Z",
+                      "updated_at": "2026-03-03T05:40:55.000000Z"
+                    }
+                  ]
+                }
+              ],
+              "layout": "horizontal",
+              "font": "Arial",
+              "color": "#000000",
+              "background": "#ffffff",
+              "showAltContent": false
+            },
+            "sectionIndex": 4,
+            "index": 2
+          }
+        ]
+      },
+      {
+        "_id": "section-1772360509619-u3fivln70",
+        "title": "Safe Water",
+        "data": [
+          {
+            "_id": "component-1772360509619-jzb1jf621",
+            "type": "card",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 7,
+              "page_name": null,
+              "media_ids": 44,
+              "title_en": "Safe Water",
+              "title_bn": null,
+              "description_en": "<p>Access to safe and reliable water is essential not only for agriculture but also for family well-being, child safety, and social harmony. In rural communities, water scarcity often places a heavy burden on women and children and can lead to conflict, exclusion, and insecurity.</p><p><br></p><p>CARB understands that water challenges in the Barind region are deeply interconnected— linking groundwater depletion, irrigation practices, household access, and community relations. Addressing water insecurity, therefore, requires both technical solutions and community-based approaches.</p>",
+              "description_bn": "<p>Safe water is not just about cleanliness; it must also be accessible and affordable. CARB ensures that communities can rely on a water supply that meets these criteria, making a significant difference in the lives of the residents by easing access and reducing costs.</p>",
+              "link_url": null,
+              "additional": {
+                "tags": []
+              },
+              "status": 1,
+              "created_at": "2026-03-01T09:15:30.000000Z",
+              "updated_at": "2026-03-01T09:15:30.000000Z",
+              "media_files": {
+                "id": 44,
+                "file_name": "mave_M0DTZG.jpg",
+                "file_type": "image/jpeg",
+                "file_path": "media/mave_M0DTZG.jpg"
+              },
+              "config": {
+                "showDescription": true,
+                "showImage": true,
+                "layout": "horizontal"
+              }
+            },
+            "sectionIndex": 6,
+            "index": 0,
+            "id": 7
+          },
+          {
+            "_id": "component-1772360509619-cz4hhbe4b",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "What does Safe Water mean at CARB?",
+              "altTitle": "Ensuring that families can access clean, reliable, and affordable drinking water without fear, conflict, or exclusion.",
+              "description": "<p>It Means</p>",
+              "altDescription": "<p><br></p>",
+              "linkType": "independent",
+              "link": "/",
+              "linkPageId": null,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": true,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 5,
+            "index": 1
+          },
+          {
+            "_id": "component-1772360509619-kabeh9c3t",
+            "type": "infobox",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "CARB supports safe water by:",
+              "description": null,
+              "secondTitle": null,
+              "secondDescription": null,
+              "altTitle": null,
+              "altDescription": null,
+              "media": [],
+              "infoItems": [
+                {
+                  "id": 1772357301019,
+                  "title": "Implementing community-based and household-level equitable access to safe water solutions",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "card-seven",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 111,
+                      "title": "2 (1).jpg",
+                      "file_name": "mave_epSF5U.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_epSF5U.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-03T05:44:42.000000Z",
+                      "updated_at": "2026-03-03T05:44:42.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1772357403599,
+                  "title": "Reducing water- related risks for children, girls, and women",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "card-eight",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 97,
+                      "title": "Screenshot 2026-03-03 095614.png",
+                      "file_name": "mave_8mAfrV.png",
+                      "file_type": "image/png",
+                      "file_path": "media/mave_8mAfrV.png",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-03T03:57:33.000000Z",
+                      "updated_at": "2026-03-03T03:57:33.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1772358222820,
+                  "title": "Promoting community ownership and cooperation around water usage and management",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "card-nine",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 112,
+                      "title": "4 (1).jpg",
+                      "file_name": "mave_Gs6X7d.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_Gs6X7d.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-03T05:45:53.000000Z",
+                      "updated_at": "2026-03-03T05:45:53.000000Z"
+                    }
+                  ]
+                }
+              ],
+              "layout": "horizontal",
+              "font": "Arial",
+              "color": "#000000",
+              "background": "#ffffff",
+              "showAltContent": false
+            },
+            "sectionIndex": 5,
+            "index": 2
+          }
+        ]
+      },
+      {
+        "_id": "section-1772361319525-wlkocleb5",
+        "title": "Flexible Financing",
+        "data": [
+          {
+            "_id": "component-1772361319525-ubfaz4vin",
+            "type": "card",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 8,
+              "page_name": null,
+              "media_ids": 45,
+              "title_en": "Flexible Financing",
+              "title_bn": null,
+              "description_en": "<p>In the heart of northwestern Bangladesh, about 75% of rural households depend on agriculture for their livelihoods. Yet, many small farmers find themselves excluded from formal financial systems. Traditional credit models often overlook the seasonal nature of farmers' incomes and the unpredictable climate risks they face, forcing them to turn to high-interest informal money lenders and landlords, known as Mohajons and Jamidars.</p><p><br></p><p>CARB was born out of a commitment to change this narrative, with a mission centered on agriculture. We offer tailored financial products specifically designed for landless and marginal farmers, aiming to uplift and enhance their way of life. By forgoing physical collateral, CARB embraces group guarantees and social accountability, fostering an environment of trust and responsibility that yields high repayment rates.</p>",
+              "description_bn": "<p><span style=\"color: rgb(13, 77, 37);\">Our microfinance offerings are a lifeline, enabling farmers to access vital resources like seeds and fertilizers precisely when they need them. With a repayment schedule that honors the realities of Borga Chashi, small farmers and rural entrepreneurs, we provide a flexible timeline that aligns with their needs. CARB’s adaptable financing turns credit into a tool for bringing stability, empowering the clients to invest in their futures with confidence.</span></p>",
+              "link_url": null,
+              "additional": {
+                "tags": []
+              },
+              "status": 1,
+              "created_at": "2026-03-01T09:17:13.000000Z",
+              "updated_at": "2026-03-01T09:17:13.000000Z",
+              "media_files": {
+                "id": 45,
+                "file_name": "mave_5TIIpZ.jpg",
+                "file_type": "image/jpeg",
+                "file_path": "media/mave_5TIIpZ.jpg"
+              },
+              "config": {
+                "showDescription": true,
+                "showImage": true,
+                "layout": "horizontal"
+              }
+            },
+            "sectionIndex": 7,
+            "index": 0,
+            "id": 8
+          },
+          {
+            "_id": "component-1772361319525-40xycsdji",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "What does regenerative agriculture mean at CARB?",
+              "altTitle": "Designing farmer and small entrepreneurship-friendly financial services that reduce dependence on exploitative landlords and moneylenders.",
+              "description": "<p>It Means</p>",
+              "altDescription": "<p><br></p>",
+              "linkType": "independent",
+              "link": "/",
+              "linkPageId": null,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": true,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 6,
+            "index": 1
+          },
+          {
+            "_id": "component-1772361319525-pdd74vfav",
+            "type": "infobox",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "CARB delivers flexible financing by:",
+              "description": null,
+              "secondTitle": null,
+              "secondDescription": null,
+              "altTitle": null,
+              "altDescription": null,
+              "media": [],
+              "infoItems": [
+                {
+                  "id": 1772357301019,
+                  "title": "Providing agriculture- focused microfinance aligned with crop cycles and begin repayment only after harvest",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "card-seven",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 93,
+                      "title": "IMG_1054.jpeg",
+                      "file_name": "mave_WfhuKa.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_WfhuKa.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-01T10:39:54.000000Z",
+                      "updated_at": "2026-03-01T10:39:54.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1772357403599,
+                  "title": "Utilizing community- based guarantees instead of physical collateral, fostering trust and shared commitments",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "card-eight",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 100,
+                      "title": "Screenshot 2026-03-03 095956.png",
+                      "file_name": "mave_SKK38c.png",
+                      "file_type": "image/png",
+                      "file_path": "media/mave_SKK38c.png",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-03T04:01:24.000000Z",
+                      "updated_at": "2026-03-03T04:01:24.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1772358222820,
+                  "title": "Supporting farmers and small entrepreneurs with credit designed to enable growth, not increase risk",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "card-nine",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 99,
+                      "title": "Screenshot 2026-03-03 100047.png",
+                      "file_name": "mave_LsPrrG.png",
+                      "file_type": "image/png",
+                      "file_path": "media/mave_LsPrrG.png",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-03T04:01:24.000000Z",
+                      "updated_at": "2026-03-03T04:01:24.000000Z"
+                    }
+                  ]
+                }
+              ],
+              "layout": "horizontal",
+              "font": "Arial",
+              "color": "#000000",
+              "background": "#ffffff",
+              "showAltContent": false
+            },
+            "sectionIndex": 6,
+            "index": 2
+          }
+        ]
+      },
+      {
+        "_id": "section-1772361979987-70vvutv7l",
+        "title": "Research and Advocacy",
+        "data": [
+          {
+            "_id": "component-1772361979987-7k54fc6f1",
+            "type": "card",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 9,
+              "page_name": null,
+              "media_ids": 36,
+              "title_en": "Research and Advocacy",
+              "title_bn": null,
+              "description_en": "<p>CARB believes that lasting change in agriculture and rural livelihoods requires more than isolated interventions—it must be grounded in evidence, learning, and collective action. From its earliest days, CARB has functioned as a field laboratory, generating root-level, long-term data on groundwater resources, irrigation practices, soil health, cropping systems, and farmer livelihoods across the drought-prone Barind region.</p><p><br></p><p>A core pillar of this work is&nbsp;CARB’s targeted, high-impact research on groundwater resource monitoring and irrigation management. Through continuous measurement of groundwater levels, pumping patterns, recharge trends, and irrigation use, CARB builds a deep understanding of how water systems interact with farming practices and climate stress. This evidence allows CARB to design practical,&nbsp;context-specific solutions that promote sustainable water use while protecting farmer livelihoods.</p>",
+              "description_bn": "<p><span style=\"color: rgb(13, 77, 37);\">At the same time, CARB recognizes that evidence alone is not enough. For research to translate into lasting impact, it must be amplified through strong coalitions that connect farmers, community institutions, scientists, policymakers, and financial actors. By organizing farmers and building alliances with government agencies, research institutions, and practitioners, CARB transforms grassroots learning into policies and practices that can be adopted at scale.</span></p>",
+              "link_url": null,
+              "additional": {
+                "tags": []
+              },
+              "status": 1,
+              "created_at": "2026-03-01T09:19:08.000000Z",
+              "updated_at": "2026-03-01T09:19:08.000000Z",
+              "media_files": {
+                "id": 36,
+                "file_name": "mave_dwiNi1.png",
+                "file_type": "image/png",
+                "file_path": "media/mave_dwiNi1.png"
+              },
+              "config": {
+                "showDescription": true,
+                "showImage": true,
+                "layout": "horizontal"
+              }
+            },
+            "sectionIndex": 8,
+            "index": 0,
+            "id": 9
+          },
+          {
+            "_id": "component-1772361979987-jf25ybn71",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "What does Farmer-centric solutions mean at CARB?",
+              "altTitle": "Turning field-based evidence into collective action that supports farmers and protects natural resources.",
+              "description": "<p>It Means</p>",
+              "altDescription": "<p><br></p>",
+              "linkType": "independent",
+              "link": "/",
+              "linkPageId": null,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": true,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 7,
+            "index": 1
+          },
+          {
+            "_id": "component-1772361979987-p8hj34tff",
+            "type": "infobox",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "CARB advances research and advocacy by:",
+              "description": null,
+              "secondTitle": null,
+              "secondDescription": null,
+              "altTitle": null,
+              "altDescription": null,
+              "media": [],
+              "infoItems": [
+                {
+                  "id": 1772357301019,
+                  "title": "Continuing research on groundwater and irrigation practices to support climate- resilient agriculture and water governance.",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "card-seven",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 103,
+                      "title": "Screenshot 2026-03-03 100309.png",
+                      "file_name": "mave_eYc2S6.png",
+                      "file_type": "image/png",
+                      "file_path": "media/mave_eYc2S6.png",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-03T04:04:24.000000Z",
+                      "updated_at": "2026-03-03T04:04:24.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1772357403599,
+                  "title": "Building strong coalitions to amplify grassroots learning and align research with real-world decision-making.",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "card-eight",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 102,
+                      "title": "Screenshot 2026-03-03 100328.png",
+                      "file_name": "mave_DyGx1M.png",
+                      "file_type": "image/png",
+                      "file_path": "media/mave_DyGx1M.png",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-03T04:04:23.000000Z",
+                      "updated_at": "2026-03-03T04:04:23.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1772358222820,
+                  "title": "Translating evidence into action by developing practical models and policy recommendations.",
+                  "description": "<p>.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "card-nine",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 101,
+                      "title": "Screenshot 2026-03-03 100359.png",
+                      "file_name": "mave_vSBBBE.png",
+                      "file_type": "image/png",
+                      "file_path": "media/mave_vSBBBE.png",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-03T04:04:22.000000Z",
+                      "updated_at": "2026-03-03T04:04:22.000000Z"
+                    }
+                  ]
+                }
+              ],
+              "layout": "horizontal",
+              "font": "Arial",
+              "color": "#000000",
+              "background": "#ffffff",
+              "showAltContent": false
+            },
+            "sectionIndex": 7,
+            "index": 2
+          }
+        ]
+      }
+    ],
+    "additional": [
+      {
+        "pageType": "Page",
+        "metaTitle": "Our Work",
+        "metaDescription": null,
+        "keywords": [],
+        "metaImage": null,
+        "metaImageAlt": null
+      }
+    ],
+    "status": 1,
+    "created_at": "2026-02-17T10:52:37.000000Z",
+    "updated_at": "2026-03-03T05:46:47.000000Z",
+    "favicon_mave": {
+      "id": 10,
+      "title": "671c2af4d32aa0afbd66e2e471839ea3b2347848 (1).jpg",
+      "file_name": "mave_zTAysq.jpg",
+      "file_type": "image/jpeg",
+      "file_path": "media/mave_zTAysq.jpg",
+      "file_size": null,
+      "tags": null,
+      "created_at": "2026-02-16T10:36:55.000000Z",
+      "updated_at": "2026-02-16T10:36:55.000000Z"
+    },
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  },
+  {
+    "id": 2,
+    "slug": null,
+    "type": "Footer",
+    "favicon_id": 10,
+    "page_name_en": "Footer",
+    "page_name_bn": "Footer",
+    "head": null,
+    "body": [
+      {
+        "_id": "section-1771320020251-8cu4i1rks",
+        "title": "Image footer",
+        "data": [
+          {
+            "_id": "component-1771320033567-je3dz7a6k",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 30,
+              "title": "Group 11.png",
+              "file_name": "mave_hn0xpu.png",
+              "file_type": "image/png",
+              "file_path": "media/mave_hn0xpu.png",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2026-02-17T09:21:26.000000Z",
+              "updated_at": "2026-02-17T09:21:26.000000Z"
+            },
+            "sectionIndex": 0,
+            "index": 0,
+            "id": 30
+          },
+          {
+            "_id": "component-1771320116371-ipsn3huu6",
+            "type": "description",
+            "value": "<p>The Centre for Action Research–Barind (CARB) is a grassroots non-profit organization that empowers small and marginal farmers and climate-change-affected families in the drought-prone Barind region, located in northwestern Bangladesh, through agricultural solutions, microfinance, climate-adaptive farming, and action-based research, thereby enabling sustainable livelihoods, food security, and rural resilience.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 1
+          }
+        ]
+      },
+      {
+        "_id": "section-1771319932836-3rgw2i7u1",
+        "title": "Support Link",
+        "data": [
+          {
+            "_id": "component-1771320609851-o4ajpwhpr",
+            "type": "title",
+            "value": "<h3>Useful links</h3>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 1,
+            "index": 0
+          },
+          {
+            "_id": "component-1771320437739-4la4grm2m",
+            "type": "iconlist",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "items": [
+                {
+                  "id": 1771320447101,
+                  "icon": "fas fa-calendar",
+                  "text": "Adopt a bigha",
+                  "altText": "/donate"
+                },
+                {
+                  "id": 1771320468051,
+                  "icon": "fas fa-calendar",
+                  "text": "General Donation",
+                  "altText": "/donate"
+                },
+                {
+                  "id": 1771320489955,
+                  "icon": "fas fa-calendar",
+                  "text": "Research and publication",
+                  "altText": "/"
+                },
+                {
+                  "id": 1771320500851,
+                  "icon": "fas fa-calendar",
+                  "text": "Contact Us",
+                  "altText": "/contact-us"
+                },
+                {
+                  "id": 1774763804030,
+                  "icon": "fas fa-calendar",
+                  "text": "Terms & Conditions",
+                  "altText": "/terms-and-conditions"
+                },
+                {
+                  "id": 1774763843670,
+                  "icon": "fas fa-calendar",
+                  "text": "Privacy Policy",
+                  "altText": "/privacy-policy"
+                }
+              ],
+              "orientation": "vertical",
+              "iconSize": 24,
+              "iconColor": "#000000",
+              "showAltContent": false
+            },
+            "sectionIndex": 1,
+            "index": 1
+          }
+        ]
+      },
+      {
+        "_id": "section-1771320567243-s1ksdu01m",
+        "title": "Contacts Us",
+        "data": [
+          {
+            "_id": "component-1771320630538-155tlqfs0",
+            "type": "title",
+            "value": "<h3>Get in touch</h3>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 2,
+            "index": 0
+          },
+          {
+            "_id": "component-1771320648034-yndutgzpi",
+            "type": "iconlist",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "items": [
+                {
+                  "id": 1772509246342,
+                  "icon": "fas fa-calendar",
+                  "text": "Address",
+                  "altText": "House 283, Thakurpara,  Rajshahi–6000,  Bangladesh"
+                },
+                {
+                  "id": 1772509257165,
+                  "icon": "fas fa-calendar",
+                  "text": "Email",
+                  "altText": "info@barind.com"
+                },
+                {
+                  "id": 1772509275826,
+                  "icon": "fas fa-calendar",
+                  "text": "Phone Number",
+                  "altText": "+8801713304423"
+                }
+              ],
+              "orientation": "vertical",
+              "iconSize": 24,
+              "iconColor": "#000000",
+              "showAltContent": false
+            },
+            "sectionIndex": 2,
+            "index": 1
+          }
+        ]
+      },
+      {
+        "_id": "section-1771323954869-284spof8o",
+        "title": "Buttom Footer",
+        "data": [
+          {
+            "_id": "component-1771323958110-9bbi4so9t",
+            "type": "description",
+            "value": "<p>©  2026 CARB, All Rights Reserved, Design &amp; Development <strong>ETHER TECH</strong></p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 3,
+            "index": 0
+          },
+          {
+            "_id": "component-1771324039525-l4gcqk7au",
+            "type": "iconlist",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "items": [
+                {
+                  "id": 1771324062316,
+                  "icon": "fab fa-facebook-square",
+                  "text": "facebook",
+                  "altText": "https://www.facebook.com"
+                },
+                {
+                  "id": 1771324092412,
+                  "icon": "fab fa-twitter-square",
+                  "text": "twitter",
+                  "altText": "https://x.com"
+                },
+                {
+                  "id": 1771324205692,
+                  "icon": "fab fa-youtube",
+                  "text": "youtube",
+                  "altText": "https://www.youtube.com"
+                },
+                {
+                  "id": 1771324251992,
+                  "icon": "fab fa-linkedin",
+                  "text": "linkedin",
+                  "altText": "https://www.linkedin.com/"
+                }
+              ],
+              "orientation": "vertical",
+              "iconSize": 24,
+              "iconColor": "#000000",
+              "showAltContent": false
+            },
+            "sectionIndex": 4,
+            "index": 1
+          }
+        ]
+      }
+    ],
+    "additional": [
+      {
+        "pageType": "Footer",
+        "metaTitle": "Footer",
+        "metaDescription": null,
+        "keywords": [],
+        "metaImage": null,
+        "metaImageAlt": null
+      }
+    ],
+    "status": 1,
+    "created_at": "2026-02-17T09:14:32.000000Z",
+    "updated_at": "2026-03-29T05:57:50.000000Z",
+    "favicon_mave": {
+      "id": 10,
+      "title": "671c2af4d32aa0afbd66e2e471839ea3b2347848 (1).jpg",
+      "file_name": "mave_zTAysq.jpg",
+      "file_type": "image/jpeg",
+      "file_path": "media/mave_zTAysq.jpg",
+      "file_size": null,
+      "tags": null,
+      "created_at": "2026-02-16T10:36:55.000000Z",
+      "updated_at": "2026-02-16T10:36:55.000000Z"
+    },
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  },
+  {
+    "id": 1,
+    "slug": "home-page",
+    "type": "Page",
+    "favicon_id": 10,
+    "page_name_en": "Carb -The Centre for Action Research Barind",
+    "page_name_bn": "Carb -The Centre for Action Research Barind",
+    "head": {
+      "title": "Home Page",
+      "description": null,
+      "keywords": [],
+      "image": null,
+      "imageAlt": null
+    },
+    "body": [
+      {
+        "_id": "section-1771224608032-7vy68og4q",
+        "title": "Header Section",
+        "data": [
+          {
+            "_id": "component-1771224735311-kjikhp314",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 41,
+              "title": "839d03f895b02c7e34e21b63b4e79178339c2109 (1).png",
+              "file_name": "mave_EGSBA5.png",
+              "file_type": "image/png",
+              "file_path": "media/mave_EGSBA5.png",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2026-02-22T09:13:20.000000Z",
+              "updated_at": "2026-02-22T09:13:20.000000Z"
+            },
+            "sectionIndex": 0,
+            "index": 0,
+            "id": 41
+          },
+          {
+            "_id": "component-1771224804272-yx4e5fo1v",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Building dignified livelihoods and hopeful futures for",
+              "altTitle": "Borga Chashi",
+              "description": "<p>Sponsor a Borga Chashi</p>",
+              "altDescription": null,
+              "linkType": "independent",
+              "link": "/donate",
+              "linkPageId": null,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#f1b500",
+              "isDualColor": true,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 0,
+            "index": 1
+          },
+          {
+            "_id": "component-1771225092824-02suzc8tf",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 43,
+              "title": "3ec343b7cc739c638e673ac622b8a17a88baa53e (1).png",
+              "file_name": "mave_Bbc8Rl.png",
+              "file_type": "image/png",
+              "file_path": "media/mave_Bbc8Rl.png",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2026-02-22T09:58:02.000000Z",
+              "updated_at": "2026-02-22T09:58:02.000000Z"
+            },
+            "sectionIndex": 0,
+            "index": 2,
+            "id": 43
+          }
+        ]
+      },
+      {
+        "_id": "section-1771237714750-t5lte64ap",
+        "title": "Card Section",
+        "data": [
+          {
+            "_id": "component-1771237840691-fitryqcy5",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 56,
+              "title": "OW6A8559 (1).JPG",
+              "file_name": "mave_eAenqR.jpg",
+              "file_type": "image/jpeg",
+              "file_path": "media/mave_eAenqR.jpg",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2026-02-25T09:59:12.000000Z",
+              "updated_at": "2026-02-25T09:59:12.000000Z"
+            },
+            "sectionIndex": 1,
+            "index": 0,
+            "id": 56
+          },
+          {
+            "_id": "component-1771239261537-izpb9nhvj",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Support a farmer today. Help grow livelihoods, hope, and lasting change.",
+              "altTitle": null,
+              "description": "<p>We believe in thlime strength and potential of every Borga Chashi (landless farmer) and that access to secure resources, fair support, and sustainable livelihoods is key to unlocking that potential. Yet for majority of the Borga Chashi, in the drought-prone Barind region, financial constraints, high land lease costs, and unreliable access to resources make farming a constant struggle. For 25 years, CARB has been working to change this reality.</p><p><br></p><p>Through our Sponsor a Farmer initiative, we can support landless farmers with access to land, water-efficient farming solutions, hands-on training, and vital resources—helping them move towards stability, dignity, and hope.</p><p><br></p><p>You can be part of this journey. With a monthly contribution of BDT 2500, you can help a farmer sustainably build reliable livelihood sources for their family. Your support helps farmers to leap frog past barriers and create a pathway toward a more resilient and dignified life.</p>",
+              "altDescription": null,
+              "linkType": "independent",
+              "link": "/donate",
+              "linkPageId": null,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": false,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 1,
+            "index": 1
+          }
+        ]
+      },
+      {
+        "_id": "section-1771239940152-w4kpacjln",
+        "title": "Counter Section",
+        "data": [
+          {
+            "_id": "component-1771239953008-51mnz2wle",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Number of Farmers Still in Need of Support",
+              "altTitle": null,
+              "description": "<p>3,000+</p>",
+              "altDescription": null,
+              "linkType": "independent",
+              "link": "/donate",
+              "linkPageId": null,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": false,
+              "titleFontSize": "large",
+              "titleFontWeight": "medium",
+              "titleAlign": "center",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 2,
+            "index": 0
+          }
+        ]
+      },
+      {
+        "_id": "section-1771308082805-qk7faww6q",
+        "title": "Our Work Section",
+        "data": [
+          {
+            "_id": "component-1771308107394-7asuvzwl3",
+            "type": "infobox",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Our Work",
+              "description": null,
+              "secondTitle": null,
+              "secondDescription": null,
+              "altTitle": null,
+              "altDescription": null,
+              "media": [],
+              "infoItems": [
+                {
+                  "id": 1772087672948,
+                  "title": "Empowering Farmers",
+                  "description": "<p><span style=\"color: rgb(0, 0, 0);\">Supporting landless and smallholder farmers is at the heart of CARB’s work. We partner with Borga Chashi in the Barind region to enable dignified, sustainable livelihoods through water-efficient farming, training, and farmer-centered support.</span></p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "link": null,
+                  "altTitle": "/know-more",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 71,
+                      "title": "OW6A86782.JPG",
+                      "file_name": "mave_ZHHG68.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_ZHHG68.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-02-26T06:34:25.000000Z",
+                      "updated_at": "2026-02-26T06:34:25.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1772087872632,
+                  "title": "Regenerative Agriculture",
+                  "description": "<p><span style=\"color: rgb(0, 0, 0);\">CARB advocates for regenerative farming techniques that enhance soil health, minimize water consumption, and boost productivity. This approach aids farmers in adapting to climate challenges while safeguarding the land and the ecosystem.</span></p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "/know-more",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 72,
+                      "title": "OW6A8640-_1.jpeg",
+                      "file_name": "mave_fOd3SO.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_fOd3SO.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-02-26T06:37:40.000000Z",
+                      "updated_at": "2026-02-26T06:37:40.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1772088594787,
+                  "title": "Safe Water",
+                  "description": "<p><span style=\"color: rgb(0, 0, 0);\">Every family relies on safe water for their health and wellbeing. We promote efficient solutions to boost water security for homes in dry-spell areas, cutting down risks and sprinkling a little joy into everyday life.</span></p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "/know-more",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 73,
+                      "title": "OW6A968 (1).jpeg",
+                      "file_name": "mave_GhGC7c.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_GhGC7c.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-02-26T06:49:42.000000Z",
+                      "updated_at": "2026-02-26T06:49:42.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1772088938001,
+                  "title": "Flexible Financing",
+                  "description": "<p><span style=\"color: rgb(0, 0, 0);\">We provides customized financing solutions for farmers, small business owners, women, and families impacted by climate change. These solutions help reduce dependence on high-interest debt, enabling the client to focus on stability and growth.</span></p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "/know-more",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 74,
+                      "title": "IMG_105.jpeg",
+                      "file_name": "mave_PZj2NI.jpg",
+                      "file_type": "image/jpeg",
+                      "file_path": "media/mave_PZj2NI.jpg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-02-26T06:55:29.000000Z",
+                      "updated_at": "2026-02-26T06:55:29.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1772089139249,
+                  "title": "Research and Advocacy",
+                  "description": "<p><span style=\"color: rgb(0, 0, 0);\">Our research is action-oriented, leveraging decades of primary data from the Barind region and advocating for farmer-centric, practical policies and practices, with a focus on improving the future of this historically arid region. </span></p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "/know-more",
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 85,
+                      "title": "555.png",
+                      "file_name": "mave_vU1N9c.png",
+                      "file_type": "image/png",
+                      "file_path": "media/mave_vU1N9c.png",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-01T05:18:01.000000Z",
+                      "updated_at": "2026-03-01T05:18:01.000000Z"
+                    }
+                  ]
+                }
+              ],
+              "layout": "horizontal",
+              "font": "Arial",
+              "color": "#000000",
+              "background": "#ffffff",
+              "showAltContent": false
+            },
+            "sectionIndex": 3,
+            "index": 0
+          }
+        ]
+      },
+      {
+        "_id": "section-1771309246297-kc0n8y1dk",
+        "title": "Collaborative Impact section",
+        "data": [
+          {
+            "_id": "component-1771310779597-bgzar3p8l",
+            "type": "accordion",
+            "value": null,
+            "settings": [],
+            "_mave": [
+              {
+                "title": "Collaborative Impact",
+                "altTitle": null,
+                "content": "<p>Our collaborations are rooted in trust and shared purpose. We, CARB, bring together farmers, researchers, financiers, and development partners to co-create solutions that strengthen livelihoods, build resilience, and multiply impact beyond what any single actor could achieve alone. By working closely with partners at every level, we unlock new possibilities for impact and long-term resilience.</p>",
+                "altContent": null,
+                "contentType": "text",
+                "tags": [],
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                }
+              },
+              {
+                "title": "15,000+",
+                "altTitle": "Farmers and clients receiving services",
+                "content": null,
+                "altContent": null,
+                "contentType": "text",
+                "tags": [],
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                }
+              },
+              {
+                "title": "650+",
+                "altTitle": null,
+                "content": "<p>Villages in Northwest Bangladesh</p>",
+                "altContent": null,
+                "contentType": "text",
+                "tags": [],
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                }
+              }
+            ],
+            "sectionIndex": 4,
+            "index": 0,
+            "id": "component-1771310779597-bgzar3p8l",
+            "showAltContent": false
+          }
+        ]
+      },
+      {
+        "_id": "section-1771309756629-8tn8ttims",
+        "title": "Research and Publications section",
+        "data": [
+          {
+            "_id": "component-1771310386419-q6t94vhlw",
+            "type": "infobox",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Key Updates, Research and Publications",
+              "description": "<p>Ground water monitoring, resource assessment, and management</p>",
+              "secondTitle": "Key Updates, Research and Publications",
+              "secondDescription": null,
+              "altTitle": null,
+              "altDescription": "<p><br></p>",
+              "media": [],
+              "infoItems": [
+                {
+                  "id": 1771317378508,
+                  "title": "Ground water monitoring, resource assessment, and management",
+                  "description": "<p>Combining field-based data, mapping, and spatial analysis, and historical comparisons of groundwater levels in Barind helps to understand the current state of groundwater and irrigation practice of the region.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "Know More",
+                  "altDescription": "<p>/research-and-publication-one</p>",
+                  "media": [
+                    {
+                      "id": 76,
+                      "title": "111.png",
+                      "file_name": "mave_E8OqpT.png",
+                      "file_type": "image/png",
+                      "file_path": "media/mave_E8OqpT.png",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-01T03:49:11.000000Z",
+                      "updated_at": "2026-03-01T03:49:11.000000Z"
+                    },
+                    {
+                      "id": 122,
+                      "title": "1st_compressed.pdf",
+                      "file_name": "1st_compressed.pdf",
+                      "file_type": "application/pdf",
+                      "file_path": "media/1st_compressed.pdf",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-07T09:17:15.000000Z",
+                      "updated_at": "2026-03-07T09:17:15.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1771317469718,
+                  "title": "Historical groundwater pumping hours to be reduced by 20-30% during dry season",
+                  "description": "<p>It's critical to shift from water-intensive farming to climate-resilient agriculture. Modified cropping is essential for sustainability in the Barind region through water governance, technology, and community empowerment.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "Know More",
+                  "altDescription": "<p>/research-and-publication-two</p>",
+                  "media": [
+                    {
+                      "id": 77,
+                      "title": "222.png",
+                      "file_name": "mave_WmDnW8.png",
+                      "file_type": "image/png",
+                      "file_path": "media/mave_WmDnW8.png",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-01T03:49:31.000000Z",
+                      "updated_at": "2026-03-01T03:49:31.000000Z"
+                    },
+                    {
+                      "id": 123,
+                      "title": "2nd_compressed.pdf",
+                      "file_name": "2nd_compressed.pdf",
+                      "file_type": "application/pdf",
+                      "file_path": "media/2nd_compressed.pdf",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-07T09:17:16.000000Z",
+                      "updated_at": "2026-03-07T09:17:16.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1771317582055,
+                  "title": "Inverted wells in the Barind aquifers: opportunities and challenges",
+                  "description": "<p>The fundamental challenge in the High and Level Barind is that the crops currently grown are transpiring more water than provided by the effective rainfall.</p>",
+                  "secondTitle": null,
+                  "secondDescription": null,
+                  "altTitle": "Know More",
+                  "altDescription": "<p>/research-and-publication-three</p>",
+                  "media": [
+                    {
+                      "id": 78,
+                      "title": "333.png",
+                      "file_name": "mave_5dBRam.png",
+                      "file_type": "image/png",
+                      "file_path": "media/mave_5dBRam.png",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-01T03:49:52.000000Z",
+                      "updated_at": "2026-03-01T03:49:52.000000Z"
+                    },
+                    {
+                      "id": 121,
+                      "title": "3rd.pdf",
+                      "file_name": "3rd.pdf",
+                      "file_type": "application/pdf",
+                      "file_path": "media/3rd.pdf",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2026-03-07T09:16:03.000000Z",
+                      "updated_at": "2026-03-07T09:16:03.000000Z"
+                    }
+                  ]
+                }
+              ],
+              "layout": "horizontal",
+              "font": "Arial",
+              "color": "#000000",
+              "background": "#ffffff",
+              "showAltContent": false
+            },
+            "sectionIndex": 5,
+            "index": 0
+          },
+          {
+            "_id": "component-1772949097413-r4bdy4ubh",
+            "type": "form",
+            "value": null,
+            "settings": [],
+            "_mave": true,
+            "sectionIndex": 5,
+            "index": 1,
+            "data": {
+              "formId": 2,
+              "title": "research and publications form",
+              "description": "<p>this form collects user info and allowes them to download pdf</p>",
+              "elements": [
+                {
+                  "type": "input",
+                  "label": "name",
+                  "icon": {
+                    "type": [],
+                    "key": null,
+                    "ref": null,
+                    "props": [],
+                    "_owner": null
+                  },
+                  "element_type": "input",
+                  "input_type": "text",
+                  "placeholder": "Enter your name",
+                  "updated_on": "1772948925967",
+                  "options": [],
+                  "divisionLabel": "Select Division",
+                  "districtLabel": "Select District",
+                  "required": false,
+                  "content": null,
+                  "mediaId": null
+                },
+                {
+                  "type": "input",
+                  "label": "email",
+                  "icon": {
+                    "type": [],
+                    "key": null,
+                    "ref": null,
+                    "props": [],
+                    "_owner": null
+                  },
+                  "element_type": "input",
+                  "input_type": "email",
+                  "placeholder": "Enter your email",
+                  "updated_on": "1772948941888",
+                  "options": [],
+                  "divisionLabel": "Select Division",
+                  "districtLabel": "Select District",
+                  "required": false,
+                  "content": null,
+                  "mediaId": null
+                }
+              ],
+              "attributes": {
+                "component_id": "research_and_publications_form",
+                "component_class": "form, bg-light",
+                "method": "POST",
+                "action_url": "https://carb.etherstaging.xyz/api/form-submission?form_id=2",
+                "enctype": "multipart/form-data"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-1771311192039-fsqb8ymf2",
+        "title": "Logo section",
+        "data": [
+          {
+            "_id": "component-1771311195296-9kv5wsr6x",
+            "type": "gallery",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "images": [
+                {
+                  "id": 28,
+                  "title": "2.png",
+                  "file_name": "mave_t7uZnh.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_t7uZnh.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-02-17T09:00:34.000000Z",
+                  "updated_at": "2026-02-17T09:00:34.000000Z"
+                },
+                {
+                  "id": 26,
+                  "title": "1.png",
+                  "file_name": "mave_wQcIWg.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_wQcIWg.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-02-17T09:00:34.000000Z",
+                  "updated_at": "2026-02-17T09:00:34.000000Z"
+                },
+                {
+                  "id": 22,
+                  "title": "attachment_159378058 1.png",
+                  "file_name": "mave_EDRzMO.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_EDRzMO.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-02-17T08:54:15.000000Z",
+                  "updated_at": "2026-02-17T08:54:15.000000Z"
+                },
+                {
+                  "id": 24,
+                  "title": "4.png",
+                  "file_name": "mave_nTYBQO.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_nTYBQO.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-02-17T09:00:34.000000Z",
+                  "updated_at": "2026-02-17T09:00:34.000000Z"
+                },
+                {
+                  "id": 25,
+                  "title": "5.png",
+                  "file_name": "mave_SnjwbB.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_SnjwbB.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-02-17T09:00:34.000000Z",
+                  "updated_at": "2026-02-17T09:00:34.000000Z"
+                },
+                {
+                  "id": 23,
+                  "title": "6.png",
+                  "file_name": "mave_yYtbse.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_yYtbse.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2026-02-17T09:00:33.000000Z",
+                  "updated_at": "2026-02-17T09:00:33.000000Z"
+                }
+              ],
+              "layout": "grid",
+              "altTitle": null,
+              "settings": {
+                "columns": 3,
+                "spacing": 16,
+                "hoverEffect": "scale",
+                "borderRadius": "8px",
+                "shadow": "sm"
+              }
+            },
+            "sectionIndex": 6,
+            "index": 0,
+            "id": "component-1771311195296-9kv5wsr6x"
+          }
+        ]
+      }
+    ],
+    "additional": [
+      {
+        "pageType": "Page",
+        "metaTitle": "Carb -The Centre for Action Research Barind",
+        "metaDescription": null,
+        "keywords": [],
+        "metaImage": null,
+        "metaImageAlt": null
+      }
+    ],
+    "status": 1,
+    "created_at": "2026-02-16T06:48:14.000000Z",
+    "updated_at": "2026-03-14T05:45:04.000000Z",
+    "favicon_mave": {
+      "id": 10,
+      "title": "671c2af4d32aa0afbd66e2e471839ea3b2347848 (1).jpg",
+      "file_name": "mave_zTAysq.jpg",
+      "file_type": "image/jpeg",
+      "file_path": "media/mave_zTAysq.jpg",
+      "file_size": null,
+      "tags": null,
+      "created_at": "2026-02-16T10:36:55.000000Z",
+      "updated_at": "2026-02-16T10:36:55.000000Z"
+    },
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  }
+]

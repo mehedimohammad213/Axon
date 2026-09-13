@@ -1,0 +1,646 @@
+[
+  {
+    "id": 1,
+    "name": "Bottom Menu",
+    "menu_item_ids": [
+      15,
+      42,
+      27
+    ],
+    "menu_items": [
+      {
+        "id": 15,
+        "title": "PRIVACY POLICY",
+        "title_bn": "",
+        "link": "/privacy-policy",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2023-10-26T03:20:32.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 42,
+        "title": "COOKIES POLICY",
+        "title_bn": "",
+        "link": "/cookies-policies",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 27,
+        "title": "TERMS AND CONDITION",
+        "title_bn": "",
+        "link": "/terms-and-conditions",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2023-10-26T03:17:55.000000Z",
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Header Menu",
+    "menu_item_ids": [
+      1,
+      2,
+      3
+    ],
+    "menu_items": [
+      {
+        "id": 2,
+        "title": "Pricing",
+        "title_bn": "Mullo",
+        "link": "/pricing",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2024-02-27T19:26:54.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 3,
+        "title": "FAQ",
+        "title_bn": "",
+        "link": "/faq",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Member Of",
+    "menu_item_ids": [
+      10,
+      11,
+      12
+    ],
+    "menu_items": [
+      {
+        "id": 10,
+        "title": "Sign Up",
+        "title_bn": "",
+        "link": "/signup",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 11,
+        "title": "Gallery",
+        "title_bn": "",
+        "link": "/gallery",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 12,
+        "title": "Testimonials",
+        "title_bn": "",
+        "link": "/testimonials",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Arcatec",
+    "menu_item_ids": [
+      58,
+      62,
+      63,
+      76
+    ],
+    "menu_items": [
+      {
+        "id": 58,
+        "title": "Home",
+        "title_bn": "হোম",
+        "link": "/",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2025-09-25T22:58:56.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 62,
+        "title": "About Us",
+        "title_bn": "আমাদের সম্পর্কে",
+        "link": "/about",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2025-09-25T22:48:53.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 63,
+        "title": "PAGES",
+        "title_bn": "PAGES",
+        "link": "/#",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": [
+          {
+            "id": 64,
+            "title": "Pricing",
+            "title_bn": "Pricing",
+            "link": "/pricing?pageId=42&pageName=Pricing",
+            "parent_id": 63,
+            "created_at": null,
+            "updated_at": null,
+            "all_children": []
+          },
+          {
+            "id": 65,
+            "title": "Testimonial",
+            "title_bn": "Testimonial",
+            "link": "/testimonial?pageId=43&pageName=Testimonial",
+            "parent_id": 63,
+            "created_at": null,
+            "updated_at": null,
+            "all_children": []
+          },
+          {
+            "id": 69,
+            "title": "Team",
+            "title_bn": "Team",
+            "link": "/#",
+            "parent_id": 63,
+            "created_at": null,
+            "updated_at": null,
+            "all_children": [
+              {
+                "id": 70,
+                "title": "Team",
+                "title_bn": "Team",
+                "link": "/team?pageId=46&pageName=Team",
+                "parent_id": 69,
+                "created_at": null,
+                "updated_at": null,
+                "all_children": []
+              },
+              {
+                "id": 71,
+                "title": "Team Details",
+                "title_bn": "Team Details",
+                "link": "/team-details?pageId=47&pageName=Team-Details",
+                "parent_id": 69,
+                "created_at": null,
+                "updated_at": null,
+                "all_children": [
+                  {
+                    "id": 77,
+                    "title": "Portfolio",
+                    "title_bn": "資料夾",
+                    "link": "/contact?pageId=51&pageName=Contact",
+                    "parent_id": 71,
+                    "created_at": null,
+                    "updated_at": null,
+                    "all_children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Top 1st Menu",
+    "menu_item_ids": [
+      5,
+      51,
+      4
+    ],
+    "menu_items": [
+      {
+        "id": 5,
+        "title": "Sign Up",
+        "title_bn": "",
+        "link": "/signup",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 51,
+        "title": "News & Media",
+        "title_bn": "খবর",
+        "link": "/news-and-media",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2024-01-10T20:23:53.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 4,
+        "title": "Support",
+        "title_bn": "",
+        "link": "/support",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Top 2nd Menu",
+    "menu_item_ids": [
+      28,
+      29,
+      26,
+      34,
+      40
+    ],
+    "menu_items": [
+      {
+        "id": 28,
+        "title": "Careers",
+        "title_bn": "",
+        "link": "/careers",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 29,
+        "title": "Events",
+        "title_bn": "",
+        "link": "/events",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 26,
+        "title": "Gallery",
+        "title_bn": "",
+        "link": "/gallery",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 34,
+        "title": "Corporate",
+        "title_bn": "bangle",
+        "link": "/about",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2024-02-27T15:46:56.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 40,
+        "title": "Contact Us",
+        "title_bn": "যোগাযোগ করুন",
+        "link": "/contact",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2025-09-30T18:50:46.000000Z",
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Footer Menu Monika",
+    "menu_item_ids": [
+      74,
+      73,
+      72,
+      71,
+      70
+    ],
+    "menu_items": [
+      {
+        "id": 74,
+        "title": "Portfolio 2",
+        "title_bn": "Portfolio 2",
+        "link": "/portfolio-2?pageId=49&pageName=Portfolio-2",
+        "parent_id": 72,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 73,
+        "title": "Portfolio 1",
+        "title_bn": "Portfolio 1",
+        "link": "/portfolio-1?pageId=48&pageName=Portfolio-1",
+        "parent_id": 72,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 72,
+        "title": "Portfolio",
+        "title_bn": "Portfolio",
+        "link": "/contact?pageId=51&pageName=Contact/portfolio-tasfiq",
+        "parent_id": 76,
+        "created_at": null,
+        "updated_at": "2024-12-04T22:07:00.000000Z",
+        "all_children": [
+          {
+            "id": 73,
+            "title": "Portfolio 1",
+            "title_bn": "Portfolio 1",
+            "link": "/portfolio-1?pageId=48&pageName=Portfolio-1",
+            "parent_id": 72,
+            "created_at": null,
+            "updated_at": null,
+            "all_children": []
+          },
+          {
+            "id": 74,
+            "title": "Portfolio 2",
+            "title_bn": "Portfolio 2",
+            "link": "/portfolio-2?pageId=49&pageName=Portfolio-2",
+            "parent_id": 72,
+            "created_at": null,
+            "updated_at": null,
+            "all_children": []
+          },
+          {
+            "id": 75,
+            "title": "Portfolio Details",
+            "title_bn": "Portfolio Details",
+            "link": "/portfolio-details?pageId=50&pageName=Portfolio-Details",
+            "parent_id": 72,
+            "created_at": null,
+            "updated_at": null,
+            "all_children": []
+          }
+        ]
+      },
+      {
+        "id": 71,
+        "title": "Team Details",
+        "title_bn": "Team Details",
+        "link": "/team-details?pageId=47&pageName=Team-Details",
+        "parent_id": 69,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": [
+          {
+            "id": 77,
+            "title": "Portfolio",
+            "title_bn": "資料夾",
+            "link": "/contact?pageId=51&pageName=Contact",
+            "parent_id": 71,
+            "created_at": null,
+            "updated_at": null,
+            "all_children": []
+          }
+        ]
+      },
+      {
+        "id": 70,
+        "title": "Team",
+        "title_bn": "Team",
+        "link": "/team?pageId=46&pageName=Team",
+        "parent_id": 69,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "HERO",
+    "menu_item_ids": [
+      133,
+      40
+    ],
+    "menu_items": [
+      {
+        "id": 133,
+        "title": "Learn More",
+        "title_bn": "Learn More",
+        "link": "/learn-more?pageId=131&pageName=homepage",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 40,
+        "title": "Contact Us",
+        "title_bn": "যোগাযোগ করুন",
+        "link": "/contact",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2025-09-30T18:50:46.000000Z",
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Quicklinks",
+    "menu_item_ids": [
+      62,
+      40,
+      137
+    ],
+    "menu_items": [
+      {
+        "id": 62,
+        "title": "About Us",
+        "title_bn": "আমাদের সম্পর্কে",
+        "link": "/about",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2025-09-25T22:48:53.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 40,
+        "title": "Contact Us",
+        "title_bn": "যোগাযোগ করুন",
+        "link": "/contact",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2025-09-30T18:50:46.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 137,
+        "title": "Our Services",
+        "title_bn": "আমাদের সেবাসমূহ",
+        "link": "/services",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2025-09-28T20:21:36.000000Z",
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Resources",
+    "menu_item_ids": [
+      134,
+      135
+    ],
+    "menu_items": [
+      {
+        "id": 134,
+        "title": "Success Stories",
+        "title_bn": "সাফল্যের গল্প",
+        "link": "/stories",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2026-04-27T16:57:52.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 135,
+        "title": "Specialists",
+        "title_bn": "বিশেষজ্ঞবৃন্দ",
+        "link": "/specialists",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2025-09-25T20:58:32.000000Z",
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "sajeda 2",
+    "menu_item_ids": [
+      58,
+      62,
+      137,
+      135,
+      134,
+      139,
+      40
+    ],
+    "menu_items": [
+      {
+        "id": 58,
+        "title": "Home",
+        "title_bn": "হোম",
+        "link": "/",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2025-09-25T22:58:56.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 62,
+        "title": "About Us",
+        "title_bn": "আমাদের সম্পর্কে",
+        "link": "/about",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2025-09-25T22:48:53.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 137,
+        "title": "Our Services",
+        "title_bn": "আমাদের সেবাসমূহ",
+        "link": "/services",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2025-09-28T20:21:36.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 135,
+        "title": "Specialists",
+        "title_bn": "বিশেষজ্ঞবৃন্দ",
+        "link": "/specialists",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2025-09-25T20:58:32.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 134,
+        "title": "Success Stories",
+        "title_bn": "সাফল্যের গল্প",
+        "link": "/stories",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2026-04-27T16:57:52.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 40,
+        "title": "Contact Us",
+        "title_bn": "যোগাযোগ করুন",
+        "link": "/contact",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2025-09-30T18:50:46.000000Z",
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "sajida",
+    "menu_item_ids": [
+      140,
+      142,
+      143
+    ],
+    "menu_items": [
+      {
+        "id": 140,
+        "title": "Ambulance",
+        "title_bn": "এ্যাম্বুলেন্স",
+        "link": "/ambulance",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2026-03-12T00:16:53.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 142,
+        "title": "Emergency Call",
+        "title_bn": "জরুরি কল",
+        "link": "/emergency-call",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2025-09-25T21:00:57.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 143,
+        "title": "Appointment",
+        "title_bn": "অ্যাপয়েন্টমেন্ট",
+        "link": "http://182.163.120.3:8886/sfords/r/chms/app/appt-online",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2026-02-25T14:48:12.000000Z",
+        "all_children": []
+      }
+    ]
+  }
+]

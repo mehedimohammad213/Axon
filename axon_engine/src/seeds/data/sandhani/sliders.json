@@ -1,0 +1,3725 @@
+[
+  {
+    "id": 1,
+    "type": "image",
+    "title_en": "Home Slider",
+    "title_bn": "Home Slider",
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [
+      339,
+      340,
+      21,
+      697
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-01-31T14:03:28.000000Z",
+    "updated_at": "2024-10-31T13:46:41.000000Z",
+    "medias": [
+      {
+        "id": 339,
+        "title": "GROUP.jpg",
+        "file_name": "mave_K4oc80.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_K4oc80.jpg",
+        "file_size": 544727,
+        "tags": null,
+        "created_at": "2024-07-31T12:21:33.000000Z",
+        "updated_at": "2024-07-31T12:21:33.000000Z"
+      },
+      {
+        "id": 340,
+        "title": "HEALTH.jpg",
+        "file_name": "mave_s18SYr.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_s18SYr.jpg",
+        "file_size": 587593,
+        "tags": null,
+        "created_at": "2024-07-31T12:24:12.000000Z",
+        "updated_at": "2024-07-31T12:24:12.000000Z"
+      },
+      {
+        "id": 21,
+        "title": null,
+        "file_name": "mave_aygaz_zY8BNs.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_aygaz_zY8BNs.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-01-31T14:00:33.000000Z",
+        "updated_at": "2024-01-31T14:00:33.000000Z"
+      },
+      {
+        "id": 697,
+        "title": "ilife banner for website-06.png",
+        "file_name": "mave_jhC27X.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_jhC27X.png",
+        "file_size": 1875203,
+        "tags": null,
+        "created_at": "2024-10-31T13:44:44.000000Z",
+        "updated_at": "2024-10-31T13:44:44.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 8,
+    "type": "image",
+    "title_en": "Home Popup",
+    "title_bn": "Home Popup",
+    "description_en": "<p>a</p>",
+    "description_bn": "<p>a</p>",
+    "media_ids": [
+      1294
+    ],
+    "card_ids": [],
+    "additional": {
+      "tags": []
+    },
+    "status": 0,
+    "created_at": "2024-03-07T10:21:22.000000Z",
+    "updated_at": "2026-08-10T09:21:14.000000Z",
+    "medias": [
+      {
+        "id": 1294,
+        "title": "Award Pop up update-01.jpg",
+        "file_name": "mave_qQ4LkT.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_qQ4LkT.jpg",
+        "file_size": 980035,
+        "tags": null,
+        "created_at": "2026-01-03T00:34:39.000000Z",
+        "updated_at": "2026-01-03T00:34:39.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 9,
+    "type": "image",
+    "title_en": "Photo gallery slider",
+    "title_bn": "গ্যালারি",
+    "description_en": "<p>ADSF</p>",
+    "description_bn": "<p>ASDF</p>",
+    "media_ids": [
+      72,
+      73,
+      71,
+      65
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-04-18T14:20:27.000000Z",
+    "updated_at": "2024-05-20T14:33:30.000000Z",
+    "medias": [
+      {
+        "id": 73,
+        "title": "Independent Director Sir - Mr. Shaheduzzaman Choudhury, FCA.png",
+        "file_name": "mave_n4Zx1i.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_n4Zx1i.png",
+        "file_size": 153908,
+        "tags": null,
+        "created_at": "2024-05-06T10:49:38.000000Z",
+        "updated_at": "2024-05-06T10:49:38.000000Z"
+      },
+      {
+        "id": 71,
+        "title": "Independent Director Sir - MR. MIR AKTHER HOSSAIN.png",
+        "file_name": "mave_XNlVOO.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_XNlVOO.png",
+        "file_size": 106682,
+        "tags": null,
+        "created_at": "2024-05-06T10:49:21.000000Z",
+        "updated_at": "2024-05-06T10:49:21.000000Z"
+      },
+      {
+        "id": 65,
+        "title": "1673637482597.jpeg",
+        "file_name": "mave_owvIXM.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_owvIXM.jpg",
+        "file_size": 12174,
+        "tags": null,
+        "created_at": "2024-04-24T15:05:04.000000Z",
+        "updated_at": "2024-04-24T15:05:04.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 11,
+    "type": "image",
+    "title_en": "New photo gallery",
+    "title_bn": "New photo gallery",
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [
+      255,
+      21,
+      30,
+      56,
+      62,
+      252,
+      251
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-04-21T13:49:08.000000Z",
+    "updated_at": "2024-06-27T12:25:26.000000Z",
+    "medias": [
+      {
+        "id": 255,
+        "title": "Elegant_Frames_web_2_optimized_2000.png",
+        "file_name": "mave_qULDrS.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_qULDrS.png",
+        "file_size": 1641586,
+        "tags": null,
+        "created_at": "2024-06-27T12:15:13.000000Z",
+        "updated_at": "2024-06-27T12:15:13.000000Z"
+      },
+      {
+        "id": 21,
+        "title": null,
+        "file_name": "mave_aygaz_zY8BNs.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_aygaz_zY8BNs.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-01-31T14:00:33.000000Z",
+        "updated_at": "2024-01-31T14:00:33.000000Z"
+      },
+      {
+        "id": 30,
+        "title": null,
+        "file_name": "mave_aygaz_QoKWly.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_aygaz_QoKWly.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-01-31T14:00:34.000000Z",
+        "updated_at": "2024-01-31T14:00:34.000000Z"
+      },
+      {
+        "id": 56,
+        "title": null,
+        "file_name": "mave_jFkm5k.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_jFkm5k.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-03-07T10:20:56.000000Z",
+        "updated_at": "2024-03-07T10:20:56.000000Z"
+      },
+      {
+        "id": 62,
+        "title": "Streamline your workflow with our app.png",
+        "file_name": "mave_BOGjsE.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_BOGjsE.png",
+        "file_size": 312011,
+        "tags": null,
+        "created_at": "2024-04-03T07:22:04.000000Z",
+        "updated_at": "2024-04-03T07:22:04.000000Z"
+      },
+      {
+        "id": 252,
+        "title": "_MG_0565.JPG",
+        "file_name": "mave_G1E6lW.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_G1E6lW.jpg",
+        "file_size": 1456547,
+        "tags": null,
+        "created_at": "2024-06-05T12:42:43.000000Z",
+        "updated_at": "2024-06-05T12:42:43.000000Z"
+      },
+      {
+        "id": 251,
+        "title": "_MG_9632_11zon.jpg",
+        "file_name": "mave_yGX34t.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_yGX34t.jpg",
+        "file_size": 2063287,
+        "tags": null,
+        "created_at": "2024-06-05T12:23:40.000000Z",
+        "updated_at": "2024-06-05T12:23:40.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 13,
+    "type": "card",
+    "title_en": "Safety First: Handling Gas Appliances",
+    "title_bn": "নিরাপত্তা প্রথম: গ্যাস প্রযুক্তিগত যন্ত্রসমূহ ব্যবহার",
+    "description_en": "<p>Description: Safety First: Handling Gas Appliances</p>",
+    "description_bn": "<p>Description_bn: নিরাপত্তা প্রথম: গ্যাস প্রযুক্তিগত যন্ত্রসমূহ ব্যবহার</p>",
+    "media_ids": [
+      1,
+      2,
+      3
+    ],
+    "card_ids": [
+      2,
+      3,
+      4,
+      11
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-05-09T14:23:12.000000Z",
+    "updated_at": "2024-05-09T16:17:03.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 2,
+        "page_name": null,
+        "media_ids": 41,
+        "title_en": "DPS",
+        "title_bn": null,
+        "description_en": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "description_bn": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-01-31T16:35:49.000000Z",
+        "updated_at": "2024-03-04T17:03:28.000000Z",
+        "media_files": {
+          "id": 41,
+          "title": null,
+          "file_name": "mave_aygaz_qz2pAx.svg",
+          "file_type": "image/svg+xml",
+          "file_path": "media/mave_aygaz_qz2pAx.svg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-03-04T14:00:13.000000Z",
+          "updated_at": "2024-03-04T14:00:13.000000Z"
+        }
+      },
+      {
+        "id": 3,
+        "page_name": null,
+        "media_ids": 2,
+        "title_en": "Child Policy",
+        "title_bn": null,
+        "description_en": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "description_bn": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-01-31T16:39:23.000000Z",
+        "updated_at": "2024-04-03T07:31:00.000000Z",
+        "media_files": null
+      },
+      {
+        "id": 4,
+        "page_name": null,
+        "media_ids": 35,
+        "title_en": "Death Benefit",
+        "title_bn": null,
+        "description_en": "<p>This is updated by kashfee Lorem Ipsum has been the industry's standard dummy</p>",
+        "description_bn": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-01-31T16:40:14.000000Z",
+        "updated_at": "2024-04-02T13:50:30.000000Z",
+        "media_files": {
+          "id": 35,
+          "title": null,
+          "file_name": "mave_aygaz_W22glg.svg",
+          "file_type": "image/svg+xml",
+          "file_path": "media/mave_aygaz_W22glg.svg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-03-04T14:00:13.000000Z",
+          "updated_at": "2024-03-04T14:00:13.000000Z"
+        }
+      },
+      {
+        "id": 11,
+        "page_name": null,
+        "media_ids": 42,
+        "title_en": "Asset Assurance",
+        "title_bn": null,
+        "description_en": "<p>This card is updated by kashfee fire damage, water damage, natural disasters, and accidents. If an asset has insurance protection, then it is said to be an “insured asset.” Without insurance coverage, an asset that is damaged or destroyed can represent a substantial financial loss for a person.</p>",
+        "description_bn": "<p>Assets that people commonly purchase insurance for include cars, houses, businesses, computers, jewelry, and many others. Many homeowner’s policies will offer coverage for other assets in the house in addition to covering the house itself. Perils that assets may be covered against include theft, fire damage, water damage, natural disasters, and accidents. If an asset has insurance protection, then it is said to be an “insured asset.” Without insurance coverage, an asset that is damaged or destroyed can represent a substantial financial loss for a person.</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-19T10:47:27.000000Z",
+        "updated_at": "2024-04-02T13:40:59.000000Z",
+        "media_files": {
+          "id": 42,
+          "title": null,
+          "file_name": "mave_aygaz_Bs3UIb.svg",
+          "file_type": "image/svg+xml",
+          "file_path": "media/mave_aygaz_Bs3UIb.svg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-03-04T17:05:42.000000Z",
+          "updated_at": "2024-03-04T17:05:42.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "type": "image",
+    "title_en": "Mave new Slider",
+    "title_bn": "Mave new Slider Bangla",
+    "description_en": "<pre class=\"ql-syntax\" spellcheck=\"false\">&lt;meta property=\"og:image\" content=\"http://siim.lepisk.com/wp-content/uploads/2011/01/siim-blog-fb.png\" /&gt;\n</pre>",
+    "description_bn": "<pre class=\"ql-syntax\" spellcheck=\"false\">&lt;meta property=\"og:image\" content=\"http://siim.lepisk.com/wp-content/uploads/2011/01/siim-blog-fb.png\" /&gt;\n</pre><p><br></p><p>srftgrsd</p>",
+    "media_ids": [
+      109,
+      108,
+      107,
+      106
+    ],
+    "card_ids": [
+      2,
+      3
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-05-09T16:16:40.000000Z",
+    "updated_at": "2024-05-09T16:45:54.000000Z",
+    "medias": [
+      {
+        "id": 109,
+        "title": "Screenshot 2024-05-09 121737.png",
+        "file_name": "mave_ZU4P7C.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_ZU4P7C.png",
+        "file_size": 693485,
+        "tags": null,
+        "created_at": "2024-05-09T10:18:12.000000Z",
+        "updated_at": "2024-05-09T10:18:12.000000Z"
+      },
+      {
+        "id": 108,
+        "title": "Screenshot 2024-05-09 121336.png",
+        "file_name": "mave_6m5h15.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_6m5h15.png",
+        "file_size": 563627,
+        "tags": null,
+        "created_at": "2024-05-09T10:14:14.000000Z",
+        "updated_at": "2024-05-09T10:14:14.000000Z"
+      },
+      {
+        "id": 107,
+        "title": "Screenshot 2024-05-09 120840.png",
+        "file_name": "mave_4cpANV.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_4cpANV.png",
+        "file_size": 411499,
+        "tags": null,
+        "created_at": "2024-05-09T10:09:21.000000Z",
+        "updated_at": "2024-05-09T10:09:21.000000Z"
+      },
+      {
+        "id": 106,
+        "title": "Screenshot 2024-05-09 120452.png",
+        "file_name": "mave_JE8JdZ.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_JE8JdZ.png",
+        "file_size": 531220,
+        "tags": null,
+        "created_at": "2024-05-09T10:05:47.000000Z",
+        "updated_at": "2024-05-09T10:05:47.000000Z"
+      }
+    ],
+    "cards": [
+      {
+        "id": 2,
+        "page_name": null,
+        "media_ids": 41,
+        "title_en": "DPS",
+        "title_bn": null,
+        "description_en": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "description_bn": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-01-31T16:35:49.000000Z",
+        "updated_at": "2024-03-04T17:03:28.000000Z",
+        "media_files": {
+          "id": 41,
+          "title": null,
+          "file_name": "mave_aygaz_qz2pAx.svg",
+          "file_type": "image/svg+xml",
+          "file_path": "media/mave_aygaz_qz2pAx.svg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-03-04T14:00:13.000000Z",
+          "updated_at": "2024-03-04T14:00:13.000000Z"
+        }
+      },
+      {
+        "id": 3,
+        "page_name": null,
+        "media_ids": 2,
+        "title_en": "Child Policy",
+        "title_bn": null,
+        "description_en": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "description_bn": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-01-31T16:39:23.000000Z",
+        "updated_at": "2024-04-03T07:31:00.000000Z",
+        "media_files": null
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "type": "card",
+    "title_en": "Card for product section",
+    "title_bn": "প্রডাক্ট এর কার্ড",
+    "description_en": "<p>some description\t</p>",
+    "description_bn": "<p>some description</p>",
+    "media_ids": [],
+    "card_ids": [
+      2,
+      3,
+      4,
+      11
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-05-12T09:10:16.000000Z",
+    "updated_at": "2024-05-12T09:10:16.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 2,
+        "page_name": null,
+        "media_ids": 41,
+        "title_en": "DPS",
+        "title_bn": null,
+        "description_en": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "description_bn": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-01-31T16:35:49.000000Z",
+        "updated_at": "2024-03-04T17:03:28.000000Z",
+        "media_files": {
+          "id": 41,
+          "title": null,
+          "file_name": "mave_aygaz_qz2pAx.svg",
+          "file_type": "image/svg+xml",
+          "file_path": "media/mave_aygaz_qz2pAx.svg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-03-04T14:00:13.000000Z",
+          "updated_at": "2024-03-04T14:00:13.000000Z"
+        }
+      },
+      {
+        "id": 3,
+        "page_name": null,
+        "media_ids": 2,
+        "title_en": "Child Policy",
+        "title_bn": null,
+        "description_en": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "description_bn": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-01-31T16:39:23.000000Z",
+        "updated_at": "2024-04-03T07:31:00.000000Z",
+        "media_files": null
+      },
+      {
+        "id": 4,
+        "page_name": null,
+        "media_ids": 35,
+        "title_en": "Death Benefit",
+        "title_bn": null,
+        "description_en": "<p>This is updated by kashfee Lorem Ipsum has been the industry's standard dummy</p>",
+        "description_bn": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-01-31T16:40:14.000000Z",
+        "updated_at": "2024-04-02T13:50:30.000000Z",
+        "media_files": {
+          "id": 35,
+          "title": null,
+          "file_name": "mave_aygaz_W22glg.svg",
+          "file_type": "image/svg+xml",
+          "file_path": "media/mave_aygaz_W22glg.svg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-03-04T14:00:13.000000Z",
+          "updated_at": "2024-03-04T14:00:13.000000Z"
+        }
+      },
+      {
+        "id": 11,
+        "page_name": null,
+        "media_ids": 42,
+        "title_en": "Asset Assurance",
+        "title_bn": null,
+        "description_en": "<p>This card is updated by kashfee fire damage, water damage, natural disasters, and accidents. If an asset has insurance protection, then it is said to be an “insured asset.” Without insurance coverage, an asset that is damaged or destroyed can represent a substantial financial loss for a person.</p>",
+        "description_bn": "<p>Assets that people commonly purchase insurance for include cars, houses, businesses, computers, jewelry, and many others. Many homeowner’s policies will offer coverage for other assets in the house in addition to covering the house itself. Perils that assets may be covered against include theft, fire damage, water damage, natural disasters, and accidents. If an asset has insurance protection, then it is said to be an “insured asset.” Without insurance coverage, an asset that is damaged or destroyed can represent a substantial financial loss for a person.</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-19T10:47:27.000000Z",
+        "updated_at": "2024-04-02T13:40:59.000000Z",
+        "media_files": {
+          "id": 42,
+          "title": null,
+          "file_name": "mave_aygaz_Bs3UIb.svg",
+          "file_type": "image/svg+xml",
+          "file_path": "media/mave_aygaz_Bs3UIb.svg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-03-04T17:05:42.000000Z",
+          "updated_at": "2024-03-04T17:05:42.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "type": "card",
+    "title_en": "new card slider",
+    "title_bn": "নতুন কার্ড স্লাইডার",
+    "description_en": "<p>some des</p>",
+    "description_bn": "<p>কিছু বর্ণনা</p>",
+    "media_ids": [],
+    "card_ids": [
+      34,
+      35,
+      36,
+      37
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-05-12T09:12:20.000000Z",
+    "updated_at": "2024-05-12T09:12:20.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 34,
+        "page_name": "Board of Directors",
+        "media_ids": 470,
+        "title_en": "Independent Director",
+        "title_bn": "স্বতন্ত্র পরিচালক",
+        "description_en": "<p><strong>Professor Moulana Md. Mansurul Haq</strong></p><p><span style=\"color: rgb(37, 37, 37);\">Professor Haq is an Independent Director of Sandhani Life Insurance Co. Ltd. He was born in 1958. He obtains his B.A (Hons) &amp; M.A from Dhaka University and Kamil (Double) from Madrasah Board. He is Professor in Islamic Studies Salimullah Degree College, Wari, Dhaka. He also the Tafsir Caster of BTV, Bangladesh Betar, Baitul Mukarram National Mosque and Imam &amp; Khatib of Baridhara Jame Mosque, Dhaka.</span></p>",
+        "description_bn": "<p><span style=\"color: rgb(37, 37, 37);\">Professor Haq is an Independent Director of Sandhani Life Insurance Co. Ltd. He was born in 1958. He obtains his B.A (Hons) &amp; M.A from Dhaka University and Kamil (Double) from Madrasah Board. He is Professor in Islamic Studies Salimullah Degree College, Wari, Dhaka. He also the Tafsir Caster of BTV, Bangladesh Betar, Baitul Mukarram National Mosque and Imam &amp; Khatib of Baridhara Jame Mosque, Dhaka.</span></p>",
+        "link_url": "https://drive.google.com/file/d/1f3n75bOOMUQo61RHSRetRVJXhzK2ZqGc/view?usp=sharing",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-05-06T12:52:09.000000Z",
+        "updated_at": "2025-03-16T07:28:01.000000Z",
+        "media_files": {
+          "id": 470,
+          "title": "Mansurul Haq.png",
+          "file_name": "mave_4wDUFl.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_4wDUFl.png",
+          "file_size": 444665,
+          "tags": null,
+          "created_at": "2024-09-10T10:22:48.000000Z",
+          "updated_at": "2024-09-10T10:22:48.000000Z"
+        }
+      },
+      {
+        "id": 35,
+        "page_name": null,
+        "media_ids": 289,
+        "title_en": "Chairman",
+        "title_bn": null,
+        "description_en": "<p><strong>Mr. Mojibul Islam</strong></p><p class=\"ql-align-justify\">Joy Industries Ltd. Represented by&nbsp;<strong>Mr. Mojibul Islam</strong>,&nbsp;<strong>Chairman</strong>&nbsp;of Sandhani Life Insurance Co. Ltd., He is a young entrepreneur. He was born in 1974 at Dhaka in an aristocratic Muslim family. He completed MBA from London. He is also Chairman of Purabi General Insurance Co. Ltd., Vice-Chairman, Samorita Hospital Ltd., Managing Director, Mona Garments Industries Ltd., Panna Textile Mills Ltd., Panna Spinning Mills Ltd., Amico Laboratories Ltd., MH Samorita Medical College &amp; Hospital,&nbsp;Director, Mona Financial Consultancy &amp; Securities Ltd., Member Board of Trustees, City University, and Bangaldesh Iron &amp; Steel Merchant Association.</p>",
+        "description_bn": null,
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-05-06T13:06:52.000000Z",
+        "updated_at": "2024-07-09T10:48:37.000000Z",
+        "media_files": {
+          "id": 289,
+          "title": "Chairman Sir.jpg",
+          "file_name": "mave_WDr0r1.jpg",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_WDr0r1.jpg",
+          "file_size": 554497,
+          "tags": null,
+          "created_at": "2024-07-09T10:34:22.000000Z",
+          "updated_at": "2024-07-09T10:34:22.000000Z"
+        }
+      },
+      {
+        "id": 36,
+        "page_name": null,
+        "media_ids": 106,
+        "title_en": "Vice Chairman",
+        "title_bn": null,
+        "description_en": "<p class=\"ql-align-justify\"><strong style=\"color: rgb(37, 37, 37);\">Mrs. Golam Fatima Tahera Khanam</strong></p><p class=\"ql-align-justify\"><span style=\"color: rgb(37, 37, 37);\">Mona Garments Ltd. Represented by&nbsp;</span><strong>Mrs. Golam Fatima Tahera Khanam</strong>&nbsp;is&nbsp;<strong>Vice-Chairman</strong>&nbsp;of Sandhani Life Insurance Co. Ltd. She is an experienced entrepreneur about 40 years of Business Experian’s is various business sectors. She was born in 1951 at Tangail in a prominent Muslim family. She completed B.A, LL.B. from Dhaka University. She is Founder &amp; Chairman Alhaj Mockbul Hossain University College, MH Samorita Nursing College, Amico Laboratories Ltd, Panna Textile Mills Ltd., Panna Spinning Mills, Vice-Chairman Mona Group of Industries, Purabi General Insurance Co. Ltd, City University, MH Samorita Medical College &amp; Hospital, MH Samorita Dental College, Director, Samorita Hospital Ltd. Also, Member of various business and social organization. Member, FBCCI, BGMEA, Red Crescent Society and Bangladesh Blind Welfare Association.</p>",
+        "description_bn": null,
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-05-06T13:13:48.000000Z",
+        "updated_at": "2024-07-09T10:47:56.000000Z",
+        "media_files": {
+          "id": 106,
+          "title": "Screenshot 2024-05-09 120452.png",
+          "file_name": "mave_JE8JdZ.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_JE8JdZ.png",
+          "file_size": 531220,
+          "tags": null,
+          "created_at": "2024-05-09T10:05:47.000000Z",
+          "updated_at": "2024-05-09T10:05:47.000000Z"
+        }
+      },
+      {
+        "id": 37,
+        "page_name": null,
+        "media_ids": 299,
+        "title_en": "Director",
+        "title_bn": null,
+        "description_en": "<p><strong style=\"color: rgb(37, 37, 37);\">Mr. Shafaf Rahman Shad</strong><span style=\"color: rgb(37, 37, 37);\">&nbsp;</span></p><p class=\"ql-align-justify\"><span style=\"color: rgb(37, 37, 37);\">Amico Laboratories Ltd. Represented by&nbsp;</span><strong>Mr. Shafaf Rahman Shad</strong>&nbsp;is&nbsp;<strong>Director</strong>&nbsp;of Sandhani Life Insurance Co. Ltd. He is a young entrepreneur. He was born in 1996 at Dhaka in an aristocrat Muslim family. He completed BA (Hons) from University of Wales, London. He is Member Board of Trustees City University.</p>",
+        "description_bn": null,
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-05-06T13:28:25.000000Z",
+        "updated_at": "2024-07-30T10:40:14.000000Z",
+        "media_files": {
+          "id": 299,
+          "title": "shafaf sir new.png",
+          "file_name": "mave_5FKLFw.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_5FKLFw.png",
+          "file_size": 474048,
+          "tags": null,
+          "created_at": "2024-07-30T10:38:40.000000Z",
+          "updated_at": "2024-07-30T10:38:40.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "type": "card",
+    "title_en": "asdfa",
+    "title_bn": "asdfa",
+    "description_en": "<p>asdfa s sdfs  asdf</p>",
+    "description_bn": "<p> sdf  asdfas  sdfsf</p>",
+    "media_ids": [],
+    "card_ids": [
+      2,
+      3,
+      4,
+      11,
+      13,
+      14,
+      15
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-05-13T09:53:01.000000Z",
+    "updated_at": "2024-05-13T09:53:01.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 2,
+        "page_name": null,
+        "media_ids": 41,
+        "title_en": "DPS",
+        "title_bn": null,
+        "description_en": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "description_bn": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-01-31T16:35:49.000000Z",
+        "updated_at": "2024-03-04T17:03:28.000000Z",
+        "media_files": {
+          "id": 41,
+          "title": null,
+          "file_name": "mave_aygaz_qz2pAx.svg",
+          "file_type": "image/svg+xml",
+          "file_path": "media/mave_aygaz_qz2pAx.svg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-03-04T14:00:13.000000Z",
+          "updated_at": "2024-03-04T14:00:13.000000Z"
+        }
+      },
+      {
+        "id": 3,
+        "page_name": null,
+        "media_ids": 2,
+        "title_en": "Child Policy",
+        "title_bn": null,
+        "description_en": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "description_bn": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-01-31T16:39:23.000000Z",
+        "updated_at": "2024-04-03T07:31:00.000000Z",
+        "media_files": null
+      },
+      {
+        "id": 4,
+        "page_name": null,
+        "media_ids": 35,
+        "title_en": "Death Benefit",
+        "title_bn": null,
+        "description_en": "<p>This is updated by kashfee Lorem Ipsum has been the industry's standard dummy</p>",
+        "description_bn": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-01-31T16:40:14.000000Z",
+        "updated_at": "2024-04-02T13:50:30.000000Z",
+        "media_files": {
+          "id": 35,
+          "title": null,
+          "file_name": "mave_aygaz_W22glg.svg",
+          "file_type": "image/svg+xml",
+          "file_path": "media/mave_aygaz_W22glg.svg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-03-04T14:00:13.000000Z",
+          "updated_at": "2024-03-04T14:00:13.000000Z"
+        }
+      },
+      {
+        "id": 11,
+        "page_name": null,
+        "media_ids": 42,
+        "title_en": "Asset Assurance",
+        "title_bn": null,
+        "description_en": "<p>This card is updated by kashfee fire damage, water damage, natural disasters, and accidents. If an asset has insurance protection, then it is said to be an “insured asset.” Without insurance coverage, an asset that is damaged or destroyed can represent a substantial financial loss for a person.</p>",
+        "description_bn": "<p>Assets that people commonly purchase insurance for include cars, houses, businesses, computers, jewelry, and many others. Many homeowner’s policies will offer coverage for other assets in the house in addition to covering the house itself. Perils that assets may be covered against include theft, fire damage, water damage, natural disasters, and accidents. If an asset has insurance protection, then it is said to be an “insured asset.” Without insurance coverage, an asset that is damaged or destroyed can represent a substantial financial loss for a person.</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-19T10:47:27.000000Z",
+        "updated_at": "2024-04-02T13:40:59.000000Z",
+        "media_files": {
+          "id": 42,
+          "title": null,
+          "file_name": "mave_aygaz_Bs3UIb.svg",
+          "file_type": "image/svg+xml",
+          "file_path": "media/mave_aygaz_Bs3UIb.svg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-03-04T17:05:42.000000Z",
+          "updated_at": "2024-03-04T17:05:42.000000Z"
+        }
+      },
+      {
+        "id": 13,
+        "page_name": "Home",
+        "media_ids": 39,
+        "title_en": "Mrs. Golam Fatima Tahera Khanam",
+        "title_bn": "Vice-Chairman",
+        "description_en": "<p>Mona Garments Ltd. Represented by Mrs. Golam Fatima Tahera Khanam is Vice-Chairman of Sandhani Life Insurance Co. Ltd. She is an experienced entrepreneur about 40 years of Business Experian’s is various business sectors. She was born in 1951 at Tangail in a prominent Muslim family. She completed B.A, LL.B. from Dhaka University. She is Founder &amp; Chairman Alhaj Mockbul Hossain University College, MH Samorita Nursing College, Amico Laboratories Ltd, Panna Textile Mills Ltd., Panna Spinning Mills, Vice-Chairman Mona Group of Industries, Purabi General Insurance Co. Ltd, City University, MH Samorita Medical College &amp; Hospital, MH Samorita Dental College, Director, Samorita Hospital Ltd. Also, Member of various business and social organization. Member, FBCCI, BGMEA, Red Crescent Society and Bangladesh Blind Welfare Association.</p>",
+        "description_bn": "<p>মোনা গার্মেন্টস লিমিটেডের প্রতিনিধিত্ব করছেন মিসেস গোলাম ফাতিমা তাহেরা খানম, সন্ধ্যানি লাইফ ইন্স্যুরেন্স কোং লিমিটেডের ভাইস-চেয়ারম্যান। তিনি একজন অভিজ্ঞ উদ্যোক্তা প্রায় 40 বছরের ব্যবসায়িক অভিজ্ঞতার বিভিন্ন ব্যবসায়িক খাতে। তিনি 1951 সালে টাঙ্গাইলে একটি বিশিষ্ট মুসলিম পরিবারে জন্মগ্রহণ করেন। তিনি বিএ, এলএলবি সম্পন্ন করেছেন। ঢাকা বিশ্ববিদ্যালয় থেকে। তিনি প্রতিষ্ঠাতা ও চেয়ারম্যান আলহাজ্ব মকবুল হোসেন বিশ্ববিদ্যালয় কলেজ, এমএইচ সমরিতা নার্সিং কলেজ, অ্যামিকো ল্যাবরেটরিজ লিমিটেড, পান্না টেক্সটাইল মিলস লিমিটেড, পান্না স্পিনিং মিলস, ভাইস-চেয়ারম্যান মোনা গ্রুপ অফ ইন্ডাস্ট্রিজ, পূরবী জেনারেল ইন্স্যুরেন্স কোং লিমিটেড, সিটি ইউনিভার্সিটি, এমএইচ সমরিতা। মেডিকেল কলেজ ও হাসপাতাল, এমএইচ সমরিতা ডেন্টাল কলেজ, পরিচালক, সমরিতা হাসপাতাল লিমিটেড, এছাড়াও বিভিন্ন ব্যবসায়িক ও সামাজিক সংগঠনের সদস্য। সদস্য, এফবিসিসিআই, বিজিএমইএ, রেড ক্রিসেন্ট সোসাইটি এবং বাংলাদেশ অন্ধ কল্যাণ সমিতি।</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-03-04T14:02:56.000000Z",
+        "updated_at": "2024-03-04T14:02:56.000000Z",
+        "media_files": null
+      },
+      {
+        "id": 14,
+        "page_name": "Home",
+        "media_ids": 33,
+        "title_en": "Mr. Shafaf Rahman Shad",
+        "title_bn": "Director",
+        "description_en": "<p>Amico Laboratories Ltd. Represented by Mr. Shafaf Rahman Shad is Director of Sandhani Life Insurance Co. Ltd. He is a young entrepreneur. He was born in 1996 at Dhaka in an aristocrat Muslim family. He completed BA (Hons) from University of Wales, London. He is Member Board of Trustees City University.</p>",
+        "description_bn": "<p>Amico Laboratories Ltd. প্রতিনিধিত্ব করেছেন জনাব শফাফ রহমান শাদ, সন্ধ্যানি লাইফ ইন্স্যুরেন্স কোম্পানি লিমিটেডের পরিচালক। তিনি একজন তরুণ উদ্যোক্তা। তিনি ১৯৯৬ সালে ঢাকায় এক সম্ভ্রান্ত মুসলিম পরিবারে জন্মগ্রহণ করেন। তিনি ইউনিভার্সিটি অফ ওয়েলস, লন্ডন থেকে বিএ (অনার্স) সম্পন্ন করেন। তিনি সিটি ইউনিভার্সিটির ট্রাস্টি বোর্ডের সদস্য।</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-03-04T14:04:01.000000Z",
+        "updated_at": "2024-03-04T14:04:01.000000Z",
+        "media_files": null
+      },
+      {
+        "id": 15,
+        "page_name": "Home",
+        "media_ids": 38,
+        "title_en": "Home Loan Insurance Scheme",
+        "title_bn": "Home Loan Insurance Scheme",
+        "description_en": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing</p><p>elit, sed do eiusmod tempor incididunt ut labore et</p><p>dolore magna aliqua. Quis ipsum suspendisse ultrices</p><p>gravida.</p>",
+        "description_bn": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing</p><p>elit, sed do eiusmod tempor incididunt ut labore et</p><p>dolore magna aliqua. Quis ipsum suspendisse ultrices</p><p>gravida.</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-03-04T16:20:47.000000Z",
+        "updated_at": "2024-03-04T16:20:47.000000Z",
+        "media_files": {
+          "id": 38,
+          "title": null,
+          "file_name": "mave_aygaz_yxRFLc.svg",
+          "file_type": "image/svg+xml",
+          "file_path": "media/mave_aygaz_yxRFLc.svg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-03-04T14:00:13.000000Z",
+          "updated_at": "2024-03-04T14:00:13.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "type": "card",
+    "title_en": "Example Product Cards",
+    "title_bn": "Example Product Cards",
+    "description_en": "<p>xyz</p>",
+    "description_bn": "<p>xyz</p>",
+    "media_ids": [],
+    "card_ids": [
+      23,
+      24,
+      25,
+      26,
+      27
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-05-16T14:23:49.000000Z",
+    "updated_at": "2024-05-16T14:23:49.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 23,
+        "page_name": "Product",
+        "media_ids": 50,
+        "title_en": "Vehicle Loan Scheme",
+        "title_bn": "Vehicle Loan Scheme",
+        "description_en": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Augue eget arcu dictum varius duis at consectetur lorem donec. Est ante in nibh mauris cursus mattis.</p>",
+        "description_bn": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius quam quisque id diam. Sed egestas egestas fringilla phasellus faucibus scelerisque eleifend donec pretium. Augue eget arcu dictum varius duis at consectetur lorem donec. Est ante in nibh mauris cursus mattis.</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-03-05T09:23:34.000000Z",
+        "updated_at": "2024-03-05T09:23:34.000000Z",
+        "media_files": {
+          "id": 50,
+          "title": null,
+          "file_name": "mave_aygaz_l0eUxx.svg",
+          "file_type": "image/svg+xml",
+          "file_path": "media/mave_aygaz_l0eUxx.svg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-03-05T09:19:33.000000Z",
+          "updated_at": "2024-03-05T09:19:33.000000Z"
+        }
+      },
+      {
+        "id": 24,
+        "page_name": null,
+        "media_ids": 26,
+        "title_en": "Khulna Branch",
+        "title_bn": "Khulna Branch",
+        "description_en": "<p><strong>MILTON TOWER (5</strong><sup><strong>th</strong></sup><strong> Floor)</strong></p><p><strong>Bania Khamar, Khulna Sadar,</strong></p><p><strong>Khulna - 9000.</strong></p><p><strong>Contact : +8801817031086</strong></p>",
+        "description_bn": "<p>SANDHANI LIFE TOWER, RAJUK PLOT NO-34,</p><p>BANGLA MOTOR, DHAKA- 1000.</p><p>Phone: +8801833-3256412</p><p>Email:slic@sandhanilife.com</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-03-05T15:10:42.000000Z",
+        "updated_at": "2024-09-26T13:47:23.000000Z",
+        "media_files": {
+          "id": 26,
+          "title": null,
+          "file_name": "mave_aygaz_juCGmv.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_aygaz_juCGmv.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-01-31T14:00:34.000000Z",
+          "updated_at": "2024-01-31T14:00:34.000000Z"
+        }
+      },
+      {
+        "id": 25,
+        "page_name": null,
+        "media_ids": 26,
+        "title_en": "Dhaka Branch",
+        "title_bn": "Dhaka Branch",
+        "description_en": "<p><strong>SANDHANI LIFE TOWER</strong></p><p><strong>Rajuk Plot No-34,</strong></p><p><strong>Bangla Motor, Dhaka-1000.</strong></p><p><strong>Contact : +8801833-3256412</strong></p><p><strong>Email:slic@sandhanilife.com</strong></p>",
+        "description_bn": "<p>SANDHANI LIFE TOWER, RAJUK PLOT NO-34,</p><p>BANGLA MOTOR, DHAKA- 1000.</p><p>Phone: +8801833-3256412</p><p>Email:slic@sandhanilife.com</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-03-05T15:12:18.000000Z",
+        "updated_at": "2024-09-26T13:50:58.000000Z",
+        "media_files": {
+          "id": 26,
+          "title": null,
+          "file_name": "mave_aygaz_juCGmv.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_aygaz_juCGmv.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-01-31T14:00:34.000000Z",
+          "updated_at": "2024-01-31T14:00:34.000000Z"
+        }
+      },
+      {
+        "id": 26,
+        "page_name": null,
+        "media_ids": 26,
+        "title_en": "Bogura Branch",
+        "title_bn": "Rajshahi Branch",
+        "description_en": "<p><strong>HAFIJ BHABAN KABIR MARKET (4</strong><sup><strong>th</strong></sup><strong> Floor)</strong></p><p><strong>Tin Potti, Boro Gola,</strong></p><p><strong>Bogra Sadar, Bogra.</strong></p><p><strong>Contact : +8801817030865</strong></p>",
+        "description_bn": "<p>SANDHANI LIFE TOWER, RAJUK PLOT NO-34,</p><p>BANGLA MOTOR, DHAKA- 1000.</p><p>Phone: +8801833-3256412</p><p>Email:slic@sandhanilife.com</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-03-05T15:13:19.000000Z",
+        "updated_at": "2024-09-29T09:42:42.000000Z",
+        "media_files": {
+          "id": 26,
+          "title": null,
+          "file_name": "mave_aygaz_juCGmv.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_aygaz_juCGmv.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-01-31T14:00:34.000000Z",
+          "updated_at": "2024-01-31T14:00:34.000000Z"
+        }
+      },
+      {
+        "id": 27,
+        "page_name": null,
+        "media_ids": 26,
+        "title_en": "Barishal Branch",
+        "title_bn": "Barishal Branch",
+        "description_en": "<p><strong>SAHERA VILA (2</strong><sup><strong>nd</strong></sup><strong> Floor)</strong></p><p><strong>Fakir Bari Road,</strong></p><p><strong>Barishal Sadar, Barishal.</strong></p><p><strong>Contact : +8801817031089</strong></p>",
+        "description_bn": "<p>SANDHANI LIFE TOWER, RAJUK PLOT NO-34,</p><p>BANGLA MOTOR, DHAKA- 1000.</p><p>Phone: +8801833-3256412</p><p>Email:slic@sandhanilife.com</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-03-05T15:15:17.000000Z",
+        "updated_at": "2024-09-26T14:29:24.000000Z",
+        "media_files": {
+          "id": 26,
+          "title": null,
+          "file_name": "mave_aygaz_juCGmv.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_aygaz_juCGmv.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-01-31T14:00:34.000000Z",
+          "updated_at": "2024-01-31T14:00:34.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "type": "card",
+    "title_en": "AKOK BIMA PRODUCT SLIDER 1",
+    "title_bn": "AKOK BIMA PRODUCT SLIDER 1",
+    "description_en": "<p>xyz</p>",
+    "description_bn": "<p>xyz</p>",
+    "media_ids": [],
+    "card_ids": [
+      4,
+      11,
+      3,
+      2
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-05-19T09:29:57.000000Z",
+    "updated_at": "2024-05-19T09:29:57.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 4,
+        "page_name": null,
+        "media_ids": 35,
+        "title_en": "Death Benefit",
+        "title_bn": null,
+        "description_en": "<p>This is updated by kashfee Lorem Ipsum has been the industry's standard dummy</p>",
+        "description_bn": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-01-31T16:40:14.000000Z",
+        "updated_at": "2024-04-02T13:50:30.000000Z",
+        "media_files": {
+          "id": 35,
+          "title": null,
+          "file_name": "mave_aygaz_W22glg.svg",
+          "file_type": "image/svg+xml",
+          "file_path": "media/mave_aygaz_W22glg.svg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-03-04T14:00:13.000000Z",
+          "updated_at": "2024-03-04T14:00:13.000000Z"
+        }
+      },
+      {
+        "id": 11,
+        "page_name": null,
+        "media_ids": 42,
+        "title_en": "Asset Assurance",
+        "title_bn": null,
+        "description_en": "<p>This card is updated by kashfee fire damage, water damage, natural disasters, and accidents. If an asset has insurance protection, then it is said to be an “insured asset.” Without insurance coverage, an asset that is damaged or destroyed can represent a substantial financial loss for a person.</p>",
+        "description_bn": "<p>Assets that people commonly purchase insurance for include cars, houses, businesses, computers, jewelry, and many others. Many homeowner’s policies will offer coverage for other assets in the house in addition to covering the house itself. Perils that assets may be covered against include theft, fire damage, water damage, natural disasters, and accidents. If an asset has insurance protection, then it is said to be an “insured asset.” Without insurance coverage, an asset that is damaged or destroyed can represent a substantial financial loss for a person.</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-19T10:47:27.000000Z",
+        "updated_at": "2024-04-02T13:40:59.000000Z",
+        "media_files": {
+          "id": 42,
+          "title": null,
+          "file_name": "mave_aygaz_Bs3UIb.svg",
+          "file_type": "image/svg+xml",
+          "file_path": "media/mave_aygaz_Bs3UIb.svg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-03-04T17:05:42.000000Z",
+          "updated_at": "2024-03-04T17:05:42.000000Z"
+        }
+      },
+      {
+        "id": 3,
+        "page_name": null,
+        "media_ids": 2,
+        "title_en": "Child Policy",
+        "title_bn": null,
+        "description_en": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "description_bn": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-01-31T16:39:23.000000Z",
+        "updated_at": "2024-04-03T07:31:00.000000Z",
+        "media_files": null
+      },
+      {
+        "id": 2,
+        "page_name": null,
+        "media_ids": 41,
+        "title_en": "DPS",
+        "title_bn": null,
+        "description_en": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "description_bn": "<p>Lorem Ipsum is simply dummy text of the printingand typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>",
+        "link_url": null,
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-01-31T16:35:49.000000Z",
+        "updated_at": "2024-03-04T17:03:28.000000Z",
+        "media_files": {
+          "id": 41,
+          "title": null,
+          "file_name": "mave_aygaz_qz2pAx.svg",
+          "file_type": "image/svg+xml",
+          "file_path": "media/mave_aygaz_qz2pAx.svg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-03-04T14:00:13.000000Z",
+          "updated_at": "2024-03-04T14:00:13.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "type": "card",
+    "title_en": "Anticipated Endowment Insurance – Three Payment With Profit (Plan-03)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      69
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-05-19T13:30:51.000000Z",
+    "updated_at": "2024-10-14T12:38:20.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 69,
+        "page_name": "AKOK Bima",
+        "media_ids": 145,
+        "title_en": "Anticipated Endowment Insurance – Three Payment (With Profit) (Plan-03)",
+        "title_bn": "Anticipated Endowment Insurance – Three Payment (With Profit) (Plan-03)",
+        "description_en": "<p><br></p>",
+        "description_bn": "<p><br></p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_vUYY2l.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-05-19T13:29:45.000000Z",
+        "updated_at": "2025-03-16T08:15:08.000000Z",
+        "media_files": {
+          "id": 145,
+          "title": "Plan-03.png",
+          "file_name": "mave_NUmnDy.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_NUmnDy.png",
+          "file_size": 201075,
+          "tags": null,
+          "created_at": "2024-05-21T12:16:20.000000Z",
+          "updated_at": "2024-05-21T12:17:15.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "type": "card",
+    "title_en": "Anticipated Endowment Insurance – Four Payment With Profit (Plan-05)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      188
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-05-19T13:35:25.000000Z",
+    "updated_at": "2024-10-30T15:08:39.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 188,
+        "page_name": "AKOK Bima",
+        "media_ids": 146,
+        "title_en": "Anticipated Endowment Insurance - Four Payment With Profits (Plan-05)",
+        "title_bn": "Anticipated Endowment Insurance - Four Payment With Profits (Plan-05)",
+        "description_en": "<p><br></p>",
+        "description_bn": "<p><br></p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_Dq6UY4.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-10-30T15:05:32.000000Z",
+        "updated_at": "2025-03-16T08:16:44.000000Z",
+        "media_files": {
+          "id": 146,
+          "title": "Plan-05.png",
+          "file_name": "mave_gTjCQL.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_gTjCQL.png",
+          "file_size": 214805,
+          "tags": null,
+          "created_at": "2024-05-21T12:20:12.000000Z",
+          "updated_at": "2024-05-21T12:24:13.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "type": "card",
+    "title_en": "Joint Life Endowment Insurance With Profit (Plan-02)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      74
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-05-28T14:04:58.000000Z",
+    "updated_at": "2024-10-14T12:37:11.000000Z",
+    "medias": [],
+    "cards": []
+  },
+  {
+    "id": 29,
+    "type": "image",
+    "title_en": "Our Journey",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [
+      535,
+      572,
+      562,
+      567,
+      571,
+      569,
+      570,
+      576,
+      574,
+      573,
+      251,
+      575
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-05-30T10:07:03.000000Z",
+    "updated_at": "2024-09-30T13:10:36.000000Z",
+    "medias": [
+      {
+        "id": 535,
+        "title": "award.jpg",
+        "file_name": "mave_Iboii5.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_Iboii5.jpg",
+        "file_size": 126794,
+        "tags": null,
+        "created_at": "2024-09-24T15:45:03.000000Z",
+        "updated_at": "2024-09-24T15:45:03.000000Z"
+      },
+      {
+        "id": 572,
+        "title": "Purusker.jpg",
+        "file_name": "mave_yG2I7Z.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_yG2I7Z.jpg",
+        "file_size": 121064,
+        "tags": null,
+        "created_at": "2024-09-29T11:00:55.000000Z",
+        "updated_at": "2024-09-29T11:00:55.000000Z"
+      },
+      {
+        "id": 562,
+        "title": "Untitled-3_Mesa_de_trabajo_1_copy_3.png",
+        "file_name": "mave_wUXkKn.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_wUXkKn.png",
+        "file_size": 1477035,
+        "tags": null,
+        "created_at": "2024-09-26T14:43:29.000000Z",
+        "updated_at": "2024-09-26T14:43:29.000000Z"
+      },
+      {
+        "id": 567,
+        "title": "For Gallery.jpg",
+        "file_name": "mave_IM48aT.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_IM48aT.jpg",
+        "file_size": 234050,
+        "tags": null,
+        "created_at": "2024-09-29T10:59:54.000000Z",
+        "updated_at": "2024-09-29T10:59:54.000000Z"
+      },
+      {
+        "id": 571,
+        "title": "Cox3 2024.jpg",
+        "file_name": "mave_9dNGWW.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_9dNGWW.jpg",
+        "file_size": 661443,
+        "tags": null,
+        "created_at": "2024-09-29T11:00:32.000000Z",
+        "updated_at": "2024-09-29T11:00:32.000000Z"
+      },
+      {
+        "id": 569,
+        "title": "Cox2 2024.jpg",
+        "file_name": "mave_pNUQZN.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_pNUQZN.jpg",
+        "file_size": 643274,
+        "tags": null,
+        "created_at": "2024-09-29T11:00:32.000000Z",
+        "updated_at": "2024-09-29T11:00:32.000000Z"
+      },
+      {
+        "id": 570,
+        "title": "Cox1 2024.jpg",
+        "file_name": "mave_gg7avq.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_gg7avq.jpg",
+        "file_size": 701349,
+        "tags": null,
+        "created_at": "2024-09-29T11:00:32.000000Z",
+        "updated_at": "2024-09-29T11:00:32.000000Z"
+      },
+      {
+        "id": 576,
+        "title": "WhatsApp Image 2024-09-29 at 13.03.10_22003708.jpg",
+        "file_name": "mave_votrf4.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_votrf4.jpg",
+        "file_size": 323035,
+        "tags": null,
+        "created_at": "2024-09-29T11:07:51.000000Z",
+        "updated_at": "2024-09-29T11:07:51.000000Z"
+      },
+      {
+        "id": 574,
+        "title": "Check11.jpg",
+        "file_name": "mave_J4Cvyx.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_J4Cvyx.jpg",
+        "file_size": 184845,
+        "tags": null,
+        "created_at": "2024-09-29T11:01:50.000000Z",
+        "updated_at": "2024-09-29T11:01:50.000000Z"
+      },
+      {
+        "id": 573,
+        "title": "Bima Mela.jpg",
+        "file_name": "mave_IcypQ9.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_IcypQ9.jpg",
+        "file_size": 133601,
+        "tags": null,
+        "created_at": "2024-09-29T11:01:35.000000Z",
+        "updated_at": "2024-09-29T11:01:35.000000Z"
+      },
+      {
+        "id": 251,
+        "title": "_MG_9632_11zon.jpg",
+        "file_name": "mave_yGX34t.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_yGX34t.jpg",
+        "file_size": 2063287,
+        "tags": null,
+        "created_at": "2024-06-05T12:23:40.000000Z",
+        "updated_at": "2024-06-05T12:23:40.000000Z"
+      },
+      {
+        "id": 575,
+        "title": "All Officers.jpg",
+        "file_name": "mave_4KCFdn.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_4KCFdn.jpg",
+        "file_size": 367921,
+        "tags": null,
+        "created_at": "2024-09-29T11:02:02.000000Z",
+        "updated_at": "2024-09-29T11:02:02.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 30,
+    "type": "card",
+    "title_en": "Denmohar Bima With Profit (Plan-21)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      84
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-03T12:22:56.000000Z",
+    "updated_at": "2024-10-20T13:24:19.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 84,
+        "page_name": "Takaful",
+        "media_ids": 209,
+        "title_en": "Denmohar Bima With Profit (Plan-21)",
+        "title_bn": "Denmohar Bima With Profit (Plan-21)",
+        "description_en": "<p>Denmohar Bima With Profit (Plan-21)</p>",
+        "description_bn": "<p>Denmohar Bima With Profit (Plan-21)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_NIAVWf.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-03T12:21:32.000000Z",
+        "updated_at": "2025-03-12T08:09:54.000000Z",
+        "media_files": {
+          "id": 209,
+          "title": "denmohor bima - takaful.png",
+          "file_name": "mave_G9FcPQ.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_G9FcPQ.png",
+          "file_size": 201352,
+          "tags": null,
+          "created_at": "2024-06-03T12:17:39.000000Z",
+          "updated_at": "2024-06-03T12:17:39.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "type": "card",
+    "title_en": "Islami Endowment Plan With Profit (Plan-22)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      85
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-03T13:40:52.000000Z",
+    "updated_at": "2024-10-20T13:21:58.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 85,
+        "page_name": "Takaful",
+        "media_ids": 210,
+        "title_en": "Islami Endowment Plan With Profit (Plan-22)",
+        "title_bn": "Islami Endowment Plan With Profit (Plan-22)",
+        "description_en": "<p>Islami Endowment Plan With Profit (Plan-22)</p>",
+        "description_bn": "<p>Islami Endowment Plan With Profit (Plan-22)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_FPczv5.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-03T13:40:20.000000Z",
+        "updated_at": "2025-03-12T08:10:56.000000Z",
+        "media_files": {
+          "id": 210,
+          "title": "islamic endowment plan- takaful.png",
+          "file_name": "mave_lbikCl.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_lbikCl.png",
+          "file_size": 138414,
+          "tags": null,
+          "created_at": "2024-06-03T13:39:34.000000Z",
+          "updated_at": "2024-06-03T13:39:34.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "type": "card",
+    "title_en": "Three Payment Assurance Plan With Profits (Plan-23)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      87
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-03T13:50:53.000000Z",
+    "updated_at": "2024-10-20T13:23:14.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 87,
+        "page_name": "Takaful",
+        "media_ids": 212,
+        "title_en": "Three Payment Assurance Plan With Profits (Plan-23)",
+        "title_bn": "Three Payment Assurance Plan With Profits (Plan-23)",
+        "description_en": "<p>Three Payment Assurance Plan With Profits (Plan-23)</p>",
+        "description_bn": "<p>Three Payment Assurance Plan With Profits (Plan-23)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_BeqkBf.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-03T13:48:31.000000Z",
+        "updated_at": "2025-03-12T08:12:37.000000Z",
+        "media_files": {
+          "id": 212,
+          "title": "Three Payment Assurance Plan.png",
+          "file_name": "mave_KqYPpj.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_KqYPpj.png",
+          "file_size": 174921,
+          "tags": null,
+          "created_at": "2024-06-03T13:47:33.000000Z",
+          "updated_at": "2024-06-03T13:47:33.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "type": "card",
+    "title_en": "Four Payment Assurance Plan With Profit (Plan-24)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      86
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-03T13:51:23.000000Z",
+    "updated_at": "2024-10-20T13:26:25.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 86,
+        "page_name": "Takaful",
+        "media_ids": 212,
+        "title_en": "Four Payment Assurance Plan With Profit (Plan-24)",
+        "title_bn": "Four Payment Assurance Plan With Profit (Plan-24)",
+        "description_en": "<p>Four Payment Assurance Plan With Profit (Plan-24)</p>",
+        "description_bn": "<p>Four Payment Assurance Plan With Profit (Plan-24)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_8sBPvf.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-03T13:48:06.000000Z",
+        "updated_at": "2025-03-12T08:13:46.000000Z",
+        "media_files": {
+          "id": 212,
+          "title": "Three Payment Assurance Plan.png",
+          "file_name": "mave_KqYPpj.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_KqYPpj.png",
+          "file_size": 174921,
+          "tags": null,
+          "created_at": "2024-06-03T13:47:33.000000Z",
+          "updated_at": "2024-06-03T13:47:33.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "type": "card",
+    "title_en": "Multiple Security Insurance Plan (Plan-15)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      88
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-03T13:58:58.000000Z",
+    "updated_at": "2024-10-20T12:46:19.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 88,
+        "page_name": "Health Insurance",
+        "media_ids": 213,
+        "title_en": "Multiple Security Insurance Plan (Plan-15)",
+        "title_bn": "Multiple Security Insurance Plan (Plan-15)",
+        "description_en": "<p>Multiple Security Insurance Plan (Plan-15)</p>",
+        "description_bn": "<p>Multiple Security Insurance Plan (Plan-15)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_kqXQG9.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-03T13:57:57.000000Z",
+        "updated_at": "2025-03-12T08:26:30.000000Z",
+        "media_files": {
+          "id": 213,
+          "title": "Multiple Security Insurance Plan.png",
+          "file_name": "mave_23Lqv8.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_23Lqv8.png",
+          "file_size": 192954,
+          "tags": null,
+          "created_at": "2024-06-03T13:57:02.000000Z",
+          "updated_at": "2024-06-03T13:57:02.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "type": "card",
+    "title_en": "Hospitalization Assurance Plan (Plan-52)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      89
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T08:47:49.000000Z",
+    "updated_at": "2024-10-20T12:02:40.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 89,
+        "page_name": "Health Insurance",
+        "media_ids": 616,
+        "title_en": "Hospitalization Assurance Plan (Plan-52)",
+        "title_bn": "Hospitalization Assurance Plan (Plan-52)",
+        "description_en": "<p>Hospitalization Assurance Plan (Plan-52)</p>",
+        "description_bn": "<p>Hospitalization Assurance Plan (Plan-52)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_C7cK50.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T08:47:28.000000Z",
+        "updated_at": "2025-03-12T08:27:01.000000Z",
+        "media_files": {
+          "id": 616,
+          "title": "52-04.png",
+          "file_name": "mave_34hMAw.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_34hMAw.png",
+          "file_size": 859165,
+          "tags": null,
+          "created_at": "2024-10-07T09:55:59.000000Z",
+          "updated_at": "2024-10-07T09:55:59.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "type": "card",
+    "title_en": "Supplementary Hospitalization Assurance Policy (Plan-53)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      90
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T08:49:41.000000Z",
+    "updated_at": "2024-10-20T13:15:54.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 90,
+        "page_name": "Health Insurance",
+        "media_ids": 616,
+        "title_en": "Supplementary Hospitalization Assurance Policy (Plan-53)",
+        "title_bn": "Supplementary Hospitalization Assurance Policy (Plan-53)",
+        "description_en": "<p>Supplementary Hospitalization Assurance Policy (Plan-53)</p>",
+        "description_bn": "<p>Supplementary Hospitalization Assurance Policy (Plan-53)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_iDZITi.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T08:49:13.000000Z",
+        "updated_at": "2025-03-12T08:27:27.000000Z",
+        "media_files": {
+          "id": 616,
+          "title": "52-04.png",
+          "file_name": "mave_34hMAw.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_34hMAw.png",
+          "file_size": 859165,
+          "tags": null,
+          "created_at": "2024-10-07T09:55:59.000000Z",
+          "updated_at": "2024-10-07T09:55:59.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "type": "card",
+    "title_en": "Child Welfare Assurance Plan With Profits (Plan-102)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      95
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T08:55:11.000000Z",
+    "updated_at": "2024-10-20T13:38:16.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 95,
+        "page_name": "Micro Insurance",
+        "media_ids": 646,
+        "title_en": "Child Welfare Assurance Plan With Profits (Plan-102)",
+        "title_bn": "Child Welfare Assurance Plan With Profits (Plan-102)",
+        "description_en": "<p>Child Welfare Assurance Plan With Profits (Plan-102)</p>",
+        "description_bn": "<p>Child Welfare Assurance Plan With Profits (Plan-102)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_c0XhLd.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T08:54:20.000000Z",
+        "updated_at": "2025-03-12T08:21:35.000000Z",
+        "media_files": {
+          "id": 646,
+          "title": "102-04.png",
+          "file_name": "mave_ZevMI8.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_ZevMI8.png",
+          "file_size": 671712,
+          "tags": null,
+          "created_at": "2024-10-20T10:20:54.000000Z",
+          "updated_at": "2024-10-20T10:20:54.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "type": "card",
+    "title_en": "Sandhani Deposit Pension Scheme (SDPS) (Plan-08)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      91
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T08:56:10.000000Z",
+    "updated_at": "2024-10-20T13:34:44.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 91,
+        "page_name": "Micro Insurance",
+        "media_ids": 615,
+        "title_en": "Sandhani Deposit Pension Scheme (SDPS) (Plan-08)",
+        "title_bn": "Sandhani Deposit Pension Scheme (SDPS) (Plan-08)",
+        "description_en": "<p>Sandhani Deposit Pension Scheme (SDPS) (Plan-08)</p>",
+        "description_bn": "<p>Sandhani Deposit Pension Scheme (SDPS) (Plan-08)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_hSVX5u.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T08:51:57.000000Z",
+        "updated_at": "2025-03-12T08:19:49.000000Z",
+        "media_files": {
+          "id": 615,
+          "title": "08-04.png",
+          "file_name": "mave_yPmOu8.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_yPmOu8.png",
+          "file_size": 937209,
+          "tags": null,
+          "created_at": "2024-10-07T09:54:42.000000Z",
+          "updated_at": "2024-10-07T09:54:42.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "type": "card",
+    "title_en": "Grameen Deposit Pension Scheme With Profits (Plan-04)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      92
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T08:56:49.000000Z",
+    "updated_at": "2024-10-20T13:33:38.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 92,
+        "page_name": "Micro Insurance",
+        "media_ids": 611,
+        "title_en": "Grameen Deposit Pension Scheme With Profits (Plan-04)",
+        "title_bn": "Grameen Deposit Pension Scheme With Profits (Plan-04)",
+        "description_en": "<p>Grameen Deposit Pension Scheme With Profits (Plan-04)</p>",
+        "description_bn": "<p>Grameen Deposit Pension Scheme With Profits (Plan-04)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_VdWQkc.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T08:52:24.000000Z",
+        "updated_at": "2025-03-12T08:19:22.000000Z",
+        "media_files": {
+          "id": 611,
+          "title": "04-04.png",
+          "file_name": "mave_G3CJyp.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_G3CJyp.png",
+          "file_size": 1009116,
+          "tags": null,
+          "created_at": "2024-10-07T09:47:36.000000Z",
+          "updated_at": "2024-10-07T09:47:36.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "type": "card",
+    "title_en": "Sandhani Deposit Pension Scheme (Plan-32)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      93
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T08:57:40.000000Z",
+    "updated_at": "2024-10-20T13:36:07.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 93,
+        "page_name": "Micro Insurance",
+        "media_ids": 660,
+        "title_en": "Sandhani Deposit Pension Scheme (Plan-32)",
+        "title_bn": "Sandhani Deposit Pension Scheme (Plan-32)",
+        "description_en": "<p>Sandhani Deposit Pension Scheme (Plan-32)</p>",
+        "description_bn": "<p>Sandhani Deposit Pension Scheme (Plan-32)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_bBt7xy.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T08:52:55.000000Z",
+        "updated_at": "2025-03-12T08:20:52.000000Z",
+        "media_files": {
+          "id": 660,
+          "title": "32-04.png",
+          "file_name": "mave_W6rkey.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_W6rkey.png",
+          "file_size": 685598,
+          "tags": null,
+          "created_at": "2024-10-22T14:06:01.000000Z",
+          "updated_at": "2024-10-22T14:06:01.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "type": "card",
+    "title_en": "Small Savings Assurance Plan With Profits (Plan-101)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      94
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T08:58:46.000000Z",
+    "updated_at": "2024-10-20T13:37:14.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 94,
+        "page_name": null,
+        "media_ids": 645,
+        "title_en": "Small Savings Assurance Plan With Profits (Plan-101)",
+        "title_bn": null,
+        "description_en": null,
+        "description_bn": null,
+        "link_url": "https://slicbackend.etherstaging.xyz/media/mave_8p4FE1.png",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-06-04T08:53:57.000000Z",
+        "updated_at": "2024-10-20T13:36:54.000000Z",
+        "media_files": {
+          "id": 645,
+          "title": "101-04.png",
+          "file_name": "mave_Hv8Zk4.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_Hv8Zk4.png",
+          "file_size": 668389,
+          "tags": null,
+          "created_at": "2024-10-20T10:20:41.000000Z",
+          "updated_at": "2024-10-20T10:20:41.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "type": "card",
+    "title_en": "Group Term One Year Renewable Life Insurance (Plan-50)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      96
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T09:35:40.000000Z",
+    "updated_at": "2024-10-20T13:11:22.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 96,
+        "page_name": "Group Insurance",
+        "media_ids": 614,
+        "title_en": "Group Term One Year Renewable Life Insurance (Plan-50)",
+        "title_bn": "Group Term One Year Renewable Life Insurance (Plan-50)",
+        "description_en": "<p>Group Term One Year Renewable Life Insurance (Plan-50)</p>",
+        "description_bn": "<p>Group Term One Year Renewable Life Insurance (Plan-50)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_Z7Tbdt.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T09:35:23.000000Z",
+        "updated_at": "2025-03-12T08:23:13.000000Z",
+        "media_files": {
+          "id": 614,
+          "title": "51-04.png",
+          "file_name": "mave_FLLBXC.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_FLLBXC.png",
+          "file_size": 940869,
+          "tags": null,
+          "created_at": "2024-10-07T09:53:27.000000Z",
+          "updated_at": "2024-10-07T09:53:27.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "type": "card",
+    "title_en": "Group Assurance Plan (Plan-51)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      97
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T09:36:28.000000Z",
+    "updated_at": "2024-10-20T13:17:33.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 97,
+        "page_name": "Group Insurance",
+        "media_ids": 614,
+        "title_en": "Group Assurance Plan (Plan-51)",
+        "title_bn": "Group Assurance Plan (Plan-51)",
+        "description_en": "<p>Group Assurance Plan (Plan-51)</p>",
+        "description_bn": "<p>Group Assurance Plan (Plan-51)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_E3Tyxw.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T09:36:07.000000Z",
+        "updated_at": "2025-03-12T08:23:43.000000Z",
+        "media_files": {
+          "id": 614,
+          "title": "51-04.png",
+          "file_name": "mave_FLLBXC.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_FLLBXC.png",
+          "file_size": 940869,
+          "tags": null,
+          "created_at": "2024-10-07T09:53:27.000000Z",
+          "updated_at": "2024-10-07T09:53:27.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "type": "card",
+    "title_en": "Multiple Benefit Assurance Plan Without Maturity Benefits (Plan-62)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      98
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T09:51:07.000000Z",
+    "updated_at": "2024-10-20T12:05:29.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 98,
+        "page_name": "Health Insurance",
+        "media_ids": 248,
+        "title_en": "Multiple Benefit Assurance Plan Without Maturity Benefits (Plan-62)",
+        "title_bn": "Multiple Benefit Assurance Plan Without Maturity Benefits (Plan-62)",
+        "description_en": "<p>Multiple Benefit Assurance Plan Without Maturity Benefits (Plan-62)</p>",
+        "description_bn": "<p>Multiple Benefit Assurance Plan Without Maturity Benefits (Plan-62)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_L2hBZf.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T09:50:43.000000Z",
+        "updated_at": "2025-03-12T08:27:56.000000Z",
+        "media_files": {
+          "id": 248,
+          "title": "Multiple Benefit Assurance Plan - Without Maturity Benefits.png",
+          "file_name": "mave_1TTgHk.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_1TTgHk.png",
+          "file_size": 178713,
+          "tags": null,
+          "created_at": "2024-06-04T13:20:41.000000Z",
+          "updated_at": "2024-06-04T13:20:41.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "type": "card",
+    "title_en": "Higher Education Support Plan (Plan-11)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      100
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T10:33:34.000000Z",
+    "updated_at": "2024-10-20T10:50:52.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 100,
+        "page_name": "AKOK Bima",
+        "media_ids": 237,
+        "title_en": "Higher Education Support Plan (Plan-11)",
+        "title_bn": "Higher Education Support Plan (Plan-11)",
+        "description_en": "<p>Higher Education Support Plan (Plan-11)</p>",
+        "description_bn": "<p>Higher Education Support Plan (Plan-11)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_5YlGW1.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T10:32:03.000000Z",
+        "updated_at": "2025-03-12T06:24:05.000000Z",
+        "media_files": {
+          "id": 237,
+          "title": "Higher education- ordinary.png",
+          "file_name": "mave_98sZvF.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_98sZvF.png",
+          "file_size": 175744,
+          "tags": null,
+          "created_at": "2024-06-04T10:32:34.000000Z",
+          "updated_at": "2024-06-04T10:32:34.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "type": "card",
+    "title_en": "Child Protection Policy With Profits (Plan-12)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      101
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T10:39:18.000000Z",
+    "updated_at": "2024-10-20T10:54:20.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 101,
+        "page_name": "AKOK Bima",
+        "media_ids": 213,
+        "title_en": "Child Protection Policy With Profits (Plan-12)",
+        "title_bn": "Child Protection Policy With Profits (Plan-12)",
+        "description_en": "<p>Child Protection Policy With Profits (Plan-12)</p>",
+        "description_bn": "<p>Child Protection Policy With Profits (Plan-12)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_M2sWOA.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T10:37:53.000000Z",
+        "updated_at": "2025-03-12T07:51:46.000000Z",
+        "media_files": {
+          "id": 213,
+          "title": "Multiple Security Insurance Plan.png",
+          "file_name": "mave_23Lqv8.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_23Lqv8.png",
+          "file_size": 192954,
+          "tags": null,
+          "created_at": "2024-06-03T13:57:02.000000Z",
+          "updated_at": "2024-06-03T13:57:02.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "type": "card",
+    "title_en": "Term Assurance Plan Without Maturity Benefits (Plan-17)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      102
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T10:53:36.000000Z",
+    "updated_at": "2024-10-20T10:56:07.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 102,
+        "page_name": "AKOK Bima",
+        "media_ids": 238,
+        "title_en": "Term Assurance Plan Without Maturity Benefits (Plan-17)",
+        "title_bn": "Term Assurance Plan Without Maturity Benefits (Plan-17)",
+        "description_en": "<p>Term Assurance Plan Without Maturity Benefits (Plan-17)</p>",
+        "description_bn": "<p>Term Assurance Plan Without Maturity Benefits (Plan-17)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_cenwP1.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T10:52:11.000000Z",
+        "updated_at": "2025-03-12T07:54:11.000000Z",
+        "media_files": {
+          "id": 238,
+          "title": "Term Assurance Plan -Without Maturity Benefits.png",
+          "file_name": "mave_KVsqfJ.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_KVsqfJ.png",
+          "file_size": 211602,
+          "tags": null,
+          "created_at": "2024-06-04T10:51:32.000000Z",
+          "updated_at": "2024-06-04T10:51:32.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "type": "card",
+    "title_en": "Whole Life Assurance Plan With Profits (Plan-54)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      104
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T11:03:25.000000Z",
+    "updated_at": "2024-10-20T10:57:55.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 104,
+        "page_name": "AKOK Bima",
+        "media_ids": 239,
+        "title_en": "Whole Life Assurance Plan With Profits (Plan-54)",
+        "title_bn": "Whole Life Assurance Plan With Profits (Plan-54)",
+        "description_en": "<p>Whole Life Assurance Plan With Profits (Plan-54)</p>",
+        "description_bn": "<p>Whole Life Assurance Plan With Profits (Plan-54)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_GlMjWM.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T11:01:55.000000Z",
+        "updated_at": "2025-03-12T07:58:28.000000Z",
+        "media_files": {
+          "id": 239,
+          "title": "Whole Life Assurance Plan - With Profits.png",
+          "file_name": "mave_IEuNbD.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_IEuNbD.png",
+          "file_size": 195195,
+          "tags": null,
+          "created_at": "2024-06-04T11:04:51.000000Z",
+          "updated_at": "2024-06-04T11:04:51.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "type": "card",
+    "title_en": "Pure Endowment Insurance Without Profits (Plan-59)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      105
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T11:11:52.000000Z",
+    "updated_at": "2024-10-20T10:59:39.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 105,
+        "page_name": null,
+        "media_ids": 240,
+        "title_en": "Pure Endowment Insurance Without Profits (Plan-59)",
+        "title_bn": null,
+        "description_en": null,
+        "description_bn": null,
+        "link_url": "https://slicbackend.etherstaging.xyz/media/mave_wkZWzA.png",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-06-04T11:11:15.000000Z",
+        "updated_at": "2024-10-20T10:59:20.000000Z",
+        "media_files": {
+          "id": 240,
+          "title": "Pure Endowment Insurance -Without Profits.png",
+          "file_name": "mave_VDLDUj.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_VDLDUj.png",
+          "file_size": 181300,
+          "tags": null,
+          "created_at": "2024-06-04T11:10:48.000000Z",
+          "updated_at": "2024-06-04T11:10:48.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "type": "card",
+    "title_en": "Endowment Assurance Plan with Profits (Sandhani Saving Plus) (Plan-82)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      106
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T11:48:37.000000Z",
+    "updated_at": "2024-10-20T11:02:50.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 106,
+        "page_name": "AKOK Bima",
+        "media_ids": 241,
+        "title_en": "Endowment Assurance Plan With Profits (Sandhani Saving Plus) (Plan-82)",
+        "title_bn": "Endowment Assurance Plan With Profits (Sandhani Saving Plus) (Plan-82)",
+        "description_en": "<p><br></p>",
+        "description_bn": "<p><br></p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_s5gvS6.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T11:46:29.000000Z",
+        "updated_at": "2025-03-16T08:19:21.000000Z",
+        "media_files": {
+          "id": 241,
+          "title": "Endowment Assurance  Plan with Profits ( Sandhani Saving Plus ).png",
+          "file_name": "mave_RnttRj.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_RnttRj.png",
+          "file_size": 171896,
+          "tags": null,
+          "created_at": "2024-06-04T11:45:56.000000Z",
+          "updated_at": "2024-06-04T11:45:56.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "type": "card",
+    "title_en": "Islami Five Payment Endowment Plan With Profits (Plan-25)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      107
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T13:10:51.000000Z",
+    "updated_at": "2024-10-20T13:25:25.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 107,
+        "page_name": "Takaful",
+        "media_ids": 210,
+        "title_en": "Islami Five Payment Endowment Plan With Profits (Plan-25)",
+        "title_bn": "Islami Five Payment Endowment Plan With Profits (Plan-25)",
+        "description_en": "<p>Islami Five Payment Endowment Plan With Profits (Plan-25)</p>",
+        "description_bn": "<p>Islami Five Payment Endowment Plan With Profits (Plan-25)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_uQwIPH.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T13:08:42.000000Z",
+        "updated_at": "2025-03-12T08:14:14.000000Z",
+        "media_files": {
+          "id": 210,
+          "title": "islamic endowment plan- takaful.png",
+          "file_name": "mave_lbikCl.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_lbikCl.png",
+          "file_size": 138414,
+          "tags": null,
+          "created_at": "2024-06-03T13:39:34.000000Z",
+          "updated_at": "2024-06-03T13:39:34.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "type": "card",
+    "title_en": "Islami Endowment Plan (Hajj Bima) With Profits (Plan-27-28)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      76
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T13:15:09.000000Z",
+    "updated_at": "2024-10-20T14:28:15.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 76,
+        "page_name": "Takaful",
+        "media_ids": 150,
+        "title_en": "Islami Endowment Plan (Hajj Bima) With Profits (Plan-27-28)",
+        "title_bn": "Islami Endowment Plan (Hajj Bima) With Profits (Plan-27-28)",
+        "description_en": "<p>Islami Endowment Plan (Hajj Bima) With Profits (Plan-27-28)</p>",
+        "description_bn": "<p>Islami Endowment Plan (Hajj Bima) With Profits (Plan-27-28)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_9JmeJh.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-05-21T12:34:21.000000Z",
+        "updated_at": "2025-03-12T08:15:50.000000Z",
+        "media_files": {
+          "id": 150,
+          "title": "haj.png",
+          "file_name": "mave_yfbAFh.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_yfbAFh.png",
+          "file_size": 175301,
+          "tags": null,
+          "created_at": "2024-05-21T13:08:35.000000Z",
+          "updated_at": "2024-05-21T13:08:35.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "type": "card",
+    "title_en": "Grameen Islami Deposit Pension Scheme With Profits (Takaful) (Plan-31)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      108
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T13:40:32.000000Z",
+    "updated_at": "2024-10-20T13:39:40.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 108,
+        "page_name": "Micro Insurance",
+        "media_ids": 661,
+        "title_en": "Grameen Islami Deposit Pension Scheme With Profits (Takaful) (Plan-31)",
+        "title_bn": "Grameen Islami Deposit Pension Scheme With Profits (Takaful) (Plan-31)",
+        "description_en": "<p>Grameen Islami Deposit Pension Scheme With Profits (Takaful) (Plan-31)</p>",
+        "description_bn": "<p>Grameen Islami Deposit Pension Scheme With Profits (Takaful) (Plan-31)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_G7Dn1B.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T13:40:15.000000Z",
+        "updated_at": "2025-03-12T08:20:19.000000Z",
+        "media_files": {
+          "id": 661,
+          "title": "31-04.png",
+          "file_name": "mave_u74QP9.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_u74QP9.png",
+          "file_size": 914235,
+          "tags": null,
+          "created_at": "2024-10-22T14:06:01.000000Z",
+          "updated_at": "2024-10-22T14:06:01.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "type": "card",
+    "title_en": "Children Endowment Insurance Without Profits (Plan-06)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      109
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T13:44:05.000000Z",
+    "updated_at": "2024-10-20T11:04:25.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 109,
+        "page_name": null,
+        "media_ids": 1203,
+        "title_en": "Children Endowment Insurance Without Profits (Plan-06)",
+        "title_bn": null,
+        "description_en": "<p>Children Endowment Insurance Without Profits (Plan-06)</p>",
+        "description_bn": null,
+        "link_url": "https://backend.sandhanilife.com/media/mave_20vIns.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2024-06-04T13:43:42.000000Z",
+        "updated_at": "2025-07-08T06:59:41.000000Z",
+        "media_files": {
+          "id": 1203,
+          "title": "06-04.png",
+          "file_name": "mave_JBC3cr.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_JBC3cr.png",
+          "file_size": 172399,
+          "tags": null,
+          "created_at": "2025-07-08T06:58:49.000000Z",
+          "updated_at": "2025-07-08T06:58:49.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "type": "card",
+    "title_en": "One Payment Multiple Benefit Endowment Assurance Plan (Plan-09)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      110
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T13:45:48.000000Z",
+    "updated_at": "2024-10-20T11:08:09.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 110,
+        "page_name": "AKOK Bima",
+        "media_ids": 612,
+        "title_en": "One Payment Multiple Benefit Endowment Assurance Plan (Plan-09)",
+        "title_bn": "One Payment Multiple Benefit Endowment Assurance Plan (Plan-09)",
+        "description_en": "<p>One Payment Multiple Benefit Endowment Assurance Plan (Plan-09)</p>",
+        "description_bn": "<p>One Payment Multiple Benefit Endowment Assurance Plan (Plan-09)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_AZCJ3d.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T13:45:15.000000Z",
+        "updated_at": "2025-03-12T06:03:31.000000Z",
+        "media_files": {
+          "id": 612,
+          "title": "09-04.png",
+          "file_name": "mave_PUdEM3.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_PUdEM3.png",
+          "file_size": 894006,
+          "tags": null,
+          "created_at": "2024-10-07T09:49:06.000000Z",
+          "updated_at": "2024-10-07T09:49:06.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "type": "card",
+    "title_en": "Five to One Endowment Assurance Plan With Profits (Plan-10)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      111
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T13:47:10.000000Z",
+    "updated_at": "2024-10-20T11:09:34.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 111,
+        "page_name": "AKOK Bima",
+        "media_ids": 617,
+        "title_en": "Five to One Endowment Assurance Plan With Profits (Plan-10)",
+        "title_bn": "Five to One Endowment Assurance Plan With Profits (Plan-10)",
+        "description_en": "<p>Five to One Endowment Assurance Plan With Profits (Plan-10)</p>",
+        "description_bn": "<p>Five to One Endowment Assurance Plan With Profits (Plan-10)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_2KfAao.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T13:46:40.000000Z",
+        "updated_at": "2025-03-12T06:22:49.000000Z",
+        "media_files": {
+          "id": 617,
+          "title": "10-04.png",
+          "file_name": "mave_FogYXT.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_FogYXT.png",
+          "file_size": 745843,
+          "tags": null,
+          "created_at": "2024-10-07T09:57:48.000000Z",
+          "updated_at": "2024-10-07T09:57:48.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "type": "card",
+    "title_en": "Single Premium Without Profits Plan (Plan-16)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      112
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T13:48:44.000000Z",
+    "updated_at": "2024-10-20T11:11:12.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 112,
+        "page_name": "AKOK Bima",
+        "media_ids": 656,
+        "title_en": "Single Premium Without Profits Plan (Plan-16)",
+        "title_bn": "Single Premium Without Profits Plan (Plan-16)",
+        "description_en": "<p><br></p>",
+        "description_bn": "<p><br></p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_QlPueH.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T13:48:13.000000Z",
+        "updated_at": "2025-03-16T08:17:58.000000Z",
+        "media_files": {
+          "id": 656,
+          "title": "16-04.png",
+          "file_name": "mave_LxwUAd.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_LxwUAd.png",
+          "file_size": 933292,
+          "tags": null,
+          "created_at": "2024-10-22T11:01:33.000000Z",
+          "updated_at": "2024-10-22T11:01:33.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "type": "card",
+    "title_en": "Death-cum-Survival Benefit Plan (Plan-20)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      113
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T13:49:51.000000Z",
+    "updated_at": "2024-10-20T11:12:09.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 113,
+        "page_name": "AKOK Bima",
+        "media_ids": 670,
+        "title_en": "Death-cum-Survival Benefit Plan (Plan-20)",
+        "title_bn": "Death-cum-Survival Benefit Plan (Plan-20)",
+        "description_en": "<p>Death-cum-Survival Benefit Plan (Plan-20)</p>",
+        "description_bn": "<p>Death-cum-Survival Benefit Plan (Plan-20)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_guOmq6.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T13:49:16.000000Z",
+        "updated_at": "2025-03-12T07:57:42.000000Z",
+        "media_files": {
+          "id": 670,
+          "title": "20-04.png",
+          "file_name": "mave_c46uor.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_c46uor.png",
+          "file_size": 966341,
+          "tags": null,
+          "created_at": "2024-10-22T15:26:20.000000Z",
+          "updated_at": "2024-10-22T15:26:20.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "type": "card",
+    "title_en": "Salary Saving Scheme (Plan-19)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      114
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T13:51:56.000000Z",
+    "updated_at": "2024-10-20T11:13:07.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 114,
+        "page_name": "AKOK Bima",
+        "media_ids": 668,
+        "title_en": "Salary Saving Scheme (Plan-19)",
+        "title_bn": "Salary Saving Scheme (Plan-19)",
+        "description_en": "<p>Salary Saving Scheme (Plan-19)</p>",
+        "description_bn": "<p>Salary Saving Scheme (Plan-19)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_H884gs.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T13:51:27.000000Z",
+        "updated_at": "2025-03-12T07:57:13.000000Z",
+        "media_files": {
+          "id": 668,
+          "title": "19-04.png",
+          "file_name": "mave_xm7htY.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_xm7htY.png",
+          "file_size": 996132,
+          "tags": null,
+          "created_at": "2024-10-22T15:25:03.000000Z",
+          "updated_at": "2024-10-22T15:25:03.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "type": "card",
+    "title_en": "Temporary Life Assurance (Without Profits) Annual Premium Policy (Plan-55)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      115
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T13:52:40.000000Z",
+    "updated_at": "2024-10-20T11:14:50.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 115,
+        "page_name": "AKOK Bima",
+        "media_ids": 639,
+        "title_en": "Temporary Life Assurance (Without Profits) Annual Premium Policy (Plan-55)",
+        "title_bn": "Temporary Life Assurance (Without Profits) Annual Premium Policy (Plan-55)",
+        "description_en": "<p>Temporary Life Assurance (Without Profits) Annual Premium Policy (Plan-55)</p>",
+        "description_bn": "<p>Temporary Life Assurance (Without Profits) Annual Premium Policy (Plan-55)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_NBg3M6.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T13:52:20.000000Z",
+        "updated_at": "2025-03-12T07:58:57.000000Z",
+        "media_files": {
+          "id": 639,
+          "title": "55-04.png",
+          "file_name": "mave_Dwq6Wf.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_Dwq6Wf.png",
+          "file_size": 691031,
+          "tags": null,
+          "created_at": "2024-10-20T10:16:15.000000Z",
+          "updated_at": "2024-10-20T10:16:15.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "type": "card",
+    "title_en": "Temporary Life Assurance Plan (Without Profits) Single Premium Policy (Plan-56)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      116
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T13:53:17.000000Z",
+    "updated_at": "2024-10-20T11:16:01.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 116,
+        "page_name": "AKOK Bima",
+        "media_ids": 640,
+        "title_en": "Temporary Life Assurance Plan (Without Profits) Single Premium Policy (Plan-56)",
+        "title_bn": "Temporary Life Assurance Plan (Without Profits) Single Premium Policy (Plan-56)",
+        "description_en": "<p>Temporary Life Assurance Plan (Without Profits) Single Premium Policy (Plan-56)</p>",
+        "description_bn": "<p>Temporary Life Assurance Plan (Without Profits) Single Premium Policy (Plan-56)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_nZHuhE.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T13:53:03.000000Z",
+        "updated_at": "2025-03-12T07:59:29.000000Z",
+        "media_files": {
+          "id": 640,
+          "title": "56-04.png",
+          "file_name": "mave_pTGx00.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_pTGx00.png",
+          "file_size": 628446,
+          "tags": null,
+          "created_at": "2024-10-20T10:17:13.000000Z",
+          "updated_at": "2024-10-20T10:17:13.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "type": "card",
+    "title_en": "Ideal Option Plan Without Profits (Plan-57)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      117
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T13:53:50.000000Z",
+    "updated_at": "2024-10-20T11:17:15.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 117,
+        "page_name": null,
+        "media_ids": 641,
+        "title_en": "Ideal Option Plan Without Profits (Plan-57)",
+        "title_bn": null,
+        "description_en": null,
+        "description_bn": null,
+        "link_url": "https://slicbackend.etherstaging.xyz/media/mave_L6FVyQ.png",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-06-04T13:53:35.000000Z",
+        "updated_at": "2024-10-20T11:16:54.000000Z",
+        "media_files": {
+          "id": 641,
+          "title": "57-04.png",
+          "file_name": "mave_zwqYmF.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zwqYmF.png",
+          "file_size": 678793,
+          "tags": null,
+          "created_at": "2024-10-20T10:17:57.000000Z",
+          "updated_at": "2024-10-20T10:17:57.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "type": "card",
+    "title_en": "Expatriate Insurance Policy (Plan-58)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      118
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T13:55:00.000000Z",
+    "updated_at": "2024-10-20T11:18:09.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 118,
+        "page_name": null,
+        "media_ids": 648,
+        "title_en": "Expatriate Insurance Policy (Plan-58)",
+        "title_bn": null,
+        "description_en": null,
+        "description_bn": null,
+        "link_url": "https://slicbackend.etherstaging.xyz/media/mave_0lT6md.png",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-06-04T13:54:12.000000Z",
+        "updated_at": "2024-10-20T11:28:28.000000Z",
+        "media_files": {
+          "id": 648,
+          "title": "58-04.png",
+          "file_name": "mave_etDura.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_etDura.png",
+          "file_size": 592470,
+          "tags": null,
+          "created_at": "2024-10-20T11:28:01.000000Z",
+          "updated_at": "2024-10-20T11:28:01.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "type": "card",
+    "title_en": "Unit Linked Life Assurance Plan (Plan-61)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      119
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T13:55:48.000000Z",
+    "updated_at": "2024-10-20T11:19:44.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 119,
+        "page_name": "AKOK Bima",
+        "media_ids": 642,
+        "title_en": "Unit Linked Life Assurance Plan (Plan-61)",
+        "title_bn": "Unit Linked Life Assurance Plan (Plan-61)",
+        "description_en": "<p>Unit Linked Life Assurance Plan (Plan-61)</p>",
+        "description_bn": "<p>Unit Linked Life Assurance Plan (Plan-61)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_7X1AVM.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T13:55:33.000000Z",
+        "updated_at": "2025-03-12T07:59:53.000000Z",
+        "media_files": {
+          "id": 642,
+          "title": "61-04.png",
+          "file_name": "mave_WphBI7.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_WphBI7.png",
+          "file_size": 743293,
+          "tags": null,
+          "created_at": "2024-10-20T10:18:41.000000Z",
+          "updated_at": "2024-10-20T10:18:41.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "type": "card",
+    "title_en": "Endowment Assurance Without Profits (Vehicle Loan  Scheme) (Plan-80)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      120
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T13:56:48.000000Z",
+    "updated_at": "2024-10-20T11:21:05.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 120,
+        "page_name": "AKOK Bima",
+        "media_ids": 643,
+        "title_en": "Endowment Assurance Without Profits (Vehicle Loan  Scheme) (Plan-80)",
+        "title_bn": "Endowment Assurance Without Profits (Vehicle Loan  Scheme) (Plan-80)",
+        "description_en": "<p>Endowment Assurance Without Profits (Vehicle Loan&nbsp;Scheme) (Plan-80)</p>",
+        "description_bn": "<p>Endowment Assurance Without Profits (Vehicle Loan&nbsp;Scheme) (Plan-80)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_wPzLUH.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T13:56:31.000000Z",
+        "updated_at": "2025-03-12T08:00:21.000000Z",
+        "media_files": {
+          "id": 643,
+          "title": "80-04.png",
+          "file_name": "mave_5bmu3D.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_5bmu3D.png",
+          "file_size": 555510,
+          "tags": null,
+          "created_at": "2024-10-20T10:19:23.000000Z",
+          "updated_at": "2024-10-20T10:19:23.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "type": "card",
+    "title_en": "Endowment Assurance Without Profits (Home Loan Insurance Scheme) (Plan-81)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      121
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T13:57:32.000000Z",
+    "updated_at": "2024-10-20T11:22:10.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 121,
+        "page_name": "AKOK Bima",
+        "media_ids": 644,
+        "title_en": "Endowment Assurance Without Profits (Home Loan Insurance Scheme) (Plan-81)",
+        "title_bn": "Endowment Assurance Without Profits (Home Loan Insurance Scheme) (Plan-81)",
+        "description_en": "<p>Endowment Assurance Without Profits (Home Loan Insurance Scheme) (Plan-81)</p>",
+        "description_bn": "<p>Endowment Assurance Without Profits (Home Loan Insurance Scheme) (Plan-81)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_WiddzP.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T13:57:13.000000Z",
+        "updated_at": "2025-03-12T08:01:20.000000Z",
+        "media_files": {
+          "id": 644,
+          "title": "81-04.png",
+          "file_name": "mave_oJq54m.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_oJq54m.png",
+          "file_size": 590045,
+          "tags": null,
+          "created_at": "2024-10-20T10:19:30.000000Z",
+          "updated_at": "2024-10-20T10:19:30.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "type": "card",
+    "title_en": "Child Education Islami Assurance Plan With Profits (Plan-26)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      122
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T14:01:42.000000Z",
+    "updated_at": "2024-10-20T13:30:04.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 122,
+        "page_name": "Takaful",
+        "media_ids": 687,
+        "title_en": "Child Education Islami Assurance Plan With Profits (Plan-26)",
+        "title_bn": "Child Education Islami Assurance Plan With Profits (Plan-26)",
+        "description_en": "<p>Child Education Islami Assurance Plan With Profits (Plan-26)</p>",
+        "description_bn": "<p>Child Education Islami Assurance Plan With Profits (Plan-26)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_cRXT93.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T14:01:16.000000Z",
+        "updated_at": "2025-03-12T08:15:12.000000Z",
+        "media_files": {
+          "id": 687,
+          "title": "26-04.png",
+          "file_name": "mave_x6kCgY.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_x6kCgY.png",
+          "file_size": 908976,
+          "tags": null,
+          "created_at": "2024-10-23T14:06:27.000000Z",
+          "updated_at": "2024-10-23T14:06:27.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "type": "card",
+    "title_en": "Single Payment Assurance Plan With Profits (Plan-39)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      123
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T14:03:15.000000Z",
+    "updated_at": "2024-10-20T13:31:06.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 123,
+        "page_name": "Takaful",
+        "media_ids": 662,
+        "title_en": "Single Payment Assurance Plan With Profits (Plan-39)",
+        "title_bn": "Single Payment Assurance Plan With Profits (Plan-39)",
+        "description_en": "<p>Single Payment Assurance Plan With Profits (Plan-39)</p>",
+        "description_bn": "<p>Single Payment Assurance Plan With Profits (Plan-39)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_LKQz0W.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T14:02:57.000000Z",
+        "updated_at": "2025-03-12T08:17:02.000000Z",
+        "media_files": {
+          "id": 662,
+          "title": "39-04.png",
+          "file_name": "mave_cgZRzr.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_cgZRzr.png",
+          "file_size": 945683,
+          "tags": null,
+          "created_at": "2024-10-22T14:06:01.000000Z",
+          "updated_at": "2024-10-22T14:06:01.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "type": "card",
+    "title_en": "One to Five Endowment Assurance Plan With Profits (Plan-40)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      124
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-04T14:04:14.000000Z",
+    "updated_at": "2024-10-20T13:28:56.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 124,
+        "page_name": "Takaful",
+        "media_ids": 613,
+        "title_en": "One to Five Endowment Assurance Plan With Profits (Plan-40)",
+        "title_bn": "One to Five Endowment Assurance Plan With Profits (Plan-40)",
+        "description_en": "<p>One to Five Endowment Assurance Plan With Profits (Plan-40)</p>",
+        "description_bn": "<p>One to Five Endowment Assurance Plan With Profits (Plan-40)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_GugePy.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-06-04T14:03:55.000000Z",
+        "updated_at": "2025-03-09T06:12:38.000000Z",
+        "media_files": {
+          "id": 613,
+          "title": "40-04.png",
+          "file_name": "mave_mwPm2N.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_mwPm2N.png",
+          "file_size": 714034,
+          "tags": null,
+          "created_at": "2024-10-07T09:51:14.000000Z",
+          "updated_at": "2024-10-07T09:51:14.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "type": "image",
+    "title_en": "image",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [
+      252
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-06-05T14:13:04.000000Z",
+    "updated_at": "2024-06-05T14:13:04.000000Z",
+    "medias": [
+      {
+        "id": 252,
+        "title": "_MG_0565.JPG",
+        "file_name": "mave_G1E6lW.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_G1E6lW.jpg",
+        "file_size": 1456547,
+        "tags": null,
+        "created_at": "2024-06-05T12:42:43.000000Z",
+        "updated_at": "2024-06-05T12:42:43.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 72,
+    "type": "card",
+    "title_en": "Sandhani Savings Pension Scheme (SSPS) (Plan-60)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      184
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-10-20T10:26:50.000000Z",
+    "updated_at": "2024-10-20T13:40:37.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 184,
+        "page_name": null,
+        "media_ids": 647,
+        "title_en": "Sandhani Savings Pension Scheme (SSPS) (Plan-60)",
+        "title_bn": null,
+        "description_en": null,
+        "description_bn": null,
+        "link_url": "https://slicbackend.etherstaging.xyz/media/mave_FWkv8Y.png",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-10-20T10:02:30.000000Z",
+        "updated_at": "2024-10-20T13:40:20.000000Z",
+        "media_files": {
+          "id": 647,
+          "title": "60-04.png",
+          "file_name": "mave_3sUcg2.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_3sUcg2.png",
+          "file_size": 638235,
+          "tags": null,
+          "created_at": "2024-10-20T10:34:12.000000Z",
+          "updated_at": "2024-10-20T10:34:12.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "type": "card",
+    "title_en": "Two Payment Deposit Pension Scheme With Profit (Plan-14)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      186
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-10-20T10:29:44.000000Z",
+    "updated_at": "2024-10-20T11:25:34.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 186,
+        "page_name": "AKOK Bima",
+        "media_ids": 654,
+        "title_en": "Two Payment Deposit Pension Scheme With Profit (Plan-14)",
+        "title_bn": "Two Payment Deposit Pension Scheme With Profit (Plan-14)",
+        "description_en": "<p>Two Payment Deposit Pension Scheme With Profit (Plan-14)</p>",
+        "description_bn": "<p>Two Payment Deposit Pension Scheme With Profit (Plan-14)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_RyQFhu.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-10-20T10:28:50.000000Z",
+        "updated_at": "2025-03-09T05:54:52.000000Z",
+        "media_files": {
+          "id": 654,
+          "title": "14-04.png",
+          "file_name": "mave_k8H5jH.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_k8H5jH.png",
+          "file_size": 958550,
+          "tags": null,
+          "created_at": "2024-10-22T10:54:17.000000Z",
+          "updated_at": "2024-10-22T10:54:17.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "type": "card",
+    "title_en": "Annuity Plan Without Profits (Plan-13)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      185
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-10-20T10:30:51.000000Z",
+    "updated_at": "2024-10-20T11:23:33.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 185,
+        "page_name": "AKOK Bima",
+        "media_ids": 652,
+        "title_en": "Annuity Plan Without Profits (Plan-13)",
+        "title_bn": "Annuity Plan Without Profits (Plan-13)",
+        "description_en": "<p>Annuity Plan </p>",
+        "description_bn": "<p>Annuity Plan Without Profits (Plan-13)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_9iRUah.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-10-20T10:27:47.000000Z",
+        "updated_at": "2025-03-09T06:08:42.000000Z",
+        "media_files": {
+          "id": 652,
+          "title": "13-04.png",
+          "file_name": "mave_aVXX3a.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_aVXX3a.png",
+          "file_size": 1030431,
+          "tags": null,
+          "created_at": "2024-10-22T10:45:35.000000Z",
+          "updated_at": "2024-10-22T10:45:35.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "type": "card",
+    "title_en": "Endowment Insurance With Guaranteed Bonus (Plan-01)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      77
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-10-20T12:59:38.000000Z",
+    "updated_at": "2024-10-20T12:59:38.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 77,
+        "page_name": "AKOK Bima",
+        "media_ids": 159,
+        "title_en": "Endowment Insurance With Guaranteed Bonus (Plan-01)",
+        "title_bn": "Endowment Insurance With Guaranteed Bonus (Plan-01)",
+        "description_en": "<p><br></p>",
+        "description_bn": "<p><br></p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_8lZyl4.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-05-28T13:51:14.000000Z",
+        "updated_at": "2025-03-13T08:47:59.000000Z",
+        "media_files": {
+          "id": 159,
+          "title": "Plan-01.png",
+          "file_name": "mave_2QXnnZ.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_2QXnnZ.png",
+          "file_size": 190983,
+          "tags": null,
+          "created_at": "2024-05-28T12:29:13.000000Z",
+          "updated_at": "2024-05-28T12:29:13.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "type": "card",
+    "title_en": "Sandhani Deposit Pension Scheme (Takaful) (Plan-30)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      187
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-10-20T14:00:58.000000Z",
+    "updated_at": "2024-10-20T14:00:58.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 187,
+        "page_name": "Takaful",
+        "media_ids": 658,
+        "title_en": "Sandhani Deposit Pension Scheme (Takaful) (Plan-30)",
+        "title_bn": "Sandhani Deposit Pension Scheme (Takaful) (Plan-30)",
+        "description_en": "<p>Sandhani Deposit Pension Scheme (Takaful) (Plan-30)</p>",
+        "description_bn": "<p>Sandhani Deposit Pension Scheme (Takaful) (Plan-30)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_Tjm9Fx.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-10-20T13:59:20.000000Z",
+        "updated_at": "2025-03-09T05:47:11.000000Z",
+        "media_files": {
+          "id": 658,
+          "title": "30-04.png",
+          "file_name": "mave_GL2K2V.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_GL2K2V.png",
+          "file_size": 871962,
+          "tags": null,
+          "created_at": "2024-10-22T11:11:21.000000Z",
+          "updated_at": "2024-10-22T11:11:21.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "type": "card",
+    "title_en": "Individual Pension Scheme Without Profit (Plan-07)",
+    "title_bn": null,
+    "description_en": null,
+    "description_bn": null,
+    "media_ids": [],
+    "card_ids": [
+      189
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-11-03T11:19:31.000000Z",
+    "updated_at": "2024-11-03T11:20:04.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 189,
+        "page_name": "AKOK Bima",
+        "media_ids": 235,
+        "title_en": "Individual Pension Scheme Without Profit (Plan-07)",
+        "title_bn": "Individual Pension Scheme Without Profit (Plan-07)",
+        "description_en": "<p>Individual Pension Scheme Without Profit (Plan-07)</p>",
+        "description_bn": "<p>Individual Pension Scheme Without Profit (Plan-07)</p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_0THQ2H.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2024-11-03T11:11:58.000000Z",
+        "updated_at": "2025-02-19T07:21:35.000000Z",
+        "media_files": {
+          "id": 235,
+          "title": "Individual Pension Scheme .png",
+          "file_name": "mave_V9Fkqs.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_V9Fkqs.png",
+          "file_size": 178594,
+          "tags": null,
+          "created_at": "2024-06-04T10:22:47.000000Z",
+          "updated_at": "2024-06-04T10:22:47.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "type": "image",
+    "title_en": "গ্রুপ বীমার আওতায় মৃত্যু দাবি বাবদ ১৬ লক্ষ টাকার চেক হস্তান্তর",
+    "title_bn": "গ্রুপ বীমার আওতায় মৃত্যু দাবি বাবদ ১৬ লক্ষ টাকার চেক হস্তান্তর",
+    "description_en": "<p>মাওলানা ভাষানী বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়ের দুইজন ডেপুটি রেজিস্ট্রারের গ্রুপ বীমার আওতায় মৃত্যু দাবি বাবদ ১৬ লক্ষ টাকার চেক হস্তান্তর করেছে সন্ধানী লাইফ ইন্সুরেন্স কোম্পানি লিমিটেড। মাওলানা ভাসানী বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়ের উপাচার্য অধ্যাপক ডাক্তার আনোয়ারুল আজীম আকন্দের কাছে চেক হস্তান্তর করেন সন্ধানী লাইফ ইন্সুরেন্স কোম্পানি লিমিটেড এর প্রধান নির্বাহী কর্মকর্তা জনাব নিমাই কুমার সাহা। অনুষ্ঠানের আয়োজকরা জানান দেশের সনামধন্য এ বিশ্ববিদ্যালয়ের সাথে সন্ধানী লাইফ ইন্সুরেন্স কোম্পানি লিমিটেডের ২০১০ সাল থেকে গ্রুপ বীমা চুক্তি রয়েছে। অনুষ্ঠানে উপস্থিত ছিলেন বিশ্ববিদ্যালয়ের রেজিস্ট্রার ড. মোঃ তৌহিদুল ইসলাম, হিসাব বিভাগের পরিচালক মোঃ মহিউদ্দিন আহমেদ, সন্ধানী লাইফ ইন্সুরেন্স কোম্পানীর অতিরিক্ত ব্যবস্থাপনা পরিচালক আলহাজ্ব ইদ্রিস মিয়া তালুকদার সহ সংশ্লিষ্টরা।</p>",
+    "description_bn": "<p>মাওলানা ভাষানী বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়ের দুইজন ডেপুটি রেজিস্ট্রারের গ্রুপ বীমার আওতায় মৃত্যু দাবি বাবদ ১৬ লক্ষ টাকার চেক হস্তান্তর করেছে সন্ধানী লাইফ ইন্সুরেন্স কোম্পানি লিমিটেড। মাওলানা ভাসানী বিজ্ঞান ও প্রযুক্তি বিশ্ববিদ্যালয়ের উপাচার্য অধ্যাপক ডাক্তার আনোয়ারুল আজীম আকন্দের কাছে চেক হস্তান্তর করেন সন্ধানী লাইফ ইন্সুরেন্স কোম্পানি লিমিটেড এর প্রধান নির্বাহী কর্মকর্তা জনাব নিমাই কুমার সাহা। অনুষ্ঠানের আয়োজকরা জানান দেশের সনামধন্য এ বিশ্ববিদ্যালয়ের সাথে সন্ধানী লাইফ ইন্সুরেন্স কোম্পানি লিমিটেডের ২০১০ সাল থেকে গ্রুপ বীমা চুক্তি রয়েছে। অনুষ্ঠানে উপস্থিত ছিলেন বিশ্ববিদ্যালয়ের রেজিস্ট্রার ড. মোঃ তৌহিদুল ইসলাম, হিসাব বিভাগের পরিচালক মোঃ মহিউদ্দিন আহমেদ, সন্ধানী লাইফ ইন্সুরেন্স কোম্পানীর অতিরিক্ত ব্যবস্থাপনা পরিচালক আলহাজ্ব ইদ্রিস মিয়া তালুকদার সহ সংশ্লিষ্টরা।</p>",
+    "media_ids": [
+      793
+    ],
+    "card_ids": [],
+    "additional": {
+      "tags": []
+    },
+    "status": 0,
+    "created_at": "2025-02-04T04:49:13.000000Z",
+    "updated_at": "2025-02-04T04:49:33.000000Z",
+    "medias": [
+      {
+        "id": 793,
+        "title": null,
+        "file_name": "mave_i99c0S",
+        "file_type": "video/mp4",
+        "file_path": "media/mave_i99c0S.mp4",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2025-02-04T04:33:11.000000Z",
+        "updated_at": "2025-02-04T04:33:11.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 79,
+    "type": "card",
+    "title_en": "Joint Life Endowment Insurance With Profit (Plan-02)",
+    "title_bn": "Joint Life Endowment Insurance With Profit (Plan-02)",
+    "description_en": "<p>Joint Life Endowment Insurance With Profit (Plan-02)</p>",
+    "description_bn": "<p>Joint Life Endowment Insurance With Profit (Plan-02)</p>",
+    "media_ids": [],
+    "card_ids": [
+      210
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-03-11T09:23:18.000000Z",
+    "updated_at": "2025-03-11T09:23:18.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 210,
+        "page_name": "AKOK Bima",
+        "media_ids": 644,
+        "title_en": "Joint Life Endowment Insurance With Profit (Plan-02)",
+        "title_bn": "Joint Life Endowment Insurance With Profit (Plan-02)",
+        "description_en": "<p><br></p>",
+        "description_bn": "<p><br></p>",
+        "link_url": "https://backend.sandhanilife.com/media/mave_G1EGG7.png",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2025-03-11T09:21:56.000000Z",
+        "updated_at": "2025-03-16T08:10:07.000000Z",
+        "media_files": {
+          "id": 644,
+          "title": "81-04.png",
+          "file_name": "mave_oJq54m.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_oJq54m.png",
+          "file_size": 590045,
+          "tags": null,
+          "created_at": "2024-10-20T10:19:30.000000Z",
+          "updated_at": "2024-10-20T10:19:30.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "type": "image",
+    "title_en": "জনপ্রিয় অভিনেতা শামস সুমনের গ্রুপ বীমার আওতায় মৃত্যু দাবীর চেক হস্তান্তর",
+    "title_bn": "জনপ্রিয় অভিনেতা শামস সুমনের গ্রুপ বীমার আওতায় মৃত্যু দাবীর চেক হস্তান্তর",
+    "description_en": "<p>গত ২৫.০৩.২০২৬ইং তারিখে ইমপ্রেস টেলিফিল্ম লিমিটেড (চ্যানেল আই) এর কনফারেন্স রুমে জনপ্রিয় অভিনেতা মরহুম শামস ইবনে ওবায়েদ (শামস সুমন) এর মৃত্যুদাবীর ২,০০,০০০/- টাকার চেক মাত্র দুই কর্মদিবসের মধ্যে চ্যানেল আই কর্তৃপক্ষ ও শামস ইবনে ওবায়েদ (শামস সুমন) এর স্ত্রীর নিকট হস্তান্তর করা হয়। চেক হস্তান্তর অনুষ্ঠানে উপস্থিত ছিলেন সন্ধানী লাইফ ইনস্যুরেন্স কোম্পানীর মাননীয় চেয়ারম্যান জনাব মজিবুল ইসলাম, কোম্পানীর মূখ্য নির্বাহী কর্মকর্তা জনাব নিমাই কুমার সাহা, অতিরিক্ত ব্যবস্থাপনা পরিচালক জনাব আলহাজ্ব ইদ্রিস মিয়া তালুকদার ও কোম্পানীর সিনিয়র ভাইস প্রেসিডেন্ট জনাব মো: ফজলুর রহমান । এছাড়া আরো উপস্থিত ছিলেন চ্যানেল আইয়ের জনপ্রিয় গণমাধ্যম ব্যক্তিত্ব ও চ্যানেল আইয়ের বার্তা প্রধান জনাব শাইখ সিরাজ এবং মরহুমের স্ত্রী সহ পরিবারের সদস্যগণ।</p>",
+    "description_bn": "<p>গত ২৫.০৩.২০২৬ইং তারিখে ইমপ্রেস টেলিফিল্ম লিমিটেড (চ্যানেল আই) এর কনফারেন্স রুমে জনপ্রিয় অভিনেতা মরহুম শামস ইবনে ওবায়েদ (শামস সুমন) এর মৃত্যুদাবীর ২,০০,০০০/- টাকার চেক মাত্র দুই কর্মদিবসের মধ্যে চ্যানেল আই কর্তৃপক্ষ ও শামস ইবনে ওবায়েদ (শামস সুমন) এর স্ত্রীর নিকট হস্তান্তর করা হয়। চেক হস্তান্তর অনুষ্ঠানে উপস্থিত ছিলেন সন্ধানী লাইফ ইনস্যুরেন্স কোম্পানীর মাননীয় চেয়ারম্যান জনাব মজিবুল ইসলাম, কোম্পানীর মূখ্য নির্বাহী কর্মকর্তা জনাব নিমাই কুমার সাহা, অতিরিক্ত ব্যবস্থাপনা পরিচালক জনাব আলহাজ্ব ইদ্রিস মিয়া তালুকদার ও কোম্পানীর সিনিয়র ভাইস প্রেসিডেন্ট জনাব মো: ফজলুর রহমান । এছাড়া আরো উপস্থিত ছিলেন চ্যানেল আইয়ের জনপ্রিয় গণমাধ্যম ব্যক্তিত্ব ও চ্যানেল আইয়ের বার্তা প্রধান জনাব শাইখ সিরাজ এবং মরহুমের স্ত্রী সহ পরিবারের সদস্যগণ।</p>",
+    "media_ids": [
+      1320
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2026-04-02T11:18:22.000000Z",
+    "updated_at": "2026-04-02T11:18:22.000000Z",
+    "medias": [
+      {
+        "id": 1320,
+        "title": "WhatsApp Video 2026-04-02 at 4.54.49 PM.mp4",
+        "file_name": "mave_PcQBNn.mp4",
+        "file_type": "video/mp4",
+        "file_path": "media/mave_PcQBNn.mp4",
+        "file_size": 70181880,
+        "tags": null,
+        "created_at": "2026-04-02T11:10:19.000000Z",
+        "updated_at": "2026-04-02T11:10:19.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 81,
+    "type": "image",
+    "title_en": "কক্সবাজার সম্মেলন - ২০২৬",
+    "title_bn": "কক্সবাজার সম্মেলন - ২০২৬",
+    "description_en": "<p>কক্সবাজার সম্মেলন - ২০২৬</p>",
+    "description_bn": "<p>কক্সবাজার সম্মেলন - ২০২৬</p>",
+    "media_ids": [
+      1331
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2026-04-12T06:41:42.000000Z",
+    "updated_at": "2026-04-12T06:41:42.000000Z",
+    "medias": [
+      {
+        "id": 1331,
+        "title": null,
+        "file_name": "mave_hppYIG",
+        "file_type": "video/mp4",
+        "file_path": "media/mave_hppYIG.mp4",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2026-04-12T06:39:51.000000Z",
+        "updated_at": "2026-04-12T06:39:51.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 82,
+    "type": "image",
+    "title_en": "কক্সবাজার সম্মেলন - ২০২৬",
+    "title_bn": "কক্সবাজার সম্মেলন - ২০২৬",
+    "description_en": "<h3>কক্সবাজার সম্মেলন - ২০২৬</h3><p><br></p>",
+    "description_bn": "<h3>কক্সবাজার সম্মেলন - ২০২৬</h3>",
+    "media_ids": [
+      1332
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2026-04-13T05:27:16.000000Z",
+    "updated_at": "2026-04-13T05:27:16.000000Z",
+    "medias": [
+      {
+        "id": 1332,
+        "title": null,
+        "file_name": "mave_WW8OMB",
+        "file_type": "video/mp4",
+        "file_path": "media/mave_WW8OMB.mp4",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2026-04-13T05:26:09.000000Z",
+        "updated_at": "2026-04-13T05:26:09.000000Z"
+      }
+    ],
+    "cards": []
+  }
+]

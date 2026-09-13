@@ -1,0 +1,482 @@
+[
+  {
+    "id": 1,
+    "type": "image",
+    "title_en": "Mountain Dew",
+    "title_bn": "Mountain Dew",
+    "description_en": "<p>Mountain Dew is a bold, citrus-flavored carbonated soft drink known for its energizing taste and high caffeine kick. With its vibrant flavor and refreshing fizz, it delivers an intense burst of citrus sweetness that keeps you charged and ready for action.</p>",
+    "description_bn": "<p>Mountain Dew is a bold, citrus-flavored carbonated soft drink known for its energizing taste and high caffeine kick. With its vibrant flavor and refreshing fizz, it delivers an intense burst of citrus sweetness that keeps you charged and ready for action.</p>",
+    "media_ids": [
+      5
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2026-02-16T05:37:12.000000Z",
+    "updated_at": "2026-02-16T05:40:09.000000Z",
+    "medias": [
+      {
+        "id": 5,
+        "title": "Mountain_Dew_logo.svg.png",
+        "file_name": "mave_BjqW2d.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_BjqW2d.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2026-02-16T05:39:58.000000Z",
+        "updated_at": "2026-02-16T05:39:58.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 3,
+    "type": "image",
+    "title_en": "Agility",
+    "title_bn": "Agility",
+    "description_en": "<p><span style=\"color: rgb(0, 114, 207);\">We are agile like water, flowing through uncertainties with determination to support farmers and marginalized communities.</span></p>",
+    "description_bn": "<p><span style=\"color: rgb(0, 114, 207);\">We are agile like water, flowing through uncertainties with determination to support farmers and marginalized communities.</span></p>",
+    "media_ids": [
+      60
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2026-02-16T06:02:03.000000Z",
+    "updated_at": "2026-02-26T04:28:26.000000Z",
+    "medias": [
+      {
+        "id": 60,
+        "title": "11-removebg-preview.png",
+        "file_name": "mave_p8LZ2S.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_p8LZ2S.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2026-02-26T04:28:00.000000Z",
+        "updated_at": "2026-02-26T04:28:00.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 4,
+    "type": "image",
+    "title_en": "Agility",
+    "title_bn": "Agility",
+    "description_en": "<p><span style=\"color: rgb(0, 114, 207);\">We are agile like water, flowing through uncertainties with determination to support farmers and marginalized communities.</span></p>",
+    "description_bn": "<p><span style=\"color: rgb(0, 114, 207);\">We are agile like water, flowing through uncertainties with determination to support farmers and marginalized communities.</span></p>",
+    "media_ids": [
+      60
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2026-02-26T04:37:58.000000Z",
+    "updated_at": "2026-02-26T04:37:58.000000Z",
+    "medias": [
+      {
+        "id": 60,
+        "title": "11-removebg-preview.png",
+        "file_name": "mave_p8LZ2S.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_p8LZ2S.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2026-02-26T04:28:00.000000Z",
+        "updated_at": "2026-02-26T04:28:00.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 5,
+    "type": "card",
+    "title_en": "Values",
+    "title_bn": "Values",
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "media_ids": [],
+    "card_ids": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2026-02-26T04:38:50.000000Z",
+    "updated_at": "2026-03-01T10:02:15.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 1,
+        "page_name": null,
+        "media_ids": 60,
+        "title_en": "Agility",
+        "title_bn": null,
+        "description_en": "<p><span style=\"color: rgb(0, 114, 207);\">We are agile like water, flowing through uncertainties with determination to support farmers and marginalized communities.</span></p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2026-02-26T04:30:26.000000Z",
+        "updated_at": "2026-02-26T04:30:26.000000Z",
+        "media_files": {
+          "id": 60,
+          "title": "11-removebg-preview.png",
+          "file_name": "mave_p8LZ2S.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_p8LZ2S.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2026-02-26T04:28:00.000000Z",
+          "updated_at": "2026-02-26T04:28:00.000000Z"
+        }
+      },
+      {
+        "id": 2,
+        "page_name": null,
+        "media_ids": 61,
+        "title_en": "Learning",
+        "title_bn": null,
+        "description_en": "<p><span style=\"color: rgb(0, 114, 207);\">We are curious like a new bud, growing beyond our comfort zone, with strong roots and a zeal to thrive despite challenges.</span></p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2026-02-26T04:31:14.000000Z",
+        "updated_at": "2026-02-26T04:31:14.000000Z",
+        "media_files": {
+          "id": 61,
+          "title": "22-removebg-preview.png",
+          "file_name": "mave_1iKLjI.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_1iKLjI.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2026-02-26T04:31:06.000000Z",
+          "updated_at": "2026-02-26T04:31:06.000000Z"
+        }
+      },
+      {
+        "id": 3,
+        "page_name": null,
+        "media_ids": 62,
+        "title_en": "Accountability",
+        "title_bn": null,
+        "description_en": "<p><span style=\"color: rgb(0, 114, 207);\">We are as steadfast as a mountain, taking full responsibility for our actions and cultivating our relationships diligently.</span></p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2026-02-26T04:31:57.000000Z",
+        "updated_at": "2026-02-26T04:31:57.000000Z",
+        "media_files": {
+          "id": 62,
+          "title": "33-removebg-preview.png",
+          "file_name": "mave_mtGAHj.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_mtGAHj.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2026-02-26T04:31:47.000000Z",
+          "updated_at": "2026-02-26T04:31:47.000000Z"
+        }
+      },
+      {
+        "id": 4,
+        "page_name": null,
+        "media_ids": 63,
+        "title_en": "Innovation",
+        "title_bn": null,
+        "description_en": "<p><span style=\"color: rgb(0, 114, 207);\">We are open-minded and eager to understand complex issues, approaching the unknown with an explorer's sense of adventure.</span></p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2026-02-26T04:32:41.000000Z",
+        "updated_at": "2026-02-26T04:32:41.000000Z",
+        "media_files": {
+          "id": 63,
+          "title": "44-removebg-preview.png",
+          "file_name": "mave_HPzb2v.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_HPzb2v.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2026-02-26T04:32:32.000000Z",
+          "updated_at": "2026-02-26T04:32:32.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "type": "card",
+    "title_en": "Your donation could help:",
+    "title_bn": ".",
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "media_ids": [],
+    "card_ids": [
+      10,
+      11,
+      12
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2026-03-03T04:26:44.000000Z",
+    "updated_at": "2026-03-03T04:26:44.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 10,
+        "page_name": null,
+        "media_ids": 106,
+        "title_en": "Support conservation efforts in over 100 countries",
+        "title_bn": null,
+        "description_en": "<p>.</p>",
+        "description_bn": "<p>.</p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2026-03-03T04:22:30.000000Z",
+        "updated_at": "2026-03-03T04:22:30.000000Z",
+        "media_files": {
+          "id": 106,
+          "title": "Jungle+green.png",
+          "file_name": "mave_DMKG4t.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_DMKG4t.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2026-03-03T04:22:09.000000Z",
+          "updated_at": "2026-03-03T04:22:09.000000Z"
+        }
+      },
+      {
+        "id": 11,
+        "page_name": null,
+        "media_ids": 105,
+        "title_en": "Fuel solutions to reduce CO₂ emissions",
+        "title_bn": null,
+        "description_en": "<p>.</p>",
+        "description_bn": "<p>.</p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2026-03-03T04:24:26.000000Z",
+        "updated_at": "2026-03-03T04:24:26.000000Z",
+        "media_files": {
+          "id": 105,
+          "title": "reduce-pollution.webp",
+          "file_name": "mave_FNw3rq.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_FNw3rq.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2026-03-03T04:22:09.000000Z",
+          "updated_at": "2026-03-03T04:22:09.000000Z"
+        }
+      },
+      {
+        "id": 12,
+        "page_name": null,
+        "media_ids": 104,
+        "title_en": "Empower indigenous and local communities to shape conservation",
+        "title_bn": null,
+        "description_en": "<p>.</p>",
+        "description_bn": "<p>.</p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2026-03-03T04:25:00.000000Z",
+        "updated_at": "2026-03-03T04:25:00.000000Z",
+        "media_files": {
+          "id": 104,
+          "title": "protect-nature.webp",
+          "file_name": "mave_drXPeY.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_drXPeY.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2026-03-03T04:22:08.000000Z",
+          "updated_at": "2026-03-03T04:22:08.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "type": "image",
+    "title_en": "Other ways you can support us",
+    "title_bn": ".",
+    "description_en": "<p><span style=\"color: rgb(17, 17, 17);\">.</span></p>",
+    "description_bn": "<p><span style=\"color: rgb(17, 17, 17);\">.</span></p>",
+    "media_ids": [
+      119,
+      120
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2026-03-03T04:59:55.000000Z",
+    "updated_at": "2026-03-07T07:16:21.000000Z",
+    "medias": [
+      {
+        "id": 119,
+        "title": "BRAC_ShamimHossain-8594.jpg",
+        "file_name": "mave_G5z3fi.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_G5z3fi.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2026-03-07T07:14:12.000000Z",
+        "updated_at": "2026-03-07T07:14:12.000000Z"
+      },
+      {
+        "id": 120,
+        "title": "BRAC_ShamimHossain-8754.jpg",
+        "file_name": "mave_7bi08f.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_7bi08f.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2026-03-07T07:14:45.000000Z",
+        "updated_at": "2026-03-07T07:14:45.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 9,
+    "type": "image",
+    "title_en": "Other ways you can support us",
+    "title_bn": ".",
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "media_ids": [
+      119,
+      120
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2026-03-07T07:26:04.000000Z",
+    "updated_at": "2026-03-07T07:26:25.000000Z",
+    "medias": [
+      {
+        "id": 119,
+        "title": "BRAC_ShamimHossain-8594.jpg",
+        "file_name": "mave_G5z3fi.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_G5z3fi.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2026-03-07T07:14:12.000000Z",
+        "updated_at": "2026-03-07T07:14:12.000000Z"
+      },
+      {
+        "id": 120,
+        "title": "BRAC_ShamimHossain-8754.jpg",
+        "file_name": "mave_7bi08f.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_7bi08f.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2026-03-07T07:14:45.000000Z",
+        "updated_at": "2026-03-07T07:14:45.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 10,
+    "type": "card",
+    "title_en": "Other ways you can support us",
+    "title_bn": ".",
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "media_ids": [],
+    "card_ids": [
+      13,
+      14
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2026-03-07T07:27:32.000000Z",
+    "updated_at": "2026-03-07T07:27:32.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 13,
+        "page_name": null,
+        "media_ids": 119,
+        "title_en": "Sponsor a Farmer",
+        "title_bn": null,
+        "description_en": "<p>Support a small or landless farmer with the resources they need to cultivate their land and secure their livelihood. Your sponsorship helps provide access to seeds, water-efficient farming solutions, training, and guidance—enabling farmers to grow food, sustain their families, and build a more resilient future.</p>",
+        "description_bn": null,
+        "link_url": "/FIND OUT MORE",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2026-03-03T04:35:13.000000Z",
+        "updated_at": "2026-03-07T08:26:31.000000Z",
+        "media_files": {
+          "id": 119,
+          "title": "BRAC_ShamimHossain-8594.jpg",
+          "file_name": "mave_G5z3fi.jpg",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_G5z3fi.jpg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2026-03-07T07:14:12.000000Z",
+          "updated_at": "2026-03-07T07:14:12.000000Z"
+        }
+      },
+      {
+        "id": 14,
+        "page_name": null,
+        "media_ids": 120,
+        "title_en": "Partner With Farmers",
+        "title_bn": null,
+        "description_en": "<p>Join hands with Barind to strengthen farming communities across the region. Through partnerships and shared support, we can expand sustainable agriculture, improve access to essential resources, and help farmers adapt to climate challenges while protecting the land they depend on.</p>",
+        "description_bn": null,
+        "link_url": "/FIND OUT MORE",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2026-03-03T04:37:36.000000Z",
+        "updated_at": "2026-03-07T08:26:59.000000Z",
+        "media_files": {
+          "id": 120,
+          "title": "BRAC_ShamimHossain-8754.jpg",
+          "file_name": "mave_7bi08f.jpg",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_7bi08f.jpg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2026-03-07T07:14:45.000000Z",
+          "updated_at": "2026-03-07T07:14:45.000000Z"
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,28 @@
+[
+    {
+        "id": 100,
+        "menu": "E-Labs",
+        "title": "E-Labs",
+        "icon": "/icons/headless/lab.svg",
+        "submenu": [
+            {
+                "id": 101,
+                "icon": "/icons/headless/cms.svg",
+                "link": "/diy-cms",
+                "title": "Build CMS"
+            },
+            {
+                "id": 102,
+                "icon": "/icons/headless/response.svg",
+                "link": "/doc-to-api",
+                "title": "Doc to API"
+            },
+            {
+                "id": 103,
+                "icon": "/icons/headless/headlessai.png",
+                "link": "/build-with-ai",
+                "title": "Build with AI"
+            }
+        ]
+    }
+]

@@ -1,0 +1,349 @@
+// components/PageBuilder/Components/FooterComponent.jsx
+
+import React, { useState, useEffect } from "react";
+import {
+  Button,
+  Typography,
+  Image,
+  Popconfirm,
+  Space,
+  Tooltip,
+  Drawer,
+  Switch,
+  Divider,
+  Modal,
+  message,
+  Input,
+} from "antd";
+import {
+  DeleteOutlined,
+  EditOutlined,
+  ExportOutlined,
+  CopyFilled,
+  DragOutlined,
+  SettingOutlined,
+  CheckOutlined,
+  CloseOutlined,
+} from "@ant-design/icons";
+import FooterSelectionModal from "../Modals/FooterSelectionModal";
+import ComponentEditButton from "./components/ComponentEditButton";
+import ComponentDuplicateButton from "./components/ComponentDuplicateButton";
+import ComponentDeleteButton from "./components/ComponentDeleteButton";
+import ComponentRenderer from "./ComponentRenderer";
+import instance from "../../../axios";
+
+const { Paragraph, Text } = Typography;
+
+const FooterComponent = ({
+  component,
+  updateComponent,
+  deleteComponent,
+  preview = false,
+  onDuplicateElement,
+}) => {
+  const [isModalVisible, setIsModalVisible] = useState(false);
+  const [footerData, setFooterData] = useState(component._headless);
+  const [selectedFooterData, setSelectedFooterData] = useState(null);
+  const [isEditing, setIsEditing] = useState(false);
+  const [showConfig, setShowConfig] = useState(false);
+  const [altTitle, setAltTitle] = useState(component._headless?.altTitle || "");
+  const [footerConfig, setFooterConfig] = useState({
+    showLogo: true,
+    showSocialLinks: true,
+    showContactInfo: true,
+    showCopyright: true,
+  });
+
+  useEffect(() => {
+    setFooterData(component._headless);
+    setAltTitle(component._headless?.altTitle || "");
+  }, [component._headless]);
+
+  const handleSelectFooter = (selectedFooter) => {
+    setSelectedFooterData(selectedFooter);
+    setIsModalVisible(false);
+    setIsEditing(true);
+    setShowConfig(true);
+  };
+
+  const handleSubmit = () => {
+    if (!selectedFooterData) {
+      Modal.error({
+        title: "Validation Error",
+        content: "No footer selected.",
+      });
+      return;
+    }
+
+    updateComponent({
+      ...component,
+      _headless: {
+        ...selectedFooterData,
+        config: footerConfig,
+        altTitle,
+      },
+      id: selectedFooterData.id,
+    });
+    setFooterData({
+      ...selectedFooterData,
+      altTitle,
+    });
+    setSelectedFooterData(null);
+    setIsEditing(false);
+    setShowConfig(false);
+    message.success("Footer updated successfully.");
+  };
+
+  const handleCancel = () => {
+    setSelectedFooterData(null);
+    setIsEditing(false);
+    setShowConfig(false);
+    message.info("Footer update canceled.");
+  };
+
+  const handleDelete = () => {
+    deleteComponent();
+  };
+
+  const renderFooterContent = (footer) => {
+    if (!footer?.body?.[0]?.data) return null;
+
+    const displayTitle = altTitle || footer.page_name_en;
+
+    return (
+      <div className="space-y-4">
+        <h2 className="text-xl font-semibold text-theme">{displayTitle}</h2>
+        {footer.body[0].data.map((comp, index) => (
+          <ComponentRenderer
+            key={comp._id || index}
+            component={comp}
+            index={index}
+            sectionIndex={0}
+            preview={true}
+          />
+        ))}
+      </div>
+    );
+  };
+
+  if (preview) {
+    return (
+      <div className="preview-footer-component p-4 bg-gray-100 rounded-md">
+        {footerData ? (
+          <div className="p-4 border rounded-md bg-white">
+            {renderFooterContent(footerData)}
+          </div>
+        ) : (
+          <p className="text-gray-500">No footer selected.</p>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div className="border p-4 rounded-md bg-white">
+      <div className="flex justify-between items-center mb-4">
+        <div className="flex items-center gap-2">
+          <DragOutlined className="text-2xl border rounded-md p-1" />
+          <h3 className="text-xl font-semibold">Footer Component</h3>
+        </div>
+        <div className="flex items-center gap-2">
+          {!isEditing ? (
+            <Space>
+              {footerData && (
+                <ComponentEditButton
+                  onClick={() => setIsModalVisible(true)}
+                  title="Edit footer"
+                />
+              )}
+              <ComponentDuplicateButton
+                onClick={onDuplicateElement}
+                title="Duplicate component"
+              />
+              <ComponentDeleteButton
+                onConfirm={handleDelete}
+                title="Delete component"
+                confirmTitle="Are you sure you want to delete this component?"
+              />
+            </Space>
+          ) : (
+            <Space>
+              <Tooltip title="Save Changes">
+                <Button
+                  icon={<CheckOutlined />}
+                  onClick={handleSubmit}
+                  className="headlessbutton"
+                />
+              </Tooltip>
+              <Tooltip title="Cancel">
+                <Button
+                  icon={<CloseOutlined />}
+                  onClick={handleCancel}
+                  className="headlesscancelbutton"
+                />
+              </Tooltip>
+            </Space>
+          )}
+        </div>
+      </div>
+
+      <div className="flex flex-col md:flex-row items-start gap-4">
+        <div
+          className={`flex flex-col ${isEditing && selectedFooterData ? "w-full md:w-1/2" : "w-full"}`}
+        >
+          {footerData && isEditing && (
+            <h4 className="mb-2 text-md font-semibold">Current Footer</h4>
+          )}
+          {footerData ? (
+            <div className="w-full p-4 border rounded-md bg-white">
+              {renderFooterContent(footerData)}
+            </div>
+          ) : (
+            <ComponentEditButton
+              onClick={() => setIsModalVisible(true)}
+              title="Select footer"
+            />
+          )}
+        </div>
+
+        {isEditing && selectedFooterData && (
+          <div className="flex flex-col w-full md:w-1/2">
+            <h4 className="mb-2 text-md font-semibold">Selected Footer</h4>
+            <div className="w-full p-4 border rounded-md bg-white">
+              {renderFooterContent(selectedFooterData)}
+            </div>
+          </div>
+        )}
+      </div>
+
+      <FooterSelectionModal
+        isVisible={isModalVisible}
+        onClose={() => setIsModalVisible(false)}
+        onSelectFooter={handleSelectFooter}
+      />
+
+      <Drawer
+        title="Footer Configuration"
+        placement="right"
+        onClose={handleCancel}
+        open={showConfig && isEditing}
+        width={400}
+        extra={
+          <Space>
+            <Button className="headlesscancelbutton" onClick={handleCancel}>Cancel</Button>
+            <Button type="primary" onClick={handleSubmit}>
+              Save
+            </Button>
+          </Space>
+        }
+      >
+        <div className="space-y-6 p-4">
+          <div>
+            <Paragraph strong className="text-lg">
+              Multi-Language Settings
+            </Paragraph>
+            <div className="mt-4 space-y-4">
+              <div className="flex flex-col gap-2">
+                <div>
+                  <Paragraph className="font-medium mb-1">
+                    Alternative Title
+                  </Paragraph>
+                  <Paragraph type="secondary" className="text-xs mb-0">
+                    Enter alternative title to display instead of default footer
+                    title
+                  </Paragraph>
+                </div>
+                <Input
+                  placeholder="Enter alternative title"
+                  value={altTitle}
+                  onChange={(e) => setAltTitle(e.target.value)}
+                />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <Paragraph strong className="text-lg">
+              Display Settings
+            </Paragraph>
+            <div className="mt-4 space-y-4">
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div>
+                  <Paragraph className="font-medium mb-0">Show Logo</Paragraph>
+                  <Paragraph type="secondary" className="text-xs mb-0">
+                    Display the footer logo
+                  </Paragraph>
+                </div>
+                <Switch
+                  checked={footerConfig.showLogo}
+                  onChange={(checked) =>
+                    setFooterConfig({ ...footerConfig, showLogo: checked })
+                  }
+                />
+              </div>
+
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div>
+                  <Paragraph className="font-medium mb-0">
+                    Show Social Links
+                  </Paragraph>
+                  <Paragraph type="secondary" className="text-xs mb-0">
+                    Display social media links
+                  </Paragraph>
+                </div>
+                <Switch
+                  checked={footerConfig.showSocialLinks}
+                  onChange={(checked) =>
+                    setFooterConfig({
+                      ...footerConfig,
+                      showSocialLinks: checked,
+                    })
+                  }
+                />
+              </div>
+
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div>
+                  <Paragraph className="font-medium mb-0">
+                    Show Contact Info
+                  </Paragraph>
+                  <Paragraph type="secondary" className="text-xs mb-0">
+                    Display contact information
+                  </Paragraph>
+                </div>
+                <Switch
+                  checked={footerConfig.showContactInfo}
+                  onChange={(checked) =>
+                    setFooterConfig({
+                      ...footerConfig,
+                      showContactInfo: checked,
+                    })
+                  }
+                />
+              </div>
+
+              <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
+                <div>
+                  <Paragraph className="font-medium mb-0">
+                    Show Copyright
+                  </Paragraph>
+                  <Paragraph type="secondary" className="text-xs mb-0">
+                    Display copyright information
+                  </Paragraph>
+                </div>
+                <Switch
+                  checked={footerConfig.showCopyright}
+                  onChange={(checked) =>
+                    setFooterConfig({ ...footerConfig, showCopyright: checked })
+                  }
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </Drawer>
+    </div>
+  );
+};
+
+export default FooterComponent;

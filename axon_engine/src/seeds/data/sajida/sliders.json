@@ -1,0 +1,3780 @@
+[
+  {
+    "id": 23,
+    "type": "image",
+    "title_en": "SLIC Hero Slider",
+    "title_bn": "SLIC Hero Slider",
+    "description_en": "<p>frwfgsg</p>",
+    "description_bn": "<p>gtegsdghtg</p>",
+    "media_ids": [
+      414,
+      413
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-01-11T16:32:36.000000Z",
+    "updated_at": "2024-10-24T16:58:34.000000Z",
+    "medias": [
+      {
+        "id": 414,
+        "title": "bikes2.webp",
+        "file_name": "mave_tMsk1t.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_tMsk1t.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-23T20:17:25.000000Z",
+        "updated_at": "2024-10-23T20:17:25.000000Z"
+      },
+      {
+        "id": 413,
+        "title": "bikes27.webp",
+        "file_name": "mave_g76Umo.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_g76Umo.webp",
+        "file_size": null,
+        "tags": [
+          "Bike",
+          "Model"
+        ],
+        "created_at": "2024-10-23T20:17:25.000000Z",
+        "updated_at": "2024-12-24T20:14:53.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 33,
+    "type": "card",
+    "title_en": "Slider of images",
+    "title_bn": "Slider of images",
+    "description_en": "<p>Slider of images</p>",
+    "description_bn": "<p>Slider of images</p>",
+    "media_ids": [],
+    "card_ids": [
+      167
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-05-12T16:51:27.000000Z",
+    "updated_at": "2024-05-20T18:54:22.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 167,
+        "page_name": null,
+        "media_ids": 404,
+        "title_en": "terxfyc©√∫",
+        "title_bn": "rsthgrthgbdrtfgrd",
+        "description_en": "<p>rythrtdyhdth</p>",
+        "description_bn": "<p>rythdyfhdythyd</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-28T17:38:44.000000Z",
+        "updated_at": "2024-10-24T17:00:39.000000Z",
+        "media_files": {
+          "id": 404,
+          "title": "bikes9.webp",
+          "file_name": "mave_pZfL7y.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_pZfL7y.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-21T13:41:17.000000Z",
+          "updated_at": "2024-10-21T13:41:17.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "type": "image",
+    "title_en": "eee eee niloy 788787",
+    "title_bn": "eeeeee eee niloy788787",
+    "description_en": "<p>eeeeee&nbsp;eee&nbsp;eee&nbsp;&nbsp;niloy788787</p>",
+    "description_bn": "<p>eeeeee&nbsp;eee&nbsp;eee&nbsp;&nbsp;niloy788787</p>",
+    "media_ids": [
+      400,
+      399,
+      398
+    ],
+    "card_ids": [
+      169,
+      168
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-05-20T17:33:29.000000Z",
+    "updated_at": "2024-10-21T19:24:59.000000Z",
+    "medias": [
+      {
+        "id": 400,
+        "title": "bikes29.webp",
+        "file_name": "mave_YHmZzd.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_YHmZzd.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-21T13:41:16.000000Z",
+        "updated_at": "2024-10-21T13:41:16.000000Z"
+      },
+      {
+        "id": 399,
+        "title": "bikes27.webp",
+        "file_name": "mave_VvcO8z.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_VvcO8z.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-21T13:41:17.000000Z",
+        "updated_at": "2024-10-21T13:41:17.000000Z"
+      },
+      {
+        "id": 398,
+        "title": "bikes8.webp",
+        "file_name": "mave_QZ0x9y.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_QZ0x9y.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-21T13:41:16.000000Z",
+        "updated_at": "2024-10-21T13:41:16.000000Z"
+      }
+    ],
+    "cards": [
+      {
+        "id": 169,
+        "page_name": null,
+        "media_ids": 410,
+        "title_en": "Niloy Niil",
+        "title_bn": "Niloy Niil",
+        "description_en": "<p>Niloy Niil</p>",
+        "description_bn": "<p>Niloy Niil</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-28T17:43:47.000000Z",
+        "updated_at": "2024-10-24T17:00:12.000000Z",
+        "media_files": {
+          "id": 410,
+          "title": "bikes28.webp",
+          "file_name": "mave_XPdjdR.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_XPdjdR.webp",
+          "file_size": null,
+          "tags": [
+            "bikes",
+            "people",
+            "helmet",
+            "car"
+          ],
+          "created_at": "2024-10-23T20:17:25.000000Z",
+          "updated_at": "2024-12-24T20:03:07.000000Z"
+        }
+      },
+      {
+        "id": 168,
+        "page_name": null,
+        "media_ids": 396,
+        "title_en": "safergfsafgsrg",
+        "title_bn": "dsgrdsgsretdgste",
+        "description_en": "<p>dgdstgsdtgh</p>",
+        "description_bn": "<p>sthsdfhs6rthgdfds</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-28T17:42:07.000000Z",
+        "updated_at": "2024-10-24T17:00:27.000000Z",
+        "media_files": {
+          "id": 396,
+          "title": "bikes7.webp",
+          "file_name": "mave_rE2Faz.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_rE2Faz.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-21T13:41:16.000000Z",
+          "updated_at": "2024-10-21T13:41:16.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "type": "image",
+    "title_en": "Arcatec Hero Icon Slider",
+    "title_bn": "Arcatec Hero Icon Slider",
+    "description_en": "<p>Hero Icon Slider</p>",
+    "description_bn": "<p>Hero Icon Slider</p>",
+    "media_ids": [
+      404,
+      403,
+      402
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-05-30T15:53:43.000000Z",
+    "updated_at": "2024-10-21T14:00:50.000000Z",
+    "medias": [
+      {
+        "id": 404,
+        "title": "bikes9.webp",
+        "file_name": "mave_pZfL7y.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_pZfL7y.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-21T13:41:17.000000Z",
+        "updated_at": "2024-10-21T13:41:17.000000Z"
+      },
+      {
+        "id": 403,
+        "title": "Bike Crowd",
+        "file_name": "mave_F1kyTs.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_F1kyTs.webp",
+        "file_size": null,
+        "tags": [
+          "bikes",
+          "people",
+          "helmet",
+          "car"
+        ],
+        "created_at": "2024-10-21T13:41:17.000000Z",
+        "updated_at": "2024-10-23T19:53:19.000000Z"
+      },
+      {
+        "id": 402,
+        "title": "bikes30.webp",
+        "file_name": "mave_jymgk4.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_jymgk4.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-21T13:41:17.000000Z",
+        "updated_at": "2024-10-21T13:41:17.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 38,
+    "type": "card",
+    "title_en": "Corrupti rem non su",
+    "title_bn": "Voluptate error nemo",
+    "description_en": "<p>Nisi excepteur sunt .</p>",
+    "description_bn": "<p>Est dicta lorem sunt.</p>",
+    "media_ids": [],
+    "card_ids": [
+      176,
+      174,
+      172,
+      170
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-10-24T17:02:02.000000Z",
+    "updated_at": "2024-10-24T17:02:02.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 176,
+        "page_name": "Avocado",
+        "media_ids": 409,
+        "title_en": "Residential E",
+        "title_bn": "Residential B",
+        "description_en": "<p>Lorem ipsum dolor adipiscing elit suspendisse varius enim elementum tristique. Duis cursus</p>",
+        "description_bn": "<p>Lorem ipsum dolor adipiscing elit suspendisse varius enim elementum tristique. Duis cursusLorem ipsum dolor adipiscing elit suspendisse varius enim elementum tristique. Duis cursus Lorem ipsum dolor adipiscing elit suspendisse varius enim elementum tristique. Duis cursus Lorem ipsum dolor adipiscing elit suspendisse varius enim elementum tristique. Duis cursus</p>",
+        "link_url": "/team-details?page_id=47&pageName=Team Details",
+        "additional": null,
+        "status": 0,
+        "created_at": "2024-05-30T15:32:11.000000Z",
+        "updated_at": "2024-10-25T15:49:32.000000Z",
+        "media_files": {
+          "id": 409,
+          "title": "bikes22.webp",
+          "file_name": "mave_BUq6ZB.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_BUq6ZB.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-23T20:17:25.000000Z",
+          "updated_at": "2024-10-23T20:17:25.000000Z"
+        }
+      },
+      {
+        "id": 174,
+        "page_name": "Service Details",
+        "media_ids": 401,
+        "title_en": "Commercial",
+        "title_bn": "Commercial",
+        "description_en": "<p>Lorem ipsum dolor adipiscing elit suspendisse varius enim elementum tristique. Duis cursus</p>",
+        "description_bn": "<p>Lorem ipsum dolor adipiscing elit suspendisse varius enim elementum tristique. Duis cursus</p>",
+        "link_url": "/service-details?page_id=45&pageName=Service-Details",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-05-30T15:31:07.000000Z",
+        "updated_at": "2024-10-21T19:57:18.000000Z",
+        "media_files": {
+          "id": 401,
+          "title": "bikes4.webp",
+          "file_name": "mave_eRmyyi.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_eRmyyi.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-21T13:41:17.000000Z",
+          "updated_at": "2024-10-21T13:41:17.000000Z"
+        }
+      },
+      {
+        "id": 172,
+        "page_name": "Products",
+        "media_ids": 418,
+        "title_en": "Atiq Israk Niloy",
+        "title_bn": "Atiq Israk Niloy",
+        "description_en": "<p>Atiq Israk Niloy</p>",
+        "description_bn": "<p>Atiq Israk Niloy</p>",
+        "link_url": "/eee?page_id=87&pageName=eee",
+        "additional": {
+          "tags": [
+            "bike",
+            "usa",
+            "mave"
+          ]
+        },
+        "status": 1,
+        "created_at": "2024-02-28T17:59:40.000000Z",
+        "updated_at": "2024-12-24T15:31:18.000000Z",
+        "media_files": {
+          "id": 418,
+          "title": "bikes21.webp",
+          "file_name": "mave_Ap2C4d.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_Ap2C4d.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-23T20:17:25.000000Z",
+          "updated_at": "2024-10-23T20:17:25.000000Z"
+        }
+      },
+      {
+        "id": 170,
+        "page_name": null,
+        "media_ids": 415,
+        "title_en": "Atiq Israk",
+        "title_bn": "Atiq Israk",
+        "description_en": "<p>Atiq Israk</p>",
+        "description_bn": "<p>Atiq Israk</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-28T17:44:23.000000Z",
+        "updated_at": "2024-10-24T17:00:02.000000Z",
+        "media_files": {
+          "id": 415,
+          "title": "bikes29.webp",
+          "file_name": "mave_7PQqIa.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_7PQqIa.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-23T20:17:25.000000Z",
+          "updated_at": "2024-10-23T20:17:25.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "type": "image",
+    "title_en": "Odit velit voluptat",
+    "title_bn": "Consectetur qui exp",
+    "description_en": "<p>Tempora eu quasi est.</p>",
+    "description_bn": "<p>Qui deserunt soluta .</p>",
+    "media_ids": [
+      410,
+      409,
+      408,
+      407,
+      415,
+      416,
+      417
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-10-24T17:21:09.000000Z",
+    "updated_at": "2024-10-24T17:21:09.000000Z",
+    "medias": [
+      {
+        "id": 410,
+        "title": "bikes28.webp",
+        "file_name": "mave_XPdjdR.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_XPdjdR.webp",
+        "file_size": null,
+        "tags": [
+          "bikes",
+          "people",
+          "helmet",
+          "car"
+        ],
+        "created_at": "2024-10-23T20:17:25.000000Z",
+        "updated_at": "2024-12-24T20:03:07.000000Z"
+      },
+      {
+        "id": 409,
+        "title": "bikes22.webp",
+        "file_name": "mave_BUq6ZB.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_BUq6ZB.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-23T20:17:25.000000Z",
+        "updated_at": "2024-10-23T20:17:25.000000Z"
+      },
+      {
+        "id": 408,
+        "title": "bikes23.webp",
+        "file_name": "mave_hqUDiW.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_hqUDiW.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-23T20:17:25.000000Z",
+        "updated_at": "2024-10-23T20:17:25.000000Z"
+      },
+      {
+        "id": 407,
+        "title": "bikes25.webp",
+        "file_name": "mave_lmInTe.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_lmInTe.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-23T20:17:25.000000Z",
+        "updated_at": "2024-10-23T20:17:25.000000Z"
+      },
+      {
+        "id": 415,
+        "title": "bikes29.webp",
+        "file_name": "mave_7PQqIa.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_7PQqIa.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-23T20:17:25.000000Z",
+        "updated_at": "2024-10-23T20:17:25.000000Z"
+      },
+      {
+        "id": 416,
+        "title": "bikes20.webp",
+        "file_name": "mave_qLs3sM.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_qLs3sM.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-23T20:17:25.000000Z",
+        "updated_at": "2024-10-23T20:17:25.000000Z"
+      },
+      {
+        "id": 417,
+        "title": "bikes19.webp",
+        "file_name": "mave_sMDJrk.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_sMDJrk.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-23T20:17:25.000000Z",
+        "updated_at": "2024-10-23T20:17:25.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 40,
+    "type": "card",
+    "title_en": "Dolorem aute vel cum",
+    "title_bn": "Voluptas itaque sint",
+    "description_en": "<p>Quas corrupti, dolor.</p>",
+    "description_bn": "<p>Deserunt dolor et ex.</p>",
+    "media_ids": [],
+    "card_ids": [
+      171,
+      170,
+      169,
+      168
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-10-24T17:22:59.000000Z",
+    "updated_at": "2024-10-24T17:22:59.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 171,
+        "page_name": null,
+        "media_ids": 412,
+        "title_en": "rdtyrdtfyh",
+        "title_bn": "fdhfdy",
+        "description_en": "<p>dfgh</p>",
+        "description_bn": "<p>dfgh</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-28T17:59:03.000000Z",
+        "updated_at": "2024-10-24T16:59:51.000000Z",
+        "media_files": {
+          "id": 412,
+          "title": "bikes3.webp",
+          "file_name": "mave_YNw7wK.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_YNw7wK.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-23T20:17:25.000000Z",
+          "updated_at": "2024-10-23T20:17:25.000000Z"
+        }
+      },
+      {
+        "id": 170,
+        "page_name": null,
+        "media_ids": 415,
+        "title_en": "Atiq Israk",
+        "title_bn": "Atiq Israk",
+        "description_en": "<p>Atiq Israk</p>",
+        "description_bn": "<p>Atiq Israk</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-28T17:44:23.000000Z",
+        "updated_at": "2024-10-24T17:00:02.000000Z",
+        "media_files": {
+          "id": 415,
+          "title": "bikes29.webp",
+          "file_name": "mave_7PQqIa.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_7PQqIa.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-23T20:17:25.000000Z",
+          "updated_at": "2024-10-23T20:17:25.000000Z"
+        }
+      },
+      {
+        "id": 169,
+        "page_name": null,
+        "media_ids": 410,
+        "title_en": "Niloy Niil",
+        "title_bn": "Niloy Niil",
+        "description_en": "<p>Niloy Niil</p>",
+        "description_bn": "<p>Niloy Niil</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-28T17:43:47.000000Z",
+        "updated_at": "2024-10-24T17:00:12.000000Z",
+        "media_files": {
+          "id": 410,
+          "title": "bikes28.webp",
+          "file_name": "mave_XPdjdR.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_XPdjdR.webp",
+          "file_size": null,
+          "tags": [
+            "bikes",
+            "people",
+            "helmet",
+            "car"
+          ],
+          "created_at": "2024-10-23T20:17:25.000000Z",
+          "updated_at": "2024-12-24T20:03:07.000000Z"
+        }
+      },
+      {
+        "id": 168,
+        "page_name": null,
+        "media_ids": 396,
+        "title_en": "safergfsafgsrg",
+        "title_bn": "dsgrdsgsretdgste",
+        "description_en": "<p>dgdstgsdtgh</p>",
+        "description_bn": "<p>sthsdfhs6rthgdfds</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-28T17:42:07.000000Z",
+        "updated_at": "2024-10-24T17:00:27.000000Z",
+        "media_files": {
+          "id": 396,
+          "title": "bikes7.webp",
+          "file_name": "mave_rE2Faz.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_rE2Faz.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-21T13:41:16.000000Z",
+          "updated_at": "2024-10-21T13:41:16.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "type": "card",
+    "title_en": "Id cupidatat deserun",
+    "title_bn": "Ut eligendi dolor eo",
+    "description_en": "<p>Qui totam sequi labo.</p>",
+    "description_bn": "<p>Debitis quos minima .</p>",
+    "media_ids": [],
+    "card_ids": [
+      165,
+      164,
+      166,
+      167
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-10-24T17:23:36.000000Z",
+    "updated_at": "2024-10-24T17:23:36.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 165,
+        "page_name": "Tatu",
+        "media_ids": 407,
+        "title_en": "Demo thung mave",
+        "title_bn": "dweopjkd",
+        "description_en": "<p>esfsrefsrfrdsgs</p>",
+        "description_bn": "<p>stgsdtgtsgdeg</p>",
+        "link_url": "/team-details?page_id=47&pageName=Team Details",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-28T17:36:32.000000Z",
+        "updated_at": "2024-10-25T15:50:40.000000Z",
+        "media_files": {
+          "id": 407,
+          "title": "bikes25.webp",
+          "file_name": "mave_lmInTe.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_lmInTe.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-23T20:17:25.000000Z",
+          "updated_at": "2024-10-23T20:17:25.000000Z"
+        }
+      },
+      {
+        "id": 166,
+        "page_name": null,
+        "media_ids": 414,
+        "title_en": "Ho jo bo ro lo",
+        "title_bn": "Ho jo bo ro lo",
+        "description_en": "<p>aaaaaaaaa Ho jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro loaaaaaaaaa Ho jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro loaaaaaaaaa Ho jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro lo</p>",
+        "description_bn": "<p>aaaaaaaaa Ho jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro loaaaaaaaaa Ho jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro loaaaaaaaaa Ho jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro loHo jo bo ro lo</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-28T17:37:17.000000Z",
+        "updated_at": "2024-10-24T17:00:53.000000Z",
+        "media_files": {
+          "id": 414,
+          "title": "bikes2.webp",
+          "file_name": "mave_tMsk1t.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_tMsk1t.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-23T20:17:25.000000Z",
+          "updated_at": "2024-10-23T20:17:25.000000Z"
+        }
+      },
+      {
+        "id": 167,
+        "page_name": null,
+        "media_ids": 404,
+        "title_en": "terxfyc©√∫",
+        "title_bn": "rsthgrthgbdrtfgrd",
+        "description_en": "<p>rythrtdyhdth</p>",
+        "description_bn": "<p>rythdyfhdythyd</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-28T17:38:44.000000Z",
+        "updated_at": "2024-10-24T17:00:39.000000Z",
+        "media_files": {
+          "id": 404,
+          "title": "bikes9.webp",
+          "file_name": "mave_pZfL7y.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_pZfL7y.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-21T13:41:17.000000Z",
+          "updated_at": "2024-10-21T13:41:17.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "type": "image",
+    "title_en": "Real Madrid vs Barcelona LIVE! El Clasico result, match stream, latest updates and reaction today",
+    "title_bn": "Real Madrid gegen Barcelona LIVE! El Clasico-Ergebnis, Spielstream, neueste Updates und Reaktionen heute",
+    "description_en": "<p><a href=\"https://www.standard.co.uk/topic/real-madrid\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--es-neutral-400);\">Real Madrid</a>&nbsp;vs&nbsp;<a href=\"https://www.standard.co.uk/topic/barcelona\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--es-neutral-400);\">Barcelona</a>&nbsp;LIVE!</p><p><a href=\"https://www.standard.co.uk/sport/football/real-madrid-vs-fc-barcelona-result-el-clasico-b1190344.html\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--es-neutral-400);\">Barcelona stunned Real Madrid 4-0 at the Bernabeu</a>&nbsp;to extend their lead at the top of&nbsp;<a href=\"https://www.standard.co.uk/topic/laliga\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--es-neutral-400);\">LaLiga</a>&nbsp;to six points. Two goals from Robert Lewandowski and further strikes from Lamine Yamal and Raphinha secured a famous away victory for Hansi Flick’s side on a night to forget for Real and Kylian Mbappe in particular.</p><p>Mbappe saw two goals ruled out for offside and was flagged six times in total in a poor first half. However, the second period was a capitulation from the whole team that left Carlo Ancelotti visibly frustrated at the full-time whistle. Questions will be asked of how Real collapsed so badly against their fiercest rivals in their biggest game of the season so far.</p><p>Barcelona leave Madrid with three points, all the bragging rights and quite possibly a big psychological advantage over Real after this victory. The comebacks of Frenkie de Jong, Gavi and Dani Olmo suggest things could yet get even better for this Barca side, who ended Real’s 42-game undefeated run that lasted 13 months. Follow all the latest&nbsp;<a href=\"https://www.standard.co.uk/topic/el-clasico\" rel=\"noopener noreferrer\" target=\"_blank\" style=\"color: var(--es-neutral-400);\">El Clasico</a>&nbsp;reaction below with our LIVE dedicated match blog.</p><p><br></p>",
+    "description_bn": "<p>Real Madrid gegen Barcelona LIVE!</p><p><br></p><p>Barcelona besiegte Real Madrid im Bernabeu mit 4:0 und baute seinen Vorsprung an der Spitze der LaLiga auf sechs Punkte aus. Zwei Tore von Robert Lewandowski und weitere Treffer von Lamine Yamal und Raphinha sicherten der Mannschaft von Hansi Flick einen berühmten Auswärtssieg in einem für Real und insbesondere Kylian Mbappe unvergesslichen Abend.</p><p><br></p><p>Mbappe sah zwei Tore wegen Abseits ausgeschlossen und wurde in einer schlechten ersten Halbzeit insgesamt sechs Mal abgewiesen. Allerdings war die zweite Halbzeit eine Kapitulation der gesamten Mannschaft, die Carlo Ancelotti nach dem Schlusspfiff sichtlich frustriert zurückließ. Es wird die Frage gestellt, wie Real im bislang größten Spiel der Saison gegen seinen schärfsten Rivalen so stark zusammengebrochen ist.</p><p><br></p><p>Barcelona verlässt Madrid mit drei Punkten, allen Angebereien und möglicherweise einem großen psychologischen Vorteil gegenüber Real nach diesem Sieg. Die Comebacks von Frenkie de Jong, Gavi und Dani Olmo deuten darauf hin, dass es für diese Barca-Mannschaft, die Reals 13 Monate andauernde Serie von 42 Spielen ohne Niederlage beendete, noch besser werden könnte. Verfolgen Sie die neuesten El Clasico-Reaktionen unten in unserem LIVE-Spielblog.</p>",
+    "media_ids": [
+      437,
+      432,
+      433,
+      435,
+      436,
+      434
+    ],
+    "card_ids": [],
+    "additional": {
+      "tags": [
+        "mave",
+        "hello",
+        "stage",
+        "car",
+        "usa",
+        "bike",
+        "hi",
+        "country",
+        "football",
+        "sports",
+        "laliga",
+        "elclassico",
+        "barcelona",
+        "real madrid",
+        "rma",
+        "slider",
+        "soccer",
+        "website",
+        "legend",
+        "poster",
+        "cover"
+      ]
+    },
+    "status": 0,
+    "created_at": "2024-10-27T15:38:34.000000Z",
+    "updated_at": "2024-12-31T18:22:23.000000Z",
+    "medias": [
+      {
+        "id": 437,
+        "title": "El-Clasico.jpg",
+        "file_name": "mave_yalz44.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_yalz44.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-27T15:38:16.000000Z",
+        "updated_at": "2024-10-27T15:38:16.000000Z"
+      },
+      {
+        "id": 432,
+        "title": "Laliga-v-600x600.webp",
+        "file_name": "mave_hIXmLy.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_hIXmLy.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-27T15:38:15.000000Z",
+        "updated_at": "2024-10-27T15:38:15.000000Z"
+      },
+      {
+        "id": 433,
+        "title": "960x0.webp",
+        "file_name": "mave_Go60tn.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_Go60tn.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-27T15:38:15.000000Z",
+        "updated_at": "2024-10-27T15:38:15.000000Z"
+      },
+      {
+        "id": 435,
+        "title": "logo-legends.png.webp",
+        "file_name": "mave_emlt4a.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_emlt4a.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-27T15:38:15.000000Z",
+        "updated_at": "2024-10-27T15:38:15.000000Z"
+      },
+      {
+        "id": 436,
+        "title": "60cfeebb05396bb026c0bae29df5232d.jpeg",
+        "file_name": "mave_CkbpwG.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_CkbpwG.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-27T15:38:16.000000Z",
+        "updated_at": "2024-10-27T15:38:16.000000Z"
+      },
+      {
+        "id": 434,
+        "title": "El-Clasico--e1698443078640.webp",
+        "file_name": "mave_sr9iA7.webp",
+        "file_type": "image/webp",
+        "file_path": "media/mave_sr9iA7.webp",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2024-10-27T15:38:16.000000Z",
+        "updated_at": "2024-10-27T15:38:16.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 49,
+    "type": "card",
+    "title_en": "sfcsadf",
+    "title_bn": "adefrgfsd",
+    "description_en": "<p>sthgfed</p>",
+    "description_bn": "<p>srtghbsd</p>",
+    "media_ids": [],
+    "card_ids": [
+      192
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2024-11-25T16:52:34.000000Z",
+    "updated_at": "2025-08-25T15:54:27.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 192,
+        "page_name": null,
+        "media_ids": 458,
+        "title_en": "Aug-10-2024",
+        "title_bn": null,
+        "description_en": "<p>Free Health Camp at Allied Mother &amp;amp; Child Specialized Hospi tal, Keraniganj.</p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-08-25T15:53:18.000000Z",
+        "updated_at": "2025-09-07T19:29:59.000000Z",
+        "media_files": {
+          "id": 458,
+          "title": "Gemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5p.jpeg",
+          "file_name": "mave_hV2Vu4.jpg",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_hV2Vu4.jpg",
+          "file_size": null,
+          "tags": [
+            "rango",
+            "camelion",
+            "logo",
+            "icon",
+            "colors",
+            "mave",
+            "cms",
+            "animal",
+            "red",
+            "green",
+            "blue"
+          ],
+          "created_at": "2024-12-24T19:37:01.000000Z",
+          "updated_at": "2024-12-24T20:23:47.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "type": "card",
+    "title_en": "Safety First: Handling Gas Appliances",
+    "title_bn": "নিরাপত্তা প্রথম: গ্যাস প্রযুক্তিগত যন্ত্রসমূহ ব্যবহার",
+    "description_en": "Description: Safety First: Handling Gas Appliances",
+    "description_bn": "Description_bn: নিরাপত্তা প্রথম: গ্যাস প্রযুক্তিগত যন্ত্রসমূহ ব্যবহার",
+    "media_ids": [],
+    "card_ids": [
+      170,
+      171,
+      172
+    ],
+    "additional": {
+      "tags": [
+        "hello",
+        "hi",
+        "bike",
+        "usa",
+        "soccer",
+        "legend",
+        "website",
+        "slider",
+        "rma",
+        "poster",
+        "cover"
+      ]
+    },
+    "status": 0,
+    "created_at": "2024-12-29T23:04:18.000000Z",
+    "updated_at": "2024-12-31T18:25:58.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 170,
+        "page_name": null,
+        "media_ids": 415,
+        "title_en": "Atiq Israk",
+        "title_bn": "Atiq Israk",
+        "description_en": "<p>Atiq Israk</p>",
+        "description_bn": "<p>Atiq Israk</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-28T17:44:23.000000Z",
+        "updated_at": "2024-10-24T17:00:02.000000Z",
+        "media_files": {
+          "id": 415,
+          "title": "bikes29.webp",
+          "file_name": "mave_7PQqIa.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_7PQqIa.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-23T20:17:25.000000Z",
+          "updated_at": "2024-10-23T20:17:25.000000Z"
+        }
+      },
+      {
+        "id": 171,
+        "page_name": null,
+        "media_ids": 412,
+        "title_en": "rdtyrdtfyh",
+        "title_bn": "fdhfdy",
+        "description_en": "<p>dfgh</p>",
+        "description_bn": "<p>dfgh</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-28T17:59:03.000000Z",
+        "updated_at": "2024-10-24T16:59:51.000000Z",
+        "media_files": {
+          "id": 412,
+          "title": "bikes3.webp",
+          "file_name": "mave_YNw7wK.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_YNw7wK.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-23T20:17:25.000000Z",
+          "updated_at": "2024-10-23T20:17:25.000000Z"
+        }
+      },
+      {
+        "id": 172,
+        "page_name": "Products",
+        "media_ids": 418,
+        "title_en": "Atiq Israk Niloy",
+        "title_bn": "Atiq Israk Niloy",
+        "description_en": "<p>Atiq Israk Niloy</p>",
+        "description_bn": "<p>Atiq Israk Niloy</p>",
+        "link_url": "/eee?page_id=87&pageName=eee",
+        "additional": {
+          "tags": [
+            "bike",
+            "usa",
+            "mave"
+          ]
+        },
+        "status": 1,
+        "created_at": "2024-02-28T17:59:40.000000Z",
+        "updated_at": "2024-12-24T15:31:18.000000Z",
+        "media_files": {
+          "id": 418,
+          "title": "bikes21.webp",
+          "file_name": "mave_Ap2C4d.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_Ap2C4d.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-23T20:17:25.000000Z",
+          "updated_at": "2024-10-23T20:17:25.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "type": "card",
+    "title_en": "Aliqua Repellendus 2",
+    "title_bn": "Quae eos dignissimo2 2",
+    "description_en": "<p>Vero nemo et cumque . 2</p>",
+    "description_bn": "<p>Est earum esse, est . 2</p>",
+    "media_ids": [],
+    "card_ids": [
+      165,
+      168,
+      170
+    ],
+    "additional": {
+      "tags": [
+        "stage",
+        "car",
+        "country",
+        "mave",
+        "usa"
+      ]
+    },
+    "status": 0,
+    "created_at": "2024-12-31T18:05:36.000000Z",
+    "updated_at": "2024-12-31T18:16:18.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 165,
+        "page_name": "Tatu",
+        "media_ids": 407,
+        "title_en": "Demo thung mave",
+        "title_bn": "dweopjkd",
+        "description_en": "<p>esfsrefsrfrdsgs</p>",
+        "description_bn": "<p>stgsdtgtsgdeg</p>",
+        "link_url": "/team-details?page_id=47&pageName=Team Details",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-28T17:36:32.000000Z",
+        "updated_at": "2024-10-25T15:50:40.000000Z",
+        "media_files": {
+          "id": 407,
+          "title": "bikes25.webp",
+          "file_name": "mave_lmInTe.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_lmInTe.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-23T20:17:25.000000Z",
+          "updated_at": "2024-10-23T20:17:25.000000Z"
+        }
+      },
+      {
+        "id": 168,
+        "page_name": null,
+        "media_ids": 396,
+        "title_en": "safergfsafgsrg",
+        "title_bn": "dsgrdsgsretdgste",
+        "description_en": "<p>dgdstgsdtgh</p>",
+        "description_bn": "<p>sthsdfhs6rthgdfds</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-28T17:42:07.000000Z",
+        "updated_at": "2024-10-24T17:00:27.000000Z",
+        "media_files": {
+          "id": 396,
+          "title": "bikes7.webp",
+          "file_name": "mave_rE2Faz.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_rE2Faz.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-21T13:41:16.000000Z",
+          "updated_at": "2024-10-21T13:41:16.000000Z"
+        }
+      },
+      {
+        "id": 170,
+        "page_name": null,
+        "media_ids": 415,
+        "title_en": "Atiq Israk",
+        "title_bn": "Atiq Israk",
+        "description_en": "<p>Atiq Israk</p>",
+        "description_bn": "<p>Atiq Israk</p>",
+        "link_url": "/",
+        "additional": null,
+        "status": 1,
+        "created_at": "2024-02-28T17:44:23.000000Z",
+        "updated_at": "2024-10-24T17:00:02.000000Z",
+        "media_files": {
+          "id": 415,
+          "title": "bikes29.webp",
+          "file_name": "mave_7PQqIa.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_7PQqIa.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-23T20:17:25.000000Z",
+          "updated_at": "2024-10-23T20:17:25.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "type": "image",
+    "title_en": "Uroo Home Slider",
+    "title_bn": "Uroo Home Slider",
+    "description_en": "<p>Uroo Description</p>",
+    "description_bn": "<p>Uroo Description</p>",
+    "media_ids": [
+      462
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-03-13T19:15:54.000000Z",
+    "updated_at": "2025-03-13T19:15:54.000000Z",
+    "medias": [
+      {
+        "id": 462,
+        "title": "Herosection.png",
+        "file_name": "mave_lAjuNN.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_lAjuNN.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2025-03-13T19:11:47.000000Z",
+        "updated_at": "2025-03-13T19:11:47.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 55,
+    "type": "image",
+    "title_en": "First Image Slider",
+    "title_bn": "First Image Slider",
+    "description_en": "<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>",
+    "description_bn": "<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>",
+    "media_ids": [
+      476,
+      475,
+      474
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-03-24T02:00:08.000000Z",
+    "updated_at": "2025-03-24T02:00:08.000000Z",
+    "medias": [
+      {
+        "id": 476,
+        "title": "pexels-photo-267415.jpeg",
+        "file_name": "mave_W2AeDj.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_W2AeDj.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2025-03-24T01:37:34.000000Z",
+        "updated_at": "2025-03-24T01:37:34.000000Z"
+      },
+      {
+        "id": 475,
+        "title": "image1.jpg",
+        "file_name": "mave_h41wVc.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_h41wVc.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2025-03-24T01:33:33.000000Z",
+        "updated_at": "2025-03-24T01:33:33.000000Z"
+      },
+      {
+        "id": 474,
+        "title": "Screenshot (453).png",
+        "file_name": "mave_zWUrFk.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_zWUrFk.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2025-03-23T14:52:11.000000Z",
+        "updated_at": "2025-03-23T14:52:11.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 56,
+    "type": "card",
+    "title_en": "First Card Slider",
+    "title_bn": "First Card Slider",
+    "description_en": "<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>",
+    "description_bn": "<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>",
+    "media_ids": [],
+    "card_ids": [
+      189,
+      190,
+      191
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-03-24T02:27:06.000000Z",
+    "updated_at": "2025-03-24T02:27:06.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 189,
+        "page_name": "CSR",
+        "media_ids": 465,
+        "title_en": "First Card",
+        "title_bn": "First Card",
+        "description_en": "<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>",
+        "description_bn": "<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>",
+        "link_url": "/csr?page_id=127&pageName=CSR",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2025-03-24T02:24:33.000000Z",
+        "updated_at": "2025-03-24T02:24:33.000000Z",
+        "media_files": {
+          "id": 465,
+          "title": "pexels-photo-3183170.jpeg",
+          "file_name": "mave_GYl0o5.jpg",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_GYl0o5.jpg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-03-23T14:50:52.000000Z",
+          "updated_at": "2025-03-23T14:50:52.000000Z"
+        }
+      },
+      {
+        "id": 190,
+        "page_name": "CSR",
+        "media_ids": 468,
+        "title_en": "Second Card",
+        "title_bn": "Second Card",
+        "description_en": "<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>",
+        "description_bn": "<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>",
+        "link_url": "/csr?page_id=127&pageName=CSR",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2025-03-24T02:25:14.000000Z",
+        "updated_at": "2025-03-24T02:25:14.000000Z",
+        "media_files": {
+          "id": 468,
+          "title": "image1.jpg",
+          "file_name": "mave_X2qBKG.jpg",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_X2qBKG.jpg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-03-23T14:50:52.000000Z",
+          "updated_at": "2025-03-23T14:50:52.000000Z"
+        }
+      },
+      {
+        "id": 191,
+        "page_name": "CSR",
+        "media_ids": 471,
+        "title_en": "Third Card",
+        "title_bn": "Third Card",
+        "description_en": "<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>",
+        "description_bn": "<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>",
+        "link_url": "/csr?page_id=127&pageName=CSR",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2025-03-24T02:26:07.000000Z",
+        "updated_at": "2025-03-24T02:26:07.000000Z",
+        "media_files": {
+          "id": 471,
+          "title": "image2.jpg",
+          "file_name": "mave_4CMQQ7.png",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_4CMQQ7.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-03-23T14:50:53.000000Z",
+          "updated_at": "2025-03-23T14:50:53.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "type": "card",
+    "title_en": "Article",
+    "title_bn": "sdf",
+    "description_en": "<p>dsfds</p>",
+    "description_bn": "<p>sdfsdf</p>",
+    "media_ids": [],
+    "card_ids": [
+      192,
+      193
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-08-25T16:00:01.000000Z",
+    "updated_at": "2025-08-25T21:43:28.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 192,
+        "page_name": null,
+        "media_ids": 458,
+        "title_en": "Aug-10-2024",
+        "title_bn": null,
+        "description_en": "<p>Free Health Camp at Allied Mother &amp;amp; Child Specialized Hospi tal, Keraniganj.</p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-08-25T15:53:18.000000Z",
+        "updated_at": "2025-09-07T19:29:59.000000Z",
+        "media_files": {
+          "id": 458,
+          "title": "Gemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5p.jpeg",
+          "file_name": "mave_hV2Vu4.jpg",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_hV2Vu4.jpg",
+          "file_size": null,
+          "tags": [
+            "rango",
+            "camelion",
+            "logo",
+            "icon",
+            "colors",
+            "mave",
+            "cms",
+            "animal",
+            "red",
+            "green",
+            "blue"
+          ],
+          "created_at": "2024-12-24T19:37:01.000000Z",
+          "updated_at": "2024-12-24T20:23:47.000000Z"
+        }
+      },
+      {
+        "id": 193,
+        "page_name": null,
+        "media_ids": 458,
+        "title_en": "Aug-10-2024",
+        "title_bn": null,
+        "description_en": "<p>Free Health Camp at Allied Mother &amp; Child Specialized Hospi tal, Keraniganj.</p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-08-25T15:57:19.000000Z",
+        "updated_at": "2025-08-25T15:57:19.000000Z",
+        "media_files": {
+          "id": 458,
+          "title": "Gemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5p.jpeg",
+          "file_name": "mave_hV2Vu4.jpg",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_hV2Vu4.jpg",
+          "file_size": null,
+          "tags": [
+            "rango",
+            "camelion",
+            "logo",
+            "icon",
+            "colors",
+            "mave",
+            "cms",
+            "animal",
+            "red",
+            "green",
+            "blue"
+          ],
+          "created_at": "2024-12-24T19:37:01.000000Z",
+          "updated_at": "2024-12-24T20:23:47.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "type": "card",
+    "title_en": "patient testimonial",
+    "title_bn": "sdfsd",
+    "description_en": "<p>sdfdsf</p>",
+    "description_bn": "<p>sdfdsf</p>",
+    "media_ids": [],
+    "card_ids": [
+      194,
+      195,
+      196,
+      197
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-08-25T16:00:44.000000Z",
+    "updated_at": "2025-08-25T21:59:40.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 194,
+        "page_name": null,
+        "media_ids": 458,
+        "title_en": "Dr. Nadia Samsuddin",
+        "title_bn": null,
+        "description_en": "<p><strong style=\"background-color: transparent; color: rgb(56, 56, 56);\"><em>Witnessing a patient's improvement, that feeling is beyond compare</em></strong></p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-08-25T15:58:14.000000Z",
+        "updated_at": "2025-08-25T21:54:53.000000Z",
+        "media_files": {
+          "id": 458,
+          "title": "Gemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5p.jpeg",
+          "file_name": "mave_hV2Vu4.jpg",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_hV2Vu4.jpg",
+          "file_size": null,
+          "tags": [
+            "rango",
+            "camelion",
+            "logo",
+            "icon",
+            "colors",
+            "mave",
+            "cms",
+            "animal",
+            "red",
+            "green",
+            "blue"
+          ],
+          "created_at": "2024-12-24T19:37:01.000000Z",
+          "updated_at": "2024-12-24T20:23:47.000000Z"
+        }
+      },
+      {
+        "id": 195,
+        "page_name": null,
+        "media_ids": 458,
+        "title_en": "Dr. Shirina Akbar",
+        "title_bn": "32",
+        "description_en": "<p class=\"ql-align-justify\">As a health professional, being with SAJIDA has always been a rewarding experience. I have the opportunity to firsthand experience SAJIDA's strong commitment to providing healthcare benefits to those who are in dire need of it.</p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-08-25T15:58:52.000000Z",
+        "updated_at": "2025-09-14T19:59:52.000000Z",
+        "media_files": {
+          "id": 458,
+          "title": "Gemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5p.jpeg",
+          "file_name": "mave_hV2Vu4.jpg",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_hV2Vu4.jpg",
+          "file_size": null,
+          "tags": [
+            "rango",
+            "camelion",
+            "logo",
+            "icon",
+            "colors",
+            "mave",
+            "cms",
+            "animal",
+            "red",
+            "green",
+            "blue"
+          ],
+          "created_at": "2024-12-24T19:37:01.000000Z",
+          "updated_at": "2024-12-24T20:23:47.000000Z"
+        }
+      },
+      {
+        "id": 196,
+        "page_name": null,
+        "media_ids": 476,
+        "title_en": "Nur’s parents",
+        "title_bn": null,
+        "description_en": "<p><strong style=\"background-color: transparent; color: rgb(56, 56, 56);\"><em>He can now attend school without hesitation, maintain his hygiene, and focus on his studies</em></strong></p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-08-25T21:56:28.000000Z",
+        "updated_at": "2025-08-25T21:56:28.000000Z",
+        "media_files": {
+          "id": 476,
+          "title": "pexels-photo-267415.jpeg",
+          "file_name": "mave_W2AeDj.jpg",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_W2AeDj.jpg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-03-24T01:37:34.000000Z",
+          "updated_at": "2025-03-24T01:37:34.000000Z"
+        }
+      },
+      {
+        "id": 197,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "I received prompt and seamless treatment, never encountering any issues throughout my time here.",
+        "title_bn": "Suborna Rani Roy",
+        "description_en": "<p class=\"ql-align-justify\"><strong style=\"color: rgb(56, 56, 56); background-color: transparent;\">\"</strong><span style=\"color: rgb(56, 56, 56); background-color: transparent;\">Suborna Rani Roy recently gave birth to a child at SAJIDA Hospital. She learned about this hospital through her husband, who had previously received treatment here.</span></p><p class=\"ql-align-justify\"><span style=\"color: rgb(56, 56, 56); background-color: transparent;\">Her experience at SAJIDA Hospital was nothing short of memorable. She expressed,&nbsp;</span><strong style=\"color: rgb(56, 56, 56); background-color: transparent;\"><em>\"The nurses, doctors, and medical officers were always there for me. I received prompt and seamless treatment, never encountering any issues throughout my time here. Everyone was very supportive.\"&nbsp;</em></strong><span style=\"color: rgb(56, 56, 56); background-color: transparent;\">According to Suborna, the doctors and nurses provided her with both mental and physical support during her most critical moments. She shared, \"The last few days of my pregnancy were incredibly tough. I was emotionally and physically drained. The doctors at SAJIDA Hospital supported me in every possible way, instilling in me the courage and belief that I could overcome this challenging period, with a happy, healthy life awaiting me.</span></p><p class=\"ql-align-justify\"><span style=\"color: rgb(56, 56, 56); background-color: transparent;\">Suborna welcomed a healthy baby boy and was recently discharged from the hospital. She expressed,&nbsp;</span><strong style=\"color: rgb(56, 56, 56); background-color: transparent;\">\"<em>I am genuinely pleased with the exceptional care I received at this hospital. I wouldn't hesitate to return whenever I, or my family, need any kind of treatment.\"\"</em></strong></p>",
+        "description_bn": "<p>এক মুহূর্তের জন্যও আমি কোনো সমস্যায় পড়িনি। খুব দ্রুত চিকিৎসা পেয়েছি।</p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-08-25T21:57:21.000000Z",
+        "updated_at": "2026-03-16T11:35:04.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "type": "image",
+    "title_en": "Award",
+    "title_bn": "পুরস্কার",
+    "description_en": "<p>Award</p>",
+    "description_bn": "<p>পুরস্কার</p>",
+    "media_ids": [
+      482
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-09-03T19:28:02.000000Z",
+    "updated_at": "2025-09-03T19:28:02.000000Z",
+    "medias": [
+      {
+        "id": 482,
+        "title": "award.png",
+        "file_name": "mave_yioJ3K.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_yioJ3K.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2025-09-03T18:57:31.000000Z",
+        "updated_at": "2025-09-03T18:57:31.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 60,
+    "type": "image",
+    "title_en": "Md. Abdul Karim",
+    "title_bn": "মোঃ আব্দুল করিম",
+    "description_en": "<p>Vice Chairperson</p>",
+    "description_bn": "<p>Vice Chairperson</p>",
+    "media_ids": [
+      481
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-09-03T19:29:52.000000Z",
+    "updated_at": "2025-09-03T19:29:52.000000Z",
+    "medias": [
+      {
+        "id": 481,
+        "title": "AbdulKarim.png",
+        "file_name": "mave_eayfhe.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_eayfhe.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2025-09-03T18:57:30.000000Z",
+        "updated_at": "2025-09-03T18:57:30.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 61,
+    "type": "card",
+    "title_en": "Our Mangement Team",
+    "title_bn": "Our Mangement Team",
+    "description_en": "<p><span style=\"background-color: rgb(249, 249, 249); color: rgb(0, 0, 0);\">Leadership &amp; Governance</span></p>",
+    "description_bn": "<p><span style=\"background-color: rgb(249, 249, 249); color: rgb(0, 0, 0);\">Leadership &amp; Governance</span></p>",
+    "media_ids": [],
+    "card_ids": [
+      200,
+      199,
+      201,
+      202
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-09-03T19:42:07.000000Z",
+    "updated_at": "2025-09-03T19:42:07.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 200,
+        "page_name": null,
+        "media_ids": 484,
+        "title_en": "Farooq Sobhan",
+        "title_bn": null,
+        "description_en": "<p>Chairperson</p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-03T19:38:27.000000Z",
+        "updated_at": "2025-09-03T19:38:27.000000Z",
+        "media_files": {
+          "id": 484,
+          "title": "Farooq.png",
+          "file_name": "mave_6OUjoA.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_6OUjoA.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-03T19:37:27.000000Z",
+          "updated_at": "2025-09-03T19:37:27.000000Z"
+        }
+      },
+      {
+        "id": 199,
+        "page_name": null,
+        "media_ids": 481,
+        "title_en": "Md. Abdul Karim",
+        "title_bn": null,
+        "description_en": "<p>Vice Chairperson</p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-03T19:14:23.000000Z",
+        "updated_at": "2025-09-03T19:14:23.000000Z",
+        "media_files": {
+          "id": 481,
+          "title": "AbdulKarim.png",
+          "file_name": "mave_eayfhe.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_eayfhe.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-03T18:57:30.000000Z",
+          "updated_at": "2025-09-03T18:57:30.000000Z"
+        }
+      },
+      {
+        "id": 201,
+        "page_name": null,
+        "media_ids": 485,
+        "title_en": "Nihad Kabir",
+        "title_bn": null,
+        "description_en": "<p>Member</p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-03T19:39:45.000000Z",
+        "updated_at": "2025-09-03T19:39:45.000000Z",
+        "media_files": {
+          "id": 485,
+          "title": "NihadKabir.png",
+          "file_name": "mave_HwH5md.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_HwH5md.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-03T19:39:06.000000Z",
+          "updated_at": "2025-09-03T19:39:06.000000Z"
+        }
+      },
+      {
+        "id": 202,
+        "page_name": null,
+        "media_ids": 486,
+        "title_en": "Dr. Rumana Dowla",
+        "title_bn": null,
+        "description_en": "<p>Member</p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-03T19:40:23.000000Z",
+        "updated_at": "2025-09-03T19:40:23.000000Z",
+        "media_files": {
+          "id": 486,
+          "title": "Rumana.png",
+          "file_name": "mave_jd7gPP.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_jd7gPP.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-03T19:39:07.000000Z",
+          "updated_at": "2025-09-03T19:39:07.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "type": "image",
+    "title_en": "Award",
+    "title_bn": "পুরস্কার",
+    "description_en": "<p>Award</p>",
+    "description_bn": "<p>Award</p>",
+    "media_ids": [
+      482
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-09-03T19:43:43.000000Z",
+    "updated_at": "2025-09-03T19:43:43.000000Z",
+    "medias": [
+      {
+        "id": 482,
+        "title": "award.png",
+        "file_name": "mave_yioJ3K.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_yioJ3K.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2025-09-03T18:57:31.000000Z",
+        "updated_at": "2025-09-03T18:57:31.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 63,
+    "type": "card",
+    "title_en": "Article and News",
+    "title_bn": "Article and News",
+    "description_en": "<p>Article and News</p>",
+    "description_bn": "<p>Article and News</p>",
+    "media_ids": [],
+    "card_ids": [
+      203,
+      204,
+      205
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-09-10T18:05:21.000000Z",
+    "updated_at": "2025-09-10T18:05:21.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 203,
+        "page_name": "9 August 2021",
+        "media_ids": 490,
+        "title_en": "9th August 2021",
+        "title_bn": null,
+        "description_en": "<p><span style=\"color: rgb(89, 89, 89); background-color: transparent;\">Tackling this surge requires concrete action on the ground. From our Covid unit at SAJIDA Hospital, Keraniganj, we have now expanded our services to extend treatment to COVID-19 patients by assisting four public hospitals at Jashore, Chuadanga, Pabna and Meherpur. Deploying healthcare professionals, critical equipment and infrastructure enhancement are key components of our approach.</span></p>",
+        "description_bn": null,
+        "link_url": "/august-2021?page_id=147&pageName=9 August 2021",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-10T18:02:10.000000Z",
+        "updated_at": "2025-09-16T20:46:13.000000Z",
+        "media_files": {
+          "id": 490,
+          "title": "Picture1.png",
+          "file_name": "mave_xzXH9s.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_xzXH9s.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-10T18:02:00.000000Z",
+          "updated_at": "2025-09-10T18:02:00.000000Z"
+        }
+      },
+      {
+        "id": 204,
+        "page_name": "31st January 2021",
+        "media_ids": 491,
+        "title_en": "31st January 2021",
+        "title_bn": null,
+        "description_en": "<p class=\"ql-align-justify\"><span style=\"color: rgb(89, 89, 89); background-color: transparent;\">On 28th January, SAJIDA Hospital, Keraniganj opened its new COVID-19 treatment unit, comprising of six ICUs and 22 semi-critical beds. Leveraging SAJIDA Hospital, Narayanganj’s expertise gained from serving COVID -19 patients from 39 districts, we will continue to provide quality care to those affected by the pandemic. To know more about the hospital services please contact: +8801777772500&nbsp;</span></p>",
+        "description_bn": null,
+        "link_url": "/january-2021?page_id=145&pageName=31st January 2021",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-10T18:02:54.000000Z",
+        "updated_at": "2025-09-16T20:38:06.000000Z",
+        "media_files": {
+          "id": 491,
+          "title": "Picture2--.png",
+          "file_name": "mave_UZhmK7.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_UZhmK7.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-10T18:02:41.000000Z",
+          "updated_at": "2025-09-10T18:02:41.000000Z"
+        }
+      },
+      {
+        "id": 205,
+        "page_name": "20th-February-2021",
+        "media_ids": 492,
+        "title_en": "20th February 2021",
+        "title_bn": null,
+        "description_en": "<p><span style=\"background-color: transparent; color: rgb(89, 89, 89);\">Give 2 Asia has donated to SAJIDA Foundation to aid to fight the adversities during the COVID-19 pandemic. The first is to deploy a compensation scheme to support the family of frontline medical workers who have passed away due to COVID-19 infection. The second is to strengthen capacity of frontline medical workers at SAJIDA Foundation’s designated COVID-19 isolation centre in Narayanganj, a COVID-19 epicentre for Bangladesh. Part of the grant will be utilized for procurement of Personal Protective Equipment (PPE) and to provide risk allowance to 50 healthcare workers serving at SAJIDA’s Narayanganj hospital.</span></p>",
+        "description_bn": null,
+        "link_url": "/february-2021?page_id=144&pageName=20th-February-2021",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-10T18:03:58.000000Z",
+        "updated_at": "2025-09-16T20:42:46.000000Z",
+        "media_files": {
+          "id": 492,
+          "title": "Picture3--.png",
+          "file_name": "mave_7Zg54W.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_7Zg54W.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-10T18:03:46.000000Z",
+          "updated_at": "2025-09-10T18:03:46.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "type": "card",
+    "title_en": "News",
+    "title_bn": "News",
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>,</p>",
+    "media_ids": [],
+    "card_ids": [
+      205,
+      204,
+      217,
+      216
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-09-11T16:42:27.000000Z",
+    "updated_at": "2025-09-15T17:57:26.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 205,
+        "page_name": "20th-February-2021",
+        "media_ids": 492,
+        "title_en": "20th February 2021",
+        "title_bn": null,
+        "description_en": "<p><span style=\"background-color: transparent; color: rgb(89, 89, 89);\">Give 2 Asia has donated to SAJIDA Foundation to aid to fight the adversities during the COVID-19 pandemic. The first is to deploy a compensation scheme to support the family of frontline medical workers who have passed away due to COVID-19 infection. The second is to strengthen capacity of frontline medical workers at SAJIDA Foundation’s designated COVID-19 isolation centre in Narayanganj, a COVID-19 epicentre for Bangladesh. Part of the grant will be utilized for procurement of Personal Protective Equipment (PPE) and to provide risk allowance to 50 healthcare workers serving at SAJIDA’s Narayanganj hospital.</span></p>",
+        "description_bn": null,
+        "link_url": "/february-2021?page_id=144&pageName=20th-February-2021",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-10T18:03:58.000000Z",
+        "updated_at": "2025-09-16T20:42:46.000000Z",
+        "media_files": {
+          "id": 492,
+          "title": "Picture3--.png",
+          "file_name": "mave_7Zg54W.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_7Zg54W.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-10T18:03:46.000000Z",
+          "updated_at": "2025-09-10T18:03:46.000000Z"
+        }
+      },
+      {
+        "id": 204,
+        "page_name": "31st January 2021",
+        "media_ids": 491,
+        "title_en": "31st January 2021",
+        "title_bn": null,
+        "description_en": "<p class=\"ql-align-justify\"><span style=\"color: rgb(89, 89, 89); background-color: transparent;\">On 28th January, SAJIDA Hospital, Keraniganj opened its new COVID-19 treatment unit, comprising of six ICUs and 22 semi-critical beds. Leveraging SAJIDA Hospital, Narayanganj’s expertise gained from serving COVID -19 patients from 39 districts, we will continue to provide quality care to those affected by the pandemic. To know more about the hospital services please contact: +8801777772500&nbsp;</span></p>",
+        "description_bn": null,
+        "link_url": "/january-2021?page_id=145&pageName=31st January 2021",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-10T18:02:54.000000Z",
+        "updated_at": "2025-09-16T20:38:06.000000Z",
+        "media_files": {
+          "id": 491,
+          "title": "Picture2--.png",
+          "file_name": "mave_UZhmK7.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_UZhmK7.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-10T18:02:41.000000Z",
+          "updated_at": "2025-09-10T18:02:41.000000Z"
+        }
+      },
+      {
+        "id": 217,
+        "page_name": null,
+        "media_ids": 505,
+        "title_en": "28th May 2019",
+        "title_bn": null,
+        "description_en": "<p>MOU SIGNING WITH PRIVATE HOSPITALS FOR EMPANELMENT AT CHANDPUR AND FENI</p><p><span style=\"color: rgb(0, 0, 0); background-color: transparent;\">A MoU signing ceremony between Private Hospitals (Midland Hospital &amp; Honey Siddik Memorial Hospital), SAJIDA Foundation and Concern Worldwide took place on 9th April, 2019 at Chandpur Municipality. Hon’ble Mayor of Chandpur Municipality, Civil Surgeon of Chandpur, UH&amp;FPO of Chandpur Sadar, representatives of Deputy Commissioners’ office, Deputy Director of Family Planning (DDFP) office, Secretary of Clinic owner’s association, Panel Mayors &amp; Councilors, hospital owners, and central PROSHOMON team have attended the program. Another MoU signing ceremony was held on 10th April, 2019 at Civil Surgeon office of Feni between Private Hospitals (Medinova Hospital, Z.U. Model Hospital, Lifecare diagnostic center, SAJIDA Foundation and Concern World Wide. Newly joined Civil surgeon, Dr. Md. Neatuzzaman,was present during the MoU signing ceremony program,presiding over the meeting. Dr. Saifur Rahman from Chest Disease Hospital, panel mayors, representatives of Deputy Commissioners’ office, Deputy Director of Family Planning (DDFP) office, Secretary of Clinic owner’s association, hospital owners, central PROSHOMON team attended the program. The objective of the ceremony was to formalize services &amp; prices between the parties in order to commence the services for the service seekers.</span></p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-15T17:43:11.000000Z",
+        "updated_at": "2025-09-15T17:56:21.000000Z",
+        "media_files": {
+          "id": 505,
+          "title": "logo (3).png",
+          "file_name": "mave_M10FBm.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_M10FBm.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-15T17:43:04.000000Z",
+          "updated_at": "2025-09-15T17:43:04.000000Z"
+        }
+      },
+      {
+        "id": 216,
+        "page_name": null,
+        "media_ids": 504,
+        "title_en": "16th August 2018",
+        "title_bn": null,
+        "description_en": "<p><strong>SAJIDA HOSPITAL ORGANIZES HEALTH CAMP</strong></p><p><span style=\"color: rgb(0, 0, 0); background-color: transparent;\">SAJIDA Hospital, Keraniganj and the Institute of Health Science organized a day-long free health camp on August 16, 2018 at the Keraniganj Degree College. Through this initiative, 684 patients received 1,195 health services including general treatment, gynae/obs, pediatrics, eye care, skincare, dental care as well as regular checkups and blood grouping. Patients who attended the free camp also received services from the SAJIDA Hospital at a 50% discount for one month since the date of the health camp. 12 doctors including 3 Consultants, 3 medical technologists and 12 nurses/paramedics provided services at the seven points. Support services were provided by volunteers from SAJIDA’s Microfinance Program, SAJIDA’s Community Health Workers and others. With 2 hospitals in Keraniganj and Narayanganj and more hospitals in the pipeline, SAJIDA’s flagship health program operates with the vision of health, happiness and dignity for all, and this health camp is a footstep towards achieving our vision.</span></p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-15T17:39:47.000000Z",
+        "updated_at": "2025-09-15T17:55:01.000000Z",
+        "media_files": {
+          "id": 504,
+          "title": "FREE_HEALTH_CAMPS_ORGANIZED_BY_SA.width-695.format-webp.webp",
+          "file_name": "mave_nXWvDm.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_nXWvDm.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-15T17:39:38.000000Z",
+          "updated_at": "2025-09-15T17:39:38.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "type": "image",
+    "title_en": "Certificate",
+    "title_bn": "Certificate",
+    "description_en": "<p>Certificate</p>",
+    "description_bn": "<p>Certificate</p>",
+    "media_ids": [
+      493
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-09-11T17:12:40.000000Z",
+    "updated_at": "2025-09-11T17:12:40.000000Z",
+    "medias": [
+      {
+        "id": 493,
+        "title": "Covid 19 certificate.jpg",
+        "file_name": "mave_aeMKqw.jpg",
+        "file_type": "image/jpeg",
+        "file_path": "media/mave_aeMKqw.jpg",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2025-09-11T17:11:40.000000Z",
+        "updated_at": "2025-09-11T17:11:40.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 66,
+    "type": "card",
+    "title_en": "Patient Feedback",
+    "title_bn": "Patient Feedback",
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "media_ids": [],
+    "card_ids": [
+      207,
+      208,
+      209,
+      263,
+      206
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-09-14T23:00:14.000000Z",
+    "updated_at": "2026-04-27T23:28:43.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 207,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "\"I received compassionate and reliable healthcare at SAJIDA Hospital.\"",
+        "title_bn": "Rashida Akter",
+        "description_en": "<p class=\"ql-align-justify\">\"My experience at SAJIDA Hospital was excellent. The doctors and nurses provided my treatment with great care. The entire process was smooth, transparent, and quick. I was especially impressed by their compassion toward patients. I am very satisfied with the quality service at an affordable cost and would highly recommend it to others.\"</p>",
+        "description_bn": "<p>\"সাজেদা হাসপাতালে আমি পেয়েছি আন্তরিক ও নির্ভরযোগ্য চিকিৎসা সেবা।\"</p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-14T22:56:29.000000Z",
+        "updated_at": "2026-04-27T14:52:33.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 208,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "\"I received simple, hassle-free, and quality treatment at SAJIDA Hospital.\"",
+        "title_bn": "Tania Rahman",
+        "description_en": "<p class=\"ql-align-justify\">\"My treatment experience at SAJIDA Hospital was very positive. The service is easy and hassle-free. Doctors listen carefully to patients and provide accurate advice. The nurses’ care and behavior are also commendable. Quality service at an affordable cost is truly admirable.\"</p>",
+        "description_bn": "<p>\"সহজ, ঝামেলামুক্ত ও মানসম্মত চিকিৎসা সেবা পেয়েছি সাজেদা হাসপাতালে।\"</p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-14T22:58:15.000000Z",
+        "updated_at": "2026-04-27T14:57:16.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 209,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "\"I received fast, accurate diagnosis and compassionate service here.\"",
+        "title_bn": "Abdullah Al Mamun",
+        "description_en": "<p>\"I received diagnostic and treatment services at SAJIDA Hospital and am very satisfied. I got my reports quickly and accurately. The professional behavior of the doctors and the supportive staff are commendable. The entire process was timely and well organized, which is very comforting for patients.\"</p>",
+        "description_bn": "<p>\"দ্রুত ও নির্ভুল রোগনির্ণয় এবং সহানুভূতিশীল সেবা পেয়েছি এখানে।\"</p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-14T22:59:30.000000Z",
+        "updated_at": "2026-04-27T15:04:32.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 263,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "\"Treatment at SAJIDA Hospital was simple, affordable and very caring.\"",
+        "title_bn": "Sumaiya Islam",
+        "description_en": "<p>\"I had a very good experience receiving treatment at SAJIDA Hospital. The care and compassion for patients are truly exceptional. The treatment process is simple and affordable. Doctors explain everything clearly and provide strong emotional support. I am extremely satisfied with the service.\"</p>",
+        "description_bn": "<p>\"সাজেদা হাসপাতালে চিকিৎসা ছিল সহজ, সাশ্রয়ী ও অত্যন্ত যত্নশীল।\"</p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2026-04-27T15:04:26.000000Z",
+        "updated_at": "2026-04-27T15:04:26.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 206,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "\"The well-organized and professional service at SAJIDA Hospital greatly satisfied me.\"",
+        "title_bn": "M. Ariful Islam",
+        "description_en": "<p class=\"ql-align-justify\">\"I am very satisfied with my treatment at SAJIDA Hospital. From diagnosis to treatment, every step was well organized. The doctors explained everything patiently. The hospital environment is clean and the staff are very supportive. In my opinion, it is a highly reliable healthcare institution.\"</p>",
+        "description_bn": "<p>\"সাজেদা হাসপাতালের সুশৃঙ্খল ও পেশাদার সেবা আমাকে অত্যন্ত সন্তুষ্ট করেছে।\"</p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-14T22:54:49.000000Z",
+        "updated_at": "2026-04-27T23:27:47.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "type": "card",
+    "title_en": "Board Members",
+    "title_bn": "বোর্ড সদস্যবৃন্দ",
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "media_ids": [],
+    "card_ids": [
+      210,
+      211,
+      212,
+      213,
+      214,
+      215
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-09-15T16:59:35.000000Z",
+    "updated_at": "2026-05-14T14:04:22.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 210,
+        "page_name": null,
+        "media_ids": 628,
+        "title_en": "Dr. Md. Tariqul Islam",
+        "title_bn": null,
+        "description_en": "<p>Senior Adviser (Hospital &amp; NPHL)</p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-15T16:55:45.000000Z",
+        "updated_at": "2026-05-14T13:25:51.000000Z",
+        "media_files": {
+          "id": 628,
+          "title": "Dr. Md. Tariqul Islam (1) - Copy (1).png",
+          "file_name": "mave_2EYMXv.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_2EYMXv.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2026-05-14T13:25:35.000000Z",
+          "updated_at": "2026-05-14T13:25:35.000000Z"
+        }
+      },
+      {
+        "id": 211,
+        "page_name": null,
+        "media_ids": 622,
+        "title_en": "Dr. Mahmuda Akhtar",
+        "title_bn": null,
+        "description_en": "<p>General Manager</p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-15T16:56:32.000000Z",
+        "updated_at": "2026-05-13T16:41:36.000000Z",
+        "media_files": {
+          "id": 622,
+          "title": "Dr. Mahmuda Akhtar (1).png",
+          "file_name": "mave_y3m3A0.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_y3m3A0.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2026-05-13T16:41:27.000000Z",
+          "updated_at": "2026-05-13T16:41:27.000000Z"
+        }
+      },
+      {
+        "id": 212,
+        "page_name": null,
+        "media_ids": 584,
+        "title_en": "Md.Shahjalal Farazi",
+        "title_bn": null,
+        "description_en": "<p>Assistant General Manager (Admin)</p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-15T16:57:06.000000Z",
+        "updated_at": "2026-05-13T13:53:35.000000Z",
+        "media_files": {
+          "id": 584,
+          "title": "Adobe Express - file (2).jpg",
+          "file_name": "mave_wISfJO.jpg",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_wISfJO.jpg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2026-05-13T13:53:27.000000Z",
+          "updated_at": "2026-05-13T13:53:27.000000Z"
+        }
+      },
+      {
+        "id": 213,
+        "page_name": null,
+        "media_ids": 585,
+        "title_en": "S.M.Ali Hossan",
+        "title_bn": null,
+        "description_en": "<p>Assistant General Manager (Internal Control)</p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-15T16:57:39.000000Z",
+        "updated_at": "2026-05-13T13:54:30.000000Z",
+        "media_files": {
+          "id": 585,
+          "title": "S.M.Ali Hossan.JPG",
+          "file_name": "mave_R6SIC4.jpg",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_R6SIC4.jpg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2026-05-13T13:54:21.000000Z",
+          "updated_at": "2026-05-13T13:54:21.000000Z"
+        }
+      },
+      {
+        "id": 214,
+        "page_name": null,
+        "media_ids": 623,
+        "title_en": "Dr. Rehana Akter Nayona",
+        "title_bn": null,
+        "description_en": "<p>Senior Coordinator (Clinical)&nbsp;</p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-15T16:58:13.000000Z",
+        "updated_at": "2026-05-13T16:43:30.000000Z",
+        "media_files": {
+          "id": 623,
+          "title": "Dr. Rehana Akter Nayona.JPG",
+          "file_name": "mave_5C7vNc.jpg",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_5C7vNc.jpg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2026-05-13T16:43:25.000000Z",
+          "updated_at": "2026-05-13T16:43:25.000000Z"
+        }
+      },
+      {
+        "id": 215,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "Sumaiya Zaman",
+        "title_bn": null,
+        "description_en": "<p>Senior Assistant Coordinator (Quality Assurance)</p>",
+        "description_bn": null,
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-15T16:58:44.000000Z",
+        "updated_at": "2026-05-07T14:17:11.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "type": "card",
+    "title_en": "homeslider",
+    "title_bn": "homeslider",
+    "description_en": "<p>homeslider</p>",
+    "description_bn": "<p>homeslider</p>",
+    "media_ids": [],
+    "card_ids": [
+      218,
+      219
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-09-16T17:08:48.000000Z",
+    "updated_at": "2025-09-16T17:08:48.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 218,
+        "page_name": null,
+        "media_ids": 477,
+        "title_en": "slider 1",
+        "title_bn": null,
+        "description_en": "<h1>SAJIDA Hospital <span style=\"color: rgb(102, 185, 102);\">My Hospital</span></h1><p>SAJIDA Foundation ensures quality medical healthcare for all, rooted in inclusivity and affordability.</p>",
+        "description_bn": "<p>24,50,000+</p><p>Outdoor Patients Served</p><p>1,50,000+</p><p>Inpatient Services Provided</p><p>7,500+</p><p>Safe Deliveries Ensured</p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-16T16:57:39.000000Z",
+        "updated_at": "2026-05-07T11:25:56.000000Z",
+        "media_files": {
+          "id": 477,
+          "title": "HeroImage.svg",
+          "file_name": "mave_yghLPZ.svg",
+          "file_type": "image/svg+xml",
+          "file_path": "media/mave_yghLPZ.svg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-08-20T18:21:56.000000Z",
+          "updated_at": "2025-08-20T18:21:56.000000Z"
+        }
+      },
+      {
+        "id": 219,
+        "page_name": null,
+        "media_ids": 574,
+        "title_en": "slider 2",
+        "title_bn": null,
+        "description_en": "<h1><span style=\"color: rgb(102, 185, 102);\">Precision You Can Trust</span><span style=\"color: rgb(0, 0, 0); background-color: transparent;\"> </span></h1><p>Affordable diagnosis with hassle-free process and reliable result</p>",
+        "description_bn": "<p>26% Discount&nbsp;</p><p>on All Tests</p><p>60+ Specialists</p><p>Providing Advanced Medical Care</p><p>Advanced Diagnosis</p><p>With X-ray, USG, ECG and more</p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-16T17:05:54.000000Z",
+        "updated_at": "2026-05-06T16:51:36.000000Z",
+        "media_files": {
+          "id": 574,
+          "title": "hospital banner_02.jpg.jpeg",
+          "file_name": "mave_D5sgSK.jpg",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_D5sgSK.jpg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2026-04-28T15:23:02.000000Z",
+          "updated_at": "2026-04-28T15:23:02.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "type": "card",
+    "title_en": "OUR SERVICES",
+    "title_bn": "OUR SERVICES",
+    "description_en": "<p>Medical Facilities</p>",
+    "description_bn": "<p>Medical Facilities</p>",
+    "media_ids": [],
+    "card_ids": [
+      220,
+      221,
+      222,
+      223
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-09-22T21:27:59.000000Z",
+    "updated_at": "2025-09-22T21:27:59.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 220,
+        "page_name": "Demo",
+        "media_ids": 497,
+        "title_en": "Ambulance Service",
+        "title_bn": "Ambulance Service",
+        "description_en": "<p>24-hour air-conditioned ambulance service available for patients.</p>",
+        "description_bn": "<p>24-hour air-conditioned ambulance service available for patients.</p>",
+        "link_url": "/akter-nayona?page_id=142&pageName=Dr. Rehana Akter Nayona",
+        "additional": {
+          "tags": [
+            "Football",
+            "cms",
+            "usa"
+          ]
+        },
+        "status": 1,
+        "created_at": "2025-09-22T21:24:27.000000Z",
+        "updated_at": "2025-09-22T21:24:27.000000Z",
+        "media_files": {
+          "id": 497,
+          "title": "bloodbank.png",
+          "file_name": "mave_S0kgR3.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_S0kgR3.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-15T15:20:15.000000Z",
+          "updated_at": "2025-09-15T15:20:15.000000Z"
+        }
+      },
+      {
+        "id": 221,
+        "page_name": "Demo",
+        "media_ids": 496,
+        "title_en": "Blood Bank",
+        "title_bn": "Blood Bank",
+        "description_en": "<p>First blood bank and transfusion services in Keraniganj Upazila.</p>",
+        "description_bn": "<p>First blood bank and transfusion services in Keraniganj Upazila.</p>",
+        "link_url": "/ali-hossan?page_id=141&pageName=S.M.Ali Hossan",
+        "additional": {
+          "tags": [
+            "Football",
+            "cow",
+            "robust"
+          ]
+        },
+        "status": 1,
+        "created_at": "2025-09-22T21:25:20.000000Z",
+        "updated_at": "2025-09-22T21:25:20.000000Z",
+        "media_files": {
+          "id": 496,
+          "title": "dialysis.png",
+          "file_name": "mave_slL5V0.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_slL5V0.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-15T15:20:00.000000Z",
+          "updated_at": "2025-09-15T15:20:00.000000Z"
+        }
+      },
+      {
+        "id": 222,
+        "page_name": "Demo",
+        "media_ids": 495,
+        "title_en": "Dialysis Service",
+        "title_bn": "Dialysis Service",
+        "description_en": "<p>Advanced hemodialysis services for patients with kidney disorders.</p>",
+        "description_bn": "<p>Advanced hemodialysis services for patients with kidney disorders.</p>",
+        "link_url": "/tariqul-islam?page_id=143&pageName=Dr.Md. Tariqul Islam",
+        "additional": {
+          "tags": [
+            "cms",
+            "mave",
+            "usa"
+          ]
+        },
+        "status": 1,
+        "created_at": "2025-09-22T21:26:06.000000Z",
+        "updated_at": "2025-09-22T21:26:06.000000Z",
+        "media_files": {
+          "id": 495,
+          "title": "nicu.png",
+          "file_name": "mave_9ynVhH.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_9ynVhH.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-15T15:18:43.000000Z",
+          "updated_at": "2025-09-15T15:18:43.000000Z"
+        }
+      },
+      {
+        "id": 223,
+        "page_name": "Demo",
+        "media_ids": 496,
+        "title_en": "Neonatal Intensive Care Unit (NICU)",
+        "title_bn": "Neonatal Intensive Care Unit (NICU)",
+        "description_en": "<p>Specialized neonatal intensive care with 12 beds and observation ward.</p>",
+        "description_bn": "<p>Specialized neonatal intensive care with 12 beds and observation ward.</p>",
+        "link_url": "/akter-nayona?page_id=142&pageName=Dr. Rehana Akter Nayona",
+        "additional": {
+          "tags": [
+            "robust",
+            "Football",
+            "cms"
+          ]
+        },
+        "status": 1,
+        "created_at": "2025-09-22T21:26:51.000000Z",
+        "updated_at": "2025-09-22T21:26:51.000000Z",
+        "media_files": {
+          "id": 496,
+          "title": "dialysis.png",
+          "file_name": "mave_slL5V0.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_slL5V0.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-15T15:20:00.000000Z",
+          "updated_at": "2025-09-15T15:20:00.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "type": "card",
+    "title_en": "Services",
+    "title_bn": "সার্ভিসেস",
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "media_ids": [],
+    "card_ids": [
+      227,
+      228,
+      248,
+      250,
+      257,
+      251,
+      252,
+      258,
+      256,
+      249,
+      224,
+      225,
+      253,
+      226,
+      254,
+      255
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-09-25T18:57:53.000000Z",
+    "updated_at": "2026-06-24T08:43:21.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 227,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "Neonatal Intensive Care Unit (NICU)",
+        "title_bn": "এনআইসিইউ",
+        "description_en": "<p><span style=\"background-color: transparent;\">Intensive care of newborns under the supervision of experienced and skilled NICU team</span></p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">ChildCareOutlinedIcon</strong></p>",
+        "link_url": "/nicu?page_id=153&pageName=Neonatal Intensive Care Unit (NICU)",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-25T18:55:59.000000Z",
+        "updated_at": "2026-03-14T15:27:25.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 228,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "Normal Delivery",
+        "title_bn": "নরমাল ডেলিভারি",
+        "description_en": "<p><span style=\"background-color: transparent;\">Safe delivery services under the supervision of an experienced and skilled team</span></p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">AccessibilityNewOutlinedIcon</strong></p>",
+        "link_url": "/nvd-normal-vaginal-delivery?page_id=154&pageName=NVD (Normal Vaginal Delivery)",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-25T18:56:54.000000Z",
+        "updated_at": "2026-06-24T06:05:12.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 248,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "Obs & Gynae",
+        "title_bn": null,
+        "description_en": "<p>SAJIDA Hospital is a trusted name for safe maternity and reproductive health services, delivered in a compassionate, women-friendly environment</p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">BiotechIcon</strong></p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-18T18:00:20.000000Z",
+        "updated_at": "2026-05-10T13:36:58.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 250,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "General Surgery",
+        "title_bn": null,
+        "description_en": "<p>A trusted commitment to skilled and compassionate surgical care</p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">HealthAndSafetyIcon</strong></p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-18T18:27:35.000000Z",
+        "updated_at": "2026-05-10T13:41:05.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 257,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "Cardiology",
+        "title_bn": null,
+        "description_en": "<p>Advanced heart diagnostics and treatment, delivered with care</p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">MonitorHeartIcon</strong></p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-18T18:58:03.000000Z",
+        "updated_at": "2026-05-09T12:53:16.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 251,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "ENT",
+        "title_bn": null,
+        "description_en": "<p><span style=\"background-color: transparent;\">The right solution for nose, ear and throat problems with modern technology</span></p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">HearingDisabledIcon</strong></p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-18T18:31:27.000000Z",
+        "updated_at": "2026-04-08T15:31:09.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 252,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "Orthopedics",
+        "title_bn": null,
+        "description_en": "<p>Helping you move better with skilled orthopedic treatment</p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">AccessibleForwardIcon</strong></p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-18T18:32:41.000000Z",
+        "updated_at": "2026-05-09T12:56:04.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 258,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "SKIN & VD",
+        "title_bn": null,
+        "description_en": "<p>Advanced dermatology and venereal care for healthier skin and wellbeing</p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">SoapIcon</strong></p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-18T18:59:32.000000Z",
+        "updated_at": "2026-05-09T12:57:58.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 256,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "Nutrition",
+        "title_bn": null,
+        "description_en": "<p>Tailored dietary guidance for long-term wellness</p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">FactCheckOutlinedIcon</strong></p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-18T18:56:15.000000Z",
+        "updated_at": "2026-05-09T12:59:42.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 249,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "Medicine",
+        "title_bn": null,
+        "description_en": "<p>Trusted internal medicine care for better health and wellbeing</p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">MedicationLiquidIcon</strong></p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-18T18:13:06.000000Z",
+        "updated_at": "2026-05-09T13:25:29.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 224,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "Ambulance Service",
+        "title_bn": null,
+        "description_en": "<p><span style=\"background-color: transparent;\">24-hour AC ambulance service for emergencies&nbsp;</span></p><p><span style=\"background-color: transparent;\">Contact - 01777-771418, 09612 223399 (Hotline)</span></p>",
+        "description_bn": "<p><strong style=\"color: rgb(33, 33, 33);\">LocalHospitalOutlinedIcon</strong></p>",
+        "link_url": "/ambulance-service?page_id=150&pageName=Ambulance service",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-25T18:52:47.000000Z",
+        "updated_at": "2026-05-14T14:40:43.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 225,
+        "page_name": "Blood bank",
+        "media_ids": 494,
+        "title_en": "Blood Bank",
+        "title_bn": "ব্লাড ব্যাংক",
+        "description_en": "<p><span style=\"background-color: transparent;\">Safe blood is stored and supplied without any germs</span></p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">BloodtypeOutlinedIcon</strong></p>",
+        "link_url": "/blood-bank?page_id=151&pageName=Blood bank",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-25T18:53:57.000000Z",
+        "updated_at": "2026-03-14T15:25:33.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 253,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "Diagnostic",
+        "title_bn": null,
+        "description_en": "<p>A trusted destination for advanced technology and fast, accurate laboratory reports</p>",
+        "description_bn": "<p>FastfoodIcon</p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-18T18:51:32.000000Z",
+        "updated_at": "2026-05-09T13:06:00.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 226,
+        "page_name": "Dialysis",
+        "media_ids": 494,
+        "title_en": "Dialysis Service",
+        "title_bn": "ডায়ালাইসিস",
+        "description_en": "<p><span style=\"background-color: transparent;\">Get quality dialysis services under the supervision of experienced kidney specialists</span></p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">BiotechOutlinedIcon</strong></p>",
+        "link_url": "/dialysis?page_id=152&pageName=Dialysis",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-25T18:54:57.000000Z",
+        "updated_at": "2026-03-14T15:26:36.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 254,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "24/7 Emergency",
+        "title_bn": null,
+        "description_en": "<p><span style=\"background-color: transparent;\">A trusted name in emergency treatment, with fast and immediate management under the round-the-clock supervision of an experienced team</span></p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">MedicalServicesIcon</strong></p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-18T18:53:09.000000Z",
+        "updated_at": "2026-04-08T15:46:29.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 255,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "Pharmacy",
+        "title_bn": null,
+        "description_en": "<p>24-hour pharmacy service for health protection, where quality medicines ensure safe treatment</p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">MedicationIcon</strong></p>",
+        "link_url": null,
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-18T18:54:23.000000Z",
+        "updated_at": "2026-04-08T15:51:15.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "type": "card",
+    "title_en": "Case Story",
+    "title_bn": "কেস স্টোরি",
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "media_ids": [],
+    "card_ids": [
+      235,
+      238,
+      237,
+      236,
+      234,
+      232,
+      231,
+      230
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-11-13T17:38:38.000000Z",
+    "updated_at": "2026-05-09T13:53:04.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 235,
+        "page_name": "Caring for Every Life",
+        "media_ids": 549,
+        "title_en": "Caring for Every Life",
+        "title_bn": "প্রতিটি জীবনের যত্ন",
+        "description_en": "<p>\"The dialysis care I received here has brought comfort and reassurance to both me and my family,\" shares Sukkuri Begum.</p>",
+        "description_bn": "<p>“এখানে আমি যে ডায়ালাইসিস সেবা পেয়েছি, তা আমাকে এবং আমার পরিবারকে স্বস্তি এবং আশ্বাস দিয়েছে,” জানালেন শুক্কুরি বেগম।</p>",
+        "link_url": "/caring-for-every-life?page_id=159&pageName=Caring for Every Life",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-10-28T22:19:34.000000Z",
+        "updated_at": "2025-11-23T23:38:43.000000Z",
+        "media_files": {
+          "id": 549,
+          "title": "Good_Care_for_a_Better_Life_xREzf.width-695.format-webp.webp",
+          "file_name": "mave_AGM1JX.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_AGM1JX.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-11-23T23:21:37.000000Z",
+          "updated_at": "2025-11-23T23:21:37.000000Z"
+        }
+      },
+      {
+        "id": 238,
+        "page_name": null,
+        "media_ids": 546,
+        "title_en": "A Silent Hero",
+        "title_bn": "নীরব নায়ক",
+        "description_en": "<p><span style=\"color: rgb(136, 136, 136); background-color: transparent;\">“There is nothing more gratifying than helping patients. Alleviating their suffering and receiving their blessings is what drives me,” said Ranjita Baral, a dedicated nurse at Sajida Hospital Keraniganj, who has been serving for the past 5 years.</span></p><p><br></p><p><span style=\"color: rgb(136, 136, 136); background-color: transparent;\">Ranjita starts her work early every morning. She checks that the wards are properly organized with her colleagues and prepares all the necessary equipment before the doctors' rounds. From arranging the equipment to performing follow-up tests at the patient's side, she sees to every detail to ensure that there is no shortage of service.</span></p><p><br></p><p><span style=\"color: rgb(136, 136, 136); background-color: transparent;\">Throughout the day, she assists doctors, guides fellow nurses, and calms agitated or anxious patients by listening attentively to their complaints. She also ensures seamless patient care by coordinating admissions, surgery schedules, and with doctors and anesthesiologists.</span></p><p><br></p><p><span style=\"color: rgb(136, 136, 136); background-color: transparent;\">After joining Sajida in December 2010, she became a permanent employee within a year. The satisfaction of a job well done, the praise and prayers of patients motivate her the most. Her dedication and compassion have made Sajida a true hero behind the scenes of the hospital's reputation.</span></p>",
+        "description_bn": "<p>“রোগীদের সাহায্য করার চেয়ে বেশি আনন্দদায়ক কিছু নেই। তাদের কষ্ট কমানো এবং তাদের আশীর্বাদ পাওয়াই আমাকে চালিত করে,” বললেন রঞ্জিতা বড়াল, সাজেদা হাসপাতাল কেরানীগঞ্জের নিবেদিতপ্রাণ নার্স, যিনি গত ৫ বছর ধরে সেবা দিচ্ছেন।</p><p>রঞ্জিতা প্রতিদিন খুব সকালে তার কাজ শুরু করেন। তিনি ওয়ার্ডগুলো তার সহকর্মীদের নিয়ে ঠিকঠাক গোছানো কিনা দেখেন এবং ডাক্তারদের রাউন্ডের আগে সব প্রয়োজনীয় সরঞ্জাম প্রস্তুত রাখেন। সরঞ্জাম সাজানো থেকে রোগীর পাশে ফলোআপ পরীক্ষা করা পর্যন্ত সকল খুঁটিনাটি বিষয় দেখেন যেন সেবায় কোন ঘাটতি না হয়।</p><p>দিনভর তিনি ডাক্তারদের সহায়তা করেন, সহকর্মী নার্সদের গাইড করেন এবং উত্তেজিত বা উদ্বিগ্ন রোগীদের অভাব অভিযোগ মনোযোগ দিয়ে শুনে শান্ত করেন। এছাড়া ভর্তি কার্যক্রম, অপারেশন সময়সূচি এবং ডাক্তার ও অ্যানেস্থেসিওলজিস্টদের সঙ্গে সমন্বয় করে রোগীদের নির্বিঘ্ন সেবা নিশ্চিত করেন।</p><p>ডিসেম্বর ২০১০ সালে সাজেদায় যোগদানের পর, এক বছরের মধ্যে তিনি স্থায়ী কর্মী হন। কাজ ভালোভাবে সম্পন্ন হওয়ার সন্তুষ্টি, রোগীদের প্রশংসা ও দোয়াই তাকে সবচেয়ে বেশি প্রেরণা দেয়। তার নিষ্ঠা ও সহানুভুতি সাজেদা হাস্পাতালের সুনামের পেছনের পর্দায় এক সত্যিকারের নায়ক হিসেবে তৈরি করেছে।&nbsp;</p>",
+        "link_url": "/a-silent-hero?page_id=162&pageName=A Silent Hero",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-10-28T22:26:23.000000Z",
+        "updated_at": "2026-03-13T13:26:20.000000Z",
+        "media_files": {
+          "id": 546,
+          "title": "Case-Story_Hospital_thumbnail.width-695.format-webp.webp",
+          "file_name": "mave_SBiaE9.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_SBiaE9.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-11-23T23:17:12.000000Z",
+          "updated_at": "2025-11-23T23:17:12.000000Z"
+        }
+      },
+      {
+        "id": 237,
+        "page_name": null,
+        "media_ids": 547,
+        "title_en": "The Committed Healer",
+        "title_bn": "নিষ্ঠাবান চিকিৎসক",
+        "description_en": "<p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">The joy I get from seeing a patient’s recovery cannot be expressed in words” - Dr. Nadia Shamsuddin, Indoor Medical Officer, Sajida Hospital.&nbsp;</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Since joining Sajida Hospital in 2018, 33-year-old Dr. Nadia has been working with her five years of experience and deep dedication to her patients. She values ​​the well-organized environment and high quality of treatment at the hospital, which allows her to take care of each patient.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">From admission to discharge/discharge, Dr. Nadia stays by the patient's side - following medication management instructions carefully, identifying any other problems or needs, and liaising with specialists if necessary to ensure medical care. She also provides support and comfort to the patient through psychological counseling, so that they can easily accept the difficult treatment.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">He said, “A doctor cannot ensure the complete recovery of a patient, it is in the hands of Allah. But we can be a guide to their path from illness to recovery. When patients trust us second only to Allah, I feel truly blessed.”</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Wearing a white coat, Dr. Nadia takes full responsibility for the health and well-being of her patients. In the future, she will continue to strive to learn new things and apply them in the service of people to establish herself as a more skilled and compassionate physician.</span></p>",
+        "description_bn": "<p>রোগীর সুস্থতা দেখে যে আনন্দ পাই, তা ভাষায় প্রকাশ করা যায় না” - ডা. নাদিয়া সামসুদ্দিন, ইনডোর মেডিকেল অফিসার, সাজেদা হাসপাতাল।</p><p><br></p><p>২০১৮ সালে সাজেদা হাসপাতালে যোগদানের পর থেকে ৩৩ বছর বয়সী ডা. নাদিয়া তার পাঁচ বছরের পূর্ব অভিজ্ঞতা এবং রোগীর প্রতি গভীর নিষ্ঠা নিয়ে কাজ করছেন। তিনি হাসপাতালের সুসংগঠিত পরিবেশ এবং উন্নত চিকিৎসার মানকে মূল্য দিতেন, যা তাকে প্রতিটি রোগীর প্রতি যত্নশীল হওয়ার সুযোগ দেয়।</p><p><br></p><p>ভর্তি থেকে ছুটি/ ছাড়পত্র দেওয়া পর্যন্ত, ডা. নাদিয়া রোগীর পাশে থাকেন- ঔষধের ব্যবস্থাপনা পত্রের সঠিকভাবে অনুসরণ করা, অন্য কোন সমস্যা বা প্রয়োজন চিহ্নিত করে প্রয়োজনে বিশেষজ্ঞদের সাথে যোগাযোগ করে চিকিৎসাসেবা নিশ্চিত করা। তিনি রোগীকে মানসিক কাউন্সিলিং এর মাধ্যমে সমর্থন ও স্বস্তিও দেন, যাতে তারা কঠিন চিকিৎসা সহজে গ্রহণ করতে পারেন।</p><p><br></p><p>তিনি বলেন, “একজন ডাক্তার রোগীর সম্পূর্ণ সুস্থতা নিশ্চিত করতে পারেন না, এটি আল্লাহর হাতে। কিন্তু আমরা তাদের অসুস্থতা থেকে সুস্থতার পথে পথপ্রদর্শক হতে পারি। রোগীরা যখন আল্লাহর পর দ্বিতীয় স্থানে আমাদের উপর বিশ্বাস রাখেন, তখন আমি সত্যিই ধন্য বোধ করি।”</p><p><br></p><p>সাদা কোট পরিধান করে ডা. নাদিয়া তার রোগীদের স্বাস্থ্য ও সুস্থতার সম্পূর্ণ দায়িত্ব গ্রহণ করেন। ভবিষ্যতে তিনি নিজেকে চিকিৎসাসেবায় আরও দক্ষ ও সহমর্মী চিকিৎসক হিসেবে প্রতিষ্ঠিত করতে নতুন নতুন বিষয় শিখে মানুষের সেবায় প্রয়োগ করার প্রচেষ্টা অটুট রাখবেন।&nbsp;&nbsp;</p>",
+        "link_url": "/the-committed-healer?page_id=161&pageName=The Committed Healer",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-10-28T22:24:22.000000Z",
+        "updated_at": "2026-03-13T13:27:59.000000Z",
+        "media_files": {
+          "id": 547,
+          "title": "thumbnail_Dr._Nadia_Samsuddin.width-695.format-webp.webp",
+          "file_name": "mave_eeX4ym.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_eeX4ym.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-11-23T23:18:47.000000Z",
+          "updated_at": "2025-11-23T23:18:47.000000Z"
+        }
+      },
+      {
+        "id": 236,
+        "page_name": null,
+        "media_ids": 548,
+        "title_en": "Quality Care Close to Home",
+        "title_bn": "স্বাস্থ্যসেবা",
+        "description_en": "<p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">60-year-old Yarunnesa, a struggling single mother from Keraniganj, was silently enduring the pain of a facial ulcer, only to realize that her daughter would not be able to afford medical care on her limited income. She was also unable to afford to eat properly and could not find a quality hospital nearby.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Suddenly, a relative suggested that she be brought to Sajida Hospital, which is close to her home. The hospital's compassionate and dedicated medical team, who were overwhelmed with pain and anxiety, constantly provided her with their sincere care, instilling confidence and comfort.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Yarunnesa cites the support and warm attitude of the staff as the main reason for her speedy recovery. This allowed her to openly share her symptoms and receive an accurate diagnosis. \"This effective doctor-patient communication is Sajida's core vision, so that everyone can access accessible and affordable healthcare,\" she says.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">She simply listed her symptoms and was able to get an accurate diagnosis. “Such an effective doctor-patient connection is the key feature of Sajida, so that affordable healthcare is accessible to everyone.</span></p>",
+        "description_bn": "<p>৬০ বছর বয়সী ইয়ারুননেসা, কেরানীগঞ্জের একজন সংগ্রামী একলা চলা মা, মুখে ঘায়ের ব্যাথা তিনি নীরবে চুপচাপ সহ্য করছিলেন শুধু তার মেয়ে সীমিত আয়ে চিকিৎসাসেবা বহন করতে পারবে না এটা ভেবে। খাওয়া দাওয়াও ঠিকমতো করতে পারছিলেন না, আবার আশেপাশে কোনো খুব মানসম্মত হাসপাতালও খুঁজে পাচ্ছেন না।</p><p><br></p><p><br></p><p>হঠাৎ করে এক আত্মীয় তাকে সাজেদা হাসপাতালে আনার পরামর্শ দেন, যা তার বাসার কাছাকাছি। ব্যথা ও দুশ্চিন্তায় ভেঙে পড়া ইয়ারুননেসাকে হাসপাতালের সহানুভূতিশীল ও নিবেদিত চিকিৎসা দল তাদের আন্তরিক সেবা দিয়ে নিয়মিত পাশে থেকে আত্মবিশ্বাস ও স্বস্তি জাগিয়েছে।</p><p><br></p><p>ইয়ারুননেসা স্টাফদের সমর্থন এবং আন্তরিক মনোভাবকে তার দ্রুত সুস্থতার মূল কারণ হিসেবে উল্লেখ করেন। এতে তিনি তার উপসর্গগুলো খোলাখুলিভাবে জানাতে পেরেছেন এবং সঠিক রোগ নির্ণয় হয়েছে। তিনি বলেন, \"এই কার্যকর ডাক্তার-রোগী যোগাযোগই সাজেদার মূল দৃষ্টি, যাতে সবার কাছে সহজলভ্য ও সাশ্রয়ী স্বাস্থ্যসেবা পৌঁছে যায়।\"</p><p><br></p><p>তিনি সহজভাবে নিজের রোগ উপসর্গগুলো মনোনয় সঠিক রোগনিরনয়ে সুবিধা হয়েছে। “এরকম কার্যকর দাক্তার-রোগির মধ্যে সংযোগ সাজেদার মূল বৈশিষ্ট, যাতে সবার কাছে সাশ্রয়ী সাস্থ্যসেবা পৌঁছে যায়।&nbsp;</p>",
+        "link_url": "/quality-care-close-to-home?page_id=160&pageName=Quality Care Close to Home",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-10-28T22:21:51.000000Z",
+        "updated_at": "2026-03-13T13:28:57.000000Z",
+        "media_files": {
+          "id": 548,
+          "title": "Hospital-static_Thumbail_Patients.width-695.format-webp.webp",
+          "file_name": "mave_EbM1AW.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_EbM1AW.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-11-23T23:20:09.000000Z",
+          "updated_at": "2025-11-23T23:20:09.000000Z"
+        }
+      },
+      {
+        "id": 234,
+        "page_name": null,
+        "media_ids": 550,
+        "title_en": "A True Blessing",
+        "title_bn": "একটি সত্যিকারের আশীর্বাদ",
+        "description_en": "<p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">“My profession fills me with immense gratitude. Being a part of bringing a new life into the world is truly a unique feeling” - Dr. Saria Nafia.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Dr. Saria Nafisa has been working as an Obstetrics and Gynecology Specialist with compassion and dedication. For the past three years, she has been fully dedicated to training, treatment and service at Sajida Hospital Keraniganj. She shows equal care to the mother and child and understands the long and difficult time during pregnancy in families, hence treats each patient with compassion and understanding.&nbsp;</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Saria enjoys treating women in Keraniganj, and their feedback boosts her confidence and inspires her. “The gratitude and blessings of the patients I serve encourage me to do better,” she says.</span></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">His diverse experiences have shaped his medical philosophy. “I believe that as a doctor, providing emotional support to a patient is more important than providing physical treatment,” he says.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">At Sajida Hospital, treating everyone equally is a core value. Medical officers closely monitor maternity patients during delivery. Every patient is given a follow-up call within a week of discharge from the hospital, and nurses also take care of cleanliness, food and medication. “This consistent care and dedication sets Sajida apart,” says Saria.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">After three years of practice, Saria is now a confident and experienced obstetrician, ready for bigger challenges. “These three years at Sajidaya have changed my life,” she says.</span></p>",
+        "description_bn": "<p>“আমার পেশা আমাকে অসীম কৃতজ্ঞতায় মন ভরিয়ে দেয়। নতুন একটি জীবনকে পৃথিবীতে আনার অংশ হওয়া সত্যিই অনন্য অনুভুতি” - ডা. সারিয়া নাফিয়া।</p><p><br></p><p>ডা. সারিয়া নাফিসা একজন প্রসূতি ও গাইনোকোলজি বিশেষজ্ঞ হিসেবে সহানুভুতি ও নিষ্ঠার সঙ্গে কাজ করে চলেছেন। গত তিন বছর ধরে সাজেদা হাসপাতাল কেরানীগঞ্জে তিনি প্রশিক্ষণ, চিকিৎসা এবং সেবায় সম্পূর্ণ নিবেদিত। তিনি মা ও শিশুর প্রতি সমান যত্ন দেখান এবং পরিবারগুলোতে গর্ভাবস্থায় দীর্ঘ ও কস্টদায়ক সময় বোঝেন, তাই প্রতিটি রোগীর সঙ্গে সহানুভূতি ও বোঝাপড়ার মনোভাব নিয়ে আচরণ করেন।</p><p><br></p><p>সারিয়া কেরানীগঞ্জের নারীদের চিকিৎসা করে আনন্দ পান এবং তাদের প্রতিক্রিয়া তার আত্মবিশ্বাস বাড়ায়, অনুপ্রাণিত করে। তিনি বলেন, “যেসব রোগীদের আমি সেবা দেই, তাদের কৃতজ্ঞতা ও দোয়া আমাকে আরও ভালো কাজ করতে উৎসাহিত করে।”</p><p><br></p><p>বিভিন্ন অভিজ্ঞতা তার চিকিৎসা দর্শনকে গড়ে তুলেছে। তিনি বলেন, “আমি বিশ্বাস করি, একজন ডাক্তার হিসেবে রোগীকে মানসিক সমর্থন দেওয়া শারীরিক চিকিৎসা প্রদানের চেয়েও বেশি গুরুত্বপূর্ণ।”</p><p>সাজেদা হাসপাতালে সকলকে সমভাবে মূল্যায়ন করে দেওয়াই মূল মূল্যবোধ। প্রসূতি রোগীদের ডেলিভারির সময় মেডিকেল অফিসাররা ঘনিষ্ঠভাবে তদারকি করেন। হাসপাতাল থেকে ছারপত্রের এক সপ্তাহের মধ্যে প্রতিটি রোগীকে ফলো-আপ কল দেওয়া হয়, নার্সরা পরিচ্ছন্নতা, খাবার এবং ওষুধের ব্যাবস্থাও খেয়াল রাখেন। সারিয়া বলেন, “এই ধারাবাহিক যত্ন নিষ্ঠা সাজেদাকে আলাদা করে।”</p><p><br></p><p>তিন বছরের প্র্যাকটিস শেষে সারিয়া এখন একজন আত্মবিশ্বাসী ও অভিজ্ঞ প্রসূতি বিশেষজ্ঞ, যিনি আরও বড় চ্যালেঞ্জের জন্য প্রস্তুত। তিনি বলেন, “সাজেদায় এই তিন বছর আমার জিবনের মোড় ঘুরিয়ে দিয়েছে।”&nbsp;&nbsp;</p>",
+        "link_url": "/a-true-blessing?page_id=158&pageName=A True Blessing",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-10-21T22:40:43.000000Z",
+        "updated_at": "2026-03-13T13:30:19.000000Z",
+        "media_files": {
+          "id": 550,
+          "title": "Hospital-static_Thumbail.width-695.format-webp.webp",
+          "file_name": "mave_vu1x6y.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_vu1x6y.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-11-23T23:23:02.000000Z",
+          "updated_at": "2025-11-23T23:23:02.000000Z"
+        }
+      },
+      {
+        "id": 232,
+        "page_name": "A Journey of Care and Hope",
+        "media_ids": 551,
+        "title_en": "A Journey of Care and Hope",
+        "title_bn": "যত্ন এবং আশার একটি যাত্রা",
+        "description_en": "<p>“I am genuinely pleased with the exceptional care I received at this hospital,” said Suborna Rani Roy after giving birth at SAJIDA Hospital.</p>",
+        "description_bn": "<p>এই হাসপাতালে যে অসাধারণ সেবা পেয়েছি, তা নিয়ে আমি সত্যিই খুব খুশি,” — জানালেন সুবর্ণা রানি রায়, সাজেদা হাসপাতালে সন্তান জন্ম দেওয়ার পর।</p>",
+        "link_url": "/a-journey-of-care-and-hope?page_id=157&pageName=A Journey of Care and Hope",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-10-21T22:35:25.000000Z",
+        "updated_at": "2025-11-23T23:41:07.000000Z",
+        "media_files": {
+          "id": 551,
+          "title": "thumbnail_Suborna_Rani_Roy.width-695.format-webp.webp",
+          "file_name": "mave_3Z8xNA.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_3Z8xNA.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-11-23T23:24:17.000000Z",
+          "updated_at": "2025-11-23T23:24:17.000000Z"
+        }
+      },
+      {
+        "id": 231,
+        "page_name": "A Quarter-Century of Care",
+        "media_ids": 552,
+        "title_en": "A Quarter-Century of Care",
+        "title_bn": "এক চতুর্থাংশ শতাব্দীর স্বাস্থ্যসেবা",
+        "description_en": "<p>“The sight of parents lovingly holding their recovered baby, their faces glowing with relief and happiness, brings me immense satisfaction.” - Zinnatur Nahar, Ward In-Charge, SAJIDA Hospital</p>",
+        "description_bn": "<p>“যখন সুস্থ হয়ে ওঠা শিশুকে তার বাবা-মা ভালোবাসায় জড়িয়ে ধরে, আর তাদের মুখে স্বস্তি ও আনন্দ দেখা যায়, তখন আমার মনে গভীর তৃপ্তি হয়।” — জিন্নাতুর নাহার, ওয়ার্ড ইন-চার্জ, সাজেদা হাসপাতাল।</p>",
+        "link_url": "/a-quarter-century-of-care?page_id=156&pageName=A Quarter-Century of Care",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-10-21T16:11:11.000000Z",
+        "updated_at": "2025-11-23T23:41:47.000000Z",
+        "media_files": {
+          "id": 552,
+          "title": "thumbnail_Zinnatur_Nahar.width-695.format-webp.webp",
+          "file_name": "mave_4Z6hDT.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_4Z6hDT.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-11-23T23:25:22.000000Z",
+          "updated_at": "2025-11-23T23:25:22.000000Z"
+        }
+      },
+      {
+        "id": 230,
+        "page_name": "Frontliner Fighter of SAJIDA Hospital",
+        "media_ids": 545,
+        "title_en": "Frontliner Fighter of SAJIDA Hospital",
+        "title_bn": "সাজেদা হাসপাতালের ফ্রন্টলাইন যোদ্ধা",
+        "description_en": "<p>“Being a health professional at SAJIDA has been deeply rewarding. I’ve had the privilege of seeing firsthand SAJIDA’s strong commitment to delivering healthcare to those in greatest need.” - Dr. Shirina Akbar, Physician, SAJIDA Hospital</p>",
+        "description_bn": "<p>“সাজেদা হাসপাতালে কাজ করা আমার জন্য এক পরিপূর্ণ অভিজ্ঞতা। এখানে কাজ করে বুঝেছি, সাজেদা হাসপাতাল কতটা আন্তরিকভাবে প্রয়োজনীয় মানুষের পাশে দাঁড়ায়,” — বললেন সাজেদা হাসপাতালের চিকিৎসক ডা. শিরিনা আকবর।</p>",
+        "link_url": "/frontliner-fighter-of-sajida-hospital?page_id=163&pageName=Frontliner Fighter of SAJIDA Hospital",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-10-21T16:09:05.000000Z",
+        "updated_at": "2025-11-23T23:42:36.000000Z",
+        "media_files": {
+          "id": 545,
+          "title": "thumbnail_Hospital_Dr.Shirina_Akb.width-695.format-webp.webp",
+          "file_name": "mave_6teugV.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_6teugV.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-11-23T23:15:00.000000Z",
+          "updated_at": "2025-11-23T23:15:00.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "type": "card",
+    "title_en": "News",
+    "title_bn": "সংবাদ",
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "media_ids": [],
+    "card_ids": [
+      247,
+      245,
+      242,
+      244,
+      243,
+      240,
+      239,
+      246,
+      241
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2025-11-17T03:27:49.000000Z",
+    "updated_at": "2026-04-07T17:11:11.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 247,
+        "page_name": "January 31, 2021",
+        "media_ids": 535,
+        "title_en": "January 31, 2021",
+        "title_bn": "৩১ জানুয়ারি, ২০২১",
+        "description_en": "<p>New COVID-19 Unit Opens at SAJIDA Hospital Keraniganj</p>",
+        "description_bn": "<p>সাজেদা হাসপাতাল কেরানীগঞ্জে নতুন কোভিড-১৯ ইউনিট উদ্বোধন</p>",
+        "link_url": "/january-31-2021?page_id=176&pageName=January 31, 2021",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-17T03:25:15.000000Z",
+        "updated_at": "2025-11-23T18:29:40.000000Z",
+        "media_files": {
+          "id": 535,
+          "title": "SAJIDA_HOSPITAL_KERANIGANJ_OPENED.width-695.format-webp.webp",
+          "file_name": "mave_cdnpvh.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_cdnpvh.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-11-23T18:28:51.000000Z",
+          "updated_at": "2025-11-23T18:28:51.000000Z"
+        }
+      },
+      {
+        "id": 245,
+        "page_name": "October 13, 2019",
+        "media_ids": 537,
+        "title_en": "October 13, 2019",
+        "title_bn": "১৩ অক্টোবর, ২০১৯",
+        "description_en": "<p>SAJIDA Hospital Raises Awareness on Breast Cancer</p>",
+        "description_bn": "<p>সাজেদা হাসপাতালের স্তন ক্যান্সার সচেতনতা উদ্যোগ</p>",
+        "link_url": "/october-13-2019?page_id=174&pageName=October 13, 2019",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-17T03:22:21.000000Z",
+        "updated_at": "2025-11-23T18:54:30.000000Z",
+        "media_files": {
+          "id": 537,
+          "title": "SAJIDA_HOSPITAL_CREATING_AWARENES.width-695.format-webp.webp",
+          "file_name": "mave_NiSJGP.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_NiSJGP.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-11-23T18:54:19.000000Z",
+          "updated_at": "2025-11-23T18:54:19.000000Z"
+        }
+      },
+      {
+        "id": 242,
+        "page_name": "September 15, 2019",
+        "media_ids": 540,
+        "title_en": "September 15, 2019",
+        "title_bn": "১৫ সেপ্টেম্বর, ২০১৯",
+        "description_en": "<p>SAJIDA Hospital Keraniganj Achieves Milestone with First Normal Delivery</p>",
+        "description_bn": "<p>কেরানীগঞ্জে প্রথম স্বাভাবিক প্রসবের মাধ্যমে গুরুত্বপূর্ণ মাইলফলক অর্জন করেছে সাজিদা হাসপাতাল</p>",
+        "link_url": "/september-15-2019?page_id=171&pageName=September 15, 2019",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-17T03:16:08.000000Z",
+        "updated_at": "2025-11-23T19:15:39.000000Z",
+        "media_files": {
+          "id": 540,
+          "title": "SAJIDA_HOSPITALS_KERANIGANJ_ACHIE.width-695.format-webp.webp",
+          "file_name": "mave_RSqUqP.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_RSqUqP.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-11-23T19:01:15.000000Z",
+          "updated_at": "2025-11-23T19:01:15.000000Z"
+        }
+      },
+      {
+        "id": 244,
+        "page_name": "September 5, 2019",
+        "media_ids": 538,
+        "title_en": "September 5, 2019",
+        "title_bn": "৫ সেপ্টেম্বর, ২০১৯",
+        "description_en": "<p>SAJIDA Hospitals Complete Nursing Training Phase II</p>",
+        "description_bn": "<p>সাজেদা হাসপাতালের নার্সিং প্রশিক্ষণ পর্ব-II সম্পন্ন</p>",
+        "link_url": "/september-5-2019?page_id=173&pageName=September 5, 2019",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-17T03:19:30.000000Z",
+        "updated_at": "2025-11-23T19:13:01.000000Z",
+        "media_files": {
+          "id": 538,
+          "title": "SAJIDA_HOSPITALS_SUCCESSFULLY_COM.width-695.format-webp.webp",
+          "file_name": "mave_W0mx84.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_W0mx84.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-11-23T18:58:51.000000Z",
+          "updated_at": "2025-11-23T18:58:51.000000Z"
+        }
+      },
+      {
+        "id": 243,
+        "page_name": "July 19, 2019",
+        "media_ids": 539,
+        "title_en": "July 19, 2019",
+        "title_bn": "১৯ জুলাই, ২০১৯",
+        "description_en": "<p>Free Health Camp in Narayanganj Organized by SAJIDA Hospital</p>",
+        "description_bn": "<p>নারায়ণগঞ্জে সাজেদা হাসপাতালের উদ্যোগে বিনামূল্যের স্বাস্থ্যসেবা ক্যাম্প অনুষ্ঠিত</p>",
+        "link_url": "/july-19-2019?page_id=172&pageName=July 19, 2019",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-17T03:17:43.000000Z",
+        "updated_at": "2025-11-23T19:14:39.000000Z",
+        "media_files": {
+          "id": 539,
+          "title": "FREE_HEALTH_CAMP_BY_SAJIDA_HOSPIT.width-695.format-webp.webp",
+          "file_name": "mave_oESNAb.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_oESNAb.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-11-23T19:00:16.000000Z",
+          "updated_at": "2025-11-23T19:00:16.000000Z"
+        }
+      },
+      {
+        "id": 240,
+        "page_name": "May 28, 2019",
+        "media_ids": 542,
+        "title_en": "May 28, 2019",
+        "title_bn": "২৮ মে, ২০১৯",
+        "description_en": "<p>Private Hospitals Join PROSHOMON to Expand Healthcare in Chandpur and Feni</p>",
+        "description_bn": "<p>চাঁদপুর ও ফেনীতে স্বাস্থ্যসেবা জোরদারে প্রশমনে যুক্ত হলো বেসরকারি হাসপাতালগুলো</p>",
+        "link_url": "/28-may-2019?page_id=169&pageName=May 28, 2019",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-17T03:11:25.000000Z",
+        "updated_at": "2025-11-23T19:17:44.000000Z",
+        "media_files": {
+          "id": 542,
+          "title": "PROSHOMON-Health.2e16d0ba.fill-1920x1080-c0.format-webp (1).webp",
+          "file_name": "mave_vGn7Jn.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_vGn7Jn.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-11-23T19:04:17.000000Z",
+          "updated_at": "2025-11-23T19:04:17.000000Z"
+        }
+      },
+      {
+        "id": 239,
+        "page_name": "April 9, 2019",
+        "media_ids": 543,
+        "title_en": "April 9, 2019",
+        "title_bn": "৯ এপ্রিল, ২০১৯",
+        "description_en": "<p>Private Hospitals Join PROSHOMON to Strengthen Healthcare in Chandpur and Feni</p>",
+        "description_bn": "<p>চাঁদপুর ও ফেনীতে স্বাস্থ্যসেবা জোরদারে প্রশমন এ&nbsp;যুক্ত হলো বেসরকারি হাসপাতালগুলো</p>",
+        "link_url": "/april-9-2019?page_id=168&pageName=April 9, 2019",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-17T03:09:31.000000Z",
+        "updated_at": "2025-11-23T19:20:42.000000Z",
+        "media_files": {
+          "id": 543,
+          "title": "PROSHOMON_Session.2e16d0ba.fill-800x450-c0.format-webp.webp",
+          "file_name": "mave_jagE9H.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_jagE9H.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-11-23T19:05:29.000000Z",
+          "updated_at": "2025-11-23T19:05:29.000000Z"
+        }
+      },
+      {
+        "id": 246,
+        "page_name": "March 27, 2019",
+        "media_ids": 536,
+        "title_en": "March 27, 2019",
+        "title_bn": "২৭ মার্চ, ২০১৯",
+        "description_en": "<p>SAJIDA Hospital Keraniganj Hosts Community Eye Camp</p>",
+        "description_bn": "<p>সাজেদা হাসপাতাল কেরানীগঞ্জে কমিউনিটি চক্ষু শিবির অনুষ্ঠিত</p>",
+        "link_url": "/march-27-2019?page_id=175&pageName=March 27, 2019",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-17T03:23:50.000000Z",
+        "updated_at": "2025-11-23T18:51:35.000000Z",
+        "media_files": {
+          "id": 536,
+          "title": "EYE_CAMP_HELD_AT_SAJIDA_HOSPITAL_.width-695.format-webp.webp",
+          "file_name": "mave_8f2qbp.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_8f2qbp.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-11-23T18:51:07.000000Z",
+          "updated_at": "2025-11-23T18:51:07.000000Z"
+        }
+      },
+      {
+        "id": 241,
+        "page_name": "August 16, 2018",
+        "media_ids": 541,
+        "title_en": "August 16, 2018",
+        "title_bn": "১৬ আগস্ট, ২০১৮",
+        "description_en": "<p>SAJIDA Hospital Hosts Free Health Camp in Keraniganj</p>",
+        "description_bn": "<p>কেরানীগঞ্জে অনুষ্ঠিত সাজিদা হাসপাতালের বিনামূল্যের স্বাস্থ্যসেবা ক্যাম্প&nbsp;</p>",
+        "link_url": "/august-16-2018?page_id=170&pageName=August 16, 2018",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-11-17T03:14:31.000000Z",
+        "updated_at": "2025-11-23T19:16:39.000000Z",
+        "media_files": {
+          "id": 541,
+          "title": "FREE_HEALTH_CAMPS_ORGANIZED_BY_SA.width-695.format-webp (1).webp",
+          "file_name": "mave_mMHJ1D.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_mMHJ1D.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-11-23T19:02:35.000000Z",
+          "updated_at": "2025-11-23T19:02:35.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "type": "card",
+    "title_en": "Homeservice",
+    "title_bn": "হোম সার্ভিস",
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "media_ids": [],
+    "card_ids": [
+      227,
+      228,
+      224,
+      225,
+      261
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2026-03-15T13:15:43.000000Z",
+    "updated_at": "2026-06-24T10:37:38.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 227,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "Neonatal Intensive Care Unit (NICU)",
+        "title_bn": "এনআইসিইউ",
+        "description_en": "<p><span style=\"background-color: transparent;\">Intensive care of newborns under the supervision of experienced and skilled NICU team</span></p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">ChildCareOutlinedIcon</strong></p>",
+        "link_url": "/nicu?page_id=153&pageName=Neonatal Intensive Care Unit (NICU)",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-25T18:55:59.000000Z",
+        "updated_at": "2026-03-14T15:27:25.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 228,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "Normal Delivery",
+        "title_bn": "নরমাল ডেলিভারি",
+        "description_en": "<p><span style=\"background-color: transparent;\">Safe delivery services under the supervision of an experienced and skilled team</span></p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">AccessibilityNewOutlinedIcon</strong></p>",
+        "link_url": "/nvd-normal-vaginal-delivery?page_id=154&pageName=NVD (Normal Vaginal Delivery)",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-25T18:56:54.000000Z",
+        "updated_at": "2026-06-24T06:05:12.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 224,
+        "page_name": null,
+        "media_ids": 494,
+        "title_en": "Ambulance Service",
+        "title_bn": null,
+        "description_en": "<p><span style=\"background-color: transparent;\">24-hour AC ambulance service for emergencies&nbsp;</span></p><p><span style=\"background-color: transparent;\">Contact - 01777-771418, 09612 223399 (Hotline)</span></p>",
+        "description_bn": "<p><strong style=\"color: rgb(33, 33, 33);\">LocalHospitalOutlinedIcon</strong></p>",
+        "link_url": "/ambulance-service?page_id=150&pageName=Ambulance service",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-25T18:52:47.000000Z",
+        "updated_at": "2026-05-14T14:40:43.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 225,
+        "page_name": "Blood bank",
+        "media_ids": 494,
+        "title_en": "Blood Bank",
+        "title_bn": "ব্লাড ব্যাংক",
+        "description_en": "<p><span style=\"background-color: transparent;\">Safe blood is stored and supplied without any germs</span></p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">BloodtypeOutlinedIcon</strong></p>",
+        "link_url": "/blood-bank?page_id=151&pageName=Blood bank",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2025-09-25T18:53:57.000000Z",
+        "updated_at": "2026-03-14T15:25:33.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      },
+      {
+        "id": 261,
+        "page_name": "Dialysis",
+        "media_ids": 494,
+        "title_en": "Dialysis",
+        "title_bn": "Dialysis",
+        "description_en": "<p>Receive quality dialysis services under the supervision of experienced kidney specialists</p>",
+        "description_bn": "<p><strong style=\"color: rgb(0, 123, 184);\">BiotechOutlinedIcon</strong></p>",
+        "link_url": "/dialysis?page_id=152&pageName=Dialysis",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2026-03-15T13:03:58.000000Z",
+        "updated_at": "2026-03-30T14:49:19.000000Z",
+        "media_files": {
+          "id": 494,
+          "title": "user.png",
+          "file_name": "mave_zCfkZU.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_zCfkZU.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-09-14T22:54:40.000000Z",
+          "updated_at": "2025-09-14T22:54:40.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "type": "card",
+    "title_en": "d",
+    "title_bn": "d",
+    "description_en": "<p>d</p>",
+    "description_bn": "<p>d</p>",
+    "media_ids": [],
+    "card_ids": [
+      264
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2026-07-07T08:07:05.000000Z",
+    "updated_at": "2026-07-07T08:07:05.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 264,
+        "page_name": null,
+        "media_ids": 633,
+        "title_en": "city rickshaw",
+        "title_bn": null,
+        "description_en": "<p>vhalo gari</p>",
+        "description_bn": null,
+        "link_url": "/january-31-2021?page_id=176&pageName=January 31, 2021",
+        "additional": {
+          "tags": []
+        },
+        "status": 0,
+        "created_at": "2026-07-07T08:05:37.000000Z",
+        "updated_at": "2026-07-07T08:07:30.000000Z",
+        "media_files": {
+          "id": 633,
+          "title": "ChatGPT_Image_Jul_1__2026__06_53_48_PM__1_-removebg-preview.png",
+          "file_name": "mave_iRShLJ.png",
+          "file_type": "image/png",
+          "file_path": "media/mave_iRShLJ.png",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2026-07-01T12:57:16.000000Z",
+          "updated_at": "2026-07-01T12:57:16.000000Z"
+        }
+      }
+    ]
+  }
+]

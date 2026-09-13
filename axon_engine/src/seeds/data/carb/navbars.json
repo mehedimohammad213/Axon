@@ -1,0 +1,96 @@
+[
+  {
+    "id": 3,
+    "title_en": "Carb Navbar",
+    "title_bn": "Carb Navbar",
+    "menu_id": 3,
+    "logo_id": 40,
+    "created_at": "2026-02-16T06:45:16.000000Z",
+    "updated_at": "2026-02-19T04:35:13.000000Z",
+    "logo": {
+      "id": 40,
+      "title": "crooped.png",
+      "file_name": "mave_IjQSm0.png",
+      "file_type": "image/png",
+      "file_path": "media/mave_IjQSm0.png",
+      "file_size": null,
+      "tags": null,
+      "created_at": "2026-02-19T04:35:06.000000Z",
+      "updated_at": "2026-02-19T04:35:06.000000Z"
+    },
+    "menu": {
+      "id": 3,
+      "name": "Nav",
+      "menu_item_ids": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "menu_items": [
+        {
+          "id": 3,
+          "title": "Home",
+          "title_bn": "N/A",
+          "link": "/",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2026-02-19T04:49:46.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 4,
+          "title": "Our Work",
+          "title_bn": "N/A",
+          "link": "/our-work",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        },
+        {
+          "id": 5,
+          "title": "About Us",
+          "title_bn": "N/A",
+          "link": "/about-us",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        },
+        {
+          "id": 6,
+          "title": "Get Involved",
+          "title_bn": "N/A",
+          "link": "/donate",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2026-03-09T06:19:26.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 7,
+          "title": "Adopt a Bigha",
+          "title_bn": "cta",
+          "link": "/donate",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2026-03-05T09:17:56.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 8,
+          "title": "DONATE",
+          "title_bn": "cta",
+          "link": "/donate",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2026-02-16T06:46:41.000000Z",
+          "all_children": []
+        }
+      ]
+    }
+  }
+]

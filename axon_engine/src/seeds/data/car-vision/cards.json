@@ -1,0 +1,99 @@
+[
+  {
+    "id": 25,
+    "page_name": "about",
+    "media_ids": null,
+    "title_en": "Registered & Trusted",
+    "title_bn": "Registered & Trusted",
+    "description_en": "<p>We are the most reliable and trustworthy car importers in Bangladesh. The company is registered and member of Bangladesh Reconditioned Vehicles Importers and Dealers Association. Our company fulfilled all the requirements of the government.</p>",
+    "description_bn": "<p>We are the most reliable and trustworthy car importers in Bangladesh. The company is registered and member of Bangladesh Reconditioned Vehicles Importers and Dealers Association. Our company fulfilled all the requirements of the government.</p>",
+    "link_url": null,
+    "additional": {
+      "icon": "ShieldCheck",
+      "order": 1,
+      "section": "why_buy"
+    },
+    "status": true
+  },
+  {
+    "id": 26,
+    "page_name": "about",
+    "media_ids": null,
+    "title_en": "Quality Assured",
+    "title_bn": "Quality Assured",
+    "description_en": "<p>We only import cars that have auction point, original mileage (ODO reading), and passed the JAAI inspection. This means that the car has been rigorously tested.</p>",
+    "description_bn": "<p>We only import cars that have auction point, original mileage (ODO reading), and passed the JAAI inspection. This means that the car has been rigorously tested.</p>",
+    "link_url": null,
+    "additional": {
+      "icon": "CheckCircle",
+      "order": 2,
+      "section": "why_buy"
+    },
+    "status": true
+  },
+  {
+    "id": 27,
+    "page_name": "about",
+    "media_ids": null,
+    "title_en": "Wide Selection",
+    "title_bn": "Wide Selection",
+    "description_en": "<p>We offer a wide selection of cars from some of the most popular Japanese brands.</p>",
+    "description_bn": "<p>We offer a wide selection of cars from some of the most popular Japanese brands.</p>",
+    "link_url": null,
+    "additional": {
+      "icon": "Car",
+      "order": 3,
+      "section": "why_buy"
+    },
+    "status": true
+  },
+  {
+    "id": 28,
+    "page_name": "about",
+    "media_ids": null,
+    "title_en": "Dedicated Team",
+    "title_bn": "Dedicated Team",
+    "description_en": "<p>We have a team of dedicated and experienced professionals who always help our customers. Moreover, we offer after-sales service for our customers.</p>",
+    "description_bn": "<p>We have a team of dedicated and experienced professionals who always help our customers. Moreover, we offer after-sales service for our customers.</p>",
+    "link_url": null,
+    "additional": {
+      "icon": "Users",
+      "order": 4,
+      "section": "why_buy"
+    },
+    "status": true
+  },
+  {
+    "id": 29,
+    "page_name": "about",
+    "media_ids": null,
+    "title_en": "Best Prices",
+    "title_bn": "Best Prices",
+    "description_en": "<p>We offer the best prices in Bangladesh for Japanese Reconditioned Cars.</p>",
+    "description_bn": "<p>We offer the best prices in Bangladesh for Japanese Reconditioned Cars.</p>",
+    "link_url": null,
+    "additional": {
+      "icon": "Target",
+      "order": 5,
+      "section": "why_buy"
+    },
+    "status": true
+  },
+  {
+    "id": 30,
+    "page_name": "home",
+    "media_ids": null,
+    "title_en": "Contact CTA",
+    "title_bn": "যোগাযোগ সিটিএ",
+    "description_en": "<p>Our team is ready to help with inventory inquiries, test drives, financing options, and dealership support. Reach out anytime during business hours.</p>",
+    "description_bn": "<p>ইনভেন্টরি জিজ্ঞাসা, টেস্ট ড্রাইভ, ফাইন্যান্সিং এবং ডিলারশিপ সাপোর্টে আমাদের টিম প্রস্তুত।</p>",
+    "link_url": "/contact",
+    "additional": {
+      "section": "contact_cta",
+      "cta_label": "Contact Us",
+      "image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80",
+      "phone_prefix": "Call @"
+    },
+    "status": true
+  }
+]

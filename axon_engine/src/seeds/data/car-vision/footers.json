@@ -1,0 +1,32 @@
+[
+  {
+    "id": 23,
+    "title_en": "Main Footer",
+    "title_bn": "প্রধান ফুটার",
+    "footer_status": 1,
+    "logo_id": 1,
+    "address1_title_en": "Office Address",
+    "address1_title_bn": "অফিসের ঠিকানা",
+    "address1_description_en": "37, Purana Paltan Line, Dhaka 1205, Bangladesh.",
+    "address1_description_bn": "৩৭, পুরানা পল্টন লাইন, ঢাকা ১২০৫, বাংলাদেশ।",
+    "address2_title_en": "Get In Touch",
+    "address2_title_bn": "যোগাযোগ করুন",
+    "address2_description_en": "Phone: 01714211956\nEmail: car_vision71@yahoo.com",
+    "address2_description_bn": "ফোন: ০১৭১৪২১১৯৫৬\nইমেইল: car_vision71@yahoo.com",
+    "address1_status": 1,
+    "address2_status": 1,
+    "column2_menu_id": 13,
+    "column2_status": 1,
+    "column3_menu_id": 15,
+    "column3_logos": [],
+    "column3_status": 1,
+    "column4_title_en": "Get In Touch",
+    "column4_title_bn": "যোগাযোগ করুন",
+    "column4_text_en": "Dream Agent Car Vision — car sales In Dhaka. Get in touch.",
+    "column4_text_bn": "ড্রিম এজেন্ট কার ভিশন — ঢাকায় গাড়ি বিক্রয়। যোগাযোগ করুন।",
+    "column4_menu_id": 17,
+    "column4_description_en": "Trusted Dealership Platform",
+    "column4_description_bn": "বিশ্বস্ত ডিলারশিপ প্ল্যাটফর্ম",
+    "column4_status": 1
+  }
+]

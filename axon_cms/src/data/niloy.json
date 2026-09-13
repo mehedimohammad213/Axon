@@ -1,0 +1,16 @@
+[
+    {
+        "id": 201,
+        "menu": "Niloy Labs",
+        "title": "Niloy Labs",
+        "icon": "/icons/headless/headless_core.png",
+        "submenu": [
+            {
+                "id": 202,
+                "icon": "/icons/headless_icons/event.svg",
+                "link": "/events",
+                "title": "Events"
+            }
+        ]
+    }
+]

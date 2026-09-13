@@ -1,0 +1,210 @@
+[
+  {
+    "id": 1,
+    "title_en": "Main Footer",
+    "title_bn": "Main Footer",
+    "footer_status": "0",
+    "logo_id": "748",
+    "address1_title_en": null,
+    "address1_title_bn": null,
+    "address1_description_en": null,
+    "address1_description_bn": null,
+    "address2_title_en": null,
+    "address2_title_bn": null,
+    "address2_description_en": null,
+    "address2_description_bn": null,
+    "address1_status": "1",
+    "address2_status": "1",
+    "column2_menu_id": "6",
+    "column2_status": "1",
+    "column3_menu_id": "8",
+    "column3_logos": null,
+    "column3_status": "1",
+    "column4_title_en": null,
+    "column4_title_bn": null,
+    "column4_image": null,
+    "column4_text_en": null,
+    "column4_text_bn": null,
+    "column4_menu_id": "7",
+    "column4_description_en": "Copyright © 2024 <a href=\"/\">Al Muslim</a> All rights reserved.",
+    "column4_description_bn": null,
+    "column4_status": "1",
+    "bottom_menu_id": null,
+    "created_at": "2024-03-12T07:56:12.000000Z",
+    "updated_at": "2024-09-11T14:13:53.000000Z",
+    "logo": {
+      "id": 748,
+      "file_name": "mave_tvKh0h.png",
+      "file_type": "image/png",
+      "file_path": "media/mave_tvKh0h.png"
+    },
+    "column2_menu": {
+      "id": 6,
+      "name": "Quick Links",
+      "menu_item_ids": [
+        2,
+        4,
+        14,
+        5,
+        11,
+        12,
+        52
+      ],
+      "menu_items": [
+        {
+          "id": 2,
+          "title": "Company Profile",
+          "title_bn": "কোম্পানির প্রোফাইল",
+          "link": "/company",
+          "parent_id": "1",
+          "created_at": null,
+          "updated_at": "2024-03-23T10:16:59.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 4,
+          "title": "Machinery",
+          "title_bn": "যন্ত্রপাতি",
+          "link": "/machinery",
+          "parent_id": "1",
+          "created_at": null,
+          "updated_at": "2024-03-23T10:17:14.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 14,
+          "title": "Sustainability",
+          "title_bn": "টেকসইতা",
+          "link": "/sustainability",
+          "parent_id": "0",
+          "created_at": null,
+          "updated_at": "2024-03-11T15:48:00.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 5,
+          "title": "Trusted Partner",
+          "title_bn": "বিশ্বস্ত অংশীদার",
+          "link": "/trusted-partner",
+          "parent_id": "1",
+          "created_at": null,
+          "updated_at": "2024-03-14T07:37:23.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 11,
+          "title": "Audit",
+          "title_bn": "নিরীক্ষা",
+          "link": "/audit",
+          "parent_id": "38",
+          "created_at": null,
+          "updated_at": "2024-09-23T14:14:30.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 12,
+          "title": "Training & Development",
+          "title_bn": "প্রশিক্ষণ ও উন্নয়ন",
+          "link": "/training-and-development",
+          "parent_id": "38",
+          "created_at": null,
+          "updated_at": "2024-09-23T14:12:24.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 52,
+          "title": "Career",
+          "title_bn": "ক্যারিয়ার",
+          "link": "/career?pageId=28&pageName=Career",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        }
+      ]
+    },
+    "column3_menu": {
+      "id": 8,
+      "name": "Contact Us",
+      "menu_item_ids": [
+        23,
+        24,
+        25
+      ],
+      "menu_items": [
+        {
+          "id": 23,
+          "title": "14 Gedda. Karnapara, Ulail, Savar, Dhaka 1340, Bangladesh",
+          "title_bn": "14 Gedda. Karnapara, Ulail, Savar, Dhaka 1340, Bangladesh",
+          "link": "https://g.co/kgs/GKgNDLt",
+          "parent_id": "38",
+          "created_at": null,
+          "updated_at": "2024-03-23T10:16:03.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 24,
+          "title": "9666777879",
+          "title_bn": "9666777879",
+          "link": "tel:9666777879",
+          "parent_id": "38",
+          "created_at": null,
+          "updated_at": "2024-03-23T10:16:08.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 25,
+          "title": "md@pacificbluejeans.com",
+          "title_bn": "md@pacificbluejeans.com",
+          "link": "mailto:md@pacificbluejeans.com",
+          "parent_id": "38",
+          "created_at": null,
+          "updated_at": "2024-03-23T10:16:13.000000Z",
+          "all_children": []
+        }
+      ]
+    },
+    "column4_menu": {
+      "id": 7,
+      "name": "Social Media Menu",
+      "menu_item_ids": [
+        26,
+        27,
+        28
+      ],
+      "menu_items": [
+        {
+          "id": 26,
+          "title": "Facebook",
+          "title_bn": "Facebook",
+          "link": "https://www.facebook.com/profile.php?id=61592888996746",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2026-08-19T12:36:22.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 27,
+          "title": "YouTube",
+          "title_bn": "YouTube",
+          "link": "https://www.youtube.com/@AMG-cm7dz",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2026-08-19T12:36:48.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 28,
+          "title": "LinkedIn",
+          "title_bn": "LinkedIn",
+          "link": "https://bd.linkedin.com/company/al-muslimgroup",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-03-31T09:45:24.000000Z",
+          "all_children": []
+        }
+      ]
+    },
+    "bottom_menu": null
+  }
+]

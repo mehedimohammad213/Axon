@@ -1,0 +1,1335 @@
+[
+  {
+    "id": 2,
+    "title_en": "SLIC Home Footer",
+    "title_bn": "Bangla",
+    "footer_status": 0,
+    "logo_id": 32,
+    "address1_title_en": "Emni",
+    "address1_title_bn": null,
+    "address1_description_en": null,
+    "address1_description_bn": null,
+    "address2_title_en": null,
+    "address2_title_bn": null,
+    "address2_description_en": null,
+    "address2_description_bn": null,
+    "address1_status": 1,
+    "address2_status": 1,
+    "column2_menu_id": 2,
+    "column2_status": 1,
+    "column3_menu_id": 3,
+    "column3_logos": null,
+    "column3_status": 1,
+    "column4_title_en": null,
+    "column4_title_bn": null,
+    "column4_image": null,
+    "column4_text_en": null,
+    "column4_text_bn": null,
+    "column4_menu_id": 5,
+    "column4_description_en": "© 2023 for Sandhani Life Insurance Co. Ltd. by: Webable Digital",
+    "column4_description_bn": "© 2023 for Sandhani Life Insurance Co. Ltd. by: Webable Digital",
+    "column4_status": 1,
+    "bottom_menu_id": null,
+    "created_at": "2024-03-03T11:31:56.000000Z",
+    "updated_at": "2024-06-05T13:58:05.000000Z",
+    "logo": {
+      "id": 32,
+      "file_name": "mave_aygaz_X2byBW.svg",
+      "file_type": "image/svg+xml",
+      "file_path": "media/mave_aygaz_X2byBW.svg"
+    },
+    "column2_menu": {
+      "id": 2,
+      "name": "Footer - Product Menu",
+      "menu_item_ids": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "menu_items": [
+        {
+          "id": 56,
+          "title": "Akok Bima",
+          "title_bn": "Akok Bima",
+          "link": "/akok-bima?pageId=34&pageName=AKOK-Bima",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-11-12T12:14:44.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 57,
+          "title": "Takaful",
+          "title_bn": "Takaful",
+          "link": "/takaful?pageId=35&pageName=Takaful",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:32:01.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 58,
+          "title": "Micro Insurance",
+          "title_bn": "Micro Insurance",
+          "link": "/micro-insurance?pageId=36&pageName=Micro-Insurance",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:31:54.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 59,
+          "title": "Group Insurance",
+          "title_bn": "Group Insurance",
+          "link": "/group-insurance?pageId=37&pageName=Group-Insurance",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:31:46.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 60,
+          "title": "Health Insurance",
+          "title_bn": "Health Insurance",
+          "link": "/health-insurance?pageId=39&pageName=Health-Insurance",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:31:13.000000Z",
+          "all_children": []
+        }
+      ]
+    },
+    "column3_menu": {
+      "id": 3,
+      "name": "Footer - Services Menu",
+      "menu_item_ids": [
+        19,
+        24,
+        25
+      ],
+      "menu_items": [
+        {
+          "id": 19,
+          "title": "Premium Calculate",
+          "title_bn": "প্রিমিয়াম গণনা",
+          "link": "#",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-03-11T10:25:41.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 24,
+          "title": "Forms Download",
+          "title_bn": "ফর্ম ডাউনলোড করুন",
+          "link": "/forms-download?pageId=135&pageName=Forms-Download",
+          "parent_id": 137,
+          "created_at": null,
+          "updated_at": "2024-11-10T12:40:22.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 25,
+          "title": "Our Branches",
+          "title_bn": "আমাদের শাখা",
+          "link": "/our-branches?pageId=33&pageName=Our-Branches",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-09T12:21:28.000000Z",
+          "all_children": []
+        }
+      ]
+    },
+    "column4_menu": {
+      "id": 5,
+      "name": "Footer - Contact Us",
+      "menu_item_ids": [
+        28,
+        143,
+        29,
+        154,
+        155,
+        156
+      ],
+      "menu_items": [
+        {
+          "id": 28,
+          "title": "Locate Us",
+          "title_bn": "আমাদের অবস্থান",
+          "link": "/contact?pageId=15&pageName=Contact",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-09T13:15:38.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 143,
+          "title": "WebMail",
+          "title_bn": "WebMail",
+          "link": "http://mail.sandhanilife.com",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-11-11T17:35:29.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 29,
+          "title": "Careers",
+          "title_bn": "কর্মজীবন",
+          "link": "/career?pageId=109&pageName=Career",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-01T15:10:46.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 154,
+          "title": "Terms & Condition",
+          "title_bn": "টার্মস এন্ড কন্ডিশন",
+          "link": "/termsCondition",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-06-18T06:03:46.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 155,
+          "title": "Privacy Policy",
+          "title_bn": "প্রাইভেসি পলিসি",
+          "link": "/privacy-policy",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        },
+        {
+          "id": 156,
+          "title": "Return & Refund Policy",
+          "title_bn": "রিটার্নেএন্ড রিফান্ড পলিসি",
+          "link": "/returnRefundPolicy",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-06-18T06:24:41.000000Z",
+          "all_children": []
+        }
+      ]
+    },
+    "bottom_menu": null
+  },
+  {
+    "id": 4,
+    "title_en": "Test Footer - Test",
+    "title_bn": null,
+    "footer_status": 0,
+    "logo_id": null,
+    "address1_title_en": null,
+    "address1_title_bn": null,
+    "address1_description_en": null,
+    "address1_description_bn": null,
+    "address2_title_en": null,
+    "address2_title_bn": null,
+    "address2_description_en": null,
+    "address2_description_bn": null,
+    "address1_status": 1,
+    "address2_status": 1,
+    "column2_menu_id": null,
+    "column2_status": 1,
+    "column3_menu_id": null,
+    "column3_logos": null,
+    "column3_status": 1,
+    "column4_title_en": null,
+    "column4_title_bn": null,
+    "column4_image": null,
+    "column4_text_en": null,
+    "column4_text_bn": null,
+    "column4_menu_id": null,
+    "column4_description_en": null,
+    "column4_description_bn": null,
+    "column4_status": 1,
+    "bottom_menu_id": null,
+    "created_at": "2024-03-04T10:40:01.000000Z",
+    "updated_at": "2024-03-04T10:40:01.000000Z",
+    "logo": null,
+    "column2_menu": null,
+    "column3_menu": null,
+    "column4_menu": null,
+    "bottom_menu": null
+  },
+  {
+    "id": 5,
+    "title_en": "SLIC Main Footer",
+    "title_bn": null,
+    "footer_status": 0,
+    "logo_id": null,
+    "address1_title_en": null,
+    "address1_title_bn": null,
+    "address1_description_en": null,
+    "address1_description_bn": null,
+    "address2_title_en": null,
+    "address2_title_bn": null,
+    "address2_description_en": null,
+    "address2_description_bn": null,
+    "address1_status": 1,
+    "address2_status": 1,
+    "column2_menu_id": null,
+    "column2_status": 1,
+    "column3_menu_id": null,
+    "column3_logos": null,
+    "column3_status": 1,
+    "column4_title_en": null,
+    "column4_title_bn": null,
+    "column4_image": null,
+    "column4_text_en": null,
+    "column4_text_bn": null,
+    "column4_menu_id": null,
+    "column4_description_en": null,
+    "column4_description_bn": null,
+    "column4_status": 1,
+    "bottom_menu_id": null,
+    "created_at": "2024-03-04T10:43:41.000000Z",
+    "updated_at": "2024-03-04T10:43:41.000000Z",
+    "logo": null,
+    "column2_menu": null,
+    "column3_menu": null,
+    "column4_menu": null,
+    "bottom_menu": null
+  },
+  {
+    "id": 6,
+    "title_en": "SLIC Main Footer",
+    "title_bn": "এস এল আই সি মেইন ফুটার",
+    "footer_status": 0,
+    "logo_id": 32,
+    "address1_title_en": "Product",
+    "address1_title_bn": "পণ্য",
+    "address1_description_en": null,
+    "address1_description_bn": null,
+    "address2_title_en": "Service",
+    "address2_title_bn": "সেবা",
+    "address2_description_en": null,
+    "address2_description_bn": null,
+    "address1_status": 1,
+    "address2_status": 1,
+    "column2_menu_id": 2,
+    "column2_status": 1,
+    "column3_menu_id": 3,
+    "column3_logos": null,
+    "column3_status": 1,
+    "column4_title_en": "Contact US",
+    "column4_title_bn": "যোগাযোগ করুন",
+    "column4_image": null,
+    "column4_text_en": null,
+    "column4_text_bn": null,
+    "column4_menu_id": 4,
+    "column4_description_en": "© 2023 for Sandhani Life Insurance Co. Ltd. by: Webable Digital",
+    "column4_description_bn": "© 2023 Sandhani Life Insurance Co. Ltd. এর জন্য: ওয়েবেবল ডিজিটাল",
+    "column4_status": 1,
+    "bottom_menu_id": 5,
+    "created_at": "2024-03-04T10:46:11.000000Z",
+    "updated_at": "2024-06-05T13:57:45.000000Z",
+    "logo": {
+      "id": 32,
+      "file_name": "mave_aygaz_X2byBW.svg",
+      "file_type": "image/svg+xml",
+      "file_path": "media/mave_aygaz_X2byBW.svg"
+    },
+    "column2_menu": {
+      "id": 2,
+      "name": "Footer - Product Menu",
+      "menu_item_ids": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "menu_items": [
+        {
+          "id": 56,
+          "title": "Akok Bima",
+          "title_bn": "Akok Bima",
+          "link": "/akok-bima?pageId=34&pageName=AKOK-Bima",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-11-12T12:14:44.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 57,
+          "title": "Takaful",
+          "title_bn": "Takaful",
+          "link": "/takaful?pageId=35&pageName=Takaful",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:32:01.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 58,
+          "title": "Micro Insurance",
+          "title_bn": "Micro Insurance",
+          "link": "/micro-insurance?pageId=36&pageName=Micro-Insurance",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:31:54.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 59,
+          "title": "Group Insurance",
+          "title_bn": "Group Insurance",
+          "link": "/group-insurance?pageId=37&pageName=Group-Insurance",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:31:46.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 60,
+          "title": "Health Insurance",
+          "title_bn": "Health Insurance",
+          "link": "/health-insurance?pageId=39&pageName=Health-Insurance",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:31:13.000000Z",
+          "all_children": []
+        }
+      ]
+    },
+    "column3_menu": {
+      "id": 3,
+      "name": "Footer - Services Menu",
+      "menu_item_ids": [
+        19,
+        24,
+        25
+      ],
+      "menu_items": [
+        {
+          "id": 19,
+          "title": "Premium Calculate",
+          "title_bn": "প্রিমিয়াম গণনা",
+          "link": "#",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-03-11T10:25:41.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 24,
+          "title": "Forms Download",
+          "title_bn": "ফর্ম ডাউনলোড করুন",
+          "link": "/forms-download?pageId=135&pageName=Forms-Download",
+          "parent_id": 137,
+          "created_at": null,
+          "updated_at": "2024-11-10T12:40:22.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 25,
+          "title": "Our Branches",
+          "title_bn": "আমাদের শাখা",
+          "link": "/our-branches?pageId=33&pageName=Our-Branches",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-09T12:21:28.000000Z",
+          "all_children": []
+        }
+      ]
+    },
+    "column4_menu": {
+      "id": 4,
+      "name": "Footer - Services Menu",
+      "menu_item_ids": [
+        19,
+        24,
+        25
+      ],
+      "menu_items": [
+        {
+          "id": 19,
+          "title": "Premium Calculate",
+          "title_bn": "প্রিমিয়াম গণনা",
+          "link": "#",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-03-11T10:25:41.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 24,
+          "title": "Forms Download",
+          "title_bn": "ফর্ম ডাউনলোড করুন",
+          "link": "/forms-download?pageId=135&pageName=Forms-Download",
+          "parent_id": 137,
+          "created_at": null,
+          "updated_at": "2024-11-10T12:40:22.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 25,
+          "title": "Our Branches",
+          "title_bn": "আমাদের শাখা",
+          "link": "/our-branches?pageId=33&pageName=Our-Branches",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-09T12:21:28.000000Z",
+          "all_children": []
+        }
+      ]
+    },
+    "bottom_menu": {
+      "id": 5,
+      "name": "Footer - Contact Us",
+      "menu_item_ids": [
+        28,
+        143,
+        29,
+        154,
+        155,
+        156
+      ],
+      "menu_items": [
+        {
+          "id": 28,
+          "title": "Locate Us",
+          "title_bn": "আমাদের অবস্থান",
+          "link": "/contact?pageId=15&pageName=Contact",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-09T13:15:38.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 143,
+          "title": "WebMail",
+          "title_bn": "WebMail",
+          "link": "http://mail.sandhanilife.com",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-11-11T17:35:29.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 29,
+          "title": "Careers",
+          "title_bn": "কর্মজীবন",
+          "link": "/career?pageId=109&pageName=Career",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-01T15:10:46.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 154,
+          "title": "Terms & Condition",
+          "title_bn": "টার্মস এন্ড কন্ডিশন",
+          "link": "/termsCondition",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-06-18T06:03:46.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 155,
+          "title": "Privacy Policy",
+          "title_bn": "প্রাইভেসি পলিসি",
+          "link": "/privacy-policy",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        },
+        {
+          "id": 156,
+          "title": "Return & Refund Policy",
+          "title_bn": "রিটার্নেএন্ড রিফান্ড পলিসি",
+          "link": "/returnRefundPolicy",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-06-18T06:24:41.000000Z",
+          "all_children": []
+        }
+      ]
+    }
+  },
+  {
+    "id": 7,
+    "title_en": "SLIC Main Footer",
+    "title_bn": "এস এল আই সি মেইন ফুটার",
+    "footer_status": 0,
+    "logo_id": 32,
+    "address1_title_en": "Product",
+    "address1_title_bn": "পণ্য",
+    "address1_description_en": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+    "address1_description_bn": "Lorem Ipsum হল মুদ্রণ এবং টাইপসেটিং শিল্পের ডামি পাঠ্য। লোরেম ইপসাম 1500 এর দশক থেকে শিল্পের মানক ডামি টেক্সট হয়েছে, যখন একটি অজানা প্রিন্টার টাইপের একটি গ্যালি নিয়েছিল এবং একটি টাইপ নমুনা বই তৈরি করতে এটিকে স্ক্র্যাম্বল করেছিল। এটি কেবল পাঁচটি শতাব্দী নয়, ইলেকট্রনিকেও লাফিয়ে টিকে আছে।",
+    "address2_title_en": "Service",
+    "address2_title_bn": "সেবা",
+    "address2_description_en": null,
+    "address2_description_bn": null,
+    "address1_status": 1,
+    "address2_status": 1,
+    "column2_menu_id": 2,
+    "column2_status": 1,
+    "column3_menu_id": 3,
+    "column3_logos": null,
+    "column3_status": 1,
+    "column4_title_en": "Contact US",
+    "column4_title_bn": "যোগাযোগ করুন",
+    "column4_image": null,
+    "column4_text_en": null,
+    "column4_text_bn": null,
+    "column4_menu_id": 4,
+    "column4_description_en": "© 2023 for Sandhani Life Insurance Co. Ltd. by: Webable Digital",
+    "column4_description_bn": "© 2023 Sandhani Life Insurance Co. Ltd. এর জন্য: ওয়েবেবল ডিজিটাল",
+    "column4_status": 1,
+    "bottom_menu_id": 5,
+    "created_at": "2024-03-04T10:49:26.000000Z",
+    "updated_at": "2024-06-05T13:57:30.000000Z",
+    "logo": {
+      "id": 32,
+      "file_name": "mave_aygaz_X2byBW.svg",
+      "file_type": "image/svg+xml",
+      "file_path": "media/mave_aygaz_X2byBW.svg"
+    },
+    "column2_menu": {
+      "id": 2,
+      "name": "Footer - Product Menu",
+      "menu_item_ids": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "menu_items": [
+        {
+          "id": 56,
+          "title": "Akok Bima",
+          "title_bn": "Akok Bima",
+          "link": "/akok-bima?pageId=34&pageName=AKOK-Bima",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-11-12T12:14:44.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 57,
+          "title": "Takaful",
+          "title_bn": "Takaful",
+          "link": "/takaful?pageId=35&pageName=Takaful",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:32:01.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 58,
+          "title": "Micro Insurance",
+          "title_bn": "Micro Insurance",
+          "link": "/micro-insurance?pageId=36&pageName=Micro-Insurance",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:31:54.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 59,
+          "title": "Group Insurance",
+          "title_bn": "Group Insurance",
+          "link": "/group-insurance?pageId=37&pageName=Group-Insurance",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:31:46.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 60,
+          "title": "Health Insurance",
+          "title_bn": "Health Insurance",
+          "link": "/health-insurance?pageId=39&pageName=Health-Insurance",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:31:13.000000Z",
+          "all_children": []
+        }
+      ]
+    },
+    "column3_menu": {
+      "id": 3,
+      "name": "Footer - Services Menu",
+      "menu_item_ids": [
+        19,
+        24,
+        25
+      ],
+      "menu_items": [
+        {
+          "id": 19,
+          "title": "Premium Calculate",
+          "title_bn": "প্রিমিয়াম গণনা",
+          "link": "#",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-03-11T10:25:41.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 24,
+          "title": "Forms Download",
+          "title_bn": "ফর্ম ডাউনলোড করুন",
+          "link": "/forms-download?pageId=135&pageName=Forms-Download",
+          "parent_id": 137,
+          "created_at": null,
+          "updated_at": "2024-11-10T12:40:22.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 25,
+          "title": "Our Branches",
+          "title_bn": "আমাদের শাখা",
+          "link": "/our-branches?pageId=33&pageName=Our-Branches",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-09T12:21:28.000000Z",
+          "all_children": []
+        }
+      ]
+    },
+    "column4_menu": {
+      "id": 4,
+      "name": "Footer - Services Menu",
+      "menu_item_ids": [
+        19,
+        24,
+        25
+      ],
+      "menu_items": [
+        {
+          "id": 19,
+          "title": "Premium Calculate",
+          "title_bn": "প্রিমিয়াম গণনা",
+          "link": "#",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-03-11T10:25:41.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 24,
+          "title": "Forms Download",
+          "title_bn": "ফর্ম ডাউনলোড করুন",
+          "link": "/forms-download?pageId=135&pageName=Forms-Download",
+          "parent_id": 137,
+          "created_at": null,
+          "updated_at": "2024-11-10T12:40:22.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 25,
+          "title": "Our Branches",
+          "title_bn": "আমাদের শাখা",
+          "link": "/our-branches?pageId=33&pageName=Our-Branches",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-09T12:21:28.000000Z",
+          "all_children": []
+        }
+      ]
+    },
+    "bottom_menu": {
+      "id": 5,
+      "name": "Footer - Contact Us",
+      "menu_item_ids": [
+        28,
+        143,
+        29,
+        154,
+        155,
+        156
+      ],
+      "menu_items": [
+        {
+          "id": 28,
+          "title": "Locate Us",
+          "title_bn": "আমাদের অবস্থান",
+          "link": "/contact?pageId=15&pageName=Contact",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-09T13:15:38.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 143,
+          "title": "WebMail",
+          "title_bn": "WebMail",
+          "link": "http://mail.sandhanilife.com",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-11-11T17:35:29.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 29,
+          "title": "Careers",
+          "title_bn": "কর্মজীবন",
+          "link": "/career?pageId=109&pageName=Career",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-01T15:10:46.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 154,
+          "title": "Terms & Condition",
+          "title_bn": "টার্মস এন্ড কন্ডিশন",
+          "link": "/termsCondition",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-06-18T06:03:46.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 155,
+          "title": "Privacy Policy",
+          "title_bn": "প্রাইভেসি পলিসি",
+          "link": "/privacy-policy",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        },
+        {
+          "id": 156,
+          "title": "Return & Refund Policy",
+          "title_bn": "রিটার্নেএন্ড রিফান্ড পলিসি",
+          "link": "/returnRefundPolicy",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-06-18T06:24:41.000000Z",
+          "all_children": []
+        }
+      ]
+    }
+  },
+  {
+    "id": 8,
+    "title_en": "SLIC Main Footer",
+    "title_bn": "এস এল আই সি মেইন ফুটার",
+    "footer_status": 0,
+    "logo_id": 32,
+    "address1_title_en": "Product",
+    "address1_title_bn": "পণ্য",
+    "address1_description_en": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+    "address1_description_bn": "Lorem Ipsum হল মুদ্রণ এবং টাইপসেটিং শিল্পের ডামি পাঠ্য। লোরেম ইপসাম 1500 এর দশক থেকে শিল্পের মানক ডামি টেক্সট হয়েছে, যখন একটি অজানা প্রিন্টার টাইপের একটি গ্যালি নিয়েছিল এবং একটি টাইপ নমুনা বই তৈরি করতে এটিকে স্ক্র্যাম্বল করেছিল। এটি কেবল পাঁচটি শতাব্দী নয়, ইলেকট্রনিকেও লাফিয়ে টিকে আছে।",
+    "address2_title_en": "Service",
+    "address2_title_bn": "সেবা",
+    "address2_description_en": null,
+    "address2_description_bn": null,
+    "address1_status": 1,
+    "address2_status": 1,
+    "column2_menu_id": 2,
+    "column2_status": 1,
+    "column3_menu_id": 3,
+    "column3_logos": null,
+    "column3_status": 1,
+    "column4_title_en": "Contact US",
+    "column4_title_bn": "যোগাযোগ করুন",
+    "column4_image": null,
+    "column4_text_en": null,
+    "column4_text_bn": null,
+    "column4_menu_id": 4,
+    "column4_description_en": "© 2023 for Sandhani Life Insurance Co. Ltd. by: Webable Digital",
+    "column4_description_bn": "© 2023 Sandhani Life Insurance Co. Ltd. এর জন্য: ওয়েবেবল ডিজিটাল",
+    "column4_status": 1,
+    "bottom_menu_id": 5,
+    "created_at": "2024-03-04T10:50:37.000000Z",
+    "updated_at": "2024-06-05T13:56:44.000000Z",
+    "logo": {
+      "id": 32,
+      "file_name": "mave_aygaz_X2byBW.svg",
+      "file_type": "image/svg+xml",
+      "file_path": "media/mave_aygaz_X2byBW.svg"
+    },
+    "column2_menu": {
+      "id": 2,
+      "name": "Footer - Product Menu",
+      "menu_item_ids": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "menu_items": [
+        {
+          "id": 56,
+          "title": "Akok Bima",
+          "title_bn": "Akok Bima",
+          "link": "/akok-bima?pageId=34&pageName=AKOK-Bima",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-11-12T12:14:44.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 57,
+          "title": "Takaful",
+          "title_bn": "Takaful",
+          "link": "/takaful?pageId=35&pageName=Takaful",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:32:01.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 58,
+          "title": "Micro Insurance",
+          "title_bn": "Micro Insurance",
+          "link": "/micro-insurance?pageId=36&pageName=Micro-Insurance",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:31:54.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 59,
+          "title": "Group Insurance",
+          "title_bn": "Group Insurance",
+          "link": "/group-insurance?pageId=37&pageName=Group-Insurance",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:31:46.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 60,
+          "title": "Health Insurance",
+          "title_bn": "Health Insurance",
+          "link": "/health-insurance?pageId=39&pageName=Health-Insurance",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:31:13.000000Z",
+          "all_children": []
+        }
+      ]
+    },
+    "column3_menu": {
+      "id": 3,
+      "name": "Footer - Services Menu",
+      "menu_item_ids": [
+        19,
+        24,
+        25
+      ],
+      "menu_items": [
+        {
+          "id": 19,
+          "title": "Premium Calculate",
+          "title_bn": "প্রিমিয়াম গণনা",
+          "link": "#",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-03-11T10:25:41.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 24,
+          "title": "Forms Download",
+          "title_bn": "ফর্ম ডাউনলোড করুন",
+          "link": "/forms-download?pageId=135&pageName=Forms-Download",
+          "parent_id": 137,
+          "created_at": null,
+          "updated_at": "2024-11-10T12:40:22.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 25,
+          "title": "Our Branches",
+          "title_bn": "আমাদের শাখা",
+          "link": "/our-branches?pageId=33&pageName=Our-Branches",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-09T12:21:28.000000Z",
+          "all_children": []
+        }
+      ]
+    },
+    "column4_menu": {
+      "id": 4,
+      "name": "Footer - Services Menu",
+      "menu_item_ids": [
+        19,
+        24,
+        25
+      ],
+      "menu_items": [
+        {
+          "id": 19,
+          "title": "Premium Calculate",
+          "title_bn": "প্রিমিয়াম গণনা",
+          "link": "#",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-03-11T10:25:41.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 24,
+          "title": "Forms Download",
+          "title_bn": "ফর্ম ডাউনলোড করুন",
+          "link": "/forms-download?pageId=135&pageName=Forms-Download",
+          "parent_id": 137,
+          "created_at": null,
+          "updated_at": "2024-11-10T12:40:22.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 25,
+          "title": "Our Branches",
+          "title_bn": "আমাদের শাখা",
+          "link": "/our-branches?pageId=33&pageName=Our-Branches",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-09T12:21:28.000000Z",
+          "all_children": []
+        }
+      ]
+    },
+    "bottom_menu": {
+      "id": 5,
+      "name": "Footer - Contact Us",
+      "menu_item_ids": [
+        28,
+        143,
+        29,
+        154,
+        155,
+        156
+      ],
+      "menu_items": [
+        {
+          "id": 28,
+          "title": "Locate Us",
+          "title_bn": "আমাদের অবস্থান",
+          "link": "/contact?pageId=15&pageName=Contact",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-09T13:15:38.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 143,
+          "title": "WebMail",
+          "title_bn": "WebMail",
+          "link": "http://mail.sandhanilife.com",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-11-11T17:35:29.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 29,
+          "title": "Careers",
+          "title_bn": "কর্মজীবন",
+          "link": "/career?pageId=109&pageName=Career",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-01T15:10:46.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 154,
+          "title": "Terms & Condition",
+          "title_bn": "টার্মস এন্ড কন্ডিশন",
+          "link": "/termsCondition",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-06-18T06:03:46.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 155,
+          "title": "Privacy Policy",
+          "title_bn": "প্রাইভেসি পলিসি",
+          "link": "/privacy-policy",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        },
+        {
+          "id": 156,
+          "title": "Return & Refund Policy",
+          "title_bn": "রিটার্নেএন্ড রিফান্ড পলিসি",
+          "link": "/returnRefundPolicy",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-06-18T06:24:41.000000Z",
+          "all_children": []
+        }
+      ]
+    }
+  },
+  {
+    "id": 9,
+    "title_en": "SLIC Main Footer",
+    "title_bn": "এস এল আই সি মেইন ফুটার",
+    "footer_status": 0,
+    "logo_id": 32,
+    "address1_title_en": "Product",
+    "address1_title_bn": "পণ্য",
+    "address1_description_en": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic.",
+    "address1_description_bn": "Lorem Ipsum হল মুদ্রণ এবং টাইপসেটিং শিল্পের ডামি পাঠ্য। লোরেম ইপসাম 1500 এর দশক থেকে শিল্পের মানক ডামি টেক্সট হয়েছে, যখন একটি অজানা প্রিন্টার টাইপের একটি গ্যালি নিয়েছিল এবং একটি টাইপ নমুনা বই তৈরি করতে এটিকে স্ক্র্যাম্বল করেছিল। এটি কেবল পাঁচটি শতাব্দী নয়, ইলেকট্রনিকেও লাফিয়ে টিকে আছে।",
+    "address2_title_en": "Service",
+    "address2_title_bn": "সেবা",
+    "address2_description_en": null,
+    "address2_description_bn": null,
+    "address1_status": 1,
+    "address2_status": 1,
+    "column2_menu_id": 2,
+    "column2_status": 1,
+    "column3_menu_id": 3,
+    "column3_logos": null,
+    "column3_status": 1,
+    "column4_title_en": "Contact US",
+    "column4_title_bn": "যোগাযোগ করুন",
+    "column4_image": null,
+    "column4_text_en": null,
+    "column4_text_bn": null,
+    "column4_menu_id": 4,
+    "column4_description_en": "© 2023 for Sandhani Life Insurance Co. Ltd. by: Webable Digital",
+    "column4_description_bn": "© 2023 Sandhani Life Insurance Co. Ltd. এর জন্য: ওয়েবেবল ডিজিটাল",
+    "column4_status": 1,
+    "bottom_menu_id": 5,
+    "created_at": "2024-03-04T11:08:22.000000Z",
+    "updated_at": "2024-06-05T13:55:23.000000Z",
+    "logo": {
+      "id": 32,
+      "file_name": "mave_aygaz_X2byBW.svg",
+      "file_type": "image/svg+xml",
+      "file_path": "media/mave_aygaz_X2byBW.svg"
+    },
+    "column2_menu": {
+      "id": 2,
+      "name": "Footer - Product Menu",
+      "menu_item_ids": [
+        56,
+        57,
+        58,
+        59,
+        60
+      ],
+      "menu_items": [
+        {
+          "id": 56,
+          "title": "Akok Bima",
+          "title_bn": "Akok Bima",
+          "link": "/akok-bima?pageId=34&pageName=AKOK-Bima",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-11-12T12:14:44.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 57,
+          "title": "Takaful",
+          "title_bn": "Takaful",
+          "link": "/takaful?pageId=35&pageName=Takaful",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:32:01.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 58,
+          "title": "Micro Insurance",
+          "title_bn": "Micro Insurance",
+          "link": "/micro-insurance?pageId=36&pageName=Micro-Insurance",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:31:54.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 59,
+          "title": "Group Insurance",
+          "title_bn": "Group Insurance",
+          "link": "/group-insurance?pageId=37&pageName=Group-Insurance",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:31:46.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 60,
+          "title": "Health Insurance",
+          "title_bn": "Health Insurance",
+          "link": "/health-insurance?pageId=39&pageName=Health-Insurance",
+          "parent_id": 55,
+          "created_at": null,
+          "updated_at": "2024-04-02T10:31:13.000000Z",
+          "all_children": []
+        }
+      ]
+    },
+    "column3_menu": {
+      "id": 3,
+      "name": "Footer - Services Menu",
+      "menu_item_ids": [
+        19,
+        24,
+        25
+      ],
+      "menu_items": [
+        {
+          "id": 19,
+          "title": "Premium Calculate",
+          "title_bn": "প্রিমিয়াম গণনা",
+          "link": "#",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-03-11T10:25:41.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 24,
+          "title": "Forms Download",
+          "title_bn": "ফর্ম ডাউনলোড করুন",
+          "link": "/forms-download?pageId=135&pageName=Forms-Download",
+          "parent_id": 137,
+          "created_at": null,
+          "updated_at": "2024-11-10T12:40:22.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 25,
+          "title": "Our Branches",
+          "title_bn": "আমাদের শাখা",
+          "link": "/our-branches?pageId=33&pageName=Our-Branches",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-09T12:21:28.000000Z",
+          "all_children": []
+        }
+      ]
+    },
+    "column4_menu": {
+      "id": 4,
+      "name": "Footer - Services Menu",
+      "menu_item_ids": [
+        19,
+        24,
+        25
+      ],
+      "menu_items": [
+        {
+          "id": 19,
+          "title": "Premium Calculate",
+          "title_bn": "প্রিমিয়াম গণনা",
+          "link": "#",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-03-11T10:25:41.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 24,
+          "title": "Forms Download",
+          "title_bn": "ফর্ম ডাউনলোড করুন",
+          "link": "/forms-download?pageId=135&pageName=Forms-Download",
+          "parent_id": 137,
+          "created_at": null,
+          "updated_at": "2024-11-10T12:40:22.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 25,
+          "title": "Our Branches",
+          "title_bn": "আমাদের শাখা",
+          "link": "/our-branches?pageId=33&pageName=Our-Branches",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-09T12:21:28.000000Z",
+          "all_children": []
+        }
+      ]
+    },
+    "bottom_menu": {
+      "id": 5,
+      "name": "Footer - Contact Us",
+      "menu_item_ids": [
+        28,
+        143,
+        29,
+        154,
+        155,
+        156
+      ],
+      "menu_items": [
+        {
+          "id": 28,
+          "title": "Locate Us",
+          "title_bn": "আমাদের অবস্থান",
+          "link": "/contact?pageId=15&pageName=Contact",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-09T13:15:38.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 143,
+          "title": "WebMail",
+          "title_bn": "WebMail",
+          "link": "http://mail.sandhanilife.com",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-11-11T17:35:29.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 29,
+          "title": "Careers",
+          "title_bn": "কর্মজীবন",
+          "link": "/career?pageId=109&pageName=Career",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2024-10-01T15:10:46.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 154,
+          "title": "Terms & Condition",
+          "title_bn": "টার্মস এন্ড কন্ডিশন",
+          "link": "/termsCondition",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-06-18T06:03:46.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 155,
+          "title": "Privacy Policy",
+          "title_bn": "প্রাইভেসি পলিসি",
+          "link": "/privacy-policy",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        },
+        {
+          "id": 156,
+          "title": "Return & Refund Policy",
+          "title_bn": "রিটার্নেএন্ড রিফান্ড পলিসি",
+          "link": "/returnRefundPolicy",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-06-18T06:24:41.000000Z",
+          "all_children": []
+        }
+      ]
+    }
+  }
+]

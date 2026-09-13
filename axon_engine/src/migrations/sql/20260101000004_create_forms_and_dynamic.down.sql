@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS generated_models;
+DROP TABLE IF EXISTS medex;
+DROP TABLE IF EXISTS formables;
+DROP TABLE IF EXISTS cardables;
+DROP TABLE IF EXISTS form_submissions;
+DROP TABLE IF EXISTS form_data;
+DROP TABLE IF EXISTS form_builder;
+DROP TABLE IF EXISTS forms;

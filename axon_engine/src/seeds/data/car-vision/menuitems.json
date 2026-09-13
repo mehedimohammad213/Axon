@@ -1,0 +1,86 @@
+[
+  {
+    "id": 5,
+    "title": "Home",
+    "title_bn": "হোম",
+    "link": "/",
+    "parent_id": null
+  },
+  {
+    "id": 6,
+    "title": "Inventory",
+    "title_bn": "ইনভেন্টরি",
+    "link": "/cars",
+    "parent_id": null
+  },
+  {
+    "id": 7,
+    "title": "About",
+    "title_bn": "সম্পর্কে",
+    "link": "/about",
+    "parent_id": null
+  },
+  {
+    "id": 8,
+    "title": "Career",
+    "title_bn": "ক্যারিয়ার",
+    "link": "/career",
+    "parent_id": null
+  },
+  {
+    "id": 9,
+    "title": "Contact",
+    "title_bn": "যোগাযোগ",
+    "link": "/contact",
+    "parent_id": null
+  },
+  {
+    "id": 11,
+    "title": "Car Inventory",
+    "title_bn": "গাড়ির তালিকা",
+    "link": "/cars",
+    "parent_id": null
+  },
+  {
+    "id": 12,
+    "title": "About Us",
+    "title_bn": "আমাদের সম্পর্কে",
+    "link": "/about",
+    "parent_id": null
+  },
+  {
+    "id": 14,
+    "title": "Contact Us",
+    "title_bn": "যোগাযোগ করুন",
+    "link": "/contact",
+    "parent_id": null
+  },
+  {
+    "id": 16,
+    "title": "Dealer Login",
+    "title_bn": "ডিলার লগইন",
+    "link": "https://dreamagentcarvision.com/login",
+    "parent_id": null
+  },
+  {
+    "id": 18,
+    "title": "Facebook",
+    "title_bn": "ফেসবুক",
+    "link": "https://www.facebook.com/DreamAgentCarVision/",
+    "parent_id": null
+  },
+  {
+    "id": 19,
+    "title": "YouTube",
+    "title_bn": "ইউটিউব",
+    "link": "https://youtube.com",
+    "parent_id": null
+  },
+  {
+    "id": 20,
+    "title": "LinkedIn",
+    "title_bn": "লিংকডইন",
+    "link": "https://linkedin.com",
+    "parent_id": null
+  }
+]

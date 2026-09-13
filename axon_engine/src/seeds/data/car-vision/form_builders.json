@@ -1,0 +1,88 @@
+[
+  {
+    "id": 32,
+    "title": "Website Contact Form",
+    "description": "Contact Dream Agent Car Vision from the website contact page.",
+    "attributes": {
+      "component_id": "website_contact_form",
+      "component_class": "contact-form",
+      "method": "POST",
+      "enctype": "application/json",
+      "layout": "contact-grid",
+      "submit_text": "CONTACT US",
+      "action_url": "/api/form-submission?form_id=32"
+    },
+    "elements": [
+      {
+        "updated_on": "contact-first-name",
+        "type": "input",
+        "element_type": "input",
+        "input_type": "text",
+        "label": "First Name",
+        "placeholder": "First name",
+        "required": true,
+        "width": "half",
+        "name": "firstName"
+      },
+      {
+        "updated_on": "contact-last-name",
+        "type": "input",
+        "element_type": "input",
+        "input_type": "text",
+        "label": "Last Name",
+        "placeholder": "Last name",
+        "required": true,
+        "width": "half",
+        "name": "lastName"
+      },
+      {
+        "updated_on": "contact-phone",
+        "type": "input",
+        "element_type": "input",
+        "input_type": "tel",
+        "label": "Phone Number",
+        "placeholder": "Your phone number",
+        "required": true,
+        "width": "half",
+        "name": "phone"
+      },
+      {
+        "updated_on": "contact-email",
+        "type": "input",
+        "element_type": "input",
+        "input_type": "email",
+        "label": "Email Address",
+        "placeholder": "you@example.com",
+        "required": true,
+        "width": "half",
+        "name": "email"
+      },
+      {
+        "updated_on": "contact-message",
+        "type": "textarea",
+        "element_type": "textarea",
+        "label": "Message",
+        "placeholder": "Tell us about your inquiry...",
+        "required": true,
+        "width": "full",
+        "name": "message"
+      },
+      {
+        "updated_on": "contact-submit",
+        "type": "button",
+        "element_type": "button",
+        "input_type": "submit",
+        "label": "CONTACT US",
+        "placeholder": "CONTACT US",
+        "required": false,
+        "width": "full",
+        "name": "submit"
+      }
+    ],
+    "additional": {
+      "page": "contact",
+      "section": "help_form"
+    },
+    "status": true
+  }
+]

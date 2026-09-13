@@ -1,0 +1,232 @@
+[
+  {
+    "id": 3,
+    "name": "Nav",
+    "menu_item_ids": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8
+    ],
+    "menu_items": [
+      {
+        "id": 3,
+        "title": "Home",
+        "title_bn": "N/A",
+        "link": "/",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2026-02-19T04:49:46.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 4,
+        "title": "Our Work",
+        "title_bn": "N/A",
+        "link": "/our-work",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 5,
+        "title": "About Us",
+        "title_bn": "N/A",
+        "link": "/about-us",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 6,
+        "title": "Get Involved",
+        "title_bn": "N/A",
+        "link": "/donate",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2026-03-09T06:19:26.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 7,
+        "title": "Adopt a Bigha",
+        "title_bn": "cta",
+        "link": "/donate",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2026-03-05T09:17:56.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 8,
+        "title": "DONATE",
+        "title_bn": "cta",
+        "link": "/donate",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2026-02-16T06:46:41.000000Z",
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Menu List",
+    "menu_item_ids": [
+      15,
+      16,
+      17,
+      18
+    ],
+    "menu_items": [
+      {
+        "id": 15,
+        "title": "Vision, Mission and Values",
+        "title_bn": "N/A",
+        "link": "/vision-mission-and-values",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 16,
+        "title": "Who we are",
+        "title_bn": "N/A",
+        "link": "/who-we-are",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 17,
+        "title": "What shapes us",
+        "title_bn": "N/A",
+        "link": "/what-shapes-us",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 18,
+        "title": "How we do what we do",
+        "title_bn": "N/A",
+        "link": "/how-we-do-what-we-do",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "One-time",
+    "menu_item_ids": [
+      19,
+      20,
+      21,
+      25
+    ],
+    "menu_items": [
+      {
+        "id": 19,
+        "title": "500",
+        "title_bn": "500",
+        "link": "/500",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": "2026-03-03T08:55:48.000000Z",
+        "all_children": []
+      },
+      {
+        "id": 20,
+        "title": "1000",
+        "title_bn": "1000",
+        "link": "/",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 21,
+        "title": "1500",
+        "title_bn": "1500",
+        "link": "/",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 25,
+        "title": "Other amount",
+        "title_bn": "Other amount",
+        "link": "/",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Monthly",
+    "menu_item_ids": [
+      22,
+      23,
+      24,
+      25
+    ],
+    "menu_items": [
+      {
+        "id": 22,
+        "title": "6000",
+        "title_bn": "6000",
+        "link": "/",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 23,
+        "title": "12000",
+        "title_bn": "12000",
+        "link": "/",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 24,
+        "title": "18000",
+        "title_bn": "18000",
+        "link": "/",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      },
+      {
+        "id": 25,
+        "title": "Other amount",
+        "title_bn": "Other amount",
+        "link": "/",
+        "parent_id": null,
+        "created_at": null,
+        "updated_at": null,
+        "all_children": []
+      }
+    ]
+  }
+]

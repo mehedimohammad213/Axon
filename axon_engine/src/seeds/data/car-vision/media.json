@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Dream Agent Car Vision Logo",
+    "file_name": "logo.svg",
+    "file_type": "image/svg+xml",
+    "file_path": "/logo.svg",
+    "file_size": 0,
+    "tags": [
+      "logo",
+      "brand"
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Premium white SUV in showroom",
+    "file_name": "banner-1.png",
+    "file_type": "image/png",
+    "file_path": "/banners/banner-1.png",
+    "file_size": 0,
+    "tags": [
+      "hero",
+      "banner"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Luxury black sedan",
+    "file_name": "banner-2.png",
+    "file_type": "image/png",
+    "file_path": "/banners/banner-2.png",
+    "file_size": 0,
+    "tags": [
+      "hero",
+      "banner"
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Red sports car",
+    "file_name": "banner-3.png",
+    "file_type": "image/png",
+    "file_path": "/banners/banner-3.png",
+    "file_size": 0,
+    "tags": [
+      "hero",
+      "banner"
+    ]
+  }
+]

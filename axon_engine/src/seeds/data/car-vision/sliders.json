@@ -1,0 +1,47 @@
+[
+  {
+    "id": 31,
+    "type": "hero",
+    "title_en": "Home Hero Slider",
+    "title_bn": "হোম হিরো স্লাইডার",
+    "description_en": "Find Your Next Car, the Smart Way",
+    "description_bn": "স্মার্ট উপায়ে আপনার পরবর্তী গাড়ি খুঁজুন",
+    "media_ids": [
+      2,
+      3,
+      4
+    ],
+    "card_ids": [],
+    "additional": {
+      "eyebrow": "Dream Agent Car Vision",
+      "headline": "Find Your Next Car,\nthe Smart Way",
+      "subheadline": "Browse quality vehicles with transparent specs, photos, and pricing — all in one place.",
+      "primary_cta": {
+        "label": "Browse Inventory",
+        "href": "/cars"
+      },
+      "secondary_cta": {
+        "label": "Contact Us",
+        "href": "/contact"
+      },
+      "slides": [
+        {
+          "id": 2,
+          "image": "/banners/banner-1.png",
+          "alt": "Premium white SUV in showroom"
+        },
+        {
+          "id": 3,
+          "image": "/banners/banner-2.png",
+          "alt": "Luxury black sedan"
+        },
+        {
+          "id": 4,
+          "image": "/banners/banner-3.png",
+          "alt": "Red sports car"
+        }
+      ]
+    },
+    "status": 1
+  }
+]

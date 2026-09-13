@@ -1,0 +1,14 @@
+# OS / editor
+.DS_Store
+*.log
+
+# Dependencies & build (belt-and-suspenders with package gitignores)
+node_modules/
+.next/
+out/
+build/
+dist/
+
+# Secrets
+.env
+.env*.local

@@ -1,0 +1,420 @@
+[
+  {
+    "id": 1,
+    "page_name": null,
+    "media_ids": 60,
+    "title_en": "Agility",
+    "title_bn": null,
+    "description_en": "<p><span style=\"color: rgb(0, 114, 207);\">We are agile like water, flowing through uncertainties with determination to support farmers and marginalized communities.</span></p>",
+    "description_bn": null,
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 0,
+    "created_at": "2026-02-26T04:30:26.000000Z",
+    "updated_at": "2026-02-26T04:30:26.000000Z",
+    "media_files": {
+      "id": 60,
+      "file_name": "mave_p8LZ2S.png",
+      "file_type": "image/png",
+      "file_path": "media/mave_p8LZ2S.png"
+    }
+  },
+  {
+    "id": 2,
+    "page_name": null,
+    "media_ids": 61,
+    "title_en": "Learning",
+    "title_bn": null,
+    "description_en": "<p><span style=\"color: rgb(0, 114, 207);\">We are curious like a new bud, growing beyond our comfort zone, with strong roots and a zeal to thrive despite challenges.</span></p>",
+    "description_bn": null,
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 0,
+    "created_at": "2026-02-26T04:31:14.000000Z",
+    "updated_at": "2026-02-26T04:31:14.000000Z",
+    "media_files": {
+      "id": 61,
+      "file_name": "mave_1iKLjI.png",
+      "file_type": "image/png",
+      "file_path": "media/mave_1iKLjI.png"
+    }
+  },
+  {
+    "id": 3,
+    "page_name": null,
+    "media_ids": 62,
+    "title_en": "Accountability",
+    "title_bn": null,
+    "description_en": "<p><span style=\"color: rgb(0, 114, 207);\">We are as steadfast as a mountain, taking full responsibility for our actions and cultivating our relationships diligently.</span></p>",
+    "description_bn": null,
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 0,
+    "created_at": "2026-02-26T04:31:57.000000Z",
+    "updated_at": "2026-02-26T04:31:57.000000Z",
+    "media_files": {
+      "id": 62,
+      "file_name": "mave_mtGAHj.png",
+      "file_type": "image/png",
+      "file_path": "media/mave_mtGAHj.png"
+    }
+  },
+  {
+    "id": 4,
+    "page_name": null,
+    "media_ids": 63,
+    "title_en": "Innovation",
+    "title_bn": null,
+    "description_en": "<p><span style=\"color: rgb(0, 114, 207);\">We are open-minded and eager to understand complex issues, approaching the unknown with an explorer's sense of adventure.</span></p>",
+    "description_bn": null,
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 0,
+    "created_at": "2026-02-26T04:32:41.000000Z",
+    "updated_at": "2026-02-26T04:32:41.000000Z",
+    "media_files": {
+      "id": 63,
+      "file_name": "mave_HPzb2v.png",
+      "file_type": "image/png",
+      "file_path": "media/mave_HPzb2v.png"
+    }
+  },
+  {
+    "id": 5,
+    "page_name": null,
+    "media_ids": 94,
+    "title_en": "Empowering Farmers",
+    "title_bn": null,
+    "description_en": "<p>CARB’s work is rooted in the belief that farmers themselves must be at the center of solutions to rural poverty and climate vulnerability. Since 1998, CARB has worked closely with Borga Chashi (landless tenant farmers), small and marginal farmers, and climate migrants who move inland from flood-affected chars in search of stability and livelihoods.</p><p><br></p><p>We have learned that when farmers are treated not as beneficiaries but as partners—trusted with decision-making, supported with appropriate tools, and organized collectively—their ability to withstand economic and environmental shocks increases significantly.</p>",
+    "description_bn": "<p>In contrast, interventions that overlook farmer realities—such as insecure land access, seasonal income cycles, and climate displacement—often fail to deliver lasting change. CARB prioritizes farmer centricity by organizing farmers, strengthening their agency, and ensuring their voices guide program design and implementation.</p>",
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 0,
+    "created_at": "2026-03-01T09:11:34.000000Z",
+    "updated_at": "2026-03-02T07:14:12.000000Z",
+    "media_files": {
+      "id": 94,
+      "file_name": "mave_uscLIA.jpg",
+      "file_type": "image/jpeg",
+      "file_path": "media/mave_uscLIA.jpg"
+    }
+  },
+  {
+    "id": 6,
+    "page_name": null,
+    "media_ids": 33,
+    "title_en": "Regenerative Agriculture",
+    "title_bn": null,
+    "description_en": "<p>CARB recognizes that long-term farmer resilience depends on the health of land and water systems. In the drought-prone Barind tract, poor soil, erratic rainfall, and water-intensive cropping patterns have undermined both productivity and environmental sustainability.</p><p><br></p><p>Over decades of field-based work, CARB has learned that regenerative and climate-adaptive agriculture is most effective when farmers have access to knowledge, quality inputs, and ongoing support, rather than one-time interventions.</p>",
+    "description_bn": "<p>CARB promotes regenerative agriculture as a practical pathway—one that restores soil fertility, reduces pressure on groundwater, and helps farmers adapt to changing climatic conditions while maintaining income security.</p><p><br></p>",
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 1,
+    "created_at": "2026-03-01T09:13:29.000000Z",
+    "updated_at": "2026-03-01T09:13:29.000000Z",
+    "media_files": {
+      "id": 33,
+      "file_name": "mave_o623Kx.jpg",
+      "file_type": "image/jpeg",
+      "file_path": "media/mave_o623Kx.jpg"
+    }
+  },
+  {
+    "id": 7,
+    "page_name": null,
+    "media_ids": 44,
+    "title_en": "Safe Water",
+    "title_bn": null,
+    "description_en": "<p>Access to safe and reliable water is essential not only for agriculture but also for family well-being, child safety, and social harmony. In rural communities, water scarcity often places a heavy burden on women and children and can lead to conflict, exclusion, and insecurity.</p><p><br></p><p>CARB understands that water challenges in the Barind region are deeply interconnected— linking groundwater depletion, irrigation practices, household access, and community relations. Addressing water insecurity, therefore, requires both technical solutions and community-based approaches.</p>",
+    "description_bn": "<p>Safe water is not just about cleanliness; it must also be accessible and affordable. CARB ensures that communities can rely on a water supply that meets these criteria, making a significant difference in the lives of the residents by easing access and reducing costs.</p>",
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 1,
+    "created_at": "2026-03-01T09:15:30.000000Z",
+    "updated_at": "2026-03-01T09:15:30.000000Z",
+    "media_files": {
+      "id": 44,
+      "file_name": "mave_M0DTZG.jpg",
+      "file_type": "image/jpeg",
+      "file_path": "media/mave_M0DTZG.jpg"
+    }
+  },
+  {
+    "id": 8,
+    "page_name": null,
+    "media_ids": 45,
+    "title_en": "Flexible Financing",
+    "title_bn": null,
+    "description_en": "<p>In the heart of northwestern Bangladesh, about 75% of rural households depend on agriculture for their livelihoods. Yet, many small farmers find themselves excluded from formal financial systems. Traditional credit models often overlook the seasonal nature of farmers' incomes and the unpredictable climate risks they face, forcing them to turn to high-interest informal money lenders and landlords, known as Mohajons and Jamidars.</p><p><br></p><p>CARB was born out of a commitment to change this narrative, with a mission centered on agriculture. We offer tailored financial products specifically designed for landless and marginal farmers, aiming to uplift and enhance their way of life. By forgoing physical collateral, CARB embraces group guarantees and social accountability, fostering an environment of trust and responsibility that yields high repayment rates.</p>",
+    "description_bn": "<p><span style=\"color: rgb(13, 77, 37);\">Our microfinance offerings are a lifeline, enabling farmers to access vital resources like seeds and fertilizers precisely when they need them. With a repayment schedule that honors the realities of Borga Chashi, small farmers and rural entrepreneurs, we provide a flexible timeline that aligns with their needs. CARB’s adaptable financing turns credit into a tool for bringing stability, empowering the clients to invest in their futures with confidence.</span></p>",
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 1,
+    "created_at": "2026-03-01T09:17:13.000000Z",
+    "updated_at": "2026-03-01T09:17:13.000000Z",
+    "media_files": {
+      "id": 45,
+      "file_name": "mave_5TIIpZ.jpg",
+      "file_type": "image/jpeg",
+      "file_path": "media/mave_5TIIpZ.jpg"
+    }
+  },
+  {
+    "id": 9,
+    "page_name": null,
+    "media_ids": 36,
+    "title_en": "Research and Advocacy",
+    "title_bn": null,
+    "description_en": "<p>CARB believes that lasting change in agriculture and rural livelihoods requires more than isolated interventions—it must be grounded in evidence, learning, and collective action. From its earliest days, CARB has functioned as a field laboratory, generating root-level, long-term data on groundwater resources, irrigation practices, soil health, cropping systems, and farmer livelihoods across the drought-prone Barind region.</p><p><br></p><p>A core pillar of this work is&nbsp;CARB’s targeted, high-impact research on groundwater resource monitoring and irrigation management. Through continuous measurement of groundwater levels, pumping patterns, recharge trends, and irrigation use, CARB builds a deep understanding of how water systems interact with farming practices and climate stress. This evidence allows CARB to design practical,&nbsp;context-specific solutions that promote sustainable water use while protecting farmer livelihoods.</p>",
+    "description_bn": "<p><span style=\"color: rgb(13, 77, 37);\">At the same time, CARB recognizes that evidence alone is not enough. For research to translate into lasting impact, it must be amplified through strong coalitions that connect farmers, community institutions, scientists, policymakers, and financial actors. By organizing farmers and building alliances with government agencies, research institutions, and practitioners, CARB transforms grassroots learning into policies and practices that can be adopted at scale.</span></p>",
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 1,
+    "created_at": "2026-03-01T09:19:08.000000Z",
+    "updated_at": "2026-03-01T09:19:08.000000Z",
+    "media_files": {
+      "id": 36,
+      "file_name": "mave_dwiNi1.png",
+      "file_type": "image/png",
+      "file_path": "media/mave_dwiNi1.png"
+    }
+  },
+  {
+    "id": 10,
+    "page_name": null,
+    "media_ids": 106,
+    "title_en": "Support conservation efforts in over 100 countries",
+    "title_bn": null,
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 1,
+    "created_at": "2026-03-03T04:22:30.000000Z",
+    "updated_at": "2026-03-03T04:22:30.000000Z",
+    "media_files": {
+      "id": 106,
+      "file_name": "mave_DMKG4t.png",
+      "file_type": "image/png",
+      "file_path": "media/mave_DMKG4t.png"
+    }
+  },
+  {
+    "id": 11,
+    "page_name": null,
+    "media_ids": 105,
+    "title_en": "Fuel solutions to reduce CO₂ emissions",
+    "title_bn": null,
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 1,
+    "created_at": "2026-03-03T04:24:26.000000Z",
+    "updated_at": "2026-03-03T04:24:26.000000Z",
+    "media_files": {
+      "id": 105,
+      "file_name": "mave_FNw3rq.webp",
+      "file_type": "image/webp",
+      "file_path": "media/mave_FNw3rq.webp"
+    }
+  },
+  {
+    "id": 12,
+    "page_name": null,
+    "media_ids": 104,
+    "title_en": "Empower indigenous and local communities to shape conservation",
+    "title_bn": null,
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 1,
+    "created_at": "2026-03-03T04:25:00.000000Z",
+    "updated_at": "2026-03-03T04:25:00.000000Z",
+    "media_files": {
+      "id": 104,
+      "file_name": "mave_drXPeY.webp",
+      "file_type": "image/webp",
+      "file_path": "media/mave_drXPeY.webp"
+    }
+  },
+  {
+    "id": 13,
+    "page_name": null,
+    "media_ids": 119,
+    "title_en": "Sponsor a Farmer",
+    "title_bn": null,
+    "description_en": "<p>Support a small or landless farmer with the resources they need to cultivate their land and secure their livelihood. Your sponsorship helps provide access to seeds, water-efficient farming solutions, training, and guidance—enabling farmers to grow food, sustain their families, and build a more resilient future.</p>",
+    "description_bn": null,
+    "link_url": "/FIND OUT MORE",
+    "additional": {
+      "tags": []
+    },
+    "status": 0,
+    "created_at": "2026-03-03T04:35:13.000000Z",
+    "updated_at": "2026-03-07T08:26:31.000000Z",
+    "media_files": {
+      "id": 119,
+      "file_name": "mave_G5z3fi.jpg",
+      "file_type": "image/jpeg",
+      "file_path": "media/mave_G5z3fi.jpg"
+    }
+  },
+  {
+    "id": 14,
+    "page_name": null,
+    "media_ids": 120,
+    "title_en": "Partner With Farmers",
+    "title_bn": null,
+    "description_en": "<p>Join hands with Barind to strengthen farming communities across the region. Through partnerships and shared support, we can expand sustainable agriculture, improve access to essential resources, and help farmers adapt to climate challenges while protecting the land they depend on.</p>",
+    "description_bn": null,
+    "link_url": "/FIND OUT MORE",
+    "additional": {
+      "tags": []
+    },
+    "status": 0,
+    "created_at": "2026-03-03T04:37:36.000000Z",
+    "updated_at": "2026-03-07T08:26:59.000000Z",
+    "media_files": {
+      "id": 120,
+      "file_name": "mave_7bi08f.jpg",
+      "file_type": "image/jpeg",
+      "file_path": "media/mave_7bi08f.jpg"
+    }
+  },
+  {
+    "id": 15,
+    "page_name": null,
+    "media_ids": 114,
+    "title_en": "Pay",
+    "title_bn": null,
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 1,
+    "created_at": "2026-03-03T09:32:34.000000Z",
+    "updated_at": "2026-03-03T09:32:34.000000Z",
+    "media_files": {
+      "id": 114,
+      "file_name": "mave_z9xdCI.svg",
+      "file_type": "image/svg+xml",
+      "file_path": "media/mave_z9xdCI.svg"
+    }
+  },
+  {
+    "id": 16,
+    "page_name": null,
+    "media_ids": 117,
+    "title_en": "G Pay",
+    "title_bn": null,
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 1,
+    "created_at": "2026-03-03T09:33:15.000000Z",
+    "updated_at": "2026-03-03T09:33:15.000000Z",
+    "media_files": {
+      "id": 117,
+      "file_name": "mave_p2GKFr.svg",
+      "file_type": "image/svg+xml",
+      "file_path": "media/mave_p2GKFr.svg"
+    }
+  },
+  {
+    "id": 17,
+    "page_name": null,
+    "media_ids": 115,
+    "title_en": "Mastercard",
+    "title_bn": null,
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 1,
+    "created_at": "2026-03-03T09:33:50.000000Z",
+    "updated_at": "2026-03-03T09:33:50.000000Z",
+    "media_files": {
+      "id": 115,
+      "file_name": "mave_b4udYy.svg",
+      "file_type": "image/svg+xml",
+      "file_path": "media/mave_b4udYy.svg"
+    }
+  },
+  {
+    "id": 18,
+    "page_name": null,
+    "media_ids": 116,
+    "title_en": "Paypal",
+    "title_bn": null,
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 1,
+    "created_at": "2026-03-03T09:34:18.000000Z",
+    "updated_at": "2026-03-03T09:34:18.000000Z",
+    "media_files": {
+      "id": 116,
+      "file_name": "mave_pF2aIo.svg",
+      "file_type": "image/svg+xml",
+      "file_path": "media/mave_pF2aIo.svg"
+    }
+  },
+  {
+    "id": 19,
+    "page_name": null,
+    "media_ids": 113,
+    "title_en": "Visa",
+    "title_bn": null,
+    "description_en": "<p>.</p>",
+    "description_bn": "<p>.</p>",
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 1,
+    "created_at": "2026-03-03T09:34:48.000000Z",
+    "updated_at": "2026-03-03T09:34:48.000000Z",
+    "media_files": {
+      "id": 113,
+      "file_name": "mave_AWtLfK.svg",
+      "file_type": "image/svg+xml",
+      "file_path": "media/mave_AWtLfK.svg"
+    }
+  }
+]

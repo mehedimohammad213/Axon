@@ -1,0 +1,1566 @@
+[
+  {
+    "id": 24,
+    "slug": "main-site-footer",
+    "type": "Footer",
+    "favicon_id": null,
+    "page_name_en": "Main Site Footer",
+    "page_name_bn": "প্রধান সাইট ফুটার",
+    "head": {
+      "title": "Main Site Footer",
+      "description": "Dream Agent Car Vision website footer"
+    },
+    "body": [
+      {
+        "_id": "section-footer-brand",
+        "title": "Brand & Address",
+        "data": [
+          {
+            "_id": "footer-logo",
+            "type": "media",
+            "id": 1,
+            "value": "",
+            "settings": [],
+            "_headless": {
+              "organization_id": 1,
+              "file_name": "logo.svg",
+              "title": "Dream Agent Car Vision Logo",
+              "file_type": "image/svg+xml",
+              "file_path": "/logo.svg",
+              "file_size": 0,
+              "tags": "[\"logo\",\"brand\"]",
+              "created_at": "2026-09-02T05:40:09.385Z",
+              "updated_at": "2026-09-02T05:40:09.385Z",
+              "id": 1
+            }
+          },
+          {
+            "_id": "footer-office-title",
+            "type": "title",
+            "value": "Office Address",
+            "settings": [],
+            "_headless": {
+              "text": "Office Address",
+              "fontSize": "medium",
+              "primaryColor": "#ffffff",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "footer-office-address",
+            "type": "description",
+            "value": "37, Purana Paltan Line, Dhaka 1205, Bangladesh.",
+            "settings": [],
+            "_headless": {
+              "text": "37, Purana Paltan Line, Dhaka 1205, Bangladesh.",
+              "fontSize": "small",
+              "primaryColor": "#94a3b8",
+              "textAlign": "left",
+              "fontWeight": "normal"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-footer-quick",
+        "title": "Quick Links",
+        "data": [
+          {
+            "_id": "footer-quick-title",
+            "type": "title",
+            "value": "Quick Links",
+            "settings": [],
+            "_headless": {
+              "text": "Quick Links",
+              "fontSize": "medium",
+              "primaryColor": "#ffffff",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "footer-quick-menu",
+            "type": "menu",
+            "id": 13,
+            "value": "",
+            "menuMode": "vertical",
+            "menuTheme": "dark",
+            "settings": [],
+            "_headless": {
+              "id": 13,
+              "name": "Footer Quick Links",
+              "menu_item_ids": [
+                5,
+                11,
+                12,
+                8,
+                9
+              ],
+              "menu_items": [
+                {
+                  "id": 5,
+                  "title": "Home",
+                  "title_bn": "হোম",
+                  "link": "/",
+                  "parent_id": null
+                },
+                {
+                  "id": 11,
+                  "title": "Car Inventory",
+                  "title_bn": "গাড়ির তালিকা",
+                  "link": "/cars",
+                  "parent_id": null
+                },
+                {
+                  "id": 12,
+                  "title": "About Us",
+                  "title_bn": "আমাদের সম্পর্কে",
+                  "link": "/about",
+                  "parent_id": null
+                },
+                {
+                  "id": 8,
+                  "title": "Career",
+                  "title_bn": "ক্যারিয়ার",
+                  "link": "/career",
+                  "parent_id": null
+                },
+                {
+                  "id": 9,
+                  "title": "Contact",
+                  "title_bn": "যোগাযোগ",
+                  "link": "/contact",
+                  "parent_id": null
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-footer-help",
+        "title": "Can We Help?",
+        "data": [
+          {
+            "_id": "footer-help-title",
+            "type": "title",
+            "value": "Can We Help?",
+            "settings": [],
+            "_headless": {
+              "text": "Can We Help?",
+              "fontSize": "medium",
+              "primaryColor": "#ffffff",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "footer-help-menu",
+            "type": "menu",
+            "id": 15,
+            "value": "",
+            "menuMode": "vertical",
+            "menuTheme": "dark",
+            "settings": [],
+            "_headless": {
+              "id": 15,
+              "name": "Footer Help Links",
+              "menu_item_ids": [
+                14,
+                12
+              ],
+              "menu_items": [
+                {
+                  "id": 14,
+                  "title": "Contact Us",
+                  "title_bn": "যোগাযোগ করুন",
+                  "link": "/contact",
+                  "parent_id": null
+                },
+                {
+                  "id": 12,
+                  "title": "About Us",
+                  "title_bn": "আমাদের সম্পর্কে",
+                  "link": "/about",
+                  "parent_id": null
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-footer-platform",
+        "title": "Platform",
+        "data": [
+          {
+            "_id": "footer-platform-title",
+            "type": "title",
+            "value": "Platform",
+            "settings": [],
+            "_headless": {
+              "text": "Platform",
+              "fontSize": "medium",
+              "primaryColor": "#ffffff",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "footer-platform-menu",
+            "type": "menu",
+            "id": 17,
+            "value": "",
+            "menuMode": "vertical",
+            "menuTheme": "dark",
+            "settings": [],
+            "_headless": {
+              "id": 17,
+              "name": "Footer Platform Links",
+              "menu_item_ids": [
+                16
+              ],
+              "menu_items": [
+                {
+                  "id": 16,
+                  "title": "Dealer Login",
+                  "title_bn": "ডিলার লগইন",
+                  "link": "https://dreamagentcarvision.com/login",
+                  "parent_id": null
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-footer-contact",
+        "title": "Get In Touch",
+        "data": [
+          {
+            "_id": "footer-contact-title",
+            "type": "title",
+            "value": "Get In Touch",
+            "settings": [],
+            "_headless": {
+              "text": "Get In Touch",
+              "fontSize": "medium",
+              "primaryColor": "#ffffff",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "footer-contact-phone",
+            "type": "title",
+            "value": "01714211956",
+            "settings": [],
+            "_headless": {
+              "text": "01714211956",
+              "fontSize": "large",
+              "primaryColor": "#ffffff",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "footer-contact-copy",
+            "type": "description",
+            "value": "Dream Agent Car Vision — car sales In Dhaka. Get in touch.",
+            "settings": [],
+            "_headless": {
+              "text": "Dream Agent Car Vision — car sales In Dhaka. Get in touch.",
+              "fontSize": "small",
+              "primaryColor": "#94a3b8",
+              "textAlign": "left",
+              "fontWeight": "normal"
+            }
+          },
+          {
+            "_id": "footer-contact-email",
+            "type": "description",
+            "value": "car_vision71@yahoo.com",
+            "settings": [],
+            "_headless": {
+              "text": "car_vision71@yahoo.com",
+              "fontSize": "small",
+              "primaryColor": "#94a3b8",
+              "textAlign": "left",
+              "fontWeight": "normal"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-footer-bottom",
+        "title": "Bottom Bar",
+        "data": [
+          {
+            "_id": "footer-copyright",
+            "type": "description",
+            "value": "© 2026 DREAM AGENT CAR VISION.",
+            "settings": [],
+            "_headless": {
+              "text": "© 2026 DREAM AGENT CAR VISION.",
+              "fontSize": "small",
+              "primaryColor": "#64748b",
+              "textAlign": "left",
+              "fontWeight": "normal"
+            }
+          },
+          {
+            "_id": "footer-trust-badge",
+            "type": "description",
+            "value": "Trusted Dealership Platform",
+            "settings": [],
+            "_headless": {
+              "text": "Trusted Dealership Platform",
+              "fontSize": "small",
+              "primaryColor": "#64748b",
+              "textAlign": "right",
+              "fontWeight": "normal"
+            }
+          }
+        ]
+      }
+    ],
+    "additional": [
+      {
+        "pageType": "Footer",
+        "metaTitle": "Main Site Footer",
+        "metaDescription": "Dream Agent Car Vision website footer",
+        "keywords": [],
+        "metaImage": "",
+        "metaImageAlt": ""
+      }
+    ],
+    "status": true
+  },
+  {
+    "id": 34,
+    "slug": "site-settings",
+    "type": "settings",
+    "favicon_id": null,
+    "page_name_en": "Site Settings",
+    "page_name_bn": "সাইট সেটিংস",
+    "head": {
+      "title": "Site Settings",
+      "robots": "noindex"
+    },
+    "body": [],
+    "additional": {
+      "name": "Dream Agent Car Vision",
+      "logo": "/logo.svg",
+      "logoOnDark": "/logo-on-dark.svg",
+      "tagline": "Dhaka",
+      "description": "Japanese New and Reconditioned car importer. Call/whatsapp +8801714211956 (10am-8pm) ☎️ +88 (02) 583 16539.",
+      "appUrl": "https://dreamagentcarvision.com",
+      "contact": {
+        "email": "car_vision71@yahoo.com",
+        "phone": "01714211956",
+        "address": "Dream Agent Car Vision, 37 Purana Paltan Line, Dhaka 1205, Bangladesh.",
+        "googleMaps": {
+          "placeName": "Dream Agent Car Vision",
+          "url": "https://www.google.com/maps/place/Dream+Agent+Car+Vision/@23.7370766,90.4118018,18z/data=!4m6!3m5!1s0x3755b8f56eb9cebd:0x1a22fdaa024ac5e4!8m2!3d23.7370766!4d90.4118018!16s%2Fg%2F11f_zl_5gc",
+          "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5845.549!2d90.4118018!3d23.7370766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8f56eb9cebd%3A0x1a22fdaa024ac5e4!2sDream%20Agent%20Car%20Vision!5e0!3m2!1sen!2sbd!4v1730000000000!5m2!1sen!2sbd"
+        },
+        "businessHours": [
+          {
+            "day": "Friday",
+            "hours": "Closed"
+          },
+          {
+            "day": "Saturday",
+            "hours": "9 AM–7 PM"
+          },
+          {
+            "day": "Sunday",
+            "hours": "9 AM–7 PM"
+          },
+          {
+            "day": "Monday",
+            "hours": "9 AM–7 PM"
+          },
+          {
+            "day": "Tuesday",
+            "hours": "9 AM–7 PM"
+          },
+          {
+            "day": "Wednesday",
+            "hours": "9 AM–7 PM"
+          },
+          {
+            "day": "Thursday",
+            "hours": "9 AM–7 PM"
+          }
+        ]
+      },
+      "career": {
+        "email": "car_vision71@yahoo.com"
+      },
+      "offices": {
+        "corporate": {
+          "name": "Office Address",
+          "address": "37, Purana Paltan Line, Dhaka 1205, Bangladesh.",
+          "phone": "01714211956",
+          "email": "car_vision71@yahoo.com"
+        }
+      },
+      "links": {
+        "login": "/login",
+        "catalog": "/cars"
+      },
+      "social": {
+        "facebook": "https://www.facebook.com/DreamAgentCarVision/",
+        "youtube": "https://youtube.com",
+        "linkedin": "https://linkedin.com"
+      },
+      "follow_us": {
+        "label": "Follow Us",
+        "menu_id": 21
+      },
+      "messenger": "https://m.me/DreamAgentCarVision"
+    },
+    "status": true
+  },
+  {
+    "id": 35,
+    "slug": "home",
+    "type": "Page",
+    "favicon_id": null,
+    "page_name_en": "Home",
+    "page_name_bn": "হোম",
+    "head": {
+      "title": "Dream Agent Car Vision | Dhaka",
+      "meta_description": "Japanese New and Reconditioned car importer. Call/whatsapp +8801714211956 (10am-8pm) ☎️ +88 (02) 583 16539."
+    },
+    "body": [
+      {
+        "_id": "section-home-hero",
+        "title": "Hero",
+        "data": [
+          {
+            "_id": "home-hero-slider",
+            "type": "slider",
+            "id": 31,
+            "value": "",
+            "settings": [],
+            "_headless": {
+              "id": 31,
+              "title_en": "Home Hero Slider",
+              "description_en": "Find Your Next Car, the Smart Way",
+              "type": "hero",
+              "media_ids": [
+                2,
+                3,
+                4
+              ],
+              "additional": {
+                "eyebrow": "Dream Agent Car Vision",
+                "headline": "Find Your Next Car,\nthe Smart Way",
+                "subheadline": "Browse quality vehicles with transparent specs, photos, and pricing — all in one place.",
+                "primary_cta": {
+                  "label": "Browse Inventory",
+                  "href": "/cars"
+                },
+                "secondary_cta": {
+                  "label": "Contact Us",
+                  "href": "/contact"
+                },
+                "slides": [
+                  {
+                    "id": 2,
+                    "image": "/banners/banner-1.png",
+                    "alt": "Premium white SUV in showroom"
+                  },
+                  {
+                    "id": 3,
+                    "image": "/banners/banner-2.png",
+                    "alt": "Luxury black sedan"
+                  },
+                  {
+                    "id": 4,
+                    "image": "/banners/banner-3.png",
+                    "alt": "Red sports car"
+                  }
+                ]
+              },
+              "status": 1
+            }
+          },
+          {
+            "_id": "home-hero-eyebrow",
+            "type": "title",
+            "value": "Dream Agent Car Vision",
+            "settings": [],
+            "_headless": {
+              "text": "Dream Agent Car Vision",
+              "fontSize": "small",
+              "primaryColor": "#ffffff",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "home-hero-headline",
+            "type": "title",
+            "value": "Find Your Next Car,\nthe Smart Way",
+            "settings": [],
+            "_headless": {
+              "text": "Find Your Next Car,\nthe Smart Way",
+              "fontSize": "large",
+              "primaryColor": "#ffffff",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "home-hero-subheadline",
+            "type": "description",
+            "value": "Browse quality vehicles with transparent specs, photos, and pricing — all in one place.",
+            "settings": [],
+            "_headless": {
+              "text": "Browse quality vehicles with transparent specs, photos, and pricing — all in one place.",
+              "fontSize": "medium",
+              "primaryColor": "#cbd5e1",
+              "textAlign": "left",
+              "fontWeight": "normal"
+            }
+          },
+          {
+            "_id": "home-hero-ctas",
+            "type": "titledescription",
+            "value": "",
+            "settings": [],
+            "_headless": {
+              "title": "Browse Inventory",
+              "description": "Contact Us",
+              "fontSize": "medium",
+              "primaryColor": "#db2d2e",
+              "textAlign": "left",
+              "fontWeight": "bold",
+              "primary_cta": {
+                "label": "Browse Inventory",
+                "href": "/cars"
+              },
+              "secondary_cta": {
+                "label": "Contact Us",
+                "href": "/contact"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-home-featured",
+        "title": "Featured Inventory (labels only — cars from API)",
+        "data": [
+          {
+            "_id": "home-featured-title",
+            "type": "title",
+            "value": "Featured Inventory",
+            "settings": [],
+            "_headless": {
+              "text": "Featured Inventory",
+              "fontSize": "large",
+              "primaryColor": "#0f172a",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "home-featured-subtitle",
+            "type": "description",
+            "value": "Browse our latest available vehicles",
+            "settings": [],
+            "_headless": {
+              "text": "Browse our latest available vehicles",
+              "fontSize": "medium",
+              "primaryColor": "#64748b",
+              "textAlign": "left",
+              "fontWeight": "normal"
+            }
+          },
+          {
+            "_id": "home-featured-cta",
+            "type": "titledescription",
+            "value": "",
+            "settings": [],
+            "_headless": {
+              "title": "View all",
+              "description": "Vehicle cards are loaded from the cars API — not managed in this CMS.",
+              "fontSize": "medium",
+              "primaryColor": "#db2d2e",
+              "textAlign": "left",
+              "fontWeight": "bold",
+              "linkType": "independent",
+              "link": "/cars"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-home-contact-cta",
+        "title": "Contact CTA",
+        "data": [
+          {
+            "_id": "home-contact-cta-card",
+            "type": "card",
+            "id": 30,
+            "value": "",
+            "settings": [],
+            "_headless": {
+              "id": 30,
+              "title_en": "Contact CTA",
+              "description_en": "<p>Our team is ready to help with inventory inquiries, test drives, financing options, and dealership support. Reach out anytime during business hours.</p>",
+              "link_url": "/contact",
+              "additional": {
+                "section": "contact_cta",
+                "cta_label": "Contact Us",
+                "image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80",
+                "phone_prefix": "Call @"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-home-follow-us",
+        "title": "Follow Us Sidebar",
+        "data": [
+          {
+            "_id": "home-follow-us-title",
+            "type": "title",
+            "value": "Follow Us",
+            "settings": [],
+            "_headless": {
+              "text": "Follow Us",
+              "fontSize": "small",
+              "primaryColor": "#000000",
+              "textAlign": "center",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "home-follow-us-menu",
+            "type": "menu",
+            "id": 21,
+            "value": "",
+            "menuMode": "vertical",
+            "menuTheme": "light",
+            "settings": [],
+            "_headless": {
+              "id": 21,
+              "name": "Follow Us",
+              "menu_item_ids": [
+                18,
+                19,
+                20
+              ],
+              "menu_items": [
+                {
+                  "id": 18,
+                  "title": "Facebook",
+                  "title_bn": "ফেসবুক",
+                  "link": "https://www.facebook.com/DreamAgentCarVision/",
+                  "parent_id": null
+                },
+                {
+                  "id": 19,
+                  "title": "YouTube",
+                  "title_bn": "ইউটিউব",
+                  "link": "https://youtube.com",
+                  "parent_id": null
+                },
+                {
+                  "id": 20,
+                  "title": "LinkedIn",
+                  "title_bn": "লিংকডইন",
+                  "link": "https://linkedin.com",
+                  "parent_id": null
+                }
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-home-find-us",
+        "title": "Find Us / Our Location",
+        "data": [
+          {
+            "_id": "home-find-us-eyebrow",
+            "type": "title",
+            "value": "Find Us",
+            "settings": [],
+            "_headless": {
+              "text": "Find Us",
+              "fontSize": "small",
+              "primaryColor": "#db2d2e",
+              "textAlign": "center",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "home-find-us-heading",
+            "type": "title",
+            "value": "Our Location",
+            "settings": [],
+            "_headless": {
+              "text": "Our Location",
+              "fontSize": "large",
+              "primaryColor": "#0f172a",
+              "textAlign": "center",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "home-find-us-map",
+            "type": "google-map",
+            "value": "",
+            "settings": [],
+            "_headless": {
+              "mapUrl": "https://www.google.com/maps/place/Dream+Agent+Car+Vision/@23.7370766,90.4118018,18z/data=!4m6!3m5!1s0x3755b8f56eb9cebd:0x1a22fdaa024ac5e4!8m2!3d23.7370766!4d90.4118018!16s%2Fg%2F11f_zl_5gc",
+              "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5845.549!2d90.4118018!3d23.7370766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8f56eb9cebd%3A0x1a22fdaa024ac5e4!2sDream%20Agent%20Car%20Vision!5e0!3m2!1sen!2sbd!4v1730000000000!5m2!1sen!2sbd",
+              "zoom": 18,
+              "coordinates": {
+                "lat": 23.7370766,
+                "lng": 90.4118018
+              },
+              "altTitle": "Dream Agent Car Vision",
+              "markers": []
+            }
+          }
+        ]
+      }
+    ],
+    "additional": {
+      "follow_us": {
+        "label": "Follow Us",
+        "menu_id": 21
+      },
+      "find_us": {
+        "eyebrow": "Find Us",
+        "heading": "Our Location",
+        "placeName": "Dream Agent Car Vision",
+        "mapUrl": "https://www.google.com/maps/place/Dream+Agent+Car+Vision/@23.7370766,90.4118018,18z/data=!4m6!3m5!1s0x3755b8f56eb9cebd:0x1a22fdaa024ac5e4!8m2!3d23.7370766!4d90.4118018!16s%2Fg%2F11f_zl_5gc",
+        "embedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5845.549!2d90.4118018!3d23.7370766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8f56eb9cebd%3A0x1a22fdaa024ac5e4!2sDream%20Agent%20Car%20Vision!5e0!3m2!1sen!2sbd!4v1730000000000!5m2!1sen!2sbd",
+        "zoom": 18,
+        "coordinates": {
+          "lat": 23.7370766,
+          "lng": 90.4118018
+        }
+      },
+      "hero": {
+        "eyebrow": "Dream Agent Car Vision",
+        "headline": "Find Your Next Car,\nthe Smart Way",
+        "subheadline": "Browse quality vehicles with transparent specs, photos, and pricing — all in one place.",
+        "primary_cta": {
+          "label": "Browse Inventory",
+          "href": "/cars"
+        },
+        "secondary_cta": {
+          "label": "Contact Us",
+          "href": "/contact"
+        },
+        "slider_id": 31
+      },
+      "featured": {
+        "title": "Featured Inventory",
+        "subtitle": "Browse our latest available vehicles",
+        "cta_label": "View all",
+        "cta_href": "/cars"
+      },
+      "cta": {
+        "phone_prefix": "Call @",
+        "description": "Our team is ready to help with inventory inquiries, test drives, financing options, and dealership support. Reach out anytime during business hours.",
+        "button_label": "Contact Us",
+        "button_href": "/contact",
+        "image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80"
+      },
+      "note": "Featured Inventory vehicle cards are loaded from the external cars API, not from this CMS. Only section labels/CTAs are editable here."
+    },
+    "status": true
+  },
+  {
+    "id": 36,
+    "slug": "about",
+    "type": "Page",
+    "favicon_id": null,
+    "page_name_en": "About",
+    "page_name_bn": "সম্পর্কে",
+    "head": {
+      "title": "About - Dream Agent Car Vision",
+      "meta_description": "Learn about Dream Agent Car Vision — your trusted source for high-quality Japanese reconditioned vehicles in Bangladesh. Founded by Mehedi Hasan in 2026."
+    },
+    "body": [
+      {
+        "_id": "section-about-hero",
+        "title": "Hero",
+        "data": [
+          {
+            "_id": "about-hero-title",
+            "type": "title",
+            "value": "About Us",
+            "settings": [],
+            "_headless": {
+              "text": "About Us",
+              "fontSize": "large",
+              "primaryColor": "#ffffff",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "about-hero-description",
+            "type": "description",
+            "value": "Your trusted source for high-quality Japanese reconditioned vehicles in Bangladesh.",
+            "settings": [],
+            "_headless": {
+              "text": "Your trusted source for high-quality Japanese reconditioned vehicles in Bangladesh.",
+              "fontSize": "medium",
+              "primaryColor": "#cbd5e1",
+              "textAlign": "left",
+              "fontWeight": "normal"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-about-why-buy",
+        "title": "Why Buy a Car from Dream Agent Car Vision?",
+        "data": [
+          {
+            "_id": "about-why-title",
+            "type": "title",
+            "value": "Why Buy a Car from Dream Agent Car Vision?",
+            "settings": [],
+            "_headless": {
+              "text": "Why Buy a Car from Dream Agent Car Vision?",
+              "fontSize": "large",
+              "primaryColor": "#0f172a",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "about-why-intro",
+            "type": "description",
+            "value": "There are several reasons why someone might want to buy a car from Dream Agent Car Vision.",
+            "settings": [],
+            "_headless": {
+              "text": "There are several reasons why someone might want to buy a car from Dream Agent Car Vision.",
+              "fontSize": "medium",
+              "primaryColor": "#64748b",
+              "textAlign": "left",
+              "fontWeight": "normal"
+            }
+          },
+          {
+            "_id": "about-why-card-25",
+            "type": "card",
+            "id": 25,
+            "value": "",
+            "settings": [],
+            "_headless": {
+              "id": 25,
+              "title_en": "Registered & Trusted",
+              "description_en": "<p>We are the most reliable and trustworthy car importers in Bangladesh. The company is registered and member of Bangladesh Reconditioned Vehicles Importers and Dealers Association. Our company fulfilled all the requirements of the government.</p>",
+              "link_url": null,
+              "additional": {
+                "icon": "ShieldCheck",
+                "order": 1,
+                "section": "why_buy"
+              },
+              "order": 1
+            }
+          },
+          {
+            "_id": "about-why-card-26",
+            "type": "card",
+            "id": 26,
+            "value": "",
+            "settings": [],
+            "_headless": {
+              "id": 26,
+              "title_en": "Quality Assured",
+              "description_en": "<p>We only import cars that have auction point, original mileage (ODO reading), and passed the JAAI inspection. This means that the car has been rigorously tested.</p>",
+              "link_url": null,
+              "additional": {
+                "icon": "CheckCircle",
+                "order": 2,
+                "section": "why_buy"
+              },
+              "order": 2
+            }
+          },
+          {
+            "_id": "about-why-card-27",
+            "type": "card",
+            "id": 27,
+            "value": "",
+            "settings": [],
+            "_headless": {
+              "id": 27,
+              "title_en": "Wide Selection",
+              "description_en": "<p>We offer a wide selection of cars from some of the most popular Japanese brands.</p>",
+              "link_url": null,
+              "additional": {
+                "icon": "Car",
+                "order": 3,
+                "section": "why_buy"
+              },
+              "order": 3
+            }
+          },
+          {
+            "_id": "about-why-card-28",
+            "type": "card",
+            "id": 28,
+            "value": "",
+            "settings": [],
+            "_headless": {
+              "id": 28,
+              "title_en": "Dedicated Team",
+              "description_en": "<p>We have a team of dedicated and experienced professionals who always help our customers. Moreover, we offer after-sales service for our customers.</p>",
+              "link_url": null,
+              "additional": {
+                "icon": "Users",
+                "order": 4,
+                "section": "why_buy"
+              },
+              "order": 4
+            }
+          },
+          {
+            "_id": "about-why-card-29",
+            "type": "card",
+            "id": 29,
+            "value": "",
+            "settings": [],
+            "_headless": {
+              "id": 29,
+              "title_en": "Best Prices",
+              "description_en": "<p>We offer the best prices in Bangladesh for Japanese Reconditioned Cars.</p>",
+              "link_url": null,
+              "additional": {
+                "icon": "Target",
+                "order": 5,
+                "section": "why_buy"
+              },
+              "order": 5
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-about-brands",
+        "title": "Deals with all Japanese & European Brands",
+        "data": [
+          {
+            "_id": "about-brands-title",
+            "type": "title",
+            "value": "Deals with all Japanese & European Brands",
+            "settings": [],
+            "_headless": {
+              "text": "Deals with all Japanese & European Brands",
+              "fontSize": "large",
+              "primaryColor": "#0f172a",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "about-brands-p1",
+            "type": "description",
+            "value": "Dream Agent Car Vision specializes in importing vehicles from all major Japanese brands. Our extensive inventory includes popular brands such as Toyota, Honda, Nissan, Suzuki, Mazda, and Subaru, among others. We focus on providing high-quality reconditioned cars that meet the diverse needs of our customers. Each vehicle comes with authentic auction sheets, ensuring transparency and trust. By offering a wide range of models, Dream Agent Car Vision ensures that customers can find the perfect vehicle that suits their preferences and lifestyle.",
+            "settings": [],
+            "_headless": {
+              "text": "Dream Agent Car Vision specializes in importing vehicles from all major Japanese brands. Our extensive inventory includes popular brands such as Toyota, Honda, Nissan, Suzuki, Mazda, and Subaru, among others. We focus on providing high-quality reconditioned cars that meet the diverse needs of our customers. Each vehicle comes with authentic auction sheets, ensuring transparency and trust. By offering a wide range of models, Dream Agent Car Vision ensures that customers can find the perfect vehicle that suits their preferences and lifestyle.",
+              "fontSize": "medium",
+              "primaryColor": "#64748b",
+              "textAlign": "left",
+              "fontWeight": "normal"
+            }
+          },
+          {
+            "_id": "about-brands-p2",
+            "type": "description",
+            "value": "Dream Agent Car Vision also offers a pre-order service for European Brand New cars, allowing customers to secure their preferred models before they arrive in Bangladesh. This service caters to enthusiasts and buyers looking for specific European brands such as BMW, Mercedes-Benz, Audi, Volkswagen, and Volvo.",
+            "settings": [],
+            "_headless": {
+              "text": "Dream Agent Car Vision also offers a pre-order service for European Brand New cars, allowing customers to secure their preferred models before they arrive in Bangladesh. This service caters to enthusiasts and buyers looking for specific European brands such as BMW, Mercedes-Benz, Audi, Volkswagen, and Volvo.",
+              "fontSize": "medium",
+              "primaryColor": "#64748b",
+              "textAlign": "left",
+              "fontWeight": "normal"
+            }
+          },
+          {
+            "_id": "about-brands-list",
+            "type": "titledescription",
+            "value": "",
+            "settings": [],
+            "_headless": {
+              "title": "Brands we deal with",
+              "description": "Toyota, Honda, Nissan, Suzuki, Mazda, Subaru, Mitsubishi, BMW, Mercedes-Benz, Audi, Volkswagen, Volvo",
+              "fontSize": "medium",
+              "primaryColor": "#0f172a",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-about-cta",
+        "title": "Join CTA",
+        "data": [
+          {
+            "_id": "about-cta-block",
+            "type": "titledescription",
+            "value": "",
+            "settings": [],
+            "_headless": {
+              "title": "So why late? Be a family member of Dream Agent Car Vision",
+              "description": "Join thousands of satisfied customers who trust us for their vehicle needs. Experience transparency, quality, and exceptional service.",
+              "fontSize": "large",
+              "primaryColor": "#ffffff",
+              "textAlign": "center",
+              "fontWeight": "bold",
+              "linkType": "independent",
+              "link": "/cars",
+              "link_label": "Browse Our Cars"
+            }
+          }
+        ]
+      }
+    ],
+    "additional": {
+      "hero": {
+        "title": "About Us",
+        "subtitle": "Your trusted source for high-quality Japanese reconditioned vehicles in Bangladesh.",
+        "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80"
+      },
+      "whyBuy": {
+        "title": "Why Buy a Car from Dream Agent Car Vision?",
+        "intro": "There are several reasons why someone might want to buy a car from Dream Agent Car Vision.",
+        "items": [
+          {
+            "title": "Registered & Trusted",
+            "description": "We are the most reliable and trustworthy car importers in Bangladesh. The company is registered and member of Bangladesh Reconditioned Vehicles Importers and Dealers Association. Our company fulfilled all the requirements of the government.",
+            "icon": "ShieldCheck"
+          },
+          {
+            "title": "Quality Assured",
+            "description": "We only import cars that have auction point, original mileage (ODO reading), and passed the JAAI inspection. This means that the car has been rigorously tested.",
+            "icon": "CheckCircle"
+          },
+          {
+            "title": "Wide Selection",
+            "description": "We offer a wide selection of cars from some of the most popular Japanese brands.",
+            "icon": "Car"
+          },
+          {
+            "title": "Dedicated Team",
+            "description": "We have a team of dedicated and experienced professionals who always help our customers. Moreover, we offer after-sales service for our customers.",
+            "icon": "Users"
+          },
+          {
+            "title": "Best Prices",
+            "description": "We offer the best prices in Bangladesh for Japanese Reconditioned Cars.",
+            "icon": "Target"
+          }
+        ]
+      },
+      "brands": {
+        "title": "Deals with all Japanese & European Brands",
+        "paragraphs": [
+          "Dream Agent Car Vision specializes in importing vehicles from all major Japanese brands. Our extensive inventory includes popular brands such as Toyota, Honda, Nissan, Suzuki, Mazda, and Subaru, among others. We focus on providing high-quality reconditioned cars that meet the diverse needs of our customers. Each vehicle comes with authentic auction sheets, ensuring transparency and trust. By offering a wide range of models, Dream Agent Car Vision ensures that customers can find the perfect vehicle that suits their preferences and lifestyle.",
+          "Dream Agent Car Vision also offers a pre-order service for European Brand New cars, allowing customers to secure their preferred models before they arrive in Bangladesh. This service caters to enthusiasts and buyers looking for specific European brands such as BMW, Mercedes-Benz, Audi, Volkswagen, and Volvo."
+        ],
+        "list": [
+          "Toyota",
+          "Honda",
+          "Nissan",
+          "Suzuki",
+          "Mazda",
+          "Subaru",
+          "Mitsubishi",
+          "BMW",
+          "Mercedes-Benz",
+          "Audi",
+          "Volkswagen",
+          "Volvo"
+        ],
+        "list_label": "Brands we deal with"
+      },
+      "cta": {
+        "title": "So why late? Be a family member of Dream Agent Car Vision",
+        "description": "Join thousands of satisfied customers who trust us for their vehicle needs. Experience transparency, quality, and exceptional service.",
+        "button_label": "Browse Our Cars",
+        "button_href": "/cars"
+      }
+    },
+    "status": true
+  },
+  {
+    "id": 37,
+    "slug": "contact",
+    "type": "Page",
+    "favicon_id": null,
+    "page_name_en": "Contact",
+    "page_name_bn": "যোগাযোগ",
+    "head": {
+      "title": "Contact",
+      "meta_description": "Get in touch with Dream Agent Car Vision — office address, business hours, and contact form."
+    },
+    "body": [
+      {
+        "_id": "section-contact-hero",
+        "title": "Hero",
+        "data": [
+          {
+            "_id": "contact-hero-title",
+            "type": "title",
+            "value": "Contact Us",
+            "settings": [],
+            "_headless": {
+              "text": "Contact Us",
+              "fontSize": "large",
+              "primaryColor": "#ffffff",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "contact-hero-description",
+            "type": "description",
+            "value": "Reach Dream Agent Car Vision for inventory inquiries, test drives, and dealership support.",
+            "settings": [],
+            "_headless": {
+              "text": "Reach Dream Agent Car Vision for inventory inquiries, test drives, and dealership support.",
+              "fontSize": "medium",
+              "primaryColor": "#cbd5e1",
+              "textAlign": "left",
+              "fontWeight": "normal"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-contact-help",
+        "title": "What can we help you with?",
+        "data": [
+          {
+            "_id": "contact-help-title",
+            "type": "title",
+            "value": "What can we help you with?",
+            "settings": [],
+            "_headless": {
+              "text": "What can we help you with?",
+              "fontSize": "large",
+              "primaryColor": "#0f172a",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "contact-help-copy",
+            "type": "description",
+            "value": "Send us a message and our team will get back to you during business hours.",
+            "settings": [],
+            "_headless": {
+              "text": "Send us a message and our team will get back to you during business hours.",
+              "fontSize": "medium",
+              "primaryColor": "#64748b",
+              "textAlign": "left",
+              "fontWeight": "normal"
+            }
+          },
+          {
+            "_id": "contact-help-form",
+            "type": "form",
+            "value": "",
+            "settings": [],
+            "_headless": true,
+            "data": {
+              "formId": 32,
+              "title": "Website Contact Form",
+              "description": "Contact Dream Agent Car Vision from the website contact page.",
+              "elements": [
+                {
+                  "updated_on": "contact-first-name",
+                  "type": "input",
+                  "element_type": "input",
+                  "input_type": "text",
+                  "label": "First Name",
+                  "placeholder": "First name",
+                  "required": true,
+                  "width": "half",
+                  "name": "firstName"
+                },
+                {
+                  "updated_on": "contact-last-name",
+                  "type": "input",
+                  "element_type": "input",
+                  "input_type": "text",
+                  "label": "Last Name",
+                  "placeholder": "Last name",
+                  "required": true,
+                  "width": "half",
+                  "name": "lastName"
+                },
+                {
+                  "updated_on": "contact-phone",
+                  "type": "input",
+                  "element_type": "input",
+                  "input_type": "tel",
+                  "label": "Phone Number",
+                  "placeholder": "Your phone number",
+                  "required": true,
+                  "width": "half",
+                  "name": "phone"
+                },
+                {
+                  "updated_on": "contact-email",
+                  "type": "input",
+                  "element_type": "input",
+                  "input_type": "email",
+                  "label": "Email Address",
+                  "placeholder": "you@example.com",
+                  "required": true,
+                  "width": "half",
+                  "name": "email"
+                },
+                {
+                  "updated_on": "contact-message",
+                  "type": "textarea",
+                  "element_type": "textarea",
+                  "label": "Message",
+                  "placeholder": "Tell us about your inquiry...",
+                  "required": true,
+                  "width": "full",
+                  "name": "message"
+                },
+                {
+                  "updated_on": "contact-submit",
+                  "type": "button",
+                  "element_type": "button",
+                  "input_type": "submit",
+                  "label": "CONTACT US",
+                  "placeholder": "CONTACT US",
+                  "required": false,
+                  "width": "full",
+                  "name": "submit"
+                }
+              ],
+              "attributes": {
+                "component_id": "website_contact_form",
+                "component_class": "contact-form",
+                "method": "POST",
+                "enctype": "application/json",
+                "layout": "contact-grid",
+                "submit_text": "CONTACT US",
+                "action_url": "/api/form-submission?form_id=32"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-contact-office",
+        "title": "Office Locations",
+        "data": [
+          {
+            "_id": "contact-office-title",
+            "type": "title",
+            "value": "Office Locations",
+            "settings": [],
+            "_headless": {
+              "text": "Office Locations",
+              "fontSize": "large",
+              "primaryColor": "#0f172a",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "contact-office-name",
+            "type": "title",
+            "value": "Office Address",
+            "settings": [],
+            "_headless": {
+              "text": "Office Address",
+              "fontSize": "medium",
+              "primaryColor": "#0f172a",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "contact-office-details",
+            "type": "description",
+            "value": "37, Purana Paltan Line, Dhaka 1205, Bangladesh.\n01714211956\ncar_vision71@yahoo.com",
+            "settings": [],
+            "_headless": {
+              "text": "37, Purana Paltan Line, Dhaka 1205, Bangladesh.\n01714211956\ncar_vision71@yahoo.com",
+              "fontSize": "medium",
+              "primaryColor": "#64748b",
+              "textAlign": "left",
+              "fontWeight": "normal"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-contact-hours",
+        "title": "Business Hours",
+        "data": [
+          {
+            "_id": "contact-hours-title",
+            "type": "title",
+            "value": "Business Hours",
+            "settings": [],
+            "_headless": {
+              "text": "Business Hours",
+              "fontSize": "large",
+              "primaryColor": "#0f172a",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "contact-hours-list",
+            "type": "description",
+            "value": "Friday — Closed\nSaturday — 9 AM–7 PM\nSunday — 9 AM–7 PM\nMonday — 9 AM–7 PM\nTuesday — 9 AM–7 PM\nWednesday — 9 AM–7 PM\nThursday — 9 AM–7 PM",
+            "settings": [],
+            "_headless": {
+              "text": "Friday — Closed\nSaturday — 9 AM–7 PM\nSunday — 9 AM–7 PM\nMonday — 9 AM–7 PM\nTuesday — 9 AM–7 PM\nWednesday — 9 AM–7 PM\nThursday — 9 AM–7 PM",
+              "fontSize": "medium",
+              "primaryColor": "#64748b",
+              "textAlign": "left",
+              "fontWeight": "normal"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-contact-cta",
+        "title": "Contact CTA",
+        "data": [
+          {
+            "_id": "contact-cta-card",
+            "type": "card",
+            "id": 30,
+            "value": "",
+            "settings": [],
+            "_headless": {
+              "id": 30,
+              "title_en": "Contact CTA",
+              "description_en": "<p>Our team is ready to help with inventory inquiries, test drives, financing options, and dealership support. Reach out anytime during business hours.</p>",
+              "link_url": "/contact",
+              "additional": {
+                "section": "contact_cta",
+                "cta_label": "Contact Us",
+                "image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80",
+                "phone_prefix": "Call @"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "additional": {
+      "hero": {
+        "title": "Contact Us",
+        "subtitle": "Reach Dream Agent Car Vision for inventory inquiries, test drives, and dealership support.",
+        "image": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=1920&q=80"
+      },
+      "help_title": "What can we help you with?",
+      "help_description": "Send us a message and our team will get back to you during business hours.",
+      "form_builder_id": 32,
+      "office_title": "Office Locations",
+      "office": {
+        "name": "Office Address",
+        "address": "37, Purana Paltan Line, Dhaka 1205, Bangladesh.",
+        "phone": "01714211956",
+        "email": "car_vision71@yahoo.com"
+      },
+      "hours_title": "Business Hours",
+      "businessHours": [
+        {
+          "day": "Friday",
+          "hours": "Closed"
+        },
+        {
+          "day": "Saturday",
+          "hours": "9 AM–7 PM"
+        },
+        {
+          "day": "Sunday",
+          "hours": "9 AM–7 PM"
+        },
+        {
+          "day": "Monday",
+          "hours": "9 AM–7 PM"
+        },
+        {
+          "day": "Tuesday",
+          "hours": "9 AM–7 PM"
+        },
+        {
+          "day": "Wednesday",
+          "hours": "9 AM–7 PM"
+        },
+        {
+          "day": "Thursday",
+          "hours": "9 AM–7 PM"
+        }
+      ],
+      "cta": {
+        "phone_prefix": "Call @",
+        "description": "Our team is ready to help with inventory inquiries, test drives, financing options, and dealership support. Reach out anytime during business hours.",
+        "button_label": "Contact Us",
+        "button_href": "/contact",
+        "image": "https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=800&q=80"
+      }
+    },
+    "status": true
+  },
+  {
+    "id": 38,
+    "slug": "career",
+    "type": "Page",
+    "favicon_id": null,
+    "page_name_en": "Career",
+    "page_name_bn": "ক্যারিয়ার",
+    "head": {
+      "title": "Career",
+      "meta_description": "Join the Dream Agent Car Vision team. Explore opportunities in automotive sales and dealership management."
+    },
+    "body": [
+      {
+        "_id": "section-career-intro",
+        "title": "Career Intro",
+        "data": [
+          {
+            "_id": "career-title",
+            "type": "title",
+            "value": "We hire brilliant minds and we help them thrive.",
+            "settings": [],
+            "_headless": {
+              "text": "We hire brilliant minds and we help them thrive.",
+              "fontSize": "large",
+              "primaryColor": "#0f172a",
+              "textAlign": "left",
+              "fontWeight": "bold"
+            }
+          },
+          {
+            "_id": "career-description",
+            "type": "description",
+            "value": "Since its inception, we have been maintaining our legacy without compromising our fundamental values. We always stand up for the ambitious ones who dream of accomplishing positive changes. We enable you to bring your creative ideas into play. We work together to achieve greatness.",
+            "settings": [],
+            "_headless": {
+              "text": "Since its inception, we have been maintaining our legacy without compromising our fundamental values. We always stand up for the ambitious ones who dream of accomplishing positive changes. We enable you to bring your creative ideas into play. We work together to achieve greatness.",
+              "fontSize": "medium",
+              "primaryColor": "#64748b",
+              "textAlign": "left",
+              "fontWeight": "normal"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-career-apply",
+        "title": "Apply",
+        "data": [
+          {
+            "_id": "career-email",
+            "type": "description",
+            "value": "E-mail: car_vision71@yahoo.com",
+            "settings": [],
+            "_headless": {
+              "text": "E-mail: car_vision71@yahoo.com",
+              "fontSize": "medium",
+              "primaryColor": "#0f172a",
+              "textAlign": "left",
+              "fontWeight": "normal"
+            }
+          },
+          {
+            "_id": "career-apply-cta",
+            "type": "titledescription",
+            "value": "",
+            "settings": [],
+            "_headless": {
+              "title": "Apply for Executive",
+              "description": "Executive Application — Dream Agent Car Vision",
+              "fontSize": "medium",
+              "primaryColor": "#db2d2e",
+              "textAlign": "left",
+              "fontWeight": "bold",
+              "linkType": "independent",
+              "link": "mailto:car_vision71@yahoo.com?subject=Executive%20Application%20%E2%80%94%20Dream%20Agent%20Car%20Vision"
+            }
+          }
+        ]
+      },
+      {
+        "_id": "section-career-gallery",
+        "title": "Career Gallery",
+        "data": [
+          {
+            "_id": "career-image-team",
+            "type": "titledescription",
+            "value": "",
+            "settings": [],
+            "_headless": {
+              "title": "Team",
+              "description": "Collaborative team culture at Dream Agent Car Vision.",
+              "fontSize": "medium",
+              "primaryColor": "#0f172a",
+              "textAlign": "left",
+              "fontWeight": "bold",
+              "image": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80"
+            }
+          },
+          {
+            "_id": "career-image-desk",
+            "type": "titledescription",
+            "value": "",
+            "settings": [],
+            "_headless": {
+              "title": "Workspace",
+              "description": "A professional workplace for ambitious people.",
+              "fontSize": "medium",
+              "primaryColor": "#0f172a",
+              "textAlign": "left",
+              "fontWeight": "bold",
+              "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
+            }
+          }
+        ]
+      }
+    ],
+    "additional": {
+      "hero": {
+        "title": "Career",
+        "subtitle": "Join Dream Agent Car Vision and grow with a trusted automotive team in Dhaka."
+      },
+      "title": "We hire brilliant minds and we help them thrive.",
+      "description": "Since its inception, we have been maintaining our legacy without compromising our fundamental values. We always stand up for the ambitious ones who dream of accomplishing positive changes. We enable you to bring your creative ideas into play. We work together to achieve greatness.",
+      "email": "car_vision71@yahoo.com",
+      "apply_label": "Apply for Executive",
+      "apply_subject": "Executive Application — Dream Agent Car Vision",
+      "accent_color": "primary",
+      "images": {
+        "team": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
+        "desk": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=800&q=80"
+      }
+    },
+    "status": true
+  }
+]

@@ -1,0 +1,131 @@
+[
+    {
+        "id": 2,
+        "menu": "Components",
+        "title": "Components",
+        "icon": "/icons/headless/component.svg",
+        "submenu": [
+            {
+                "id": 4,
+                "icon": "/icons/headless/menuitems.svg",
+                "link": "/menuitems",
+                "title": "Menu Items"
+            },
+            {
+                "id": 6,
+                "icon": "/icons/headless/menus.svg",
+                "link": "/menus",
+                "title": "Menus"
+            },
+            {
+                "id": 3,
+                "icon": "/icons/headless/media.svg",
+                "link": "/gallery",
+                "title": "Media Library"
+            },
+            {
+                "id": 9,
+                "icon": "/icons/headless/cards.svg",
+                "link": "/cards",
+                "title": "Cards"
+            },
+            {
+                "id": 8,
+                "icon": "/icons/headless/slider.svg",
+                "link": "/sliders",
+                "title": "Sliders"
+            },
+            {
+                "id": 10,
+                "icon": "/icons/headless/table.svg",
+                "link": "/tables",
+                "title": "Tables"
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "menu": "Creator Studio",
+        "title": "Creator Studio",
+        "icon": "/icons/headless/creatorstudio.svg",
+        "submenu": [
+            {
+                "id": 7,
+                "icon": "/icons/headless/navbar.svg",
+                "link": "/navbars",
+                "title": "Navbars"
+            },
+            {
+                "id": 12,
+                "icon": "/icons/headless/forms.svg",
+                "link": "/pages",
+                "title": "Pages"
+            },
+            {
+                "id": 14,
+                "icon": "/icons/headless/footer.svg",
+                "link": "/footers",
+                "title": "Footer"
+            }
+        ]
+    },
+    {
+        "id": 25,
+        "menu": "Tools",
+        "title": "Tools",
+        "icon": "/icons/headless/tools.svg",
+        "link": "tools",
+        "submenu": [
+            {
+                "id": 27,
+                "icon": "/icons/headless/exam.svg",
+                "link": "/formbuilder",
+                "title": "Form Builder"
+            },
+            {
+                "id": 28,
+                "icon": "/icons/headless/feedback.svg",
+                "link": "/formbuilder/form-responses",
+                "title": "Responses"
+            },
+            {
+                "id": 16,
+                "icon": "/icons/headless/forms.svg",
+                "link": "/products/types",
+                "title": "Product Builder"
+            },
+            {
+                "id": 17,
+                "icon": "/icons/headless/products.svg",
+                "link": "/products/upload",
+                "title": "Uploads"
+            }
+        ]
+    },
+    {
+        "id": 29,
+        "menu": "Administration",
+        "title": "Administration",
+        "icon": "/icons/headless/cms.svg",
+        "submenu": [
+            {
+                "id": 32,
+                "icon": "/icons/headless/user-settings.svg",
+                "link": "/admin/users",
+                "title": "Users"
+            },
+            {
+                "id": 30,
+                "icon": "/icons/headless/cms.svg",
+                "link": "/admin/organizations",
+                "title": "Organizations"
+            },
+            {
+                "id": 31,
+                "icon": "/icons/headless/user-settings.svg",
+                "link": "/admin/roles",
+                "title": "Manage Roles"
+            }
+        ]
+    }
+]
