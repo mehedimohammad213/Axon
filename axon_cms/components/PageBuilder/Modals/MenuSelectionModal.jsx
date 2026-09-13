@@ -29,18 +29,49 @@ const MenuSelectionModal = ({ onSelectMenu, selectedMenu }) => {
   const [error, setError] = useState(null);
   const [isFormVisible, setIsFormVisible] = useState(false);
 
-  useEffect(() => {
-    fetchMenus();
-    fetchMenuItems();
-  }, []);
+  const parseMenuItemIds = (menuItemIds) => {
+    if (Array.isArray(menuItemIds)) return menuItemIds;
+    if (typeof menuItemIds === "string") {
+      try {
+        const parsed = JSON.parse(menuItemIds);
+        return Array.isArray(parsed) ? parsed : [];
+      } catch {
+        return [];
+      }
+    }
+    return [];
+  };
 
-  const fetchMenus = async () => {
+  const hydrateMenusWithItems = (menusList, itemsList) => {
+    const itemsById = new Map(
+      (itemsList || []).map((item) => [String(item.id), item])
+    );
+
+    return (menusList || []).map((menu) => {
+      if (Array.isArray(menu.menu_items) && menu.menu_items.length) {
+        return menu;
+      }
+
+      const ids = parseMenuItemIds(menu.menu_item_ids);
+      return {
+        ...menu,
+        menu_item_ids: ids,
+        menu_items: ids
+          .map((id) => itemsById.get(String(id)))
+          .filter(Boolean),
+      };
+    });
+  };
+
+  const fetchMenus = async (itemsOverride) => {
     try {
       setLoading(true);
       const response = await instance.get("/menus");
-      setMenus(response.data);
+      const items = itemsOverride ?? menuItems;
+      const hydrated = hydrateMenusWithItems(response.data || [], items);
+      setMenus(hydrated);
       setError(null);
-      return response.data;
+      return hydrated;
     } catch (err) {
       setError("Failed to fetch menus");
       message.error("Failed to fetch menus");
@@ -53,15 +84,27 @@ const MenuSelectionModal = ({ onSelectMenu, selectedMenu }) => {
   const fetchMenuItems = async () => {
     try {
       const response = await instance.get("/menuitems");
-      setMenuItems(response.data || []);
+      const items = response.data || [];
+      setMenuItems(items);
+      return items;
     } catch (err) {
       message.error("Failed to fetch menu items");
+      return [];
     }
   };
 
+  useEffect(() => {
+    const load = async () => {
+      const items = await fetchMenuItems();
+      await fetchMenus(items);
+    };
+    load();
+  }, []);
+
   const handleMenuCreated = async (createdMenu) => {
     setIsFormVisible(false);
-    const freshMenus = await fetchMenus();
+    const items = await fetchMenuItems();
+    const freshMenus = await fetchMenus(items);
     const fullMenu =
       freshMenus.find((menu) => menu.id === createdMenu.id) || createdMenu;
     onSelectMenu(fullMenu);
@@ -69,7 +112,8 @@ const MenuSelectionModal = ({ onSelectMenu, selectedMenu }) => {
   };
 
   const handleReload = async () => {
-    await fetchMenus();
+    const items = await fetchMenuItems();
+    await fetchMenus(items);
     message.success("Menus refreshed");
   };
 

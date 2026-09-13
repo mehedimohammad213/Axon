@@ -45,6 +45,15 @@ export const componentOptions = [
     tags: ["navigation", "menu", "layout"],
   },
   {
+    type: "menuitem",
+    name: "Menu Item",
+    icon: "/icons/headless/menuitems.svg",
+    premium: false,
+    category: "Layout",
+    description: "Add one or more menu item links",
+    tags: ["navigation", "menu", "link", "layout"],
+  },
+  {
     type: "navbar",
     name: "Navbar",
     icon: "/icons/headless/navbar.svg",

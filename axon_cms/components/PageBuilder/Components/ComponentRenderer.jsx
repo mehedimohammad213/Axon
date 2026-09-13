@@ -5,6 +5,7 @@ import TextComponent from "./TextComponent";
 import ParagraphComponent from "./ParagraphComponent";
 import MediaComponent from "./MediaComponent";
 import MenuComponent from "./MenuComponent";
+import MenuItemComponent from "./MenuItemComponent";
 import NavbarComponent from "./NavbarComponent";
 import SliderComponent from "./SliderComponent/SliderComponent";
 import CardComponent from "./CardComponent";
@@ -33,6 +34,7 @@ const COMPONENT_MAP = {
   titledescription: React.memo(TitleDescriptionComponent),
   media: React.memo(MediaComponent),
   menu: React.memo(MenuComponent),
+  menuitem: React.memo(MenuItemComponent),
   navbar: React.memo(NavbarComponent),
   slider: React.memo(SliderComponent),
   card: React.memo(CardComponent),
