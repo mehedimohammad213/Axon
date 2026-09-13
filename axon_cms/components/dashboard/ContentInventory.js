@@ -18,7 +18,7 @@ export default function ContentInventory({ data }) {
     { name: "Sliders", count: data.sliders.length },
     { name: "Footers", count: data.footers.length },
     { name: "Cards", count: data.cards.length },
-    { name: "Menus", count: data.menus.length },
+    { name: "Menu Items", count: data.menuitems?.length || 0 },
     { name: "Forms", count: data.forms.length },
   ];
 

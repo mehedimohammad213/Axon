@@ -166,8 +166,6 @@ async function loadMenuHeadless(trx, menu) {
   const itemMap = Object.fromEntries(items.map((item) => [item.id, item]));
 
   return {
-    id: menu.id,
-    name: menu.name,
     menu_item_ids: menuItemIds,
     menu_items: menuItemIds
       .map((id) => itemMap[id])
@@ -182,7 +180,7 @@ async function loadMenuHeadless(trx, menu) {
   };
 }
 
-function buildSiteSettings(followUsMenuId, headerMenuId) {
+function buildSiteSettings(followUsMenuItemIds, headerMenuItemIds) {
   return {
     name: 'Dream Agent Car Vision',
     logo: '/logo.svg',
@@ -225,7 +223,7 @@ function buildSiteSettings(followUsMenuId, headerMenuId) {
     },
     follow_us: {
       label: 'Follow Us',
-      menu_id: followUsMenuId,
+      menu_item_ids: followUsMenuItemIds,
     },
     messenger: 'https://m.me/DreamAgentCarVision',
   };
@@ -293,7 +291,7 @@ function buildMainSiteFooterPage(logo, quickMenuHeadless, helpMenuHeadless, plat
         {
           _id: 'footer-quick-menu',
           type: 'menu',
-          id: quickMenuHeadless.id,
+          menu_item_ids: quickMenuHeadless.menu_item_ids,
           value: '',
           menuMode: 'vertical',
           menuTheme: 'dark',
@@ -322,7 +320,7 @@ function buildMainSiteFooterPage(logo, quickMenuHeadless, helpMenuHeadless, plat
         {
           _id: 'footer-help-menu',
           type: 'menu',
-          id: helpMenuHeadless.id,
+          menu_item_ids: helpMenuHeadless.menu_item_ids,
           value: '',
           menuMode: 'vertical',
           menuTheme: 'dark',
@@ -351,7 +349,7 @@ function buildMainSiteFooterPage(logo, quickMenuHeadless, helpMenuHeadless, plat
         {
           _id: 'footer-platform-menu',
           type: 'menu',
-          id: platformMenuHeadless.id,
+          menu_item_ids: platformMenuHeadless.menu_item_ids,
           value: '',
           menuMode: 'vertical',
           menuTheme: 'dark',
@@ -467,7 +465,7 @@ function buildMainSiteFooterPage(logo, quickMenuHeadless, helpMenuHeadless, plat
       slider: [],
       card: [],
       media: [logo.id],
-      menu: [quickMenu.id, helpMenu.id, platformMenu.id],
+      menu: [],
     },
     additional: [
       {
@@ -667,7 +665,7 @@ function buildHomePage(ctx) {
         {
           _id: 'home-follow-us-menu',
           type: 'menu',
-          id: followUsMenuHeadless.id,
+          menu_item_ids: followUsMenuHeadless.menu_item_ids,
           value: '',
           menuMode: 'vertical',
           menuTheme: 'light',
@@ -739,12 +737,12 @@ function buildHomePage(ctx) {
       card: [contactCta.id],
       footer: [],
       media: bannerMedia.map((m) => m.id),
-      menu: [headerMenu.id, followUsMenu.id],
+      menu: [],
     },
     additional: {
       follow_us: {
         label: 'Follow Us',
-        menu_id: followUsMenu.id,
+        menu_item_ids: followUsMenu.menu_item_ids,
       },
       find_us: {
         eyebrow: 'Find Us',
@@ -1490,12 +1488,7 @@ async function seedCarVisionContent(knex, organization) {
       menuItemIds.push(item.id);
     }
 
-    const headerMenu = await upsertByKeys(
-      trx,
-      'menus',
-      { organization_id: orgId, name: 'Header Navigation' },
-      { menu_item_ids: JSON.stringify(menuItemIds) }
-    );
+    const headerMenu = { name: 'Header Navigation', menu_item_ids: menuItemIds };
 
     const inventoryFooterItem = await upsertByKeys(
       trx,
@@ -1527,12 +1520,7 @@ async function seedCarVisionContent(knex, organization) {
       menuItemIds[4],
     ];
 
-    const quickMenu = await upsertByKeys(
-      trx,
-      'menus',
-      { organization_id: orgId, name: 'Footer Quick Links' },
-      { menu_item_ids: JSON.stringify(quickIds) }
-    );
+    const quickMenu = { name: 'Footer Quick Links', menu_item_ids: quickIds };
 
     const contactUsItem = await upsertByKeys(
       trx,
@@ -1545,12 +1533,7 @@ async function seedCarVisionContent(knex, organization) {
       }
     );
 
-    const helpMenu = await upsertByKeys(
-      trx,
-      'menus',
-      { organization_id: orgId, name: 'Footer Help Links' },
-      { menu_item_ids: JSON.stringify([contactUsItem.id, aboutFooterItem.id]) }
-    );
+    const helpMenu = { name: 'Footer Help Links', menu_item_ids: [contactUsItem.id, aboutFooterItem.id] };
 
     const dealerLoginItem = await upsertByKeys(
       trx,
@@ -1563,12 +1546,7 @@ async function seedCarVisionContent(knex, organization) {
       }
     );
 
-    const platformMenu = await upsertByKeys(
-      trx,
-      'menus',
-      { organization_id: orgId, name: 'Footer Platform Links' },
-      { menu_item_ids: JSON.stringify([dealerLoginItem.id]) }
-    );
+    const platformMenu = { name: 'Footer Platform Links', menu_item_ids: [dealerLoginItem.id] };
 
     const facebookSocialItem = await upsertByKeys(
       trx,
@@ -1603,18 +1581,14 @@ async function seedCarVisionContent(knex, organization) {
       }
     );
 
-    const followUsMenu = await upsertByKeys(
-      trx,
-      'menus',
-      { organization_id: orgId, name: 'Follow Us' },
-      {
-        menu_item_ids: JSON.stringify([
-          facebookSocialItem.id,
-          youtubeSocialItem.id,
-          linkedinSocialItem.id,
-        ]),
-      }
-    );
+    const followUsMenu = {
+      name: 'Follow Us',
+      menu_item_ids: [
+        facebookSocialItem.id,
+        youtubeSocialItem.id,
+        linkedinSocialItem.id,
+      ],
+    };
 
     await upsertByKeys(
       trx,
@@ -1622,7 +1596,7 @@ async function seedCarVisionContent(knex, organization) {
       { organization_id: orgId, title_en: 'Main Navbar' },
       {
         title_bn: 'প্রধান নেভবার',
-        menu_id: headerMenu.id,
+        menu_item_ids: JSON.stringify(headerMenu.menu_item_ids),
         logo_id: logo.id,
       }
     );
@@ -1645,12 +1619,12 @@ async function seedCarVisionContent(knex, organization) {
         address2_description_bn: 'ফোন: ০১৭১৪২১১৯৫৬\nইমেইল: car_vision71@yahoo.com',
         address1_status: 1,
         address2_status: 1,
-        column2_menu_id: quickMenu.id,
+        column2_menu_item_ids: JSON.stringify(quickMenu.menu_item_ids),
         column2_status: 1,
-        column3_menu_id: helpMenu.id,
+        column3_menu_item_ids: JSON.stringify(helpMenu.menu_item_ids),
         column3_status: 1,
         column3_logos: JSON.stringify([]),
-        column4_menu_id: platformMenu.id,
+        column4_menu_item_ids: JSON.stringify(platformMenu.menu_item_ids),
         column4_title_en: 'Get In Touch',
         column4_title_bn: 'যোগাযোগ করুন',
         column4_text_en: 'Dream Agent Car Vision — car sales In Dhaka. Get in touch.',
@@ -1821,7 +1795,7 @@ async function seedCarVisionContent(knex, organization) {
       }
     );
 
-    const siteSettings = buildSiteSettings(followUsMenu.id, headerMenu.id);
+    const siteSettings = buildSiteSettings(followUsMenu.menu_item_ids, headerMenu.menu_item_ids);
 
     await upsertPage(trx, orgId, 'site-settings', {
       type: 'settings',
@@ -1838,7 +1812,7 @@ async function seedCarVisionContent(knex, organization) {
         card: [],
         footer: [],
         media: [logo.id],
-        menu: [followUsMenu.id, headerMenu.id],
+        menu: [],
       },
       additional: siteSettings,
       status: true,
@@ -2016,17 +1990,11 @@ async function exportFixtures() {
     parent_id: row.parent_id,
   }));
 
-  const menus = mock.tables.menus.map((row) => ({
-    id: row.id,
-    name: row.name,
-    menu_item_ids: parseJson(row.menu_item_ids, []),
-  }));
-
   const navbars = mock.tables.navbars.map((row) => ({
     id: row.id,
     title_en: row.title_en,
     title_bn: row.title_bn,
-    menu_id: row.menu_id,
+    menu_item_ids: parseJson(row.menu_item_ids, []),
     logo_id: row.logo_id,
   }));
 
@@ -2046,9 +2014,9 @@ async function exportFixtures() {
     address2_description_bn: row.address2_description_bn,
     address1_status: row.address1_status,
     address2_status: row.address2_status,
-    column2_menu_id: row.column2_menu_id,
+    column2_menu_item_ids: parseJson(row.column2_menu_item_ids, []),
     column2_status: row.column2_status,
-    column3_menu_id: row.column3_menu_id,
+    column3_menu_item_ids: parseJson(row.column3_menu_item_ids, []),
     column3_logos: parseJson(row.column3_logos, []),
     column3_status: row.column3_status,
     column4_title_en: row.column4_title_en,
@@ -2056,11 +2024,11 @@ async function exportFixtures() {
     column4_image: row.column4_image,
     column4_text_en: row.column4_text_en,
     column4_text_bn: row.column4_text_bn,
-    column4_menu_id: row.column4_menu_id,
+    column4_menu_item_ids: parseJson(row.column4_menu_item_ids, []),
     column4_description_en: row.column4_description_en,
     column4_description_bn: row.column4_description_bn,
     column4_status: row.column4_status,
-    bottom_menu_id: row.bottom_menu_id,
+    bottom_menu_item_ids: parseJson(row.bottom_menu_item_ids, []),
   }));
 
   const cards = mock.tables.cards.map((row) => ({
@@ -2125,7 +2093,6 @@ async function exportFixtures() {
 
   writeFixture(outDir, 'media', media);
   writeFixture(outDir, 'menuitems', menuitems);
-  writeFixture(outDir, 'menus', menus);
   writeFixture(outDir, 'navbars', navbars);
   writeFixture(outDir, 'footers', footers);
   writeFixture(outDir, 'cards', cards);

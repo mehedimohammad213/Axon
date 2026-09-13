@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from "react";
 import {
   Input,
-  Select,
   Button,
   Popconfirm,
   message,
@@ -26,7 +25,7 @@ import {
 } from "@ant-design/icons";
 import instance from "../../axios";
 import MediaSelectionModal from "../PageBuilder/Modals/MediaSelectionModal";
-import SortableMenuItemsPicker from "../Menus/SortableMenuItemsPicker";
+import SortableMenuItemsPicker from "../MenuItems/SortableMenuItemsPicker";
 import AddMenuItemForm from "../MenuItems/AddMenuItemForm";
 
 const PLACEHOLDER_LOGO = "/images/headless_logo.svg";
@@ -128,7 +127,6 @@ const InfoRow = ({ label, children }) => (
 
 const NavbarRow = ({
   navbar,
-  menus,
   media,
   setNavbars,
   editingNavbarId,
@@ -144,9 +142,8 @@ const NavbarRow = ({
     navbar.title_bn
   );
   const [editedLogoId, setEditedLogoId] = useState(navbar?.logo?.id || null);
-  const [editedMenuId, setEditedMenuId] = useState(navbar?.menu?.id || null);
   const [editedMenuItemIds, setEditedMenuItemIds] = useState(
-    navbar.menu?.menu_items?.map((item) => item.id) || []
+    navbar.menu_items?.map((item) => item.id) || navbar.menu_item_ids || []
   );
   const [menuItems, setMenuItems] = useState([]);
   const [pages, setPages] = useState([]);
@@ -156,29 +153,16 @@ const NavbarRow = ({
 
   const isEditing = editingNavbarId === navbar.id;
   const isExpanded = expandedNavbarId === navbar.id;
-  const menuItemsCount = navbar.menu?.menu_items?.length || 0;
+  const menuItemsCount = navbar.menu_items?.length || 0;
   const navbarLogo = resolveNavbarLogo(navbar, media);
-
-  const findMenuById = (menuId, menusList = menus) =>
-    menusList.find((menu) => String(menu.id) === String(menuId));
-
-  const resolveMenuForUpdate = async (menuId) => {
-    let menu = findMenuById(menuId) || navbar.menu;
-    if (menu?.name) return menu;
-
-    const response = await instance("/menus");
-    const freshMenus = Array.isArray(response.data) ? response.data : [];
-    return freshMenus.find((item) => String(item.id) === String(menuId));
-  };
 
   useEffect(() => {
     if (isEditing) {
       setEditedNavbarTitleEn(navbar.title_en);
       setEditedNavbarTitleBn(navbar.title_bn);
       setEditedLogoId(navbar?.logo?.id || null);
-      setEditedMenuId(navbar?.menu?.id || null);
       setEditedMenuItemIds(
-        navbar.menu?.menu_items?.map((item) => item.id) || []
+        navbar.menu_items?.map((item) => item.id) || navbar.menu_item_ids || []
       );
     }
   }, [isEditing, navbar]);
@@ -206,69 +190,22 @@ const NavbarRow = ({
     }
   }, [isEditing, navbar.id]);
 
-  const applyMenuSelection = (menuId) => {
-    setEditedMenuId(menuId ?? null);
-    if (!menuId) {
-      return;
-    }
-    const selectedMenu = findMenuById(menuId);
-    if (selectedMenu?.menu_items?.length) {
-      setEditedMenuItemIds(selectedMenu.menu_items.map((item) => item.id));
-    } else if (selectedMenu?.menu_item_ids) {
-      setEditedMenuItemIds(selectedMenu.menu_item_ids);
-    } else {
-      setEditedMenuItemIds([]);
-    }
-  };
-
-  const ensureMenuId = async () => {
-    if (editedMenuId) {
-      const menu = await resolveMenuForUpdate(editedMenuId);
-      if (!menu?.name) {
-        throw new Error("MENU_NOT_FOUND");
-      }
-      await instance.put(`/menus/${editedMenuId}`, {
-        name: menu.name,
-        menu_item_ids: editedMenuItemIds,
-      });
-      return editedMenuId;
-    }
-
-    if (!editedMenuItemIds.length) {
-      return null;
-    }
-
-    const menuName =
-      (editedNavbarTitleEn && `${editedNavbarTitleEn} Menu`) || "Navbar Menu";
-    const response = await instance.post("/menus", {
-      name: menuName,
-      menu_item_ids: editedMenuItemIds,
-    });
-    if (response.status !== 201 || !response.data?.id) {
-      throw new Error("MENU_CREATE_FAILED");
-    }
-    return response.data.id;
-  };
-
   const handleUpdate = async () => {
     if (!editedNavbarTitleEn || !editedLogoId) {
       message.error("Please fill in title and logo");
       return;
     }
-    if (!editedMenuId && !editedMenuItemIds.length) {
-      message.error(
-        "Select at least one menu item (or assign an existing menu)"
-      );
+    if (!editedMenuItemIds.length) {
+      message.error("Select at least one menu item");
       return;
     }
 
     try {
-      const menuId = await ensureMenuId();
       const updatedNavbar = {
         title_en: editedNavbarTitleEn,
         title_bn: editedNavbarTitleBn,
         logo_id: editedLogoId,
-        menu_id: menuId,
+        menu_item_ids: editedMenuItemIds,
       };
       const response = await instance.put(
         `/navbars/${navbar.id}`,
@@ -283,21 +220,12 @@ const NavbarRow = ({
         );
         setEditingNavbarId(null);
         setSelectedLogoMedia(null);
-        setEditedMenuId(menuId);
         fetchNavbars();
       } else {
         message.error("Error updating navbar");
       }
-    } catch (error) {
-      if (error?.message === "MENU_NOT_FOUND") {
-        message.error(
-          "Selected menu could not be found. Please re-select the menu."
-        );
-      } else if (error?.message === "MENU_CREATE_FAILED") {
-        message.error("Could not create menu for selected items");
-      } else {
-        message.error("Error updating navbar");
-      }
+    } catch {
+      message.error("Error updating navbar");
     }
   };
 
@@ -380,12 +308,6 @@ const NavbarRow = ({
             <span className="rounded-md bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-500">
               #{navbar.id}
             </span>
-            {navbar?.menu?.name && (
-              <span className="inline-flex items-center gap-1 rounded-md bg-purple-50 px-2 py-0.5 text-xs font-medium text-purple-700">
-                <MenuOutlined className="text-[10px]" />
-                {navbar.menu.name}
-              </span>
-            )}
             {menuItemsCount > 0 && (
               <span className="rounded-md bg-brand-light px-2 py-0.5 text-xs font-medium text-brand-dark">
                 {menuItemsCount} item{menuItemsCount !== 1 ? "s" : ""}
@@ -508,29 +430,6 @@ const NavbarRow = ({
                     />
                   </div>
 
-                  <div>
-                    <label className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-gray-400">
-                      Assigned menu{" "}
-                      <span className="normal-case tracking-normal text-gray-300">
-                        (optional)
-                      </span>
-                    </label>
-                    <Select
-                      showSearch
-                      placeholder="Leave empty to auto-create from selected items"
-                      optionFilterProp="children"
-                      value={editedMenuId}
-                      onChange={applyMenuSelection}
-                      className="w-full max-w-md"
-                      allowClear
-                    >
-                      {menus?.map((menu) => (
-                        <Select.Option key={menu.id} value={menu.id}>
-                          {menu.name}
-                        </Select.Option>
-                      ))}
-                    </Select>
-                  </div>
                 </div>
               ) : (
                 <div className="space-y-5">
@@ -541,9 +440,6 @@ const NavbarRow = ({
                       </InfoRow>
                       <InfoRow label="Title (Bangla)">
                         {navbar.title_bn || "—"}
-                      </InfoRow>
-                      <InfoRow label="Assigned menu">
-                        {navbar?.menu?.name || "No menu assigned"}
                       </InfoRow>
                       <InfoRow label="Menu items">
                         {menuItemsCount > 0
@@ -573,7 +469,7 @@ const NavbarRow = ({
                         </h4>
                       </div>
                       <ul className="flex flex-wrap gap-2">
-                        {navbar.menu.menu_items.map((item) => (
+                        {(navbar.menu_items || []).map((item) => (
                           <li key={item.id}>
                             <Tag className="m-0 rounded-md border-gray-200 bg-gray-50 px-2.5 py-0.5 text-xs text-gray-700">
                               {item.title}

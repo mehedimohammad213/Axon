@@ -1,57 +1,25 @@
 // components/Navbars/AddNavbarForm.js
 
 import React, { useState, useEffect, useCallback } from "react";
-import { Row, Col, Input, Select, Button, message, Modal } from "antd";
+import { Row, Col, Input, Button, message, Modal } from "antd";
 import { PlusCircleOutlined, CloseCircleOutlined } from "@ant-design/icons";
 import instance from "../../axios";
 import MediaSelectionModal from "../PageBuilder/Modals/MediaSelectionModal";
-import SortableMenuItemsPicker from "../Menus/SortableMenuItemsPicker";
-import AddMenuForm from "../Menus/AddMenuForm";
+import SortableMenuItemsPicker from "../MenuItems/SortableMenuItemsPicker";
 import AddMenuItemForm from "../MenuItems/AddMenuItemForm";
 import Image from "next/image";
 
-const AddNavbarForm = ({
-  menus,
-  fetchMenus,
-  media,
-  onCancel,
-  fetchNavbars,
-  onNavbarCreated,
-}) => {
+const AddNavbarForm = ({ media, onCancel, fetchNavbars, onNavbarCreated }) => {
   const [newNavbarTitleEn, setNewNavbarTitleEn] = useState("");
   const [newNavbarTitleBn, setNewNavbarTitleBn] = useState("");
   const [newLogoId, setNewLogoId] = useState(null);
-  const [newMenuId, setNewMenuId] = useState(null);
   const [newMenuItemIds, setNewMenuItemIds] = useState([]);
   const [menuItems, setMenuItems] = useState([]);
   const [pages, setPages] = useState([]);
   const [mediaModalVisible, setMediaModalVisible] = useState(false);
   const [selectedMedia, setSelectedMedia] = useState(null);
-  const [isAddMenuOpen, setIsAddMenuOpen] = useState(false);
   const [isAddMenuItemOpen, setIsAddMenuItemOpen] = useState(false);
-  const [selectedMenuName, setSelectedMenuName] = useState("");
   const [saving, setSaving] = useState(false);
-
-  const findMenuById = useCallback(
-    (menuId, menusList = menus) =>
-      menusList.find((menu) => String(menu.id) === String(menuId)),
-    [menus]
-  );
-
-  const resolveMenuForUpdate = useCallback(
-    async (menuId) => {
-      let menu = findMenuById(menuId);
-      if (menu?.name) {
-        return menu;
-      }
-
-      const response = await instance("/menus");
-      const freshMenus = Array.isArray(response.data) ? response.data : [];
-      menu = freshMenus.find((item) => String(item.id) === String(menuId));
-      return menu;
-    },
-    [findMenuById]
-  );
 
   const fetchMenuItems = useCallback(async () => {
     try {
@@ -59,8 +27,8 @@ const AddNavbarForm = ({
       if (Array.isArray(response.data)) {
         setMenuItems(response.data);
       }
-    } catch (error) {
-      // silently fail — picker will show empty
+    } catch {
+      // picker will show empty
     }
   }, []);
 
@@ -70,36 +38,18 @@ const AddNavbarForm = ({
       if (Array.isArray(response.data)) {
         setPages(response.data);
       }
-    } catch (error) {
+    } catch {
       // silently fail
     }
   }, []);
 
   const appendCreatedMenuItems = (createdItems = []) => {
     const ids = createdItems.map((item) => item.id).filter(Boolean);
-    if (!ids.length) {
-      return;
-    }
+    if (!ids.length) return;
     setNewMenuItemIds((prev) => [
       ...prev,
       ...ids.filter((id) => !prev.includes(id)),
     ]);
-  };
-
-  const handleMenuCreated = async (createdMenu) => {
-    await fetchMenus?.();
-    const menuId = createdMenu?.id;
-    if (!menuId) {
-      return;
-    }
-    setNewMenuId(menuId);
-    setSelectedMenuName(createdMenu.name || "");
-    const itemIds =
-      createdMenu.menu_items?.map((item) => item.id) ||
-      createdMenu.menu_item_ids ||
-      [];
-    setNewMenuItemIds(itemIds);
-    setIsAddMenuOpen(false);
   };
 
   useEffect(() => {
@@ -107,33 +57,13 @@ const AddNavbarForm = ({
     fetchPages();
   }, [fetchMenuItems, fetchPages]);
 
-  const applyMenuSelection = (menuId) => {
-    setNewMenuId(menuId ?? null);
-    if (!menuId) {
-      setSelectedMenuName("");
-      return;
-    }
-    const selectedMenu = findMenuById(menuId);
-    setSelectedMenuName(selectedMenu?.name || "");
-    if (selectedMenu?.menu_items?.length) {
-      setNewMenuItemIds(selectedMenu.menu_items.map((item) => item.id));
-    } else if (selectedMenu?.menu_item_ids) {
-      setNewMenuItemIds(selectedMenu.menu_item_ids);
-    } else {
-      setNewMenuItemIds([]);
-    }
-  };
-
   const resetForm = () => {
     setNewNavbarTitleEn("");
     setNewNavbarTitleBn("");
     setNewLogoId(null);
-    setNewMenuId(null);
     setNewMenuItemIds([]);
-    setSelectedMenuName("");
     setSelectedMedia(null);
     setMediaModalVisible(false);
-    setIsAddMenuOpen(false);
     setIsAddMenuItemOpen(false);
   };
 
@@ -142,77 +72,35 @@ const AddNavbarForm = ({
     onCancel();
   };
 
-  const ensureMenuId = async () => {
-    if (newMenuId) {
-      const menu = await resolveMenuForUpdate(newMenuId);
-      const menuName = menu?.name || selectedMenuName;
-      if (!menuName) {
-        throw new Error("MENU_NOT_FOUND");
-      }
-      await instance.put(`/menus/${newMenuId}`, {
-        name: menuName,
-        menu_item_ids: newMenuItemIds,
-      });
-      return newMenuId;
-    }
-
-    if (!newMenuItemIds.length) {
-      return null;
-    }
-
-    const menuName =
-      (newNavbarTitleEn && `${newNavbarTitleEn} Menu`) || "Navbar Menu";
-    const response = await instance.post("/menus", {
-      name: menuName,
-      menu_item_ids: newMenuItemIds,
-    });
-    if (response.status !== 201 || !response.data?.id) {
-      throw new Error("MENU_CREATE_FAILED");
-    }
-    await fetchMenus?.();
-    return response.data.id;
-  };
-
   const handleAddNavbar = async () => {
     if (!newNavbarTitleEn || !newLogoId) {
       message.error("Please fill in title and logo");
       return;
     }
-    if (!newMenuId && !newMenuItemIds.length) {
-      message.error("Select at least one menu item (or assign an existing menu)");
+    if (!newMenuItemIds.length) {
+      message.error("Select at least one menu item");
       return;
     }
 
     try {
       setSaving(true);
-      const menuId = await ensureMenuId();
-      const newNavbar = {
+      const response = await instance.post("/navbars", {
         title_en: newNavbarTitleEn,
         title_bn: newNavbarTitleBn,
         logo_id: newLogoId,
-        menu_id: menuId,
-      };
-      const response = await instance.post("/navbars", newNavbar);
+        menu_item_ids: newMenuItemIds,
+      });
       if (response.status === 201) {
         message.success("Navbar created successfully");
         fetchNavbars?.();
-        fetchMenus?.();
         onNavbarCreated?.(response.data);
         resetForm();
         onCancel();
       } else {
         message.error("Error creating navbar");
       }
-    } catch (error) {
-      if (error?.message === "MENU_NOT_FOUND") {
-        message.error(
-          "Selected menu could not be found. Please re-select the menu."
-        );
-      } else if (error?.message === "MENU_CREATE_FAILED") {
-        message.error("Could not create menu for selected items");
-      } else {
-        message.error("Error creating navbar");
-      }
+    } catch {
+      message.error("Error creating navbar");
     } finally {
       setSaving(false);
     }
@@ -280,41 +168,6 @@ const AddNavbarForm = ({
             onChange={setNewMenuItemIds}
           />
         </div>
-
-        <div>
-          <div className="flex items-center justify-between mb-2">
-            <label className="block text-sm font-semibold text-gray-700">
-              Assigned Menu{" "}
-              <span className="font-normal text-gray-400">(optional)</span>
-            </label>
-            <Button
-              icon={<PlusCircleOutlined />}
-              onClick={() => setIsAddMenuOpen(true)}
-              className="h-9 px-4 headlessbutton border-0 font-semibold shadow-sm rounded-lg text-xs"
-            >
-              Create Menu
-            </Button>
-          </div>
-          <Select
-            showSearch
-            placeholder="Leave empty to auto-create from selected items"
-            optionFilterProp="children"
-            onChange={applyMenuSelection}
-            className="w-full max-w-md [&_.ant-select-selector]:h-10 [&_.ant-select-selector]:border-2 [&_.ant-select-selector]:border-gray-200 [&_.ant-select-selector]:rounded-lg hover:[&_.ant-select-selector]:border-blue-300"
-            allowClear
-            value={newMenuId}
-          >
-            {menus?.map((menu) => (
-              <Select.Option key={menu.id} value={menu.id}>
-                {menu.name}
-              </Select.Option>
-            ))}
-          </Select>
-          <p className="mt-1 text-xs text-gray-400">
-            Pick an existing menu to load its items, or skip and we&apos;ll
-            create one from your selected items.
-          </p>
-        </div>
       </div>
 
       <div className="flex justify-end mt-4 gap-4">
@@ -347,33 +200,6 @@ const AddNavbarForm = ({
           setMediaModalVisible(false);
         }}
       />
-
-      <Modal
-        open={isAddMenuOpen}
-        onCancel={() => setIsAddMenuOpen(false)}
-        destroyOnClose
-        footer={null}
-        title={
-          <div className="flex items-center gap-2">
-            <img src="/icons/headless/menus.svg" alt="Menus" className="w-6" />
-            <span>Add Menu</span>
-          </div>
-        }
-        width={900}
-        zIndex={1200}
-        getContainer={() => document.body}
-      >
-        {isAddMenuOpen && (
-          <AddMenuForm
-            menuItems={menuItems}
-            pages={pages}
-            fetchMenuItems={fetchMenuItems}
-            onCancel={() => setIsAddMenuOpen(false)}
-            fetchMenus={fetchMenus}
-            onMenuCreated={handleMenuCreated}
-          />
-        )}
-      </Modal>
 
       <Modal
         open={isAddMenuItemOpen}

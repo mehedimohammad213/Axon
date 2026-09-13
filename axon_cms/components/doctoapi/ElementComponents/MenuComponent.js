@@ -6,7 +6,7 @@ const MenuComponent = ({ data, onDataChange }) => {
   useEffect(() => {
     const jsonData = {
       type: "menu",
-      id: data.id,
+      menu_item_ids: data.menu_item_ids || [],
     };
     onDataChange(jsonData);
   }, [data, onDataChange]);

@@ -3,7 +3,7 @@
 import React, { useMemo } from "react";
 import { Button } from "antd";
 import { PlusCircleOutlined } from "@ant-design/icons";
-import SortableMenuItemsPicker from "../../Menus/SortableMenuItemsPicker";
+import SortableMenuItemsPicker from "../../MenuItems/SortableMenuItemsPicker";
 
 const CardSelector = ({
   selectedCards,

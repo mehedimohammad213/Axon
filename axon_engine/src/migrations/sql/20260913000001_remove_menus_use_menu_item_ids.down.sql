@@ -1,0 +1,31 @@
+CREATE TABLE IF NOT EXISTS menus (
+  id BIGSERIAL PRIMARY KEY,
+  organization_id BIGINT REFERENCES organizations(id) ON DELETE CASCADE,
+  name VARCHAR(255) NOT NULL,
+  menu_item_ids JSONB,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+CREATE INDEX IF NOT EXISTS menus_organization_id_idx ON menus (organization_id);
+
+CREATE TABLE IF NOT EXISTS menx (
+  id BIGSERIAL PRIMARY KEY,
+  menu_id BIGINT NOT NULL REFERENCES menus(id) ON DELETE CASCADE,
+  menu_item_id BIGINT NOT NULL REFERENCES menu_items(id) ON DELETE CASCADE,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
+
+ALTER TABLE navbars ADD COLUMN IF NOT EXISTS menu_id BIGINT REFERENCES menus(id) ON DELETE SET NULL;
+
+ALTER TABLE footers ADD COLUMN IF NOT EXISTS column2_menu_id BIGINT;
+ALTER TABLE footers ADD COLUMN IF NOT EXISTS column3_menu_id BIGINT;
+ALTER TABLE footers ADD COLUMN IF NOT EXISTS column4_menu_id SMALLINT;
+ALTER TABLE footers ADD COLUMN IF NOT EXISTS bottom_menu_id BIGINT;
+
+ALTER TABLE navbars DROP COLUMN IF EXISTS menu_item_ids;
+ALTER TABLE footers DROP COLUMN IF EXISTS column2_menu_item_ids;
+ALTER TABLE footers DROP COLUMN IF EXISTS column3_menu_item_ids;
+ALTER TABLE footers DROP COLUMN IF EXISTS column4_menu_item_ids;
+ALTER TABLE footers DROP COLUMN IF EXISTS bottom_menu_item_ids;

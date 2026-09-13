@@ -1,7 +1,6 @@
 [
   {
     "id": 7,
-    "menu_id": 6,
     "logo_id": 217,
     "created_at": "2023-10-08T20:11:08.000000Z",
     "updated_at": "2024-12-26T11:29:25.000000Z",
@@ -16,60 +15,17 @@
       "created_at": "2024-03-14T13:54:57.000000Z",
       "updated_at": "2024-03-14T13:54:57.000000Z"
     },
-    "menu": {
-      "id": 6,
-      "name": "Quick Links",
-      "menu_item_ids": [
-        34,
-        35,
-        36,
-        37,
-        38,
-        39
-      ],
-      "menu_items": [
-        {
-          "id": 34,
-          "title": "Corporate",
-          "title_bn": "কর্পোরেট",
-          "link": "/about"
-        },
-        {
-          "id": 35,
-          "title": "Cylinder Gas",
-          "title_bn": "সিলিন্ডার গ্যাস",
-          "link": "/cylindergas"
-        },
-        {
-          "id": 36,
-          "title": "Bulk Gas",
-          "title_bn": "বাল্ক গ্যাস",
-          "link": "/bulkgas"
-        },
-        {
-          "id": 37,
-          "title": "Auto Gas",
-          "title_bn": "অটো গ্যাস",
-          "link": "/autogas"
-        },
-        {
-          "id": 38,
-          "title": "Health & Safety",
-          "title_bn": "স্বাস্থ্য ও সুরক্ষা",
-          "link": "/health&safety"
-        },
-        {
-          "id": 39,
-          "title": "Events",
-          "title_bn": "মিডিয়া",
-          "link": "/events"
-        }
-      ]
-    }
+    "menu_item_ids": [
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ]
   },
   {
     "id": 19,
-    "menu_id": 8,
     "logo_id": 87,
     "created_at": "2023-10-18T13:53:42.000000Z",
     "updated_at": "2023-11-02T17:23:46.000000Z",
@@ -84,74 +40,19 @@
       "created_at": "2023-10-30T16:08:33.000000Z",
       "updated_at": "2023-10-30T16:08:33.000000Z"
     },
-    "menu": {
-      "id": 8,
-      "name": "Home Nav",
-      "menu_item_ids": [
-        34,
-        35,
-        36,
-        37,
-        38,
-        58,
-        39,
-        40
-      ],
-      "menu_items": [
-        {
-          "id": 34,
-          "title": "Corporate",
-          "title_bn": "কর্পোরেট",
-          "link": "/about"
-        },
-        {
-          "id": 35,
-          "title": "Cylinder Gas",
-          "title_bn": "সিলিন্ডার গ্যাস",
-          "link": "/cylindergas"
-        },
-        {
-          "id": 36,
-          "title": "Bulk Gas",
-          "title_bn": "বাল্ক গ্যাস",
-          "link": "/bulkgas"
-        },
-        {
-          "id": 37,
-          "title": "Auto Gas",
-          "title_bn": "অটো গ্যাস",
-          "link": "/autogas"
-        },
-        {
-          "id": 38,
-          "title": "Health & Safety",
-          "title_bn": "স্বাস্থ্য ও সুরক্ষা",
-          "link": "/health&safety"
-        },
-        {
-          "id": 58,
-          "title": "CSR",
-          "title_bn": "CSR",
-          "link": "/csr?pageId=6&pageName=csr"
-        },
-        {
-          "id": 39,
-          "title": "Events",
-          "title_bn": "মিডিয়া",
-          "link": "/events"
-        },
-        {
-          "id": 40,
-          "title": "Contact Us",
-          "title_bn": "যোগাযোগ করুন",
-          "link": "/contact"
-        }
-      ]
-    }
+    "menu_item_ids": [
+      34,
+      35,
+      36,
+      37,
+      38,
+      58,
+      39,
+      40
+    ]
   },
   {
     "id": 20,
-    "menu_id": 9,
     "logo_id": 227,
     "created_at": "2023-11-14T16:23:26.000000Z",
     "updated_at": "2024-03-24T09:42:30.000000Z",
@@ -166,74 +67,19 @@
       "created_at": "2024-03-24T09:40:08.000000Z",
       "updated_at": "2024-03-24T09:40:08.000000Z"
     },
-    "menu": {
-      "id": 9,
-      "name": "Page Navbar",
-      "menu_item_ids": [
-        34,
-        35,
-        37,
-        36,
-        39,
-        58,
-        38,
-        41
-      ],
-      "menu_items": [
-        {
-          "id": 34,
-          "title": "Corporate",
-          "title_bn": "কর্পোরেট",
-          "link": "/about"
-        },
-        {
-          "id": 35,
-          "title": "Cylinder Gas",
-          "title_bn": "সিলিন্ডার গ্যাস",
-          "link": "/cylindergas"
-        },
-        {
-          "id": 37,
-          "title": "Auto Gas",
-          "title_bn": "অটো গ্যাস",
-          "link": "/autogas"
-        },
-        {
-          "id": 36,
-          "title": "Bulk Gas",
-          "title_bn": "বাল্ক গ্যাস",
-          "link": "/bulkgas"
-        },
-        {
-          "id": 39,
-          "title": "Events",
-          "title_bn": "মিডিয়া",
-          "link": "/events"
-        },
-        {
-          "id": 58,
-          "title": "CSR",
-          "title_bn": "CSR",
-          "link": "/csr?pageId=6&pageName=csr"
-        },
-        {
-          "id": 38,
-          "title": "Health & Safety",
-          "title_bn": "স্বাস্থ্য ও সুরক্ষা",
-          "link": "/health&safety"
-        },
-        {
-          "id": 41,
-          "title": "Career",
-          "title_bn": "United Aygaz এ ক্যারিয়ার",
-          "link": "/career"
-        }
-      ]
-    }
+    "menu_item_ids": [
+      34,
+      35,
+      37,
+      36,
+      39,
+      58,
+      38,
+      41
+    ]
   },
   {
     "id": 24,
-    "menu_id": 8,
     "logo_id": 467,
     "created_at": "2025-10-14T04:46:27.000000Z",
     "updated_at": "2025-10-14T08:08:12.000000Z",
@@ -248,74 +94,19 @@
       "created_at": "2025-10-13T09:25:24.000000Z",
       "updated_at": "2025-10-13T09:25:24.000000Z"
     },
-    "menu": {
-      "id": 8,
-      "name": "Home Nav",
-      "menu_item_ids": [
-        34,
-        35,
-        36,
-        37,
-        38,
-        58,
-        39,
-        40
-      ],
-      "menu_items": [
-        {
-          "id": 34,
-          "title": "Corporate",
-          "title_bn": "কর্পোরেট",
-          "link": "/about"
-        },
-        {
-          "id": 35,
-          "title": "Cylinder Gas",
-          "title_bn": "সিলিন্ডার গ্যাস",
-          "link": "/cylindergas"
-        },
-        {
-          "id": 36,
-          "title": "Bulk Gas",
-          "title_bn": "বাল্ক গ্যাস",
-          "link": "/bulkgas"
-        },
-        {
-          "id": 37,
-          "title": "Auto Gas",
-          "title_bn": "অটো গ্যাস",
-          "link": "/autogas"
-        },
-        {
-          "id": 38,
-          "title": "Health & Safety",
-          "title_bn": "স্বাস্থ্য ও সুরক্ষা",
-          "link": "/health&safety"
-        },
-        {
-          "id": 58,
-          "title": "CSR",
-          "title_bn": "CSR",
-          "link": "/csr?pageId=6&pageName=csr"
-        },
-        {
-          "id": 39,
-          "title": "Events",
-          "title_bn": "মিডিয়া",
-          "link": "/events"
-        },
-        {
-          "id": 40,
-          "title": "Contact Us",
-          "title_bn": "যোগাযোগ করুন",
-          "link": "/contact"
-        }
-      ]
-    }
+    "menu_item_ids": [
+      34,
+      35,
+      36,
+      37,
+      38,
+      58,
+      39,
+      40
+    ]
   },
   {
     "id": 25,
-    "menu_id": 7,
     "logo_id": 469,
     "created_at": "2025-10-20T07:32:39.000000Z",
     "updated_at": "2025-10-20T07:32:39.000000Z",
@@ -330,62 +121,14 @@
       "created_at": "2025-10-13T11:25:15.000000Z",
       "updated_at": "2025-10-13T11:25:15.000000Z"
     },
-    "menu": {
-      "id": 7,
-      "name": "Box Menus",
-      "menu_item_ids": [
-        34,
-        35,
-        36,
-        33,
-        38,
-        39,
-        40
-      ],
-      "menu_items": [
-        {
-          "id": 34,
-          "title": "Corporate",
-          "title_bn": "কর্পোরেট",
-          "link": "/about"
-        },
-        {
-          "id": 35,
-          "title": "Cylinder Gas",
-          "title_bn": "সিলিন্ডার গ্যাস",
-          "link": "/cylindergas"
-        },
-        {
-          "id": 36,
-          "title": "Bulk Gas",
-          "title_bn": "বাল্ক গ্যাস",
-          "link": "/bulkgas"
-        },
-        {
-          "id": 33,
-          "title": "Auto Gas",
-          "title_bn": "অটো গ্যাস",
-          "link": "/autogas"
-        },
-        {
-          "id": 38,
-          "title": "Health & Safety",
-          "title_bn": "স্বাস্থ্য ও সুরক্ষা",
-          "link": "/health&safety"
-        },
-        {
-          "id": 39,
-          "title": "Events",
-          "title_bn": "মিডিয়া",
-          "link": "/events"
-        },
-        {
-          "id": 40,
-          "title": "Contact Us",
-          "title_bn": "যোগাযোগ করুন",
-          "link": "/contact"
-        }
-      ]
-    }
+    "menu_item_ids": [
+      34,
+      35,
+      36,
+      33,
+      38,
+      39,
+      40
+    ]
   }
 ]

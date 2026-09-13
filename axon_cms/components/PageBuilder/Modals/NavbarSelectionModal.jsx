@@ -23,7 +23,6 @@ const { Text } = Typography;
 
 const NavbarSelectionModal = ({ onSelectNavbar, selectedNavbar }) => {
   const [navbars, setNavbars] = useState([]);
-  const [menus, setMenus] = useState([]);
   const [media, setMedia] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchText, setSearchText] = useState("");
@@ -32,7 +31,6 @@ const NavbarSelectionModal = ({ onSelectNavbar, selectedNavbar }) => {
 
   useEffect(() => {
     fetchNavbars();
-    fetchMenus();
     fetchMedia();
   }, []);
 
@@ -49,15 +47,6 @@ const NavbarSelectionModal = ({ onSelectNavbar, selectedNavbar }) => {
       return [];
     } finally {
       setLoading(false);
-    }
-  };
-
-  const fetchMenus = async () => {
-    try {
-      const response = await instance.get("/menus");
-      setMenus(response.data || []);
-    } catch (err) {
-      message.error("Failed to fetch menus");
     }
   };
 
@@ -155,7 +144,7 @@ const NavbarSelectionModal = ({ onSelectNavbar, selectedNavbar }) => {
                 <div className="flex flex-col flex-grow">
                   <Text strong>{navbar.name || navbar.title_en}</Text>
                   <Text type="secondary">
-                    {navbar.menu?.menu_items?.length || 0} menu items
+                    {navbar.menu_items?.length || 0} menu items
                   </Text>
                 </div>
               </div>
@@ -191,9 +180,7 @@ const NavbarSelectionModal = ({ onSelectNavbar, selectedNavbar }) => {
         zIndex={1100}
       >
         <AddNavbarForm
-          menus={menus}
           media={media}
-          fetchMenus={fetchMenus}
           fetchNavbars={fetchNavbars}
           onCancel={() => setIsFormVisible(false)}
           onNavbarCreated={handleNavbarCreated}

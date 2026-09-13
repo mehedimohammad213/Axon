@@ -4,9 +4,7 @@ import React, { useState, useEffect } from "react";
 import {
   Button,
   Menu,
-  Popconfirm,
   Space,
-  Tooltip,
   Typography,
   Drawer,
   Radio,
@@ -14,19 +12,11 @@ import {
   Input,
 } from "antd";
 import {
-  EditOutlined,
-  DeleteOutlined,
-  ArrowRightOutlined,
   DragOutlined,
-  CheckCircleOutlined,
-  ExportOutlined,
-  CopyFilled,
-  SettingOutlined,
-  MenuOutlined,
   ArrowLeftOutlined,
   GlobalOutlined,
 } from "@ant-design/icons";
-import MenuSelectionModal from "../Modals/MenuSelectionModal";
+import MenuItemSelectionModal from "../Modals/MenuItemSelectionModal";
 import ComponentEditButton from "./components/ComponentEditButton";
 import ComponentDuplicateButton from "./components/ComponentDuplicateButton";
 import ComponentDeleteButton from "./components/ComponentDeleteButton";
@@ -44,7 +34,7 @@ const MenuComponent = ({
   const [menuData, setMenuData] = useState(component._headless);
   const [menuMode, setMenuMode] = useState(component.menuMode || "horizontal");
   const [menuTheme, setMenuTheme] = useState(component.menuTheme || "light");
-  const [selectedMenu, setSelectedMenu] = useState(null);
+  const [selectedItems, setSelectedItems] = useState([]);
   const [showConfig, setShowConfig] = useState(false);
   const [altTitle, setAltTitle] = useState(component._headless?.altTitle || "");
 
@@ -53,33 +43,32 @@ const MenuComponent = ({
     setAltTitle(component._headless?.altTitle || "");
   }, [component._headless]);
 
-  const handleSelectMenu = (selectedMenu) => {
-    setSelectedMenu(selectedMenu);
+  const handleConfirmSelection = (items) => {
+    setSelectedItems(items);
     setShowConfig(true);
   };
 
   const handleSaveConfig = () => {
-    if (!selectedMenu) {
-      message.error("Please select a menu first.");
+    if (!selectedItems.length) {
+      message.error("Please select at least one menu item.");
       return;
     }
+    const headless = {
+      menu_item_ids: selectedItems.map((item) => item.id),
+      menu_items: selectedItems,
+      altTitle,
+    };
     updateComponent({
       ...component,
-      _headless: {
-        ...selectedMenu,
-        altTitle,
-      },
-      id: selectedMenu.id,
+      _headless: headless,
+      menu_item_ids: headless.menu_item_ids,
       menuMode,
       menuTheme,
     });
-    setMenuData({
-      ...selectedMenu,
-      altTitle,
-    });
+    setMenuData(headless);
     setIsDrawerVisible(false);
     setShowConfig(false);
-    setSelectedMenu(null);
+    setSelectedItems([]);
     message.success("Menu updated successfully.");
   };
 
@@ -112,33 +101,33 @@ const MenuComponent = ({
             {renderMenuItems(item.all_children)}
           </Menu.SubMenu>
         );
-      } else {
-        return (
-          <Menu.Item key={item.id}>
-            <span className="flex items-center gap-2">
-              {item.icon && <span className="text-lg">{item.icon}</span>}
-              {displayTitle}
-            </span>
-          </Menu.Item>
-        );
       }
+
+      return (
+        <Menu.Item key={item.id}>
+          <span className="flex items-center gap-2">
+            {item.icon && <span className="text-lg">{item.icon}</span>}
+            {displayTitle}
+          </span>
+        </Menu.Item>
+      );
     });
   };
 
   if (preview) {
     return (
       <div className="preview-menu-component p-4 bg-gray-100 rounded-md">
-        {menuData ? (
+        {menuData?.menu_items?.length ? (
           <Menu
             mode={menuData.menuMode || menuMode}
             theme={menuData.menuTheme || menuTheme}
             className="flex-grow"
             style={{ border: "none" }}
           >
-            {renderMenuItems(menuData?.menu_items)}
+            {renderMenuItems(menuData.menu_items)}
           </Menu>
         ) : (
-          <Text type="secondary">No menu selected.</Text>
+          <Text type="secondary">No menu items selected.</Text>
         )}
       </div>
     );
@@ -153,7 +142,7 @@ const MenuComponent = ({
         </div>
         <div className="flex items-center gap-2">
           <Space>
-            {menuData && (
+            {menuData?.menu_items?.length > 0 && (
               <ComponentEditButton
                 onClick={() => setIsDrawerVisible(true)}
                 title="Edit menu"
@@ -173,7 +162,7 @@ const MenuComponent = ({
       </div>
 
       <div className="flex flex-col items-center">
-        {menuData ? (
+        {menuData?.menu_items?.length ? (
           <div className="w-full">
             <Menu
               mode={menuData.menuMode || menuMode}
@@ -181,13 +170,13 @@ const MenuComponent = ({
               className="w-full"
               style={{ border: "none" }}
             >
-              {renderMenuItems(menuData?.menu_items)}
+              {renderMenuItems(menuData.menu_items)}
             </Menu>
           </div>
         ) : (
           <ComponentEditButton
             onClick={() => setIsDrawerVisible(true)}
-            title="Choose menu"
+            title="Choose menu items"
           />
         )}
       </div>
@@ -202,7 +191,7 @@ const MenuComponent = ({
                 onClick={() => setShowConfig(false)}
               />
             )}
-            {showConfig ? "Menu Configuration" : "Select Menu"}
+            {showConfig ? "Menu Configuration" : "Select Menu Items"}
           </div>
         }
         placement="right"
@@ -210,7 +199,7 @@ const MenuComponent = ({
         onClose={() => {
           setIsDrawerVisible(false);
           setShowConfig(false);
-          setSelectedMenu(null);
+          setSelectedItems([]);
         }}
         open={isDrawerVisible}
         extra={
@@ -220,7 +209,7 @@ const MenuComponent = ({
                 onClick={() => {
                   setIsDrawerVisible(false);
                   setShowConfig(false);
-                  setSelectedMenu(null);
+                  setSelectedItems([]);
                 }}
               >
                 Cancel
@@ -233,9 +222,9 @@ const MenuComponent = ({
         }
       >
         {!showConfig ? (
-          <MenuSelectionModal
-            onSelectMenu={handleSelectMenu}
-            selectedMenu={selectedMenu}
+          <MenuItemSelectionModal
+            onConfirmSelection={handleConfirmSelection}
+            selectedMenuItems={menuData?.menu_items || []}
           />
         ) : (
           <div className="flex flex-col gap-4">
@@ -290,7 +279,7 @@ const MenuComponent = ({
                 className="mt-2"
                 style={{ border: "none" }}
               >
-                {renderMenuItems(selectedMenu?.menu_items)}
+                {renderMenuItems(selectedItems)}
               </Menu>
             </div>
           </div>

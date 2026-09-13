@@ -6,7 +6,6 @@ import { cachedApiCall, clearAllApiCache } from "./apiUtils";
 const API_ENDPOINTS = [
   { key: "pages", url: "/pages" },
   { key: "media", url: "/media" },
-  { key: "menus", url: "/menus" },
   { key: "menuitems", url: "/menuitems" },
   { key: "navbars", url: "/navbars" },
   { key: "sliders", url: "/sliders" },

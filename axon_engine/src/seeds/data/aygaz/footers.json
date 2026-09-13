@@ -15,9 +15,7 @@
     "address2_description_bn": "রাঙ্গাদিয়া, কর্ণফুলী, আনোয়ারা, চট্টগ্রাম, বাংলাদেশ",
     "address1_status": 1,
     "address2_status": 1,
-    "column2_menu_id": 6,
     "column2_status": 1,
-    "column3_menu_id": 5,
     "column3_logos": null,
     "column3_status": 1,
     "column4_title_en": "09 612 090909",
@@ -25,11 +23,9 @@
     "column4_image": null,
     "column4_text_en": "Animi ea omnis dolo",
     "column4_text_bn": "Dolores distinctio",
-    "column4_menu_id": 3,
     "column4_description_en": "09 612 090909 Our team is available 24/7. Get in touch today to learn more about our company and products.",
     "column4_description_bn": "০৯ ৬১২ ০৯০৯০৯ আমাদের টিম ০৯ ৬১২ ০৯০৯০৯ ফোন নম্বরে ২৪ ঘন্টা আপনার সেবায় নিবেদিত। আমাদের কোম্পানি এবং পণ্য সম্পর্কে আরো জানতে আজই যোগাযোগ করুন।",
     "column4_status": 1,
-    "bottom_menu_id": 1,
     "created_at": "2023-10-08T13:26:24.000000Z",
     "updated_at": "2026-06-15T04:11:18.000000Z",
     "logo": {
@@ -38,115 +34,25 @@
       "file_type": "image/png",
       "file_path": "media/mave_aygaz_SrzHWI.png"
     },
-    "column2_menu": {
-      "id": 6,
-      "name": "Quick Links",
-      "menu_item_ids": [
-        34,
-        35,
-        36,
-        37,
-        38,
-        39
-      ],
-      "menu_items": [
-        {
-          "id": 34,
-          "title": "Corporate",
-          "title_bn": "কর্পোরেট",
-          "link": "/about"
-        },
-        {
-          "id": 35,
-          "title": "Cylinder Gas",
-          "title_bn": "সিলিন্ডার গ্যাস",
-          "link": "/cylindergas"
-        },
-        {
-          "id": 36,
-          "title": "Bulk Gas",
-          "title_bn": "বাল্ক গ্যাস",
-          "link": "/bulkgas"
-        },
-        {
-          "id": 37,
-          "title": "Auto Gas",
-          "title_bn": "অটো গ্যাস",
-          "link": "/autogas"
-        },
-        {
-          "id": 38,
-          "title": "Health & Safety",
-          "title_bn": "স্বাস্থ্য ও সুরক্ষা",
-          "link": "/health&safety"
-        },
-        {
-          "id": 39,
-          "title": "Events",
-          "title_bn": "মিডিয়া",
-          "link": "/events"
-        }
-      ]
-    },
-    "column3_menu": {
-      "id": 5,
-      "name": "Can We Help?",
-      "menu_item_ids": [
-        40,
-        3
-      ],
-      "menu_items": [
-        {
-          "id": 40,
-          "title": "Contact Us",
-          "title_bn": "যোগাযোগ করুন",
-          "link": "/contact"
-        },
-        {
-          "id": 3,
-          "title": "FAQ",
-          "title_bn": "প্রায়শই জিজ্ঞাসিত প্রশ্নাবলী",
-          "link": "/faq"
-        }
-      ]
-    },
-    "column4_menu": {
-      "id": 3,
-      "name": "Member Of",
-      "menu_item_ids": [
-        10,
-        11,
-        12,
-        57
-      ],
-      "menu_items": [
-        {
-          "id": 10,
-          "title": "Sign Up",
-          "title_bn": "",
-          "link": "/signup"
-        },
-        {
-          "id": 11,
-          "title": "Gallery",
-          "title_bn": "",
-          "link": "/gallery"
-        },
-        {
-          "id": 12,
-          "title": "Testimonials",
-          "title_bn": "",
-          "link": "/testimonials"
-        },
-        {
-          "id": 57,
-          "title": "Product",
-          "title_bn": "Product",
-          "link": "/product?pageId=5&pageName=Product"
-        }
-      ]
-    },
-    "bottom_menu": null
+    "column2_menu_item_ids": [
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+    ],
+    "column3_menu_item_ids": [
+      40,
+      3
+    ],
+    "column4_menu_item_ids": [
+      10,
+      11,
+      12,
+      57
+    ],
+    "bottom_menu_item_ids": []
   },
   {
     "id": 35,
@@ -164,9 +70,7 @@
     "address2_description_bn": "Blanditiis optio el",
     "address1_status": 1,
     "address2_status": 1,
-    "column2_menu_id": 3,
     "column2_status": 1,
-    "column3_menu_id": 2,
     "column3_logos": null,
     "column3_status": 1,
     "column4_title_en": "Alias optio fuga V",
@@ -174,11 +78,9 @@
     "column4_image": null,
     "column4_text_en": "Neque pariatur Quis",
     "column4_text_bn": "Molestias voluptate",
-    "column4_menu_id": 2,
     "column4_description_en": "Quam id voluptate e",
     "column4_description_bn": "Veniam delectus co",
     "column4_status": 1,
-    "bottom_menu_id": 2,
     "created_at": "2023-10-11T16:36:05.000000Z",
     "updated_at": "2023-10-11T16:36:05.000000Z",
     "logo": {
@@ -187,45 +89,15 @@
       "file_type": "image/jpeg",
       "file_path": "media/mave_aygaz_epPR17.jpg"
     },
-    "column2_menu": {
-      "id": 3,
-      "name": "Member Of",
-      "menu_item_ids": [
-        10,
-        11,
-        12,
-        57
-      ],
-      "menu_items": [
-        {
-          "id": 10,
-          "title": "Sign Up",
-          "title_bn": "",
-          "link": "/signup"
-        },
-        {
-          "id": 11,
-          "title": "Gallery",
-          "title_bn": "",
-          "link": "/gallery"
-        },
-        {
-          "id": 12,
-          "title": "Testimonials",
-          "title_bn": "",
-          "link": "/testimonials"
-        },
-        {
-          "id": 57,
-          "title": "Product",
-          "title_bn": "Product",
-          "link": "/product?pageId=5&pageName=Product"
-        }
-      ]
-    },
-    "column3_menu": null,
-    "column4_menu": null,
-    "bottom_menu": null
+    "column2_menu_item_ids": [
+      10,
+      11,
+      12,
+      57
+    ],
+    "column3_menu_item_ids": [],
+    "column4_menu_item_ids": [],
+    "bottom_menu_item_ids": []
   },
   {
     "id": 36,
@@ -243,9 +115,7 @@
     "address2_description_bn": "Porro eum dolores ei",
     "address1_status": 1,
     "address2_status": 1,
-    "column2_menu_id": 2,
     "column2_status": 1,
-    "column3_menu_id": 1,
     "column3_logos": null,
     "column3_status": 1,
     "column4_title_en": "Quo ducimus cillum",
@@ -253,11 +123,9 @@
     "column4_image": null,
     "column4_text_en": "Dolore ullam exercit",
     "column4_text_bn": "Officia reiciendis n",
-    "column4_menu_id": 3,
     "column4_description_en": "Quaerat minim commod",
     "column4_description_bn": "Voluptatem possimus",
     "column4_status": 1,
-    "bottom_menu_id": 2,
     "created_at": "2023-10-11T16:36:39.000000Z",
     "updated_at": "2023-10-11T16:36:39.000000Z",
     "logo": {
@@ -266,45 +134,15 @@
       "file_type": "image/png",
       "file_path": "media/mave_aygaz_nn2sE3.png"
     },
-    "column2_menu": null,
-    "column3_menu": null,
-    "column4_menu": {
-      "id": 3,
-      "name": "Member Of",
-      "menu_item_ids": [
-        10,
-        11,
-        12,
-        57
-      ],
-      "menu_items": [
-        {
-          "id": 10,
-          "title": "Sign Up",
-          "title_bn": "",
-          "link": "/signup"
-        },
-        {
-          "id": 11,
-          "title": "Gallery",
-          "title_bn": "",
-          "link": "/gallery"
-        },
-        {
-          "id": 12,
-          "title": "Testimonials",
-          "title_bn": "",
-          "link": "/testimonials"
-        },
-        {
-          "id": 57,
-          "title": "Product",
-          "title_bn": "Product",
-          "link": "/product?pageId=5&pageName=Product"
-        }
-      ]
-    },
-    "bottom_menu": null
+    "column2_menu_item_ids": [],
+    "column3_menu_item_ids": [],
+    "column4_menu_item_ids": [
+      10,
+      11,
+      12,
+      57
+    ],
+    "bottom_menu_item_ids": []
   },
   {
     "id": 37,
@@ -322,9 +160,7 @@
     "address2_description_bn": "Address",
     "address1_status": 1,
     "address2_status": 1,
-    "column2_menu_id": 1,
     "column2_status": 1,
-    "column3_menu_id": 7,
     "column3_logos": null,
     "column3_status": 1,
     "column4_title_en": "Address",
@@ -332,171 +168,37 @@
     "column4_image": null,
     "column4_text_en": "Address",
     "column4_text_bn": "Address",
-    "column4_menu_id": 3,
     "column4_description_en": "Address",
     "column4_description_bn": "Address",
     "column4_status": 1,
-    "bottom_menu_id": 8,
     "created_at": "2023-12-13T12:17:29.000000Z",
     "updated_at": "2023-12-13T12:17:29.000000Z",
     "logo": null,
-    "column2_menu": null,
-    "column3_menu": {
-      "id": 7,
-      "name": "Box Menus",
-      "menu_item_ids": [
-        34,
-        35,
-        36,
-        33,
-        38,
-        39,
-        40
-      ],
-      "menu_items": [
-        {
-          "id": 34,
-          "title": "Corporate",
-          "title_bn": "কর্পোরেট",
-          "link": "/about"
-        },
-        {
-          "id": 35,
-          "title": "Cylinder Gas",
-          "title_bn": "সিলিন্ডার গ্যাস",
-          "link": "/cylindergas"
-        },
-        {
-          "id": 36,
-          "title": "Bulk Gas",
-          "title_bn": "বাল্ক গ্যাস",
-          "link": "/bulkgas"
-        },
-        {
-          "id": 33,
-          "title": "Auto Gas",
-          "title_bn": "অটো গ্যাস",
-          "link": "/autogas"
-        },
-        {
-          "id": 38,
-          "title": "Health & Safety",
-          "title_bn": "স্বাস্থ্য ও সুরক্ষা",
-          "link": "/health&safety"
-        },
-        {
-          "id": 39,
-          "title": "Events",
-          "title_bn": "মিডিয়া",
-          "link": "/events"
-        },
-        {
-          "id": 40,
-          "title": "Contact Us",
-          "title_bn": "যোগাযোগ করুন",
-          "link": "/contact"
-        }
-      ]
-    },
-    "column4_menu": {
-      "id": 3,
-      "name": "Member Of",
-      "menu_item_ids": [
-        10,
-        11,
-        12,
-        57
-      ],
-      "menu_items": [
-        {
-          "id": 10,
-          "title": "Sign Up",
-          "title_bn": "",
-          "link": "/signup"
-        },
-        {
-          "id": 11,
-          "title": "Gallery",
-          "title_bn": "",
-          "link": "/gallery"
-        },
-        {
-          "id": 12,
-          "title": "Testimonials",
-          "title_bn": "",
-          "link": "/testimonials"
-        },
-        {
-          "id": 57,
-          "title": "Product",
-          "title_bn": "Product",
-          "link": "/product?pageId=5&pageName=Product"
-        }
-      ]
-    },
-    "bottom_menu": {
-      "id": 8,
-      "name": "Home Nav",
-      "menu_item_ids": [
-        34,
-        35,
-        36,
-        37,
-        38,
-        58,
-        39,
-        40
-      ],
-      "menu_items": [
-        {
-          "id": 34,
-          "title": "Corporate",
-          "title_bn": "কর্পোরেট",
-          "link": "/about"
-        },
-        {
-          "id": 35,
-          "title": "Cylinder Gas",
-          "title_bn": "সিলিন্ডার গ্যাস",
-          "link": "/cylindergas"
-        },
-        {
-          "id": 36,
-          "title": "Bulk Gas",
-          "title_bn": "বাল্ক গ্যাস",
-          "link": "/bulkgas"
-        },
-        {
-          "id": 37,
-          "title": "Auto Gas",
-          "title_bn": "অটো গ্যাস",
-          "link": "/autogas"
-        },
-        {
-          "id": 38,
-          "title": "Health & Safety",
-          "title_bn": "স্বাস্থ্য ও সুরক্ষা",
-          "link": "/health&safety"
-        },
-        {
-          "id": 58,
-          "title": "CSR",
-          "title_bn": "CSR",
-          "link": "/csr?pageId=6&pageName=csr"
-        },
-        {
-          "id": 39,
-          "title": "Events",
-          "title_bn": "মিডিয়া",
-          "link": "/events"
-        },
-        {
-          "id": 40,
-          "title": "Contact Us",
-          "title_bn": "যোগাযোগ করুন",
-          "link": "/contact"
-        }
-      ]
-    }
+    "column2_menu_item_ids": [],
+    "column3_menu_item_ids": [
+      34,
+      35,
+      36,
+      33,
+      38,
+      39,
+      40
+    ],
+    "column4_menu_item_ids": [
+      10,
+      11,
+      12,
+      57
+    ],
+    "bottom_menu_item_ids": [
+      34,
+      35,
+      36,
+      37,
+      38,
+      58,
+      39,
+      40
+    ]
   }
 ]

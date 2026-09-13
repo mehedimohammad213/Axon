@@ -2566,7 +2566,7 @@
           {
             "type": "menu",
             "_id": "550e8400-e29b-41d4-a716-446655440004",
-            "id": 456
+            "menu_item_ids": []
           },
           {
             "type": "navbar",
@@ -52268,7 +52268,6 @@
             "value": "পণ্য"
           },
           {
-            "id": 2,
             "_mave": {
               "id": 2,
               "name": "Footer - Product Menu",
@@ -52332,10 +52331,16 @@
                 }
               ]
             },
-            "type": "menu"
+            "type": "menu",
+            "menu_item_ids": [
+              56,
+              57,
+              58,
+              59,
+              60
+            ]
           },
           {
-            "id": 3,
             "_mave": {
               "id": 3,
               "name": "Footer - Services Menu",
@@ -52377,10 +52382,14 @@
                 }
               ]
             },
-            "type": "menu"
+            "type": "menu",
+            "menu_item_ids": [
+              19,
+              24,
+              25
+            ]
           },
           {
-            "id": 10,
             "_mave": {
               "name": "Useful Links",
               "menu_item_ids": [
@@ -52399,10 +52408,17 @@
                 }
               ]
             },
-            "type": "menu"
+            "type": "menu",
+            "menu_item_ids": [
+              145,
+              148,
+              149,
+              150,
+              151,
+              153
+            ]
           },
           {
-            "id": 5,
             "_mave": {
               "name": "Footer - Contact Us",
               "menu_item_ids": [
@@ -52454,7 +52470,15 @@
                 }
               ]
             },
-            "type": "menu"
+            "type": "menu",
+            "menu_item_ids": [
+              28,
+              143,
+              29,
+              154,
+              155,
+              156
+            ]
           },
           {
             "_id": "uuZHVbJdjl94L4Cu",

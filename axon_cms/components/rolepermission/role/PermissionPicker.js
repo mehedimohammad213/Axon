@@ -1,4 +1,4 @@
-import SortableMenuItemsPicker from "../../Menus/SortableMenuItemsPicker";
+import SortableMenuItemsPicker from "../../MenuItems/SortableMenuItemsPicker";
 
 export default function PermissionPicker({ permissions = [], value, onChange }) {
   return (

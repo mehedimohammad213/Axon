@@ -1,4 +1,4 @@
-// components/Menus/SortableMenuItemsPicker.js
+// components/MenuItems/SortableMenuItemsPicker.js
 
 import React, { useState, useMemo, useCallback } from "react";
 import {

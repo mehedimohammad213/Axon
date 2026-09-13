@@ -15,7 +15,6 @@ const Navbars = () => {
   }, []);
 
   const [allNavbars, setAllNavbars] = useState([]);
-  const [menus, setMenus] = useState([]);
   const [media, setMedia] = useState([]);
   const [loading, setLoading] = useState(true);
   const [editingNavbarId, setEditingNavbarId] = useState(null);
@@ -25,7 +24,6 @@ const Navbars = () => {
   const [sortType, setSortType] = useState("desc");
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
-  const [filters, setFilters] = useState({ menu_id: undefined });
 
   const fetchNavbars = useCallback(async () => {
     try {
@@ -43,15 +41,6 @@ const Navbars = () => {
     }
   }, []);
 
-  const fetchMenus = useCallback(async () => {
-    try {
-      const response = await instance("/menus");
-      if (response.data) setMenus(response.data);
-    } catch {
-      message.error("Menus couldn't be fetched");
-    }
-  }, []);
-
   const fetchMedia = useCallback(async () => {
     try {
       const response = await instance("/media");
@@ -62,8 +51,8 @@ const Navbars = () => {
   }, []);
 
   const refreshAll = useCallback(async () => {
-    await Promise.all([fetchNavbars(), fetchMenus(), fetchMedia()]);
-  }, [fetchNavbars, fetchMenus, fetchMedia]);
+    await Promise.all([fetchNavbars(), fetchMedia()]);
+  }, [fetchNavbars, fetchMedia]);
 
   useEffect(() => {
     refreshAll();
@@ -76,18 +65,12 @@ const Navbars = () => {
 
     if (searchTerm.trim()) {
       results = results.filter((navbar) =>
-        navbar.title_en.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    }
-
-    if (filters.menu_id) {
-      results = results.filter(
-        (navbar) => navbar.menu?.id === filters.menu_id
+        (navbar.title_en || "").toLowerCase().includes(searchTerm.toLowerCase())
       );
     }
 
     return results;
-  }, [allNavbars, searchTerm, filters]);
+  }, [allNavbars, searchTerm]);
 
   const sortedNavbars = useMemo(() => {
     return [...filteredNavbars].sort((a, b) =>
@@ -97,7 +80,7 @@ const Navbars = () => {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchTerm, filters, sortType, itemsPerPage]);
+  }, [searchTerm, sortType, itemsPerPage]);
 
   const paginatedNavbars = useMemo(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -113,14 +96,6 @@ const Navbars = () => {
 
   const handleShowChange = useCallback((value) => {
     setItemsPerPage(parseInt(value, 10));
-  }, []);
-
-  const applyFilters = useCallback((filterValues) => {
-    setFilters(filterValues);
-  }, []);
-
-  const resetFilters = useCallback(() => {
-    setFilters({ menu_id: undefined });
   }, []);
 
   const setNavbars = useCallback((updater) => {
@@ -144,9 +119,6 @@ const Navbars = () => {
         sortType={sortType}
         setSortType={setSortType}
         onShowChange={handleShowChange}
-        filterOptions={{ menus }}
-        applyFilters={applyFilters}
-        resetFilters={resetFilters}
         onRefresh={refreshAll}
         itemCount={allNavbars.length}
       />
@@ -170,8 +142,6 @@ const Navbars = () => {
       >
         {isAddNavbarOpen && (
           <AddNavbarForm
-            menus={menus}
-            fetchMenus={fetchMenus}
             media={media}
             onCancel={handleCancelAddNavbar}
             fetchNavbars={fetchNavbars}
@@ -181,7 +151,6 @@ const Navbars = () => {
 
       <NavbarsList
         navbars={paginatedNavbars}
-        menus={menus}
         media={media}
         setNavbars={setNavbars}
         editingNavbarId={editingNavbarId}

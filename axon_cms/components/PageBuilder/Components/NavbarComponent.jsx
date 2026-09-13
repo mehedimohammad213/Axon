@@ -166,7 +166,7 @@ const NavbarComponent = ({
               className="flex-grow ml-5"
               style={{ border: "none" }}
             >
-              {renderMenuItems(navbarData?.menu?.menu_items)}
+              {renderMenuItems(navbarData?.menu_items)}
             </Menu>
           </div>
         ) : (
@@ -225,7 +225,7 @@ const NavbarComponent = ({
                 className="flex-grow ml-5"
                 style={{ border: "none" }}
               >
-                {renderMenuItems(navbarData?.menu?.menu_items)}
+                {renderMenuItems(navbarData?.menu_items)}
               </Menu>
             </div>
           </div>
@@ -359,7 +359,7 @@ const NavbarComponent = ({
                   className="flex-grow"
                   style={{ border: "none" }}
                 >
-                  {renderMenuItems(selectedNavbar?.menu?.menu_items)}
+                  {renderMenuItems(selectedNavbar?.menu_items)}
                 </Menu>
               </div>
             </div>

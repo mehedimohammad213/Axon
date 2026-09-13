@@ -24,7 +24,6 @@ const CONFIG = {
   requiredFixtures: {
     media: 'media',
     menuitems: 'menuitems',
-    menus: 'menus',
     navbars: 'navbars',
     footers: 'footers',
     cards: 'cards',
@@ -36,7 +35,6 @@ const CONFIG = {
   apiMap: {
     media: 'media',
     menuitems: 'menuitems',
-    menus: 'menus',
     navbars: 'navbars',
     footers: 'footers',
     cards: 'cards',

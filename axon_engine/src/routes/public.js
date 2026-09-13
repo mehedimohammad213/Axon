@@ -1,7 +1,7 @@
 const express = require('express');
 const identifyPublicSite = require('../middleware/publicSite');
 const publicPageController = require('../controllers/publicPageController');
-const { navbarController, menuController, sliderController, formBuilderController } = require('../controllers/cmsControllers');
+const { navbarController, sliderController, formBuilderController } = require('../controllers/cmsControllers');
 const menuItemController = require('../controllers/menuItemController');
 const footerController = require('../controllers/footerController');
 const cardController = require('../controllers/cardController');
@@ -27,9 +27,6 @@ siteRouter.get('/pages/:slug', publicPageController.show);
 siteRouter.get('/navbars', navbarController.index);
 siteRouter.get('/navbars/:id', navbarController.show);
 siteRouter.get('/navbar', navbarController.index);
-
-siteRouter.get('/menus', menuController.index);
-siteRouter.get('/menus/:id', menuController.show);
 
 siteRouter.get('/menuitems', menuItemController.index);
 siteRouter.get('/menuitems/:id', menuItemController.show);

@@ -1338,9 +1338,14 @@
             },
             "sectionIndex": 0,
             "index": 2,
-            "id": 5,
             "menuMode": "horizontal",
-            "menuTheme": "light"
+            "menuTheme": "light",
+            "menu_item_ids": [
+              15,
+              16,
+              17,
+              18
+            ]
           }
         ]
       },
@@ -2699,9 +2704,14 @@
             },
             "sectionIndex": 0,
             "index": 2,
-            "id": 5,
             "menuMode": "horizontal",
-            "menuTheme": "light"
+            "menuTheme": "light",
+            "menu_item_ids": [
+              15,
+              16,
+              17,
+              18
+            ]
           }
         ]
       },

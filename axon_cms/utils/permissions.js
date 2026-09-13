@@ -2,7 +2,6 @@ const ROUTE_PERMISSIONS = {
   "/": "view_dashboard",
   "/gallery": "view_gallery",
   "/menuitems": "view_menu_items",
-  "/menus": "view_menus",
   "/navbars": "view_navbars",
   "/cards": "view_components",
   "/sliders": "view_sliders",

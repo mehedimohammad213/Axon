@@ -26,31 +26,12 @@ CREATE TABLE menu_items (
 
 CREATE INDEX menu_items_organization_id_idx ON menu_items (organization_id);
 
-CREATE TABLE menus (
-  id BIGSERIAL PRIMARY KEY,
-  organization_id BIGINT REFERENCES organizations(id) ON DELETE CASCADE,
-  name VARCHAR(255) NOT NULL,
-  menu_item_ids JSONB,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-);
-
-CREATE INDEX menus_organization_id_idx ON menus (organization_id);
-
-CREATE TABLE menx (
-  id BIGSERIAL PRIMARY KEY,
-  menu_id BIGINT NOT NULL REFERENCES menus(id) ON DELETE CASCADE,
-  menu_item_id BIGINT NOT NULL REFERENCES menu_items(id) ON DELETE CASCADE,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-);
-
 CREATE TABLE navbars (
   id BIGSERIAL PRIMARY KEY,
   organization_id BIGINT REFERENCES organizations(id) ON DELETE CASCADE,
   title_en VARCHAR(255),
   title_bn VARCHAR(255),
-  menu_id BIGINT REFERENCES menus(id) ON DELETE SET NULL,
+  menu_item_ids JSONB,
   logo_id BIGINT NOT NULL REFERENCES media(id) ON DELETE CASCADE,
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
@@ -111,9 +92,9 @@ CREATE TABLE footers (
   address2_description_en TEXT,
   address2_description_bn TEXT,
   address2_status SMALLINT DEFAULT 1,
-  column2_menu_id BIGINT,
+  column2_menu_item_ids JSONB,
   column2_status SMALLINT DEFAULT 1,
-  column3_menu_id BIGINT,
+  column3_menu_item_ids JSONB,
   column3_logos JSONB,
   column3_status SMALLINT DEFAULT 1,
   column4_title_en VARCHAR(255),
@@ -121,11 +102,11 @@ CREATE TABLE footers (
   column4_text_en TEXT,
   column4_text_bn TEXT,
   column4_image BIGINT,
-  column4_menu_id SMALLINT,
+  column4_menu_item_ids JSONB,
   column4_description_en TEXT,
   column4_description_bn TEXT,
   column4_status SMALLINT DEFAULT 1,
-  bottom_menu_id BIGINT,
+  bottom_menu_item_ids JSONB,
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );

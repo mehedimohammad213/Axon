@@ -197,7 +197,11 @@
           {
             "type": "menu",
             "_id": "fef5f406-f301-48b6-99de-064402b82957",
-            "id": 2
+            "menu_item_ids": [
+              1,
+              2,
+              3
+            ]
           },
           {
             "type": "navbar",
@@ -8245,9 +8249,12 @@
             },
             "sectionIndex": 0,
             "index": 1,
-            "id": 21,
             "menuMode": "horizontal",
-            "menuTheme": "light"
+            "menuTheme": "light",
+            "menu_item_ids": [
+              133,
+              40
+            ]
           },
           {
             "_id": "component-1756034923817-nky3lxdvs",
@@ -10090,9 +10097,13 @@
             },
             "sectionIndex": 2,
             "index": 0,
-            "id": 22,
             "menuMode": "vertical",
-            "menuTheme": "light"
+            "menuTheme": "light",
+            "menu_item_ids": [
+              62,
+              40,
+              137
+            ]
           }
         ]
       },
@@ -10138,9 +10149,12 @@
             },
             "sectionIndex": 3,
             "index": 0,
-            "id": 23,
             "menuMode": "vertical",
-            "menuTheme": "light"
+            "menuTheme": "light",
+            "menu_item_ids": [
+              134,
+              135
+            ]
           }
         ]
       },

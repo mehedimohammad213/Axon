@@ -263,7 +263,6 @@ function createIdMapper(config) {
   const idMaps = {
     media: {},
     menuitem: {},
-    menu: {},
     navbar: {},
     footer: {},
     card: {},
@@ -302,7 +301,7 @@ function createIdMapper(config) {
       case 'slider':
         return map('slider', oldId);
       case 'menu':
-        return map('menu', oldId);
+        return null;
       case 'navbar':
         return map('navbar', oldId);
       case 'footer':
@@ -321,7 +320,10 @@ function createIdMapper(config) {
       favicon_id: 'media',
       card_ids: 'card',
       menu_item_ids: 'menuitem',
-      menu_id: 'menu',
+      column2_menu_item_ids: 'menuitem',
+      column3_menu_item_ids: 'menuitem',
+      column4_menu_item_ids: 'menuitem',
+      bottom_menu_item_ids: 'menuitem',
       formId: 'form',
       form_id: 'form',
     }[field];
@@ -341,7 +343,7 @@ function createIdMapper(config) {
       if (mapped !== null) embedded.id = mapped;
     }
 
-    for (const field of ['media_ids', 'card_ids', 'menu_item_ids', 'logo_id', 'menu_id', 'favicon_id']) {
+    for (const field of ['media_ids', 'card_ids', 'menu_item_ids', 'logo_id', 'favicon_id', 'column2_menu_item_ids', 'column3_menu_item_ids', 'column4_menu_item_ids', 'bottom_menu_item_ids']) {
       if (Object.prototype.hasOwnProperty.call(embedded, field)) {
         embedded[field] = remapIdField(field, embedded[field]);
       }
@@ -428,10 +430,13 @@ function createIdMapper(config) {
       'card_ids',
       'menu_item_ids',
       'logo_id',
-      'menu_id',
       'favicon_id',
       'formId',
       'form_id',
+      'column2_menu_item_ids',
+      'column3_menu_item_ids',
+      'column4_menu_item_ids',
+      'bottom_menu_item_ids',
     ]) {
       if (Object.prototype.hasOwnProperty.call(next, field)) {
         next[field] = remapIdField(field, next[field]);
@@ -567,29 +572,15 @@ async function seedOrganizationContent(db, organization, config, data) {
 
     console.log(`Menu items: ${Object.keys(mapper.idMaps.menuitem).length}`);
 
-    for (const row of data.menus || []) {
-      const oldId = parseInt(row.id, 10);
-      const itemIds = (row.menu_item_ids || [])
-        .map((id) => mapper.idMaps.menuitem[parseInt(id, 10)])
-        .filter((id) => id);
-
-      const menu = await upsertByKeys(
-        trx,
-        'menus',
-        { organization_id: organization.id, name: row.name },
-        { menu_item_ids: jsonValue(itemIds) }
-      );
-      mapper.idMaps.menu[oldId] = menu.id;
-    }
-
-    console.log(`Menus: ${Object.keys(mapper.idMaps.menu).length}`);
-
     for (const row of data.navbars || []) {
       const oldId = parseInt(row.id, 10);
       const titleEn = row.title_en || row.title_bn || `Navbar ${oldId}`;
       const logoId = config.features?.fallbackMedia
         ? mapper.mapMediaOrFallback(row.logo_id)
         : mapper.map('media', row.logo_id);
+      const menuItemIds = (row.menu_item_ids || [])
+        .map((id) => mapper.idMaps.menuitem[parseInt(id, 10)])
+        .filter((id) => id);
 
       const navbar = await upsertByKeys(
         trx,
@@ -597,7 +588,7 @@ async function seedOrganizationContent(db, organization, config, data) {
         { organization_id: organization.id, title_en: titleEn },
         {
           title_bn: row.title_bn || titleEn,
-          menu_id: mapper.map('menu', row.menu_id),
+          menu_item_ids: jsonValue(menuItemIds),
           logo_id: logoId,
         }
       );
@@ -639,9 +630,17 @@ async function seedOrganizationContent(db, organization, config, data) {
             address2_description_bn: row.address2_description_bn ?? null,
             address1_status: row.address1_status ?? 1,
             address2_status: row.address2_status ?? 1,
-            column2_menu_id: mapper.map('menu', row.column2_menu_id),
+            column2_menu_item_ids: jsonValue(
+              (row.column2_menu_item_ids || [])
+                .map((id) => mapper.idMaps.menuitem[parseInt(id, 10)])
+                .filter((id) => id)
+            ),
             column2_status: row.column2_status ?? 1,
-            column3_menu_id: mapper.map('menu', row.column3_menu_id),
+            column3_menu_item_ids: jsonValue(
+              (row.column3_menu_item_ids || [])
+                .map((id) => mapper.idMaps.menuitem[parseInt(id, 10)])
+                .filter((id) => id)
+            ),
             column3_logos: jsonValue(column3Logos),
             column3_status: row.column3_status ?? 1,
             column4_title_en: row.column4_title_en ?? null,
@@ -649,11 +648,19 @@ async function seedOrganizationContent(db, organization, config, data) {
             column4_image: mapper.map('media', row.column4_image),
             column4_text_en: row.column4_text_en ?? null,
             column4_text_bn: row.column4_text_bn ?? null,
-            column4_menu_id: mapper.map('menu', row.column4_menu_id),
+            column4_menu_item_ids: jsonValue(
+              (row.column4_menu_item_ids || [])
+                .map((id) => mapper.idMaps.menuitem[parseInt(id, 10)])
+                .filter((id) => id)
+            ),
             column4_description_en: row.column4_description_en ?? null,
             column4_description_bn: row.column4_description_bn ?? null,
             column4_status: row.column4_status ?? 1,
-            bottom_menu_id: mapper.map('menu', row.bottom_menu_id),
+            bottom_menu_item_ids: jsonValue(
+              (row.bottom_menu_item_ids || [])
+                .map((id) => mapper.idMaps.menuitem[parseInt(id, 10)])
+                .filter((id) => id)
+            ),
           }
         );
         mapper.idMaps.footer[oldId] = footer.id;

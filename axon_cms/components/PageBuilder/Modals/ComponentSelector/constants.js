@@ -41,7 +41,7 @@ export const componentOptions = [
     icon: "/icons/headless/menus.svg",
     premium: false,
     category: "Layout",
-    description: "Add navigation menu",
+    description: "Add a list of menu items",
     tags: ["navigation", "menu", "layout"],
   },
   {

@@ -1,7 +1,9 @@
 const { db, findWhereIn } = require('../db');
 const { createModel } = require('./BaseModel');
 
-const base = createModel('navbars');
+const base = createModel('navbars', {
+  jsonFields: ['menu_item_ids'],
+});
 
 function normalizeIds(value) {
   if (value == null || value === '') return [];
@@ -22,40 +24,22 @@ function orderByIdList(items, ids) {
   return ids.map((id) => map[String(id)]).filter(Boolean);
 }
 
-async function loadMenuWithItems(menuId) {
-  if (!menuId) return null;
+async function loadMenuItems(menuItemIds) {
+  const ids = normalizeIds(menuItemIds);
+  if (!ids.length) return [];
 
-  const menu = await db.findOne('menus', { id: menuId });
-  if (!menu) return null;
-
-  const menuItemIds = normalizeIds(menu.menu_item_ids);
-  let menuItems = [];
-
-  if (menuItemIds.length) {
-    const rows = await findWhereIn('menu_items', 'id', menuItemIds);
-    menuItems = orderByIdList(rows, menuItemIds);
-  }
-
-  return {
-    ...menu,
-    menu_item_ids: menuItemIds,
-    menu_items: menuItems,
-  };
+  const rows = await findWhereIn('menu_items', 'id', ids);
+  return orderByIdList(rows, ids);
 }
 
 async function loadRelations(navbar) {
   if (!navbar) return navbar;
-  const result = { ...navbar };
-
-  if (navbar.logo_id) {
-    result.logo = await db.findOne('media', { id: navbar.logo_id });
-  } else {
-    result.logo = null;
-  }
-
-  result.menu = await loadMenuWithItems(navbar.menu_id);
-
-  return result;
+  const menuItemIds = normalizeIds(navbar.menu_item_ids);
+  return {
+    ...navbar,
+    menu_item_ids: menuItemIds,
+    menu_items: await loadMenuItems(menuItemIds),
+  };
 }
 
 async function findAllWithRelationsPaginated({ page = 1, limit = 20 } = {}) {
@@ -72,12 +56,20 @@ async function findByIdWithRelations(id) {
 }
 
 async function createNavbar(data) {
-  const navbar = await base.create(data);
+  const payload = {
+    ...data,
+    menu_item_ids: normalizeIds(data.menu_item_ids),
+  };
+  const navbar = await base.create(payload);
   return loadRelations(navbar);
 }
 
 async function updateNavbar(id, data) {
-  const updated = await base.update(id, data);
+  const payload = { ...data };
+  if (Object.prototype.hasOwnProperty.call(payload, 'menu_item_ids')) {
+    payload.menu_item_ids = normalizeIds(payload.menu_item_ids);
+  }
+  const updated = await base.update(id, payload);
   return loadRelations(updated);
 }
 

@@ -45,10 +45,10 @@ const Footer = () => {
   const [selectedMedia, setSelectedMedia] = useState("");
   const [mediaList, setMediaList] = useState([]);
   const [menuData, setMenuData] = useState([]);
-  const [selectedItems, setSelectedItems] = useState("");
-  const [selectedItemsColumn3, setSelectedItemsColumn3] = useState("");
-  const [selectedItemsColumn4, setSelectedItemsColumn4] = useState("");
-  const [selectedItemsBottom, setSelectedItemsBottom] = useState("");
+  const [selectedItems, setSelectedItems] = useState([]);
+  const [selectedItemsColumn3, setSelectedItemsColumn3] = useState([]);
+  const [selectedItemsColumn4, setSelectedItemsColumn4] = useState([]);
+  const [selectedItemsBottom, setSelectedItemsBottom] = useState([]);
   const [formData, setFormData] = useState({
     title_en: "",
     title_bn: "",
@@ -61,8 +61,8 @@ const Footer = () => {
     address2_title_bn: "",
     address2_description_en: "",
     address2_description_bn: "",
-    column2_menu_id: "",
-    column3_menu_id: "",
+    column2_menu_item_ids: [],
+    column3_menu_item_ids: [],
     column3_logos: "",
     column4_title_en: "",
     column4_title_bn: "",
@@ -71,13 +71,13 @@ const Footer = () => {
     column4_text_bn: "",
     column4_description_en: "",
     column4_description_bn: "",
-    column4_menu_id: "",
-    bottom_menu_id: "",
+    column4_menu_item_ids: [],
+    bottom_menu_item_ids: [],
     logo: [],
-    column2_menu: {},
-    column3_menu: {},
-    column4_menu: {},
-    bottom_menu: {},
+    column2_menu_items: [],
+    column3_menu_items: [],
+    column4_menu_items: [],
+    bottom_menu_items: [],
 
     // Add more fields as needed
   });
@@ -108,15 +108,15 @@ const Footer = () => {
     "title_en",
     "title_bn",
     "logo_id",
-    "bottom_menu_id",
-    "column2_menu_id",
-    "column3_menu_id",
-    "column4_menu_id",
+    "bottom_menu_item_ids",
+    "column2_menu_item_ids",
+    "column3_menu_item_ids",
+    "column4_menu_item_ids",
     "logo",
-    "column2_menu",
-    "column3_menu",
-    "column4_menu",
-    "bottom_menu",
+    "column2_menu_items",
+    "column3_menu_items",
+    "column4_menu_items",
+    "bottom_menu_items",
   ];
 
   const updateFormDataFromItems = (items) => {
@@ -132,7 +132,7 @@ const Footer = () => {
     setSelectedItems(selectedValues);
     setFormData({
       ...formData,
-      column2_menu_id: selectedValues,
+      column2_menu_item_ids: selectedValues,
     });
   };
   // Define separate onChange event handlers for each Select component
@@ -141,7 +141,7 @@ const Footer = () => {
     setSelectedItemsColumn3(selectedValue);
     setFormData({
       ...formData,
-      column3_menu_id: selectedValue,
+      column3_menu_item_ids: selectedValue,
     });
   };
 
@@ -167,7 +167,7 @@ const Footer = () => {
     setSelectedItemsColumn4(selectedValue);
     setFormData({
       ...formData,
-      column4_menu_id: selectedValue,
+      column4_menu_item_ids: selectedValue,
     });
   };
 
@@ -175,7 +175,7 @@ const Footer = () => {
     setSelectedItemsBottom(selectedValue);
     setFormData({
       ...formData,
-      bottom_menu_id: selectedValue,
+      bottom_menu_item_ids: selectedValue,
     });
   };
   const handleOpenModal = () => {
@@ -215,10 +215,10 @@ const Footer = () => {
   const handleClose = () => {
     toggleCollapseAdd(true);
     setFormData("");
-    setSelectedItemsBottom("");
-    setSelectedItemsColumn3("");
-    setSelectedItemsColumn4("");
-    setSelectedItems("");
+    setSelectedItemsBottom([]);
+    setSelectedItemsColumn3([]);
+    setSelectedItemsColumn4([]);
+    setSelectedItems([]);
     setSelectedMedia("");
   };
 
@@ -236,7 +236,7 @@ const Footer = () => {
   const getMenus = async () => {
     try {
       setIsLoading(true);
-      const res = await instance.get("/menus");
+      const res = await instance.get("/menuitems");
       setMenuData(res.data);
       setIsLoading(false);
     } catch (error) {
@@ -363,7 +363,7 @@ const Footer = () => {
                     },
                     {
                       title: "Menus",
-                      onClick: () => router.push("/menus"),
+                      onClick: () => router.push("/menuitems"),
                     },
                     {
                       title: "Navbars",
@@ -587,7 +587,7 @@ const Footer = () => {
                       {console.log("Menu List: ", menuData)}
                       <Select
                         showSearch
-                        // mode="multiple"
+                        mode="multiple"
                         placeholder="Select menu items"
                         style={{ width: "100%", marginTop: ".5rem" }}
                         value={selectedItems} // Set the selected items from state
@@ -596,7 +596,7 @@ const Footer = () => {
                         {menuData?.map((item) => (
                           <>
                             <Option key={item.id} value={item?.id}>
-                              {item.name}
+                              {item.title || item.name}
                             </Option>
                           </>
                         ))}
@@ -607,7 +607,7 @@ const Footer = () => {
                       <h3>Column3 Menu:</h3>
                       <Select
                         showSearch
-                        // mode="multiple"
+                        mode="multiple"
                         placeholder="Select menu items"
                         style={{ width: "100%", marginTop: ".5rem" }}
                         value={selectedItemsColumn3} // Set the selected items from state
@@ -616,7 +616,7 @@ const Footer = () => {
                         {menuData?.map((item) => (
                           <>
                             <Option key={item.id} value={item?.id}>
-                              {item.name}
+                              {item.title || item.name}
                             </Option>
                           </>
                         ))}
@@ -628,7 +628,7 @@ const Footer = () => {
                       <h3>Column4 Menu:</h3>
                       <Select
                         showSearch
-                        // mode="multiple"
+                        mode="multiple"
                         placeholder="Select menu items"
                         style={{ width: "100%", marginTop: ".5rem" }}
                         value={selectedItemsColumn4} // Set the selected items from state
@@ -637,7 +637,7 @@ const Footer = () => {
                         {menuData?.map((item) => (
                           <>
                             <Option key={item.id} value={item?.id}>
-                              {item.name}
+                              {item.title || item.name}
                             </Option>
                           </>
                         ))}
@@ -706,7 +706,7 @@ const Footer = () => {
                       <h3>Bottom Menu:</h3>
                       <Select
                         showSearch
-                        // mode="multiple"
+                        mode="multiple"
                         placeholder="Select menu item"
                         style={{ width: "100%", marginTop: ".5rem" }}
                         value={selectedItemsBottom} // Set the selected items from state
@@ -715,7 +715,7 @@ const Footer = () => {
                         {menuData?.map((item) => (
                           <>
                             <Option key={item.id} value={item?.id}>
-                              {item.name}
+                              {item.title || item.name}
                             </Option>
                           </>
                         ))}
@@ -793,10 +793,10 @@ const Footer = () => {
                   </div>
                 </Col>
                 <Col span={4}>
-                  <h2>{items?.column2_menu?.name}</h2>
+                  <h2>Column 2 Links</h2>
 
                   <h4 style={{ color: "#c3c3c3", marginTop: "1rem" }}>
-                    {items?.column2_menu?.menu_items?.map((item) => (
+                    {items?.column2_menu_items?.map((item) => (
                       <p style={{ color: "#fff", marginTop: "1rem" }}>
                         {item?.title}
                       </p>
@@ -805,9 +805,9 @@ const Footer = () => {
                   {/*  */}
                 </Col>
                 <Col span={6}>
-                  <h2>{items?.column3_menu?.name}</h2>
+                  <h2>Column 3 Links</h2>
                   <h4 style={{ color: "#c3c3c3", marginTop: "1rem" }}>
-                    {items?.column3_menu?.menu_items?.map((item) => (
+                    {items?.column3_menu_items?.map((item) => (
                       <p style={{ color: "#fff", marginTop: "1rem" }}>
                         {item?.title}
                       </p>
@@ -852,7 +852,7 @@ const Footer = () => {
                         columnGap: "2rem",
                       }}
                     >
-                      {items?.bottom_menu?.menu_items?.map((item) => (
+                      {items?.bottom_menu_items?.map((item) => (
                         <>
                           {" "}
                           <p
@@ -1102,20 +1102,20 @@ const Footer = () => {
                           <h3>Column2 Menu:</h3>
                           <Select
                             showSearch
-                            // mode="multiple"
+                            mode="multiple"
                             placeholder="Select menu items"
                             style={{ width: "100%", marginTop: ".5rem" }}
                             value={
                               selectedItems
                                 ? selectedItems
-                                : items?.column2_menu?.name
+                                : "Links"
                             } // Set the selected items from state
                             onChange={handleSelectChange} // Set the event handler
                           >
                             {menuData?.map((item) => (
                               <>
                                 <Option key={item.id} value={item?.id}>
-                                  {item.name}
+                                  {item.title || item.name}
                                 </Option>
                               </>
                             ))}
@@ -1126,20 +1126,20 @@ const Footer = () => {
                           <h3>Column3 Menu:</h3>
                           <Select
                             showSearch
-                            // mode="multiple"
+                            mode="multiple"
                             placeholder="Select menu items"
                             style={{ width: "100%", marginTop: ".5rem" }}
                             value={
                               selectedItemsColumn3
                                 ? selectedItemsColumn3
-                                : items?.column3_menu?.name
+                                : "Links"
                             } // Set the selected items from state
                             onChange={handleSelectChangeColumn3} // Set the event handler
                           >
                             {menuData?.map((item) => (
                               <>
                                 <Option key={item.id} value={item?.id}>
-                                  {item.name}
+                                  {item.title || item.name}
                                 </Option>
                               </>
                             ))}
@@ -1151,20 +1151,20 @@ const Footer = () => {
                           <h3>Column4 Menu:</h3>
                           <Select
                             showSearch
-                            // mode="multiple"
+                            mode="multiple"
                             placeholder="Select menu items"
                             style={{ width: "100%", marginTop: ".5rem" }}
                             value={
                               selectedItemsColumn4
                                 ? selectedItemsColumn4
-                                : items?.column3_menu?.name
+                                : "Links"
                             } // Set the selected items from state
                             onChange={handleSelectChangeColumn4} // Set the event handler
                           >
                             {menuData?.map((item) => (
                               <>
                                 <Option key={item.id} value={item?.id}>
-                                  {item.name}
+                                  {item.title || item.name}
                                 </Option>
                               </>
                             ))}
@@ -1237,20 +1237,20 @@ const Footer = () => {
                           <h3>Bottom Menu:</h3>
                           <Select
                             showSearch
-                            // mode="multiple"
+                            mode="multiple"
                             placeholder="Select menu item"
                             style={{ width: "100%", marginTop: ".5rem" }}
                             value={
                               selectedItemsBottom
                                 ? selectedItemsBottom
-                                : items?.bottom_menu?.name
+                                : "Links"
                             } // Set the selected items from state
                             onChange={handleSelectChangeBottom} // Set the event handler
                           >
                             {menuData?.map((item) => (
                               <>
                                 <Option key={item.id} value={item?.id}>
-                                  {item.name}
+                                  {item.title || item.name}
                                 </Option>
                               </>
                             ))}

@@ -53,10 +53,10 @@ export default function StatsOverview({ data, loading }) {
       link: "/cards",
     },
     {
-      title: "Menus",
-      value: data.menus.length,
+      title: "Menu Items",
+      value: data.menuitems?.length || 0,
       icon: UnorderedListOutlined,
-      link: "/menus",
+      link: "/menuitems",
     },
     {
       title: "Forms",

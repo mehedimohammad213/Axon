@@ -13,7 +13,7 @@ import { asList } from "../components/dashboard/dashboardUtils";
 const emptyData = {
   pages: [],
   media: [],
-  menus: [],
+  menuitems: [],
   navbars: [],
   sliders: [],
   cards: [],
@@ -33,7 +33,7 @@ const Index = () => {
       const [
         pages_response,
         media_response,
-        menus_response,
+        menuitems_response,
         navbars_response,
         sliders_response,
         cards_response,
@@ -42,7 +42,7 @@ const Index = () => {
       ] = await Promise.all([
         cachedApiCall("pages", () => instance.get("/pages"), undefined, force),
         cachedApiCall("media", () => instance.get("/media"), undefined, force),
-        cachedApiCall("menus", () => instance.get("/menus"), undefined, force),
+        cachedApiCall("menuitems", () => instance.get("/menuitems"), undefined, force),
         cachedApiCall("navbars", () => instance.get("/navbars"), undefined, force),
         cachedApiCall("sliders", () => instance.get("/sliders"), undefined, force),
         cachedApiCall("cards", () => instance.get("/cards"), undefined, force),
@@ -53,7 +53,7 @@ const Index = () => {
       setData({
         pages: asList(pages_response.data),
         media: asList(media_response.data),
-        menus: asList(menus_response.data),
+        menuitems: asList(menuitems_response.data),
         navbars: asList(navbars_response.data),
         sliders: asList(sliders_response.data),
         cards: asList(cards_response.data),

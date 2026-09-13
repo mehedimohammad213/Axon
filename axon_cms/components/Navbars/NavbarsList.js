@@ -7,7 +7,6 @@ import NavbarRow from "./NavbarRow";
 
 const NavbarsList = ({
   navbars,
-  menus,
   media,
   setNavbars,
   editingNavbarId,
@@ -59,7 +58,6 @@ const NavbarsList = ({
           <NavbarRow
             key={navbar.id}
             navbar={navbar}
-            menus={menus}
             media={media}
             setNavbars={setNavbars}
             editingNavbarId={editingNavbarId}

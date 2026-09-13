@@ -82,21 +82,11 @@
           {
             "_id": "footer-quick-menu",
             "type": "menu",
-            "id": 13,
             "value": "",
             "menuMode": "vertical",
             "menuTheme": "dark",
             "settings": [],
             "_headless": {
-              "id": 13,
-              "name": "Footer Quick Links",
-              "menu_item_ids": [
-                5,
-                11,
-                12,
-                8,
-                9
-              ],
               "menu_items": [
                 {
                   "id": 5,
@@ -134,7 +124,14 @@
                   "parent_id": null
                 }
               ]
-            }
+            },
+            "menu_item_ids": [
+              5,
+              11,
+              12,
+              8,
+              9
+            ]
           }
         ]
       },
@@ -158,18 +155,11 @@
           {
             "_id": "footer-help-menu",
             "type": "menu",
-            "id": 15,
             "value": "",
             "menuMode": "vertical",
             "menuTheme": "dark",
             "settings": [],
             "_headless": {
-              "id": 15,
-              "name": "Footer Help Links",
-              "menu_item_ids": [
-                14,
-                12
-              ],
               "menu_items": [
                 {
                   "id": 14,
@@ -186,7 +176,11 @@
                   "parent_id": null
                 }
               ]
-            }
+            },
+            "menu_item_ids": [
+              14,
+              12
+            ]
           }
         ]
       },
@@ -210,17 +204,11 @@
           {
             "_id": "footer-platform-menu",
             "type": "menu",
-            "id": 17,
             "value": "",
             "menuMode": "vertical",
             "menuTheme": "dark",
             "settings": [],
             "_headless": {
-              "id": 17,
-              "name": "Footer Platform Links",
-              "menu_item_ids": [
-                16
-              ],
               "menu_items": [
                 {
                   "id": 16,
@@ -230,7 +218,10 @@
                   "parent_id": null
                 }
               ]
-            }
+            },
+            "menu_item_ids": [
+              16
+            ]
           }
         ]
       },
@@ -645,19 +636,11 @@
           {
             "_id": "home-follow-us-menu",
             "type": "menu",
-            "id": 21,
             "value": "",
             "menuMode": "vertical",
             "menuTheme": "light",
             "settings": [],
             "_headless": {
-              "id": 21,
-              "name": "Follow Us",
-              "menu_item_ids": [
-                18,
-                19,
-                20
-              ],
               "menu_items": [
                 {
                   "id": 18,
@@ -681,7 +664,12 @@
                   "parent_id": null
                 }
               ]
-            }
+            },
+            "menu_item_ids": [
+              18,
+              19,
+              20
+            ]
           }
         ]
       },

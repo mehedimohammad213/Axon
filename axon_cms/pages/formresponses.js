@@ -51,7 +51,7 @@ const FormResponses = () => {
                   },
                   {
                     title: "Menus",
-                    onClick: () => router.push("/menus"),
+                    onClick: () => router.push("/menuitems"),
                   },
                   {
                     title: "Navbars",

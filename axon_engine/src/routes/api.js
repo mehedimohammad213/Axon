@@ -15,7 +15,7 @@ const formDataController = require('../controllers/formDataController');
 const formSubmissionController = require('../controllers/formSubmissionController');
 const generatedModelController = require('../controllers/generatedModelController');
 const dynamicController = require('../controllers/dynamicController');
-const { navbarController, menuController, sliderController, formBuilderController } = require('../controllers/cmsControllers');
+const { navbarController, sliderController, formBuilderController } = require('../controllers/cmsControllers');
 
 const router = express.Router();
 
@@ -56,13 +56,6 @@ router.get('/navbars/:id', navbarController.show);
 router.post('/navbars', navbarController.store);
 router.put('/navbars/:id', navbarController.update);
 router.delete('/navbars/:id', navbarController.destroy);
-
-// Menus
-router.get('/menus', menuController.index);
-router.get('/menus/:id', menuController.show);
-router.post('/menus', menuController.store);
-router.put('/menus/:id', menuController.update);
-router.delete('/menus/:id', menuController.destroy);
 
 // Menu Items
 router.get('/menuitems', menuItemController.index);
