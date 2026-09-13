@@ -1,137 +1,88 @@
-import React, { useMemo } from "react";
-import { Button, Image, Popconfirm, Table, Tag } from "antd";
-import { DeleteOutlined, EditOutlined } from "@ant-design/icons";
-import { getFieldDisplayValue, getListFields } from "./productUtils";
-import { resolveMediaUrl } from "../../utils/mediaUrl";
+import React, { useMemo, useState } from "react";
+import { Button, Empty } from "antd";
+import { PlusOutlined, ShoppingOutlined } from "@ant-design/icons";
+import ProductRow from "./ProductRow";
 
 const ProductsList = ({
   products,
   productTypes,
+  onView,
   onEdit,
   onDelete,
+  onCreate,
+  emptyTitle = "No products uploaded yet",
+  emptyDescription = "Click Upload Product to add your first item.",
+  createLabel = "Upload Product",
 }) => {
+  const [expandedProductId, setExpandedProductId] = useState(null);
+
   const typeById = useMemo(() => {
     const map = new Map();
     productTypes.forEach((type) => map.set(String(type.id), type));
     return map;
   }, [productTypes]);
 
-  const dynamicColumns = useMemo(() => {
-    const allFields = [];
-    const seen = new Set();
-    productTypes.forEach((type) => {
-      getListFields(type).forEach((field) => {
-        if (!seen.has(field.name)) {
-          seen.add(field.name);
-          allFields.push(field);
-        }
-      });
-    });
-    return allFields.slice(0, 4).map((field) => ({
-      title: field.label || field.name,
-      key: `field_${field.name}`,
-      ellipsis: true,
-      render: (_, record) => getFieldDisplayValue(record, field.name),
-    }));
-  }, [productTypes]);
+  const handleExpand = (productId) => {
+    setExpandedProductId((prev) => (prev === productId ? null : productId));
+  };
 
-  const columns = [
-    {
-      title: "ID",
-      dataIndex: "id",
-      key: "id",
-      width: 80,
-      render: (id) => <Tag>{id}</Tag>,
-    },
-    {
-      title: "Product",
-      dataIndex: "title",
-      key: "title",
-      render: (title, record) => (
-        <div className="flex items-center gap-3">
-          {record.media_files?.file_path ? (
-            <Image
-              src={resolveMediaUrl(record.media_files.file_path)}
-              alt={title}
-              width={48}
-              height={36}
-              className="rounded object-cover"
-              preview={false}
-            />
-          ) : (
-            <div className="flex h-9 w-12 items-center justify-center rounded bg-gray-100 text-xs text-gray-400">
-              N/A
+  const handleDelete = async (productId) => {
+    await onDelete?.(productId);
+    if (expandedProductId === productId) {
+      setExpandedProductId(null);
+    }
+  };
+
+  if (!products.length) {
+    return (
+      <div className="mt-6 flex items-center justify-center rounded-2xl border border-dashed border-gray-200 bg-white py-16">
+        <Empty
+          image={
+            <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-light text-2xl text-brand-dark">
+              <ShoppingOutlined />
             </div>
-          )}
-          <div>
-            <div className="font-medium text-gray-900">
-              {title || "Untitled Product"}
+          }
+          description={
+            <div className="space-y-1">
+              <p className="text-base font-medium text-gray-800">{emptyTitle}</p>
+              <p className="text-sm text-gray-500">{emptyDescription}</p>
             </div>
-            {record.slug && (
-              <div className="text-xs text-gray-500">{record.slug}</div>
-            )}
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Type",
-      key: "product_type",
-      width: 160,
-      render: (_, record) => {
-        const type =
-          record.product_type ||
-          typeById.get(String(record.product_type_id));
-        return <Tag color="blue">{type?.name || "Unknown"}</Tag>;
-      },
-    },
-    ...dynamicColumns,
-    {
-      title: "Status",
-      dataIndex: "status",
-      key: "status",
-      width: 110,
-      render: (status) =>
-        status === false || status === 0 ? (
-          <Tag color="default">Inactive</Tag>
-        ) : (
-          <Tag color="green">Active</Tag>
-        ),
-    },
-    {
-      title: "Actions",
-      key: "actions",
-      width: 200,
-      render: (_, record) => (
-        <div className="flex flex-wrap gap-2">
-          <Button icon={<EditOutlined />} onClick={() => onEdit?.(record)}>
-            Edit
-          </Button>
-          <Popconfirm
-            title="Delete this product?"
-            description="This cannot be undone."
-            okText="Delete"
-            okButtonProps={{ danger: true }}
-            onConfirm={() => onDelete?.(record.id)}
-          >
-            <Button danger icon={<DeleteOutlined />}>
-              Delete
+          }
+        >
+          {onCreate && (
+            <Button
+              type="primary"
+              icon={<PlusOutlined />}
+              onClick={onCreate}
+              className="mt-2 bg-brand hover:bg-brand-dark"
+            >
+              {createLabel}
             </Button>
-          </Popconfirm>
-        </div>
-      ),
-    },
-  ];
+          )}
+        </Empty>
+      </div>
+    );
+  }
 
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm">
-      <Table
-        rowKey="id"
-        columns={columns}
-        dataSource={products}
-        pagination={false}
-        scroll={{ x: true }}
-      />
+    <div className="mt-6 space-y-4">
+      <div className="grid grid-cols-1 items-start gap-4 xl:grid-cols-2">
+        {products.map((product) => (
+          <ProductRow
+            key={product.id}
+            product={product}
+            productType={
+              product.product_type ||
+              typeById.get(String(product.product_type_id))
+            }
+            expandedProductId={expandedProductId}
+            handleExpand={handleExpand}
+            onView={onView}
+            onEdit={onEdit}
+            onDelete={handleDelete}
+          />
+        ))}
+      </div>
     </div>
   );
 };

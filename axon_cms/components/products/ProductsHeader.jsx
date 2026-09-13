@@ -1,5 +1,5 @@
 import React from "react";
-import { Badge, Button, Input, Tooltip, message } from "antd";
+import { Input, Button, Select, message, Tooltip, Badge } from "antd";
 import {
   CopyOutlined,
   PlusCircleOutlined,
@@ -8,21 +8,34 @@ import {
 } from "@ant-design/icons";
 import Image from "next/image";
 
+const { Option } = Select;
+
 const ProductsHeader = ({
   title = "Products",
   countLabel = "Items",
   itemCount,
   searchTerm,
+  setSearchTerm,
   onSearch,
+  sortType = "desc",
+  setSortType,
+  onShowChange,
   onRefresh,
   searchPlaceholder = "Search...",
   primaryActionLabel,
   onPrimaryAction,
   apiEndpoint = "/products",
 }) => {
+  const handleSearchChange = (value) => {
+    if (setSearchTerm) setSearchTerm(value);
+    else onSearch?.(value);
+  };
+
   const handleRefresh = () => {
-    onRefresh?.();
-    message.success("Data refreshed successfully");
+    if (onRefresh) {
+      onRefresh();
+      message.success("Data refreshed successfully");
+    }
   };
 
   return (
@@ -35,7 +48,7 @@ const ProductsHeader = ({
                 src="/icons/headless/products.svg"
                 width={28}
                 height={28}
-                alt="Products"
+                alt={title}
               />
             </div>
             <div className="flex flex-col">
@@ -94,14 +107,68 @@ const ProductsHeader = ({
       </div>
 
       <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
-        <Input
-          allowClear
-          prefix={<SearchOutlined className="text-gray-400" />}
-          placeholder={searchPlaceholder}
-          value={searchTerm}
-          onChange={(e) => onSearch?.(e.target.value)}
-          className="h-10 max-w-md"
-        />
+        <div className="flex flex-col items-stretch justify-between gap-4 lg:flex-row lg:items-center">
+          <div className="flex flex-wrap items-center gap-4">
+            {setSortType && (
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-medium text-gray-600">Sort</span>
+                <div className="flex items-center rounded-lg border border-gray-200 bg-gray-50 p-0.5">
+                  <Button
+                    type={sortType === "desc" ? "primary" : "text"}
+                    size="small"
+                    onClick={() => setSortType("desc")}
+                    className={`rounded-md px-3 py-1 text-sm font-medium ${
+                      sortType === "desc"
+                        ? "bg-brand text-white"
+                        : "text-gray-600 hover:bg-white hover:text-gray-800"
+                    }`}
+                  >
+                    Newest
+                  </Button>
+                  <Button
+                    type={sortType === "asc" ? "primary" : "text"}
+                    size="small"
+                    onClick={() => setSortType("asc")}
+                    className={`rounded-md px-3 py-1 text-sm font-medium ${
+                      sortType === "asc"
+                        ? "bg-brand text-white"
+                        : "text-gray-600 hover:bg-white hover:text-gray-800"
+                    }`}
+                  >
+                    Oldest
+                  </Button>
+                </div>
+              </div>
+            )}
+          </div>
+
+          <div className="flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center lg:w-auto">
+            {onShowChange && (
+              <div className="flex items-center gap-2">
+                <span className="text-sm font-medium text-gray-600">Show</span>
+                <Select
+                  defaultValue="10"
+                  className="w-24 [&_.ant-select-selector]:h-9 [&_.ant-select-selector]:rounded-lg [&_.ant-select-selector]:border-gray-200"
+                  onChange={onShowChange}
+                >
+                  <Option value="10">10</Option>
+                  <Option value="20">20</Option>
+                  <Option value="50">50</Option>
+                  <Option value="100">100</Option>
+                </Select>
+              </div>
+            )}
+
+            <Input
+              placeholder={searchPlaceholder}
+              value={searchTerm}
+              onChange={(e) => handleSearchChange(e.target.value)}
+              className="h-9 w-full rounded-lg border-gray-200 sm:w-72 [&_.ant-input]:placeholder:text-gray-400"
+              allowClear
+              prefix={<SearchOutlined className="text-gray-400" />}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );
