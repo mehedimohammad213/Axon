@@ -81,6 +81,15 @@ export const componentOptions = [
     tags: ["card", "layout", "container"],
   },
   {
+    type: "product",
+    name: "Product",
+    icon: "/icons/headless/products.svg",
+    premium: false,
+    category: "Layout",
+    description: "Add one or more products",
+    tags: ["product", "catalog", "layout", "shop"],
+  },
+  {
     type: "video",
     name: "Video",
     icon: "/icons/headless/video.svg",

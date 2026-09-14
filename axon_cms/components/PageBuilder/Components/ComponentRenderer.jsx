@@ -21,6 +21,7 @@ import TestimonialComponent from "./TestimonialComponent/TestimonialComponent";
 import TitleDescriptionComponent from "./TitleDescriptionComponent";
 import FormComponent from "./FormComponent";
 import InfoBoxComponent from "./InfoBoxComponent/InfoBoxComponent";
+import ProductComponent from "./ProductComponent";
 import { useDispatch, useSelector } from "react-redux";
 import {
   setPageData,
@@ -38,6 +39,7 @@ const COMPONENT_MAP = {
   navbar: React.memo(NavbarComponent),
   slider: React.memo(SliderComponent),
   card: React.memo(CardComponent),
+  product: React.memo(ProductComponent),
   footer: React.memo(FooterComponent),
   video: React.memo(VideoComponent),
   table: React.memo(TableComponent),
