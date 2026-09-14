@@ -71,21 +71,28 @@ const FooterComponent = ({
     if (hasSelectedFooter(component._headless)) {
       setFooterData(component._headless);
       setAltTitle(component._headless?.altTitle || "");
-    } else {
+      return;
+    }
+
+    // Keep in-progress selection while editing; only clear when idle.
+    if (!isEditing) {
       setFooterData(null);
       setAltTitle("");
     }
-  }, [component._headless]);
+  }, [component._headless, isEditing]);
 
   const handleSelectFooter = (selectedFooter) => {
     setSelectedFooterData(selectedFooter);
+    setFooterData(selectedFooter);
+    setAltTitle(selectedFooter?.altTitle || "");
     setIsModalVisible(false);
     setIsEditing(true);
     setShowConfig(true);
   };
 
   const handleSubmit = () => {
-    if (!selectedFooterData) {
+    const footerToSave = selectedFooterData || footerData;
+    if (!footerToSave || !hasSelectedFooter(footerToSave)) {
       Modal.error({
         title: "Validation Error",
         content: "No footer selected.",
@@ -96,14 +103,14 @@ const FooterComponent = ({
     updateComponent({
       ...component,
       _headless: {
-        ...selectedFooterData,
+        ...footerToSave,
         config: footerConfig,
         altTitle,
       },
-      id: selectedFooterData.id,
+      id: footerToSave.id,
     });
     setFooterData({
-      ...selectedFooterData,
+      ...footerToSave,
       altTitle,
     });
     setSelectedFooterData(null);
@@ -113,6 +120,13 @@ const FooterComponent = ({
   };
 
   const handleCancel = () => {
+    if (hasSelectedFooter(component._headless)) {
+      setFooterData(component._headless);
+      setAltTitle(component._headless?.altTitle || "");
+    } else {
+      setFooterData(null);
+      setAltTitle("");
+    }
     setSelectedFooterData(null);
     setIsEditing(false);
     setShowConfig(false);
@@ -124,22 +138,31 @@ const FooterComponent = ({
   };
 
   const renderFooterContent = (footer) => {
-    if (!footer?.body?.[0]?.data) return null;
+    if (!footer) return null;
 
-    const displayTitle = altTitle || footer.page_name_en;
+    const displayTitle = altTitle || footer.page_name_en || footer.title;
+    const bodyItems = footer?.body?.[0]?.data;
 
     return (
       <div className="space-y-4">
-        <h2 className="text-xl font-semibold text-theme">{displayTitle}</h2>
-        {footer.body[0].data.map((comp, index) => (
-          <ComponentRenderer
-            key={comp._id || index}
-            component={comp}
-            index={index}
-            sectionIndex={0}
-            preview={true}
-          />
-        ))}
+        {displayTitle && (
+          <h2 className="text-xl font-semibold text-theme">{displayTitle}</h2>
+        )}
+        {Array.isArray(bodyItems) && bodyItems.length > 0 ? (
+          bodyItems.map((comp, index) => (
+            <ComponentRenderer
+              key={comp._id || index}
+              component={comp}
+              index={index}
+              sectionIndex={0}
+              preview={true}
+            />
+          ))
+        ) : (
+          <p className="text-sm text-slate-500">
+            Footer selected. Content will appear after the footer page has components.
+          </p>
+        )}
       </div>
     );
   };
@@ -206,12 +229,7 @@ const FooterComponent = ({
       </div>
 
       <div className="flex flex-col md:flex-row items-start gap-4">
-        <div
-          className={`flex flex-col ${isEditing && selectedFooterData ? "w-full md:w-1/2" : "w-full"}`}
-        >
-          {footerData && isEditing && (
-            <h4 className="mb-2 text-md font-semibold">Current Footer</h4>
-          )}
+        <div className="flex flex-col w-full">
           {footerData ? (
             <div className="w-full p-4 border rounded-md bg-white">
               {renderFooterContent(footerData)}
@@ -229,15 +247,6 @@ const FooterComponent = ({
             </div>
           )}
         </div>
-
-        {isEditing && selectedFooterData && (
-          <div className="flex flex-col w-full md:w-1/2">
-            <h4 className="mb-2 text-md font-semibold">Selected Footer</h4>
-            <div className="w-full p-4 border rounded-md bg-white">
-              {renderFooterContent(selectedFooterData)}
-            </div>
-          </div>
-        )}
       </div>
 
       <FooterSelectionModal
