@@ -5,6 +5,7 @@ import AdminListHeader from "../../../components/admin/AdminListHeader";
 import UsersList from "../../../components/admin/UsersList";
 import UserForm from "../../../components/settings/user/UserForm";
 import { usePermissions } from "../../../src/hooks/usePermissions";
+import { useGlobalRefresh } from "../../../src/context/MenuRefreshContext";
 import { setPageTitle } from "../../../global/constants/pageTitle";
 
 const { Option } = Select;
@@ -89,6 +90,13 @@ export default function AdminUsersPage() {
       fetchRoles();
     }
   }, [canViewUsers, fetchUsers, fetchRoles]);
+
+  useGlobalRefresh(() => {
+    if (!canViewUsers) return;
+    setCurrentPage(1);
+    fetchUsers();
+    fetchRoles();
+  });
 
   const filteredUsers = useMemo(() => {
     let results = [...allUsers];
