@@ -160,23 +160,25 @@ const ProductComponent = ({
       return;
     }
 
+    const productData = {
+      productId: selectedProduct.id,
+      id: selectedProduct.id,
+      title: selectedProduct.title,
+      description: selectedProduct.description,
+      slug: selectedProduct.slug,
+      status: selectedProduct.status,
+      field_values: selectedProduct.field_values,
+      media_files: selectedProduct.media_files,
+      media: selectedProduct.media,
+      product_type: selectedProduct.product_type,
+      product_type_id: selectedProduct.product_type_id,
+      additional: selectedProduct.additional,
+    };
+
     updateComponent({
       ...component,
-      _headless: true,
-      data: {
-        productId: selectedProduct.id,
-        id: selectedProduct.id,
-        title: selectedProduct.title,
-        description: selectedProduct.description,
-        slug: selectedProduct.slug,
-        status: selectedProduct.status,
-        field_values: selectedProduct.field_values,
-        media_files: selectedProduct.media_files,
-        media: selectedProduct.media,
-        product_type: selectedProduct.product_type,
-        product_type_id: selectedProduct.product_type_id,
-        additional: selectedProduct.additional,
-      },
+      _headless: productData,
+      data: productData,
     });
     setIsDrawerVisible(false);
     setIsPreviewing(false);
@@ -184,7 +186,13 @@ const ProductComponent = ({
     message.success("Product selected successfully.");
   };
 
-  const currentProductId = component.data?.productId ?? component.data?.id;
+  const currentProductId =
+    component.data?.productId ??
+    component.data?.id ??
+    (component._headless && typeof component._headless === "object"
+      ? component._headless.productId || component._headless.id
+      : null);
+  const hasSelectedProduct = Boolean(currentProductId);
 
   const sortedProducts = [...availableProducts].sort((a, b) => {
     const aSelected = String(a.id) === String(currentProductId);
@@ -195,8 +203,12 @@ const ProductComponent = ({
   });
 
   const renderContent = () => {
-    if (preview || component.data?.productId) {
-      return <ProductDisplay productData={component.data} />;
+    if (preview || hasSelectedProduct) {
+      return (
+        <ProductDisplay
+          productData={component.data || component._headless}
+        />
+      );
     }
 
     return (
@@ -218,7 +230,9 @@ const ProductComponent = ({
       <BaseComponent
         component={{
           ...component,
-          _headless: component.data?.productId ? true : false,
+          _headless: hasSelectedProduct
+            ? component.data || component._headless
+            : null,
         }}
         updateComponent={updateComponent}
         deleteComponent={deleteComponent}
@@ -230,6 +244,7 @@ const ProductComponent = ({
         onEdit={handleEdit}
         onCancel={handleCancel}
         onSave={handleSave}
+        showChangeButton={hasSelectedProduct}
       >
         {renderContent()}
       </BaseComponent>

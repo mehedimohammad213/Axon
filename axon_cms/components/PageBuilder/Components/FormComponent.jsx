@@ -107,16 +107,17 @@ const FormComponent = ({
   };
 
   const handleConfirmForm = () => {
+    const formData = {
+      formId: selectedForm.id,
+      title: selectedForm.title,
+      description: selectedForm.description,
+      elements: selectedForm.elements,
+      attributes: selectedForm.attributes, // Include form attributes for proper submission
+    };
     updateComponent({
       ...component,
-      _headless: true,
-      data: {
-        formId: selectedForm.id,
-        title: selectedForm.title,
-        description: selectedForm.description,
-        elements: selectedForm.elements,
-        attributes: selectedForm.attributes, // Include form attributes for proper submission
-      },
+      _headless: formData,
+      data: formData,
     });
     setIsDrawerVisible(false);
     setIsPreviewing(false);
@@ -149,10 +150,22 @@ const FormComponent = ({
     return <FormRenderer formData={selectedForm} preview={true} />;
   };
 
+  const selectedFormId =
+    component.data?.formId ||
+    (component._headless && typeof component._headless === "object"
+      ? component._headless.formId
+      : null);
+  const hasSelectedForm = Boolean(selectedFormId);
+
   const renderContent = () => {
-    if (preview || component.data?.formId) {
+    if (preview || hasSelectedForm) {
       // Use the new FormRenderer for proper form display
-      return <FormRenderer formData={component.data} preview={preview} />;
+      return (
+        <FormRenderer
+          formData={component.data || component._headless}
+          preview={preview}
+        />
+      );
     }
 
     return (
@@ -169,7 +182,7 @@ const FormComponent = ({
     );
   };
 
-  const currentFormId = component.data?.formId;
+  const currentFormId = selectedFormId;
 
   const sortedForms = [...availableForms].sort((a, b) => {
     const aSelected = String(a.id) === String(currentFormId);
@@ -184,7 +197,9 @@ const FormComponent = ({
       <BaseComponent
         component={{
           ...component,
-          _headless: component.data?.formId ? true : false,
+          _headless: hasSelectedForm
+            ? component.data || component._headless
+            : null,
         }}
         updateComponent={updateComponent}
         deleteComponent={deleteComponent}
@@ -196,6 +211,7 @@ const FormComponent = ({
         onEdit={handleEdit}
         onCancel={handleCancel}
         onSave={handleSave}
+        showChangeButton={hasSelectedForm}
       >
         {renderContent()}
       </BaseComponent>
@@ -260,7 +276,7 @@ const FormComponent = ({
       </Drawer>
 
       {/* Multi-Language Configuration */}
-      {component?.data?.formId && !preview && (
+      {hasSelectedForm && !preview && (
         <Collapse className="mt-4">
           <Panel
             header={
