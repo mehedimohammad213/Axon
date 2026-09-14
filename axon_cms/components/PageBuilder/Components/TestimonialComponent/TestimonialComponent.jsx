@@ -89,11 +89,13 @@ const TestimonialComponent = ({
   };
 
   const handleAddTestimonial = () => {
-    if (!preview && isEditMode) {
-      setIsAdding(true);
-      form.resetFields();
-      setSelectedImage(null);
+    if (preview) return;
+    if (!isEditMode) {
+      setIsEditMode(true);
     }
+    setIsAdding(true);
+    form.resetFields();
+    setSelectedImage(null);
   };
 
   const handleAddSubmit = (values) => {
@@ -385,7 +387,7 @@ const TestimonialComponent = ({
           <Button
             className="headlessbutton"
             type="primary"
-            onClick={() => setIsEditMode(true)}
+            onClick={handleAddTestimonial}
             size="large"
           >
             Add Testimonial
