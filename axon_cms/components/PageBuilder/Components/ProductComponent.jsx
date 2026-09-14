@@ -1,33 +1,21 @@
 import React, { useState, useEffect } from "react";
 import {
   Form,
-  Input,
   Button,
   Drawer,
   Card,
   Space,
-  Collapse,
-  Switch,
   Tag,
   Image,
   Typography,
   message,
 } from "antd";
-import RichTextEditor from "../../RichTextEditor";
-import {
-  EyeOutlined,
-  CheckOutlined,
-  GlobalOutlined,
-  EditOutlined,
-  ShoppingOutlined,
-} from "@ant-design/icons";
-import ComponentEditButton from "./components/ComponentEditButton";
+import { EyeOutlined, ShoppingOutlined } from "@ant-design/icons";
 import BaseComponent from "./BaseComponent";
 import instance from "../../../axios";
 import { getFieldDisplayValue, getListFields } from "../../products/productUtils";
 import { resolveMediaUrl } from "../../../utils/mediaUrl";
 
-const { Panel } = Collapse;
 const { Text } = Typography;
 
 const getThumbnail = (product) => {
@@ -37,7 +25,7 @@ const getThumbnail = (product) => {
   return filePath ? resolveMediaUrl(filePath) : null;
 };
 
-const ProductDisplay = ({ productData, preview = false }) => {
+const ProductDisplay = ({ productData }) => {
   if (!productData?.productId && !productData?.id) {
     return <Text type="secondary">No product selected.</Text>;
   }
@@ -48,21 +36,11 @@ const ProductDisplay = ({ productData, preview = false }) => {
   const listFields = getListFields(
     productData.product_type || productData.productType
   ).slice(0, 6);
-  const title =
-    productData.showAltContent && productData.altTitle
-      ? productData.altTitle
-      : productData.title || "Untitled product";
-  const description =
-    productData.showAltContent && productData.altDescription
-      ? productData.altDescription
-      : productData.description || "";
+  const title = productData.title || "Untitled product";
+  const description = productData.description || "";
 
   return (
-    <div
-      className={`rounded-lg border border-gray-100 bg-white p-4 ${
-        preview ? "" : ""
-      }`}
-    >
+    <div className="rounded-lg border border-gray-100 bg-white p-4">
       <div className="flex gap-4">
         <div className="flex h-24 w-24 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-gray-200 bg-gray-50">
           {thumbnail ? (
@@ -85,17 +63,11 @@ const ProductDisplay = ({ productData, preview = false }) => {
             </Text>
             {typeName && <Tag color="blue">{typeName}</Tag>}
           </div>
-          {description &&
-            (productData.showAltContent && productData.altDescription ? (
-              <div
-                className="text-sm text-gray-600"
-                dangerouslySetInnerHTML={{ __html: description }}
-              />
-            ) : (
-              <Text type="secondary" className="text-sm">
-                {description}
-              </Text>
-            ))}
+          {description && (
+            <Text type="secondary" className="text-sm">
+              {description}
+            </Text>
+          )}
           {listFields.length > 0 && (
             <div className="flex flex-wrap gap-x-4 gap-y-1">
               {listFields.map((field) => (
@@ -130,8 +102,6 @@ const ProductComponent = ({
   const [availableProducts, setAvailableProducts] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [isPreviewing, setIsPreviewing] = useState(false);
-  const [showAltContent, setShowAltContent] = useState(false);
-  const [showAltInputs, setShowAltInputs] = useState(false);
   const [form] = Form.useForm();
 
   useEffect(() => {
@@ -139,12 +109,6 @@ const ProductComponent = ({
       fetchAvailableProducts();
     }
   }, [isDrawerVisible]);
-
-  useEffect(() => {
-    if (component?.data) {
-      setShowAltContent(component.data?.showAltContent || false);
-    }
-  }, [component?.data]);
 
   const fetchAvailableProducts = async () => {
     try {
@@ -212,9 +176,6 @@ const ProductComponent = ({
         product_type: selectedProduct.product_type,
         product_type_id: selectedProduct.product_type_id,
         additional: selectedProduct.additional,
-        altTitle: component.data?.altTitle || "",
-        altDescription: component.data?.altDescription || "",
-        showAltContent: component.data?.showAltContent || false,
       },
     });
     setIsDrawerVisible(false);
@@ -223,14 +184,19 @@ const ProductComponent = ({
     message.success("Product selected successfully.");
   };
 
-  const renderProductPreview = () => {
-    if (!selectedProduct) return null;
-    return <ProductDisplay productData={selectedProduct} preview />;
-  };
+  const currentProductId = component.data?.productId ?? component.data?.id;
+
+  const sortedProducts = [...availableProducts].sort((a, b) => {
+    const aSelected = String(a.id) === String(currentProductId);
+    const bSelected = String(b.id) === String(currentProductId);
+    if (aSelected && !bSelected) return -1;
+    if (!aSelected && bSelected) return 1;
+    return 0;
+  });
 
   const renderContent = () => {
     if (preview || component.data?.productId) {
-      return <ProductDisplay productData={component.data} preview={preview} />;
+      return <ProductDisplay productData={component.data} />;
     }
 
     return (
@@ -290,7 +256,7 @@ const ProductComponent = ({
         }
       >
         {isPreviewing ? (
-          renderProductPreview()
+          selectedProduct ? <ProductDisplay productData={selectedProduct} /> : null
         ) : (
           <div className="grid grid-cols-1 gap-4">
             {availableProducts.length === 0 ? (
@@ -308,17 +274,24 @@ const ProductComponent = ({
                 </div>
               </div>
             ) : (
-              availableProducts.map((product) => {
+              sortedProducts.map((product) => {
                 const thumbnail = getThumbnail(product);
                 const typeName =
                   product.product_type?.name ||
                   product.productType?.name ||
                   null;
+                const isCurrent =
+                  currentProductId != null &&
+                  String(product.id) === String(currentProductId);
 
                 return (
                   <Card
                     key={product.id}
-                    className="hover:shadow-md transition-shadow"
+                    className={`hover:shadow-md transition-shadow ${
+                      isCurrent
+                        ? "border-blue-400 bg-blue-50 ring-1 ring-blue-200"
+                        : ""
+                    }`}
                     actions={[
                       <Button
                         key="preview"
@@ -326,7 +299,7 @@ const ProductComponent = ({
                         icon={<EyeOutlined />}
                         onClick={() => handleProductSelect(product)}
                       >
-                        Preview
+                        {isCurrent ? "Preview current" : "Preview"}
                       </Button>,
                     ]}
                   >
@@ -349,6 +322,7 @@ const ProductComponent = ({
                         title={
                           <div className="flex items-center gap-2 flex-wrap">
                             <span>{product.title || "Untitled product"}</span>
+                            {isCurrent && <Tag color="green">Current</Tag>}
                             {typeName && <Tag color="blue">{typeName}</Tag>}
                           </div>
                         }
@@ -366,139 +340,6 @@ const ProductComponent = ({
           </div>
         )}
       </Drawer>
-
-      {component?.data?.productId && !preview && (
-        <Collapse className="mt-4">
-          <Panel
-            header={
-              <div className="flex items-center gap-2">
-                <GlobalOutlined />
-                Multi-Language Settings
-              </div>
-            }
-            key="multilang"
-          >
-            <div className="bg-gray-50 p-4 rounded-lg">
-              <div className="flex items-center justify-between mb-4">
-                <div>
-                  <h4 className="text-md font-semibold">
-                    Display Alternative Content
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    Toggle to show alternative title and description for product
-                  </p>
-                </div>
-                <Switch
-                  checked={showAltContent}
-                  onChange={(checked) => {
-                    setShowAltContent(checked);
-                    updateComponent({
-                      ...component,
-                      data: {
-                        ...component.data,
-                        showAltContent: checked,
-                      },
-                    });
-                  }}
-                />
-              </div>
-
-              {showAltContent && (
-                <div className="mt-4 p-3 bg-blue-50 rounded-lg">
-                  <div className="text-sm text-blue-800">
-                    <strong>Alternative Content Mode:</strong> Product will
-                    display alternative title and description when available.
-                  </div>
-                </div>
-              )}
-
-              <div className="mt-6 p-4 bg-white rounded-lg border">
-                <div className="flex items-center justify-between mb-4">
-                  <h5 className="text-lg font-semibold flex items-center gap-2">
-                    <EditOutlined />
-                    Alternative Content
-                  </h5>
-                  <ComponentEditButton
-                    onClick={() => setShowAltInputs(true)}
-                    title="Edit alternative content"
-                  />
-                </div>
-
-                {showAltInputs ? (
-                  <Form layout="vertical" className="w-full">
-                    <Form.Item label="Alternative Title" className="mb-3">
-                      <Input
-                        placeholder="Enter alternative title"
-                        defaultValue={component.data?.altTitle || ""}
-                        onChange={(e) => {
-                          updateComponent({
-                            ...component,
-                            data: {
-                              ...component.data,
-                              altTitle: e.target.value,
-                            },
-                          });
-                        }}
-                      />
-                    </Form.Item>
-
-                    <Form.Item label="Alternative Description" className="mb-4">
-                      <RichTextEditor
-                        defaultValue={component.data?.altDescription || ""}
-                        onChange={(html) => {
-                          updateComponent({
-                            ...component,
-                            data: {
-                              ...component.data,
-                              altDescription: html,
-                            },
-                          });
-                        }}
-                        editMode={true}
-                        maxLength={2000}
-                      />
-                    </Form.Item>
-
-                    <div className="mt-4 flex justify-end">
-                      <Button
-                        type="primary"
-                        icon={<CheckOutlined />}
-                        onClick={() => {
-                          setShowAltInputs(false);
-                          message.success(
-                            "Alternative content updated successfully."
-                          );
-                        }}
-                        className="headlessbutton"
-                      >
-                        Update Alternative Content
-                      </Button>
-                    </div>
-                  </Form>
-                ) : (
-                  <div className="border rounded-lg p-3 bg-gray-50">
-                    <div className="text-sm">
-                      <div>
-                        <strong>Alt Title:</strong>{" "}
-                        {component.data?.altTitle || "Not set"}
-                      </div>
-                      <div>
-                        <strong>Alt Description:</strong>{" "}
-                        <div
-                          dangerouslySetInnerHTML={{
-                            __html:
-                              component.data?.altDescription || "Not set",
-                          }}
-                        />
-                      </div>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
-          </Panel>
-        </Collapse>
-      )}
     </>
   );
 };
