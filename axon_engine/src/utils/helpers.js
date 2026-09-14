@@ -45,20 +45,25 @@ async function seedPermissions(executor = db) {
 }
 
 async function getPermissionIdsForSlugs(slugs, executor = db) {
-  if (slugs.includes('admin_all')) {
+  const slugList = Array.isArray(slugs) ? slugs : [slugs];
+  const alias = slugList.length === 1 ? slugList[0] : null;
+
+  if (slugList.includes('admin_all')) {
     const all = await executor.queryAll('SELECT id FROM permissions');
     return all.map((p) => p.id);
   }
 
-  let targetSlugs = slugs;
-  if (slugs === 'all_except_system') {
+  let targetSlugs;
+  if (alias === 'all_except_system') {
     targetSlugs = permissionsConfig.definitions
       .map((p) => p.slug)
       .filter((s) => !permissionsConfig.systemSlugs.includes(s));
-  } else if (slugs === 'editor') {
+  } else if (alias === 'editor') {
     targetSlugs = permissionsConfig.editorSlugs;
-  } else if (slugs === 'viewer') {
+  } else if (alias === 'viewer') {
     targetSlugs = permissionsConfig.viewerSlugs;
+  } else {
+    targetSlugs = slugList;
   }
 
   const placeholders = targetSlugs.map((_, i) => `$${i + 1}`).join(', ');
@@ -83,13 +88,7 @@ async function seedDefaultRolesForOrganization(organizationId, executor = db) {
       updated_at: new Date(),
     });
 
-    const permissionSlugs = Array.isArray(config.permission_slugs)
-      ? config.permission_slugs
-      : [config.permission_slugs];
-
-    const ids = config.permission_slugs === 'all_except_system'
-      ? await getPermissionIdsForSlugs('all_except_system', executor)
-      : await getPermissionIdsForSlugs(permissionSlugs, executor);
+    const ids = await getPermissionIdsForSlugs(config.permission_slugs, executor);
 
     if (ids.length) {
       await executor.insertMany(
@@ -107,6 +106,29 @@ async function seedDefaultRolesForOrganization(organizationId, executor = db) {
   }
 
   return roles;
+}
+
+async function backfillDefaultRolePermissions(executor = db) {
+  await seedPermissions(executor);
+
+  const roles = await executor.findAll('roles');
+  let updated = 0;
+
+  for (const role of roles) {
+    const config = permissionsConfig.roles[role.title];
+    if (!config) continue;
+
+    const existingCount = await executor.count('role_permission', { role_id: role.id });
+    if (existingCount > 0) continue;
+
+    const ids = await getPermissionIdsForSlugs(config.permission_slugs, executor);
+    if (!ids.length) continue;
+
+    await syncRolePermissions(role.id, ids, executor);
+    updated += 1;
+  }
+
+  return updated;
 }
 
 async function syncRolePermissions(roleId, permissionIds, executor = db) {
@@ -224,6 +246,7 @@ module.exports = {
   seedPermissions,
   getPermissionIdsForSlugs,
   seedDefaultRolesForOrganization,
+  backfillDefaultRolePermissions,
   syncRolePermissions,
   hashPassword,
   comparePassword,

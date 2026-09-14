@@ -1,5 +1,6 @@
 const { db, transaction } = require('../db');
 const { createModel } = require('./BaseModel');
+const RoleModel = require('./RoleModel');
 const {
   uniqueOrganizationSlug,
   seedDefaultRolesForOrganization,
@@ -70,7 +71,8 @@ async function createWithUsers({ name, email, phone, usersList }) {
 }
 
 async function getRoles(organizationId) {
-  return db.findAll('roles', { organization_id: organizationId });
+  const roles = await db.findAll('roles', { organization_id: organizationId });
+  return Promise.all(roles.map((role) => RoleModel.loadWithPermissions(role.id)));
 }
 
 async function getUsers(organizationId) {
@@ -102,7 +104,7 @@ async function createRole(organizationId, { title, description, permission_ids, 
     await syncRolePermissions(role.id, permission_ids);
   }
 
-  return role;
+  return RoleModel.loadWithPermissions(role.id);
 }
 
 async function updateRole(organizationId, roleId, { title, description, permission_ids, status }) {
@@ -120,7 +122,7 @@ async function updateRole(organizationId, roleId, { title, description, permissi
     await syncRolePermissions(roleId, permission_ids);
   }
 
-  return db.findOne('roles', { id: roleId });
+  return RoleModel.loadWithPermissions(roleId);
 }
 
 async function deleteRole(organizationId, roleId) {
