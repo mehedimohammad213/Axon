@@ -266,15 +266,44 @@ const CardComponent = ({
     ]
   );
 
-  // Handle selection from CardSelectionModal
-  const handleSelectCard = useCallback((selectedCard) => {
-    setSelectedCardData(selectedCard);
-    setCardData(selectedCard);
-    setIsModalVisible(false);
-    setIsEditingState(true);
-  }, []);
+  // Handle selection from CardSelectionModal — link immediately like Slider
+  const handleSelectCard = useCallback(
+    (selectedCard) => {
+      if (!hasSelectedCard(selectedCard)) {
+        Modal.error({
+          title: "Validation Error",
+          content: "No card selected.",
+        });
+        return;
+      }
 
-  // Handle Submit (Confirm) Changes
+      const updatedComponent = {
+        ...component,
+        _headless: {
+          ...selectedCard,
+          config: selectedCard.config || {
+            showDescription: true,
+            showImage: true,
+            layout: "horizontal",
+          },
+          altTitle: altContentData.altTitle,
+          altDescription: altContentData.altDescription,
+          showAltContent,
+        },
+        id: selectedCard.id,
+      };
+
+      updateComponent(updatedComponent);
+      setCardData(selectedCard);
+      setSelectedCardData(null);
+      setIsEditingState(false);
+      setIsModalVisible(false);
+      message.success("Card updated successfully.");
+    },
+    [component, updateComponent, altContentData, showAltContent]
+  );
+
+  // Handle Submit (Confirm) Changes — kept for alt-content save flows
   const handleSubmit = useCallback(() => {
     const cardToSave = selectedCardData || cardData;
     if (!hasSelectedCard(cardToSave)) {
@@ -422,7 +451,7 @@ const CardComponent = ({
           <DragOutlined className="text-2xl border rounded-md p-1" />
           <h3 className="text-xl font-semibold">Card Component</h3>
         </div>
-        <div className="flex gap-2">
+        <div className="flex items-center gap-2">
           <Space>
             {cardSelected && (
               <ComponentEditButton
@@ -443,275 +472,205 @@ const CardComponent = ({
         </div>
       </div>
 
-      <div className="space-y-4">
-        {/* Multi-Language Configuration */}
-        {cardSelected && (
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <h4 className="text-md font-semibold mb-3 flex items-center gap-2">
-              <GlobalOutlined />
-              Multi-Language Settings
-            </h4>
-            <div className="flex items-center justify-between">
-              <div>
-                <p className="font-medium mb-1">Display Alternative Language</p>
-                <p className="text-sm text-gray-600">
-                  Show Bengali content alongside English (if available)
-                </p>
-              </div>
-              <Switch
-                checked={showAltContent}
-                onChange={(checked) => {
-                  setShowAltContent(checked);
-                  // Update component with new setting
-                  const updatedComponent = {
-                    ...component,
-                    _headless: {
-                      ...component._headless,
-                      showAltContent: checked,
-                    },
-                  };
-                  updateComponent(updatedComponent);
-                }}
-              />
-            </div>
-          </div>
-        )}
-
-        {/* Alternative Content Editing Section */}
-        {cardSelected && (
-          <div className="bg-gray-50 p-4 rounded-lg">
-            <div className="flex items-center justify-between mb-3">
-              <h4 className="text-md font-semibold flex items-center gap-2">
-                <EditOutlined />
-                Custom Alternative Content
-              </h4>
-              {!isEditingAltContent ? (
-                <ComponentEditButton
-                  onClick={handleEditAltContent}
-                  title="Edit alternative content"
-                />
-              ) : (
-                <Space>
-                  <Button
-                    icon={<CheckOutlined />}
-                    onClick={handleSaveAltContent}
-                    className="headlessbutton"
-                    size="small"
-                  >
-                    Save
-                  </Button>
-                  <Button
-                    icon={<CloseOutlined />}
-                    onClick={handleCancelAltContent}
-                    className="headlesscancelbutton"
-                    size="small"
-                  >
-                    Cancel
-                  </Button>
-                </Space>
-              )}
-            </div>
-
-            {isEditingAltContent ? (
-              <div className="space-y-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Alternative Title
-                  </label>
-                  <Input
-                    value={altContentData.altTitle}
-                    onChange={(e) =>
-                      setAltContentData({
-                        ...altContentData,
-                        altTitle: e.target.value,
-                      })
-                    }
-                    placeholder="Enter alternative title"
-                    className="w-full"
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
-                    Alternative Description
-                  </label>
-                  <RichTextEditor
-                    defaultValue={altContentData.altDescription}
-                    onChange={(html) =>
-                      setAltContentData({
-                        ...altContentData,
-                        altDescription: html,
-                      })
-                    }
-                    editMode={true}
-                    maxLength={2000}
-                  />
-                </div>
-              </div>
-            ) : (
-              <div className="space-y-2">
-                <div>
-                  <span className="text-sm font-medium text-gray-700">
-                    Alternative Title:
-                  </span>
-                  <p className="text-gray-600">
-                    {altContentData.altTitle || "No alternative title set"}
-                  </p>
-                </div>
-                <div>
-                  <span className="text-sm font-medium text-gray-700">
-                    Alternative Description:
-                  </span>
+      <div className="flex flex-col md:flex-row items-start gap-4">
+        <div className="flex flex-col w-full">
+          {cardSelected ? (
+            <div className="w-full relative">
+              <div className="bg-white rounded-lg shadow-md overflow-hidden border border-slate-100">
+                {renderCardMedia(cardData.media_files)}
+                <div className="p-4">
+                  <h3 className="text-lg font-semibold mb-2">
+                    {cardData.title_en || "Untitled Card"}
+                  </h3>
                   <div
                     className="text-gray-600"
                     dangerouslySetInnerHTML={{
                       __html:
-                        altContentData.altDescription ||
-                        "No alternative description set",
+                        cardData.description_en || "No description available",
                     }}
                   />
                 </div>
               </div>
-            )}
-          </div>
-        )}
-
-        <div className="flex flex-col md:flex-row items-start gap-4">
-          <div
-            className={`flex flex-col ${isEditingState && selectedCardData ? "w-full md:w-1/2" : "w-full"}`}
-          >
-            {cardSelected && isEditingState && (
-              <h4 className="mb-2 text-md font-semibold">Current Card</h4>
-            )}
-            {cardSelected ? (
-              <div className="w-full relative">
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  {renderCardMedia(cardData.media_files)}
-                  <div className="p-4">
-                    <h3 className="text-lg font-semibold mb-2">
-                      {cardData.title_en || "Untitled Card"}
-                    </h3>
-                    <div
-                      className="text-gray-600"
-                      dangerouslySetInnerHTML={{
-                        __html:
-                          cardData.description_en || "No description available",
-                      }}
-                    />
-                  </div>
-                </div>
-                {showAltContent &&
-                  (cardData.title_bn ||
-                    cardData.description_bn ||
-                    altContentData.altTitle ||
-                    altContentData.altDescription) && (
-                    <div className="mt-2 bg-gray-50 rounded-lg shadow-md overflow-hidden">
-                      {renderCardMedia(cardData.media_files)}
-                      <div className="p-4">
-                        <h3 className="text-lg font-semibold mb-2 text-gray-700">
-                          {altContentData.altTitle ||
-                            cardData.title_bn ||
-                            cardData.title_en ||
-                            "Untitled Card"}
-                        </h3>
-                        <div
-                          className="text-gray-600"
-                          dangerouslySetInnerHTML={{
-                            __html:
-                              altContentData.altDescription ||
-                              cardData.description_bn ||
-                              cardData.description_en ||
-                              "No description available",
-                          }}
-                        />
-                      </div>
+              {showAltContent &&
+                (cardData.title_bn ||
+                  cardData.description_bn ||
+                  altContentData.altTitle ||
+                  altContentData.altDescription) && (
+                  <div className="mt-2 bg-gray-50 rounded-lg shadow-md overflow-hidden border border-slate-100">
+                    {renderCardMedia(cardData.media_files)}
+                    <div className="p-4">
+                      <h3 className="text-lg font-semibold mb-2 text-gray-700">
+                        {altContentData.altTitle ||
+                          cardData.title_bn ||
+                          cardData.title_en ||
+                          "Untitled Card"}
+                      </h3>
+                      <div
+                        className="text-gray-600"
+                        dangerouslySetInnerHTML={{
+                          __html:
+                            altContentData.altDescription ||
+                            cardData.description_bn ||
+                            cardData.description_en ||
+                            "No description available",
+                        }}
+                      />
                     </div>
-                  )}
-              </div>
-            ) : (
-              <div className="flex justify-center items-center p-8">
-                <Button
-                  className="headlessbutton"
-                  type="primary"
-                  onClick={() => setIsModalVisible(true)}
-                  size="large"
-                >
-                  Choose Card
-                </Button>
-              </div>
-            )}
-          </div>
-
-          {isEditingState && selectedCardData && (
-            <div className="flex flex-col w-full md:w-1/2">
-              <h4 className="mb-2 text-md font-semibold">Selected Card</h4>
-              <div className="w-full relative">
-                <div className="bg-white rounded-lg shadow-md overflow-hidden">
-                  {renderCardMedia(selectedCardData.media_files)}
-                  <div className="p-4">
-                    <h3 className="text-lg font-semibold mb-2">
-                      {selectedCardData.title_en || "Untitled Card"}
-                    </h3>
-                    <div
-                      className="text-gray-600"
-                      dangerouslySetInnerHTML={{
-                        __html:
-                          selectedCardData.description_en ||
-                          "No description available",
-                      }}
-                    />
                   </div>
-                </div>
-                {showAltContent &&
-                  (selectedCardData.title_bn ||
-                    selectedCardData.description_bn ||
-                    altContentData.altTitle ||
-                    altContentData.altDescription) && (
-                    <div className="mt-2 bg-gray-50 rounded-lg shadow-md overflow-hidden">
-                      {renderCardMedia(selectedCardData.media_files)}
-                      <div className="p-4">
-                        <h3 className="text-lg font-semibold mb-2 text-gray-700">
-                          {altContentData.altTitle ||
-                            selectedCardData.title_bn ||
-                            selectedCardData.title_en ||
-                            "Untitled Card"}
-                        </h3>
-                        <div
-                          className="text-gray-600"
-                          dangerouslySetInnerHTML={{
-                            __html:
-                              altContentData.altDescription ||
-                              selectedCardData.description_bn ||
-                              selectedCardData.description_en ||
-                              "No description available",
-                          }}
-                        />
-                      </div>
-                    </div>
-                  )}
-              </div>
+                )}
+            </div>
+          ) : (
+            <div className="flex justify-center items-center p-8">
+              <Button
+                className="headlessbutton"
+                type="primary"
+                onClick={() => setIsModalVisible(true)}
+                size="large"
+              >
+                Choose Card
+              </Button>
             </div>
           )}
         </div>
       </div>
 
-      {isEditingState && selectedCardData && (
-        <div className="mt-4 flex gap-2">
-          <Button
-            type="primary"
-            icon={<CheckOutlined />}
-            onClick={handleSubmit}
-            className="headlessbutton"
+      {/* Multi-Language Configuration — same Collapse pattern as Slider */}
+      {cardSelected && !preview && (
+        <Collapse className="mt-4">
+          <Panel
+            header={
+              <div className="flex items-center gap-2">
+                <GlobalOutlined />
+                Multi-Language Settings
+              </div>
+            }
+            key="multilang"
           >
-            Confirm Changes
-          </Button>
-          <Button
-            icon={<CloseOutlined />}
-            onClick={handleCancel}
-            className="headlesscancelbutton"
-          >
-            Cancel
-          </Button>
-        </div>
+            <div className="bg-gray-50 p-4 rounded-lg">
+              <div className="flex items-center justify-between mb-4">
+                <div>
+                  <h4 className="text-md font-semibold">
+                    Display Alternative Content
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    Toggle to show alternative titles and descriptions for this
+                    card
+                  </p>
+                </div>
+                <Switch
+                  checked={showAltContent}
+                  onChange={(checked) => {
+                    setShowAltContent(checked);
+                    updateComponent({
+                      ...component,
+                      _headless: {
+                        ...cardData,
+                        ...component._headless,
+                        showAltContent: checked,
+                        altTitle: altContentData.altTitle,
+                        altDescription: altContentData.altDescription,
+                      },
+                    });
+                  }}
+                />
+              </div>
+
+              {showAltContent && (
+                <div className="mt-4 p-3 bg-blue-50 rounded-lg">
+                  <div className="text-sm text-blue-800">
+                    <strong>Alternative Content Mode:</strong> Card will display
+                    alternative titles and descriptions when available.
+                  </div>
+                </div>
+              )}
+
+              <div className="mt-6 p-4 bg-white rounded-lg border">
+                <div className="flex items-center justify-between mb-4">
+                  <h5 className="text-lg font-semibold flex items-center gap-2">
+                    <EditOutlined />
+                    Custom Alternative Content
+                  </h5>
+                  <ComponentEditButton
+                    onClick={handleEditAltContent}
+                    title="Edit alternative content"
+                  />
+                </div>
+
+                {isEditingAltContent ? (
+                  <div className="space-y-4">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Alternative Title
+                      </label>
+                      <Input
+                        value={altContentData.altTitle}
+                        onChange={(e) =>
+                          setAltContentData({
+                            ...altContentData,
+                            altTitle: e.target.value,
+                          })
+                        }
+                        placeholder="Enter alternative title"
+                        className="w-full"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 mb-1">
+                        Alternative Description
+                      </label>
+                      <RichTextEditor
+                        defaultValue={altContentData.altDescription}
+                        onChange={(html) =>
+                          setAltContentData({
+                            ...altContentData,
+                            altDescription: html,
+                          })
+                        }
+                        editMode={true}
+                        maxLength={2000}
+                      />
+                    </div>
+                    <div className="mt-4 flex justify-end gap-2">
+                      <Button
+                        onClick={handleCancelAltContent}
+                        className="headlesscancelbutton"
+                      >
+                        Cancel
+                      </Button>
+                      <Button
+                        type="primary"
+                        icon={<CheckOutlined />}
+                        onClick={handleSaveAltContent}
+                        className="headlessbutton"
+                      >
+                        Save
+                      </Button>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="border rounded-lg p-3 bg-blue-50">
+                    <div className="font-medium text-sm mb-2">Card</div>
+                    <div className="text-sm">
+                      <div>
+                        <strong>Alt Title:</strong>{" "}
+                        {altContentData.altTitle || "Not set"}
+                      </div>
+                      <div>
+                        <strong>Alt Description:</strong>{" "}
+                        <div
+                          dangerouslySetInnerHTML={{
+                            __html:
+                              altContentData.altDescription || "Not set",
+                          }}
+                        />
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </Panel>
+        </Collapse>
       )}
 
       <CardSelectionModal
