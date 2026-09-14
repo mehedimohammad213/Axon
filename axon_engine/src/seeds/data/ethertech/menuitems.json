@@ -1,0 +1,352 @@
+[
+  {
+    "id": 1,
+    "title": "Home",
+    "title_bn": "Home",
+    "link": "/home?pageId=155&pageName=home",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 2,
+    "title": "Application Development",
+    "title_bn": "Application Development",
+    "link": "/application-development?pageId=156&pageName=application-development",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 3,
+    "title": "Banking & Finance",
+    "title_bn": "Banking & Finance",
+    "link": "/banking--finance?pageId=157&pageName=banking--finance",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 4,
+    "title": "Services",
+    "title_bn": "Services",
+    "link": "/services",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2025-10-08T08:31:47.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 5,
+    "title": "Industries",
+    "title_bn": "Industries",
+    "link": "/industries",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 6,
+    "title": "Clients",
+    "title_bn": "Clients",
+    "link": "/clients",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": "2025-10-08T08:32:20.000000Z",
+    "all_children": []
+  },
+  {
+    "id": 7,
+    "title": "About us",
+    "title_bn": "About us",
+    "link": "/about-us",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 8,
+    "title": "Blog",
+    "title_bn": "Blog",
+    "link": "/blog",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 9,
+    "title": "Contact us",
+    "title_bn": "Contact us",
+    "link": "/contact-us",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 10,
+    "title": "PoC development",
+    "title_bn": "PoC development",
+    "link": "/poc-development",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 12,
+    "title": "Product-oriented delivery",
+    "title_bn": "Product-oriented delivery",
+    "link": "/product-oriented-delivery",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 13,
+    "title": "Enterprise applications",
+    "title_bn": "Enterprise applications",
+    "link": "/enterprise-applications",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 14,
+    "title": "Application re‑engineering",
+    "title_bn": "Application re‑engineering",
+    "link": "/application-reengineering",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 15,
+    "title": "Cloud migration",
+    "title_bn": "Cloud migration",
+    "link": "/cloud-migration",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 16,
+    "title": "Product and service design",
+    "title_bn": "Product and service design",
+    "link": "/product-and-service-design",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 17,
+    "title": "Cyber security",
+    "title_bn": "Cyber security",
+    "link": "/cyber-security",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 18,
+    "title": "Technical feasibility study",
+    "title_bn": "Technical feasibility study",
+    "link": "/technical-feasibility-study",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 19,
+    "title": "Sustainability consulting",
+    "title_bn": "Sustainability consulting",
+    "link": "/sustainability-consulting",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 20,
+    "title": "Agile transformation",
+    "title_bn": "Agile transformation",
+    "link": "/agile-transformation",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 21,
+    "title": "Data science",
+    "title_bn": "Data science",
+    "link": "/data-science",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 22,
+    "title": "Data strategy",
+    "title_bn": "Data strategy",
+    "link": "/data-strategy",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 23,
+    "title": "Artificial intelligence",
+    "title_bn": "Artificial intelligence",
+    "link": "/artificial-intelligence",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 24,
+    "title": "Generative AI",
+    "title_bn": "Generative AI",
+    "link": "/generative-ai",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 25,
+    "title": "Machine learning",
+    "title_bn": "Machine learning",
+    "link": "/machine-learning",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 26,
+    "title": "Conversational AI",
+    "title_bn": "Conversational AI",
+    "link": "/conversational-ai",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 27,
+    "title": "Intelligent automation",
+    "title_bn": "Intelligent automation",
+    "link": "/intelligent-automation",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 28,
+    "title": "MLOps",
+    "title_bn": "MLOps",
+    "link": "/mlops",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 29,
+    "title": "Business intelligence",
+    "title_bn": "Business intelligence",
+    "link": "/business-intelligence",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 30,
+    "title": "Data platforms",
+    "title_bn": "Data platforms",
+    "link": "/data-platforms",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 31,
+    "title": "Facebook",
+    "title_bn": "Facebook",
+    "link": "/facebook",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 32,
+    "title": "X",
+    "title_bn": "X",
+    "link": "/x",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 33,
+    "title": "LinkedIn",
+    "title_bn": "LinkedIn",
+    "link": "/linkedin",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 34,
+    "title": "Terms of Use",
+    "title_bn": "Terms of Use",
+    "link": "/terms-of-use",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 35,
+    "title": "Privacy policy",
+    "title_bn": "Privacy policy",
+    "link": "/privacy-policy",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  },
+  {
+    "id": 36,
+    "title": "Site Map",
+    "title_bn": "Site Map",
+    "link": "/site-map",
+    "parent_id": null,
+    "created_at": null,
+    "updated_at": null,
+    "all_children": []
+  }
+]

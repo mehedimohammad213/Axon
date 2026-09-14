@@ -1,0 +1,3225 @@
+[
+  {
+    "id": 158,
+    "slug": null,
+    "type": "Footer",
+    "favicon_id": 10,
+    "page_name_en": "Core Footer",
+    "page_name_bn": "Core Footer",
+    "head": {
+      "title": "Core Footer",
+      "description": null,
+      "keywords": [],
+      "image": null,
+      "imageAlt": null
+    },
+    "body": [
+      {
+        "_id": "section-1759914888330-x56f5zumi",
+        "title": "Ethertech",
+        "data": [
+          {
+            "_id": "component-1759914913611-riqi1pu7f",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 29,
+              "title": "ethertech-color-logo.svg",
+              "file_name": "mave_48G11Y.svg",
+              "file_type": "image/svg+xml",
+              "file_path": "media/mave_48G11Y.svg",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2025-10-08T08:15:39.000000Z",
+              "updated_at": "2025-10-08T08:15:39.000000Z"
+            },
+            "sectionIndex": 0,
+            "index": 0,
+            "id": 29
+          },
+          {
+            "_id": "component-1759914938390-rewu4uo6t",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Technology Partner For Modern Product Teams",
+              "altTitle": null,
+              "description": "<p>Ether Technology Limited has established a reputation for dependability and credibility both domestically and abroad by providing a range of software solutions under one roof.</p>",
+              "altDescription": null,
+              "linkType": "independent",
+              "link": "#",
+              "linkPageId": 158,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": false,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 0,
+            "index": 1
+          },
+          {
+            "_id": "component-1759915025129-7yfm6awr6",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Address:",
+              "altTitle": null,
+              "description": "<p>House 10/A, Road 4, Gulshan 1, Dhaka, Bangladesh</p>",
+              "altDescription": null,
+              "linkType": "independent",
+              "link": "#",
+              "linkPageId": 158,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": false,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 0,
+            "index": 2
+          },
+          {
+            "_id": "component-1759915020078-gkzabu6ss",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Phone:",
+              "altTitle": null,
+              "description": "<p>+880 1326-880983</p>",
+              "altDescription": null,
+              "linkType": "independent",
+              "link": "#",
+              "linkPageId": 158,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": false,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 0,
+            "index": 3
+          },
+          {
+            "_id": "component-1759915029302-5nkz6stoj",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Email:",
+              "altTitle": null,
+              "description": "<p>info@ethertech.ltd</p>",
+              "altDescription": null,
+              "linkType": "independent",
+              "link": "#",
+              "linkPageId": 158,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": false,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 0,
+            "index": 4
+          }
+        ]
+      },
+      {
+        "_id": "section-1759915131759-83ybvils3",
+        "title": "Services",
+        "data": [
+          {
+            "_id": "component-1759915151048-dvzfzuv8l",
+            "type": "menu",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 2,
+              "name": "Engineering",
+              "menu_item_ids": [
+                10,
+                2,
+                12,
+                13,
+                14,
+                15
+              ],
+              "menu_items": [
+                {
+                  "id": 10,
+                  "title": "PoC development",
+                  "title_bn": "PoC development",
+                  "link": "/poc-development",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 2,
+                  "title": "Application Development",
+                  "title_bn": "Application Development",
+                  "link": "/application-development?pageId=156&pageName=application-development",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 12,
+                  "title": "Product-oriented delivery",
+                  "title_bn": "Product-oriented delivery",
+                  "link": "/product-oriented-delivery",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 13,
+                  "title": "Enterprise applications",
+                  "title_bn": "Enterprise applications",
+                  "link": "/enterprise-applications",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 14,
+                  "title": "Application re‑engineering",
+                  "title_bn": "Application re‑engineering",
+                  "link": "/application-reengineering",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 15,
+                  "title": "Cloud migration",
+                  "title_bn": "Cloud migration",
+                  "link": "/cloud-migration",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                }
+              ],
+              "altTitle": null
+            },
+            "sectionIndex": 1,
+            "index": 0,
+            "id": 2,
+            "menuMode": "horizontal",
+            "menuTheme": "light"
+          },
+          {
+            "_id": "component-1759915160213-p9flg64vw",
+            "type": "menu",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 3,
+              "name": "Advisory",
+              "menu_item_ids": [
+                16,
+                17,
+                18,
+                19,
+                20
+              ],
+              "menu_items": [
+                {
+                  "id": 16,
+                  "title": "Product and service design",
+                  "title_bn": "Product and service design",
+                  "link": "/product-and-service-design",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 17,
+                  "title": "Cyber security",
+                  "title_bn": "Cyber security",
+                  "link": "/cyber-security",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 18,
+                  "title": "Technical feasibility study",
+                  "title_bn": "Technical feasibility study",
+                  "link": "/technical-feasibility-study",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 19,
+                  "title": "Sustainability consulting",
+                  "title_bn": "Sustainability consulting",
+                  "link": "/sustainability-consulting",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 20,
+                  "title": "Agile transformation",
+                  "title_bn": "Agile transformation",
+                  "link": "/agile-transformation",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                }
+              ],
+              "altTitle": null
+            },
+            "sectionIndex": 1,
+            "index": 1,
+            "id": 3,
+            "menuMode": "horizontal",
+            "menuTheme": "light"
+          },
+          {
+            "_id": "component-1759915162652-q186w92wu",
+            "type": "menu",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 4,
+              "name": "Data & AI",
+              "menu_item_ids": [
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30
+              ],
+              "menu_items": [
+                {
+                  "id": 21,
+                  "title": "Data science",
+                  "title_bn": "Data science",
+                  "link": "/data-science",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 22,
+                  "title": "Data strategy",
+                  "title_bn": "Data strategy",
+                  "link": "/data-strategy",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 23,
+                  "title": "Artificial intelligence",
+                  "title_bn": "Artificial intelligence",
+                  "link": "/artificial-intelligence",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 24,
+                  "title": "Generative AI",
+                  "title_bn": "Generative AI",
+                  "link": "/generative-ai",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 25,
+                  "title": "Machine learning",
+                  "title_bn": "Machine learning",
+                  "link": "/machine-learning",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 26,
+                  "title": "Conversational AI",
+                  "title_bn": "Conversational AI",
+                  "link": "/conversational-ai",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 27,
+                  "title": "Intelligent automation",
+                  "title_bn": "Intelligent automation",
+                  "link": "/intelligent-automation",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 28,
+                  "title": "MLOps",
+                  "title_bn": "MLOps",
+                  "link": "/mlops",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 29,
+                  "title": "Business intelligence",
+                  "title_bn": "Business intelligence",
+                  "link": "/business-intelligence",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 30,
+                  "title": "Data platforms",
+                  "title_bn": "Data platforms",
+                  "link": "/data-platforms",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                }
+              ],
+              "altTitle": null
+            },
+            "sectionIndex": 1,
+            "index": 2,
+            "id": 4,
+            "menuMode": "horizontal",
+            "menuTheme": "light"
+          }
+        ]
+      },
+      {
+        "_id": "section-1759915208781-wkt8qi09h",
+        "title": "Expertise",
+        "data": [
+          {
+            "_id": "component-1759915208781-evxzkuigm",
+            "type": "menu",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 2,
+              "name": "Engineering",
+              "menu_item_ids": [
+                10,
+                2,
+                12,
+                13,
+                14,
+                15
+              ],
+              "menu_items": [
+                {
+                  "id": 10,
+                  "title": "PoC development",
+                  "title_bn": "PoC development",
+                  "link": "/poc-development",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 2,
+                  "title": "Application Development",
+                  "title_bn": "Application Development",
+                  "link": "/application-development?pageId=156&pageName=application-development",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 12,
+                  "title": "Product-oriented delivery",
+                  "title_bn": "Product-oriented delivery",
+                  "link": "/product-oriented-delivery",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 13,
+                  "title": "Enterprise applications",
+                  "title_bn": "Enterprise applications",
+                  "link": "/enterprise-applications",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 14,
+                  "title": "Application re‑engineering",
+                  "title_bn": "Application re‑engineering",
+                  "link": "/application-reengineering",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 15,
+                  "title": "Cloud migration",
+                  "title_bn": "Cloud migration",
+                  "link": "/cloud-migration",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                }
+              ],
+              "altTitle": null
+            },
+            "sectionIndex": 1,
+            "index": 0,
+            "id": 2,
+            "menuMode": "horizontal",
+            "menuTheme": "light"
+          }
+        ]
+      },
+      {
+        "_id": "section-1759915232741-7oh7cn8lo",
+        "title": "Industries",
+        "data": [
+          {
+            "_id": "component-1759915232741-jsqkavd9c",
+            "type": "menu",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 2,
+              "name": "Engineering",
+              "menu_item_ids": [
+                10,
+                2,
+                12,
+                13,
+                14,
+                15
+              ],
+              "menu_items": [
+                {
+                  "id": 10,
+                  "title": "PoC development",
+                  "title_bn": "PoC development",
+                  "link": "/poc-development",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 2,
+                  "title": "Application Development",
+                  "title_bn": "Application Development",
+                  "link": "/application-development?pageId=156&pageName=application-development",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 12,
+                  "title": "Product-oriented delivery",
+                  "title_bn": "Product-oriented delivery",
+                  "link": "/product-oriented-delivery",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 13,
+                  "title": "Enterprise applications",
+                  "title_bn": "Enterprise applications",
+                  "link": "/enterprise-applications",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 14,
+                  "title": "Application re‑engineering",
+                  "title_bn": "Application re‑engineering",
+                  "link": "/application-reengineering",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 15,
+                  "title": "Cloud migration",
+                  "title_bn": "Cloud migration",
+                  "link": "/cloud-migration",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                }
+              ],
+              "altTitle": null
+            },
+            "sectionIndex": 1,
+            "index": 0,
+            "id": 2,
+            "menuMode": "horizontal",
+            "menuTheme": "light"
+          }
+        ]
+      },
+      {
+        "_id": "section-1759915241708-bkobuj9dz",
+        "title": "Company",
+        "data": [
+          {
+            "_id": "component-1759915241708-i1swic6td",
+            "type": "menu",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 2,
+              "name": "Engineering",
+              "menu_item_ids": [
+                10,
+                2,
+                12,
+                13,
+                14,
+                15
+              ],
+              "menu_items": [
+                {
+                  "id": 10,
+                  "title": "PoC development",
+                  "title_bn": "PoC development",
+                  "link": "/poc-development",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 2,
+                  "title": "Application Development",
+                  "title_bn": "Application Development",
+                  "link": "/application-development?pageId=156&pageName=application-development",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 12,
+                  "title": "Product-oriented delivery",
+                  "title_bn": "Product-oriented delivery",
+                  "link": "/product-oriented-delivery",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 13,
+                  "title": "Enterprise applications",
+                  "title_bn": "Enterprise applications",
+                  "link": "/enterprise-applications",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 14,
+                  "title": "Application re‑engineering",
+                  "title_bn": "Application re‑engineering",
+                  "link": "/application-reengineering",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 15,
+                  "title": "Cloud migration",
+                  "title_bn": "Cloud migration",
+                  "link": "/cloud-migration",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                }
+              ],
+              "altTitle": null
+            },
+            "sectionIndex": 1,
+            "index": 0,
+            "id": 2,
+            "menuMode": "horizontal",
+            "menuTheme": "light"
+          }
+        ]
+      },
+      {
+        "_id": "section-1759915270375-9f7r9a3e4",
+        "title": "Section 6",
+        "data": [
+          {
+            "_id": "component-1759915095193-i6v58usye",
+            "type": "menu",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 5,
+              "name": "Social",
+              "menu_item_ids": [
+                31,
+                32,
+                33
+              ],
+              "menu_items": [
+                {
+                  "id": 31,
+                  "title": "Facebook",
+                  "title_bn": "Facebook",
+                  "link": "/facebook",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 32,
+                  "title": "X",
+                  "title_bn": "X",
+                  "link": "/x",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                },
+                {
+                  "id": 33,
+                  "title": "LinkedIn",
+                  "title_bn": "LinkedIn",
+                  "link": "/linkedin",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": null,
+                  "all_children": []
+                }
+              ],
+              "altTitle": null
+            },
+            "sectionIndex": 0,
+            "index": 5,
+            "id": 5,
+            "menuMode": "horizontal",
+            "menuTheme": "light"
+          },
+          {
+            "_id": "component-1759915422847-gcw78p5zn",
+            "type": "gallery",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "images": [
+                {
+                  "id": 47,
+                  "title": "iso.svg",
+                  "file_name": "mave_2Y4lan.svg",
+                  "file_type": "image/svg+xml",
+                  "file_path": "media/mave_2Y4lan.svg",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:16:56.000000Z",
+                  "updated_at": "2025-10-08T08:16:56.000000Z"
+                },
+                {
+                  "id": 61,
+                  "title": "iso-27001-lite.svg",
+                  "file_name": "mave_oqcgvI.svg",
+                  "file_type": "image/svg+xml",
+                  "file_path": "media/mave_oqcgvI.svg",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:18:59.000000Z",
+                  "updated_at": "2025-10-08T08:18:59.000000Z"
+                },
+                {
+                  "id": 44,
+                  "title": "basis.svg",
+                  "file_name": "mave_loBOvo.svg",
+                  "file_type": "image/svg+xml",
+                  "file_path": "media/mave_loBOvo.svg",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:16:55.000000Z",
+                  "updated_at": "2025-10-08T08:16:55.000000Z"
+                }
+              ],
+              "layout": "grid",
+              "altTitle": null,
+              "settings": {
+                "columns": 3,
+                "spacing": 16,
+                "hoverEffect": "scale",
+                "borderRadius": "8px",
+                "shadow": "sm"
+              }
+            },
+            "sectionIndex": 5,
+            "index": 1,
+            "id": "component-1759915422847-gcw78p5zn"
+          },
+          {
+            "_id": "component-1759915471873-63kosrbbm",
+            "type": "title",
+            "value": "<p>© 2025 Ether Technologies Ltd.</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 5,
+            "index": 2
+          }
+        ]
+      }
+    ],
+    "additional": [
+      {
+        "pageType": "Footer",
+        "metaTitle": "Core Footer",
+        "metaDescription": null,
+        "keywords": [],
+        "metaImage": null,
+        "metaImageAlt": null
+      }
+    ],
+    "status": 1,
+    "created_at": "2025-10-08T09:12:53.000000Z",
+    "updated_at": "2025-10-08T09:25:12.000000Z",
+    "favicon_mave": null,
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  },
+  {
+    "id": 157,
+    "slug": "banking-and-finance",
+    "type": "Page",
+    "favicon_id": 10,
+    "page_name_en": "Banking & Finance",
+    "page_name_bn": "Banking & Finance",
+    "head": {
+      "title": "Banking & Finance",
+      "description": null,
+      "keywords": [],
+      "image": null,
+      "imageAlt": null
+    },
+    "body": [],
+    "additional": [
+      {
+        "pageType": "Page",
+        "metaTitle": "Banking & Finance",
+        "metaDescription": null,
+        "keywords": [
+          "Banking",
+          "Finance"
+        ],
+        "metaImage": null,
+        "metaImageAlt": null
+      }
+    ],
+    "status": 1,
+    "created_at": "2025-10-08T08:28:38.000000Z",
+    "updated_at": "2025-10-08T12:46:25.000000Z",
+    "favicon_mave": null,
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  },
+  {
+    "id": 156,
+    "slug": "application-development",
+    "type": "Page",
+    "favicon_id": 10,
+    "page_name_en": "Application Development",
+    "page_name_bn": "Application Development",
+    "head": {
+      "title": "Application Development",
+      "description": null,
+      "keywords": [],
+      "image": null,
+      "imageAlt": null
+    },
+    "body": null,
+    "additional": [
+      {
+        "pageType": "Page",
+        "metaTitle": "Application Development",
+        "metaDescription": null,
+        "keywords": [],
+        "metaImage": null,
+        "metaImageAlt": null
+      }
+    ],
+    "status": 1,
+    "created_at": "2025-10-08T08:28:08.000000Z",
+    "updated_at": "2025-10-08T08:28:08.000000Z",
+    "favicon_mave": null,
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  },
+  {
+    "id": 155,
+    "slug": "home",
+    "type": "Page",
+    "favicon_id": 10,
+    "page_name_en": "Home",
+    "page_name_bn": "Home",
+    "head": {
+      "title": "Home",
+      "description": null,
+      "keywords": [],
+      "image": null,
+      "imageAlt": null
+    },
+    "body": [
+      {
+        "_id": "section-1759915550976-wonh6vfqf",
+        "title": "Hero",
+        "data": [
+          {
+            "_id": "component-1759915724751-tom4wq228",
+            "type": "infobox",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Transforming lives through vision & innovation",
+              "description": "<p>Your first impression will probably be your last. Make a statement with an eye-catching and attractive design. At Ether Tech, our main goal is to create products that appeal to people's emotions, build trust and stick in their memories.</p>",
+              "altTitle": "Transforming lives through vision & innovation",
+              "altDescription": "<p>Your first impression will probably be your last. Make a statement with an eye-catching and attractive design. At Ether Tech, our main goal is to create products that appeal to people's emotions, build trust and stick in their memories.</p>",
+              "media": [],
+              "infoItems": [
+                {
+                  "id": 1759916126854,
+                  "title": "ISO",
+                  "description": "<p>ISO</p>",
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 114,
+                      "title": "iso-lite.svg",
+                      "file_name": "mave_IDjqpc.svg",
+                      "file_type": "image/svg+xml",
+                      "file_path": "media/mave_IDjqpc.svg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T09:31:54.000000Z",
+                      "updated_at": "2025-10-08T09:31:54.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1759916151736,
+                  "title": "ISO 27001",
+                  "description": "<p>ISO 27001</p>",
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 114,
+                      "title": "iso-lite.svg",
+                      "file_name": "mave_IDjqpc.svg",
+                      "file_type": "image/svg+xml",
+                      "file_path": "media/mave_IDjqpc.svg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T09:31:54.000000Z",
+                      "updated_at": "2025-10-08T09:31:54.000000Z"
+                    },
+                    {
+                      "id": 61,
+                      "title": "iso-27001-lite.svg",
+                      "file_name": "mave_oqcgvI.svg",
+                      "file_type": "image/svg+xml",
+                      "file_path": "media/mave_oqcgvI.svg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T08:18:59.000000Z",
+                      "updated_at": "2025-10-08T08:18:59.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1759916182780,
+                  "title": "Clutch",
+                  "description": "<p>Clutch</p>",
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 58,
+                      "title": "clutch-lite.svg",
+                      "file_name": "mave_V8iGpy.svg",
+                      "file_type": "image/svg+xml",
+                      "file_path": "media/mave_V8iGpy.svg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T08:17:34.000000Z",
+                      "updated_at": "2025-10-08T08:17:34.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1759916213393,
+                  "title": "Basis",
+                  "description": "<p>Basis</p>",
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 54,
+                      "title": "basis-lite.svg",
+                      "file_name": "mave_lckrfL.svg",
+                      "file_type": "image/svg+xml",
+                      "file_path": "media/mave_lckrfL.svg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T08:17:32.000000Z",
+                      "updated_at": "2025-10-08T08:17:32.000000Z"
+                    }
+                  ]
+                }
+              ],
+              "layout": "horizontal",
+              "font": "Arial",
+              "color": "#000000",
+              "background": "#ffffff",
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 0
+          },
+          {
+            "_id": "component-1759916241276-rnrbjkuh1",
+            "type": "infobox",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Data & AI",
+              "description": "<p>Your first impression will probably be your last. Make a statement with an eye-catching and attractive design. At Ether Tech, our main goal is to create products that appeal to people's emotions, build trust and stick in their memories.</p>",
+              "altTitle": "Transforming lives through vision & innovation",
+              "altDescription": "<p>Your first impression will probably be your last. Make a statement with an eye-catching and attractive design. At Ether Tech, our main goal is to create products that appeal to people's emotions, build trust and stick in their memories.</p>",
+              "media": [],
+              "infoItems": [
+                {
+                  "id": 1759916126854,
+                  "title": "ISO",
+                  "description": "<p>ISO</p>",
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 114,
+                      "title": "iso-lite.svg",
+                      "file_name": "mave_IDjqpc.svg",
+                      "file_type": "image/svg+xml",
+                      "file_path": "media/mave_IDjqpc.svg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T09:31:54.000000Z",
+                      "updated_at": "2025-10-08T09:31:54.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1759916151736,
+                  "title": "ISO 27001",
+                  "description": "<p>ISO 27001</p>",
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 114,
+                      "title": "iso-lite.svg",
+                      "file_name": "mave_IDjqpc.svg",
+                      "file_type": "image/svg+xml",
+                      "file_path": "media/mave_IDjqpc.svg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T09:31:54.000000Z",
+                      "updated_at": "2025-10-08T09:31:54.000000Z"
+                    },
+                    {
+                      "id": 61,
+                      "title": "iso-27001-lite.svg",
+                      "file_name": "mave_oqcgvI.svg",
+                      "file_type": "image/svg+xml",
+                      "file_path": "media/mave_oqcgvI.svg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T08:18:59.000000Z",
+                      "updated_at": "2025-10-08T08:18:59.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1759916182780,
+                  "title": "Clutch",
+                  "description": "<p>Clutch</p>",
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 58,
+                      "title": "clutch-lite.svg",
+                      "file_name": "mave_V8iGpy.svg",
+                      "file_type": "image/svg+xml",
+                      "file_path": "media/mave_V8iGpy.svg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T08:17:34.000000Z",
+                      "updated_at": "2025-10-08T08:17:34.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1759916213393,
+                  "title": "Basis",
+                  "description": "<p>Basis</p>",
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 54,
+                      "title": "basis-lite.svg",
+                      "file_name": "mave_lckrfL.svg",
+                      "file_type": "image/svg+xml",
+                      "file_path": "media/mave_lckrfL.svg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T08:17:32.000000Z",
+                      "updated_at": "2025-10-08T08:17:32.000000Z"
+                    }
+                  ]
+                }
+              ],
+              "layout": "horizontal",
+              "font": "Arial",
+              "color": "#000000",
+              "background": "#ffffff",
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 1
+          },
+          {
+            "_id": "component-1759916257005-8mtwadzz2",
+            "type": "infobox",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Cyber security",
+              "description": "<p>Your first impression will probably be your last. Make a statement with an eye-catching and attractive design. At Ether Tech, our main goal is to create products that appeal to people's emotions, build trust and stick in their memories.</p>",
+              "altTitle": "Transforming lives through vision & innovation",
+              "altDescription": "<p>Your first impression will probably be your last. Make a statement with an eye-catching and attractive design. At Ether Tech, our main goal is to create products that appeal to people's emotions, build trust and stick in their memories.</p>",
+              "media": [],
+              "infoItems": [
+                {
+                  "id": 1759916126854,
+                  "title": "ISO",
+                  "description": "<p>ISO</p>",
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 114,
+                      "title": "iso-lite.svg",
+                      "file_name": "mave_IDjqpc.svg",
+                      "file_type": "image/svg+xml",
+                      "file_path": "media/mave_IDjqpc.svg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T09:31:54.000000Z",
+                      "updated_at": "2025-10-08T09:31:54.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1759916151736,
+                  "title": "ISO 27001",
+                  "description": "<p>ISO 27001</p>",
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 114,
+                      "title": "iso-lite.svg",
+                      "file_name": "mave_IDjqpc.svg",
+                      "file_type": "image/svg+xml",
+                      "file_path": "media/mave_IDjqpc.svg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T09:31:54.000000Z",
+                      "updated_at": "2025-10-08T09:31:54.000000Z"
+                    },
+                    {
+                      "id": 61,
+                      "title": "iso-27001-lite.svg",
+                      "file_name": "mave_oqcgvI.svg",
+                      "file_type": "image/svg+xml",
+                      "file_path": "media/mave_oqcgvI.svg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T08:18:59.000000Z",
+                      "updated_at": "2025-10-08T08:18:59.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1759916182780,
+                  "title": "Clutch",
+                  "description": "<p>Clutch</p>",
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 58,
+                      "title": "clutch-lite.svg",
+                      "file_name": "mave_V8iGpy.svg",
+                      "file_type": "image/svg+xml",
+                      "file_path": "media/mave_V8iGpy.svg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T08:17:34.000000Z",
+                      "updated_at": "2025-10-08T08:17:34.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1759916213393,
+                  "title": "Basis",
+                  "description": "<p>Basis</p>",
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 54,
+                      "title": "basis-lite.svg",
+                      "file_name": "mave_lckrfL.svg",
+                      "file_type": "image/svg+xml",
+                      "file_path": "media/mave_lckrfL.svg",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T08:17:32.000000Z",
+                      "updated_at": "2025-10-08T08:17:32.000000Z"
+                    }
+                  ]
+                }
+              ],
+              "layout": "horizontal",
+              "font": "Arial",
+              "color": "#000000",
+              "background": "#ffffff",
+              "showAltContent": false
+            },
+            "sectionIndex": 0,
+            "index": 2
+          }
+        ]
+      },
+      {
+        "_id": "section-1759916299138-f8mk5c814",
+        "title": "From Concepts to Effects",
+        "data": [
+          {
+            "_id": "component-1759916333687-rr3v4ufkg",
+            "type": "title",
+            "value": "<p>Decentralized</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#fcb813",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": true,
+              "secondPartText": "<p>Yet Universal</p>",
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 1,
+            "index": 0
+          },
+          {
+            "_id": "component-1759916385082-s829t7zrd",
+            "type": "description",
+            "value": "<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 1,
+            "index": 1
+          },
+          {
+            "_id": "component-1759916605187-oa26g5hco",
+            "type": "slider",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 1,
+              "type": "card",
+              "title_en": "From Concepts to Effects",
+              "title_bn": "From Concepts to Effects",
+              "description_en": "<p>From Concepts to Effects</p>",
+              "description_bn": "<p>From Concepts to Effects</p>",
+              "media_ids": [],
+              "card_ids": [
+                1,
+                2,
+                3,
+                4
+              ],
+              "additional": null,
+              "status": "0",
+              "created_at": "2025-10-08T09:42:43.000000Z",
+              "updated_at": "2025-10-08T09:42:43.000000Z",
+              "medias": [],
+              "cards": [
+                {
+                  "id": 1,
+                  "page_name": null,
+                  "media_ids": "40",
+                  "title_en": "A multinational fintech company",
+                  "title_bn": null,
+                  "description_en": "<p>ETHER has been working with leading fintech companies, providing all tech services to various banks in Bangladesh.</p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": "0",
+                  "created_at": "2025-10-08T09:40:36.000000Z",
+                  "updated_at": "2025-10-08T09:40:36.000000Z",
+                  "media_files": {
+                    "id": 40,
+                    "title": "dollar.png",
+                    "file_name": "mave_KhlzV8.png",
+                    "file_type": "image/png",
+                    "file_path": "media/mave_KhlzV8.png",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T08:16:32.000000Z",
+                    "updated_at": "2025-10-08T08:16:32.000000Z"
+                  }
+                },
+                {
+                  "id": 2,
+                  "page_name": null,
+                  "media_ids": "41",
+                  "title_en": "Customers in different countries",
+                  "title_bn": null,
+                  "description_en": "<p>We have created several of our own products with AI that have been able to solve many of our customers' problems.</p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": "0",
+                  "created_at": "2025-10-08T09:41:15.000000Z",
+                  "updated_at": "2025-10-08T09:41:15.000000Z",
+                  "media_files": {
+                    "id": 41,
+                    "title": "people.png",
+                    "file_name": "mave_nmD8AX.png",
+                    "file_type": "image/png",
+                    "file_path": "media/mave_nmD8AX.png",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T08:16:32.000000Z",
+                    "updated_at": "2025-10-08T08:16:32.000000Z"
+                  }
+                },
+                {
+                  "id": 3,
+                  "page_name": null,
+                  "media_ids": "36",
+                  "title_en": "Center for global operations",
+                  "title_bn": null,
+                  "description_en": "<p>We provide necessary operational support from Bangladesh to USA, Canada, Australia, Singapore and Vietnam.</p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": "0",
+                  "created_at": "2025-10-08T09:41:40.000000Z",
+                  "updated_at": "2025-10-08T09:41:40.000000Z",
+                  "media_files": {
+                    "id": 36,
+                    "title": "stage.png",
+                    "file_name": "mave_ZGagxN.png",
+                    "file_type": "image/png",
+                    "file_path": "media/mave_ZGagxN.png",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T08:16:17.000000Z",
+                    "updated_at": "2025-10-08T08:16:17.000000Z"
+                  }
+                },
+                {
+                  "id": 4,
+                  "page_name": null,
+                  "media_ids": "39",
+                  "title_en": "Dedicated to adherence to compliance",
+                  "title_bn": null,
+                  "description_en": "<p>Delivering exceptional operational performance while abiding by all national and international regulations is our main priority.</p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": "0",
+                  "created_at": "2025-10-08T09:42:03.000000Z",
+                  "updated_at": "2025-10-08T09:42:03.000000Z",
+                  "media_files": {
+                    "id": 39,
+                    "title": "checkmark.png",
+                    "file_name": "mave_n0tkX7.png",
+                    "file_type": "image/png",
+                    "file_path": "media/mave_n0tkX7.png",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T08:16:31.000000Z",
+                    "updated_at": "2025-10-08T08:16:31.000000Z"
+                  }
+                }
+              ],
+              "config": {
+                "autoplay": true,
+                "dots": false,
+                "effect": "scroll",
+                "speed": 500,
+                "height": 400
+              }
+            },
+            "sectionIndex": 1,
+            "index": 2,
+            "id": 1
+          }
+        ]
+      },
+      {
+        "_id": "section-1759916708034-phs2s1tvt",
+        "title": "OUR SERVICES",
+        "data": [
+          {
+            "_id": "component-1759916708034-gs095fxsa",
+            "type": "title",
+            "value": "<p>World-Class</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#fcb813",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": true,
+              "secondPartText": "<p>Tech Services</p>",
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 2,
+            "index": 0
+          },
+          {
+            "_id": "component-1759916708034-2vj6pd5za",
+            "type": "description",
+            "value": "<p>See how we can help you reach your goals Answer three questions to help us match our expertise and software solutions to your needs Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 2,
+            "index": 1
+          },
+          {
+            "_id": "component-1759916770121-hvas2cpar",
+            "type": "accordion",
+            "value": null,
+            "settings": [],
+            "_mave": [
+              {
+                "title": "<strong>UX Consultant:</strong> Offering appealing and functional UI/UX design services that attract and engage users",
+                "altTitle": null,
+                "content": "<ul><li>User Research &amp; Analysis</li><li>UX Strategy &amp; Planning</li><li>UI</li><li>Usability &amp; Testing</li><li>UI/UX for Specialized Platforms</li><li>Handoff &amp; Implementation</li><li>Full Product Design</li></ul>",
+                "altContent": null,
+                "contentType": "text",
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                }
+              },
+              {
+                "title": "Engineering Software Development:",
+                "altTitle": null,
+                "content": "<ul><li>User Research &amp; Analysis</li><li>UX Strategy &amp; Planning</li><li>UI</li><li>Usability &amp; Testing</li><li>UI/UX for Specialized Platforms</li><li>Handoff &amp; Implementation</li><li>Full Product Design</li></ul>",
+                "altContent": null,
+                "contentType": "text",
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                }
+              },
+              {
+                "title": "Technical Support:",
+                "altTitle": null,
+                "content": "<ul><li>User Research &amp; Analysis</li><li>UX Strategy &amp; Planning</li><li>UI</li><li>Usability &amp; Testing</li><li>UI/UX for Specialized Platforms</li><li>Handoff &amp; Implementation</li><li>Full Product Design</li></ul>",
+                "altContent": null,
+                "contentType": "text",
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                }
+              }
+            ],
+            "sectionIndex": 2,
+            "index": 2,
+            "id": "component-1759916770121-hvas2cpar"
+          },
+          {
+            "_id": "component-1760011427569-zfw7u0a8l",
+            "type": "accordion",
+            "value": null,
+            "settings": [],
+            "_mave": [
+              {
+                "title": "<strong>UX Consultant 2:</strong> Offering appealing and functional UI/UX design services that attract and engage users",
+                "altTitle": null,
+                "content": "<ul><li>User Research &amp; Analysis</li><li>UX Strategy &amp; Planning</li><li>UI</li><li>Usability &amp; Testing</li><li>UI/UX for Specialized Platforms</li><li>Handoff &amp; Implementation</li><li>Full Product Design</li></ul>",
+                "altContent": null,
+                "contentType": "text",
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                },
+                "tags": []
+              },
+              {
+                "title": "Engineering Software Development:",
+                "altTitle": null,
+                "content": "<ul><li>User Research &amp; Analysis</li><li>UX Strategy &amp; Planning</li><li>UI</li><li>Usability &amp; Testing</li><li>UI/UX for Specialized Platforms</li><li>Handoff &amp; Implementation</li><li>Full Product Design</li></ul>",
+                "altContent": null,
+                "contentType": "text",
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                },
+                "tags": []
+              },
+              {
+                "title": "Technical Support:",
+                "altTitle": null,
+                "content": "<ul><li>User Research &amp; Analysis</li><li>UX Strategy &amp; Planning</li><li>UI</li><li>Usability &amp; Testing</li><li>UI/UX for Specialized Platforms</li><li>Handoff &amp; Implementation</li><li>Full Product Design</li></ul>",
+                "altContent": null,
+                "contentType": "text",
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                },
+                "tags": []
+              }
+            ],
+            "sectionIndex": 2,
+            "index": 3,
+            "id": "component-1760011427569-zfw7u0a8l"
+          },
+          {
+            "_id": "component-1760011425890-czk1ai678",
+            "type": "accordion",
+            "value": null,
+            "settings": [],
+            "_mave": [
+              {
+                "title": "<strong>UX Consultant 3:</strong> Offering appealing and functional UI/UX design services that attract and engage users",
+                "altTitle": null,
+                "content": "<ul><li>User Research &amp; Analysis</li><li>UX Strategy &amp; Planning</li><li>UI</li><li>Usability &amp; Testing</li><li>UI/UX for Specialized Platforms</li><li>Handoff &amp; Implementation</li><li>Full Product Design</li></ul>",
+                "altContent": null,
+                "contentType": "text",
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                },
+                "tags": []
+              },
+              {
+                "title": "Engineering Software Development:",
+                "altTitle": null,
+                "content": "<ul><li>User Research &amp; Analysis</li><li>UX Strategy &amp; Planning</li><li>UI</li><li>Usability &amp; Testing</li><li>UI/UX for Specialized Platforms</li><li>Handoff &amp; Implementation</li><li>Full Product Design</li></ul>",
+                "altContent": null,
+                "contentType": "text",
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                },
+                "tags": []
+              },
+              {
+                "title": "Technical Support:",
+                "altTitle": null,
+                "content": "<ul><li>User Research &amp; Analysis</li><li>UX Strategy &amp; Planning</li><li>UI</li><li>Usability &amp; Testing</li><li>UI/UX for Specialized Platforms</li><li>Handoff &amp; Implementation</li><li>Full Product Design</li></ul>",
+                "altContent": null,
+                "contentType": "text",
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                },
+                "tags": []
+              }
+            ],
+            "sectionIndex": 2,
+            "index": 4,
+            "id": "component-1760011425890-czk1ai678"
+          },
+          {
+            "_id": "component-1760011418068-qdr2jxq22",
+            "type": "accordion",
+            "value": null,
+            "settings": [],
+            "_mave": [
+              {
+                "title": "<strong>UX Consultant 4:</strong> Offering appealing and functional UI/UX design services that attract and engage users",
+                "altTitle": null,
+                "content": "<ul><li>User Research &amp; Analysis</li><li>UX Strategy &amp; Planning</li><li>UI</li><li>Usability &amp; Testing</li><li>UI/UX for Specialized Platforms</li><li>Handoff &amp; Implementation</li><li>Full Product Design</li></ul>",
+                "altContent": null,
+                "contentType": "text",
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                },
+                "tags": []
+              },
+              {
+                "title": "Engineering Software Development:",
+                "altTitle": null,
+                "content": "<ul><li>User Research &amp; Analysis</li><li>UX Strategy &amp; Planning</li><li>UI</li><li>Usability &amp; Testing</li><li>UI/UX for Specialized Platforms</li><li>Handoff &amp; Implementation</li><li>Full Product Design</li></ul>",
+                "altContent": null,
+                "contentType": "text",
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                },
+                "tags": []
+              },
+              {
+                "title": "Technical Support:",
+                "altTitle": null,
+                "content": "<ul><li>User Research &amp; Analysis</li><li>UX Strategy &amp; Planning</li><li>UI</li><li>Usability &amp; Testing</li><li>UI/UX for Specialized Platforms</li><li>Handoff &amp; Implementation</li><li>Full Product Design</li></ul>",
+                "altContent": null,
+                "contentType": "text",
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                },
+                "tags": []
+              }
+            ],
+            "sectionIndex": 2,
+            "index": 5,
+            "id": "component-1760011418068-qdr2jxq22"
+          },
+          {
+            "_id": "component-1760011412038-nfqryxz0t",
+            "type": "accordion",
+            "value": null,
+            "settings": [],
+            "_mave": [
+              {
+                "title": "<strong>UX Consultant 5:</strong> Offering appealing and functional UI/UX design services that attract and engage users",
+                "altTitle": null,
+                "content": "<ul><li>User Research &amp; Analysis</li><li>UX Strategy &amp; Planning</li><li>UI</li><li>Usability &amp; Testing</li><li>UI/UX for Specialized Platforms</li><li>Handoff &amp; Implementation</li><li>Full Product Design</li></ul>",
+                "altContent": null,
+                "contentType": "text",
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                },
+                "tags": []
+              },
+              {
+                "title": "Engineering Software Development:",
+                "altTitle": null,
+                "content": "<ul><li>User Research &amp; Analysis</li><li>UX Strategy &amp; Planning</li><li>UI</li><li>Usability &amp; Testing</li><li>UI/UX for Specialized Platforms</li><li>Handoff &amp; Implementation</li><li>Full Product Design</li></ul>",
+                "altContent": null,
+                "contentType": "text",
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                },
+                "tags": []
+              },
+              {
+                "title": "Technical Support:",
+                "altTitle": null,
+                "content": "<ul><li>User Research &amp; Analysis</li><li>UX Strategy &amp; Planning</li><li>UI</li><li>Usability &amp; Testing</li><li>UI/UX for Specialized Platforms</li><li>Handoff &amp; Implementation</li><li>Full Product Design</li></ul>",
+                "altContent": null,
+                "contentType": "text",
+                "style": {
+                  "headerBg": "#ffffff",
+                  "headerTextColor": "#000000",
+                  "contentBg": "#ffffff",
+                  "contentTextColor": "#000000",
+                  "borderColor": "#e5e7eb",
+                  "borderRadius": "8px"
+                },
+                "tags": []
+              }
+            ],
+            "sectionIndex": 2,
+            "index": 6,
+            "id": "component-1760011412038-nfqryxz0t"
+          }
+        ]
+      },
+      {
+        "_id": "section-1759920885686-ln6h6s8vs",
+        "title": "OUR partner",
+        "data": [
+          {
+            "_id": "component-1759920885686-dxqmlg3fm",
+            "type": "title",
+            "value": "<p>World-Class</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#fcb813",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": true,
+              "secondPartText": "<p>Tech Services</p>",
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 2,
+            "index": 0
+          },
+          {
+            "_id": "component-1759920885686-gfbinrqu6",
+            "type": "description",
+            "value": "<p>See how we can help you reach your goals Answer three questions to help us match our expertise and software solutions to your needs Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 2,
+            "index": 1
+          },
+          {
+            "_id": "component-1759920899293-62hafx5vr",
+            "type": "gallery",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "images": [
+                {
+                  "id": 26,
+                  "title": "odoo.svg",
+                  "file_name": "mave_zvaOCY.svg",
+                  "file_type": "image/svg+xml",
+                  "file_path": "media/mave_zvaOCY.svg",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:15:23.000000Z",
+                  "updated_at": "2025-10-08T08:15:23.000000Z"
+                },
+                {
+                  "id": 25,
+                  "title": "meta.svg",
+                  "file_name": "mave_ilcXvS.svg",
+                  "file_type": "image/svg+xml",
+                  "file_path": "media/mave_ilcXvS.svg",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:15:22.000000Z",
+                  "updated_at": "2025-10-08T08:15:22.000000Z"
+                },
+                {
+                  "id": 30,
+                  "title": "Integ.svg",
+                  "file_name": "mave_ztQtSX.svg",
+                  "file_type": "image/svg+xml",
+                  "file_path": "media/mave_ztQtSX.svg",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:15:40.000000Z",
+                  "updated_at": "2025-10-08T08:15:40.000000Z"
+                },
+                {
+                  "id": 34,
+                  "title": "check-point.svg",
+                  "file_name": "mave_6AgP0b.svg",
+                  "file_type": "image/svg+xml",
+                  "file_path": "media/mave_6AgP0b.svg",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:15:54.000000Z",
+                  "updated_at": "2025-10-08T08:15:54.000000Z"
+                },
+                {
+                  "id": 28,
+                  "title": "cloudways.svg",
+                  "file_name": "mave_yVv4lK.svg",
+                  "file_type": "image/svg+xml",
+                  "file_path": "media/mave_yVv4lK.svg",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:15:39.000000Z",
+                  "updated_at": "2025-10-08T08:15:39.000000Z"
+                },
+                {
+                  "id": 23,
+                  "title": "uib.svg",
+                  "file_name": "mave_dY58Sg.svg",
+                  "file_type": "image/svg+xml",
+                  "file_path": "media/mave_dY58Sg.svg",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:15:07.000000Z",
+                  "updated_at": "2025-10-08T08:15:07.000000Z"
+                }
+              ],
+              "layout": "grid",
+              "altTitle": null,
+              "settings": {
+                "columns": 3,
+                "spacing": 16,
+                "hoverEffect": "scale",
+                "borderRadius": "8px",
+                "shadow": "sm"
+              }
+            },
+            "sectionIndex": 3,
+            "index": 2,
+            "id": "component-1759920899293-62hafx5vr"
+          }
+        ]
+      },
+      {
+        "_id": "section-1759920995294-h3bnao0mx",
+        "title": "Our Clients",
+        "data": [
+          {
+            "_id": "component-1759920995294-r2cilobj2",
+            "type": "title",
+            "value": "<p>World-Class</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#fcb813",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": true,
+              "secondPartText": "<p>Tech Services</p>",
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 2,
+            "index": 0
+          },
+          {
+            "_id": "component-1759921026689-lid25vtuo",
+            "type": "testimonial",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "testimonials": [
+                {
+                  "id": 1759921069559,
+                  "quote": "<p>Completed Projects</p>",
+                  "author": "1,120+",
+                  "rating": 5,
+                  "image": {
+                    "id": 100,
+                    "title": "handshake.svg",
+                    "file_name": "mave_T89I5k.svg",
+                    "file_type": "image/svg+xml",
+                    "file_path": "media/mave_T89I5k.svg",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T08:24:20.000000Z",
+                    "updated_at": "2025-10-08T08:24:20.000000Z"
+                  },
+                  "altQuote": null,
+                  "altAuthor": null
+                },
+                {
+                  "id": 1759921094990,
+                  "quote": "<p>Satisfaction Rate</p>",
+                  "author": "100%",
+                  "rating": 5,
+                  "image": {
+                    "id": 99,
+                    "title": "team.svg",
+                    "file_name": "mave_mGqYuv.svg",
+                    "file_type": "image/svg+xml",
+                    "file_path": "media/mave_mGqYuv.svg",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T08:24:20.000000Z",
+                    "updated_at": "2025-10-08T08:24:20.000000Z"
+                  },
+                  "altQuote": null,
+                  "altAuthor": null
+                },
+                {
+                  "id": 1759921124862,
+                  "quote": "<p>Team Members</p>",
+                  "author": "50+",
+                  "rating": 5,
+                  "image": {
+                    "id": 99,
+                    "title": "team.svg",
+                    "file_name": "mave_mGqYuv.svg",
+                    "file_type": "image/svg+xml",
+                    "file_path": "media/mave_mGqYuv.svg",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T08:24:20.000000Z",
+                    "updated_at": "2025-10-08T08:24:20.000000Z"
+                  },
+                  "altQuote": null,
+                  "altAuthor": null
+                },
+                {
+                  "id": 1759921150013,
+                  "quote": "<p>On the Experience&nbsp;</p>",
+                  "author": "8+Years",
+                  "rating": 5,
+                  "image": {
+                    "id": 96,
+                    "title": "clock.svg",
+                    "file_name": "mave_6GIiQb.svg",
+                    "file_type": "image/svg+xml",
+                    "file_path": "media/mave_6GIiQb.svg",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T08:24:19.000000Z",
+                    "updated_at": "2025-10-08T08:24:19.000000Z"
+                  },
+                  "altQuote": null,
+                  "altAuthor": null
+                }
+              ],
+              "layout": "grid",
+              "font": "Arial",
+              "color": "#000000",
+              "background": "#ffffff"
+            },
+            "sectionIndex": 4,
+            "index": 1
+          },
+          {
+            "_id": "component-1759921248542-qbev8f6vv",
+            "type": "gallery",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "images": [
+                {
+                  "id": 111,
+                  "title": "aranya.png",
+                  "file_name": "mave_4U447P.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_4U447P.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:25:50.000000Z",
+                  "updated_at": "2025-10-08T08:25:50.000000Z"
+                },
+                {
+                  "id": 109,
+                  "title": "mir-ceramic.png",
+                  "file_name": "mave_sjHbiv.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_sjHbiv.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:25:30.000000Z",
+                  "updated_at": "2025-10-08T08:25:30.000000Z"
+                },
+                {
+                  "id": 108,
+                  "title": "mercedes-benz.png",
+                  "file_name": "mave_M12qJi.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_M12qJi.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:25:30.000000Z",
+                  "updated_at": "2025-10-08T08:25:30.000000Z"
+                },
+                {
+                  "id": 107,
+                  "title": "govt.png",
+                  "file_name": "mave_cgSer2.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_cgSer2.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:25:30.000000Z",
+                  "updated_at": "2025-10-08T08:25:30.000000Z"
+                },
+                {
+                  "id": 105,
+                  "title": "united-hospital.png",
+                  "file_name": "mave_tvx2He.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_tvx2He.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:25:17.000000Z",
+                  "updated_at": "2025-10-08T08:25:17.000000Z"
+                },
+                {
+                  "id": 104,
+                  "title": "united-group.png",
+                  "file_name": "mave_RWZ7D3.png",
+                  "file_type": "image/png",
+                  "file_path": "media/mave_RWZ7D3.png",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:25:17.000000Z",
+                  "updated_at": "2025-10-08T08:25:17.000000Z"
+                }
+              ],
+              "layout": "grid",
+              "altTitle": null,
+              "settings": {
+                "columns": 3,
+                "spacing": 16,
+                "hoverEffect": "scale",
+                "borderRadius": "8px",
+                "shadow": "sm"
+              }
+            },
+            "sectionIndex": 4,
+            "index": 2,
+            "id": "component-1759921248542-qbev8f6vv"
+          }
+        ]
+      },
+      {
+        "_id": "section-1759923044449-fl7ohdytw",
+        "title": "Industries",
+        "data": [
+          {
+            "_id": "component-1759923044449-mcbarxhel",
+            "type": "title",
+            "value": "<p>World-Class</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#fcb813",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": true,
+              "secondPartText": "<p>Tech Services</p>",
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 2,
+            "index": 0
+          },
+          {
+            "_id": "component-1759923085108-mxqpfmo1p",
+            "type": "description",
+            "value": "<p>See how we can help you reach your goals Answer three questions to help us match our expertise and software solutions to your needs Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 5,
+            "index": 1
+          },
+          {
+            "_id": "component-1759923675676-q1gio3d3t",
+            "type": "slider",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 2,
+              "type": "card",
+              "title_en": "Industries We Serve",
+              "title_bn": "Industries We Serve",
+              "description_en": "<p>Industries We Serve</p>",
+              "description_bn": "<p>Industries We Serve</p>",
+              "media_ids": [],
+              "card_ids": [
+                8,
+                7,
+                6,
+                5
+              ],
+              "additional": null,
+              "status": "0",
+              "created_at": "2025-10-08T11:41:09.000000Z",
+              "updated_at": "2025-10-08T11:41:09.000000Z",
+              "medias": [],
+              "cards": [
+                {
+                  "id": 8,
+                  "page_name": null,
+                  "media_ids": "115",
+                  "title_en": "Banking & Finance",
+                  "title_bn": null,
+                  "description_en": "<p>Navigate financial risks with ease</p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": "0",
+                  "created_at": "2025-10-08T11:40:19.000000Z",
+                  "updated_at": "2025-10-08T11:40:19.000000Z",
+                  "media_files": {
+                    "id": 115,
+                    "title": "Banking & Finance.webp",
+                    "file_name": "mave_quFUru.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_quFUru.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T11:38:37.000000Z",
+                    "updated_at": "2025-10-08T11:38:37.000000Z"
+                  },
+                  "altTitle": "<p>Navigate financial risks with ease</p>",
+                  "altDescription": "<p>Navigate financial risks with ease</p>"
+                },
+                {
+                  "id": 7,
+                  "page_name": null,
+                  "media_ids": "117",
+                  "title_en": "Real Estate",
+                  "title_bn": null,
+                  "description_en": "<p>Navigate financial risks with ease</p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": "0",
+                  "created_at": "2025-10-08T11:40:03.000000Z",
+                  "updated_at": "2025-10-08T11:40:03.000000Z",
+                  "media_files": {
+                    "id": 117,
+                    "title": "Real Estate.webp",
+                    "file_name": "mave_QAUsx0.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_QAUsx0.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T11:38:38.000000Z",
+                    "updated_at": "2025-10-08T11:38:38.000000Z"
+                  },
+                  "altTitle": "<p>Navigate financial risks with ease</p>",
+                  "altDescription": "<p>Navigate financial risks with ease</p>"
+                },
+                {
+                  "id": 6,
+                  "page_name": null,
+                  "media_ids": "118",
+                  "title_en": "Health & Medical",
+                  "title_bn": null,
+                  "description_en": "<p>Navigate financial risks with ease</p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": "0",
+                  "created_at": "2025-10-08T11:39:36.000000Z",
+                  "updated_at": "2025-10-08T11:39:36.000000Z",
+                  "media_files": {
+                    "id": 118,
+                    "title": "Health & Medical.webp",
+                    "file_name": "mave_CUokJR.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_CUokJR.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T11:38:38.000000Z",
+                    "updated_at": "2025-10-08T11:38:38.000000Z"
+                  },
+                  "altTitle": "<p>Navigate financial risks with ease</p>",
+                  "altDescription": "<p>Navigate financial risks with ease</p>"
+                },
+                {
+                  "id": 5,
+                  "page_name": null,
+                  "media_ids": "116",
+                  "title_en": "CMS",
+                  "title_bn": null,
+                  "description_en": "<p>Navigate financial risks with ease</p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": "0",
+                  "created_at": "2025-10-08T11:39:14.000000Z",
+                  "updated_at": "2025-10-08T11:39:14.000000Z",
+                  "media_files": {
+                    "id": 116,
+                    "title": "CMS.webp",
+                    "file_name": "mave_BXEBII.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_BXEBII.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T11:38:38.000000Z",
+                    "updated_at": "2025-10-08T11:38:38.000000Z"
+                  },
+                  "altTitle": "<p>Navigate financial risks with ease</p>",
+                  "altDescription": "<p>Navigate financial risks with ease</p>"
+                }
+              ],
+              "config": {
+                "autoplay": true,
+                "dots": false,
+                "effect": "scroll",
+                "speed": 500,
+                "height": 400
+              },
+              "showAltContent": true
+            },
+            "sectionIndex": 5,
+            "index": 2,
+            "id": 2
+          }
+        ]
+      },
+      {
+        "_id": "section-1759923834181-9kwicwuae",
+        "title": "WE HAVE",
+        "data": [
+          {
+            "_id": "component-1759924770982-nv2x04dqb",
+            "type": "infobox",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Worldwide Operations",
+              "description": "<p>Ether Technologies is a global software company operating in Bangladesh, Australia and Singapore, empowering businesses with cutting-edge solutions in software development, IT consultancy, and digital transformation. With a diverse team of 200+ professionals, we deliver scalable, secure, and future-ready technologies that drive efficiency and growth. Trusted by clients worldwide, Ether is committed to innovation, quality, and long-term success. Our agile approach ensures faster delivery and greater adaptability to client needs. We focus on building intelligent systems that create real value and lasting impact.</p>",
+              "altTitle": "in",
+              "altDescription": null,
+              "media": [],
+              "infoItems": [
+                {
+                  "id": 1759924872583,
+                  "title": "Bangladesh",
+                  "description": "<p>Bangladesh</p>",
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 115,
+                      "title": "Banking & Finance.webp",
+                      "file_name": "mave_quFUru.webp",
+                      "file_type": "image/webp",
+                      "file_path": "media/mave_quFUru.webp",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T11:38:37.000000Z",
+                      "updated_at": "2025-10-08T11:38:37.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1759924895686,
+                  "title": "Australia",
+                  "description": "<p>Australia</p>",
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 116,
+                      "title": "CMS.webp",
+                      "file_name": "mave_BXEBII.webp",
+                      "file_type": "image/webp",
+                      "file_path": "media/mave_BXEBII.webp",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T11:38:38.000000Z",
+                      "updated_at": "2025-10-08T11:38:38.000000Z"
+                    }
+                  ]
+                },
+                {
+                  "id": 1759924918101,
+                  "title": "Singapore",
+                  "description": "<p>Singapore</p>",
+                  "altTitle": null,
+                  "altDescription": null,
+                  "media": [
+                    {
+                      "id": 117,
+                      "title": "Real Estate.webp",
+                      "file_name": "mave_QAUsx0.webp",
+                      "file_type": "image/webp",
+                      "file_path": "media/mave_QAUsx0.webp",
+                      "file_size": null,
+                      "tags": null,
+                      "created_at": "2025-10-08T11:38:38.000000Z",
+                      "updated_at": "2025-10-08T11:38:38.000000Z"
+                    }
+                  ]
+                }
+              ],
+              "layout": "horizontal",
+              "font": "Arial",
+              "color": "#000000",
+              "background": "#ffffff",
+              "showAltContent": false
+            },
+            "sectionIndex": 6,
+            "index": 3
+          }
+        ]
+      },
+      {
+        "_id": "section-1759925027931-kh56me8dj",
+        "title": "OUR PRODUCTS",
+        "data": [
+          {
+            "_id": "component-1759925037625-1xyq0kxqi",
+            "type": "title",
+            "value": "<p>Explore our</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": true,
+              "secondPartText": "<p>own products</p>",
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 7,
+            "index": 0
+          },
+          {
+            "_id": "component-1759925062224-17ixu5rk5",
+            "type": "description",
+            "value": "<p>See how we can help you reach your goals Answer three questions to help us match our expertise and software solutions to your needs Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 7,
+            "index": 1
+          },
+          {
+            "_id": "component-1759925079135-hvlqvsa4o",
+            "type": "gallery",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "images": [
+                {
+                  "id": 50,
+                  "title": "Mave.webp",
+                  "file_name": "mave_u3ONmQ.webp",
+                  "file_type": "image/webp",
+                  "file_path": "media/mave_u3ONmQ.webp",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:17:18.000000Z",
+                  "updated_at": "2025-10-08T08:17:18.000000Z"
+                },
+                {
+                  "id": 49,
+                  "title": "assetiq.webp",
+                  "file_name": "mave_ux4q36.webp",
+                  "file_type": "image/webp",
+                  "file_path": "media/mave_ux4q36.webp",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:17:17.000000Z",
+                  "updated_at": "2025-10-08T08:17:17.000000Z"
+                },
+                {
+                  "id": 51,
+                  "title": "luca.webp",
+                  "file_name": "mave_grs6wE.webp",
+                  "file_type": "image/webp",
+                  "file_path": "media/mave_grs6wE.webp",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:17:18.000000Z",
+                  "updated_at": "2025-10-08T08:17:18.000000Z"
+                },
+                {
+                  "id": 53,
+                  "title": "ryserved.webp",
+                  "file_name": "mave_5uoKXa.webp",
+                  "file_type": "image/webp",
+                  "file_path": "media/mave_5uoKXa.webp",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:17:19.000000Z",
+                  "updated_at": "2025-10-08T08:17:19.000000Z"
+                },
+                {
+                  "id": 52,
+                  "title": "rango.webp",
+                  "file_name": "mave_rQlhYp.webp",
+                  "file_type": "image/webp",
+                  "file_path": "media/mave_rQlhYp.webp",
+                  "file_size": null,
+                  "tags": null,
+                  "created_at": "2025-10-08T08:17:19.000000Z",
+                  "updated_at": "2025-10-08T08:17:19.000000Z"
+                }
+              ],
+              "layout": "grid",
+              "altTitle": null,
+              "settings": {
+                "columns": 2,
+                "spacing": 16,
+                "hoverEffect": "scale",
+                "borderRadius": "8px",
+                "shadow": "sm"
+              }
+            },
+            "sectionIndex": 7,
+            "index": 2,
+            "id": "component-1759925079135-hvlqvsa4o"
+          }
+        ]
+      },
+      {
+        "_id": "section-1759925267111-w31ghmq4w",
+        "title": "Case studies",
+        "data": [
+          {
+            "_id": "component-1759925380230-xh2ldzkx8",
+            "type": "title",
+            "value": "<p>Creating efficient</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": true,
+              "secondPartText": "<p>and value-driven products.</p>",
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 8,
+            "index": 0
+          },
+          {
+            "_id": "component-1759925438629-k9jwg9xr4",
+            "type": "slider",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 2,
+              "type": "card",
+              "title_en": "Industries We Serve",
+              "title_bn": "Industries We Serve",
+              "description_en": "<p>Industries We Serve</p>",
+              "description_bn": "<p>Industries We Serve</p>",
+              "media_ids": [],
+              "card_ids": [
+                8,
+                7,
+                6,
+                5
+              ],
+              "additional": null,
+              "status": "0",
+              "created_at": "2025-10-08T11:41:09.000000Z",
+              "updated_at": "2025-10-08T11:41:09.000000Z",
+              "medias": [],
+              "cards": [
+                {
+                  "id": 8,
+                  "page_name": null,
+                  "media_ids": "115",
+                  "title_en": "Banking & Finance",
+                  "title_bn": null,
+                  "description_en": "<p>Navigate financial risks with ease</p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": "0",
+                  "created_at": "2025-10-08T11:40:19.000000Z",
+                  "updated_at": "2025-10-08T11:40:19.000000Z",
+                  "media_files": {
+                    "id": 115,
+                    "title": "Banking & Finance.webp",
+                    "file_name": "mave_quFUru.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_quFUru.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T11:38:37.000000Z",
+                    "updated_at": "2025-10-08T11:38:37.000000Z"
+                  }
+                },
+                {
+                  "id": 7,
+                  "page_name": null,
+                  "media_ids": "117",
+                  "title_en": "Real Estate",
+                  "title_bn": null,
+                  "description_en": "<p>Navigate financial risks with ease</p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": "0",
+                  "created_at": "2025-10-08T11:40:03.000000Z",
+                  "updated_at": "2025-10-08T11:40:03.000000Z",
+                  "media_files": {
+                    "id": 117,
+                    "title": "Real Estate.webp",
+                    "file_name": "mave_QAUsx0.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_QAUsx0.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T11:38:38.000000Z",
+                    "updated_at": "2025-10-08T11:38:38.000000Z"
+                  }
+                },
+                {
+                  "id": 6,
+                  "page_name": null,
+                  "media_ids": "118",
+                  "title_en": "Health & Medical",
+                  "title_bn": null,
+                  "description_en": "<p>Navigate financial risks with ease</p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": "0",
+                  "created_at": "2025-10-08T11:39:36.000000Z",
+                  "updated_at": "2025-10-08T11:39:36.000000Z",
+                  "media_files": {
+                    "id": 118,
+                    "title": "Health & Medical.webp",
+                    "file_name": "mave_CUokJR.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_CUokJR.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T11:38:38.000000Z",
+                    "updated_at": "2025-10-08T11:38:38.000000Z"
+                  }
+                },
+                {
+                  "id": 5,
+                  "page_name": null,
+                  "media_ids": "116",
+                  "title_en": "CMS",
+                  "title_bn": null,
+                  "description_en": "<p>Navigate financial risks with ease</p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": "0",
+                  "created_at": "2025-10-08T11:39:14.000000Z",
+                  "updated_at": "2025-10-08T11:39:14.000000Z",
+                  "media_files": {
+                    "id": 116,
+                    "title": "CMS.webp",
+                    "file_name": "mave_BXEBII.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_BXEBII.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T11:38:38.000000Z",
+                    "updated_at": "2025-10-08T11:38:38.000000Z"
+                  }
+                }
+              ],
+              "config": {
+                "autoplay": true,
+                "dots": false,
+                "effect": "scroll",
+                "speed": 500,
+                "height": 400
+              }
+            },
+            "sectionIndex": 8,
+            "index": 1,
+            "id": 2
+          }
+        ]
+      },
+      {
+        "_id": "section-1759925458071-1mzapn0er",
+        "title": "Latest updates",
+        "data": [
+          {
+            "_id": "component-1759925470271-mf60x8cxt",
+            "type": "title",
+            "value": "<p>Creating efficient</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": true,
+              "secondPartText": "<p>and value-driven products.</p>",
+              "altText": null,
+              "altSecondPartText": null,
+              "showAltContent": false
+            },
+            "sectionIndex": 8,
+            "index": 0
+          },
+          {
+            "_id": "component-1759925614336-dwpxz4v91",
+            "type": "slider",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 2,
+              "type": "card",
+              "title_en": "Industries We Serve",
+              "title_bn": "Industries We Serve",
+              "description_en": "<p>Industries We Serve</p>",
+              "description_bn": "<p>Industries We Serve</p>",
+              "media_ids": [],
+              "card_ids": [
+                8,
+                7,
+                6,
+                5
+              ],
+              "additional": null,
+              "status": "0",
+              "created_at": "2025-10-08T11:41:09.000000Z",
+              "updated_at": "2025-10-08T11:41:09.000000Z",
+              "medias": [],
+              "cards": [
+                {
+                  "id": 8,
+                  "page_name": null,
+                  "media_ids": "115",
+                  "title_en": "Banking & Finance",
+                  "title_bn": null,
+                  "description_en": "<p>Navigate financial risks with ease</p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": "0",
+                  "created_at": "2025-10-08T11:40:19.000000Z",
+                  "updated_at": "2025-10-08T11:40:19.000000Z",
+                  "media_files": {
+                    "id": 115,
+                    "title": "Banking & Finance.webp",
+                    "file_name": "mave_quFUru.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_quFUru.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T11:38:37.000000Z",
+                    "updated_at": "2025-10-08T11:38:37.000000Z"
+                  }
+                },
+                {
+                  "id": 7,
+                  "page_name": null,
+                  "media_ids": "117",
+                  "title_en": "Real Estate",
+                  "title_bn": null,
+                  "description_en": "<p>Navigate financial risks with ease</p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": "0",
+                  "created_at": "2025-10-08T11:40:03.000000Z",
+                  "updated_at": "2025-10-08T11:40:03.000000Z",
+                  "media_files": {
+                    "id": 117,
+                    "title": "Real Estate.webp",
+                    "file_name": "mave_QAUsx0.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_QAUsx0.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T11:38:38.000000Z",
+                    "updated_at": "2025-10-08T11:38:38.000000Z"
+                  }
+                },
+                {
+                  "id": 6,
+                  "page_name": null,
+                  "media_ids": "118",
+                  "title_en": "Health & Medical",
+                  "title_bn": null,
+                  "description_en": "<p>Navigate financial risks with ease</p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": "0",
+                  "created_at": "2025-10-08T11:39:36.000000Z",
+                  "updated_at": "2025-10-08T11:39:36.000000Z",
+                  "media_files": {
+                    "id": 118,
+                    "title": "Health & Medical.webp",
+                    "file_name": "mave_CUokJR.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_CUokJR.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T11:38:38.000000Z",
+                    "updated_at": "2025-10-08T11:38:38.000000Z"
+                  }
+                },
+                {
+                  "id": 5,
+                  "page_name": null,
+                  "media_ids": "116",
+                  "title_en": "CMS",
+                  "title_bn": null,
+                  "description_en": "<p>Navigate financial risks with ease</p>",
+                  "description_bn": null,
+                  "link_url": null,
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": "0",
+                  "created_at": "2025-10-08T11:39:14.000000Z",
+                  "updated_at": "2025-10-08T11:39:14.000000Z",
+                  "media_files": {
+                    "id": 116,
+                    "title": "CMS.webp",
+                    "file_name": "mave_BXEBII.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_BXEBII.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-10-08T11:38:38.000000Z",
+                    "updated_at": "2025-10-08T11:38:38.000000Z"
+                  }
+                }
+              ],
+              "config": {
+                "autoplay": true,
+                "dots": false,
+                "effect": "scroll",
+                "speed": 500,
+                "height": 400
+              }
+            },
+            "sectionIndex": 9,
+            "index": 1,
+            "id": 2
+          }
+        ]
+      },
+      {
+        "_id": "section-1759926020846-jhoinfap9",
+        "title": "Contact Form",
+        "data": [
+          {
+            "_id": "component-1759926034694-7sb5b6w7b",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "Get in touch to discuss your",
+              "altTitle": "software vision with industry experts",
+              "description": "<p>See how we can help you reach your goals Answer three questions to help us match our expertise and software solutions to your needs Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also</p>",
+              "altDescription": null,
+              "linkType": "independent",
+              "link": "https://google.com",
+              "linkPageId": null,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": true,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left",
+              "showAltContent": false,
+              "altTitleFirst": null,
+              "altTitleSecond": null
+            },
+            "sectionIndex": 10,
+            "index": 0
+          },
+          {
+            "_id": "component-1759926098660-u75bt1uzi",
+            "type": "form",
+            "value": null,
+            "settings": [],
+            "_mave": true,
+            "sectionIndex": 10,
+            "index": 1,
+            "data": {
+              "formId": 1,
+              "title": "Contact Form",
+              "description": "<p>Contact Form</p>",
+              "elements": [
+                {
+                  "type": "input",
+                  "label": "Full name",
+                  "icon": {
+                    "type": [],
+                    "key": null,
+                    "ref": null,
+                    "props": [],
+                    "_owner": null
+                  },
+                  "element_type": "input",
+                  "input_type": "text",
+                  "placeholder": "Enter your name",
+                  "updated_on": "1759925654107",
+                  "options": [],
+                  "divisionLabel": "Select Division",
+                  "districtLabel": "Select District",
+                  "required": true,
+                  "content": null,
+                  "mediaId": null
+                },
+                {
+                  "type": "input",
+                  "label": "Email",
+                  "icon": {
+                    "type": [],
+                    "key": null,
+                    "ref": null,
+                    "props": [],
+                    "_owner": null
+                  },
+                  "element_type": "input",
+                  "input_type": "email",
+                  "placeholder": "Enter your email",
+                  "updated_on": "1759925662259",
+                  "options": [],
+                  "divisionLabel": "Select Division",
+                  "districtLabel": "Select District",
+                  "required": true,
+                  "content": null,
+                  "mediaId": null
+                },
+                {
+                  "type": "input",
+                  "label": "Phone number",
+                  "icon": {
+                    "type": [],
+                    "key": null,
+                    "ref": null,
+                    "props": [],
+                    "_owner": null
+                  },
+                  "element_type": "input",
+                  "input_type": "tel",
+                  "placeholder": "Enter your phone number",
+                  "updated_on": "1759925665403",
+                  "options": [],
+                  "divisionLabel": "Select Division",
+                  "districtLabel": "Select District",
+                  "required": true,
+                  "content": null,
+                  "mediaId": null
+                },
+                {
+                  "type": "input",
+                  "label": "Country",
+                  "icon": {
+                    "type": [],
+                    "key": null,
+                    "ref": null,
+                    "props": [],
+                    "_owner": null
+                  },
+                  "element_type": "input",
+                  "input_type": "text",
+                  "placeholder": "Country name",
+                  "updated_on": "1759925698195",
+                  "options": [],
+                  "divisionLabel": "Select Division",
+                  "districtLabel": "Select District",
+                  "required": true,
+                  "content": null,
+                  "mediaId": null
+                },
+                {
+                  "type": "input",
+                  "label": "Company",
+                  "icon": {
+                    "type": [],
+                    "key": null,
+                    "ref": null,
+                    "props": [],
+                    "_owner": null
+                  },
+                  "element_type": "input",
+                  "input_type": "text",
+                  "placeholder": "Enter your company name",
+                  "updated_on": "1759925690524",
+                  "options": [],
+                  "divisionLabel": "Select Division",
+                  "districtLabel": "Select District",
+                  "required": true,
+                  "content": null,
+                  "mediaId": null
+                },
+                {
+                  "type": "textarea",
+                  "label": "Message",
+                  "icon": {
+                    "type": [],
+                    "key": null,
+                    "ref": null,
+                    "props": [],
+                    "_owner": null
+                  },
+                  "element_type": "textarea",
+                  "placeholder": "Enter your message",
+                  "updated_on": "1759925706907",
+                  "options": [],
+                  "divisionLabel": "Select Division",
+                  "districtLabel": "Select District",
+                  "required": true,
+                  "content": null,
+                  "mediaId": null
+                },
+                {
+                  "type": "input",
+                  "label": "I want to receive news and updates once in a while",
+                  "icon": {
+                    "type": [],
+                    "key": null,
+                    "ref": null,
+                    "props": [],
+                    "_owner": null
+                  },
+                  "element_type": "input",
+                  "input_type": "radio",
+                  "placeholder": "I want to receive news and updates once in a while",
+                  "options": [
+                    {
+                      "_id": "1759925870648",
+                      "title": "Agree",
+                      "value": "agree"
+                    },
+                    {
+                      "_id": "1759925884616",
+                      "title": "Disagree",
+                      "value": "disagree"
+                    }
+                  ],
+                  "updated_on": "1759925722738",
+                  "divisionLabel": "Select Division",
+                  "districtLabel": "Select District",
+                  "required": false,
+                  "content": null,
+                  "mediaId": null
+                },
+                {
+                  "type": "guideline",
+                  "label": "Guideline",
+                  "icon": {
+                    "type": [],
+                    "key": null,
+                    "ref": null,
+                    "props": [],
+                    "_owner": null
+                  },
+                  "element_type": "guideline",
+                  "content": "<p>We will add your info to our CRM for contacting you regarding your request. For more info please consult our&nbsp;<a href=\"https://google.com\" rel=\"noopener noreferrer\">privacy policy</a></p>",
+                  "updated_on": "1759925728362",
+                  "placeholder": null,
+                  "options": [],
+                  "divisionLabel": "Select Division",
+                  "districtLabel": "Select District",
+                  "required": false,
+                  "mediaId": null
+                },
+                {
+                  "type": "button",
+                  "label": "Contact us",
+                  "icon": {
+                    "type": [],
+                    "key": null,
+                    "ref": null,
+                    "props": [],
+                    "_owner": null
+                  },
+                  "element_type": "button",
+                  "input_type": "submit",
+                  "placeholder": "Contact us",
+                  "updated_on": "1759925736661",
+                  "options": [],
+                  "divisionLabel": "Select Division",
+                  "districtLabel": "Select District",
+                  "required": false,
+                  "content": null,
+                  "mediaId": null
+                }
+              ],
+              "attributes": {
+                "component_id": "contact_form",
+                "component_class": "form, bg-light",
+                "method": "POST",
+                "action_url": "https://ether.etherstaging.xyz/api/form-submission?form_id=1",
+                "enctype": "multipart/form-data"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "additional": [
+      {
+        "pageType": "Page",
+        "metaTitle": "Home",
+        "metaDescription": null,
+        "keywords": [],
+        "metaImage": null,
+        "metaImageAlt": null
+      }
+    ],
+    "status": 1,
+    "created_at": "2025-10-08T08:27:46.000000Z",
+    "updated_at": "2025-10-09T12:04:49.000000Z",
+    "favicon_mave": null,
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  }
+]

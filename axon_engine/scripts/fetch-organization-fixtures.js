@@ -8,6 +8,7 @@ const TARGETS = {
   carb: require('../src/seeds/05_carb').CONFIG,
   'al-muslim': require('../src/seeds/06_al_muslim').CONFIG,
   aygaz: require('../src/seeds/07_aygaz').CONFIG,
+  ethertech: require('../src/seeds/10_ethertech').CONFIG,
 };
 
 async function main() {

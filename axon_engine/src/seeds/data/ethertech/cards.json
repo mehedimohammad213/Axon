@@ -1,0 +1,178 @@
+[
+  {
+    "id": 1,
+    "page_name": null,
+    "media_ids": 40,
+    "title_en": "A multinational fintech company",
+    "title_bn": null,
+    "description_en": "<p>ETHER has been working with leading fintech companies, providing all tech services to various banks in Bangladesh.</p>",
+    "description_bn": null,
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 0,
+    "created_at": "2025-10-08T09:40:36.000000Z",
+    "updated_at": "2025-10-08T09:40:36.000000Z",
+    "media_files": {
+      "id": 40,
+      "file_name": "mave_KhlzV8.png",
+      "file_type": "image/png",
+      "file_path": "media/mave_KhlzV8.png"
+    }
+  },
+  {
+    "id": 2,
+    "page_name": null,
+    "media_ids": 41,
+    "title_en": "Customers in different countries",
+    "title_bn": null,
+    "description_en": "<p>We have created several of our own products with AI that have been able to solve many of our customers' problems.</p>",
+    "description_bn": null,
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 0,
+    "created_at": "2025-10-08T09:41:15.000000Z",
+    "updated_at": "2025-10-08T09:41:15.000000Z",
+    "media_files": {
+      "id": 41,
+      "file_name": "mave_nmD8AX.png",
+      "file_type": "image/png",
+      "file_path": "media/mave_nmD8AX.png"
+    }
+  },
+  {
+    "id": 3,
+    "page_name": null,
+    "media_ids": 36,
+    "title_en": "Center for global operations",
+    "title_bn": null,
+    "description_en": "<p>We provide necessary operational support from Bangladesh to USA, Canada, Australia, Singapore and Vietnam.</p>",
+    "description_bn": null,
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 0,
+    "created_at": "2025-10-08T09:41:40.000000Z",
+    "updated_at": "2025-10-08T09:41:40.000000Z",
+    "media_files": {
+      "id": 36,
+      "file_name": "mave_ZGagxN.png",
+      "file_type": "image/png",
+      "file_path": "media/mave_ZGagxN.png"
+    }
+  },
+  {
+    "id": 4,
+    "page_name": null,
+    "media_ids": 39,
+    "title_en": "Dedicated to adherence to compliance",
+    "title_bn": null,
+    "description_en": "<p>Delivering exceptional operational performance while abiding by all national and international regulations is our main priority.</p>",
+    "description_bn": null,
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 0,
+    "created_at": "2025-10-08T09:42:03.000000Z",
+    "updated_at": "2025-10-08T09:42:03.000000Z",
+    "media_files": {
+      "id": 39,
+      "file_name": "mave_n0tkX7.png",
+      "file_type": "image/png",
+      "file_path": "media/mave_n0tkX7.png"
+    }
+  },
+  {
+    "id": 5,
+    "page_name": null,
+    "media_ids": 116,
+    "title_en": "CMS",
+    "title_bn": null,
+    "description_en": "<p>Navigate financial risks with ease</p>",
+    "description_bn": null,
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 0,
+    "created_at": "2025-10-08T11:39:14.000000Z",
+    "updated_at": "2025-10-08T11:39:14.000000Z",
+    "media_files": {
+      "id": 116,
+      "file_name": "mave_BXEBII.webp",
+      "file_type": "image/webp",
+      "file_path": "media/mave_BXEBII.webp"
+    }
+  },
+  {
+    "id": 6,
+    "page_name": null,
+    "media_ids": 118,
+    "title_en": "Health & Medical",
+    "title_bn": null,
+    "description_en": "<p>Navigate financial risks with ease</p>",
+    "description_bn": null,
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 0,
+    "created_at": "2025-10-08T11:39:36.000000Z",
+    "updated_at": "2025-10-08T11:39:36.000000Z",
+    "media_files": {
+      "id": 118,
+      "file_name": "mave_CUokJR.webp",
+      "file_type": "image/webp",
+      "file_path": "media/mave_CUokJR.webp"
+    }
+  },
+  {
+    "id": 7,
+    "page_name": null,
+    "media_ids": 117,
+    "title_en": "Real Estate",
+    "title_bn": null,
+    "description_en": "<p>Navigate financial risks with ease</p>",
+    "description_bn": null,
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 0,
+    "created_at": "2025-10-08T11:40:03.000000Z",
+    "updated_at": "2025-10-08T11:40:03.000000Z",
+    "media_files": {
+      "id": 117,
+      "file_name": "mave_QAUsx0.webp",
+      "file_type": "image/webp",
+      "file_path": "media/mave_QAUsx0.webp"
+    }
+  },
+  {
+    "id": 8,
+    "page_name": null,
+    "media_ids": 115,
+    "title_en": "Banking & Finance",
+    "title_bn": null,
+    "description_en": "<p>Navigate financial risks with ease</p>",
+    "description_bn": null,
+    "link_url": null,
+    "additional": {
+      "tags": []
+    },
+    "status": 0,
+    "created_at": "2025-10-08T11:40:19.000000Z",
+    "updated_at": "2025-10-08T11:40:19.000000Z",
+    "media_files": {
+      "id": 115,
+      "file_name": "mave_quFUru.webp",
+      "file_type": "image/webp",
+      "file_path": "media/mave_quFUru.webp"
+    }
+  }
+]

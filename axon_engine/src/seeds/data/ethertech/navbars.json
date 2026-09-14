@@ -1,0 +1,85 @@
+[
+  {
+    "id": 1,
+    "title_en": "Core Navbar",
+    "title_bn": "Core Navbar",
+    "menu_id": 1,
+    "logo_id": 29,
+    "created_at": "2025-10-08T09:11:33.000000Z",
+    "updated_at": "2025-10-08T09:11:33.000000Z",
+    "logo": {
+      "id": 29,
+      "title": "ethertech-color-logo.svg",
+      "file_name": "mave_48G11Y.svg",
+      "file_type": "image/svg+xml",
+      "file_path": "media/mave_48G11Y.svg",
+      "file_size": null,
+      "tags": null,
+      "created_at": "2025-10-08T08:15:39.000000Z",
+      "updated_at": "2025-10-08T08:15:39.000000Z"
+    },
+    "menu": {
+      "id": 1,
+      "name": "Main Navbar Center",
+      "menu_item_ids": [
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "menu_items": [
+        {
+          "id": 4,
+          "title": "Services",
+          "title_bn": "Services",
+          "link": "/services",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-10-08T08:31:47.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 5,
+          "title": "Industries",
+          "title_bn": "Industries",
+          "link": "/industries",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        },
+        {
+          "id": 6,
+          "title": "Clients",
+          "title_bn": "Clients",
+          "link": "/clients",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": "2025-10-08T08:32:20.000000Z",
+          "all_children": []
+        },
+        {
+          "id": 7,
+          "title": "About us",
+          "title_bn": "About us",
+          "link": "/about-us",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        },
+        {
+          "id": 8,
+          "title": "Blog",
+          "title_bn": "Blog",
+          "link": "/blog",
+          "parent_id": null,
+          "created_at": null,
+          "updated_at": null,
+          "all_children": []
+        }
+      ]
+    }
+  }
+]

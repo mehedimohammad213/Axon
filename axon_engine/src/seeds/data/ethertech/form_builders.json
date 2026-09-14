@@ -1,0 +1,223 @@
+[
+  {
+    "id": 1,
+    "title": "Contact Form",
+    "description": "<p>Contact Form</p>",
+    "attributes": {
+      "component_id": "contact_form",
+      "component_class": "form, bg-light",
+      "method": "POST",
+      "action_url": "https://ether.etherstaging.xyz/api/form-submission?form_id=1",
+      "enctype": "multipart/form-data"
+    },
+    "elements": [
+      {
+        "type": "input",
+        "label": "Full name",
+        "icon": {
+          "type": [],
+          "key": null,
+          "ref": null,
+          "props": [],
+          "_owner": null
+        },
+        "element_type": "input",
+        "input_type": "text",
+        "placeholder": "Enter your name",
+        "updated_on": "1759925654107",
+        "options": [],
+        "divisionLabel": "Select Division",
+        "districtLabel": "Select District",
+        "required": true,
+        "content": null,
+        "mediaId": null
+      },
+      {
+        "type": "input",
+        "label": "Email",
+        "icon": {
+          "type": [],
+          "key": null,
+          "ref": null,
+          "props": [],
+          "_owner": null
+        },
+        "element_type": "input",
+        "input_type": "email",
+        "placeholder": "Enter your email",
+        "updated_on": "1759925662259",
+        "options": [],
+        "divisionLabel": "Select Division",
+        "districtLabel": "Select District",
+        "required": true,
+        "content": null,
+        "mediaId": null
+      },
+      {
+        "type": "input",
+        "label": "Phone number",
+        "icon": {
+          "type": [],
+          "key": null,
+          "ref": null,
+          "props": [],
+          "_owner": null
+        },
+        "element_type": "input",
+        "input_type": "tel",
+        "placeholder": "Enter your phone number",
+        "updated_on": "1759925665403",
+        "options": [],
+        "divisionLabel": "Select Division",
+        "districtLabel": "Select District",
+        "required": true,
+        "content": null,
+        "mediaId": null
+      },
+      {
+        "type": "input",
+        "label": "Country",
+        "icon": {
+          "type": [],
+          "key": null,
+          "ref": null,
+          "props": [],
+          "_owner": null
+        },
+        "element_type": "input",
+        "input_type": "text",
+        "placeholder": "Country name",
+        "updated_on": "1759925698195",
+        "options": [],
+        "divisionLabel": "Select Division",
+        "districtLabel": "Select District",
+        "required": true,
+        "content": null,
+        "mediaId": null
+      },
+      {
+        "type": "input",
+        "label": "Company",
+        "icon": {
+          "type": [],
+          "key": null,
+          "ref": null,
+          "props": [],
+          "_owner": null
+        },
+        "element_type": "input",
+        "input_type": "text",
+        "placeholder": "Enter your company name",
+        "updated_on": "1759925690524",
+        "options": [],
+        "divisionLabel": "Select Division",
+        "districtLabel": "Select District",
+        "required": true,
+        "content": null,
+        "mediaId": null
+      },
+      {
+        "type": "textarea",
+        "label": "Message",
+        "icon": {
+          "type": [],
+          "key": null,
+          "ref": null,
+          "props": [],
+          "_owner": null
+        },
+        "element_type": "textarea",
+        "placeholder": "Enter your message",
+        "updated_on": "1759925706907",
+        "options": [],
+        "divisionLabel": "Select Division",
+        "districtLabel": "Select District",
+        "required": true,
+        "content": null,
+        "mediaId": null
+      },
+      {
+        "type": "input",
+        "label": "I want to receive news and updates once in a while",
+        "icon": {
+          "type": [],
+          "key": null,
+          "ref": null,
+          "props": [],
+          "_owner": null
+        },
+        "element_type": "input",
+        "input_type": "radio",
+        "placeholder": "I want to receive news and updates once in a while",
+        "options": [
+          {
+            "_id": "1759925870648",
+            "title": "Agree",
+            "value": "agree"
+          },
+          {
+            "_id": "1759925884616",
+            "title": "Disagree",
+            "value": "disagree"
+          }
+        ],
+        "updated_on": "1759925722738",
+        "divisionLabel": "Select Division",
+        "districtLabel": "Select District",
+        "required": false,
+        "content": null,
+        "mediaId": null
+      },
+      {
+        "type": "guideline",
+        "label": "Guideline",
+        "icon": {
+          "type": [],
+          "key": null,
+          "ref": null,
+          "props": [],
+          "_owner": null
+        },
+        "element_type": "guideline",
+        "content": "<p>We will add your info to our CRM for contacting you regarding your request. For more info please consult our&nbsp;<a href=\"https://google.com\" rel=\"noopener noreferrer\">privacy policy</a></p>",
+        "updated_on": "1759925728362",
+        "placeholder": null,
+        "options": [],
+        "divisionLabel": "Select Division",
+        "districtLabel": "Select District",
+        "required": false,
+        "mediaId": null
+      },
+      {
+        "type": "button",
+        "label": "Contact us",
+        "icon": {
+          "type": [],
+          "key": null,
+          "ref": null,
+          "props": [],
+          "_owner": null
+        },
+        "element_type": "button",
+        "input_type": "submit",
+        "placeholder": "Contact us",
+        "updated_on": "1759925736661",
+        "options": [],
+        "divisionLabel": "Select Division",
+        "districtLabel": "Select District",
+        "required": false,
+        "content": null,
+        "mediaId": null
+      }
+    ],
+    "additional": null,
+    "status": 1,
+    "email_notifications_enabled": 0,
+    "email_recipients": null,
+    "email_subject_template": null,
+    "email_body_template": null,
+    "email_is_html": 1,
+    "created_at": "2025-10-08T12:19:23.000000Z",
+    "updated_at": "2025-10-08T12:19:53.000000Z"
+  }
+]
