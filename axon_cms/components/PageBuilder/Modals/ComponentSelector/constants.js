@@ -36,15 +36,6 @@ export const componentOptions = [
     tags: ["image", "media", "visual"],
   },
   {
-    type: "menu",
-    name: "Menu",
-    icon: "/icons/headless/menus.svg",
-    premium: false,
-    category: "Layout",
-    description: "Add a list of menu items",
-    tags: ["navigation", "menu", "layout"],
-  },
-  {
     type: "menuitem",
     name: "Menu Item",
     icon: "/icons/headless/menuitems.svg",
