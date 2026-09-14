@@ -10,6 +10,7 @@ import {
 } from "@ant-design/icons";
 import ViewDetailsDrawer from "./ViewDetailsDrawer";
 import EditResponseDrawer from "./EditResponseDrawer";
+import { getResponseDisplayName } from "./getResponseDisplayName";
 import instance from "../../axios";
 import moment from "moment";
 
@@ -135,7 +136,8 @@ const FormResponsesGrid = ({ responses, refreshData, currentUser }) => {
               ].filter(Boolean)}
             >
               <p>
-                <strong>Name:</strong> {response.form_data?.name || "N/A"}
+                <strong>Name:</strong>{" "}
+                {getResponseDisplayName(response.form_data) || "N/A"}
               </p>
               {response.form_type === "career" && (
                 <p>

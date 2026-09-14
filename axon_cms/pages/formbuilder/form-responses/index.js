@@ -6,6 +6,7 @@ import { setPageTitle } from "../../../global/constants/pageTitle";
 import FormResponsesHeader from "../../../components/FormResponses/FormResponsesHeader";
 import FormResponsesTable from "../../../components/FormResponses/FormResponsesTable";
 import FormResponsesGrid from "../../../components/FormResponses/FormResponsesGrid";
+import { getResponseDisplayName } from "../../../components/FormResponses/getResponseDisplayName";
 import instance from "../../../axios";
 
 const FormResponsesIndexPage = () => {
@@ -65,7 +66,7 @@ const FormResponsesIndexPage = () => {
     if (searchTerm.trim()) {
       const query = searchTerm.toLowerCase();
       results = results.filter((item) => {
-        const name = item.form_data?.name?.toLowerCase() || "";
+        const name = getResponseDisplayName(item.form_data).toLowerCase();
         const email = item.form_data?.email?.toLowerCase() || "";
         const type = item.form_type?.toLowerCase() || "";
         return (
