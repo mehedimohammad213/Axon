@@ -299,7 +299,7 @@ const ProductComponent = ({
                         icon={<EyeOutlined />}
                         onClick={() => handleProductSelect(product)}
                       >
-                        {isCurrent ? "Preview current" : "Preview"}
+                        Preview
                       </Button>,
                     ]}
                   >
@@ -322,7 +322,6 @@ const ProductComponent = ({
                         title={
                           <div className="flex items-center gap-2 flex-wrap">
                             <span>{product.title || "Untitled product"}</span>
-                            {isCurrent && <Tag color="green">Current</Tag>}
                             {typeName && <Tag color="blue">{typeName}</Tag>}
                           </div>
                         }

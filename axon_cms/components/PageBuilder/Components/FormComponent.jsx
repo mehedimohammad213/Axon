@@ -169,6 +169,16 @@ const FormComponent = ({
     );
   };
 
+  const currentFormId = component.data?.formId;
+
+  const sortedForms = [...availableForms].sort((a, b) => {
+    const aSelected = String(a.id) === String(currentFormId);
+    const bSelected = String(b.id) === String(currentFormId);
+    if (aSelected && !bSelected) return -1;
+    if (!aSelected && bSelected) return 1;
+    return 0;
+  });
+
   return (
     <>
       <BaseComponent
@@ -214,23 +224,37 @@ const FormComponent = ({
           renderFormPreview()
         ) : (
           <div className="grid grid-cols-1 gap-4">
-            {availableForms.map((form) => (
-              <Card
-                key={form.id}
-                className="hover:shadow-md transition-shadow"
-                actions={[
-                  <Button
-                    type="text"
-                    icon={<EyeOutlined />}
-                    onClick={() => handleFormSelect(form)}
-                  >
-                    Preview
-                  </Button>,
-                ]}
-              >
-                <Card.Meta title={form.title} description={form.description} />
-              </Card>
-            ))}
+            {sortedForms.map((formItem) => {
+              const isCurrent =
+                currentFormId != null &&
+                String(formItem.id) === String(currentFormId);
+
+              return (
+                <Card
+                  key={formItem.id}
+                  className={`hover:shadow-md transition-shadow ${
+                    isCurrent
+                      ? "border-blue-400 bg-blue-50 ring-1 ring-blue-200"
+                      : ""
+                  }`}
+                  actions={[
+                    <Button
+                      key="preview"
+                      type="text"
+                      icon={<EyeOutlined />}
+                      onClick={() => handleFormSelect(formItem)}
+                    >
+                      Preview
+                    </Button>,
+                  ]}
+                >
+                  <Card.Meta
+                    title={formItem.title}
+                    description={formItem.description}
+                  />
+                </Card>
+              );
+            })}
           </div>
         )}
       </Drawer>
