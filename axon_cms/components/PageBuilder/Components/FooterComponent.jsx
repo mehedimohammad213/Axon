@@ -34,6 +34,13 @@ import instance from "../../../axios";
 
 const { Paragraph, Text } = Typography;
 
+const hasSelectedFooter = (footer) =>
+  Boolean(
+    footer?.id ||
+      footer?.page_name_en ||
+      footer?.body?.[0]?.data?.length
+  );
+
 const FooterComponent = ({
   component,
   updateComponent,
@@ -42,11 +49,17 @@ const FooterComponent = ({
   onDuplicateElement,
 }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [footerData, setFooterData] = useState(component._headless);
+  const [footerData, setFooterData] = useState(
+    hasSelectedFooter(component._headless) ? component._headless : null
+  );
   const [selectedFooterData, setSelectedFooterData] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
   const [showConfig, setShowConfig] = useState(false);
-  const [altTitle, setAltTitle] = useState(component._headless?.altTitle || "");
+  const [altTitle, setAltTitle] = useState(
+    hasSelectedFooter(component._headless)
+      ? component._headless?.altTitle || ""
+      : ""
+  );
   const [footerConfig, setFooterConfig] = useState({
     showLogo: true,
     showSocialLinks: true,
@@ -55,8 +68,13 @@ const FooterComponent = ({
   });
 
   useEffect(() => {
-    setFooterData(component._headless);
-    setAltTitle(component._headless?.altTitle || "");
+    if (hasSelectedFooter(component._headless)) {
+      setFooterData(component._headless);
+      setAltTitle(component._headless?.altTitle || "");
+    } else {
+      setFooterData(null);
+      setAltTitle("");
+    }
   }, [component._headless]);
 
   const handleSelectFooter = (selectedFooter) => {
@@ -199,10 +217,16 @@ const FooterComponent = ({
               {renderFooterContent(footerData)}
             </div>
           ) : (
-            <ComponentEditButton
-              onClick={() => setIsModalVisible(true)}
-              title="Select footer"
-            />
+            <div className="flex justify-center items-center p-8">
+              <Button
+                className="headlessbutton"
+                type="primary"
+                onClick={() => setIsModalVisible(true)}
+                size="large"
+              >
+                Choose Footer
+              </Button>
+            </div>
           )}
         </div>
 

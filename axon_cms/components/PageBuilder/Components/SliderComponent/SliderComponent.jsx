@@ -11,6 +11,16 @@ import { resolveMediaUrl } from "../../../../utils/mediaUrl";
 
 const { Panel } = Collapse;
 
+const hasSelectedSlider = (slider) =>
+  Boolean(
+    slider?.id ||
+      (Array.isArray(slider?.medias) && slider.medias.length > 0) ||
+      (Array.isArray(slider?.cards) && slider.cards.length > 0) ||
+      (Array.isArray(slider?.additional?.slides) &&
+        slider.additional.slides.length > 0) ||
+      slider?.title_en
+  );
+
 const SliderComponent = ({
   component,
   updateComponent,
@@ -20,7 +30,9 @@ const SliderComponent = ({
   onDuplicateElement,
 }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [sliderData, setSliderData] = useState(component._headless);
+  const [sliderData, setSliderData] = useState(
+    hasSelectedSlider(component._headless) ? component._headless : null
+  );
   const [sliderConfig, setSliderConfig] = useState({
     autoplay: component._headless?.config?.autoplay ?? true,
     dots: component._headless?.config?.dots ?? false,
@@ -32,10 +44,14 @@ const SliderComponent = ({
   const [showAltInputs, setShowAltInputs] = useState(false);
   const [showSliderAltInputs, setShowSliderAltInputs] = useState(false);
   const [sliderAltTitle, setSliderAltTitle] = useState(
-    component._headless?.altTitle || ""
+    hasSelectedSlider(component._headless)
+      ? component._headless?.altTitle || ""
+      : ""
   );
   const [sliderAltDescription, setSliderAltDescription] = useState(
-    component._headless?.altDescription || ""
+    hasSelectedSlider(component._headless)
+      ? component._headless?.altDescription || ""
+      : ""
   );
   const [tempSliderAltTitle, setTempSliderAltTitle] = useState("");
   const [tempSliderAltDescription, setTempSliderAltDescription] = useState("");
@@ -51,17 +67,23 @@ const SliderComponent = ({
 
   // Synchronize sliderData with component._headless when it changes
   useEffect(() => {
-    setSliderData(component._headless);
-    setShowAltContent(component._headless?.showAltContent || false);
-    setSliderAltTitle(component._headless?.altTitle || "");
-    setSliderAltDescription(component._headless?.altDescription || "");
+    if (hasSelectedSlider(component._headless)) {
+      setSliderData(component._headless);
+      setShowAltContent(component._headless?.showAltContent || false);
+      setSliderAltTitle(component._headless?.altTitle || "");
+      setSliderAltDescription(component._headless?.altDescription || "");
 
-    // Also sync the config if it exists
-    if (component._headless?.config) {
-      setSliderConfig((prevConfig) => ({
-        ...prevConfig,
-        ...component._headless.config,
-      }));
+      if (component._headless?.config) {
+        setSliderConfig((prevConfig) => ({
+          ...prevConfig,
+          ...component._headless.config,
+        }));
+      }
+    } else {
+      setSliderData(null);
+      setShowAltContent(false);
+      setSliderAltTitle("");
+      setSliderAltDescription("");
     }
   }, [component._headless]);
 
@@ -234,10 +256,16 @@ const SliderComponent = ({
               />
             </div>
           ) : (
-            <ComponentEditButton
-              onClick={() => setIsModalVisible(true)}
-              title="Select slider"
-            />
+            <div className="flex justify-center items-center p-8">
+              <Button
+                className="headlessbutton"
+                type="primary"
+                onClick={() => setIsModalVisible(true)}
+                size="large"
+              >
+                Choose Slider
+              </Button>
+            </div>
           )}
         </div>
       </div>

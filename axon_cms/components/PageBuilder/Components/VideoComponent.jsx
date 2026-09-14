@@ -36,6 +36,8 @@ import RichTextEditor from "../../RichTextEditor";
 const { Paragraph } = Typography;
 const { Panel } = Collapse;
 
+const hasSelectedVideo = (video) => Boolean(video?.url);
+
 // Helper function to validate and get embed URL
 const getEmbedUrl = (url) => {
   if (!url) return null;
@@ -73,7 +75,9 @@ const VideoComponent = ({
   onDuplicateElement,
 }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [videoData, setVideoData] = useState(component._headless || {});
+  const [videoData, setVideoData] = useState(
+    hasSelectedVideo(component._headless) ? component._headless : null
+  );
   const [isEditing, setIsEditing] = useState(false);
   const [currentGoogleDriveUrl, setCurrentGoogleDriveUrl] = useState(null);
   const [googleDriveFallbackIndex, setGoogleDriveFallbackIndex] = useState(0);
@@ -81,8 +85,13 @@ const VideoComponent = ({
   const [showAltInputs, setShowAltInputs] = useState(false);
 
   useEffect(() => {
-    setVideoData(component._headless || {});
-    setShowAltContent(component._headless?.showAltContent || false);
+    if (hasSelectedVideo(component._headless)) {
+      setVideoData(component._headless);
+      setShowAltContent(component._headless?.showAltContent || false);
+    } else {
+      setVideoData(null);
+      setShowAltContent(false);
+    }
   }, [component._headless]);
 
   const handleSelectVideo = (selectedVideo) => {
@@ -162,14 +171,17 @@ const VideoComponent = ({
   };
 
   const renderVideo = () => {
-    if (!videoData || !videoData.url) {
+    if (!hasSelectedVideo(videoData)) {
       return (
-        <div className="flex flex-col items-center justify-center p-8 bg-gray-50 rounded-lg border-2 border-dashed border-gray-200">
-          <ComponentEditButton
+        <div className="flex justify-center items-center p-8">
+          <Button
+            className="headlessbutton"
+            type="primary"
             onClick={() => setIsModalVisible(true)}
-            title="Select video"
-          />
-          <p className="mt-2 text-sm text-gray-500">No video selected</p>
+            size="large"
+          >
+            Choose Video
+          </Button>
         </div>
       );
     }
@@ -268,7 +280,7 @@ const VideoComponent = ({
   if (preview) {
     return (
       <div className="preview-video-component p-4 bg-gray-100 rounded-md">
-        {videoData && videoData.url ? (
+        {hasSelectedVideo(videoData) ? (
           renderVideo()
         ) : (
           <Paragraph className="text-gray-500">No video selected.</Paragraph>
@@ -287,7 +299,7 @@ const VideoComponent = ({
         <div>
           {!isEditing ? (
             <>
-              {videoData && (
+              {hasSelectedVideo(videoData) && (
                 <ComponentEditButton
                   onClick={() => setIsModalVisible(true)}
                   title="Edit video"
@@ -327,7 +339,7 @@ const VideoComponent = ({
       {renderVideo()}
 
       {/* Multi-Language Configuration */}
-      {videoData && videoData.url && (
+      {hasSelectedVideo(videoData) && (
         <Collapse className="mt-4">
           <Panel
             header={
