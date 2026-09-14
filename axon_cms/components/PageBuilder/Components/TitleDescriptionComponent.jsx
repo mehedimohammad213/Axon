@@ -24,6 +24,7 @@ import {
   LinkOutlined,
   GlobalOutlined,
   FontColorsOutlined,
+  PlusOutlined,
 } from "@ant-design/icons";
 import RichTextEditor from "../../RichTextEditor";
 import instance from "../../../axios";
@@ -400,7 +401,7 @@ const TitleDescriptionComponent = ({
           <Space>
             {!isEditing ? (
               <>
-                {component?._headless && (
+                {(title || description) && (
                   <ComponentEditButton
                     onClick={handleEditClick}
                     title="Edit component"
@@ -719,29 +720,31 @@ const TitleDescriptionComponent = ({
               </Panel>
             </Collapse>
           </div>
-        ) : (
+        ) : title || description ? (
           <div className="space-y-4">
-            <div
-              className={`${getFontSizeClass(formData.titleFontSize)} leading-snug`}
-              style={{
-                color: readablePreviewColor(formData.titleColor),
-                fontWeight: formData.titleFontWeight,
-                textAlign: formData.titleAlign,
-              }}
-            >
-              {title || "No Title"}
-              {formData.isDualColor && altTitle && (
-                <span
-                  style={{
-                    color: readablePreviewColor(formData.altTitleColor),
-                    fontWeight: formData.titleFontWeight,
-                  }}
-                  className="ml-2"
-                >
-                  / {altTitle}
-                </span>
-              )}
-            </div>
+            {title && (
+              <div
+                className={`${getFontSizeClass(formData.titleFontSize)} leading-snug`}
+                style={{
+                  color: readablePreviewColor(formData.titleColor),
+                  fontWeight: formData.titleFontWeight,
+                  textAlign: formData.titleAlign,
+                }}
+              >
+                {title}
+                {formData.isDualColor && altTitle && (
+                  <span
+                    style={{
+                      color: readablePreviewColor(formData.altTitleColor),
+                      fontWeight: formData.titleFontWeight,
+                    }}
+                    className="ml-2"
+                  >
+                    / {altTitle}
+                  </span>
+                )}
+              </div>
+            )}
             {formData.showAltContent &&
               formData.isDualColor &&
               (formData.altTitleFirst || formData.altTitleSecond) && (
@@ -757,7 +760,7 @@ const TitleDescriptionComponent = ({
                       textAlign: formData.titleAlign,
                     }}
                   >
-                    {formData.altTitleFirst || "No Alternative First Part"}
+                    {formData.altTitleFirst}
                     {formData.altTitleSecond && (
                       <span
                         style={{
@@ -772,14 +775,14 @@ const TitleDescriptionComponent = ({
                   </div>
                 </div>
               )}
-            <div
-              className="prose prose-slate max-w-none text-slate-700"
-              dangerouslySetInnerHTML={{
-                __html: sanitizeHtmlColorsForPreview(
-                  description || "No Description"
-                ),
-              }}
-            />
+            {description && (
+              <div
+                className="prose prose-slate max-w-none text-slate-700"
+                dangerouslySetInnerHTML={{
+                  __html: sanitizeHtmlColorsForPreview(description),
+                }}
+              />
+            )}
             {formData.showAltContent && altDescription && (
               <div className="mt-4">
                 <div className="mb-1 text-xs font-medium uppercase tracking-wide text-slate-400">
@@ -807,6 +810,17 @@ const TitleDescriptionComponent = ({
               </div>
             )}
           </div>
+        ) : (
+          <Button
+            icon={<PlusOutlined />}
+            type="dashed"
+            onClick={handleEditClick}
+            className="w-full h-32 border-2 border-dashed border-gray-300 hover:border-brand transition-colors"
+          >
+            <span className="text-lg font-medium text-gray-600">
+              Add Title & Description
+            </span>
+          </Button>
         )}
       </div>
     </div>
