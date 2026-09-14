@@ -172,10 +172,12 @@ const IconListComponent = ({
           <Space>
             {!isEditing ? (
               <>
-                <ComponentEditButton
-                  onClick={handleEditClick}
-                  title="Edit component"
-                />
+                {items.length > 0 && (
+                  <ComponentEditButton
+                    onClick={handleEditClick}
+                    title="Edit component"
+                  />
+                )}
                 <ComponentDuplicateButton
                   onClick={onDuplicateElement}
                   title="Duplicate component"
@@ -255,6 +257,18 @@ const IconListComponent = ({
       )}
 
       {/* Icon List Display */}
+      {!preview && !isEditing && items.length === 0 ? (
+        <div className="flex justify-center items-center p-8">
+          <Button
+            className="headlessbutton"
+            type="primary"
+            onClick={handleEditClick}
+            size="large"
+          >
+            Add Icon List
+          </Button>
+        </div>
+      ) : (
       <div
         className={`flex ${
           orientation === "vertical" ? "flex-col" : "flex-row"
@@ -291,6 +305,7 @@ const IconListComponent = ({
           </Button>
         )}
       </div>
+      )}
 
       {/* Multi-Language Configuration */}
       {items.length > 0 && !preview && isEditing && (

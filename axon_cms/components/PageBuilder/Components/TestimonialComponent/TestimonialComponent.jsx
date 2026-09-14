@@ -256,10 +256,12 @@ const TestimonialComponent = ({
               </>
             ) : (
               <>
-                <ComponentEditButton
-                  onClick={() => setIsEditMode(true)}
-                  title="Edit component"
-                />
+                {testimonials.length > 0 && (
+                  <ComponentEditButton
+                    onClick={() => setIsEditMode(true)}
+                    title="Edit component"
+                  />
+                )}
                 <ComponentDuplicateButton
                   onClick={onDuplicateElement}
                   title="Duplicate component"
@@ -378,20 +380,33 @@ const TestimonialComponent = ({
         </Space>
       )}
 
-      <TestimonialDisplay
-        testimonials={testimonials}
-        layout={layout}
-        font={font}
-        color={color}
-        background={background}
-        handleEditTestimonial={handleEditTestimonial}
-        handleDeleteTestimonial={handleDeleteTestimonial}
-        preview={preview}
-        containerStyle={containerStyle}
-        isEditMode={isEditMode}
-        showAltContent={showAltContent}
-        getDisplayContent={getDisplayContent}
-      />
+      {!preview && !isEditMode && testimonials.length === 0 ? (
+        <div className="flex justify-center items-center p-8">
+          <Button
+            className="headlessbutton"
+            type="primary"
+            onClick={() => setIsEditMode(true)}
+            size="large"
+          >
+            Add Testimonial
+          </Button>
+        </div>
+      ) : (
+        <TestimonialDisplay
+          testimonials={testimonials}
+          layout={layout}
+          font={font}
+          color={color}
+          background={background}
+          handleEditTestimonial={handleEditTestimonial}
+          handleDeleteTestimonial={handleDeleteTestimonial}
+          preview={preview}
+          containerStyle={containerStyle}
+          isEditMode={isEditMode}
+          showAltContent={showAltContent}
+          getDisplayContent={getDisplayContent}
+        />
+      )}
 
       {isEditMode && (
         <div className="flex justify-center">

@@ -27,6 +27,9 @@ import ComponentDeleteButton from "./components/ComponentDeleteButton";
 
 const { Paragraph } = Typography;
 
+const hasSelectedGallery = (gallery) =>
+  Boolean(gallery?.images?.length);
+
 const GalleryComponent = ({
   component,
   updateComponent,
@@ -35,12 +38,16 @@ const GalleryComponent = ({
   onDuplicateElement,
 }) => {
   const [isDrawerVisible, setIsDrawerVisible] = useState(false);
-  const [galleryData, setGalleryData] = useState(component._headless || {});
+  const [galleryData, setGalleryData] = useState(
+    hasSelectedGallery(component._headless) ? component._headless : {}
+  );
   const [lightboxVisible, setLightboxVisible] = useState(false);
   const [currentMedia, setCurrentMedia] = useState(null);
 
   useEffect(() => {
-    setGalleryData(component._headless || {});
+    setGalleryData(
+      hasSelectedGallery(component._headless) ? component._headless : {}
+    );
   }, [component._headless]);
 
   const handleSelectGallery = (newGalleryData) => {
@@ -164,8 +171,22 @@ const GalleryComponent = ({
     }
   };
 
-  const renderGallery = () => {
-    if (!galleryData.images || galleryData.images.length === 0) {
+  const renderGallery = (allowChoose = false) => {
+    if (!hasSelectedGallery(galleryData)) {
+      if (allowChoose) {
+        return (
+          <div className="flex justify-center items-center p-8">
+            <Button
+              className="headlessbutton"
+              type="primary"
+              onClick={() => setIsDrawerVisible(true)}
+              size="large"
+            >
+              Choose Gallery
+            </Button>
+          </div>
+        );
+      }
       return (
         <Paragraph className="text-gray-500 italic">
           No media selected.
@@ -324,10 +345,12 @@ const GalleryComponent = ({
           </div>
         </div>
         <Space>
-          <ComponentEditButton
-            onClick={() => setIsDrawerVisible(true)}
-            title="Edit gallery"
-          />
+          {hasSelectedGallery(galleryData) && (
+            <ComponentEditButton
+              onClick={() => setIsDrawerVisible(true)}
+              title="Edit gallery"
+            />
+          )}
           <ComponentDuplicateButton
             onClick={onDuplicateElement}
             title="Duplicate gallery"
@@ -341,7 +364,7 @@ const GalleryComponent = ({
         </Space>
       </div>
 
-      {renderGallery()}
+      {renderGallery(true)}
 
       <GallerySelectionModal
         isVisible={isDrawerVisible}

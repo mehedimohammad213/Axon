@@ -16,6 +16,8 @@ import ComponentDeleteButton from "./components/ComponentDeleteButton";
 
 const { Paragraph } = Typography;
 
+const hasConfiguredButton = (button) => Boolean(button?.text);
+
 const ButtonComponent = ({
   component,
   updateComponent,
@@ -29,11 +31,15 @@ const ButtonComponent = ({
   }
 
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [buttonData, setButtonData] = useState(component?._headless || {});
+  const [buttonData, setButtonData] = useState(
+    hasConfiguredButton(component?._headless) ? component._headless : {}
+  );
   const router = useRouter();
 
   useEffect(() => {
-    setButtonData(component?._headless || {});
+    setButtonData(
+      hasConfiguredButton(component?._headless) ? component._headless : {}
+    );
   }, [component?._headless]);
 
   const handleSelectButton = (newButtonData) => {
@@ -81,12 +87,17 @@ const ButtonComponent = ({
   };
 
   const renderConfiguredButtons = () => {
-    if (!buttonData.text) {
+    if (!hasConfiguredButton(buttonData)) {
       return (
-        <div className="rounded-lg border border-dashed border-slate-200 bg-slate-50 px-4 py-6 text-center">
-          <Paragraph className="!mb-0 text-slate-500">
-            No button configured.
-          </Paragraph>
+        <div className="flex justify-center items-center p-8">
+          <Button
+            className="headlessbutton"
+            type="primary"
+            onClick={() => setIsModalVisible(true)}
+            size="large"
+          >
+            Choose Button
+          </Button>
         </div>
       );
     }
@@ -122,7 +133,13 @@ const ButtonComponent = ({
   if (preview) {
     return (
       <div className="preview-button-component rounded-lg bg-white p-4">
-        {renderConfiguredButtons()}
+        {hasConfiguredButton(buttonData) ? (
+          renderConfiguredButtons()
+        ) : (
+          <Paragraph className="!mb-0 text-slate-500">
+            No button configured.
+          </Paragraph>
+        )}
       </div>
     );
   }
@@ -139,10 +156,12 @@ const ButtonComponent = ({
           </h3>
         </div>
         <div className="flex flex-wrap items-center gap-2">
-          <ComponentEditButton
-            onClick={() => setIsModalVisible(true)}
-            title="Edit button"
-          />
+          {hasConfiguredButton(buttonData) && (
+            <ComponentEditButton
+              onClick={() => setIsModalVisible(true)}
+              title="Edit button"
+            />
+          )}
           <ComponentDuplicateButton
             onClick={onDuplicateElement}
             title="Duplicate component"

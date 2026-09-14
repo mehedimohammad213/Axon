@@ -13,6 +13,9 @@ import ComponentDeleteButton from "./components/ComponentDeleteButton";
 
 const { Text } = Typography;
 
+const hasSelectedMap = (map) =>
+  Boolean(map?.mapUrl || map?.embedUrl || map?.coordinates);
+
 const GoogleMapComponent = ({
   component,
   updateComponent,
@@ -20,10 +23,12 @@ const GoogleMapComponent = ({
   preview = false, // New prop with default value
 }) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [mapData, setMapData] = useState(component._headless || {});
+  const [mapData, setMapData] = useState(
+    hasSelectedMap(component._headless) ? component._headless : {}
+  );
 
   useEffect(() => {
-    setMapData(component._headless || {});
+    setMapData(hasSelectedMap(component._headless) ? component._headless : {});
   }, [component._headless]);
 
   const handleSelectMap = (newMapData) => {
@@ -55,9 +60,23 @@ const GoogleMapComponent = ({
     });
   };
 
-  const MapFrame = ({ height = 360 }) => {
+  const MapFrame = ({ height = 360, allowChoose = false }) => {
     const src = getEmbedUrl();
-    if (!mapData.mapUrl && !mapData.embedUrl && !mapData.coordinates) {
+    if (!hasSelectedMap(mapData)) {
+      if (allowChoose) {
+        return (
+          <div className="flex justify-center items-center p-8">
+            <Button
+              className="headlessbutton"
+              type="primary"
+              onClick={() => setIsModalVisible(true)}
+              size="large"
+            >
+              Choose Google Map
+            </Button>
+          </div>
+        );
+      }
       return (
         <div className="flex h-48 flex-col items-center justify-center rounded-lg border border-dashed border-slate-200 bg-slate-50 px-4 text-center">
           <Text type="secondary">No map configured for this block.</Text>
@@ -116,11 +135,13 @@ const GoogleMapComponent = ({
       <div className="mb-4 flex items-center justify-between">
         <h3 className="text-xl font-semibold text-slate-800">Google Map</h3>
         <div>
-          <ComponentEditButton
-            onClick={() => setIsModalVisible(true)}
-            title="Edit map"
-            disabled={preview}
-          />
+          {hasSelectedMap(mapData) && (
+            <ComponentEditButton
+              onClick={() => setIsModalVisible(true)}
+              title="Edit map"
+              disabled={preview}
+            />
+          )}
           <ComponentDeleteButton
             onConfirm={handleDelete}
             title="Delete map"
@@ -130,7 +151,7 @@ const GoogleMapComponent = ({
         </div>
       </div>
 
-      <MapFrame height={400} />
+      <MapFrame height={400} allowChoose />
 
       {!preview && (
         <GoogleMapSelectionModal

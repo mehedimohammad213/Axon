@@ -39,6 +39,17 @@ import ComponentDeleteButton from "../components/ComponentDeleteButton";
 import InfoBoxItem from "./InfoBoxItem";
 
 const { Panel } = Collapse;
+
+const hasInfoBoxContent = (box) =>
+  Boolean(
+    box?.title ||
+      box?.description ||
+      box?.secondTitle ||
+      box?.secondDescription ||
+      box?.media?.length ||
+      box?.infoItems?.length
+  );
+
 const InfoBoxComponent = ({
   component,
   updateComponent,
@@ -359,10 +370,12 @@ const InfoBoxComponent = ({
               </>
             ) : (
               <>
-                <ComponentEditButton
-                  onClick={() => setIsEditMode(true)}
-                  title="Edit component"
-                />
+                {hasInfoBoxContent(infoBox) && (
+                  <ComponentEditButton
+                    onClick={() => setIsEditMode(true)}
+                    title="Edit component"
+                  />
+                )}
                 <ComponentDuplicateButton
                   onClick={onDuplicateElement}
                   title="Duplicate component"
@@ -442,6 +455,18 @@ const InfoBoxComponent = ({
       )}
 
       {/* Preview/Display Mode */}
+      {!preview && !isEditMode && !hasInfoBoxContent(infoBox) ? (
+        <div className="flex justify-center items-center p-8">
+          <Button
+            className="headlessbutton"
+            type="primary"
+            onClick={() => setIsEditMode(true)}
+            size="large"
+          >
+            Add Info Box
+          </Button>
+        </div>
+      ) : (
       <div style={preview || !isEditMode ? containerStyle : {}}>
         {/* Title and Description - Full Width */}
         {(preview || !isEditMode) && (
@@ -745,6 +770,7 @@ const InfoBoxComponent = ({
           </div>
         </div>
       </div>
+      )}
 
       {/* Media Selection Modal */}
       {!preview && isEditMode && (
