@@ -181,10 +181,16 @@ const MenuItemComponent = ({
         {menuItemsData.length > 0 ? (
           <div className="w-full">{renderMenuItemsPreview(menuItemsData)}</div>
         ) : (
-          <ComponentEditButton
-            onClick={openDrawer}
-            title="Choose menu items"
-          />
+          <div className="flex justify-center items-center p-8">
+            <Button
+              className="headlessbutton"
+              type="primary"
+              onClick={openDrawer}
+              size="large"
+            >
+              Choose Menu Item
+            </Button>
+          </div>
         )}
       </div>
 

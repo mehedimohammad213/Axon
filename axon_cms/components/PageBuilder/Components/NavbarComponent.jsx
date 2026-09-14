@@ -37,6 +37,9 @@ import Image from "next/image";
 const { Text } = Typography;
 const { Option } = Select;
 
+const hasSelectedNavbar = (navbar) =>
+  Boolean(navbar?.id || navbar?.menu_items?.length || navbar?.logo);
+
 const NavbarComponent = ({
   component,
   updateComponent,
@@ -45,17 +48,28 @@ const NavbarComponent = ({
   onDuplicateElement,
 }) => {
   const [isDrawerVisible, setIsDrawerVisible] = useState(false);
-  const [navbarData, setNavbarData] = useState(component._headless);
+  const [navbarData, setNavbarData] = useState(
+    hasSelectedNavbar(component._headless) ? component._headless : null
+  );
   const [menuMode, setMenuMode] = useState(component.menuMode || "horizontal");
   const [menuTheme, setMenuTheme] = useState(component.menuTheme || "light");
   const [logoSize, setLogoSize] = useState(component.logoSize || "medium");
   const [selectedNavbar, setSelectedNavbar] = useState(null);
   const [showConfig, setShowConfig] = useState(false);
-  const [altTitle, setAltTitle] = useState(component._headless?.altTitle || "");
+  const [altTitle, setAltTitle] = useState(
+    hasSelectedNavbar(component._headless)
+      ? component._headless?.altTitle || ""
+      : ""
+  );
 
   useEffect(() => {
-    setNavbarData(component._headless);
-    setAltTitle(component._headless?.altTitle || "");
+    if (hasSelectedNavbar(component._headless)) {
+      setNavbarData(component._headless);
+      setAltTitle(component._headless?.altTitle || "");
+    } else {
+      setNavbarData(null);
+      setAltTitle("");
+    }
   }, [component._headless]);
 
   const handleSelectNavbar = (selectedNavbar) => {
@@ -230,10 +244,16 @@ const NavbarComponent = ({
             </div>
           </div>
         ) : (
-          <ComponentEditButton
-            onClick={() => setIsDrawerVisible(true)}
-            title="Choose navbar"
-          />
+          <div className="flex justify-center items-center p-8">
+            <Button
+              className="headlessbutton"
+              type="primary"
+              onClick={() => setIsDrawerVisible(true)}
+              size="large"
+            >
+              Choose Navbar
+            </Button>
+          </div>
         )}
       </div>
 
