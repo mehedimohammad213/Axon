@@ -38,6 +38,14 @@ import Image from "next/image";
 
 const { Panel } = Collapse;
 
+const hasSelectedMedia = (media) => {
+  if (!media) return false;
+  if (Array.isArray(media)) {
+    return media.some((item) => item?.id || item?.file_path);
+  }
+  return Boolean(media.id || media.file_path);
+};
+
 const MediaComponent = ({
   component,
   updateComponent,
@@ -59,9 +67,12 @@ const MediaComponent = ({
 
   // Sync state with component prop changes
   useEffect(() => {
-    if (component?._headless) {
+    if (hasSelectedMedia(component?._headless)) {
       setMediaData(component._headless);
       setShowAltContent(component._headless?.showAltContent || false);
+    } else {
+      setMediaData(null);
+      setShowAltContent(false);
     }
   }, [component?._headless]);
 
@@ -455,10 +466,12 @@ const MediaComponent = ({
     }
   };
 
+  const mediaSelected = hasSelectedMedia(mediaData);
+
   if (preview) {
     return (
       <div className="preview-media-component p-4 bg-gray-100 rounded-md">
-        {mediaData ? (
+        {mediaSelected ? (
           component?.selectionMode === "multiple" ? (
             <div className="grid grid-cols-2 gap-4">
               {mediaData.map((media) => renderMediaItemWithMultiLang(media))}
@@ -486,7 +499,7 @@ const MediaComponent = ({
           {!isEditing ? (
             <>
               <Space>
-                {mediaData && (
+                {mediaSelected && (
                   <ComponentEditButton
                     onClick={() => setIsModalVisible(true)}
                     title="Edit media"
@@ -527,7 +540,7 @@ const MediaComponent = ({
       <div className="flex flex-col w-full">
         {!isEditing ? (
           <div className="w-full">
-            {mediaData ? (
+            {mediaSelected ? (
               component?.selectionMode === "multiple" ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full">
                   {mediaData.map((media) =>
@@ -540,10 +553,16 @@ const MediaComponent = ({
                 </div>
               )
             ) : (
-              <ComponentEditButton
-                onClick={() => setIsModalVisible(true)}
-                title="Choose media"
-              />
+              <div className="flex justify-center items-center p-8">
+                <Button
+                  className="headlessbutton"
+                  type="primary"
+                  onClick={() => setIsModalVisible(true)}
+                  size="large"
+                >
+                  Choose Media
+                </Button>
+              </div>
             )}
           </div>
         ) : (
@@ -551,7 +570,7 @@ const MediaComponent = ({
             {/* Current Media */}
             <div className="w-full md:w-1/2">
               <h4 className="mb-2 text-md font-semibold">Current Media</h4>
-              {mediaData ? (
+              {mediaSelected ? (
                 component?.selectionMode === "multiple" ? (
                   <div className="grid grid-cols-1 gap-4 w-full">
                     {mediaData.map((media) =>
@@ -588,7 +607,7 @@ const MediaComponent = ({
       </div>
 
       {/* Multi-Language Configuration */}
-      {mediaData && (
+      {mediaSelected && (
         <Collapse className="mt-4">
           <Panel
             header={
