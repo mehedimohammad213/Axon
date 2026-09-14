@@ -42,6 +42,14 @@ const { Text } = Typography;
 // Configuration
 const POLLING_INTERVAL = 30000; // 30 seconds
 
+const hasSelectedCard = (card) =>
+  Boolean(
+    card?.id ||
+      card?.title_en ||
+      card?.title_bn ||
+      card?.media_files?.file_path
+  );
+
 // Helper function to render card media
 const renderCardMedia = (media, altTitle = "Card Image", compact = false) => {
   if (!media || !media.file_path) {
@@ -104,35 +112,50 @@ const CardComponent = ({
 }) => {
   const router = useRouter();
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [cardData, setCardData] = useState(component._headless);
+  const [cardData, setCardData] = useState(
+    hasSelectedCard(component._headless) ? component._headless : null
+  );
   const [selectedCardData, setSelectedCardData] = useState(null);
   const [isRefreshing, setIsRefreshing] = useState(false);
   const [lastUpdated, setLastUpdated] = useState(null);
   const [autoPolling, setAutoPolling] = useState(false); // Always false
   const [showAltContent, setShowAltContent] = useState(
-    component._headless?.showAltContent || false
+    hasSelectedCard(component._headless)
+      ? component._headless?.showAltContent || false
+      : false
   );
   const [isEditingState, setIsEditingState] = useState(false);
   const [isEditingAltContent, setIsEditingAltContent] = useState(false);
   const [altContentData, setAltContentData] = useState({
-    altTitle: component._headless?.altTitle || "",
-    altDescription: component._headless?.altDescription || "",
+    altTitle: hasSelectedCard(component._headless)
+      ? component._headless?.altTitle || ""
+      : "",
+    altDescription: hasSelectedCard(component._headless)
+      ? component._headless?.altDescription || ""
+      : "",
   });
   const lastUpdateRef = useRef(null);
 
   // Check if we're in page-builder context
   const isInPageBuilder = router.pathname.includes("/page-builder");
   const isInPagePreview = router.pathname.includes("/page-preview");
+  const cardSelected = hasSelectedCard(cardData);
 
   // Synchronize cardData with component._headless when it changes
   useEffect(() => {
-    setCardData(component._headless);
-    setShowAltContent(component._headless?.showAltContent || false);
-    setAltContentData({
-      altTitle: component._headless?.altTitle || "",
-      altDescription: component._headless?.altDescription || "",
-    });
-  }, [component._headless]);
+    if (hasSelectedCard(component._headless)) {
+      setCardData(component._headless);
+      setShowAltContent(component._headless?.showAltContent || false);
+      setAltContentData({
+        altTitle: component._headless?.altTitle || "",
+        altDescription: component._headless?.altDescription || "",
+      });
+    } else if (!isEditingState) {
+      setCardData(null);
+      setShowAltContent(false);
+      setAltContentData({ altTitle: "", altDescription: "" });
+    }
+  }, [component._headless, isEditingState]);
 
   // Completely disable auto-polling in all contexts
   useEffect(() => {
@@ -246,13 +269,15 @@ const CardComponent = ({
   // Handle selection from CardSelectionModal
   const handleSelectCard = useCallback((selectedCard) => {
     setSelectedCardData(selectedCard);
+    setCardData(selectedCard);
     setIsModalVisible(false);
     setIsEditingState(true);
   }, []);
 
   // Handle Submit (Confirm) Changes
   const handleSubmit = useCallback(() => {
-    if (!selectedCardData) {
+    const cardToSave = selectedCardData || cardData;
+    if (!hasSelectedCard(cardToSave)) {
       Modal.error({
         title: "Validation Error",
         content: "No card selected.",
@@ -263,29 +288,44 @@ const CardComponent = ({
     const updatedComponent = {
       ...component,
       _headless: {
-        ...selectedCardData,
-        config: selectedCardData.config || {
+        ...cardToSave,
+        config: cardToSave.config || {
           showDescription: true,
           showImage: true,
           layout: "horizontal",
         },
+        altTitle: altContentData.altTitle,
+        altDescription: altContentData.altDescription,
+        showAltContent,
       },
-      id: selectedCardData.id,
+      id: cardToSave.id,
     };
 
     updateComponent(updatedComponent);
-    setCardData(selectedCardData);
+    setCardData(cardToSave);
     setSelectedCardData(null);
     setIsEditingState(false);
     message.success("Card updated successfully.");
-  }, [selectedCardData, component, updateComponent]);
+  }, [
+    selectedCardData,
+    cardData,
+    component,
+    updateComponent,
+    altContentData,
+    showAltContent,
+  ]);
 
   // Handle Cancel Changes
   const handleCancel = useCallback(() => {
+    if (hasSelectedCard(component._headless)) {
+      setCardData(component._headless);
+    } else {
+      setCardData(null);
+    }
     setSelectedCardData(null);
     setIsEditingState(false);
     message.info("Card update canceled.");
-  }, []);
+  }, [component._headless]);
 
   // Handle Delete Component
   const handleDelete = useCallback(() => {
@@ -327,7 +367,7 @@ const CardComponent = ({
 
     return (
       <div className="preview-card-component px-5 py-4">
-        {cardData ? (
+        {cardSelected ? (
           <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
             {renderCardMedia(cardData.media_files, displayContent.title, true)}
             <div className="space-y-2 p-4">
@@ -383,29 +423,29 @@ const CardComponent = ({
           <h3 className="text-xl font-semibold">Card Component</h3>
         </div>
         <div className="flex gap-2">
-          {cardData && (
-            <>
+          <Space>
+            {cardSelected && (
               <ComponentEditButton
                 onClick={() => setIsModalVisible(true)}
                 title="Edit card"
               />
-              <ComponentDuplicateButton
-                onClick={onDuplicateElement}
-                title="Duplicate component"
-              />
-              <ComponentDeleteButton
-                onConfirm={handleDelete}
-                title="Delete component"
-                confirmTitle="Are you sure you want to delete this component?"
-              />
-            </>
-          )}
+            )}
+            <ComponentDuplicateButton
+              onClick={onDuplicateElement}
+              title="Duplicate component"
+            />
+            <ComponentDeleteButton
+              onConfirm={handleDelete}
+              title="Delete component"
+              confirmTitle="Are you sure you want to delete this component?"
+            />
+          </Space>
         </div>
       </div>
 
       <div className="space-y-4">
         {/* Multi-Language Configuration */}
-        {cardData && (
+        {cardSelected && (
           <div className="bg-gray-50 p-4 rounded-lg">
             <h4 className="text-md font-semibold mb-3 flex items-center gap-2">
               <GlobalOutlined />
@@ -438,7 +478,7 @@ const CardComponent = ({
         )}
 
         {/* Alternative Content Editing Section */}
-        {cardData && (
+        {cardSelected && (
           <div className="bg-gray-50 p-4 rounded-lg">
             <div className="flex items-center justify-between mb-3">
               <h4 className="text-md font-semibold flex items-center gap-2">
@@ -539,10 +579,10 @@ const CardComponent = ({
           <div
             className={`flex flex-col ${isEditingState && selectedCardData ? "w-full md:w-1/2" : "w-full"}`}
           >
-            {cardData && isEditingState && (
+            {cardSelected && isEditingState && (
               <h4 className="mb-2 text-md font-semibold">Current Card</h4>
             )}
-            {cardData ? (
+            {cardSelected ? (
               <div className="w-full relative">
                 <div className="bg-white rounded-lg shadow-md overflow-hidden">
                   {renderCardMedia(cardData.media_files)}
@@ -588,10 +628,16 @@ const CardComponent = ({
                   )}
               </div>
             ) : (
-              <ComponentEditButton
-                onClick={() => setIsModalVisible(true)}
-                title="Select card"
-              />
+              <div className="flex justify-center items-center p-8">
+                <Button
+                  className="headlessbutton"
+                  type="primary"
+                  onClick={() => setIsModalVisible(true)}
+                  size="large"
+                >
+                  Choose Card
+                </Button>
+              </div>
             )}
           </div>
 
