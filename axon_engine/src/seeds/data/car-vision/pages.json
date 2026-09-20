@@ -1,6 +1,6 @@
 [
   {
-    "id": 24,
+    "id": 19,
     "slug": "main-site-footer",
     "type": "Footer",
     "favicon_id": null,
@@ -29,8 +29,8 @@
               "file_path": "/logo.svg",
               "file_size": 0,
               "tags": "[\"logo\",\"brand\"]",
-              "created_at": "2026-09-02T05:40:09.385Z",
-              "updated_at": "2026-09-02T05:40:09.385Z",
+              "created_at": "2026-09-20T08:43:58.682Z",
+              "updated_at": "2026-09-20T08:43:58.682Z",
               "id": 1
             }
           },
@@ -82,11 +82,25 @@
           {
             "_id": "footer-quick-menu",
             "type": "menu",
+            "menu_item_ids": [
+              5,
+              10,
+              11,
+              8,
+              9
+            ],
             "value": "",
             "menuMode": "vertical",
             "menuTheme": "dark",
             "settings": [],
             "_headless": {
+              "menu_item_ids": [
+                5,
+                10,
+                11,
+                8,
+                9
+              ],
               "menu_items": [
                 {
                   "id": 5,
@@ -96,14 +110,14 @@
                   "parent_id": null
                 },
                 {
-                  "id": 11,
+                  "id": 10,
                   "title": "Car Inventory",
                   "title_bn": "গাড়ির তালিকা",
                   "link": "/cars",
                   "parent_id": null
                 },
                 {
-                  "id": 12,
+                  "id": 11,
                   "title": "About Us",
                   "title_bn": "আমাদের সম্পর্কে",
                   "link": "/about",
@@ -124,14 +138,7 @@
                   "parent_id": null
                 }
               ]
-            },
-            "menu_item_ids": [
-              5,
-              11,
-              12,
-              8,
-              9
-            ]
+            }
           }
         ]
       },
@@ -155,32 +162,36 @@
           {
             "_id": "footer-help-menu",
             "type": "menu",
+            "menu_item_ids": [
+              12,
+              11
+            ],
             "value": "",
             "menuMode": "vertical",
             "menuTheme": "dark",
             "settings": [],
             "_headless": {
+              "menu_item_ids": [
+                12,
+                11
+              ],
               "menu_items": [
                 {
-                  "id": 14,
+                  "id": 12,
                   "title": "Contact Us",
                   "title_bn": "যোগাযোগ করুন",
                   "link": "/contact",
                   "parent_id": null
                 },
                 {
-                  "id": 12,
+                  "id": 11,
                   "title": "About Us",
                   "title_bn": "আমাদের সম্পর্কে",
                   "link": "/about",
                   "parent_id": null
                 }
               ]
-            },
-            "menu_item_ids": [
-              14,
-              12
-            ]
+            }
           }
         ]
       },
@@ -204,24 +215,27 @@
           {
             "_id": "footer-platform-menu",
             "type": "menu",
+            "menu_item_ids": [
+              13
+            ],
             "value": "",
             "menuMode": "vertical",
             "menuTheme": "dark",
             "settings": [],
             "_headless": {
+              "menu_item_ids": [
+                13
+              ],
               "menu_items": [
                 {
-                  "id": 16,
+                  "id": 13,
                   "title": "Dealer Login",
                   "title_bn": "ডিলার লগইন",
                   "link": "https://dreamagentcarvision.com/login",
                   "parent_id": null
                 }
               ]
-            },
-            "menu_item_ids": [
-              16
-            ]
+            }
           }
         ]
       },
@@ -329,7 +343,7 @@
     "status": true
   },
   {
-    "id": 34,
+    "id": 29,
     "slug": "site-settings",
     "type": "settings",
     "favicon_id": null,
@@ -409,14 +423,18 @@
       },
       "follow_us": {
         "label": "Follow Us",
-        "menu_id": 21
+        "menu_item_ids": [
+          14,
+          15,
+          16
+        ]
       },
       "messenger": "https://m.me/DreamAgentCarVision"
     },
     "status": true
   },
   {
-    "id": 35,
+    "id": 30,
     "slug": "home",
     "type": "Page",
     "favicon_id": null,
@@ -434,11 +452,11 @@
           {
             "_id": "home-hero-slider",
             "type": "slider",
-            "id": 31,
+            "id": 26,
             "value": "",
             "settings": [],
             "_headless": {
-              "id": 31,
+              "id": 26,
               "title_en": "Home Hero Slider",
               "description_en": "Find Your Next Car, the Smart Way",
               "type": "hero",
@@ -598,11 +616,11 @@
           {
             "_id": "home-contact-cta-card",
             "type": "card",
-            "id": 30,
+            "id": 25,
             "value": "",
             "settings": [],
             "_headless": {
-              "id": 30,
+              "id": 25,
               "title_en": "Contact CTA",
               "description_en": "<p>Our team is ready to help with inventory inquiries, test drives, financing options, and dealership support. Reach out anytime during business hours.</p>",
               "link_url": "/contact",
@@ -636,40 +654,45 @@
           {
             "_id": "home-follow-us-menu",
             "type": "menu",
+            "menu_item_ids": [
+              14,
+              15,
+              16
+            ],
             "value": "",
             "menuMode": "vertical",
             "menuTheme": "light",
             "settings": [],
             "_headless": {
+              "menu_item_ids": [
+                14,
+                15,
+                16
+              ],
               "menu_items": [
                 {
-                  "id": 18,
+                  "id": 14,
                   "title": "Facebook",
                   "title_bn": "ফেসবুক",
                   "link": "https://www.facebook.com/DreamAgentCarVision/",
                   "parent_id": null
                 },
                 {
-                  "id": 19,
+                  "id": 15,
                   "title": "YouTube",
                   "title_bn": "ইউটিউব",
                   "link": "https://youtube.com",
                   "parent_id": null
                 },
                 {
-                  "id": 20,
+                  "id": 16,
                   "title": "LinkedIn",
                   "title_bn": "লিংকডইন",
                   "link": "https://linkedin.com",
                   "parent_id": null
                 }
               ]
-            },
-            "menu_item_ids": [
-              18,
-              19,
-              20
-            ]
+            }
           }
         ]
       },
@@ -726,7 +749,11 @@
     "additional": {
       "follow_us": {
         "label": "Follow Us",
-        "menu_id": 21
+        "menu_item_ids": [
+          14,
+          15,
+          16
+        ]
       },
       "find_us": {
         "eyebrow": "Find Us",
@@ -752,7 +779,7 @@
           "label": "Contact Us",
           "href": "/contact"
         },
-        "slider_id": 31
+        "slider_id": 26
       },
       "featured": {
         "title": "Featured Inventory",
@@ -772,7 +799,7 @@
     "status": true
   },
   {
-    "id": 36,
+    "id": 31,
     "slug": "about",
     "type": "Page",
     "favicon_id": null,
@@ -846,13 +873,13 @@
             }
           },
           {
-            "_id": "about-why-card-25",
+            "_id": "about-why-card-20",
             "type": "card",
-            "id": 25,
+            "id": 20,
             "value": "",
             "settings": [],
             "_headless": {
-              "id": 25,
+              "id": 20,
               "title_en": "Registered & Trusted",
               "description_en": "<p>We are the most reliable and trustworthy car importers in Bangladesh. The company is registered and member of Bangladesh Reconditioned Vehicles Importers and Dealers Association. Our company fulfilled all the requirements of the government.</p>",
               "link_url": null,
@@ -865,13 +892,13 @@
             }
           },
           {
-            "_id": "about-why-card-26",
+            "_id": "about-why-card-21",
             "type": "card",
-            "id": 26,
+            "id": 21,
             "value": "",
             "settings": [],
             "_headless": {
-              "id": 26,
+              "id": 21,
               "title_en": "Quality Assured",
               "description_en": "<p>We only import cars that have auction point, original mileage (ODO reading), and passed the JAAI inspection. This means that the car has been rigorously tested.</p>",
               "link_url": null,
@@ -884,13 +911,13 @@
             }
           },
           {
-            "_id": "about-why-card-27",
+            "_id": "about-why-card-22",
             "type": "card",
-            "id": 27,
+            "id": 22,
             "value": "",
             "settings": [],
             "_headless": {
-              "id": 27,
+              "id": 22,
               "title_en": "Wide Selection",
               "description_en": "<p>We offer a wide selection of cars from some of the most popular Japanese brands.</p>",
               "link_url": null,
@@ -903,13 +930,13 @@
             }
           },
           {
-            "_id": "about-why-card-28",
+            "_id": "about-why-card-23",
             "type": "card",
-            "id": 28,
+            "id": 23,
             "value": "",
             "settings": [],
             "_headless": {
-              "id": 28,
+              "id": 23,
               "title_en": "Dedicated Team",
               "description_en": "<p>We have a team of dedicated and experienced professionals who always help our customers. Moreover, we offer after-sales service for our customers.</p>",
               "link_url": null,
@@ -922,13 +949,13 @@
             }
           },
           {
-            "_id": "about-why-card-29",
+            "_id": "about-why-card-24",
             "type": "card",
-            "id": 29,
+            "id": 24,
             "value": "",
             "settings": [],
             "_headless": {
-              "id": 29,
+              "id": 24,
               "title_en": "Best Prices",
               "description_en": "<p>We offer the best prices in Bangladesh for Japanese Reconditioned Cars.</p>",
               "link_url": null,
@@ -1094,7 +1121,7 @@
     "status": true
   },
   {
-    "id": 37,
+    "id": 32,
     "slug": "contact",
     "type": "Page",
     "favicon_id": null,
@@ -1174,7 +1201,7 @@
             "settings": [],
             "_headless": true,
             "data": {
-              "formId": 32,
+              "formId": 27,
               "title": "Website Contact Form",
               "description": "Contact Dream Agent Car Vision from the website contact page.",
               "elements": [
@@ -1251,7 +1278,7 @@
                 "enctype": "application/json",
                 "layout": "contact-grid",
                 "submit_text": "CONTACT US",
-                "action_url": "/api/form-submission?form_id=32"
+                "action_url": "/api/form-submission?form_id=27"
               }
             }
           }
@@ -1341,11 +1368,11 @@
           {
             "_id": "contact-cta-card",
             "type": "card",
-            "id": 30,
+            "id": 25,
             "value": "",
             "settings": [],
             "_headless": {
-              "id": 30,
+              "id": 25,
               "title_en": "Contact CTA",
               "description_en": "<p>Our team is ready to help with inventory inquiries, test drives, financing options, and dealership support. Reach out anytime during business hours.</p>",
               "link_url": "/contact",
@@ -1368,7 +1395,7 @@
       },
       "help_title": "What can we help you with?",
       "help_description": "Send us a message and our team will get back to you during business hours.",
-      "form_builder_id": 32,
+      "form_builder_id": 27,
       "office_title": "Office Locations",
       "office": {
         "name": "Office Address",
@@ -1418,7 +1445,7 @@
     "status": true
   },
   {
-    "id": 38,
+    "id": 33,
     "slug": "career",
     "type": "Page",
     "favicon_id": null,

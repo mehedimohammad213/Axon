@@ -1,6 +1,6 @@
 [
   {
-    "id": 23,
+    "id": 18,
     "title_en": "Main Footer",
     "title_bn": "প্রধান ফুটার",
     "footer_status": 1,
@@ -15,30 +15,30 @@
     "address2_description_bn": "ফোন: ০১৭১৪২১১৯৫৬\nইমেইল: car_vision71@yahoo.com",
     "address1_status": 1,
     "address2_status": 1,
+    "column2_menu_item_ids": [
+      5,
+      10,
+      11,
+      8,
+      9
+    ],
     "column2_status": 1,
+    "column3_menu_item_ids": [
+      12,
+      11
+    ],
     "column3_logos": [],
     "column3_status": 1,
     "column4_title_en": "Get In Touch",
     "column4_title_bn": "যোগাযোগ করুন",
     "column4_text_en": "Dream Agent Car Vision — car sales In Dhaka. Get in touch.",
     "column4_text_bn": "ড্রিম এজেন্ট কার ভিশন — ঢাকায় গাড়ি বিক্রয়। যোগাযোগ করুন।",
+    "column4_menu_item_ids": [
+      13
+    ],
     "column4_description_en": "Trusted Dealership Platform",
     "column4_description_bn": "বিশ্বস্ত ডিলারশিপ প্ল্যাটফর্ম",
     "column4_status": 1,
-    "column2_menu_item_ids": [
-      5,
-      11,
-      12,
-      8,
-      9
-    ],
-    "column3_menu_item_ids": [
-      14,
-      12
-    ],
-    "column4_menu_item_ids": [
-      16
-    ],
     "bottom_menu_item_ids": []
   }
 ]

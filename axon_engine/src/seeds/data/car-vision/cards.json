@@ -1,6 +1,6 @@
 [
   {
-    "id": 25,
+    "id": 20,
     "page_name": "about",
     "media_ids": null,
     "title_en": "Registered & Trusted",
@@ -16,7 +16,7 @@
     "status": true
   },
   {
-    "id": 26,
+    "id": 21,
     "page_name": "about",
     "media_ids": null,
     "title_en": "Quality Assured",
@@ -32,7 +32,7 @@
     "status": true
   },
   {
-    "id": 27,
+    "id": 22,
     "page_name": "about",
     "media_ids": null,
     "title_en": "Wide Selection",
@@ -48,7 +48,7 @@
     "status": true
   },
   {
-    "id": 28,
+    "id": 23,
     "page_name": "about",
     "media_ids": null,
     "title_en": "Dedicated Team",
@@ -64,7 +64,7 @@
     "status": true
   },
   {
-    "id": 29,
+    "id": 24,
     "page_name": "about",
     "media_ids": null,
     "title_en": "Best Prices",
@@ -80,7 +80,7 @@
     "status": true
   },
   {
-    "id": 30,
+    "id": 25,
     "page_name": "home",
     "media_ids": null,
     "title_en": "Contact CTA",
