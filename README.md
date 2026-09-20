@@ -13,7 +13,7 @@ Headless CMS with an API-first Express backend and a Next.js admin UI. Manage st
 Clients / websites
         │
         ▼
-   axon_cms (:3007)  ──►  axon_engine (:3000)  ──►  PostgreSQL
+   axon_cms (:7007)  ──►  axon_engine (:6006)  ──►  PostgreSQL
 ```
 
 ## Features
@@ -41,7 +41,7 @@ cp .env.example .env
 # Edit DB_* and JWT_SECRET in .env
 npm install
 npm run setup          # migrate + seed
-npm run dev            # http://localhost:3000
+npm run dev            # http://localhost:6006
 ```
 
 ### 2. CMS (Admin UI)
@@ -49,9 +49,9 @@ npm run dev            # http://localhost:3000
 ```bash
 cd axon_cms
 cp .env.example .env
-# Point NEXT_PUBLIC_API_BASE_URL at the engine (default: http://127.0.0.1:3000/api)
+# Point NEXT_PUBLIC_API_BASE_URL at the engine (default: http://127.0.0.1:6006/api)
 npm install
-npm run dev            # http://localhost:3007
+npm run dev            # http://localhost:7007
 ```
 
 ### Environment
@@ -77,7 +77,7 @@ Copy the example files and fill in secrets locally — never commit `.env`:
 
 | Command | Description |
 |---------|-------------|
-| `npm run dev` | Next.js dev server on port 3007 |
+| `npm run dev` | Next.js dev server on port 7007 |
 | `npm run build` | Production build |
 | `npm start` | Production server (`server.js`) |
 

@@ -19,8 +19,8 @@ COPY .env .env
 # Build the Next.js application
 RUN npm run build
 
-# Expose port 3000
-EXPOSE 3005
+# Expose port 7007
+EXPOSE 7007
 
 # Command to run the application
 CMD ["npm", "start"]

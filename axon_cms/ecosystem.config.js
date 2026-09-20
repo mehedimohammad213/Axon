@@ -7,7 +7,7 @@ module.exports = {
       cwd: "/var/www/cms/headless-cms",
       env: {
         NODE_ENV: "production",
-        PORT: 3007,
+        PORT: 7007,
       },
       log_date_format: "YYYY-MM-DD HH:mm:ss",
       error_file: "/var/www/headless-cms/logs/pm2-error.log",
