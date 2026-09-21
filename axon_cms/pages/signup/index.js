@@ -261,7 +261,7 @@ export default function Signup() {
               initialValues={{ remember: true }}
               onFinish={handleSignup}
             >
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <Form.Item
                   name="email"
                   rules={[
@@ -303,7 +303,7 @@ export default function Signup() {
                   </motion.div>
                 </Form.Item>
               </div>
-              <div className="grid grid-cols-2 gap-4 mt-4">
+              <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <Form.Item
                   name="phone"
                   rules={[
@@ -345,7 +345,7 @@ export default function Signup() {
                   </motion.div>
                 </Form.Item>
               </div>
-              <div className="grid grid-cols-2 gap-4 mt-4">
+              <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <Form.Item
                   name="password"
                   rules={[

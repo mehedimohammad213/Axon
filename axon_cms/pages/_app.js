@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <Provider store={store}>
       <Head>
-        <title>Headless CMS</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
         <link rel="icon" type="image/svg+xml" href="/images/headless_favicon.svg" />
       </Head>
@@ -37,25 +37,23 @@ function MyApp({ Component, pageProps }) {
           </ThemeProvider>
         </MenuRefreshProvider>
       </AuthProvider>
-      <footer className="fixed bottom-0 left-0 right-0 z-50 bg-white border-t border-gray-200">
-        <div className="max-w-7xl mx-auto px-6 py-2.5">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-2 md:gap-4">
-            {/* Left Section - Copyright */}
-            <div className="flex items-center gap-2 text-gray-600 leading-none">
-              <div className="w-2 h-2 rounded-full bg-gradient-to-r from-brand to-brand-dark shrink-0"></div>
-              <span className="text-sm leading-none">
+      <footer className="fixed bottom-0 left-0 right-0 z-40 border-t border-gray-200 bg-white">
+        <div className="mx-auto max-w-7xl px-3 py-2 sm:px-6">
+          <div className="flex items-center justify-between gap-3">
+            <div className="flex min-w-0 items-center gap-2 leading-none text-gray-600">
+              <div className="h-2 w-2 shrink-0 rounded-full bg-gradient-to-r from-brand to-brand-dark"></div>
+              <span className="truncate text-xs leading-none sm:text-sm">
                 © {new Date().getFullYear()}{" "}
-                <span className="font-semibold bg-gradient-to-r from-brand via-blue-400 to-blue-500 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-brand via-blue-400 to-blue-500 bg-clip-text font-semibold text-transparent">
                   HEADLESS CMS
                 </span>
               </span>
             </div>
 
-            {/* Right Section - Powered By */}
-            <div className="flex items-center gap-2 text-gray-600 text-sm leading-none">
-              <div className="w-2 h-2 rounded-full bg-gradient-to-r from-brand to-brand-dark shrink-0"></div>
+            <div className="flex shrink-0 items-center gap-2 text-xs leading-none text-gray-600 sm:text-sm">
+              <div className="hidden h-2 w-2 shrink-0 rounded-full bg-gradient-to-r from-brand to-brand-dark sm:block"></div>
               <span className="font-light">Powered by</span>
-              <span className="font-semibold bg-gradient-to-r from-brand to-brand-dark bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-brand to-brand-dark bg-clip-text font-semibold text-transparent">
                 MEHEDI
               </span>
             </div>

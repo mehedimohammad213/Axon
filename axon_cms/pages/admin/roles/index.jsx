@@ -169,10 +169,10 @@ export default function AdminRolesPage() {
         onShowChange={handleShowChange}
         onRefresh={refreshRoles}
         toolbarExtra={
-          <div className="flex items-center gap-2">
+          <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:items-center">
             <span className="text-sm font-medium text-gray-600">Organization</span>
             <Select
-              className="min-w-[220px] [&_.ant-select-selector]:h-9 [&_.ant-select-selector]:rounded-lg [&_.ant-select-selector]:border-gray-200"
+              className="w-full sm:min-w-[220px] sm:w-56 [&_.ant-select-selector]:h-9 [&_.ant-select-selector]:rounded-lg [&_.ant-select-selector]:border-gray-200"
               placeholder="Select organization"
               value={selectedOrgId}
               onChange={setSelectedOrgId}

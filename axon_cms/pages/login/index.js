@@ -39,7 +39,7 @@ export default function Login() {
   return (
     <div className="fixed inset-0 flex w-full h-screen overflow-hidden bg-white">
       {/* Left — Login form */}
-      <div className="relative w-full lg:w-[46%] h-full flex items-start justify-center overflow-y-auto px-6 py-10 md:px-12 bg-white">
+      <div className="relative flex h-full w-full items-start justify-center overflow-y-auto bg-white px-4 py-8 pb-24 sm:px-6 md:px-12 lg:w-[46%]">
         <div className="relative z-10 w-full max-w-[400px] my-auto">
           <div className="mb-10">
             <Image

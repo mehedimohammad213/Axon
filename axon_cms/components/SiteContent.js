@@ -13,6 +13,7 @@ const { Sider, Content, Header } = Layout;
 
 const SiteContent = ({ children }) => {
   const [collapsed, setCollapsed] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [theme, setTheme] = useState("light");
   const [isMobile, setIsMobile] = useState(false);
   const { user, token, organization, logout, loading } = useAuth();
@@ -29,16 +30,27 @@ const SiteContent = ({ children }) => {
 
   useEffect(() => {}, [allowSignup]);
 
+  useEffect(() => {
+    setMobileOpen(false);
+  }, [currentRoute]);
+
+  useEffect(() => {
+    document.body.style.overflow = isMobile && mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobile, mobileOpen]);
+
   // Handle responsive behavior
   useEffect(() => {
     const handleResize = () => {
       const width = window.innerWidth;
       setIsMobile(width < 1024);
 
-      // Auto-collapse sidebar on smaller screens
-      if (width < 1024) {
-        setCollapsed(true);
-      } else if (width >= 1440) {
+      if (width >= 1024) {
+        setMobileOpen(false);
+      }
+      if (width >= 1440) {
         setCollapsed(false);
       }
     };
@@ -143,16 +155,35 @@ const SiteContent = ({ children }) => {
           handleLogout={logout}
           theme={theme}
           setTheme={setTheme}
+          showMenuButton={shouldShowSidebar && isMobile}
+          mobileMenuOpen={mobileOpen}
+          onMenuToggle={() => setMobileOpen((open) => !open)}
         />
       </Header>
 
       <Layout className="pt-16">
-        {/* Conditionally render the Side Navigation */}
+        {shouldShowSidebar && isMobile && mobileOpen && (
+          <button
+            type="button"
+            aria-label="Close menu"
+            className="fixed inset-0 top-16 z-30 bg-black/40"
+            onClick={() => setMobileOpen(false)}
+          />
+        )}
+
         {shouldShowSidebar && (
-          <div className="fixed top-16 left-0 bottom-0 z-40">
+          <div
+            className={`fixed top-16 bottom-0 left-0 z-40 transition-transform duration-300 ${
+              isMobile
+                ? mobileOpen
+                  ? "translate-x-0"
+                  : "-translate-x-full"
+                : "translate-x-0"
+            }`}
+          >
             <Sider
               collapsible
-              collapsed={collapsed}
+              collapsed={isMobile ? false : collapsed}
               onCollapse={handleCollapse}
               theme={theme}
               width={260}
@@ -161,20 +192,18 @@ const SiteContent = ({ children }) => {
                 minHeight: "calc(100vh - 4rem)",
                 maxHeight: "calc(100vh - 4rem)",
               }}
-              className="px-2 rounded-r-2xl
-                bg-white shadow-lg transition-all duration-300 overflow-y-auto overflow-x-hidden
-                scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent"
-              breakpoint="lg"
-              collapsedWidth={80}
+              className="overflow-x-hidden overflow-y-auto rounded-r-2xl bg-white px-2
+                shadow-lg scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent"
+              collapsedWidth={isMobile ? 0 : 80}
               trigger={null}
             >
-              <div className="flex pt-6 pb-4">
+              <div className="flex pb-16 pt-6">
                 <SideMenuItems
                   token={token}
                   user={user}
                   handleLogout={logout}
                   setIsModalOpen={setIsModalOpen}
-                  collapsed={collapsed}
+                  collapsed={isMobile ? false : collapsed}
                   theme={theme}
                   setTheme={setTheme}
                 />
@@ -222,7 +251,7 @@ const SiteContent = ({ children }) => {
           )}
 
           <Content
-            className="bg-surface min-h-[calc(100vh-4rem)]"
+            className="bg-surface min-h-[calc(100vh-4rem)] pb-16"
             style={{
               width: "100%",
               maxWidth: "100%",

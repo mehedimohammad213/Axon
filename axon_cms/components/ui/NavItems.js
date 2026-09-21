@@ -6,6 +6,8 @@ import {
   UserOutlined,
   DeploymentUnitOutlined,
   ReloadOutlined,
+  MenuOutlined,
+  CloseOutlined,
 } from "@ant-design/icons";
 import { Input, Layout, Dropdown, Button, Tooltip, message, Modal } from "antd";
 import { useEffect, useState, useRef } from "react";
@@ -26,6 +28,9 @@ export default function NavItems({
   handleLogout,
   theme,
   setTheme,
+  showMenuButton = false,
+  mobileMenuOpen = false,
+  onMenuToggle,
 }) {
   const [hovered, setHovered] = useState(false);
   const [topNavData, setTopNavData] = useState([]);
@@ -163,20 +168,33 @@ export default function NavItems({
 
   return (
     <Layout.Header
-      className="fixed w-full h-16 flex items-center justify-between px-3
-    md:px-4 lg:px-6 bg-white border-b border-gray-200 z-50"
+      className="flex h-16 w-full items-center justify-between gap-2 bg-transparent px-0"
     >
-      {/* Logo */}
-      <div className="flex items-center gap-6 md:gap-8 flex-shrink-0">
+      <div className="flex min-w-0 items-center gap-2 sm:gap-4 md:gap-8">
+        {showMenuButton && (
+          <button
+            type="button"
+            aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+            onClick={onMenuToggle}
+            className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 text-gray-700"
+          >
+            {mobileMenuOpen ? (
+              <CloseOutlined className="text-base" />
+            ) : (
+              <MenuOutlined className="text-base" />
+            )}
+          </button>
+        )}
         <div
-          className="flex items-center cursor-pointer"
+          className="relative h-8 w-[92px] shrink-0 cursor-pointer sm:w-[140px]"
           onClick={() => router.push("/")}
         >
           <Image
             src="/images/ui/headless_logo.svg"
             alt="Headless Logo"
-            width={140}
-            height={36}
+            layout="fill"
+            objectFit="contain"
+            objectPosition="left"
           />
         </div>
         {user?.is_super_admin ? (
@@ -223,15 +241,15 @@ export default function NavItems({
           </div>
 
           {/* User Actions */}
-          <div className="flex items-center gap-4 flex-shrink-0">
+          <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
             {/* Search Bar - Desktop only on larger screens */}
             <div className="hidden xl:flex items-center gap-2 mr-2">
               <div className="relative" ref={searchRef}>
               <Input
                 placeholder="Search..."
                 prefix={<SearchOutlined className="text-gray-400 text-base" />}
-                className="w-[28rem] h-10 rounded-lg text-base border-gray-200
-                  focus:border-brand hover:border-brand"
+                className="h-10 w-64 rounded-lg border-gray-200 text-base
+                  focus:border-brand hover:border-brand xl:w-80 2xl:w-[28rem]"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 onFocus={() => searchQuery && setShowSearchResults(true)}
@@ -239,7 +257,7 @@ export default function NavItems({
 
               {/* Search Results Dropdown */}
               {showSearchResults && searchResults.length > 0 && (
-                <div className="absolute top-12 right-0 w-96 max-h-96 overflow-y-auto bg-white rounded-lg shadow-lg border border-gray-200 search-results-dropdown z-50">
+                <div className="search-results-dropdown absolute right-0 top-12 z-50 max-h-96 w-[min(24rem,calc(100vw-2rem))] overflow-y-auto rounded-lg border border-gray-200 bg-white shadow-lg">
                   <div className="p-3 border-b border-gray-100 bg-brand-light">
                     <p className="text-sm font-semibold text-gray-700">
                       Quick Navigation ({searchResults.length} results)
@@ -293,9 +311,9 @@ export default function NavItems({
             {/* Refresh All Data */}
             <Tooltip title={isRefreshing ? "Refreshing..." : "Refresh All Data"}>
               <div
-                className={`w-10 h-10 flex items-center justify-center rounded-lg
-                bg-gray-50 hover:bg-brand-light border border-gray-200 hover:border-brand/30
-                transition-all duration-200 shadow-sm
+                className={`hidden h-10 w-10 items-center justify-center rounded-lg sm:flex
+                border border-gray-200 bg-gray-50 shadow-sm transition-all duration-200
+                hover:border-brand/30 hover:bg-brand-light
                 ${isRefreshing ? "cursor-wait opacity-70" : "cursor-pointer hover:scale-105"}`}
                 onClick={isRefreshing ? undefined : handleGlobalRefresh}
               >
@@ -322,7 +340,7 @@ export default function NavItems({
                 className="w-10 h-10 flex items-center justify-center rounded-lg
                   bg-brand hover:bg-brand-dark
                   cursor-pointer transition-all duration-200 hover:scale-105
-                  shadow-sm hover:shadow-md mr-8"
+                  shadow-sm hover:shadow-md"
               >
                 <UserOutlined className="text-white text-lg" />
               </div>

@@ -16,22 +16,22 @@ export default function OrganizationSelector() {
   }
 
   return (
-    <div className="flex items-center gap-3 max-w-full ml-8 md:ml-12 lg:ml-16">
+    <div className="flex max-w-full items-center gap-2 sm:ml-2 md:ml-6 lg:ml-10">
       <div
-        className="px-3 py-1.5 rounded-lg text-xs font-bold text-white
-          bg-violet-600 shadow-sm whitespace-nowrap"
+        className="hidden whitespace-nowrap rounded-lg bg-violet-600 px-3 py-1.5 text-xs
+          font-bold text-white shadow-sm md:block"
         title="Platform Super Admin"
       >
         Super Admin
       </div>
 
-      <div className="relative flex min-h-[42px] items-center gap-3 rounded-lg border
-        border-gray-200 bg-white px-3 py-1 shadow-sm hover:border-brand/40
-        hover:shadow-md transition duration-200"
+      <div className="relative flex min-h-[42px] min-w-0 items-center gap-2 rounded-lg border
+        border-gray-200 bg-white px-2 py-1 shadow-sm transition duration-200
+        hover:border-brand/40 hover:shadow-md sm:gap-3 sm:px-3"
       >
         <div
-          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg
-            bg-brand shadow-sm"
+          className="hidden h-8 w-8 shrink-0 items-center justify-center rounded-lg
+            bg-brand shadow-sm sm:flex"
         >
           <ApartmentOutlined className="text-sm text-white" />
         </div>
@@ -43,10 +43,10 @@ export default function OrganizationSelector() {
             showSearch
             bordered={false}
             variant="borderless"
-            placeholder="Select organization"
+            placeholder="Organization"
             value={organization?.id}
             loading={organizationsLoading}
-            className="min-w-[260px] [&_.ant-select-arrow]:text-brand
+            className="w-24 sm:w-44 md:w-56 [&_.ant-select-arrow]:text-brand
               [&_.ant-select-selection-item]:!font-semibold [&_.ant-select-selection-item]:!text-gray-800
               [&_.ant-select-selection-placeholder]:!text-gray-400
               [&_.ant-select-selector]:!bg-transparent [&_.ant-select-selector]:!px-0
