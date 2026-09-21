@@ -114,6 +114,197 @@
     "sliders_mave": []
   },
   {
+    "id": 183,
+    "slug": "mehedi",
+    "type": "Blog",
+    "favicon_id": null,
+    "page_name_en": "mehedi",
+    "page_name_bn": "mehedi",
+    "head": {
+      "seoTitle": null,
+      "seoDescription": null,
+      "seoKeywords": null
+    },
+    "body": [
+      {
+        "_id": "p5vhlvA0gqVrw1F5If",
+        "type": "blog-content",
+        "_category": "root",
+        "data": [
+          {
+            "type": "description",
+            "value": "<p>mehedi sleep</p>"
+          },
+          {
+            "type": "media",
+            "id": {
+              "id": 634,
+              "title": "ChatGPT_Image_Jul_1__2026__07_07_13_PM-removebg-preview.png",
+              "file_name": "mave_Vygg85.png",
+              "file_type": "image/png",
+              "file_path": "media/mave_Vygg85.png",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2026-07-01T13:20:39.000000Z",
+              "updated_at": "2026-07-01T13:20:39.000000Z"
+            }
+          }
+        ]
+      }
+    ],
+    "additional": {
+      "category": "news",
+      "tags": [
+        "entertainment",
+        "science",
+        "sports"
+      ]
+    },
+    "status": 1,
+    "created_at": "2026-08-04T10:32:18.000000Z",
+    "updated_at": "2026-08-04T10:32:18.000000Z",
+    "favicon_mave": null,
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [
+      {
+        "id": 634,
+        "title": "ChatGPT_Image_Jul_1__2026__07_07_13_PM-removebg-preview.png",
+        "file_name": "mave_Vygg85.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_Vygg85.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2026-07-01T13:20:39.000000Z",
+        "updated_at": "2026-07-01T13:20:39.000000Z"
+      }
+    ],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  },
+  {
+    "id": 182,
+    "slug": "fgfg",
+    "type": "Blog",
+    "favicon_id": null,
+    "page_name_en": "fgfg",
+    "page_name_bn": "fgdg",
+    "head": {
+      "seoTitle": null,
+      "seoDescription": null,
+      "seoKeywords": null
+    },
+    "body": [
+      {
+        "_id": "XGJYbcxmy2OQH3J5DB",
+        "type": "blog-content",
+        "_category": "root",
+        "data": [
+          {
+            "type": "description",
+            "value": "<p>dfsdf</p>"
+          },
+          {
+            "type": "media",
+            "id": {
+              "id": 628,
+              "title": "Dr. Md. Tariqul Islam (1) - Copy (1).png",
+              "file_name": "mave_2EYMXv.png",
+              "file_type": "image/png",
+              "file_path": "media/mave_2EYMXv.png",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2026-05-14T13:25:35.000000Z",
+              "updated_at": "2026-05-14T13:25:35.000000Z"
+            }
+          }
+        ]
+      }
+    ],
+    "additional": {
+      "category": "tech",
+      "tags": [
+        "news",
+        "tech"
+      ]
+    },
+    "status": 1,
+    "created_at": "2026-08-04T10:31:25.000000Z",
+    "updated_at": "2026-08-04T10:31:25.000000Z",
+    "favicon_mave": null,
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [
+      {
+        "id": 628,
+        "title": "Dr. Md. Tariqul Islam (1) - Copy (1).png",
+        "file_name": "mave_2EYMXv.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_2EYMXv.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2026-05-14T13:25:35.000000Z",
+        "updated_at": "2026-05-14T13:25:35.000000Z"
+      }
+    ],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  },
+  {
+    "id": 181,
+    "slug": "aa",
+    "type": "Blog",
+    "favicon_id": null,
+    "page_name_en": "aa",
+    "page_name_bn": null,
+    "head": {
+      "seoTitle": null,
+      "seoDescription": null,
+      "seoKeywords": null
+    },
+    "body": [
+      {
+        "_id": "zXR2tuPlWTkMIhRM1U",
+        "type": "blog-content",
+        "_category": "root",
+        "data": [
+          {
+            "type": "description",
+            "value": "<p>aaa</p>"
+          },
+          {
+            "type": "media",
+            "id": null
+          }
+        ]
+      }
+    ],
+    "additional": {
+      "category": "news",
+      "tags": [
+        "news"
+      ]
+    },
+    "status": 1,
+    "created_at": "2026-07-29T09:32:02.000000Z",
+    "updated_at": "2026-07-29T09:32:02.000000Z",
+    "favicon_mave": null,
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  },
+  {
     "id": 178,
     "slug": "ev-product",
     "type": "Page",
@@ -197,11 +388,7 @@
           {
             "type": "menu",
             "_id": "fef5f406-f301-48b6-99de-064402b82957",
-            "menu_item_ids": [
-              1,
-              2,
-              3
-            ]
+            "id": 2
           },
           {
             "type": "navbar",
@@ -4299,6 +4486,366 @@
     "sliders_mave": []
   },
   {
+    "id": 149,
+    "slug": null,
+    "type": "Footer",
+    "favicon_id": 10,
+    "page_name_en": "Main Footer",
+    "page_name_bn": "Main Footer",
+    "head": null,
+    "body": [
+      {
+        "_id": "section-1758709122558-8fyf897ca",
+        "title": "Section 1",
+        "data": [
+          {
+            "_id": "component-1758709492403-4q23fybeo",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 523,
+              "title": "Logo (10).png",
+              "file_name": "mave_J50hDp.png",
+              "file_type": "image/png",
+              "file_path": "media/mave_J50hDp.png",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2025-09-25T10:49:17.000000Z",
+              "updated_at": "2025-09-25T10:49:17.000000Z"
+            },
+            "sectionIndex": 0,
+            "index": 0,
+            "id": 523
+          },
+          {
+            "_id": "component-1758709557133-hband3gf9",
+            "type": "description",
+            "value": "<p><span style=\"color: rgb(136, 136, 136);\">A dedicated team of experienced doctors, nurses, technologists, and support staff deliver patient-friendly, quality, integrated healthcare services, including emergency services, surgery, diagnostics, and specialised treatments.</span></p><p><span style=\"color: rgb(136, 136, 136);\">To continuously improve, a Quality Team monitors care standards and gathers patient feedback, with additional insights collected independently after service.&nbsp;</span></p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": "<p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">এখানে রোগীবান্ধব ও মানসম্মত পরিবেশে অভিজ্ঞ ডাক্তার, নার্স, টেকনোলজিস্ট ও সেবাকর্মীদের একটি দল কাজ করছেন। তারা জরুরি সেবা, সার্জারি, ডায়াগনস্টিক এবং বিভিন্ন বিশেষায়িত চিকিৎসাসহ সমন্বিত স্বাস্থ্যসেবা প্রদান করেন।</span></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">সেবার মান আরও উন্নত করতে একটি কোয়ালিটি টিম নিয়মিতভাবে রোগীসেবার মান পর্যবেক্ষণ করে এবং রোগীদের মতামত গ্রহণ করে। এছাড়া, রোগী সেবা নিয়ে যাওয়ার পর ভিন্ন একটি প্রতিষ্ঠানের মাধ্যমে তাদের অভিজ্ঞতা ও মতামত সংগ্রহ করা হয়।&nbsp;</span></p>",
+              "showAltContent": true
+            },
+            "sectionIndex": 0,
+            "index": 1
+          }
+        ]
+      },
+      {
+        "_id": "section-1758709602784-tippe7gqj",
+        "title": "Section 2",
+        "data": [
+          {
+            "_id": "component-1758709620605-ck45x9van",
+            "type": "title",
+            "value": "<p>Contact Us</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": "<p>যোগাযোগ করুন</p>",
+              "altSecondPartText": "<p>যোগাযোগ করুন</p>",
+              "showAltContent": true
+            },
+            "sectionIndex": 1,
+            "index": 0
+          },
+          {
+            "_id": "component-1758709683863-0o2l94f88",
+            "type": "description",
+            "value": "<p>Mob: 01777-772500</p><p><span style=\"background-color: rgb(249, 249, 249);\">Zinzira, Keraniganj, Dhaka</span></p><p>Keraniganj</p><p>1310</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": "<p>মোবাইল: ০১৭৭৭-৭৭২৫০০</p><p><span style=\"background-color: rgb(249, 249, 249);\">জিনজিরা, কেরানীগঞ্জ, ঢাকা</span></p><p>কেরানীগঞ্জ</p><p>১৩১০<span style=\"background-color: transparent; color: rgb(0, 0, 0);\"> </span></p>",
+              "showAltContent": true
+            },
+            "sectionIndex": 1,
+            "index": 1
+          }
+        ]
+      },
+      {
+        "_id": "section-1758709727192-kuu18get2",
+        "title": "Section 3",
+        "data": [
+          {
+            "_id": "component-1758709737909-n1clmz8ln",
+            "type": "menu",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 22,
+              "name": "Quicklinks",
+              "menu_item_ids": [
+                62,
+                40,
+                137
+              ],
+              "menu_items": [
+                {
+                  "id": 62,
+                  "title": "About Us",
+                  "title_bn": "About Us",
+                  "link": "/about",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": "2025-09-25T07:39:47.000000Z",
+                  "all_children": []
+                },
+                {
+                  "id": 40,
+                  "title": "Contact Us",
+                  "title_bn": "যোগাযোগ",
+                  "link": "/contact",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": "2025-09-25T08:08:37.000000Z",
+                  "all_children": []
+                },
+                {
+                  "id": 137,
+                  "title": "Our Services",
+                  "title_bn": "Our Services",
+                  "link": "/services",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": "2025-09-25T07:42:53.000000Z",
+                  "all_children": []
+                }
+              ],
+              "altTitle": null
+            },
+            "sectionIndex": 2,
+            "index": 0,
+            "id": 22,
+            "menuMode": "vertical",
+            "menuTheme": "light"
+          }
+        ]
+      },
+      {
+        "_id": "section-1758710505115-k4fyby4ni",
+        "title": "Section 3 (Copy)_",
+        "data": [
+          {
+            "_id": "component-1758710505115-1muyjxkv6",
+            "type": "menu",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 23,
+              "name": "Resources",
+              "menu_item_ids": [
+                134,
+                135
+              ],
+              "menu_items": [
+                {
+                  "id": 134,
+                  "title": "Case Stories",
+                  "title_bn": "Case stories",
+                  "link": "/stories",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": "2025-09-25T08:06:24.000000Z",
+                  "all_children": []
+                },
+                {
+                  "id": 135,
+                  "title": "Specialists",
+                  "title_bn": "Specialists",
+                  "link": "/specialists",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": "2025-09-25T08:09:29.000000Z",
+                  "all_children": []
+                }
+              ],
+              "altTitle": null
+            },
+            "sectionIndex": 3,
+            "index": 0,
+            "id": 23,
+            "menuMode": "vertical",
+            "menuTheme": "light"
+          }
+        ]
+      },
+      {
+        "_id": "section-1758710477492-1wvnhavpq",
+        "title": "Section 4",
+        "data": [
+          {
+            "_id": "component-1758789155841-sj8n1d1mu",
+            "type": "button",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "text": "Visit SAJIDA Foundation Website",
+              "altText": "সাজেদা ফাউন্ডেশনের ওয়েবসাইট ভিজিট করুন",
+              "showAltText": true,
+              "icon": null,
+              "action": {
+                "type": "external_link",
+                "url": "https://www.sajida.org"
+              },
+              "alignment": "left"
+            },
+            "sectionIndex": 4,
+            "index": 0,
+            "id": "component-1758789155841-sj8n1d1mu"
+          }
+        ]
+      },
+      {
+        "_id": "section-1758710687366-3cff2pnty",
+        "title": "Section 6",
+        "data": [
+          {
+            "_id": "component-1758790549800-8cxcmibqa",
+            "type": "testimonial",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "testimonials": [
+                {
+                  "id": 1758790681690,
+                  "quote": "sdfsd",
+                  "author": "https://www.facebook.com/NGOSAJIDA",
+                  "rating": 5,
+                  "image": {
+                    "id": 525,
+                    "title": "Component 50.png",
+                    "file_name": "mave_7p9ifj.png",
+                    "file_type": "image/png",
+                    "file_path": "media/mave_7p9ifj.png",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-09-25T08:56:42.000000Z",
+                    "updated_at": "2025-09-25T08:56:42.000000Z"
+                  },
+                  "altQuote": null,
+                  "altAuthor": null
+                },
+                {
+                  "id": 1758790727001,
+                  "quote": "sdfdsf",
+                  "author": "https://www.youtube.com/@sajidafoundation1993",
+                  "rating": 5,
+                  "image": {
+                    "id": 528,
+                    "title": "Component 48.png",
+                    "file_name": "mave_sDI6Dv.png",
+                    "file_type": "image/png",
+                    "file_path": "media/mave_sDI6Dv.png",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-09-25T08:56:42.000000Z",
+                    "updated_at": "2025-09-25T08:56:42.000000Z"
+                  },
+                  "altQuote": null,
+                  "altAuthor": null
+                },
+                {
+                  "id": 1758790788625,
+                  "quote": "sdfsdf",
+                  "author": "https://linkedin.com/company/sajida-foundation",
+                  "rating": 5,
+                  "image": {
+                    "id": 524,
+                    "title": "Component 46.png",
+                    "file_name": "mave_XnraPC.png",
+                    "file_type": "image/png",
+                    "file_path": "media/mave_XnraPC.png",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-09-25T08:56:40.000000Z",
+                    "updated_at": "2025-09-25T08:56:40.000000Z"
+                  },
+                  "altQuote": null,
+                  "altAuthor": null
+                }
+              ],
+              "layout": "grid",
+              "font": "Arial",
+              "color": "#000000",
+              "background": "#ffffff"
+            },
+            "sectionIndex": 5,
+            "index": 0
+          }
+        ]
+      },
+      {
+        "_id": "section-1758710822155-wwb67g4eo",
+        "title": "Section 7",
+        "data": [
+          {
+            "_id": "component-1758710860797-52plqdzrs",
+            "type": "description",
+            "value": "<p>©2026 SAJIDA Hospital | All Rights Reserved. Design &amp; Development <span style=\"color: rgb(0, 102, 204);\">Ether Tech</span></p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": "<p>©২০২৬ সাজেদা হাসপাতাল | সর্বস্বত্ব সংরক্ষিত। নকশা ও উন্নয়ন: <span style=\"color: rgb(0, 102, 204);\">Ether Tech</span></p>",
+              "showAltContent": true
+            },
+            "sectionIndex": 6,
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "additional": [
+      {
+        "pageType": "Footer",
+        "metaTitle": "Main Footer",
+        "metaDescription": null,
+        "keywords": [],
+        "metaImage": null,
+        "metaImageAlt": null
+      }
+    ],
+    "status": 1,
+    "created_at": "2025-09-24T20:15:57.000000Z",
+    "updated_at": "2026-06-24T05:47:44.000000Z",
+    "favicon_mave": null,
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  },
+  {
     "id": 148,
     "slug": "demo",
     "type": "Page",
@@ -6324,331 +6871,190 @@
     },
     "body": [
       {
-        "_id": "section-1756291747947-qdsbshu60",
+        "_id": "section-1756291372339-vm8tw0i0j",
         "title": "Section 1",
         "data": [
           {
-            "_id": "component-1756291750707-p9w9kugsd",
-            "type": "title",
-            "value": "<p>A RAY OF HOPE: A CHILD'S FIGHT AGAINST LEUKAEMIA</p>",
-            "settings": [],
-            "_mave": {
-              "fontSize": "medium",
-              "primaryColor": "#000000",
-              "secondaryColor": "#000000",
-              "textAlign": "left",
-              "fontWeight": "normal",
-              "isDualColor": false,
-              "secondPartText": null,
-              "altText": "<p>আশার আলো: লিউকেমিয়ার বিরুদ্ধে এক শিশুর লড়াই</p>",
-              "altSecondPartText": null,
-              "showAltContent": true
-            },
-            "sectionIndex": 0,
-            "index": 0
-          },
-          {
-            "_id": "component-1756291775651-ar5mtxt1r",
+            "_id": "component-1756291401019-jutid3b18",
             "type": "media",
             "value": null,
             "settings": [],
             "_mave": {
-              "id": 553,
-              "title": "Nur-Hospital.width-695.format-webp (1).webp",
-              "file_name": "mave_xNIFCH.webp",
-              "file_type": "image/webp",
-              "file_path": "media/mave_xNIFCH.webp",
+              "id": 503,
+              "title": "sajida hospital_003 (1)-min.png",
+              "file_name": "mave_0sT1O4.png",
+              "file_type": "image/png",
+              "file_path": "media/mave_0sT1O4.png",
               "file_size": null,
               "tags": null,
-              "created_at": "2025-11-23T12:29:25.000000Z",
-              "updated_at": "2025-11-23T12:29:25.000000Z"
+              "created_at": "2025-09-15T07:26:45.000000Z",
+              "updated_at": "2025-09-15T07:26:45.000000Z"
             },
             "sectionIndex": 0,
-            "index": 1,
-            "id": 553
-          },
-          {
-            "_id": "component-1756291781163-p3k3lsaup",
-            "type": "description",
-            "value": "<p>“Thanks to the support he’s received, he can attend school without worry, keep up his hygiene, and concentrate on his studies,”- shares Nur’s parents</p>",
-            "settings": [],
-            "_mave": {
-              "fontSize": "medium",
-              "primaryColor": "#000000",
-              "secondaryColor": "#000000",
-              "textAlign": "left",
-              "fontWeight": "normal",
-              "isDualColor": false,
-              "altText": null,
-              "altContent": "<p>“এখন সে নিশ্চিন্তে স্কুলে যায়, নিজের যত্ন নিতে পারে এবং মনোযোগ দিয়ে পড়াশোনা করে” — জানালেন নূরের বাবা-মা।</p>",
-              "showAltContent": true
-            },
-            "sectionIndex": 0,
-            "index": 2
+            "index": 0,
+            "id": 503
           }
         ]
       },
       {
-        "_id": "section-1756888940588-9mclpeyan",
+        "_id": "section-1756291430612-0pew9eu0l",
         "title": "Section 2",
         "data": [
           {
-            "_id": "component-1757844568509-5kht6865m",
-            "type": "slider",
+            "_id": "component-1756291435347-mw96qmpr6",
+            "type": "titledescription",
             "value": null,
             "settings": [],
             "_mave": {
-              "id": 71,
-              "type": "card",
-              "title_en": "Case Story",
-              "title_bn": "কেস স্টোরি",
-              "description_en": "<p>.</p>",
-              "description_bn": "<p>.</p>",
-              "media_ids": [],
-              "card_ids": [
-                235,
-                238,
-                237,
-                236,
-                234,
-                232,
-                231,
-                230
-              ],
-              "additional": null,
-              "status": 0,
-              "created_at": "2025-11-13T11:38:38.000000Z",
-              "updated_at": "2026-05-09T07:53:04.000000Z",
-              "medias": [],
-              "cards": [
-                {
-                  "id": 235,
-                  "page_name": "Caring for Every Life",
-                  "media_ids": 549,
-                  "title_en": "Caring for Every Life",
-                  "title_bn": "প্রতিটি জীবনের যত্ন",
-                  "description_en": "<p>\"The dialysis care I received here has brought comfort and reassurance to both me and my family,\" shares Sukkuri Begum.</p>",
-                  "description_bn": "<p>“এখানে আমি যে ডায়ালাইসিস সেবা পেয়েছি, তা আমাকে এবং আমার পরিবারকে স্বস্তি এবং আশ্বাস দিয়েছে,” জানালেন শুক্কুরি বেগম।</p>",
-                  "link_url": "/caring-for-every-life?page_id=159&pageName=Caring for Every Life",
-                  "additional": {
-                    "tags": []
-                  },
-                  "status": 0,
-                  "created_at": "2025-10-28T16:19:34.000000Z",
-                  "updated_at": "2025-11-23T17:38:43.000000Z",
-                  "media_files": {
-                    "id": 549,
-                    "title": "Good_Care_for_a_Better_Life_xREzf.width-695.format-webp.webp",
-                    "file_name": "mave_AGM1JX.webp",
-                    "file_type": "image/webp",
-                    "file_path": "media/mave_AGM1JX.webp",
-                    "file_size": null,
-                    "tags": null,
-                    "created_at": "2025-11-23T17:21:37.000000Z",
-                    "updated_at": "2025-11-23T17:21:37.000000Z"
-                  }
-                },
-                {
-                  "id": 238,
-                  "page_name": null,
-                  "media_ids": 546,
-                  "title_en": "A Silent Hero",
-                  "title_bn": "নীরব নায়ক",
-                  "description_en": "<p><span style=\"color: rgb(136, 136, 136); background-color: transparent;\">“There is nothing more gratifying than helping patients. Alleviating their suffering and receiving their blessings is what drives me,” said Ranjita Baral, a dedicated nurse at Sajida Hospital Keraniganj, who has been serving for the past 5 years.</span></p><p><br></p><p><span style=\"color: rgb(136, 136, 136); background-color: transparent;\">Ranjita starts her work early every morning. She checks that the wards are properly organized with her colleagues and prepares all the necessary equipment before the doctors' rounds. From arranging the equipment to performing follow-up tests at the patient's side, she sees to every detail to ensure that there is no shortage of service.</span></p><p><br></p><p><span style=\"color: rgb(136, 136, 136); background-color: transparent;\">Throughout the day, she assists doctors, guides fellow nurses, and calms agitated or anxious patients by listening attentively to their complaints. She also ensures seamless patient care by coordinating admissions, surgery schedules, and with doctors and anesthesiologists.</span></p><p><br></p><p><span style=\"color: rgb(136, 136, 136); background-color: transparent;\">After joining Sajida in December 2010, she became a permanent employee within a year. The satisfaction of a job well done, the praise and prayers of patients motivate her the most. Her dedication and compassion have made Sajida a true hero behind the scenes of the hospital's reputation.</span></p>",
-                  "description_bn": "<p>“রোগীদের সাহায্য করার চেয়ে বেশি আনন্দদায়ক কিছু নেই। তাদের কষ্ট কমানো এবং তাদের আশীর্বাদ পাওয়াই আমাকে চালিত করে,” বললেন রঞ্জিতা বড়াল, সাজেদা হাসপাতাল কেরানীগঞ্জের নিবেদিতপ্রাণ নার্স, যিনি গত ৫ বছর ধরে সেবা দিচ্ছেন।</p><p>রঞ্জিতা প্রতিদিন খুব সকালে তার কাজ শুরু করেন। তিনি ওয়ার্ডগুলো তার সহকর্মীদের নিয়ে ঠিকঠাক গোছানো কিনা দেখেন এবং ডাক্তারদের রাউন্ডের আগে সব প্রয়োজনীয় সরঞ্জাম প্রস্তুত রাখেন। সরঞ্জাম সাজানো থেকে রোগীর পাশে ফলোআপ পরীক্ষা করা পর্যন্ত সকল খুঁটিনাটি বিষয় দেখেন যেন সেবায় কোন ঘাটতি না হয়।</p><p>দিনভর তিনি ডাক্তারদের সহায়তা করেন, সহকর্মী নার্সদের গাইড করেন এবং উত্তেজিত বা উদ্বিগ্ন রোগীদের অভাব অভিযোগ মনোযোগ দিয়ে শুনে শান্ত করেন। এছাড়া ভর্তি কার্যক্রম, অপারেশন সময়সূচি এবং ডাক্তার ও অ্যানেস্থেসিওলজিস্টদের সঙ্গে সমন্বয় করে রোগীদের নির্বিঘ্ন সেবা নিশ্চিত করেন।</p><p>ডিসেম্বর ২০১০ সালে সাজেদায় যোগদানের পর, এক বছরের মধ্যে তিনি স্থায়ী কর্মী হন। কাজ ভালোভাবে সম্পন্ন হওয়ার সন্তুষ্টি, রোগীদের প্রশংসা ও দোয়াই তাকে সবচেয়ে বেশি প্রেরণা দেয়। তার নিষ্ঠা ও সহানুভুতি সাজেদা হাস্পাতালের সুনামের পেছনের পর্দায় এক সত্যিকারের নায়ক হিসেবে তৈরি করেছে।&nbsp;</p>",
-                  "link_url": "/a-silent-hero?page_id=162&pageName=A Silent Hero",
-                  "additional": {
-                    "tags": []
-                  },
-                  "status": 0,
-                  "created_at": "2025-10-28T16:26:23.000000Z",
-                  "updated_at": "2026-03-13T07:26:20.000000Z",
-                  "media_files": {
-                    "id": 546,
-                    "title": "Case-Story_Hospital_thumbnail.width-695.format-webp.webp",
-                    "file_name": "mave_SBiaE9.webp",
-                    "file_type": "image/webp",
-                    "file_path": "media/mave_SBiaE9.webp",
-                    "file_size": null,
-                    "tags": null,
-                    "created_at": "2025-11-23T17:17:12.000000Z",
-                    "updated_at": "2025-11-23T17:17:12.000000Z"
-                  }
-                },
-                {
-                  "id": 237,
-                  "page_name": null,
-                  "media_ids": 547,
-                  "title_en": "The Committed Healer",
-                  "title_bn": "নিষ্ঠাবান চিকিৎসক",
-                  "description_en": "<p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">The joy I get from seeing a patient’s recovery cannot be expressed in words” - Dr. Nadia Shamsuddin, Indoor Medical Officer, Sajida Hospital.&nbsp;</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Since joining Sajida Hospital in 2018, 33-year-old Dr. Nadia has been working with her five years of experience and deep dedication to her patients. She values ​​the well-organized environment and high quality of treatment at the hospital, which allows her to take care of each patient.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">From admission to discharge/discharge, Dr. Nadia stays by the patient's side - following medication management instructions carefully, identifying any other problems or needs, and liaising with specialists if necessary to ensure medical care. She also provides support and comfort to the patient through psychological counseling, so that they can easily accept the difficult treatment.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">He said, “A doctor cannot ensure the complete recovery of a patient, it is in the hands of Allah. But we can be a guide to their path from illness to recovery. When patients trust us second only to Allah, I feel truly blessed.”</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Wearing a white coat, Dr. Nadia takes full responsibility for the health and well-being of her patients. In the future, she will continue to strive to learn new things and apply them in the service of people to establish herself as a more skilled and compassionate physician.</span></p>",
-                  "description_bn": "<p>রোগীর সুস্থতা দেখে যে আনন্দ পাই, তা ভাষায় প্রকাশ করা যায় না” - ডা. নাদিয়া সামসুদ্দিন, ইনডোর মেডিকেল অফিসার, সাজেদা হাসপাতাল।</p><p><br></p><p>২০১৮ সালে সাজেদা হাসপাতালে যোগদানের পর থেকে ৩৩ বছর বয়সী ডা. নাদিয়া তার পাঁচ বছরের পূর্ব অভিজ্ঞতা এবং রোগীর প্রতি গভীর নিষ্ঠা নিয়ে কাজ করছেন। তিনি হাসপাতালের সুসংগঠিত পরিবেশ এবং উন্নত চিকিৎসার মানকে মূল্য দিতেন, যা তাকে প্রতিটি রোগীর প্রতি যত্নশীল হওয়ার সুযোগ দেয়।</p><p><br></p><p>ভর্তি থেকে ছুটি/ ছাড়পত্র দেওয়া পর্যন্ত, ডা. নাদিয়া রোগীর পাশে থাকেন- ঔষধের ব্যবস্থাপনা পত্রের সঠিকভাবে অনুসরণ করা, অন্য কোন সমস্যা বা প্রয়োজন চিহ্নিত করে প্রয়োজনে বিশেষজ্ঞদের সাথে যোগাযোগ করে চিকিৎসাসেবা নিশ্চিত করা। তিনি রোগীকে মানসিক কাউন্সিলিং এর মাধ্যমে সমর্থন ও স্বস্তিও দেন, যাতে তারা কঠিন চিকিৎসা সহজে গ্রহণ করতে পারেন।</p><p><br></p><p>তিনি বলেন, “একজন ডাক্তার রোগীর সম্পূর্ণ সুস্থতা নিশ্চিত করতে পারেন না, এটি আল্লাহর হাতে। কিন্তু আমরা তাদের অসুস্থতা থেকে সুস্থতার পথে পথপ্রদর্শক হতে পারি। রোগীরা যখন আল্লাহর পর দ্বিতীয় স্থানে আমাদের উপর বিশ্বাস রাখেন, তখন আমি সত্যিই ধন্য বোধ করি।”</p><p><br></p><p>সাদা কোট পরিধান করে ডা. নাদিয়া তার রোগীদের স্বাস্থ্য ও সুস্থতার সম্পূর্ণ দায়িত্ব গ্রহণ করেন। ভবিষ্যতে তিনি নিজেকে চিকিৎসাসেবায় আরও দক্ষ ও সহমর্মী চিকিৎসক হিসেবে প্রতিষ্ঠিত করতে নতুন নতুন বিষয় শিখে মানুষের সেবায় প্রয়োগ করার প্রচেষ্টা অটুট রাখবেন।&nbsp;&nbsp;</p>",
-                  "link_url": "/the-committed-healer?page_id=161&pageName=The Committed Healer",
-                  "additional": {
-                    "tags": []
-                  },
-                  "status": 0,
-                  "created_at": "2025-10-28T16:24:22.000000Z",
-                  "updated_at": "2026-03-13T07:27:59.000000Z",
-                  "media_files": {
-                    "id": 547,
-                    "title": "thumbnail_Dr._Nadia_Samsuddin.width-695.format-webp.webp",
-                    "file_name": "mave_eeX4ym.webp",
-                    "file_type": "image/webp",
-                    "file_path": "media/mave_eeX4ym.webp",
-                    "file_size": null,
-                    "tags": null,
-                    "created_at": "2025-11-23T17:18:47.000000Z",
-                    "updated_at": "2025-11-23T17:18:47.000000Z"
-                  }
-                },
-                {
-                  "id": 236,
-                  "page_name": null,
-                  "media_ids": 548,
-                  "title_en": "Quality Care Close to Home",
-                  "title_bn": "স্বাস্থ্যসেবা",
-                  "description_en": "<p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">60-year-old Yarunnesa, a struggling single mother from Keraniganj, was silently enduring the pain of a facial ulcer, only to realize that her daughter would not be able to afford medical care on her limited income. She was also unable to afford to eat properly and could not find a quality hospital nearby.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Suddenly, a relative suggested that she be brought to Sajida Hospital, which is close to her home. The hospital's compassionate and dedicated medical team, who were overwhelmed with pain and anxiety, constantly provided her with their sincere care, instilling confidence and comfort.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Yarunnesa cites the support and warm attitude of the staff as the main reason for her speedy recovery. This allowed her to openly share her symptoms and receive an accurate diagnosis. \"This effective doctor-patient communication is Sajida's core vision, so that everyone can access accessible and affordable healthcare,\" she says.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">She simply listed her symptoms and was able to get an accurate diagnosis. “Such an effective doctor-patient connection is the key feature of Sajida, so that affordable healthcare is accessible to everyone.</span></p>",
-                  "description_bn": "<p>৬০ বছর বয়সী ইয়ারুননেসা, কেরানীগঞ্জের একজন সংগ্রামী একলা চলা মা, মুখে ঘায়ের ব্যাথা তিনি নীরবে চুপচাপ সহ্য করছিলেন শুধু তার মেয়ে সীমিত আয়ে চিকিৎসাসেবা বহন করতে পারবে না এটা ভেবে। খাওয়া দাওয়াও ঠিকমতো করতে পারছিলেন না, আবার আশেপাশে কোনো খুব মানসম্মত হাসপাতালও খুঁজে পাচ্ছেন না।</p><p><br></p><p><br></p><p>হঠাৎ করে এক আত্মীয় তাকে সাজেদা হাসপাতালে আনার পরামর্শ দেন, যা তার বাসার কাছাকাছি। ব্যথা ও দুশ্চিন্তায় ভেঙে পড়া ইয়ারুননেসাকে হাসপাতালের সহানুভূতিশীল ও নিবেদিত চিকিৎসা দল তাদের আন্তরিক সেবা দিয়ে নিয়মিত পাশে থেকে আত্মবিশ্বাস ও স্বস্তি জাগিয়েছে।</p><p><br></p><p>ইয়ারুননেসা স্টাফদের সমর্থন এবং আন্তরিক মনোভাবকে তার দ্রুত সুস্থতার মূল কারণ হিসেবে উল্লেখ করেন। এতে তিনি তার উপসর্গগুলো খোলাখুলিভাবে জানাতে পেরেছেন এবং সঠিক রোগ নির্ণয় হয়েছে। তিনি বলেন, \"এই কার্যকর ডাক্তার-রোগী যোগাযোগই সাজেদার মূল দৃষ্টি, যাতে সবার কাছে সহজলভ্য ও সাশ্রয়ী স্বাস্থ্যসেবা পৌঁছে যায়।\"</p><p><br></p><p>তিনি সহজভাবে নিজের রোগ উপসর্গগুলো মনোনয় সঠিক রোগনিরনয়ে সুবিধা হয়েছে। “এরকম কার্যকর দাক্তার-রোগির মধ্যে সংযোগ সাজেদার মূল বৈশিষ্ট, যাতে সবার কাছে সাশ্রয়ী সাস্থ্যসেবা পৌঁছে যায়।&nbsp;</p>",
-                  "link_url": "/quality-care-close-to-home?page_id=160&pageName=Quality Care Close to Home",
-                  "additional": {
-                    "tags": []
-                  },
-                  "status": 0,
-                  "created_at": "2025-10-28T16:21:51.000000Z",
-                  "updated_at": "2026-03-13T07:28:57.000000Z",
-                  "media_files": {
-                    "id": 548,
-                    "title": "Hospital-static_Thumbail_Patients.width-695.format-webp.webp",
-                    "file_name": "mave_EbM1AW.webp",
-                    "file_type": "image/webp",
-                    "file_path": "media/mave_EbM1AW.webp",
-                    "file_size": null,
-                    "tags": null,
-                    "created_at": "2025-11-23T17:20:09.000000Z",
-                    "updated_at": "2025-11-23T17:20:09.000000Z"
-                  }
-                },
-                {
-                  "id": 234,
-                  "page_name": null,
-                  "media_ids": 550,
-                  "title_en": "A True Blessing",
-                  "title_bn": "একটি সত্যিকারের আশীর্বাদ",
-                  "description_en": "<p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">“My profession fills me with immense gratitude. Being a part of bringing a new life into the world is truly a unique feeling” - Dr. Saria Nafia.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Dr. Saria Nafisa has been working as an Obstetrics and Gynecology Specialist with compassion and dedication. For the past three years, she has been fully dedicated to training, treatment and service at Sajida Hospital Keraniganj. She shows equal care to the mother and child and understands the long and difficult time during pregnancy in families, hence treats each patient with compassion and understanding.&nbsp;</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Saria enjoys treating women in Keraniganj, and their feedback boosts her confidence and inspires her. “The gratitude and blessings of the patients I serve encourage me to do better,” she says.</span></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">His diverse experiences have shaped his medical philosophy. “I believe that as a doctor, providing emotional support to a patient is more important than providing physical treatment,” he says.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">At Sajida Hospital, treating everyone equally is a core value. Medical officers closely monitor maternity patients during delivery. Every patient is given a follow-up call within a week of discharge from the hospital, and nurses also take care of cleanliness, food and medication. “This consistent care and dedication sets Sajida apart,” says Saria.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">After three years of practice, Saria is now a confident and experienced obstetrician, ready for bigger challenges. “These three years at Sajidaya have changed my life,” she says.</span></p>",
-                  "description_bn": "<p>“আমার পেশা আমাকে অসীম কৃতজ্ঞতায় মন ভরিয়ে দেয়। নতুন একটি জীবনকে পৃথিবীতে আনার অংশ হওয়া সত্যিই অনন্য অনুভুতি” - ডা. সারিয়া নাফিয়া।</p><p><br></p><p>ডা. সারিয়া নাফিসা একজন প্রসূতি ও গাইনোকোলজি বিশেষজ্ঞ হিসেবে সহানুভুতি ও নিষ্ঠার সঙ্গে কাজ করে চলেছেন। গত তিন বছর ধরে সাজেদা হাসপাতাল কেরানীগঞ্জে তিনি প্রশিক্ষণ, চিকিৎসা এবং সেবায় সম্পূর্ণ নিবেদিত। তিনি মা ও শিশুর প্রতি সমান যত্ন দেখান এবং পরিবারগুলোতে গর্ভাবস্থায় দীর্ঘ ও কস্টদায়ক সময় বোঝেন, তাই প্রতিটি রোগীর সঙ্গে সহানুভূতি ও বোঝাপড়ার মনোভাব নিয়ে আচরণ করেন।</p><p><br></p><p>সারিয়া কেরানীগঞ্জের নারীদের চিকিৎসা করে আনন্দ পান এবং তাদের প্রতিক্রিয়া তার আত্মবিশ্বাস বাড়ায়, অনুপ্রাণিত করে। তিনি বলেন, “যেসব রোগীদের আমি সেবা দেই, তাদের কৃতজ্ঞতা ও দোয়া আমাকে আরও ভালো কাজ করতে উৎসাহিত করে।”</p><p><br></p><p>বিভিন্ন অভিজ্ঞতা তার চিকিৎসা দর্শনকে গড়ে তুলেছে। তিনি বলেন, “আমি বিশ্বাস করি, একজন ডাক্তার হিসেবে রোগীকে মানসিক সমর্থন দেওয়া শারীরিক চিকিৎসা প্রদানের চেয়েও বেশি গুরুত্বপূর্ণ।”</p><p>সাজেদা হাসপাতালে সকলকে সমভাবে মূল্যায়ন করে দেওয়াই মূল মূল্যবোধ। প্রসূতি রোগীদের ডেলিভারির সময় মেডিকেল অফিসাররা ঘনিষ্ঠভাবে তদারকি করেন। হাসপাতাল থেকে ছারপত্রের এক সপ্তাহের মধ্যে প্রতিটি রোগীকে ফলো-আপ কল দেওয়া হয়, নার্সরা পরিচ্ছন্নতা, খাবার এবং ওষুধের ব্যাবস্থাও খেয়াল রাখেন। সারিয়া বলেন, “এই ধারাবাহিক যত্ন নিষ্ঠা সাজেদাকে আলাদা করে।”</p><p><br></p><p>তিন বছরের প্র্যাকটিস শেষে সারিয়া এখন একজন আত্মবিশ্বাসী ও অভিজ্ঞ প্রসূতি বিশেষজ্ঞ, যিনি আরও বড় চ্যালেঞ্জের জন্য প্রস্তুত। তিনি বলেন, “সাজেদায় এই তিন বছর আমার জিবনের মোড় ঘুরিয়ে দিয়েছে।”&nbsp;&nbsp;</p>",
-                  "link_url": "/a-true-blessing?page_id=158&pageName=A True Blessing",
-                  "additional": {
-                    "tags": []
-                  },
-                  "status": 0,
-                  "created_at": "2025-10-21T16:40:43.000000Z",
-                  "updated_at": "2026-03-13T07:30:19.000000Z",
-                  "media_files": {
-                    "id": 550,
-                    "title": "Hospital-static_Thumbail.width-695.format-webp.webp",
-                    "file_name": "mave_vu1x6y.webp",
-                    "file_type": "image/webp",
-                    "file_path": "media/mave_vu1x6y.webp",
-                    "file_size": null,
-                    "tags": null,
-                    "created_at": "2025-11-23T17:23:02.000000Z",
-                    "updated_at": "2025-11-23T17:23:02.000000Z"
-                  }
-                },
-                {
-                  "id": 232,
-                  "page_name": "A Journey of Care and Hope",
-                  "media_ids": 551,
-                  "title_en": "A Journey of Care and Hope",
-                  "title_bn": "যত্ন এবং আশার একটি যাত্রা",
-                  "description_en": "<p>“I am genuinely pleased with the exceptional care I received at this hospital,” said Suborna Rani Roy after giving birth at SAJIDA Hospital.</p>",
-                  "description_bn": "<p>এই হাসপাতালে যে অসাধারণ সেবা পেয়েছি, তা নিয়ে আমি সত্যিই খুব খুশি,” — জানালেন সুবর্ণা রানি রায়, সাজেদা হাসপাতালে সন্তান জন্ম দেওয়ার পর।</p>",
-                  "link_url": "/a-journey-of-care-and-hope?page_id=157&pageName=A Journey of Care and Hope",
-                  "additional": {
-                    "tags": []
-                  },
-                  "status": 0,
-                  "created_at": "2025-10-21T16:35:25.000000Z",
-                  "updated_at": "2025-11-23T17:41:07.000000Z",
-                  "media_files": {
-                    "id": 551,
-                    "title": "thumbnail_Suborna_Rani_Roy.width-695.format-webp.webp",
-                    "file_name": "mave_3Z8xNA.webp",
-                    "file_type": "image/webp",
-                    "file_path": "media/mave_3Z8xNA.webp",
-                    "file_size": null,
-                    "tags": null,
-                    "created_at": "2025-11-23T17:24:17.000000Z",
-                    "updated_at": "2025-11-23T17:24:17.000000Z"
-                  }
-                },
-                {
-                  "id": 231,
-                  "page_name": "A Quarter-Century of Care",
-                  "media_ids": 552,
-                  "title_en": "A Quarter-Century of Care",
-                  "title_bn": "এক চতুর্থাংশ শতাব্দীর স্বাস্থ্যসেবা",
-                  "description_en": "<p>“The sight of parents lovingly holding their recovered baby, their faces glowing with relief and happiness, brings me immense satisfaction.” - Zinnatur Nahar, Ward In-Charge, SAJIDA Hospital</p>",
-                  "description_bn": "<p>“যখন সুস্থ হয়ে ওঠা শিশুকে তার বাবা-মা ভালোবাসায় জড়িয়ে ধরে, আর তাদের মুখে স্বস্তি ও আনন্দ দেখা যায়, তখন আমার মনে গভীর তৃপ্তি হয়।” — জিন্নাতুর নাহার, ওয়ার্ড ইন-চার্জ, সাজেদা হাসপাতাল।</p>",
-                  "link_url": "/a-quarter-century-of-care?page_id=156&pageName=A Quarter-Century of Care",
-                  "additional": {
-                    "tags": []
-                  },
-                  "status": 0,
-                  "created_at": "2025-10-21T10:11:11.000000Z",
-                  "updated_at": "2025-11-23T17:41:47.000000Z",
-                  "media_files": {
-                    "id": 552,
-                    "title": "thumbnail_Zinnatur_Nahar.width-695.format-webp.webp",
-                    "file_name": "mave_4Z6hDT.webp",
-                    "file_type": "image/webp",
-                    "file_path": "media/mave_4Z6hDT.webp",
-                    "file_size": null,
-                    "tags": null,
-                    "created_at": "2025-11-23T17:25:22.000000Z",
-                    "updated_at": "2025-11-23T17:25:22.000000Z"
-                  }
-                },
-                {
-                  "id": 230,
-                  "page_name": "Frontliner Fighter of SAJIDA Hospital",
-                  "media_ids": 545,
-                  "title_en": "Frontliner Fighter of SAJIDA Hospital",
-                  "title_bn": "সাজেদা হাসপাতালের ফ্রন্টলাইন যোদ্ধা",
-                  "description_en": "<p>“Being a health professional at SAJIDA has been deeply rewarding. I’ve had the privilege of seeing firsthand SAJIDA’s strong commitment to delivering healthcare to those in greatest need.” - Dr. Shirina Akbar, Physician, SAJIDA Hospital</p>",
-                  "description_bn": "<p>“সাজেদা হাসপাতালে কাজ করা আমার জন্য এক পরিপূর্ণ অভিজ্ঞতা। এখানে কাজ করে বুঝেছি, সাজেদা হাসপাতাল কতটা আন্তরিকভাবে প্রয়োজনীয় মানুষের পাশে দাঁড়ায়,” — বললেন সাজেদা হাসপাতালের চিকিৎসক ডা. শিরিনা আকবর।</p>",
-                  "link_url": "/frontliner-fighter-of-sajida-hospital?page_id=163&pageName=Frontliner Fighter of SAJIDA Hospital",
-                  "additional": {
-                    "tags": []
-                  },
-                  "status": 0,
-                  "created_at": "2025-10-21T10:09:05.000000Z",
-                  "updated_at": "2025-11-23T17:42:36.000000Z",
-                  "media_files": {
-                    "id": 545,
-                    "title": "thumbnail_Hospital_Dr.Shirina_Akb.width-695.format-webp.webp",
-                    "file_name": "mave_6teugV.webp",
-                    "file_type": "image/webp",
-                    "file_path": "media/mave_6teugV.webp",
-                    "file_size": null,
-                    "tags": null,
-                    "created_at": "2025-11-23T17:15:00.000000Z",
-                    "updated_at": "2025-11-23T17:15:00.000000Z"
-                  }
-                }
-              ],
-              "config": {
-                "autoplay": true,
-                "dots": false,
-                "effect": "scroll",
-                "speed": 500,
-                "height": 400
-              }
+              "title": "OUR CASE STORIES",
+              "altTitle": null,
+              "description": "<p><span style=\"background-color: rgb(249, 249, 249); color: rgb(34, 34, 34);\">Hospital &amp; Doctor Team</span></p>",
+              "altDescription": null,
+              "linkType": "page",
+              "link": "/case-stories?page_id=135&pageName=Case Stories",
+              "linkPageId": 135,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": false,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left"
             },
             "sectionIndex": 1,
+            "index": 0
+          },
+          {
+            "_id": "component-1756291602155-52khecw6g",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 458,
+              "title": "Gemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5p.jpeg",
+              "file_name": "mave_hV2Vu4.jpg",
+              "file_type": "image/jpeg",
+              "file_path": "media/mave_hV2Vu4.jpg",
+              "file_size": null,
+              "tags": [
+                "rango",
+                "camelion",
+                "logo",
+                "icon",
+                "colors",
+                "mave",
+                "cms",
+                "animal",
+                "red",
+                "green",
+                "blue"
+              ],
+              "created_at": "2024-12-24T08:37:01.000000Z",
+              "updated_at": "2024-12-24T09:23:47.000000Z"
+            },
+            "sectionIndex": 1,
+            "index": 1,
+            "id": 458
+          },
+          {
+            "_id": "component-1756291607882-sjzoml4zt",
+            "type": "titledescription",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "title": "MOU SIGNING WITH PRIVATE HOSPITALS FOR EMPANELMENT AT CHANDPUR AND FENI",
+              "altTitle": null,
+              "description": "<p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">Healthcare</span></p><p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\"><span class=\"ql-cursor\">﻿</span>Apr 9, 2019</span></p>",
+              "altDescription": "<p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">To formalize services and prices with private hospitals in order to commence the health services as part of the PROSHOMON program, two MoU signing ceremonies were held during the month of April, 2019. On 9th April, 2019, an MoU signing ceremony was held between Midland Hospital &amp; Honey Siddik Memorial Hospital (private hospitals), SAJIDA Foundation and Concern Worldwide at Chandpur municipality. This was attended by the Hon’ble Mayor of Chandpur Municipality, Civil Surgeon of Chandpur, UH&amp;FPO of Chandpur Sadar, representatives of Deputy Commissioners’ office, Deputy Director of Family Planning (DDFP) office, Secretary of Clinic owner’s association, Panel Mayors &amp; Councilors, hospital owners, and central PROSHOMON team. Another MoU signing ceremony was held on 10th April, 2019 at Civil Surgeon office of Feni between Medinova Hospital, Z.U. Model Hospital, Lifecare diagnostic center (Private Hospitals) SAJIDA Foundation and Concern Worldwide. Newly joined Civil surgeon, Dr. Md. Neatuzzaman was present during the MoU signing ceremony program, presiding over the meeting. Dr. Saifur Rahman from Chest Disease Hospital, panel mayors, representatives of Deputy Commissioners’ office, Deputy Director of Family Planning (DDFP) office, Secretary of Clinic owner’s association, hospital owners, central PROSHOMON team attended the program.</span></p>",
+              "linkType": "page",
+              "link": "/case-stories?page_id=135&pageName=Case Stories",
+              "linkPageId": 135,
+              "isExternal": false,
+              "target": "_self",
+              "titleColor": "#000000",
+              "altTitleColor": "#000000",
+              "isDualColor": false,
+              "titleFontSize": "medium",
+              "titleFontWeight": "normal",
+              "titleAlign": "left"
+            },
+            "sectionIndex": 1,
+            "index": 2
+          },
+          {
+            "_id": "component-1756291685996-2p6yd31c9",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 458,
+              "title": "Gemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5p.jpeg",
+              "file_name": "mave_hV2Vu4.jpg",
+              "file_type": "image/jpeg",
+              "file_path": "media/mave_hV2Vu4.jpg",
+              "file_size": null,
+              "tags": [
+                "rango",
+                "camelion",
+                "logo",
+                "icon",
+                "colors",
+                "mave",
+                "cms",
+                "animal",
+                "red",
+                "green",
+                "blue"
+              ],
+              "created_at": "2024-12-24T08:37:01.000000Z",
+              "updated_at": "2024-12-24T09:23:47.000000Z"
+            },
+            "sectionIndex": 1,
+            "index": 3,
+            "id": 458
+          }
+        ]
+      },
+      {
+        "_id": "section-1756891117568-kq99lxaba",
+        "title": "Section 3",
+        "data": [
+          {
+            "_id": "component-1756891122726-ewcjy4sby",
+            "type": "card",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 198,
+              "page_name": null,
+              "media_ids": "458",
+              "title_en": "SEPTEMBER 28, 2024",
+              "title_bn": null,
+              "description_en": "<p>Lorem Ipsum is simply dummy text...</p><p><br></p>",
+              "description_bn": null,
+              "link_url": null,
+              "additional": {
+                "tags": []
+              },
+              "status": "0",
+              "created_at": "2025-09-03T09:03:29.000000Z",
+              "updated_at": "2025-09-08T10:29:01.000000Z",
+              "media_files": {
+                "id": 458,
+                "file_name": "mave_hV2Vu4.jpg",
+                "file_type": "image/jpeg",
+                "file_path": "media/mave_hV2Vu4.jpg"
+              },
+              "config": {
+                "showDescription": true,
+                "showImage": true,
+                "layout": "horizontal"
+              }
+            },
+            "sectionIndex": 2,
             "index": 0,
-            "id": 71
+            "id": 198
           }
         ]
       }
@@ -6665,7 +7071,7 @@
     ],
     "status": 1,
     "created_at": "2025-08-27T20:42:39.000000Z",
-    "updated_at": "2026-05-09T13:53:45.000000Z",
+    "updated_at": "2025-09-15T17:34:27.000000Z",
     "favicon_mave": null,
     "cards_mave": [],
     "events_mave": [],
@@ -8244,8 +8650,8 @@
               ],
               "additional": null,
               "status": 0,
-              "created_at": "2025-09-16T11:08:48.000000Z",
-              "updated_at": "2025-09-16T11:08:48.000000Z",
+              "created_at": "2025-09-16T17:08:48.000000Z",
+              "updated_at": "2026-09-15T10:25:20.000000Z",
               "medias": [],
               "cards": [
                 {
@@ -8261,8 +8667,8 @@
                     "tags": []
                   },
                   "status": 0,
-                  "created_at": "2025-09-16T10:57:39.000000Z",
-                  "updated_at": "2026-05-07T05:25:56.000000Z",
+                  "created_at": "2025-09-16T16:57:39.000000Z",
+                  "updated_at": "2026-05-07T11:25:56.000000Z",
                   "media_files": {
                     "id": 477,
                     "title": "HeroImage.svg",
@@ -8271,11 +8677,11 @@
                     "file_path": "media/mave_yghLPZ.svg",
                     "file_size": null,
                     "tags": null,
-                    "created_at": "2025-08-20T12:21:56.000000Z",
-                    "updated_at": "2025-08-20T12:21:56.000000Z"
+                    "created_at": "2025-08-20T18:21:56.000000Z",
+                    "updated_at": "2025-08-20T18:21:56.000000Z"
                   },
-                  "altTitle": "<h1><strong>সাজেদা হাসপাতাল, </strong><strong style=\"color: rgb(0, 138, 0);\">আমার হাসপাতাল</strong></h1><p>সাজেদা হাসপাতাল নিশ্চিত করে উন্নত মানের মেডিকেল স্বাস্থ্যসেবা, স্বল্প খরচে সকলের জন্য</p>",
-                  "altDescription": "<p>২৪,৫০,০০০+</p><p>বহির্বিভাগের রোগী সেবা প্রদান করা হয়েছে</p><p>১,৫০,০০০+</p><p>অন্তর্বিভাগের সেবা প্রদান করা হয়েছে</p><p>৭,৫০০+</p><p>নিরাপদ প্রসব নিশ্চিত করা হয়েছে</p>"
+                  "altTitle": "<p>werewr</p>",
+                  "altDescription": "<p>ewrewrewr</p>"
                 },
                 {
                   "id": 219,
@@ -8290,8 +8696,8 @@
                     "tags": []
                   },
                   "status": 0,
-                  "created_at": "2025-09-16T11:05:54.000000Z",
-                  "updated_at": "2026-05-06T10:51:36.000000Z",
+                  "created_at": "2025-09-16T17:05:54.000000Z",
+                  "updated_at": "2026-05-06T16:51:36.000000Z",
                   "media_files": {
                     "id": 574,
                     "title": "hospital banner_02.jpg.jpeg",
@@ -8300,11 +8706,11 @@
                     "file_path": "media/mave_D5sgSK.jpg",
                     "file_size": null,
                     "tags": null,
-                    "created_at": "2026-04-28T09:23:02.000000Z",
-                    "updated_at": "2026-04-28T09:23:02.000000Z"
+                    "created_at": "2026-04-28T15:23:02.000000Z",
+                    "updated_at": "2026-04-28T15:23:02.000000Z"
                   },
-                  "altTitle": "<h1><strong>নির্ভুল রোগনির্ণয় সেবা: </strong><strong style=\"color: rgb(0, 138, 0);\">সাজেদা হাসপাতাল ডায়াগনস্টিক ইউনিট</strong><span style=\"color: rgb(102, 185, 102);\"> </span></h1><p><span style=\"color: rgb(102, 185, 102);\">﻿</span>সাজেদা হাসপাতাল ডায়াগনস্টিক ইউনিটে রয়েছে সাশ্রয়ী মূল্যে নির্বিঘ্ন প্রক্রিয়ায় নির্ভুল রোগনির্ণয় করার সুবিধা</p>",
-                  "altDescription": "<p>২৬% ছাড়&nbsp;</p><p>সকল প্রকার পরীক্ষায়&nbsp;</p><p>৬০+&nbsp;</p><p>অভিজ্ঞ ডাক্তার দ্বারা উন্নত চিকিৎসা সেবা প্রদান</p><p>উন্নত ল্যাব সুবিধা</p><p>আধুনিক মানের এক্স-রে, আল্ট্রাসনোগ্রাফি, ইকোসহ বিবিধ মেশিনদ্বারা</p>"
+                  "altTitle": "<p>ewrewrwe</p>",
+                  "altDescription": "<p>ewrwrwe</p>"
                 }
               ],
               "config": {
@@ -8313,7 +8719,10 @@
                 "effect": "scroll",
                 "speed": 500,
                 "height": 400
-              }
+              },
+              "altTitle": "<p>ewrwr</p>",
+              "altDescription": "<p>werwe</p>",
+              "showAltContent": true
             },
             "sectionIndex": 0,
             "index": 0,
@@ -8390,12 +8799,9 @@
             },
             "sectionIndex": 0,
             "index": 1,
+            "id": 21,
             "menuMode": "horizontal",
-            "menuTheme": "light",
-            "menu_item_ids": [
-              133,
-              40
-            ]
+            "menuTheme": "light"
           },
           {
             "_id": "component-1756034923817-nky3lxdvs",
@@ -9338,11 +9744,6 @@
                   "নাক-কান-গলা"
                 ],
                 [
-                  "Food and nutrition specialist",
-                  "https://engine.sajidahospital.org/media/mave_gbjbrI.png",
-                  "খাদ্য ও পুষ্টি বিশেষজ্ঞ"
-                ],
-                [
                   "Pediatrics & NICU",
                   "https://engine.sajidahospital.org/media/mave_norStv.png",
                   "শিশুরোগ ও এনআইসিইউ"
@@ -9358,19 +9759,34 @@
                   "গাইনি ও প্রসূতি"
                 ],
                 [
-                  "Anesthesia",
+                  "Eurologist and Surgeon",
                   "https://engine.sajidahospital.org/media/mave_hpb9xx.png",
-                  "অ্যানেস্থেসিয়া"
+                  "ইউরোলজিস্ট সার্জন"
                 ],
                 [
-                  "General Surgery",
+                  "Plastic Surgery",
                   "https://engine.sajidahospital.org/media/mave_4TzWgR.png",
-                  "সাধারণ সার্জারি"
+                  "প্লাস্টিক সার্জারি"
                 ],
                 [
                   "Medicine",
                   "https://engine.sajidahospital.org/media/mave_W66Bhk.png",
                   "মেডিসিন"
+                ],
+                [
+                  "General Surgery",
+                  "https://engine.sajidahospital.org/media/mave_4TzWgR.png",
+                  "সাধারন সার্জারি"
+                ],
+                [
+                  "Neurosurgery",
+                  "https://engine.sajidahospital.org/media/mave_4TzWgR.png",
+                  "নিউরোসার্জারি"
+                ],
+                [
+                  "Pediatric Surgery",
+                  "https://engine.sajidahospital.org/media/mave_4TzWgR.png",
+                  "শিশুরোগ সার্জারি"
                 ]
               ],
               "visibleColumns": [
@@ -9393,14 +9809,12 @@
             "settings": [],
             "_mave": {
               "headers": [
-                "Body Part",
                 "Department",
                 "Name",
                 "Qualifications",
                 "Designation",
                 "Schedule",
                 "photo_link",
-                "Body Part_BN",
                 "Department_BN",
                 "Name_BN",
                 "Qualifications_BN",
@@ -9409,394 +9823,472 @@
               ],
               "rows": [
                 [
-                  "Stomach",
-                  "Gynae & OBS",
-                  "Dr. Kaberi Salam",
-                  "MBBS, DGO, MSS",
-                  "Senior Consultant",
-                  "Sunday to Thursday 10am-5pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "পেট, কোমরের নিচের অংশ, নিতম্ব",
-                  "গাইনি ও প্রসূতি",
-                  "ডা: কাবেরী সালাম",
-                  "এমবিবিএস, ডিজিও, এমএসএস",
-                  "সিনিয়র কনসালটেন্ট",
-                  "রবি থেকে বৃহস্পতি বার ১০টা থেকে ৫টা"
-                ],
-                [
-                  "Stomach",
-                  "Gynae & OBS",
-                  "Prof Dr. Kishwar Sultana",
-                  "MBBS, DGO, FCPS, MCPS",
-                  "Professor Obs/Gyne (Holy Family Red Crescent Medical College & Hospital)",
-                  "Wednesday 3pm-6pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "পেট, কোমরের নিচের অংশ, নিতম্ব",
-                  "গাইনি ও প্রসূতি",
-                  "প্রফেসর ডাঃ কিশোয়ার সুলতানা",
-                  "এমবিবিএস, ডিজিও, এফসিপিএস, এমসিপিএস",
-                  "অধ্যাপক",
-                  "প্রতি বুধবার বিকাল ৩টা থেকে সন্ধ্যা ৬টা"
-                ],
-                [
-                  "Stomach",
-                  "Gynae & OBS",
-                  "Dr. Saria Nafia",
-                  "MBBS, FCPS",
-                  "Assistant Professor Monno Medical College Hospital",
-                  "Saturday 10am-4pm, Thursday & Friday 5pm-8pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "পেট, কোমরের নিচের অংশ, নিতম্ব",
-                  "গাইনি ও প্রসূতি",
-                  "ডাঃ সারিয়া নাফিয়া",
-                  "এমবিবিএস, এফসিপিএস",
-                  "সহকারী অধ্যাপক",
-                  "শনিবার ১০টা থেকে ৪টা, বৃহস্পতি ও শুক্রবার ৫টা থেকে ৮টা"
-                ],
-                [
-                  "Stomach",
-                  "Gynae & OBS",
-                  "Dr. Afroza Begum",
-                  "MBBS, FCPS",
-                  "Senior Consultant Dhaka Medical College Hospital",
-                  "Monday 4pm-6pm, Tuesday 11am-2pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "পেট, কোমরের নিচের অংশ, নিতম্ব",
-                  "গাইনি ও প্রসূতি",
-                  "ডা: আফরোজা বেগম",
-                  "এমবিবিএস, এমসিপিএস, এফসিপিএস",
-                  "সিনিয়র কনসালটেন্ট",
-                  "সোমবার বিকাল ৪টা থেকে সন্ধ্যা ৬টা, মঙ্গলবার সকাল ১১টা থেকে দুপুর ২টা"
-                ],
-                [
-                  "Stomach",
-                  "Gynae & OBS",
-                  "Dr. Dipika Khanom",
-                  "MBBS, PGT, CCD(BIRDEM)",
-                  "Residential Surgeon",
-                  "Sunday to Friday 8am-2:30pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "পেট, কোমরের নিচের অংশ, নিতম্ব",
-                  "গাইনি ও প্রসূতি",
-                  "ডা: দীপিকা খানম",
-                  "এমবিবিএস, পিজিটি, সিসিডি (বারডেম)",
-                  "আবাসিক সার্জন",
-                  "রবি থেকে শুক্রবার সকাল ৮টা থেকে দুপুর ২.৩০টা"
-                ],
-                [
-                  "Stomach",
-                  "Gynae & OBS",
-                  "Dr. Kazi Sonia Munir",
-                  "MBBS, DGO, MCPS",
-                  "Specialist in infertile couples",
-                  "Friday 10am-6pm, Saturday & Wednesday 9am-9pm, Sunday Tuesday Thursday 3pm-9pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "পেট, কোমরের নিচের অংশ, নিতম্ব",
-                  "গাইনি ও প্রসূতি",
-                  "ডা: কাজী সোনিয়া মুনির",
-                  "এমবিবিএস, ডিজিও, এমসিপিএস",
-                  "সিনিয়র কনসালটেন্ট",
-                  "শুক্রবার ১০টা থেকে ৬টা, শনি ও বুধবার ৯টা থেকে ৯টা, রবি, মঙ্গল ও বৃহস্পতি দুপুর ৩টা থেকে রাত ৯টা"
-                ],
-                [
-                  "Stomach, Liver",
-                  "Ultrasonography",
-                  "Dr. Shirina Akbar",
-                  "MBBS, DMEU",
-                  "Senior Consultant Radiology & Imaging",
+                  "Medicine",
+                  "Dr. S.A. Shamim",
+                  "Dr. S.A. Shamim is a Consultant in the Department of Medicine at SAJIDA Hospital with over 15 years of professional experience in Internal Medicine. He also serves at Sir Salimullah Medical College & Mitford Hospital, where he provides comprehensive care for a wide range of medical conditions.\nDr. Shamim completed his MBBS from the University of Dhaka and earned his FCPS (Medicine) from the Bangladesh College of Physicians and Surgeons (BCPS). He has also been awarded the internationally recognised MACP (Master of the American College of Physicians) designation from the United States, reflecting his commitment to excellence and continuous professional development.\nCombining advanced clinical expertise with a patient-centred approach, he is committed to delivering evidence-based, compassionate, and high-quality medical care that inspires confidence and trust among his patients.",
+                  "Consultant",
                   null,
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "পেট, যকৃত, কিডনি",
-                  "আল্ট্রাসনোগ্রাফি",
-                  "ডাঃ শিরীনা আকবর",
-                  "এমবিবিএস, ডিএমইউ",
-                  "সিনিয়র কনসালটেন্ট",
+                  null,
+                  "মেডিসিন",
+                  "ডা. এস. এ. শামীম",
+                  "ডা. এস. এ. শামীম সাজেদা হাসপাতালের মেডিসিন বিভাগের কনসালট্যান্ট। মেডিসিন বিষয়ে তাঁর ১৫ বছরেরও বেশি সমৃদ্ধ অভিজ্ঞতা রয়েছে। তিনি বর্তমানে স্যার সলিমুল্লাহ মেডিকেল কলেজ ও মিটফোর্ড হাসপাতালে কর্মরত থেকে মেডিসিন-সম্পর্কিত বিভিন্ন রোগের নির্ণয় ও চিকিৎসা প্রদান করে আসছেন।\n\nতিনি ঢাকা বিশ্ববিদ্যালয় থেকে এমবিবিএস এবং বাংলাদেশ কলেজ অব ফিজিশিয়ানস অ্যান্ড সার্জনস (BCPS) থেকে এফসিপিএস ডিগ্রি অর্জন করেছেন। পাশাপাশি, যুক্তরাষ্ট্র থেকে মর্যাদাপূর্ণ MACP (Master of the American College of Physicians) ডিগ্রিও অর্জন করেছেন। আধুনিক চিকিৎসা জ্ঞান, দীর্ঘ ক্লিনিক্যাল অভিজ্ঞতা এবং রোগীকেন্দ্রিক সেবার সমন্বয়ে তিনি রোগীদের জন্য নির্ভরযোগ্য, কার্যকর ও মানসম্পন্ন চিকিৎসাসেবা নিশ্চিত করে আসছেন।",
+                  "কনসালট্যান্ট",
                   null
                 ],
                 [
-                  "Stomach",
+                  "Medicine & Cardiology",
+                  "Dr. Mohammad Mazharul Islam",
+                  "Dr. Mohammad Mazharul Islam is a Consultant in the Department of Medicine & Cardiology at SAJIDA Hospital with over 22 years of professional experience. He specialises in Medicine and is currently associated with Sir Salimullah Medical College & Mitford Hospital.\n\nDr. Islam completed his MBBS from Sir Salimullah Medical College & Mitford Hospital. He also holds MRCP (UK) and CCD (BIRDEM) qualifications and has completed six months of training in Echocardiography at JAROP, India. With years of clinical experience and a commitment to patient-centred care, he delivers reliable diagnosis and treatment for a wide range of bone, joint, and musculoskeletal conditions.",
+                  "Consultant",
+                  null,
+                  null,
+                  "মেডিসিন ও কার্ডিওলজি",
+                  "ডা. মোহাম্মদ মাযহারুল ইসলাম",
+                  "ডা. মোহাম্মদ মাযহারুল ইসলাম সাজেদা হাসপাতালের মেডিসিন ও কার্ডিওলজি বিভাগের কনসালট্যান্ট। মেডিসিন বিষয়ে তার ২২ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে স্যার সলিমুল্লাহ মেডিকেল কলেজ ও মিটফোর্ড হাসপাতালে কর্মরত আছেন এবং বিভিন্ন ধরনের মেডিসিন-সম্পর্কিত রোগের চিকিৎসা দিয়ে থাকেন।\n\nতিনি স্যার সলিমুল্লাহ মেডিকেল কলেজ ও মিটফোর্ড হাসপাতাল থেকে এমবিবিএস ডিগ্রি অর্জন করেছেন। এছাড়াও তিনি এমআরসিপি (যুক্তরাজ্য) ও সিসিডি (বারডেম) ডিগ্রিধারী এবং ভারতের JAROP থেকে ইকোকার্ডিওগ্রাফির ওপর ছয় মাসের প্রশিক্ষণ সম্পন্ন করেছেন। তিনি আধুনিক চিকিৎসা জ্ঞান, দীর্ঘ অভিজ্ঞতা এবং আন্তরিক সেবার মাধ্যমে রোগীদের মানসম্মত চিকিৎসাসেবা প্রদান করে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Nephrology",
+                  "Dr. Nayan Ranjan Sarker",
+                  "Dr. Nayan Ranjan Sarker is an Associate Professor of Nephrology and a Consultant at SAJIDA Hospital with over 24 years of extensive clinical experience. He is also associated with Sir Salimullah Medical College & Mitford Hospital, where he specialises in the diagnosis and management of a wide range of kidney disorders.\nDr. Sarker completed his MBBS from Rangpur Medical College and earned his MD in Nephrology. He has also been awarded the prestigious MACP (Master of the American College of Physicians) designation from the United States, reflecting his commitment to clinical excellence, evidence-based practice, and continuous professional development.\nWith a steadfast commitment to clinical excellence, evidence-based practice, and patient-centred care, he delivers comprehensive nephrology services tailored to the unique needs of each patient.",
+                  "Associate Professor",
+                  null,
+                  "https://engine.sajidahospital.org/media/mave_dSkLTl.png",
+                  "কিডনী বিভাগ",
+                  "ডা. নয়ন রঞ্জন সরকার",
+                  "ডা. নয়ন রঞ্জন সরকার সাজেদা হাসপাতালের নেফ্রোলজি বিভাগের অ্যাসোসিয়েট প্রফেসর। নেফ্রোলজি বিষয়ে তাঁর ২৪ বছরেরও বেশি অভিজ্ঞতা রয়েছে। তিনি বর্তমানে স্যার সলিমুল্লাহ মেডিকেল কলেজ ও মিটফোর্ড হাসপাতালে কর্মরত আছেন এবং কিডনি-সংক্রান্ত বিভিন্ন জটিল ও সাধারণ রোগের নির্ণয় ও চিকিৎসা প্রদান করে থাকেন।\n\nতিনি রংপুর মেডিকেল কলেজ থেকে এমবিবিএস এবং নেফ্রোলজিতে এমডি ডিগ্রি অর্জন করেছেন। এছাড়াও, তিনি যুক্তরাষ্ট্র থেকে মর্যাদাপূর্ণ এমএসিপি (MACP) ডিগ্রি অর্জন করেছেন। দীর্ঘ ক্লিনিক্যাল অভিজ্ঞতা, আধুনিক চিকিৎসা জ্ঞান এবং রোগীকেন্দ্রিক সেবার সমন্বয়ে তিনি কিডনি-সংক্রান্ত বিভিন্ন রোগের জন্য নির্ভুল মূল্যায়ন, কার্যকর চিকিৎসা এবং আন্তর্জাতিক মানের নির্ভরযোগ্য চিকিৎসাসেবা প্রদান করে আসছেন।",
+                  "অ্যাসোসিয়েট প্রফেসর / কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Medicine",
+                  "Dr. Polash Chandra Debnath",
+                  "Dr. Polash Chandra Debnath is a Consultant in the Department of Chest Medicine at SAJIDA Hospital with over 13 years of professional experience. He specialises in Chest Medicine and is currently associated with the National Institute of Chest Diseases & Hospital (NIDCH), Mohakhali, Dhaka.\n\nDr. Debnath completed his MBBS from Shaheed Suhrawardy Medical College & Hospital (ShSMC) and earned his MD in Chest Medicine from Bangladesh Medical University (BMU). He has also received specialised training in the Intensive Care Unit (ICU) and High Dependency Unit (HDU), further strengthening his expertise in the management of critically ill patients.\n\nCombining advanced clinical expertise with a patient-centred approach, he is committed to delivering comprehensive, evidence-based respiratory care with compassion, precision, and the highest standards of clinical excellence.",
+                  "Consultant",
+                  null,
+                  "https://engine.sajidahospital.org/media/mave_HjomwC.png",
+                  "মেডিসিন",
+                  "ডা. পলাশ চন্দ্র দেবনাথ",
+                  "ডা. পলাশ চন্দ্র দেবনাথ সাজেদা হাসপাতালের চেস্ট মেডিসিন বিভাগের কনসালট্যান্ট। চেস্ট মেডিসিন বিষয়ে তার ১৩ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে ন্যাশনাল ইনস্টিটিউট অব চেস্ট ডিজিজেস অ্যান্ড হাসপাতাল, মহাখালী, ঢাকায় কর্মরত আছেন এবং বক্ষব্যাধি-সংক্রান্ত বিভিন্ন রোগের চিকিৎসা দিয়ে থাকেন।\n\nতিনি শহীদ সোহরাওয়ার্দী মেডিকেল কলেজ ও হাসপাতাল (ShSMC) থেকে এমবিবিএস এবং বাংলাদেশ মেডিকেল ইউনিভার্সিটি (BMU) থেকে চেস্ট মেডিসিনে এমডি ডিগ্রি অর্জন করেছেন। এছাড়াও তিনি ইনটেনসিভ কেয়ার ইউনিট (ICU) ও হাই ডিপেনডেন্সি ইউনিট (HDU)-এর ওপর প্রশিক্ষণ গ্রহণ করেছেন। বক্ষব্যাধি-সংক্রান্ত বিভিন্ন রোগের নির্ভুল নির্ণয় ও কার্যকর চিকিৎসায় আধুনিক চিকিৎসা জ্ঞান, ক্লিনিক্যাল দক্ষতা এবং রোগীকেন্দ্রিক সেবার সমন্বয়ে তিনি মানসম্পন্ন চিকিৎসাসেবা প্রদান করে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Nephrology",
+                  "Dr. Delwar Hossain",
+                  "Dr. Delwar Hossain is a Consultant at SAJIDA Hospital with over 9 years of professional experience in Paediatric Nephrology. He is currently associated with Bangladesh Medical University (BMU), where he specialises in the diagnosis and management of a wide range of kidney disorders in children.\nDr. Hossain completed his MBBS and earned his MD in Paediatric Nephrology from Bangladesh Medical University (BMU). He has also undertaken specialised training in Paediatric Haemodialysis (HD) and SPSS, strengthening his expertise in advanced paediatric renal care, evidence-based clinical practice, and medical research.\nCombining specialised clinical expertise with a compassionate, child-centred approach, Dr. Hossain is committed to delivering comprehensive, evidence-based paediatric nephrology care that supports the long-term health and well-being of every child.",
+                  "Consultant",
+                  null,
+                  null,
+                  "কিডনী বিভাগ",
+                  "ডা. দেলোয়ার হোসেন",
+                  "ডা. দেলোয়ার হোসেন সাজেদা হাসপাতালের কনসালট্যান্ট। শিশু নেফ্রোলজি বিষয়ে তাঁর ৯ বছরেরও বেশি ক্লিনিক্যাল অভিজ্ঞতা রয়েছে। তিনি বর্তমানে বাংলাদেশ মেডিকেল ইউনিভার্সিটি (বিএমইউ)-এর সঙ্গে সম্পৃক্ত থেকে শিশুদের কিডনি-সংক্রান্ত বিভিন্ন রোগের নির্ণয় ও চিকিৎসা প্রদান করে আসছেন।\n\nতিনি বাংলাদেশ মেডিকেল ইউনিভার্সিটি (বিএমইউ) থেকে এমবিবিএস এবং শিশু নেফ্রোলজিতে এমডি ডিগ্রি অর্জন করেছেন। এছাড়াও, তিনি পেডিয়াট্রিক হেমোডায়ালাইসিস (HD) এবং SPSS-ভিত্তিক ক্লিনিক্যাল গবেষণা-সংক্রান্ত বিশেষায়িত প্রশিক্ষণ গ্রহণ করেছেন, যা শিশুদের কিডনি রোগের আধুনিক চিকিৎসা ও প্রমাণভিত্তিক চিকিৎসা চর্চায় তাঁর দক্ষতাকে আরও সমৃদ্ধ করেছে।\n\nবিশেষায়িত ক্লিনিক্যাল দক্ষতা, আধুনিক চিকিৎসা জ্ঞান এবং শিশুকেন্দ্রিক সেবাদানের সমন্বয়ে তিনি শিশুদের কিডনি-সংক্রান্ত বিভিন্ন রোগে নির্ভুল নির্ণয়, কার্যকর চিকিৎসা এবং প্রমাণভিত্তিক, মানসম্পন্ন চিকিৎসাসেবা প্রদান করে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Pediatrics & NICU",
+                  "Dr. Kazi Nahid Morsheda",
+                  "Dr. Kazi Nahid Morsheda is a Consultant at SAJIDA Hospital with over 18 years of professional experience. She specialises in Paediatrics and is currently serving as an Assistant Professor in the Department of Paediatrics at Sir Salimullah Medical College & Mitford Hospital.\n\nDr. Morsheda completed her MBBS from Dhaka Medical College Hospital and earned her FCPS in Paediatrics. She has also received professional training in PICU, CNCP, KMC, ETAT, malnutrition management and dengue management, broadening her expertise in specialized paediatric and newborn care.",
+                  "Consultant",
+                  null,
+                  "https://engine.sajidahospital.org/media/mave_ndQ6y9.png",
+                  "শিশুরোগ ও এনআইসিইউ",
+                  "ডা. কাজী নাহিদ মোরশেদা",
+                  "ডা. কাজী নাহিদ মোরশেদা সাজেদা হাসপাতালের কনসালট্যান্ট। শিশু রোগ (পেডিয়াট্রিকস) বিষয়ে তার ১৮ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে স্যার সলিমুল্লাহ মেডিকেল কলেজ ও মিটফোর্ড হাসপাতালের শিশু রোগ বিভাগের অ্যাসিস্ট্যান্ট প্রফেসর হিসেবে কর্মরত আছেন এবং শিশুদের বিভিন্ন রোগের চিকিৎসা দিয়ে থাকেন।\n\nতিনি ঢাকা মেডিকেল কলেজ হাসপাতাল থেকে এমবিবিএস এবং পেডিয়াট্রিকসে এফসিপিএস ডিগ্রি অর্জন করেছেন। এছাড়াও তিনি PICU, CNCP, KMC, ETAT, অপুষ্টি ব্যবস্থাপনা এবং ডেঙ্গু ব্যবস্থাপনা বিষয়ে প্রশিক্ষণ গ্রহণ করেছেন, যা শিশু ও নবজাতকের বিশেষায়িত চিকিৎসায় তাঁর বিশেষজ্ঞতাকে আরও সুদৃঢ় করেছে।",
+                  "কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Eurologist surgeon",
+                  "Dr. Abul Hasnat",
+                  "Dr. Abul Hasnat is a Consultant at SAJIDA Hospital with over 7 years of professional experience. He specialises in Urology and is currently associated with the National Institute of Kidney Diseases & Urology (NIKDU).\nDr. Hasnat completed his MBBS from Rajshahi Medical College (RMC) and earned his MS in Urology. He is committed to providing reliable, patient-centred care through his modern medical knowledge, clinical expertise and dedication to patient wellbeing.",
+                  "Consultant",
+                  null,
+                  "https://engine.sajidahospital.org/media/mave_R8EASI.png",
+                  "ইউরোলজিস্ট সার্জন",
+                  "ডা. আবুল হাসনাত",
+                  "ডা. আবুল হাসনাত সাজেদা হাসপাতালের কনসালট্যান্ট। ইউরোলজি বিষয়ে তাঁর ৭ বছরের ক্লিনিক্যাল অভিজ্ঞতা রয়েছে। তিনি বর্তমানে ন্যাশনাল ইনস্টিটিউট অব কিডনি ডিজিজেস অ্যান্ড ইউরোলজি (NIKDU)-তে কর্মরত আছেন এবং মূত্রতন্ত্র ও পুরুষদের প্রজননতন্ত্র-সংক্রান্ত বিভিন্ন রোগের নির্ণয় ও চিকিৎসা প্রদান করে থাকেন।\n\nতিনি রাজশাহী মেডিকেল কলেজ (RMC) থেকে এমবিবিএস এবং ইউরোলজিতে এমএস ডিগ্রি অর্জন করেছেন। আধুনিক ইউরোলজিক্যাল চিকিৎসা জ্ঞান, ক্লিনিক্যাল দক্ষতা এবং রোগীকেন্দ্রিক সেবার সমন্বয়ে তিনি বিভিন্ন ইউরোলজিক্যাল সমস্যার নির্ভুল মূল্যায়ন, কার্যকর চিকিৎসা এবং মানসম্পন্ন চিকিৎসাসেবা প্রদান করে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Plastic Surgery",
+                  "Dr. Sipon Kumar Das",
+                  "Dr. Sipon Kumar Das is a Consultant in Plastic Surgery at SAJIDA Hospital with over 12 years of professional experience. He specialises in Plastic & Reconstructive Surgery and is currently associated with Dhaka Medical College (DMC).\nDr. Das completed his MBBS from Sher-E-Bangla Medical College and earned his MS in Plastic & Reconstructive Surgery.His extensive clinical experience, specialised expertise, and patient-focused approach enable him to provide comprehensive and dependable care for patients with bone, joint, and musculoskeletal disorders.",
+                  "Consultant",
+                  null,
+                  null,
+                  "প্লাস্টিক সার্জারি",
+                  "ডা. সিপন কুমার দাস",
+                  "ডা. সিপন কুমার দাস সাজেদা হাসপাতালের প্লাস্টিক সার্জারি বিভাগের কনসালট্যান্ট। প্লাস্টিক ও রিকনস্ট্রাকটিভ সার্জারি বিষয়ে তাঁর ১২ বছরেরও বেশি ক্লিনিক্যাল অভিজ্ঞতা রয়েছে। তিনি বর্তমানে ঢাকা মেডিকেল কলেজ (DMC)-এ কর্মরত আছেন এবং জন্মগত ত্রুটি, আঘাতজনিত ক্ষতি, দগ্ধজনিত জটিলতা ও অন্যান্য প্লাস্টিক ও রিকনস্ট্রাকটিভ সার্জারি-সংক্রান্ত বিভিন্ন রোগের চিকিৎসা ও অস্ত্রোপচার প্রদান করে থাকেন।\n\nতিনি শের-ই-বাংলা মেডিকেল কলেজ থেকে এমবিবিএস এবং প্লাস্টিক ও রিকনস্ট্রাকটিভ সার্জারিতে এমএস ডিগ্রি অর্জন করেছেন। বিশেষায়িত সার্জিক্যাল দক্ষতা, আধুনিক চিকিৎসা প্রযুক্তি এবং রোগীকেন্দ্রিক দৃষ্টিভঙ্গির সমন্বয়ে তিনি কার্যকর, নিরাপদ ও মানসম্পন্ন প্লাস্টিক ও রিকনস্ট্রাকটিভ সার্জারি সেবা প্রদান করে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Pediatrics & NICU",
+                  "Dr. Shafi Ahmed",
+                  "Dr. Shafi Ahmed is a Professor of Paediatrics at SAJIDA Hospital with over 39 years of professional experience. He specialises in General Paediatrics and is currently associated with Monno Medical College Hospital, Manikganj.\nDr. Ahmed completed his MBBS from Rangpur Medical College & Hospital and earned DCH, MCPS and FCPS qualifications. Combining extensive experience with evidence-based medical practice, he provides trusted and comprehensive care for bone, joint, and musculoskeletal disorders.",
+                  "Professor",
+                  null,
+                  "https://engine.sajidahospital.org/media/mave_n2JWBa.png",
+                  "শিশুরোগ ও এনআইসিইউ",
+                  "ডা. শফি আহমেদ",
+                  "ডা. শফি আহমেদ সাজেদা হাসপাতালের শিশু রোগ বিভাগের প্রফেসর। জেনারেল পেডিয়াট্রিকস বিষয়ে তার ৩৯ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে মানিকগঞ্জের মন্নো মেডিকেল কলেজ হাসপাতালে কর্মরত আছেন এবং শিশুদের বিভিন্ন ধরনের রোগের চিকিৎসা দিয়ে থাকেন।\n\nতিনি রংপুর মেডিকেল কলেজ ও হাসপাতাল থেকে এমবিবিএস এবং ডিসিএইচ, এমসিপিএস ও এফসিপিএস ডিগ্রি অর্জন করেছেন। তিনি তার সমৃদ্ধ অভিজ্ঞতা, আধুনিক চিকিৎসা জ্ঞান এবং যত্নশীল সেবার মাধ্যমে রোগীদের নির্ভরযোগ্য চিকিৎসা প্রদান করে আসছেন।",
+                  "প্রফেসর",
+                  null
+                ],
+                [
                   "Gynae & OBS",
                   "Dr. Shirin Hossain",
-                  "MBBS, FCPS",
-                  "Obstetrician and Gynecologist Surgeon Consultant",
-                  "Sunday Tuesday Thursday 10am-2pm, Monday 5pm-9pm (Govt holiday)",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "পেট, কোমরের নিচের অংশ, নিতম্ব",
-                  "গাইনি ও প্রসূতি",
-                  "ডাঃ শিরিন হোসেন",
-                  "এমবিবিএস, এফসিপিএস",
-                  "কনসালটেন্ট",
-                  "রবি, মঙ্গল ও বৃহস্পতি সকাল ১০টা থেকে দুপুর ২টা, সোমবার বিকাল ৫টা থেকে রাত ৯টা"
-                ],
-                [
-                  "Brain, Lungs",
-                  "Pediatrics & NICU",
-                  "Dr. Afsana Khanom",
-                  "MBBS, MD",
-                  "Senior Consultant",
-                  "Saturday to Thursday 9am-3pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "মস্তিষ্ক, ফুসফুস, হৃদপিণ্ড",
-                  "শিশুরোগ  ও এনআইসিইউ",
-                  "ডা: আফসানা খানম",
-                  "এমবিবিএস, এম.ডি",
-                  "সিনিয়র কনসালটেন্ট",
-                  "শনিবার থেকে বৃহস্পতি সকাল ৯টা থেকে দুপুর ৩টা"
-                ],
-                [
-                  "Brain, Lungs",
-                  "Pediatrics & NICU",
-                  "Dr. Abu Asma",
-                  "MBBS, DCH, FCPS",
+                  "Dr. Shirin Hossain is a Consultant in the Department of Obstetrics & Gynaecology at SAJIDA Hospital, with over 16 years of extensive clinical experience in women's healthcare, obstetric care, and advanced gynaecological surgery. She is highly experienced in performing a wide range of procedures, including Total Abdominal Hysterectomy (TAH), Vaginal Hysterectomy (VH), Total Laparoscopic Hysterectomy (TLH), and Non-Descent Vaginal Hysterectomy (NDVH). She is currently associated with Ibn Sina Diagnostic & Consultation Centre, Keraniganj.\n\nDr. Hossain earned her MBBS from Sir Salimullah Medical College Mitford Hospital and completed her FCPS in Obstetrics & Gynaecology from the Bangladesh College of Physicians and Surgeons (BCPS). She has also received specialised training in Infertility Management and Laparoscopic Surgery, further enhancing her expertise in comprehensive women's healthcare.\n\nDedicated to supporting women's health at every stage of life, she integrates advanced clinical expertise, minimally invasive surgical techniques, and personalised, evidence-based care to achieve the best possible outcomes for her patients.",
                   "Consultant",
-                  "Saturday to Thursday 3pm-9pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "মস্তিষ্ক, ফুসফুস, হৃদপিণ্ড",
-                  "শিশুরোগ  ও এনআইসিইউ",
-                  "ডা: আবু আসমা",
-                  "এমবিবিএস, ডিসিএইচ, এফসিপিএস",
-                  "সিনিয়র কনসালটেন্ট",
-                  "শনিবার থেকে বৃহস্পতি দুপুর ৩টা থেকে রাত ৯টা"
-                ],
-                [
-                  "Brain, Lungs",
-                  "Pediatrics & NICU",
-                  "Dr. Rokon ud Dowla",
-                  "MBBS, BCS(Health), MD(Child)",
-                  "Neonatal, Child and Adolescent Health Specialist Consultant",
-                  "Saturday to Wednesday 2:30pm-4pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "মস্তিষ্ক, ফুসফুস, হৃদপিণ্ড",
-                  "শিশুরোগ  ও এনআইসিইউ",
-                  "ডাঃ রোকন উদ দৌলা",
-                  "এমবিবিএস, বিসিএস (স্বাস্থ্য), এমডি (শিশু)",
-                  "কনসালটেন্ট",
-                  "শনিবার থেকে বুধবার দুপুর ২.৩০টা থেকে বিকাল ৪টা"
-                ],
-                [
-                  "Brain, Lungs",
-                  "Pediatrics & NICU",
-                  "Dr. Shahrina Afroz Tisha",
-                  "MBBS, MD",
-                  "Consultant",
-                  "Friday and Govt holiday 9am-5pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "মস্তিষ্ক, ফুসফুস, হৃদপিণ্ড",
-                  "শিশুরোগ  ও এনআইসিইউ",
-                  "ডা: শাহরিনা আফরোজ তিষা",
-                  "এমবিবিএস, এম.ডি",
-                  "কনসালটেন্ট",
-                  "শুক্রবার ও সরকারি ছুটির দিন সকাল ৯টা থেকে বিকাল ৫টা"
-                ],
-                [
-                  "Liver, Stomach, Lungs",
-                  "Medicine",
-                  "Dr. Mohammed Sarwar Nawaz",
-                  "MBBS, MRCP(UK), CCD",
-                  "Senior Consultant",
-                  "Saturday to Thursday 10am-5pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "যকৃত, কিডনি, পেট,ফুসফুস, হৃদপিণ্ড",
-                  "মেডিসিন",
-                  "ডাঃ মোহাম্মদ সারোয়ার নেওয়াজ",
-                  "এমবিবিএস, এমআরসিপি (ইউকে), সিসিডি",
-                  "সিনিয়র কনসালটেন্ট",
-                  "শনিবার থেকে বৃহস্পতি সকাল ১০টা থেকে বিকাল ৫টা"
-                ],
-                [
-                  "Liver, Stomach, Lungs",
-                  "Medicine",
-                  "Dr. Mohammad Mazharul Islam",
-                  "MBBS, MRCP(UK)",
-                  "Consultant Sir Salimullah Medical College & Mitford Hospital",
-                  "Saturday Sunday Monday Wednesday Thursday 6pm-8pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "যকৃত, কিডনি, পেট,ফুসফুস, হৃদপিণ্ড",
-                  "মেডিসিন",
-                  "ডাঃ মোহাম্মদ মাজহারুল ইসলাম",
-                  "এমবিবিএস, এমাআরসিপি (ইউকে)",
-                  "কনসালটেন্ট",
-                  "শনিবার, রবি, সোম, বুধ ও বৃহস্পতি সন্ধ্যা ৬টা থেকে রাত ৮টা"
-                ],
-                [
-                  "Stomach, Liver",
-                  "General Surgery",
-                  "Dr. Mitul Chakrobarty",
-                  "MBBS, FCPS(Surgery)",
-                  "General and Laparoscopic Surgeon Consultant",
-                  "Saturday Sunday Monday Wednesday Thursday 6pm-7pm Friday oncall",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "পেট, যকৃত, কিডনি",
-                  "জেনারেল সার্জারি",
-                  "ডাঃ মিতুল চক্রবর্তী",
-                  "এমবিবিএস, এফসিপিএস (সার্জারী)",
-                  "কনসালটেন্ট",
-                  "শনিবার, রবি, সোম, বুধ ও বৃহস্পতি সন্ধ্যা ৬টা থেকে ৭টা, শুক্রবার অনকল"
-                ],
-                [
-                  "Stomach, Liver",
-                  "General Surgery",
-                  "Dr. Biplob C Bandha",
-                  "MBBS, FCPS(Surgery)",
-                  "General & Laparoscopic Surgeon Consultant",
-                  "Sunday Tuesday Thursday 5pm-6pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "পেট, যকৃত, কিডনি",
-                  "জেনারেল সার্জারি",
-                  "ডাঃ বিপ্লব চন্দ্র বন্দ",
-                  "এমবিবিএস, এফসিপিএস (সার্জারী)",
-                  "কনসালটেন্ট",
-                  "রবি, মঙ্গল ও বৃহস্পতি বিকাল ৫টা থেকে সন্ধ্যা ৬টা"
-                ],
-                [
-                  "Brain, Spine",
-                  "Anesthesia",
-                  "Dr. Raihan Amin Rana",
-                  "MBBS, PGT, DA(BSMMU)",
-                  "Senior consultant Department of Anesthesia",
                   null,
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "মস্তিষ্ক, মেরুদণ্ড",
-                  "এনেস্থেসিয়া",
-                  "ডা: রায়হান আমিন রানা",
-                  "এমবিবিএস, পিজিটি, ডিএ (বিএসএমএমইউ)",
-                  "সিনিয়র কনসালটেন্ট",
+                  "https://engine.sajidahospital.org/media/mave_CLdAst.png",
+                  "গাইনি ও প্রসূতি",
+                  "ডা. শিরিন হোসেন",
+                  "ডা. শিরিন হোসেন সাজেদা হাসপাতালের গাইনি ও অবস বিভাগের কনসালট্যান্ট। নারীস্বাস্থ্য, প্রসূতি সেবা এবং TAH, VH, TLH ও NDVH-সহ বিভিন্ন ধরনের গাইনোকোলজিক্যাল সার্জারিতে তাঁর ১৬ বছরেরও বেশি ক্লিনিক্যাল অভিজ্ঞতা রয়েছে। তিনি বর্তমানে ইবনে সিনা ডায়াগনস্টিক অ্যান্ড কনসালটেশন সেন্টার, কেরানীগঞ্জ-এ কর্মরত থেকে নারীস্বাস্থ্য-সংক্রান্ত বিভিন্ন জটিল ও সাধারণ সমস্যার নির্ণয়, চিকিৎসা এবং সার্জিক্যাল সেবা প্রদান করে আসছেন।\n\nতিনি স্যার সলিমুল্লাহ মেডিকেল কলেজ মিটফোর্ড হাসপাতাল থেকে এমবিবিএস এবং বাংলাদেশ কলেজ অব ফিজিশিয়ানস অ্যান্ড সার্জনস (BCPS) থেকে এফসিপিএস (গাইনি ও অবস) ডিগ্রি অর্জন করেছেন। এছাড়াও, তিনি ইনফার্টিলিটি এবং ল্যাপারোস্কোপিক সার্জারি বিষয়ে বিশেষায়িত প্রশিক্ষণ গ্রহণ করেছেন।\n\nনারীর প্রতিটি জীবনপর্যায়ের স্বাস্থ্যসেবায় আধুনিক চিকিৎসাবিজ্ঞান, উন্নত ক্লিনিক্যাল দক্ষতা এবং সহানুভূতিশীল রোগীকেন্দ্রিক সেবার সমন্বয়ে তিনি নিরাপদ, নির্ভুল ও ব্যক্তিকেন্দ্রিক চিকিৎসাসেবা নিশ্চিত করে আসছেন।",
+                  "কনসালট্যান্ট",
                   null
                 ],
                 [
-                  "Ear, Nose,Eye",
-                  "ENT",
-                  "Dr. Utpaul Kumar Sarkar",
-                  "MBBS, FCPS(ENT)",
-                  "ENT and Head-Neck Specialist & Surgeon Assistant Professor",
-                  "Saturday Monday Tuesday Wednesday 6pm-7pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "কান, নাক, গলা",
-                  "ইএনটি (কান-নাক-গলা)",
-                  "ডাঃ উৎপল কুমার সরকার",
-                  "এমবিবিএস, এফসিপিএস (ইএনটি)",
-                  "সহকারী অধ্যাপক",
-                  "শনিবার, সোম, মঙ্গল ও বুধবার সন্ধ্যা ৬টা থেকে সন্ধ্যা ৭টা"
-                ],
-                [
-                  "Kidney",
-                  "Nephrology",
-                  "Dr. Nayan Ranjan Sarkar",
-                  "MBBS, MD(Kidney), MACP(America)",
-                  "Kidney Disease, Pressure, Diabetes and Dialysis Specialist Assistant Professor",
-                  "Sunday Tuesday Thursday 7pm-8pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "কিডনি",
-                  "নেফ্রোলজি (কিডনি)",
-                  "ডাঃ নয়ন রঞ্জন সরকার",
-                  "এমবিবিএস, এমডি (কিডনী), এমএসিপি (আমেরিকা)",
-                  "সহকারী অধ্যাপক",
-                  "রবি, মঙ্গল ও বৃহস্পতি সন্ধ্যা ৭টা থেকে ৮টা"
-                ],
-                [
-                  "Kidney",
-                  "Nephrology",
-                  "Dr. Sohel Bin Sayeed",
-                  "MBBS, CCD, MD(Nephrology)",
+                  "Gynae & OBS",
+                  "Dr. Rasd-E-Afroza Parvine",
+                  "Dr. Rasd-E-Afroza Parvine is an Assistant Professor in the Department of Obstetrics & Gynaecology at SAJIDA Hospital with over 26 years of extensive clinical experience in women's health and obstetric care. She is currently serving at Keraniganj Upazila Health Complex, Dhaka, where she provides comprehensive care across a broad spectrum of gynaecological and obstetric conditions.\n\nDr. Parvine earned her MBBS from Chittagong Medical College, her DGO (Diploma in Gynaecology & Obstetrics) from Dhaka Medical College, and her MPH in Health Management from the National Institute of Preventive and Social Medicine (NIPSOM), University of Dhaka. She has also successfully completed a one-year specialised training programme in Essential Obstetric Care (EOC), further strengthening her expertise in maternal healthcare and obstetric management.\n\nWith a distinguished career spanning more than two decades, she combines clinical excellence, evidence-based practice, and a compassionate, patient-centred approach to deliver comprehensive women's healthcare that prioritises safety, quality, and long-term well-being.",
                   "Assistant Professor",
-                  "Saturday Monday Wednesday 3pm-4pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "কিডনি",
-                  "নেফ্রোলজি (কিডনি)",
-                  "ডাঃ সোহেল বিন সাঈদ",
-                  "এমবিবিএস, সিসিডি, এমডি (নেফ্রোলজি)",
+                  null,
+                  "https://engine.sajidahospital.org/media/mave_fF74sl.png",
+                  "গাইনি ও প্রসূতি",
+                  "ডা. রাসদ-ই-আফরোজা পারভীন (লিপি)",
+                  "ডা. রাসদ-ই-আফরোজা পারভীন (লিপি) সাজেদা হাসপাতালের গাইনি ও অবস বিভাগের সহকারী অধ্যাপক। গাইনি ও অবস বিষয়ে তাঁর ২৬ বছরেরও বেশি সমৃদ্ধ ক্লিনিক্যাল অভিজ্ঞতা রয়েছে। তিনি বর্তমানে উপজেলা স্বাস্থ্য কমপ্লেক্স, কেরানীগঞ্জ, ঢাকায় কর্মরত থেকে নারীস্বাস্থ্য, গর্ভকালীন সেবা এবং প্রসূতি-সংক্রান্ত বিভিন্ন সমস্যার নির্ণয় ও চিকিৎসা প্রদান করে আসছেন।\n\nতিনি চট্টগ্রাম মেডিকেল কলেজ থেকে এমবিবিএস, ঢাকা মেডিকেল কলেজ থেকে ডিজিও (DGO) এবং ঢাকা বিশ্ববিদ্যালয়ের অধিভুক্ত ন্যাশনাল ইনস্টিটিউট অব প্রিভেন্টিভ অ্যান্ড সোশ্যাল মেডিসিন (NIPSOM) থেকে এমপিএইচ (হেলথ ম্যানেজমেন্ট) ডিগ্রি অর্জন করেছেন। এছাড়াও, তিনি এক বছর মেয়াদি এসেনশিয়াল অবস্টেট্রিক কেয়ার (EOC) প্রশিক্ষণ সফলভাবে সম্পন্ন করেছেন।\n\nনারীস্বাস্থ্যের প্রতিটি পর্যায়ে সূক্ষ্ম ক্লিনিক্যাল মূল্যায়ন, নিরাপদ মাতৃত্বসেবা এবং প্রমাণভিত্তিক চিকিৎসা চর্চার সমন্বয়ে তিনি প্রতিটি রোগীর জন্য নির্ভুল, মানবিক ও মানসম্পন্ন চিকিৎসাসেবা নিশ্চিত করে আসছেন।",
                   "সহকারী অধ্যাপক",
-                  "শনিবার, সোম ও বুধবার বিকেল ৩টা থেকে বিকেল ৪ টা"
+                  null
                 ],
                 [
-                  "Spine, Lower Back, Thigh, Arm, Elbow, Knee, Hip, Ankle, Foot",
-                  "Orthopaedic",
-                  "Dr. Obaidur Rahman",
-                  "MBBS, MS(Orthopedic)",
+                  "Pediatrics & NICU",
+                  "Dr. Tamanna Sultana",
+                  "Dr. Tamanna Sultana is an Assistant Professor of Pediatric Nephrology at SAJIDA Hospital, with over 16 years of extensive clinical experience in the field of Pediatric Nephrology. She is currently associated with Sir Salimullah Medical College Mitford Hospital, where she continues to contribute her expertise in the diagnosis and management of kidney-related conditions among children.\n\nDr. Sultana completed her MBBS from Chattogram Medical College and obtained her MD in Pediatric Nephrology from Bangabandhu Sheikh Mujib Medical University (BSMMU). With her comprehensive clinical knowledge, years of experience, and a compassionate, patient-centred approach, she is committed to providing specialised, evidence-based, and reliable care for children with renal and urinary disorders.",
+                  "Assistant Professor",
+                  null,
+                  "https://engine.sajidahospital.org/media/mave_3Hy5dG.png",
+                  "শিশুরোগ ও এনআইসিইউ",
+                  "ডা. তামান্না সুলতানা",
+                  "ডা. তামান্না সুলতানা সাজেদা হাসপাতালের পেডিয়াট্রিক নেফ্রোলজি বিভাগের সহকারী অধ্যাপক হিসেবে কর্মরত আছেন। শিশুদের কিডনি রোগের চিকিৎসা ক্ষেত্রে তাঁর ১৬ বছরেরও বেশি পেশাগত অভিজ্ঞতা রয়েছে। তিনি পেডিয়াট্রিক নেফ্রোলজি বিষয়ে বিশেষজ্ঞ এবং বর্তমানে স্যার সলিমুল্লাহ মেডিকেল কলেজ মিটফোর্ড হাসপাতালের সঙ্গে যুক্ত আছেন।\n\nডা. সুলতানা চট্টগ্রাম মেডিকেল কলেজ থেকে এমবিবিএস সম্পন্ন করেন এবং বঙ্গবন্ধু শেখ মুজিব মেডিকেল বিশ্ববিদ্যালয় (বিএসএমএমইউ) থেকে পেডিয়াট্রিক নেফ্রোলজি বিষয়ে এমডি ডিগ্রি অর্জন করেন। তাঁর বিস্তৃত ক্লিনিক্যাল জ্ঞান, দীর্ঘ অভিজ্ঞতা এবং রোগীকেন্দ্রিক সেবাদানের দৃষ্টিভঙ্গি শিশুদের কিডনি ও মূত্রনালীর বিভিন্ন সমস্যার জন্য বিশেষায়িত, নির্ভরযোগ্য ও সমন্বিত চিকিৎসা সেবা প্রদানে সহায়তা করে।",
+                  "সহকারী অধ্যাপক",
+                  null
+                ],
+                [
+                  "Gynae & OBS",
+                  "Dr. Fatema Haque",
+                  "Dr. Fatema Haque is an Associate Professor of Gynaecology & Obstetrics at SAJIDA Hospital with over 20 years of professional experience. She specialises in Gynaecology & Obstetrics, Infertility, IVF, Laparoscopy, and Hysteroscopy. She is currently associated with Government Unani & Ayurvedic Hospital, Azmol Hospital, and Save On Hospital.\n\nDr. Haque completed her MBBS from Cumilla Medical College Hospital and earned BCS, FCPS (Gynaecology & Obstetrics), FCPS (Reproductive Medicine & Infertility), and FACS (USA) qualifications. Supported by years of experience and specialised knowledge, she is dedicated to providing comprehensive and compassionate care for skin, hair, nail, and sexually transmitted diseases.",
+                  "Associate Professor",
+                  null,
+                  null,
+                  "গাইনি ও প্রসূতি",
+                  "ডা. ফাতেমা হক",
+                  "ডা. ফাতেমা হক সাজেদা হাসপাতালের গাইনি ও অবস বিভাগের সহযোগী অধ্যাপক। গাইনি ও অবস, ইনফার্টিলিটি, আইভিএফ, ল্যাপারোস্কোপি এবং হিস্টেরোস্কোপি বিষয়ে তার ২০ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে সরকারি ইউনানি ও আয়ুর্বেদিক হাসপাতাল, আজমল হাসপাতাল এবং সেভ অন হাসপাতাল-এ কর্মরত আছেন।\n\nতিনি কুমিল্লা মেডিকেল কলেজ হাসপাতাল থেকে এমবিবিএস এবং বিসিএস, এফসিপিএস (গাইনি ও অবস), এফসিপিএস (রিপ্রোডাক্টিভ মেডিসিন অ্যান্ড ইনফার্টিলিটি) ও এফএসিএস (যুক্তরাষ্ট্র) ডিগ্রি অর্জন করেছেন। রোগীর প্রয়োজনকে অগ্রাধিকার দিয়ে আধুনিক চিকিৎসা জ্ঞান ও অভিজ্ঞতার সমন্বয়ে তিনি সেবা প্রদান করে আসছেন।",
+                  "সহযোগী অধ্যাপক",
+                  null
+                ],
+                [
+                  "Gynae & OBS",
+                  "Dr. Nusur Akhter",
+                  "Dr. Nusur Akhter is an Assistant Professor of Gynaecology & Obstetrics at SAJIDA Hospital with over 18 years of professional experience. She specialises in the management of Infertility and High-Risk Pregnancy and is currently associated with Anwer Khan Modern Medical College, Dhaka.\n\nDr. Akhter completed her MBBS from Rangpur Medical College Hospital and earned her FCPS (Gynaecology & Obstetrics) qualification. She has also received professional training in Infertility & IUI as well as Laparoscopy and Gynaecological Laparoscopic Surgery. Her strong clinical background, specialised training, and patient-centred approach enable her to provide trusted care for a broad range of dermatological and sexually transmitted conditions.",
+                  "Assistant Professor",
+                  null,
+                  "https://engine.sajidahospital.org/media/mave_6QjbWb.png",
+                  "গাইনি ও প্রসূতি",
+                  "ডা. নুসুর আখতার",
+                  "ডা. নুসুর আখতার সাজেদা হাসপাতালের গাইনি ও অবস বিভাগের সহকারী অধ্যাপক। ইনফার্টিলিটি এবং উচ্চ ঝুঁকিপূর্ণ গর্ভাবস্থা (হাই-রিস্ক প্রেগন্যান্সি) ব্যবস্থাপনায় তার ১৮ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে আনোয়ার খান মডার্ন মেডিকেল কলেজ, ঢাকা-এ কর্মরত আছেন।\n\nতিনি রংপুর মেডিকেল কলেজ হাসপাতাল থেকে এমবিবিএস এবং এফসিপিএস (গাইনি ও অবস) ডিগ্রি অর্জন করেছেন। এছাড়াও তিনি ইনফার্টিলিটি ও আইইউআই এবং ল্যাপারোস্কোপি ও গাইনোকোলজিক্যাল ল্যাপারোস্কোপিক সার্জারি বিষয়ে বিশেষ প্রশিক্ষণ গ্রহণ করেছেন। আধুনিক চিকিৎসা পদ্ধতি, পেশাগত দক্ষতা এবং দীর্ঘ অভিজ্ঞতার মাধ্যমে তিনি রোগীদের আস্থার সঙ্গে চিকিৎসাসেবা দিয়ে আসছেন।",
+                  "সহকারী অধ্যাপক",
+                  null
+                ],
+                [
+                  "Orthopedics",
+                  "Dr. Aminur Rasul",
+                  "Dr. Aminur Rasul is a Consultant in Orthopedics at SAJIDA Hospital with over 16 years of professional experience. He specialises in Orthopedics and is currently associated with the National Institute of Traumatology and Orthopaedic Rehabilitation (NITOR), Dhaka.\n\nDr. Rasul completed his MBBS from Dinajpur Medical College and earned his MS in Orthopedics from Bangladesh Medical University. He has also completed the AO Basic Course and received specialised training in the Ilizarov Technique. Drawing on his extensive expertise and patient-first philosophy, he provides comprehensive diagnosis and treatment for bone, joint, and musculoskeletal problems.",
                   "Consultant",
-                  "Sunday Tuesday Thursday 7pm-8pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "মেরুদণ্ড, কোমরের নিচের অংশ, উরু, বাহু, কনুই, হাঁটু, নিতম্ব, গোড়ালি, পা",
+                  null,
+                  "https://engine.sajidahospital.org/media/mave_oVSs2o.png",
                   "অর্থোপেডিক্স",
-                  "ডাঃ ওবায়দুর রহমান",
-                  "এমবিবিএস, এমএস (অর্থোপেডিক)",
-                  "কনসালটেন্ট",
-                  "রবি, মঙ্গল ও বৃহস্পতি ৭টা থেকে ৮টা"
+                  "ডা. আমিনুর রাসুল",
+                  "ডা. আমিনুর রাসুল সাজেদা হাসপাতালের অর্থোপেডিকস বিভাগের কনসালট্যান্ট। অর্থোপেডিকস বিষয়ে তার ১৬ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে ন্যাশনাল ইনস্টিটিউট অব ট্রমাটোলজি অ্যান্ড অর্থোপেডিক রিহ্যাবিলিটেশন (নিটোর), ঢাকা-এ কর্মরত আছেন এবং হাড়, জয়েন্ট ও মাংসপেশি-সংক্রান্ত বিভিন্ন রোগের চিকিৎসা দিয়ে থাকেন।\n\nতিনি দিনাজপুর মেডিকেল কলেজ থেকে এমবিবিএস এবং বাংলাদেশ মেডিকেল বিশ্ববিদ্যালয় থেকে এমএস (অর্থোপেডিকস) ডিগ্রি অর্জন করেছেন। এছাড়াও তিনি এও বেসিক কোর্স সম্পন্ন করেছেন এবং ইলিজারভ পদ্ধতি বিষয়ে বিশেষ প্রশিক্ষণ গ্রহণ করেছেন। রোগীকেন্দ্রিক সেবা, ক্লিনিক্যাল দক্ষতা এবং দীর্ঘদিনের অভিজ্ঞতার মাধ্যমে তিনি মানসম্মত চিকিৎসা নিশ্চিত করে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
                 ],
                 [
-                  "Spine, Lower Back, Thigh, Arm, Elbow, Knee, Hip, Ankle, Foot",
-                  "Orthopaedic",
-                  "Dr. Zihan Morshed Khan",
-                  "MBBS, D-Ortho",
-                  "Consultant Sir Salimullah Medical College and Mitford Hospital",
-                  "Saturday 3pm-5pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "মেরুদণ্ড, কোমরের নিচের অংশ, উরু, বাহু, কনুই, হাঁটু, নিতম্ব, গোড়ালি, পা",
-                  "অর্থোপেডিক্স",
-                  "ডাঃ জিহান মোরশেদ খান",
-                  "এমবিবিএস, ডি-অর্থো",
-                  "কনসালটেন্ট",
-                  "শনিবার ৩ টা থেকে ৫ টা"
+                  "Pediatrics & NICU",
+                  "Dr. Abu Asma",
+                  "Dr. Abu Asma is a Senior Consultant at SAJIDA Hospital with over 18 years of professional experience. He specialises in Pediatric Nutrition and provides comprehensive care for children's nutritional and general health needs.\n\nDr. Asma completed his MBBS from Cumilla Medical College & Hospital and earned DCH and FCPS (Paediatrics) qualifications. He has also completed a Postgraduate Program in Pediatric Nutrition. His advanced medical knowledge, surgical expertise, and compassionate approach allow him to provide high-quality care for patients with orthopedic and musculoskeletal conditions.",
+                  "Senior Consultant",
+                  null,
+                  "https://engine.sajidahospital.org/media/mave_4dDIAw.png",
+                  "শিশুরোগ ও এনআইসিইউ",
+                  "ডা. আবু আসমা",
+                  "ডা. আবু আসমা সাজেদা হাসপাতালের সিনিয়র কনসালট্যান্ট। শিশু পুষ্টি (পেডিয়াট্রিক নিউট্রিশন) বিষয়ে তার ১৮ বছরের অভিজ্ঞতা রয়েছে। তিনি শিশুদের পুষ্টি ও সার্বিক স্বাস্থ্য-সংক্রান্ত বিভিন্ন সমস্যার চিকিৎসা দিয়ে থাকেন।\n\nতিনি কুমিল্লা মেডিকেল কলেজ ও হাসপাতাল থেকে এমবিবিএস এবং ডিসিএইচ ও এফসিপিএস (শিশু রোগ) ডিগ্রি অর্জন করেছেন। এছাড়াও তিনি পোস্টগ্র্যাজুয়েট প্রোগ্রাম ইন পেডিয়াট্রিক নিউট্রিশন সম্পন্ন করেছেন। তিনি তার সমৃদ্ধ অভিজ্ঞতা, আধুনিক চিকিৎসা জ্ঞান এবং যত্নশীল সেবার মাধ্যমে রোগীদের নির্ভরযোগ্য চিকিৎসা প্রদান করে আসছেন।",
+                  "সিনিয়র কনসালট্যান্ট",
+                  null
                 ],
                 [
-                  "Skin",
-                  "Dermatology & Venereology",
-                  "Dr. Sadia Ahmed",
-                  "MBBS, DDV",
-                  "Consultant Sir Salimullah Medical College and Mitford Hospital",
-                  "Tuesday 2pm-4pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "ত্বক",
-                  "চর্মরোগ ও ভেনেরওলজি",
-                  "ডাঃ সাদিয়া আহমেদ",
-                  "এমবিবিএস, ডিডিভি",
-                  "কনসালটেন্ট",
-                  "মঙ্গলবার ২টা থেকে ৪টা"
+                  "Gynae & OBS",
+                  "Dr. Saria Nafia",
+                  "Dr. Saria Nafia is a Senior Consultant in Gynaecology & Obstetrics at SAJIDA Hospital with over 23 years of professional experience. She specialises in Gynaecology & Obstetrics and is currently serving as an Assistant Professor of Gynaecology & Obstetrics at Monno Medical College Hospital.\n\nDr. Nafia completed her MBBS from Sher-E-Bangla Medical College Hospital, Barisal and earned her FCPS (Gynaecology & Obstetrics) qualification. Her strong clinical background, specialised training, and patient-centred approach enable her to provide trusted care for a broad range of dermatological and sexually transmitted conditions.",
+                  "Senior Consultant",
+                  null,
+                  "https://engine.sajidahospital.org/media/mave_rkHfJP.png",
+                  "গাইনি ও প্রসূতি",
+                  "ডা. সারিয়া নাফিয়া",
+                  "ডা. সারিয়া নাফিয়া সাজেদা হাসপাতালের গাইনি ও অবস বিভাগের সিনিয়র কনসালট্যান্ট। গাইনি ও অবস বিষয়ে তার ২৩ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে মন্নো মেডিকেল কলেজ হাসপাতাল-এ গাইনি ও অবস বিভাগের সহকারী অধ্যাপক হিসেবে কর্মরত আছেন এবং নারীস্বাস্থ্য ও প্রসূতি সেবায় চিকিৎসা প্রদান করে থাকেন।\n\nতিনি শের-ই-বাংলা মেডিকেল কলেজ হাসপাতাল, বরিশাল থেকে এমবিবিএস এবং এফসিপিএস (গাইনি ও অবস) ডিগ্রি অর্জন করেছেন।তিনি আধুনিক চিকিৎসাবিজ্ঞান, পেশাগত অভিজ্ঞতা এবং মানবিক সেবার সমন্বয়ে রোগীদের কার্যকর চিকিৎসাসেবা প্রদান করে আসছেন।",
+                  "সিনিয়র কনসালট্যান্ট",
+                  null
                 ],
                 [
-                  "Skin",
-                  "Dermatology & Venereology",
-                  "Dr. Rubaiya Nasrin Lopa",
-                  "MBBS, DDV(BSMMU)",
-                  "Skin and Venereology Specialist PG Hospital Dhaka",
-                  "Friday 10am-12pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "ত্বক",
-                  "চর্মরোগ ও ভেনেরওলজি",
-                  "ডাঃ রুবাইয়া নাসরিন লোপা",
-                  "এমবিবিএস, ডিডিভি (বিএসএমএমইউ)",
-                  "কনসালটেন্ট",
-                  "শুক্রবার সকাল ১০টা থেকে দুপুর ১২টা"
+                  "Gynae & OBS",
+                  "Dr. Kazi Sonia Munir",
+                  "Dr. Kazi Sonia Munir is a Senior Consultant in Gynaecology & Obstetrics at SAJIDA Hospital with over 31 years of professional experience. She specialises in Gynaecology & Obstetrics and provides comprehensive care for women's reproductive and maternal health.\n\nDr. Munir completed her MBBS from Sher-E-Bangla Medical College Hospital, Barisal and earned DGO and MCPS qualifications. She has also received Basic Training in Infertility. Her medical expertise, clinical excellence, and patient-focused care ensure reliable treatment for various skin, hair, nail, and sexually transmitted disorders.",
+                  "Senior Consultant",
+                  null,
+                  "https://engine.sajidahospital.org/media/mave_knLtuC.png",
+                  "গাইনি ও প্রসূতি",
+                  "ডা. কাজী সোনিয়া মুনীর",
+                  "ডা. কাজী সোনিয়া মুনীর সাজেদা হাসপাতালের গাইনি ও অবস বিভাগের সিনিয়র কনসালট্যান্ট। গাইনি ও অবস বিষয়ে তার ৩১ বছরের অভিজ্ঞতা রয়েছে। তিনি নারীস্বাস্থ্য ও প্রসূতি-সংক্রান্ত বিভিন্ন সমস্যার চিকিৎসা দিয়ে থাকেন।\n\nতিনি শের-ই-বাংলা মেডিকেল কলেজ হাসপাতাল, বরিশাল থেকে এমবিবিএস এবং ডিজিও ও এমসিপিএস ডিগ্রি অর্জন করেছেন। এছাড়াও তিনি ইনফার্টিলিটি বিষয়ে বেসিক প্রশিক্ষণ গ্রহণ করেছেন। তিনি আধুনিক চিকিৎসা জ্ঞান, দীর্ঘ অভিজ্ঞতা এবং আন্তরিক সেবার মাধ্যমে রোগীদের মানসম্মত চিকিৎসাসেবা প্রদান করে আসছেন।",
+                  "সিনিয়র কনসালট্যান্ট",
+                  null
                 ],
                 [
-                  "Heart",
+                  "Gynae & OBS",
+                  "Dr. Kaberi Salam",
+                  "Dr. Kaberi Salam is a Senior Consultant in Gynaecology & Obstetrics at SAJIDA Hospital with over 27 years of professional experience. She specialises in Gynaecology & Obstetrics and provides comprehensive care for women's reproductive and maternal health.\n\nDr. Salam completed her MBBS from Sir Salimullah Medical College Mitford Hospital and earned DGO and MSS qualifications. She also completed postgraduate training at Shaheed Suhrawardy Hospital. Supported by years of experience and specialised knowledge, she is dedicated to providing comprehensive and compassionate care for skin, hair, nail, and sexually transmitted diseases.",
+                  "Senior Consultant",
+                  null,
+                  null,
+                  "গাইনি ও প্রসূতি",
+                  "ডা. কাবেরী সালাম",
+                  "ডা. কাবেরী সালাম সাজেদা হাসপাতালের গাইনি ও অবস বিভাগের সিনিয়র কনসালট্যান্ট। গাইনি ও অবস বিষয়ে তার ২৭ বছরের অভিজ্ঞতা রয়েছে। তিনি নারীস্বাস্থ্য ও প্রসূতি-সংক্রান্ত বিভিন্ন সমস্যার চিকিৎসা দিয়ে থাকেন।\n\nতিনি স্যার সলিমুল্লাহ মেডিকেল কলেজ মিটফোর্ড হাসপাতাল থেকে এমবিবিএস এবং ডিজিও ও এমএসএস ডিগ্রি অর্জন করেছেন। এছাড়াও তিনি শহীদ সোহরাওয়ার্দী হাসপাতাল থেকে পোস্টগ্র্যাজুয়েট প্রশিক্ষণ সম্পন্ন করেছেন। রোগীর প্রয়োজনকে অগ্রাধিকার দিয়ে আধুনিক চিকিৎসা জ্ঞান ও অভিজ্ঞতার সমন্বয়ে তিনি সেবা প্রদান করে আসছেন।",
+                  "সিনিয়র কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Gynae & OBS",
+                  "Dr. Toma Rani Paul",
+                  "Dr. Toma Rani Paul is a Consultant in Gynaecology & Obstetrics at SAJIDA Hospital with over 13 years of professional experience. She specialises in Gynaecology & Obstetrics and is currently associated with Upazila Health Complex, Keraniganj, Dhaka.\n\nDr. Paul completed her MBBS from Dhaka Medical College Hospital and earned CCD, BCS (Health), and FCPS qualifications. Her expertise in dermatology, combined with extensive clinical experience and a patient-centred approach, enables her to deliver reliable, comprehensive, and quality care for skin, hair, nail, and sexually transmitted diseases.",
+                  "Consultant",
+                  null,
+                  null,
+                  "গাইনি ও প্রসূতি",
+                  "ডা. তমা রানী পাল",
+                  "ডা. তমা রানী পাল সাজেদা হাসপাতালের গাইনি ও অবস বিভাগের কনসালট্যান্ট। গাইনি ও অবস বিষয়ে তার ১৩ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে উপজেলা স্বাস্থ্য কমপ্লেক্স, কেরানীগঞ্জ, ঢাকা-এ কর্মরত আছেন এবং নারীস্বাস্থ্য ও প্রসূতি-সংক্রান্ত বিভিন্ন সমস্যার চিকিৎসা দিয়ে থাকেন।\n\nতিনি ঢাকা মেডিকেল কলেজ হাসপাতাল থেকে এমবিবিএস এবং সিসিডি, বিসিএস (স্বাস্থ্য) ও এফসিপিএস ডিগ্রি অর্জন করেছেন। তিনি তার সমৃদ্ধ অভিজ্ঞতা, আধুনিক চিকিৎসা জ্ঞান এবং যত্নশীল সেবার মাধ্যমে রোগীদের নির্ভরযোগ্য চিকিৎসা প্রদান করে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Medicine",
+                  "Dr. S. A. Talukder",
+                  "Dr. S. A. Talukder is a Senior Consultant in Medicine at SAJIDA Hospital with over 24 years of professional experience. He specialises in Internal Medicine and is currently serving as an Assistant Professor in the Department of Medicine at the National Institute of Traumatology and Orthopaedic Rehabilitation (NITOR), Dhaka.\n\nDr. Talukder completed his MBBS from Rajshahi Medical College Hospital and earned DA, MRCP, and FCPS (Medicine) qualifications. Combining extensive experience with evidence-based medical practice, he provides trusted and comprehensive care for bone, joint, and musculoskeletal disorders.",
+                  "Senior Consultant",
+                  null,
+                  null,
+                  "মেডিসিন",
+                  "ডা. এস. এ. তালুকদার",
+                  "ডা. এস. এ. তালুকদার সাজেদা হাসপাতালের মেডিসিন বিভাগের সিনিয়র কনসালট্যান্ট। মেডিসিন বিষয়ে তার ২৪ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে ন্যাশনাল ইনস্টিটিউট অব ট্রমাটোলজি অ্যান্ড অর্থোপেডিক রিহ্যাবিলিটেশন (নিটোর), ঢাকা-এর মেডিসিন বিভাগের সহকারী অধ্যাপক হিসেবে কর্মরত আছেন এবং বিভিন্ন জটিল ও সাধারণ রোগের চিকিৎসা প্রদান করে থাকেন।\n\nতিনি রাজশাহী মেডিকেল কলেজ হাসপাতাল থেকে এমবিবিএস এবং ডিএ, এমআরসিপি ও এফসিপিএস (মেডিসিন) ডিগ্রি অর্জন করেছেন। তিনি আধুনিক চিকিৎসাবিজ্ঞান, পেশাগত অভিজ্ঞতা এবং মানবিক সেবার সমন্বয়ে রোগীদের কার্যকর চিকিৎসাসেবা প্রদান করে আসছেন।",
+                  "সিনিয়র কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Medicine",
+                  "Dr. Ziaur Rahman Chowdhury",
+                  "Dr. Ziaur Rahman Chowdhury is a Senior Consultant in Medicine at SAJIDA Hospital with over 22 years of professional experience. He specialises in Physical Medicine & Rehabilitation and is currently serving as an Associate Professor in the Department of Medicine at Bangladesh Medical University.\n\nDr. Chowdhury completed his MBBS from Jahurul Islam Medical College Hospital and earned CCD and MD (Physical Medicine & Rehabilitation) qualifications. His advanced medical knowledge, surgical expertise, and compassionate approach allow him to provide high-quality care for patients with orthopedic and musculoskeletal conditions.",
+                  "Senior Consultant",
+                  null,
+                  null,
+                  "মেডিসিন",
+                  "ডা. জিয়াউর রহমান চৌধুরী",
+                  "ডা. জিয়াউর রহমান চৌধুরী সাজেদা হাসপাতালের মেডিসিন বিভাগের সিনিয়র কনসালট্যান্ট। ফিজিক্যাল মেডিসিন অ্যান্ড রিহ্যাবিলিটেশন বিষয়ে তার ২২ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে বাংলাদেশ মেডিকেল বিশ্ববিদ্যালয়-এর মেডিসিন বিভাগের সহযোগী অধ্যাপক হিসেবে কর্মরত আছেন।\n\nতিনি জাহুরুল ইসলাম মেডিকেল কলেজ হাসপাতাল থেকে এমবিবিএস এবং সিসিডি ও এমডি (ফিজিক্যাল মেডিসিন অ্যান্ড রিহ্যাবিলিটেশন) ডিগ্রি অর্জন করেছেন।দীর্ঘদিনের চিকিৎসা অভিজ্ঞতা, আধুনিক ক্লিনিক্যাল জ্ঞান এবং রোগীর প্রতি আন্তরিক দায়বদ্ধতার মাধ্যমে তিনি মানসম্পন্ন চিকিৎসাসেবা দিয়ে আসছেন।",
+                  "সিনিয়র কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "General Surgery",
+                  "Dr. Mitul Chackraborty",
+                  "Dr. Mitul Chackraborty is a Consultant in General Surgery at SAJIDA Hospital with over 14 years of professional experience. He specialises in General, Laparoscopic, Colorectal, Breast, and Cancer Surgery and is currently associated with the National Institute of Cancer Research & Hospital, Dhaka.\n\nDr. Chackraborty completed his MBBS from Sir Salimullah Medical College Mitford Hospital and earned BCS, FCPS (Surgery), and MRCS (UK) qualifications. He has also received professional training in Endolaparoscopic Surgery as well as Endoscopy and Colonoscopy. With years of clinical experience and a commitment to patient-centred care, he delivers reliable diagnosis and treatment for a wide range of bone, joint, and musculoskeletal conditions.",
+                  "Consultant",
+                  null,
+                  null,
+                  "সাধারন সার্জারি",
+                  "ডা. মিতুল চক্রবর্তী",
+                  "ডা. মিতুল চক্রবর্তী সাজেদা হাসপাতালের জেনারেল সার্জারি বিভাগের কনসালট্যান্ট। জেনারেল, ল্যাপারোস্কোপিক, কোলোরেক্টাল, ব্রেস্ট ও ক্যান্সার সার্জারি বিষয়ে তার ১৪ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে ন্যাশনাল ইনস্টিটিউট অব ক্যান্সার রিসার্চ অ্যান্ড হাসপাতাল, ঢাকা-এ কর্মরত আছেন।\n\nতিনি স্যার সলিমুল্লাহ মেডিকেল কলেজ মিটফোর্ড হাসপাতাল থেকে এমবিবিএস এবং বিসিএস, এফসিপিএস (সার্জারি) ও এমআরসিএস (যুক্তরাজ্য) ডিগ্রি অর্জন করেছেন। এছাড়াও তিনি এন্ডোল্যাপারোস্কোপিক সার্জারি এবং এন্ডোস্কোপি ও কোলোনোস্কোপি বিষয়ে বিশেষ প্রশিক্ষণ গ্রহণ করেছেন। তিনি আধুনিক চিকিৎসা জ্ঞান, দীর্ঘ অভিজ্ঞতা এবং আন্তরিক সেবার মাধ্যমে রোগীদের মানসম্মত চিকিৎসাসেবা প্রদান করে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Pediatrics & NICU",
+                  "Dr. A. Z. M. Raihanur Rahman",
+                  "Dr. A. Z. M. Raihanur Rahman is a Consultant in Paediatrics at SAJIDA Hospital with over 15 years of professional experience. He specialises in Paediatric Gastroenterology and is currently associated with Bangladesh Medical University.\n\nDr. Rahman completed his MBBS from Sir Salimullah Medical College Mitford Hospital and earned DCH and MD (Paediatric Gastroenterology) qualifications. His extensive clinical experience, specialised expertise, and patient-focused approach enable him to provide comprehensive and dependable care for patients with bone, joint, and musculoskeletal disorders.",
+                  "Consultant",
+                  null,
+                  null,
+                  "শিশুরোগ ও এনআইসিইউ",
+                  "ডা. এ. জেড. এম. রাইহানুর রহমান",
+                  "ডা. এ. জেড. এম. রাইহানুর রহমান সাজেদা হাসপাতালের শিশু রোগ বিভাগের কনসালট্যান্ট। শিশু গ্যাস্ট্রোএন্টারোলজি বিষয়ে তার ১৫ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে বাংলাদেশ মেডিকেল বিশ্ববিদ্যালয়-এর সঙ্গে সম্পৃক্ত আছেন এবং শিশুদের পরিপাকতন্ত্র ও লিভার-সংক্রান্ত বিভিন্ন রোগের চিকিৎসা দিয়ে থাকেন।\n\nতিনি স্যার সলিমুল্লাহ মেডিকেল কলেজ মিটফোর্ড হাসপাতাল থেকে এমবিবিএস এবং ডিসিএইচ ও এমডি (পেডিয়াট্রিক গ্যাস্ট্রোএন্টারোলজি) ডিগ্রি অর্জন করেছেন। রোগীর প্রয়োজনকে অগ্রাধিকার দিয়ে আধুনিক চিকিৎসা জ্ঞান ও অভিজ্ঞতার সমন্বয়ে তিনি সেবা প্রদান করে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "General Surgery",
+                  "Dr. Biplob Chandra Bandha",
+                  "Dr. Biplob Chandra Bandha is a Consultant in General Surgery at SAJIDA Hospital with over 18 years of professional experience. He specialises in General Surgery and is currently serving as a Consultant in Surgery at Daudkandi Upazila Health Complex, Cumilla.\n\nDr. Bandha completed his MBBS from Sir Salimullah Medical College Mitford Hospital and earned BCS and FCPS (Surgery) qualifications. He has also received Basic Training in Laparoscopy. With a strong foundation in orthopedic care, extensive clinical experience, and a patient-centred approach, he delivers comprehensive and dependable treatment for bone, joint, and musculoskeletal disorders.",
+                  "Consultant",
+                  null,
+                  "https://engine.sajidahospital.org/media/mave_wsjYwo.png",
+                  "সাধারন সার্জারি",
+                  "ডা. বিপ্লব চন্দ্র বান্ধা",
+                  "ডা. বিপ্লব চন্দ্র বান্ধা সাজেদা হাসপাতালের জেনারেল সার্জারি বিভাগের কনসালট্যান্ট। জেনারেল সার্জারি বিষয়ে তার ১৮ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে দাউদকান্দি উপজেলা স্বাস্থ্য কমপ্লেক্স, কুমিল্লা-এ সার্জারি বিভাগের কনসালট্যান্ট হিসেবে কর্মরত আছেন।\n\nতিনি স্যার সলিমুল্লাহ মেডিকেল কলেজ মিটফোর্ড হাসপাতাল থেকে এমবিবিএস এবং বিসিএস ও এফসিপিএস (সার্জারি) ডিগ্রি অর্জন করেছেন। এছাড়াও তিনি ল্যাপারোস্কোপি বিষয়ে বেসিক প্রশিক্ষণ গ্রহণ করেছেন। রোগীর প্রয়োজনকে অগ্রাধিকার দিয়ে আধুনিক চিকিৎসা জ্ঞান ও অভিজ্ঞতার সমন্বয়ে তিনি সেবা প্রদান করে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
+                ],
+                [
                   "Cardiology",
-                  "Dr. Ashraful Alam",
-                  "MBBS, D-Card (Cardiology)",
-                  "Trained in Interventional Cardiology (India) Consultant National Heart Institute and Hospital",
-                  "Saturday Monday Thursday 5pm-6pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "হৃদপিণ্ড",
-                  "কার্ডিওলজি (হৃদরোগ)",
-                  "ডাঃ আশরাফুল আলম",
-                  "এমবিবিএস, ডি-কার্ড",
-                  "কনসালটেন্ট",
-                  "শনিবার, সোম ও বৃহস্পতি বিকেল ৫টা থেকে সন্ধ্যা ৬টা"
+                  "Dr. Muhammad Akib Jahan",
+                  "Dr. Muhammad Akib Jahan is a Consultant in Cardiology at SAJIDA Hospital with over 12 years of professional experience. He specialises in Cardiology and is currently associated with Sir Salimullah Medical College Mitford Hospital and Moynamoti Cantonment General Hospital, Cumilla.\n\nDr. Jahan completed his MBBS from Sir Salimullah Medical College Mitford Hospital and earned BCS and MD (Cardiology) qualifications. His expertise, professional experience, and commitment to quality care enable him to provide effective management of bone, joint, and musculoskeletal conditions.",
+                  "Consultant",
+                  null,
+                  null,
+                  "কার্ডিওলজি",
+                  "ডা. মুহাম্মদ আকিব জাহান",
+                  "ডা. মুহাম্মদ আকিব জাহান সাজেদা হাসপাতালের কার্ডিওলজি বিভাগের কনসালট্যান্ট। কার্ডিওলজি বিষয়ে তার ১২ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে স্যার সলিমুল্লাহ মেডিকেল কলেজ মিটফোর্ড হাসপাতাল এবং ময়নামতি ক্যান্টনমেন্ট জেনারেল হাসপাতাল, কুমিল্লা-এ কর্মরত আছেন এবং হৃদরোগ-সংক্রান্ত বিভিন্ন সমস্যার চিকিৎসা দিয়ে থাকেন।\n\nতিনি স্যার সলিমুল্লাহ মেডিকেল কলেজ মিটফোর্ড হাসপাতাল থেকে এমবিবিএস এবং বিসিএস ও এমডি (কার্ডিওলজি) ডিগ্রি অর্জন করেছেন। দক্ষতা, অভিজ্ঞতা এবং আধুনিক চিকিৎসা জ্ঞানের সমন্বয়ে তিনি রোগীদের জন্য বিশ্বস্ত চিকিৎসাসেবা প্রদান করে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
                 ],
                 [
-                  "Stomach, Liver",
-                  "Food and Nutrition Specialist",
-                  "Dr. Ishrat Jahan",
-                  "MSc, MPhil, PhD(Fellow)",
-                  "Nutritionist",
-                  "Sunday Tuesday Thursday 9am-3pm",
-                  "https://engine.sajidahospital.org/media/mave_zCfkZU.png",
-                  "পেট, যকৃত",
-                  "খাদ্য ও পুষ্টি বিশেষজ্ঞ",
-                  "ডাঃ ইসরাত জাহান",
-                  "এমএসসি, এমফিল, পিএইচডি (ফেলো)",
-                  "পুষ্টিবিদ",
-                  "রবি, মঙ্গল ও বৃহস্পতি সকাল ৯টা থেকে বিকেল ৩টা"
+                  "Gynae & OBS",
+                  "Dr. Monisha Mondal",
+                  "Dr. Monisha Mondal is a Consultant in Gynaecology & Obstetrics at SAJIDA Hospital with over 17 years of professional experience. She specialises in Gynaecology & Obstetrics, with expertise in TAH and VH procedures, and is currently associated with Sir Salimullah Medical College Mitford Hospital.\n\nDr. Mondal completed her MBBS from North East Medical College Hospital, Sylhet and earned BCS and DGO qualifications. Her medical expertise, clinical excellence, and patient-focused care ensure reliable treatment for various skin, hair, nail, and sexually transmitted disorders.",
+                  "Consultant",
+                  null,
+                  null,
+                  "গাইনি ও প্রসূতি",
+                  "ডা. মনীষা মণ্ডল",
+                  "ডা. মনীষা মণ্ডল সাজেদা হাসপাতালের গাইনি ও অবস বিভাগের কনসালট্যান্ট। গাইনি ও অবস বিষয়ে তার ১৭ বছরের অভিজ্ঞতা রয়েছে। তিনি TAH ও VH-সহ বিভিন্ন গাইনোকোলজিক্যাল সার্জারিতে দক্ষ এবং বর্তমানে স্যার সলিমুল্লাহ মেডিকেল কলেজ মিটফোর্ড হাসপাতাল-এ কর্মরত আছেন।\n\nতিনি নর্থ ইস্ট মেডিকেল কলেজ হাসপাতাল, সিলেট থেকে এমবিবিএস এবং বিসিএস ও ডিজিও ডিগ্রি অর্জন করেছেন। আধুনিক চিকিৎসা পদ্ধতি, পেশাগত দক্ষতা এবং দীর্ঘ অভিজ্ঞতার মাধ্যমে তিনি রোগীদের আস্থার সঙ্গে চিকিৎসাসেবা দিয়ে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Neurosurgery",
+                  "Dr. Md. Shah Newaz",
+                  "Dr. Md. Shah Newaz is an Assistant Professor of Neurosurgery at SAJIDA Hospital with over 10 years of professional experience. He specialises in Neurosurgery and is currently associated with Sir Salimullah Medical College Mitford Hospital.\n\nDr. Newaz completed his MBBS from Faridpur Medical College Hospital and earned BCS and MS (Neurosurgery) from Bangladesh Medical University. Backed by years of experience and strong clinical skills, he is committed to delivering comprehensive and reliable orthopedic care tailored to each patient's needs.",
+                  "Assistant Professor",
+                  null,
+                  "https://engine.sajidahospital.org/media/mave_jZPWdB.png",
+                  "নিউরোসার্জারি",
+                  "ডা. মো. শাহ নেওয়াজ",
+                  "ডা. মো. শাহ নেওয়াজ সাজেদা হাসপাতালের নিউরোসার্জারি বিভাগের সহকারী অধ্যাপক। নিউরোসার্জারি বিষয়ে তার ১০ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে স্যার সলিমুল্লাহ মেডিকেল কলেজ মিটফোর্ড হাসপাতাল-এ কর্মরত আছেন এবং মস্তিষ্ক, মেরুদণ্ড ও স্নায়ুতন্ত্র-সংক্রান্ত বিভিন্ন রোগের চিকিৎসা ও অস্ত্রোপচার করে থাকেন।\n\nতিনি ফরিদপুর মেডিকেল কলেজ হাসপাতাল থেকে এমবিবিএস এবং বাংলাদেশ মেডিকেল বিশ্ববিদ্যালয় থেকে বিসিএস ও এমএস (নিউরোসার্জারি) ডিগ্রি অর্জন করেছেন। তিনি তার সমৃদ্ধ অভিজ্ঞতা, আধুনিক চিকিৎসা জ্ঞান এবং যত্নশীল সেবার মাধ্যমে রোগীদের নির্ভরযোগ্য চিকিৎসা প্রদান করে আসছেন।",
+                  "সহকারী অধ্যাপক",
+                  null
+                ],
+                [
+                  "Orthopedics",
+                  "Dr. Ashikur Rahman",
+                  "Dr. Ashikur Rahman is a Consultant in Orthopedics at SAJIDA Hospital with over 11 years of professional experience. He specialises in Orthopedics and is currently associated with Ad-din Sakina Medical College & Hospital and Ad-din Barrister Rafique-ul Huq Hospital.\n\nDr. Rahman completed his MBBS from Faridpur Medical College Hospital and earned BCS and MS (Orthopedics) from Bangladesh Medical University. He has also received professional training at Holy Family Red Crescent Medical College Hospital, Dhaka. His specialised orthopedic expertise, clinical experience, and patient-centred care ensure reliable treatment for patients with musculoskeletal injuries and disorders.",
+                  "Consultant",
+                  null,
+                  null,
+                  "অর্থোপেডিক্স",
+                  "ডা. আশিকুর রহমান",
+                  "ডা. আশিকুর রহমান সাজেদা হাসপাতালের অর্থোপেডিকস বিভাগের কনসালট্যান্ট। অর্থোপেডিকস বিষয়ে তার ১১ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে আদ-দ্বীন সাকিনা মেডিকেল কলেজ ও হাসপাতাল এবং আদ-দ্বীন ব্যারিস্টার রফিক-উল-হক হাসপাতাল-এ কর্মরত আছেন এবং হাড়, জয়েন্ট ও মাংসপেশি-সংক্রান্ত বিভিন্ন রোগের চিকিৎসা দিয়ে থাকেন।\n\nতিনি ফরিদপুর মেডিকেল কলেজ হাসপাতাল থেকে এমবিবিএস এবং বাংলাদেশ মেডিকেল বিশ্ববিদ্যালয় থেকে বিসিএস ও এমএস (অর্থোপেডিকস) ডিগ্রি অর্জন করেছেন। এছাড়াও তিনি হলি ফ্যামিলি রেড ক্রিসেন্ট মেডিকেল কলেজ হাসপাতাল, ঢাকা-এ পেশাগত প্রশিক্ষণ গ্রহণ করেছেন। দীর্ঘদিনের চিকিৎসা অভিজ্ঞতা, আধুনিক ক্লিনিক্যাল জ্ঞান এবং রোগীর প্রতি আন্তরিক দায়বদ্ধতার মাধ্যমে তিনি মানসম্পন্ন চিকিৎসাসেবা দিয়ে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Gynae & OBS",
+                  "Prof. Dr. Kishwar Sultana",
+                  "Prof. Dr. Kishwar Sultana is a Professor of Gynaecology & Obstetrics at SAJIDA Hospital with over 34 years of professional experience. She specialises in Gynaecology & Obstetrics and is currently associated with Holy Family Red Crescent Medical College Hospital, Dhaka.\n\nProf. Dr. Sultana completed her MBBS from Dhaka Medical College Hospital and earned DGO, FCPS, and MCPS (Gynaecology & Obstetrics) qualifications. She has also received professional training in Laparoscopy and Gynaecological Laparoscopic Surgery. Her medical expertise, clinical excellence, and patient-focused care ensure reliable treatment for various skin, hair, nail, and sexually transmitted disorders.",
+                  "Professor",
+                  null,
+                  null,
+                  "গাইনি ও প্রসূতি",
+                  "প্রফেসর ডা. কিশওয়ার সুলতানা",
+                  "প্রফেসর ডা. কিশওয়ার সুলতানা সাজেদা হাসপাতালের গাইনি ও অবস বিভাগের প্রফেসর। গাইনি ও অবস বিষয়ে তার ৩৪ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে হলি ফ্যামিলি রেড ক্রিসেন্ট মেডিকেল কলেজ হাসপাতাল, ঢাকা-এ কর্মরত আছেন এবং নারীস্বাস্থ্য ও প্রসূতি-সংক্রান্ত বিভিন্ন সমস্যার চিকিৎসা দিয়ে থাকেন।\n\nতিনি ঢাকা মেডিকেল কলেজ হাসপাতাল থেকে এমবিবিএস এবং ডিজিও, এফসিপিএস ও এমসিপিএস (গাইনি ও অবস) ডিগ্রি অর্জন করেছেন। এছাড়াও তিনি ল্যাপারোস্কোপি ও গাইনোকোলজিক্যাল ল্যাপারোস্কোপিক সার্জারি বিষয়ে বিশেষ প্রশিক্ষণ গ্রহণ করেছেন। তিনি আধুনিক চিকিৎসা জ্ঞান, দীর্ঘ অভিজ্ঞতা এবং আন্তরিক সেবার মাধ্যমে রোগীদের মানসম্মত চিকিৎসাসেবা প্রদান করে আসছেন।",
+                  "প্রফেসর",
+                  null
+                ],
+                [
+                  "Cardiology",
+                  "Dr. Dewan Mohammad Karimul Islam",
+                  "Dr. Dewan Mohammad Karimul Islam is a Consultant in Cardiology at SAJIDA Hospital with over 23 years of professional experience. He specialises in Cardiology and Internal Medicine and is currently associated with the National Institute of Traumatology and Orthopaedic Rehabilitation (NITOR), Dhaka.\n\nDr. Islam completed his MBBS from Mymensingh Medical College & Hospital and earned BCS and MD (Cardiology) qualifications. His clinical excellence, years of professional experience, and dedication to patient care enable him to offer effective treatment for a wide range of orthopedic conditions.",
+                  "Consultant",
+                  null,
+                  null,
+                  "কার্ডিওলজি",
+                  "ডা. দেওয়ান মোহাম্মদ করিমুল ইসলাম",
+                  "ডা. দেওয়ান মোহাম্মদ করিমুল ইসলাম সাজেদা হাসপাতালের কার্ডিওলজি বিভাগের কনসালট্যান্ট। কার্ডিওলজি ও মেডিসিন বিষয়ে তার ২৩ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে ন্যাশনাল ইনস্টিটিউট অব ট্রমাটোলজি অ্যান্ড অর্থোপেডিক রিহ্যাবিলিটেশন (নিটোর), ঢাকা-এ কর্মরত আছেন এবং হৃদরোগ ও মেডিসিন-সংক্রান্ত বিভিন্ন সমস্যার চিকিৎসা দিয়ে থাকেন।\n\nতিনি ময়মনসিংহ মেডিকেল কলেজ ও হাসপাতাল থেকে এমবিবিএস এবং বিসিএস ও এমডি (কার্ডিওলজি) ডিগ্রি অর্জন করেছেন। রোগীর প্রয়োজনকে অগ্রাধিকার দিয়ে আধুনিক চিকিৎসা জ্ঞান ও অভিজ্ঞতার সমন্বয়ে তিনি সেবা প্রদান করে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Nephrology",
+                  "Dr. A. S. M. Sohel Bin Sayeed",
+                  "Dr. A. S. M. Sohel Bin Sayeed is a Consultant in Nephrology at SAJIDA Hospital with over 22 years of professional experience. He specialises in Nephrology and is currently serving as an Assistant Professor in the Department of Nephrology at Sir Salimullah Medical College Mitford Hospital.\n\nDr. Sayeed completed his MBBS from Rangpur Medical College Hospital and earned CCD and MD (Nephrology) qualifications. His advanced medical knowledge, surgical expertise, and compassionate approach allow him to provide high-quality care for patients with orthopedic and musculoskeletal conditions.",
+                  "Consultant",
+                  null,
+                  null,
+                  "কিডনী বিভাগ",
+                  "ডা. এ. এস. এম. সোহেল বিন সাঈদ",
+                  "ডা. এ. এস. এম. সোহেল বিন সাঈদ সাজেদা হাসপাতালের নেফ্রোলজি বিভাগের কনসালট্যান্ট। নেফ্রোলজি বিষয়ে তার ২২ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে স্যার সলিমুল্লাহ মেডিকেল কলেজ মিটফোর্ড হাসপাতাল-এর নেফ্রোলজি বিভাগের সহকারী অধ্যাপক হিসেবে কর্মরত আছেন এবং কিডনি-সংক্রান্ত বিভিন্ন রোগের চিকিৎসা দিয়ে থাকেন।\n\nতিনি রংপুর মেডিকেল কলেজ হাসপাতাল থেকে এমবিবিএস এবং সিসিডি ও এমডি (নেফ্রোলজি) ডিগ্রি অর্জন করেছেন। আধুনিক চিকিৎসা পদ্ধতি, পেশাগত দক্ষতা এবং দীর্ঘ অভিজ্ঞতার মাধ্যমে তিনি রোগীদের আস্থার সঙ্গে চিকিৎসাসেবা দিয়ে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Gynae & OBS",
+                  "Dr. Afroja Begum",
+                  "Dr. Afroja Begum (Lucky) is a Consultant in Gynaecology & Obstetrics at SAJIDA Hospital with over 30 years of professional experience. She specialises in Gynaecology & Obstetrics and is currently associated with Rohitpur General Hospital, Ramerkanda, Keraniganj.\n\nDr. Begum completed her MBBS from Rangpur Medical College Hospital and earned her MCPS (Gynaecology & Obstetrics) qualification. With her advanced medical knowledge, extensive clinical experience, and compassionate approach, she offers comprehensive care for skin, hair, nail, and sexually transmitted diseases.",
+                  "Consultant",
+                  null,
+                  null,
+                  "গাইনি ও প্রসূতি",
+                  "ডা. আফরোজা বেগম (লাকি)",
+                  "ডা. আফরোজা বেগম (লাকি) সাজেদা হাসপাতালের গাইনি ও অবস বিভাগের কনসালট্যান্ট। গাইনি ও অবস বিষয়ে তার ৩০ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে রোহিতপুর জেনারেল হাসপাতাল, রামেরকান্দা, কেরানীগঞ্জ-এ কর্মরত আছেন এবং নারীস্বাস্থ্য ও প্রসূতি-সংক্রান্ত বিভিন্ন সমস্যার চিকিৎসা দিয়ে থাকেন।\n\nতিনি রংপুর মেডিকেল কলেজ হাসপাতাল থেকে এমবিবিএস এবং এমসিপিএস (গাইনি ও অবস) ডিগ্রি অর্জন করেছেন। তিনি তার সমৃদ্ধ অভিজ্ঞতা, আধুনিক চিকিৎসা জ্ঞান এবং যত্নশীল সেবার মাধ্যমে রোগীদের নির্ভরযোগ্য চিকিৎসা প্রদান করে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Pediatric Surgery",
+                  "Dr. Mohammad Ali Palash",
+                  "Dr. Mohammad Ali Palash is a Consultant in Paediatric Surgery at SAJIDA Hospital with over 12 years of professional experience. He specialises in Paediatric Surgery and is currently associated with the Bangladesh Children's Hospital & Institute.\n\nDr. Palash completed his MBBS from Sher-e-Bangla Medical College (SBMC) and earned his MS in Paediatric Surgery qualification. He has also completed CCD training. With years of clinical experience and a commitment to patient-centred care, he delivers reliable diagnosis and treatment for a wide range of bone, joint, and musculoskeletal conditions.",
+                  "Consultant",
+                  null,
+                  "https://engine.sajidahospital.org/media/mave_ueeFNl.png",
+                  "শিশুরোগ সার্জারি",
+                  "ডা. মোহাম্মদ আলী পলাশ",
+                  "ডা. মোহাম্মদ আলী পলাশ সাজেদা হাসপাতালের শিশু সার্জারি বিভাগের কনসালট্যান্ট। শিশু সার্জারি বিষয়ে তার ১২ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে বাংলাদেশ শিশু হাসপাতাল ও ইনস্টিটিউট-এ কর্মরত আছেন এবং শিশুদের বিভিন্ন জটিল ও সাধারণ সার্জিক্যাল সমস্যার চিকিৎসা দিয়ে থাকেন।\n\nতিনি শের-ই-বাংলা মেডিকেল কলেজ (এসবিএমসি) থেকে এমবিবিএস এবং এমএস (পেডিয়াট্রিক সার্জারি) ডিগ্রি অর্জন করেছেন। এছাড়াও তিনি সিসিডি প্রশিক্ষণ সম্পন্ন করেছেন। দীর্ঘ পেশাগত অভিজ্ঞতা, চিকিৎসাগত দক্ষতা এবং আন্তরিক পরিচর্যার মাধ্যমে তিনি রোগীদের সর্বোত্তম সেবা প্রদানে প্রতিশ্রুতিবদ্ধ।",
+                  "কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Orthopedics",
+                  "Dr. Sourav Nath Shuvo",
+                  "Dr. Sourav Nath Shuvo is a Consultant in Orthopedics at SAJIDA Hospital with over 12 years of professional experience. He specialises in Orthopedics and is currently associated with Sir Salimullah Medical College Mitford Hospital.\n\nDr. Shuvo completed his MBBS and earned BCS and D-Orthopedic qualifications from Bangladesh Medical University. His extensive clinical experience, specialised expertise, and patient-focused approach enable him to provide comprehensive and dependable care for patients with bone, joint, and musculoskeletal disorders.",
+                  null,
+                  null,
+                  "https://engine.sajidahospital.org/media/mave_q3aguX.png",
+                  "অর্থোপেডিক্স",
+                  "ডা. সৌরভ নাথ শুভ",
+                  "ডা. সৌরভ নাথ শুভ সাজেদা হাসপাতালের অর্থোপেডিকস বিভাগের কনসালট্যান্ট। অর্থোপেডিকস বিষয়ে তার ১২ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে স্যার সলিমুল্লাহ মেডিকেল কলেজ মিটফোর্ড হাসপাতাল-এ কর্মরত আছেন এবং হাড়, জয়েন্ট ও মাংসপেশি-সংক্রান্ত বিভিন্ন রোগের চিকিৎসা দিয়ে থাকেন।\n\nতিনি বাংলাদেশ মেডিকেল বিশ্ববিদ্যালয় থেকে এমবিবিএস এবং বিসিএস ও ডি-অর্থোপেডিক ডিগ্রি অর্জন করেছেন। তিনি আধুনিক চিকিৎসাবিজ্ঞান, পেশাগত অভিজ্ঞতা এবং মানবিক সেবার সমন্বয়ে রোগীদের কার্যকর চিকিৎসাসেবা প্রদান করে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
+                ],
+                [
+                  "Dermatology & Venereology",
+                  "Dr. Noor-E-Jannat Maneya",
+                  "Dr. Nur-E-Jannat Maneya is a Consultant in the Skin & VD Department at SAJIDA Hospital, with 13 years of experience in Dermatology and Venereology. She is currently working at Aurora Skin & Aesthetics, where she provides treatment for various skin, hair, nail, and sexually transmitted diseases.\n\nDr. Maneya completed her MBBS from Holy Family Red Crescent Medical College Hospital, Dhaka, and earned DDV and MD (Dermatology & Venereology) degrees. She has also received specialised training in Dermatology, Trichoscopy, and Onychoscopy in Bangalore, India, and completed fellowships in Dermatosurgery, Aesthetic Surgery, and Laser treatment. With her extensive clinical experience, modern medical knowledge, and dedication to patient care, she is committed to providing high-quality and comprehensive dermatological care.",
+                  "Consultant (Skin & VD)",
+                  null,
+                  "https://engine.sajidahospital.org/media/mave_12macX.png",
+                  "চর্ম ও যৌনরোগ",
+                  "ডা. নূর-ই-জান্নাত মানেয়া",
+                  "ডা. নূর-ই-জান্নাত মানেয়া সাজেদা হাসপাতালের স্কিন অ্যান্ড ভিডি বিভাগের কনসালট্যান্ট। চর্মরোগ ও যৌনরোগ (স্কিন অ্যান্ড ভিডি) বিষয়ে তার ১৩ বছরের অভিজ্ঞতা রয়েছে। তিনি বর্তমানে অরোরা স্কিন অ্যান্ড অ্যাস্থেটিকস-এ কর্মরত আছেন এবং ত্বক, চুল, নখ ও যৌনরোগ-সংক্রান্ত বিভিন্ন সমস্যার চিকিৎসা দিয়ে থাকেন।\n\nতিনি হলি ফ্যামিলি রেড ক্রিসেন্ট মেডিকেল কলেজ হাসপাতাল, ঢাকা থেকে এমবিবিএস এবং ডিডিভি ও এমডি (ডার্মাটোলজি অ্যান্ড ভেনেরিওলজি) ডিগ্রি অর্জন করেছেন। এছাড়াও তিনি ডার্মাটোলজি, ভারতের বেঙ্গালুরুতে ট্রাইকোস্কপি ও অনাইকোস্কপি বিষয়ে বিশেষ প্রশিক্ষণ গ্রহণ করেছেন এবং ডার্মাটোসার্জারি, অ্যাস্থেটিক সার্জারি ও লেজার বিষয়ে ফেলোশিপ সম্পন্ন করেছেন। দীর্ঘদিনের চিকিৎসা অভিজ্ঞতা, আধুনিক ক্লিনিক্যাল জ্ঞান এবং রোগীর প্রতি আন্তরিক দায়বদ্ধতার মাধ্যমে তিনি মানসম্পন্ন চিকিৎসাসেবা দিয়ে আসছেন।",
+                  "কনসালট্যান্ট",
+                  null
                 ]
               ],
               "visibleColumns": [
@@ -9810,12 +10302,9 @@
                 true,
                 true,
                 true,
-                true,
-                true,
                 true
               ],
               "filterColumns": [
-                "Body Part",
                 "Department"
               ]
             },
@@ -10075,374 +10564,7 @@
     ],
     "status": 1,
     "created_at": "2025-08-20T15:20:37.000000Z",
-    "updated_at": "2026-07-01T13:21:51.000000Z",
-    "favicon_mave": null,
-    "cards_mave": [],
-    "events_mave": [],
-    "footers_mave": [],
-    "medias_mave": [],
-    "menus_mave": [],
-    "navbars_mave": [],
-    "press_releases_mave": [],
-    "sliders_mave": []
-  },
-  {
-    "id": 149,
-    "slug": null,
-    "type": "Footer",
-    "favicon_id": 10,
-    "page_name_en": "Main Footer",
-    "page_name_bn": "Main Footer",
-    "head": null,
-    "body": [
-      {
-        "_id": "section-1758709122558-8fyf897ca",
-        "title": "Section 1",
-        "data": [
-          {
-            "_id": "component-1758709492403-4q23fybeo",
-            "type": "media",
-            "value": null,
-            "settings": [],
-            "_mave": {
-              "id": 523,
-              "title": "Logo (10).png",
-              "file_name": "mave_J50hDp.png",
-              "file_type": "image/png",
-              "file_path": "media/mave_J50hDp.png",
-              "file_size": null,
-              "tags": null,
-              "created_at": "2025-09-25T10:49:17.000000Z",
-              "updated_at": "2025-09-25T10:49:17.000000Z"
-            },
-            "sectionIndex": 0,
-            "index": 0,
-            "id": 523
-          },
-          {
-            "_id": "component-1758709557133-hband3gf9",
-            "type": "description",
-            "value": "<p><span style=\"color: rgb(136, 136, 136);\">A dedicated team of experienced doctors, nurses, technologists, and support staff deliver patient-friendly, quality, integrated healthcare services, including emergency services, surgery, diagnostics, and specialised treatments.</span></p><p><span style=\"color: rgb(136, 136, 136);\">To continuously improve, a Quality Team monitors care standards and gathers patient feedback, with additional insights collected independently after service.&nbsp;</span></p>",
-            "settings": [],
-            "_mave": {
-              "fontSize": "medium",
-              "primaryColor": "#000000",
-              "secondaryColor": "#000000",
-              "textAlign": "left",
-              "fontWeight": "normal",
-              "isDualColor": false,
-              "altText": null,
-              "altContent": "<p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">এখানে রোগীবান্ধব ও মানসম্মত পরিবেশে অভিজ্ঞ ডাক্তার, নার্স, টেকনোলজিস্ট ও সেবাকর্মীদের একটি দল কাজ করছেন। তারা জরুরি সেবা, সার্জারি, ডায়াগনস্টিক এবং বিভিন্ন বিশেষায়িত চিকিৎসাসহ সমন্বিত স্বাস্থ্যসেবা প্রদান করেন।</span></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">সেবার মান আরও উন্নত করতে একটি কোয়ালিটি টিম নিয়মিতভাবে রোগীসেবার মান পর্যবেক্ষণ করে এবং রোগীদের মতামত গ্রহণ করে। এছাড়া, রোগী সেবা নিয়ে যাওয়ার পর ভিন্ন একটি প্রতিষ্ঠানের মাধ্যমে তাদের অভিজ্ঞতা ও মতামত সংগ্রহ করা হয়।&nbsp;</span></p>",
-              "showAltContent": true
-            },
-            "sectionIndex": 0,
-            "index": 1
-          }
-        ]
-      },
-      {
-        "_id": "section-1758709602784-tippe7gqj",
-        "title": "Section 2",
-        "data": [
-          {
-            "_id": "component-1758709620605-ck45x9van",
-            "type": "title",
-            "value": "<p>Contact Us</p>",
-            "settings": [],
-            "_mave": {
-              "fontSize": "medium",
-              "primaryColor": "#000000",
-              "secondaryColor": "#000000",
-              "textAlign": "left",
-              "fontWeight": "normal",
-              "isDualColor": false,
-              "secondPartText": null,
-              "altText": "<p>যোগাযোগ করুন</p>",
-              "altSecondPartText": "<p>যোগাযোগ করুন</p>",
-              "showAltContent": true
-            },
-            "sectionIndex": 1,
-            "index": 0
-          },
-          {
-            "_id": "component-1758709683863-0o2l94f88",
-            "type": "description",
-            "value": "<p>Mob: 01777-772500</p><p><span style=\"background-color: rgb(249, 249, 249);\">Zinzira, Keraniganj, Dhaka</span></p><p>Keraniganj</p><p>1310</p>",
-            "settings": [],
-            "_mave": {
-              "fontSize": "medium",
-              "primaryColor": "#000000",
-              "secondaryColor": "#000000",
-              "textAlign": "left",
-              "fontWeight": "normal",
-              "isDualColor": false,
-              "altText": null,
-              "altContent": "<p>মোবাইল: ০১৭৭৭-৭৭২৫০০</p><p><span style=\"background-color: rgb(249, 249, 249);\">জিনজিরা, কেরানীগঞ্জ, ঢাকা</span></p><p>কেরানীগঞ্জ</p><p>১৩১০<span style=\"background-color: transparent; color: rgb(0, 0, 0);\"> </span></p>",
-              "showAltContent": true
-            },
-            "sectionIndex": 1,
-            "index": 1
-          }
-        ]
-      },
-      {
-        "_id": "section-1758709727192-kuu18get2",
-        "title": "Section 3",
-        "data": [
-          {
-            "_id": "component-1758709737909-n1clmz8ln",
-            "type": "menu",
-            "value": null,
-            "settings": [],
-            "_mave": {
-              "id": 22,
-              "name": "Quicklinks",
-              "menu_item_ids": [
-                62,
-                40,
-                137
-              ],
-              "menu_items": [
-                {
-                  "id": 62,
-                  "title": "About Us",
-                  "title_bn": "About Us",
-                  "link": "/about",
-                  "parent_id": null,
-                  "created_at": null,
-                  "updated_at": "2025-09-25T07:39:47.000000Z",
-                  "all_children": []
-                },
-                {
-                  "id": 40,
-                  "title": "Contact Us",
-                  "title_bn": "যোগাযোগ",
-                  "link": "/contact",
-                  "parent_id": null,
-                  "created_at": null,
-                  "updated_at": "2025-09-25T08:08:37.000000Z",
-                  "all_children": []
-                },
-                {
-                  "id": 137,
-                  "title": "Our Services",
-                  "title_bn": "Our Services",
-                  "link": "/services",
-                  "parent_id": null,
-                  "created_at": null,
-                  "updated_at": "2025-09-25T07:42:53.000000Z",
-                  "all_children": []
-                }
-              ],
-              "altTitle": null
-            },
-            "sectionIndex": 2,
-            "index": 0,
-            "menuMode": "vertical",
-            "menuTheme": "light",
-            "menu_item_ids": [
-              62,
-              40,
-              137
-            ]
-          }
-        ]
-      },
-      {
-        "_id": "section-1758710505115-k4fyby4ni",
-        "title": "Section 3 (Copy)_",
-        "data": [
-          {
-            "_id": "component-1758710505115-1muyjxkv6",
-            "type": "menu",
-            "value": null,
-            "settings": [],
-            "_mave": {
-              "id": 23,
-              "name": "Resources",
-              "menu_item_ids": [
-                134,
-                135
-              ],
-              "menu_items": [
-                {
-                  "id": 134,
-                  "title": "Case Stories",
-                  "title_bn": "Case stories",
-                  "link": "/stories",
-                  "parent_id": null,
-                  "created_at": null,
-                  "updated_at": "2025-09-25T08:06:24.000000Z",
-                  "all_children": []
-                },
-                {
-                  "id": 135,
-                  "title": "Specialists",
-                  "title_bn": "Specialists",
-                  "link": "/specialists",
-                  "parent_id": null,
-                  "created_at": null,
-                  "updated_at": "2025-09-25T08:09:29.000000Z",
-                  "all_children": []
-                }
-              ],
-              "altTitle": null
-            },
-            "sectionIndex": 3,
-            "index": 0,
-            "menuMode": "vertical",
-            "menuTheme": "light",
-            "menu_item_ids": [
-              134,
-              135
-            ]
-          }
-        ]
-      },
-      {
-        "_id": "section-1758710477492-1wvnhavpq",
-        "title": "Section 4",
-        "data": [
-          {
-            "_id": "component-1758789155841-sj8n1d1mu",
-            "type": "button",
-            "value": null,
-            "settings": [],
-            "_mave": {
-              "text": "Visit SAJIDA Foundation Website",
-              "altText": "সাজেদা ফাউন্ডেশনের ওয়েবসাইট ভিজিট করুন",
-              "showAltText": true,
-              "icon": null,
-              "action": {
-                "type": "external_link",
-                "url": "https://www.sajida.org"
-              },
-              "alignment": "left"
-            },
-            "sectionIndex": 4,
-            "index": 0,
-            "id": "component-1758789155841-sj8n1d1mu"
-          }
-        ]
-      },
-      {
-        "_id": "section-1758710687366-3cff2pnty",
-        "title": "Section 6",
-        "data": [
-          {
-            "_id": "component-1758790549800-8cxcmibqa",
-            "type": "testimonial",
-            "value": null,
-            "settings": [],
-            "_mave": {
-              "testimonials": [
-                {
-                  "id": 1758790681690,
-                  "quote": "sdfsd",
-                  "author": "https://www.facebook.com/NGOSAJIDA",
-                  "rating": 5,
-                  "image": {
-                    "id": 525,
-                    "title": "Component 50.png",
-                    "file_name": "mave_7p9ifj.png",
-                    "file_type": "image/png",
-                    "file_path": "media/mave_7p9ifj.png",
-                    "file_size": null,
-                    "tags": null,
-                    "created_at": "2025-09-25T08:56:42.000000Z",
-                    "updated_at": "2025-09-25T08:56:42.000000Z"
-                  },
-                  "altQuote": null,
-                  "altAuthor": null
-                },
-                {
-                  "id": 1758790727001,
-                  "quote": "sdfdsf",
-                  "author": "https://www.youtube.com/@sajidafoundation1993",
-                  "rating": 5,
-                  "image": {
-                    "id": 528,
-                    "title": "Component 48.png",
-                    "file_name": "mave_sDI6Dv.png",
-                    "file_type": "image/png",
-                    "file_path": "media/mave_sDI6Dv.png",
-                    "file_size": null,
-                    "tags": null,
-                    "created_at": "2025-09-25T08:56:42.000000Z",
-                    "updated_at": "2025-09-25T08:56:42.000000Z"
-                  },
-                  "altQuote": null,
-                  "altAuthor": null
-                },
-                {
-                  "id": 1758790788625,
-                  "quote": "sdfsdf",
-                  "author": "https://linkedin.com/company/sajida-foundation",
-                  "rating": 5,
-                  "image": {
-                    "id": 524,
-                    "title": "Component 46.png",
-                    "file_name": "mave_XnraPC.png",
-                    "file_type": "image/png",
-                    "file_path": "media/mave_XnraPC.png",
-                    "file_size": null,
-                    "tags": null,
-                    "created_at": "2025-09-25T08:56:40.000000Z",
-                    "updated_at": "2025-09-25T08:56:40.000000Z"
-                  },
-                  "altQuote": null,
-                  "altAuthor": null
-                }
-              ],
-              "layout": "grid",
-              "font": "Arial",
-              "color": "#000000",
-              "background": "#ffffff"
-            },
-            "sectionIndex": 5,
-            "index": 0
-          }
-        ]
-      },
-      {
-        "_id": "section-1758710822155-wwb67g4eo",
-        "title": "Section 7",
-        "data": [
-          {
-            "_id": "component-1758710860797-52plqdzrs",
-            "type": "description",
-            "value": "<p>©2026 SAJIDA Hospital | All Rights Reserved. Design &amp; Development <span style=\"color: rgb(0, 102, 204);\">Ether Tech</span></p>",
-            "settings": [],
-            "_mave": {
-              "fontSize": "medium",
-              "primaryColor": "#000000",
-              "secondaryColor": "#000000",
-              "textAlign": "left",
-              "fontWeight": "normal",
-              "isDualColor": false,
-              "altText": null,
-              "altContent": "<p>©২০২৬ সাজেদা হাসপাতাল | সর্বস্বত্ব সংরক্ষিত। নকশা ও উন্নয়ন: <span style=\"color: rgb(0, 102, 204);\">Ether Tech</span></p>",
-              "showAltContent": true
-            },
-            "sectionIndex": 6,
-            "index": 0
-          }
-        ]
-      }
-    ],
-    "additional": [
-      {
-        "pageType": "Footer",
-        "metaTitle": "Main Footer",
-        "metaDescription": null,
-        "keywords": [],
-        "metaImage": null,
-        "metaImageAlt": null
-      }
-    ],
-    "status": 1,
-    "created_at": "2025-09-24T20:15:57.000000Z",
-    "updated_at": "2026-06-24T05:47:44.000000Z",
+    "updated_at": "2026-09-21T09:59:37.000000Z",
     "favicon_mave": null,
     "cards_mave": [],
     "events_mave": [],
