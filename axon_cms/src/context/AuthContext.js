@@ -180,6 +180,31 @@ export const AuthProvider = ({ children }) => {
               ? JSON.parse(storedOrganization)
               : parsedUser.organization || null;
 
+            // Tenant users can only use their own org. Clear a stale header
+            // left over from a previous super-admin session.
+            if (
+              !parsedUser.is_super_admin &&
+              parsedUser.organization_id != null
+            ) {
+              const userOrgId = Number(parsedUser.organization_id);
+              const storedOrgId =
+                parsedOrganization?.id != null
+                  ? Number(parsedOrganization.id)
+                  : null;
+
+              if (storedOrgId !== userOrgId) {
+                parsedOrganization = parsedUser.organization || null;
+                if (parsedOrganization) {
+                  localStorage.setItem(
+                    "organization",
+                    JSON.stringify(parsedOrganization)
+                  );
+                } else {
+                  localStorage.removeItem("organization");
+                }
+              }
+            }
+
             dispatch({
               type: "INITIALIZE",
               payload: {
@@ -235,9 +260,15 @@ export const AuthProvider = ({ children }) => {
       localStorage.setItem("token", token);
       localStorage.setItem("user", JSON.stringify(user));
 
-      let activeOrganization = organization || null;
+      let activeOrganization =
+        organization || user?.organization || null;
       if (activeOrganization) {
-        localStorage.setItem("organization", JSON.stringify(activeOrganization));
+        localStorage.setItem(
+          "organization",
+          JSON.stringify(activeOrganization)
+        );
+      } else {
+        localStorage.removeItem("organization");
       }
 
       dispatch({

@@ -14,6 +14,11 @@ const ensureOrganizationContext: RequestHandler = (req, res, next) => {
 
   const allowsBypass = path === 'organizations' || path.startsWith('organizations/');
 
+  const userOrganizationId =
+    user?.organization_id != null && /^\d+$/.test(String(user.organization_id))
+      ? parseInt(String(user.organization_id), 10)
+      : null;
+
   if (user?.is_super_admin) {
     if (parsedHeaderOrgId !== null) {
       OrganizationContext.set(parsedHeaderOrgId);
@@ -24,11 +29,11 @@ const ensureOrganizationContext: RequestHandler = (req, res, next) => {
     } else {
       OrganizationContext.bypass();
     }
-  } else if (user?.organization_id) {
-    if (parsedHeaderOrgId !== null && parsedHeaderOrgId !== user.organization_id) {
+  } else if (userOrganizationId !== null) {
+    if (parsedHeaderOrgId !== null && parsedHeaderOrgId !== userOrganizationId) {
       return res.status(403).json({ message: 'You do not have access to this organization.' });
     }
-    OrganizationContext.set(user.organization_id);
+    OrganizationContext.set(userOrganizationId);
   } else if (parsedHeaderOrgId !== null) {
     OrganizationContext.set(parsedHeaderOrgId);
   }
