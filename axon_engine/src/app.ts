@@ -32,9 +32,13 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }));
 
 app.use('/uploads', express.static(path.resolve('uploads')));
 
-// Legacy Laravel public assets (media/, banners/, etc.)
+// Seeded/legacy file_path values are stored as "media/<file>".
+// Serve those from UPLOAD_DIR (default uploads/media), which is where files actually live.
+const mediaUploadDir = path.resolve(process.env.UPLOAD_DIR || 'uploads/media');
+app.use('/media', express.static(mediaUploadDir));
+
+// Optional legacy Laravel public assets (banners/, etc.) if the old tree exists.
 const legacyPublicDir = path.resolve(__dirname, '../../headless-engine/public');
-app.use('/media', express.static(path.join(legacyPublicDir, 'media')));
 app.use('/banners', express.static(path.join(legacyPublicDir, 'banners')));
 app.use(express.static(legacyPublicDir));
 
