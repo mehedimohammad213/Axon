@@ -2,9 +2,9 @@ import { runOrganizationSeeder } from '../utils/organizationSeeder';
 import type { DbContext } from '../db';
 
 export const CONFIG = {
-  label: 'Ether Technologies Ltd.',
+  label: 'TECH',
   slug: 'ethertech',
-  name: 'Ether Technologies Ltd.',
+  name: 'TECH',
   email: 'info@ethertech.local',
   adminEmail: 'admin@ethertech.local',
   adminName: 'Ethertech Admin',

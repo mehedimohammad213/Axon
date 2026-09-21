@@ -2,9 +2,9 @@ import { runOrganizationSeeder } from '../utils/organizationSeeder';
 import type { DbContext } from '../db';
 
 export const CONFIG = {
-  label: 'Sajida Hospital',
+  label: 'hospital',
   slug: 'sajida-hospital',
-  name: 'Sajida Hospital',
+  name: 'hospital',
   email: 'info@sajida.local',
   phone: '01777772500',
   adminEmail: 'admin@sajida.local',

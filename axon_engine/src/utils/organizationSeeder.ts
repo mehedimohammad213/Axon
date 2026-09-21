@@ -67,11 +67,15 @@ async function ensureOrganization(db: DbContext, config: any) {
       });
 
       await seedDefaultRolesForOrganization(organization.id, trx);
-    } else if (!organization.site_key) {
-      await trx.update('organizations', { id: organization.id }, {
-        site_key: generateSiteKey(),
+    } else {
+      const updates: Record<string, unknown> = {
+        name: config.name,
         updated_at: now,
-      });
+      };
+      if (!organization.site_key) {
+        updates.site_key = generateSiteKey();
+      }
+      await trx.update('organizations', { id: organization.id }, updates);
       organization = await trx.findOne('organizations', { id: organization.id });
     }
 

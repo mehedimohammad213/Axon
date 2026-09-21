@@ -2,9 +2,9 @@ import { runOrganizationSeeder } from '../utils/organizationSeeder';
 import type { DbContext } from '../db';
 
 export const CONFIG = {
-  label: 'United Aygaz LPG Ltd.',
+  label: 'LPG',
   slug: 'united-aygaz',
-  name: 'United Aygaz LPG Ltd.',
+  name: 'LPG',
   email: 'info@unitedaygaz.com',
   adminEmail: 'admin@aygaz.local',
   adminName: 'Aygaz Admin',

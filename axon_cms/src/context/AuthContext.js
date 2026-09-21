@@ -78,19 +78,11 @@ function resolveSuperAdminOrganization(organizations, currentOrganization) {
     return currentOrganization;
   }
 
-  const PLATFORM_SLUGS = new Set(["headless-platform", "mave-platform"]);
-  const tenantOrganizations = organizations.filter(
-    (org) => !PLATFORM_SLUGS.has(org.slug)
+  const headlessPlatform = organizations.find(
+    (org) => org.slug === "headless-platform" || org.slug === "mave-platform"
   );
-  const validCurrent = currentOrganization
-    ? organizations.find((org) => org.id === currentOrganization.id)
-    : null;
 
-  if (validCurrent && !PLATFORM_SLUGS.has(validCurrent.slug)) {
-    return validCurrent;
-  }
-
-  return tenantOrganizations[0] || organizations[0] || currentOrganization;
+  return headlessPlatform || organizations[0] || currentOrganization;
 }
 
 export const AuthProvider = ({ children }) => {

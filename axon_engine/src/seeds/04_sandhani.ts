@@ -2,9 +2,9 @@ import { runOrganizationSeeder } from '../utils/organizationSeeder';
 import type { DbContext } from '../db';
 
 export const CONFIG = {
-  label: 'Sandhani Life Insurance',
+  label: 'SLIC',
   slug: 'sandhani-life',
-  name: 'Sandhani Life Insurance',
+  name: 'SLIC',
   email: 'info@sandhanilife.com',
   adminEmail: 'admin@sandhani.local',
   adminName: 'Sandhani Admin',

@@ -4,7 +4,7 @@ import type { DbContext } from '../db';
 export const CONFIG = {
   label: 'CARB',
   slug: 'carb',
-  name: 'CARB — Centre for Action Research Barind',
+  name: 'CARB',
   email: 'info@carb.local',
   adminEmail: 'admin@carb.local',
   adminName: 'CARB Admin',

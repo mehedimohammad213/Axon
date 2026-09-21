@@ -18,7 +18,8 @@ async function findAllWithUserCounts() {
      FROM organizations
      LEFT JOIN users ON users.organization_id = organizations.id
      GROUP BY organizations.id
-     ORDER BY organizations.id DESC`
+     ORDER BY CASE WHEN organizations.slug = 'headless-platform' THEN 0 ELSE 1 END,
+              organizations.id DESC`
   );
 }
 

@@ -2,9 +2,9 @@ import { runOrganizationSeeder } from '../utils/organizationSeeder';
 import type { DbContext } from '../db';
 
 export const CONFIG = {
-  label: 'Al Muslim Group',
+  label: 'GRP',
   slug: 'al-muslim',
-  name: 'Al Muslim Group',
+  name: 'GRP',
   email: 'info@almuslim.local',
   adminEmail: 'admin@almuslim.local',
   adminName: 'Al Muslim Admin',
