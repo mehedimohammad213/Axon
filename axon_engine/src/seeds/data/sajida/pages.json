@@ -6324,190 +6324,331 @@
     },
     "body": [
       {
-        "_id": "section-1756291372339-vm8tw0i0j",
+        "_id": "section-1756291747947-qdsbshu60",
         "title": "Section 1",
         "data": [
           {
-            "_id": "component-1756291401019-jutid3b18",
-            "type": "media",
-            "value": null,
+            "_id": "component-1756291750707-p9w9kugsd",
+            "type": "title",
+            "value": "<p>A RAY OF HOPE: A CHILD'S FIGHT AGAINST LEUKAEMIA</p>",
             "settings": [],
             "_mave": {
-              "id": 503,
-              "title": "sajida hospital_003 (1)-min.png",
-              "file_name": "mave_0sT1O4.png",
-              "file_type": "image/png",
-              "file_path": "media/mave_0sT1O4.png",
-              "file_size": null,
-              "tags": null,
-              "created_at": "2025-09-15T07:26:45.000000Z",
-              "updated_at": "2025-09-15T07:26:45.000000Z"
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": "<p>আশার আলো: লিউকেমিয়ার বিরুদ্ধে এক শিশুর লড়াই</p>",
+              "altSecondPartText": null,
+              "showAltContent": true
             },
             "sectionIndex": 0,
-            "index": 0,
-            "id": 503
-          }
-        ]
-      },
-      {
-        "_id": "section-1756291430612-0pew9eu0l",
-        "title": "Section 2",
-        "data": [
-          {
-            "_id": "component-1756291435347-mw96qmpr6",
-            "type": "titledescription",
-            "value": null,
-            "settings": [],
-            "_mave": {
-              "title": "OUR CASE STORIES",
-              "altTitle": null,
-              "description": "<p><span style=\"background-color: rgb(249, 249, 249); color: rgb(34, 34, 34);\">Hospital &amp; Doctor Team</span></p>",
-              "altDescription": null,
-              "linkType": "page",
-              "link": "/case-stories?page_id=135&pageName=Case Stories",
-              "linkPageId": 135,
-              "isExternal": false,
-              "target": "_self",
-              "titleColor": "#000000",
-              "altTitleColor": "#000000",
-              "isDualColor": false,
-              "titleFontSize": "medium",
-              "titleFontWeight": "normal",
-              "titleAlign": "left"
-            },
-            "sectionIndex": 1,
             "index": 0
           },
           {
-            "_id": "component-1756291602155-52khecw6g",
+            "_id": "component-1756291775651-ar5mtxt1r",
             "type": "media",
             "value": null,
             "settings": [],
             "_mave": {
-              "id": 458,
-              "title": "Gemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5p.jpeg",
-              "file_name": "mave_hV2Vu4.jpg",
-              "file_type": "image/jpeg",
-              "file_path": "media/mave_hV2Vu4.jpg",
+              "id": 553,
+              "title": "Nur-Hospital.width-695.format-webp (1).webp",
+              "file_name": "mave_xNIFCH.webp",
+              "file_type": "image/webp",
+              "file_path": "media/mave_xNIFCH.webp",
               "file_size": null,
-              "tags": [
-                "rango",
-                "camelion",
-                "logo",
-                "icon",
-                "colors",
-                "mave",
-                "cms",
-                "animal",
-                "red",
-                "green",
-                "blue"
-              ],
-              "created_at": "2024-12-24T08:37:01.000000Z",
-              "updated_at": "2024-12-24T09:23:47.000000Z"
+              "tags": null,
+              "created_at": "2025-11-23T12:29:25.000000Z",
+              "updated_at": "2025-11-23T12:29:25.000000Z"
             },
-            "sectionIndex": 1,
+            "sectionIndex": 0,
             "index": 1,
-            "id": 458
+            "id": 553
           },
           {
-            "_id": "component-1756291607882-sjzoml4zt",
-            "type": "titledescription",
-            "value": null,
+            "_id": "component-1756291781163-p3k3lsaup",
+            "type": "description",
+            "value": "<p>“Thanks to the support he’s received, he can attend school without worry, keep up his hygiene, and concentrate on his studies,”- shares Nur’s parents</p>",
             "settings": [],
             "_mave": {
-              "title": "MOU SIGNING WITH PRIVATE HOSPITALS FOR EMPANELMENT AT CHANDPUR AND FENI",
-              "altTitle": null,
-              "description": "<p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">Healthcare</span></p><p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\"><span class=\"ql-cursor\">﻿</span>Apr 9, 2019</span></p>",
-              "altDescription": "<p><span style=\"background-color: transparent; color: rgb(0, 0, 0);\">To formalize services and prices with private hospitals in order to commence the health services as part of the PROSHOMON program, two MoU signing ceremonies were held during the month of April, 2019. On 9th April, 2019, an MoU signing ceremony was held between Midland Hospital &amp; Honey Siddik Memorial Hospital (private hospitals), SAJIDA Foundation and Concern Worldwide at Chandpur municipality. This was attended by the Hon’ble Mayor of Chandpur Municipality, Civil Surgeon of Chandpur, UH&amp;FPO of Chandpur Sadar, representatives of Deputy Commissioners’ office, Deputy Director of Family Planning (DDFP) office, Secretary of Clinic owner’s association, Panel Mayors &amp; Councilors, hospital owners, and central PROSHOMON team. Another MoU signing ceremony was held on 10th April, 2019 at Civil Surgeon office of Feni between Medinova Hospital, Z.U. Model Hospital, Lifecare diagnostic center (Private Hospitals) SAJIDA Foundation and Concern Worldwide. Newly joined Civil surgeon, Dr. Md. Neatuzzaman was present during the MoU signing ceremony program, presiding over the meeting. Dr. Saifur Rahman from Chest Disease Hospital, panel mayors, representatives of Deputy Commissioners’ office, Deputy Director of Family Planning (DDFP) office, Secretary of Clinic owner’s association, hospital owners, central PROSHOMON team attended the program.</span></p>",
-              "linkType": "page",
-              "link": "/case-stories?page_id=135&pageName=Case Stories",
-              "linkPageId": 135,
-              "isExternal": false,
-              "target": "_self",
-              "titleColor": "#000000",
-              "altTitleColor": "#000000",
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
               "isDualColor": false,
-              "titleFontSize": "medium",
-              "titleFontWeight": "normal",
-              "titleAlign": "left"
+              "altText": null,
+              "altContent": "<p>“এখন সে নিশ্চিন্তে স্কুলে যায়, নিজের যত্ন নিতে পারে এবং মনোযোগ দিয়ে পড়াশোনা করে” — জানালেন নূরের বাবা-মা।</p>",
+              "showAltContent": true
             },
-            "sectionIndex": 1,
+            "sectionIndex": 0,
             "index": 2
-          },
-          {
-            "_id": "component-1756291685996-2p6yd31c9",
-            "type": "media",
-            "value": null,
-            "settings": [],
-            "_mave": {
-              "id": 458,
-              "title": "Gemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5pGemini_Generated_Image_pl5pjbpl5pjbpl5p.jpeg",
-              "file_name": "mave_hV2Vu4.jpg",
-              "file_type": "image/jpeg",
-              "file_path": "media/mave_hV2Vu4.jpg",
-              "file_size": null,
-              "tags": [
-                "rango",
-                "camelion",
-                "logo",
-                "icon",
-                "colors",
-                "mave",
-                "cms",
-                "animal",
-                "red",
-                "green",
-                "blue"
-              ],
-              "created_at": "2024-12-24T08:37:01.000000Z",
-              "updated_at": "2024-12-24T09:23:47.000000Z"
-            },
-            "sectionIndex": 1,
-            "index": 3,
-            "id": 458
           }
         ]
       },
       {
-        "_id": "section-1756891117568-kq99lxaba",
-        "title": "Section 3",
+        "_id": "section-1756888940588-9mclpeyan",
+        "title": "Section 2",
         "data": [
           {
-            "_id": "component-1756891122726-ewcjy4sby",
-            "type": "card",
+            "_id": "component-1757844568509-5kht6865m",
+            "type": "slider",
             "value": null,
             "settings": [],
             "_mave": {
-              "id": 198,
-              "page_name": null,
-              "media_ids": "458",
-              "title_en": "SEPTEMBER 28, 2024",
-              "title_bn": null,
-              "description_en": "<p>Lorem Ipsum is simply dummy text...</p><p><br></p>",
-              "description_bn": null,
-              "link_url": null,
-              "additional": {
-                "tags": []
-              },
-              "status": "0",
-              "created_at": "2025-09-03T09:03:29.000000Z",
-              "updated_at": "2025-09-08T10:29:01.000000Z",
-              "media_files": {
-                "id": 458,
-                "file_name": "mave_hV2Vu4.jpg",
-                "file_type": "image/jpeg",
-                "file_path": "media/mave_hV2Vu4.jpg"
-              },
+              "id": 71,
+              "type": "card",
+              "title_en": "Case Story",
+              "title_bn": "কেস স্টোরি",
+              "description_en": "<p>.</p>",
+              "description_bn": "<p>.</p>",
+              "media_ids": [],
+              "card_ids": [
+                235,
+                238,
+                237,
+                236,
+                234,
+                232,
+                231,
+                230
+              ],
+              "additional": null,
+              "status": 0,
+              "created_at": "2025-11-13T11:38:38.000000Z",
+              "updated_at": "2026-05-09T07:53:04.000000Z",
+              "medias": [],
+              "cards": [
+                {
+                  "id": 235,
+                  "page_name": "Caring for Every Life",
+                  "media_ids": 549,
+                  "title_en": "Caring for Every Life",
+                  "title_bn": "প্রতিটি জীবনের যত্ন",
+                  "description_en": "<p>\"The dialysis care I received here has brought comfort and reassurance to both me and my family,\" shares Sukkuri Begum.</p>",
+                  "description_bn": "<p>“এখানে আমি যে ডায়ালাইসিস সেবা পেয়েছি, তা আমাকে এবং আমার পরিবারকে স্বস্তি এবং আশ্বাস দিয়েছে,” জানালেন শুক্কুরি বেগম।</p>",
+                  "link_url": "/caring-for-every-life?page_id=159&pageName=Caring for Every Life",
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": 0,
+                  "created_at": "2025-10-28T16:19:34.000000Z",
+                  "updated_at": "2025-11-23T17:38:43.000000Z",
+                  "media_files": {
+                    "id": 549,
+                    "title": "Good_Care_for_a_Better_Life_xREzf.width-695.format-webp.webp",
+                    "file_name": "mave_AGM1JX.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_AGM1JX.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-11-23T17:21:37.000000Z",
+                    "updated_at": "2025-11-23T17:21:37.000000Z"
+                  }
+                },
+                {
+                  "id": 238,
+                  "page_name": null,
+                  "media_ids": 546,
+                  "title_en": "A Silent Hero",
+                  "title_bn": "নীরব নায়ক",
+                  "description_en": "<p><span style=\"color: rgb(136, 136, 136); background-color: transparent;\">“There is nothing more gratifying than helping patients. Alleviating their suffering and receiving their blessings is what drives me,” said Ranjita Baral, a dedicated nurse at Sajida Hospital Keraniganj, who has been serving for the past 5 years.</span></p><p><br></p><p><span style=\"color: rgb(136, 136, 136); background-color: transparent;\">Ranjita starts her work early every morning. She checks that the wards are properly organized with her colleagues and prepares all the necessary equipment before the doctors' rounds. From arranging the equipment to performing follow-up tests at the patient's side, she sees to every detail to ensure that there is no shortage of service.</span></p><p><br></p><p><span style=\"color: rgb(136, 136, 136); background-color: transparent;\">Throughout the day, she assists doctors, guides fellow nurses, and calms agitated or anxious patients by listening attentively to their complaints. She also ensures seamless patient care by coordinating admissions, surgery schedules, and with doctors and anesthesiologists.</span></p><p><br></p><p><span style=\"color: rgb(136, 136, 136); background-color: transparent;\">After joining Sajida in December 2010, she became a permanent employee within a year. The satisfaction of a job well done, the praise and prayers of patients motivate her the most. Her dedication and compassion have made Sajida a true hero behind the scenes of the hospital's reputation.</span></p>",
+                  "description_bn": "<p>“রোগীদের সাহায্য করার চেয়ে বেশি আনন্দদায়ক কিছু নেই। তাদের কষ্ট কমানো এবং তাদের আশীর্বাদ পাওয়াই আমাকে চালিত করে,” বললেন রঞ্জিতা বড়াল, সাজেদা হাসপাতাল কেরানীগঞ্জের নিবেদিতপ্রাণ নার্স, যিনি গত ৫ বছর ধরে সেবা দিচ্ছেন।</p><p>রঞ্জিতা প্রতিদিন খুব সকালে তার কাজ শুরু করেন। তিনি ওয়ার্ডগুলো তার সহকর্মীদের নিয়ে ঠিকঠাক গোছানো কিনা দেখেন এবং ডাক্তারদের রাউন্ডের আগে সব প্রয়োজনীয় সরঞ্জাম প্রস্তুত রাখেন। সরঞ্জাম সাজানো থেকে রোগীর পাশে ফলোআপ পরীক্ষা করা পর্যন্ত সকল খুঁটিনাটি বিষয় দেখেন যেন সেবায় কোন ঘাটতি না হয়।</p><p>দিনভর তিনি ডাক্তারদের সহায়তা করেন, সহকর্মী নার্সদের গাইড করেন এবং উত্তেজিত বা উদ্বিগ্ন রোগীদের অভাব অভিযোগ মনোযোগ দিয়ে শুনে শান্ত করেন। এছাড়া ভর্তি কার্যক্রম, অপারেশন সময়সূচি এবং ডাক্তার ও অ্যানেস্থেসিওলজিস্টদের সঙ্গে সমন্বয় করে রোগীদের নির্বিঘ্ন সেবা নিশ্চিত করেন।</p><p>ডিসেম্বর ২০১০ সালে সাজেদায় যোগদানের পর, এক বছরের মধ্যে তিনি স্থায়ী কর্মী হন। কাজ ভালোভাবে সম্পন্ন হওয়ার সন্তুষ্টি, রোগীদের প্রশংসা ও দোয়াই তাকে সবচেয়ে বেশি প্রেরণা দেয়। তার নিষ্ঠা ও সহানুভুতি সাজেদা হাস্পাতালের সুনামের পেছনের পর্দায় এক সত্যিকারের নায়ক হিসেবে তৈরি করেছে।&nbsp;</p>",
+                  "link_url": "/a-silent-hero?page_id=162&pageName=A Silent Hero",
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": 0,
+                  "created_at": "2025-10-28T16:26:23.000000Z",
+                  "updated_at": "2026-03-13T07:26:20.000000Z",
+                  "media_files": {
+                    "id": 546,
+                    "title": "Case-Story_Hospital_thumbnail.width-695.format-webp.webp",
+                    "file_name": "mave_SBiaE9.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_SBiaE9.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-11-23T17:17:12.000000Z",
+                    "updated_at": "2025-11-23T17:17:12.000000Z"
+                  }
+                },
+                {
+                  "id": 237,
+                  "page_name": null,
+                  "media_ids": 547,
+                  "title_en": "The Committed Healer",
+                  "title_bn": "নিষ্ঠাবান চিকিৎসক",
+                  "description_en": "<p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">The joy I get from seeing a patient’s recovery cannot be expressed in words” - Dr. Nadia Shamsuddin, Indoor Medical Officer, Sajida Hospital.&nbsp;</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Since joining Sajida Hospital in 2018, 33-year-old Dr. Nadia has been working with her five years of experience and deep dedication to her patients. She values ​​the well-organized environment and high quality of treatment at the hospital, which allows her to take care of each patient.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">From admission to discharge/discharge, Dr. Nadia stays by the patient's side - following medication management instructions carefully, identifying any other problems or needs, and liaising with specialists if necessary to ensure medical care. She also provides support and comfort to the patient through psychological counseling, so that they can easily accept the difficult treatment.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">He said, “A doctor cannot ensure the complete recovery of a patient, it is in the hands of Allah. But we can be a guide to their path from illness to recovery. When patients trust us second only to Allah, I feel truly blessed.”</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Wearing a white coat, Dr. Nadia takes full responsibility for the health and well-being of her patients. In the future, she will continue to strive to learn new things and apply them in the service of people to establish herself as a more skilled and compassionate physician.</span></p>",
+                  "description_bn": "<p>রোগীর সুস্থতা দেখে যে আনন্দ পাই, তা ভাষায় প্রকাশ করা যায় না” - ডা. নাদিয়া সামসুদ্দিন, ইনডোর মেডিকেল অফিসার, সাজেদা হাসপাতাল।</p><p><br></p><p>২০১৮ সালে সাজেদা হাসপাতালে যোগদানের পর থেকে ৩৩ বছর বয়সী ডা. নাদিয়া তার পাঁচ বছরের পূর্ব অভিজ্ঞতা এবং রোগীর প্রতি গভীর নিষ্ঠা নিয়ে কাজ করছেন। তিনি হাসপাতালের সুসংগঠিত পরিবেশ এবং উন্নত চিকিৎসার মানকে মূল্য দিতেন, যা তাকে প্রতিটি রোগীর প্রতি যত্নশীল হওয়ার সুযোগ দেয়।</p><p><br></p><p>ভর্তি থেকে ছুটি/ ছাড়পত্র দেওয়া পর্যন্ত, ডা. নাদিয়া রোগীর পাশে থাকেন- ঔষধের ব্যবস্থাপনা পত্রের সঠিকভাবে অনুসরণ করা, অন্য কোন সমস্যা বা প্রয়োজন চিহ্নিত করে প্রয়োজনে বিশেষজ্ঞদের সাথে যোগাযোগ করে চিকিৎসাসেবা নিশ্চিত করা। তিনি রোগীকে মানসিক কাউন্সিলিং এর মাধ্যমে সমর্থন ও স্বস্তিও দেন, যাতে তারা কঠিন চিকিৎসা সহজে গ্রহণ করতে পারেন।</p><p><br></p><p>তিনি বলেন, “একজন ডাক্তার রোগীর সম্পূর্ণ সুস্থতা নিশ্চিত করতে পারেন না, এটি আল্লাহর হাতে। কিন্তু আমরা তাদের অসুস্থতা থেকে সুস্থতার পথে পথপ্রদর্শক হতে পারি। রোগীরা যখন আল্লাহর পর দ্বিতীয় স্থানে আমাদের উপর বিশ্বাস রাখেন, তখন আমি সত্যিই ধন্য বোধ করি।”</p><p><br></p><p>সাদা কোট পরিধান করে ডা. নাদিয়া তার রোগীদের স্বাস্থ্য ও সুস্থতার সম্পূর্ণ দায়িত্ব গ্রহণ করেন। ভবিষ্যতে তিনি নিজেকে চিকিৎসাসেবায় আরও দক্ষ ও সহমর্মী চিকিৎসক হিসেবে প্রতিষ্ঠিত করতে নতুন নতুন বিষয় শিখে মানুষের সেবায় প্রয়োগ করার প্রচেষ্টা অটুট রাখবেন।&nbsp;&nbsp;</p>",
+                  "link_url": "/the-committed-healer?page_id=161&pageName=The Committed Healer",
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": 0,
+                  "created_at": "2025-10-28T16:24:22.000000Z",
+                  "updated_at": "2026-03-13T07:27:59.000000Z",
+                  "media_files": {
+                    "id": 547,
+                    "title": "thumbnail_Dr._Nadia_Samsuddin.width-695.format-webp.webp",
+                    "file_name": "mave_eeX4ym.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_eeX4ym.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-11-23T17:18:47.000000Z",
+                    "updated_at": "2025-11-23T17:18:47.000000Z"
+                  }
+                },
+                {
+                  "id": 236,
+                  "page_name": null,
+                  "media_ids": 548,
+                  "title_en": "Quality Care Close to Home",
+                  "title_bn": "স্বাস্থ্যসেবা",
+                  "description_en": "<p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">60-year-old Yarunnesa, a struggling single mother from Keraniganj, was silently enduring the pain of a facial ulcer, only to realize that her daughter would not be able to afford medical care on her limited income. She was also unable to afford to eat properly and could not find a quality hospital nearby.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Suddenly, a relative suggested that she be brought to Sajida Hospital, which is close to her home. The hospital's compassionate and dedicated medical team, who were overwhelmed with pain and anxiety, constantly provided her with their sincere care, instilling confidence and comfort.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Yarunnesa cites the support and warm attitude of the staff as the main reason for her speedy recovery. This allowed her to openly share her symptoms and receive an accurate diagnosis. \"This effective doctor-patient communication is Sajida's core vision, so that everyone can access accessible and affordable healthcare,\" she says.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">She simply listed her symptoms and was able to get an accurate diagnosis. “Such an effective doctor-patient connection is the key feature of Sajida, so that affordable healthcare is accessible to everyone.</span></p>",
+                  "description_bn": "<p>৬০ বছর বয়সী ইয়ারুননেসা, কেরানীগঞ্জের একজন সংগ্রামী একলা চলা মা, মুখে ঘায়ের ব্যাথা তিনি নীরবে চুপচাপ সহ্য করছিলেন শুধু তার মেয়ে সীমিত আয়ে চিকিৎসাসেবা বহন করতে পারবে না এটা ভেবে। খাওয়া দাওয়াও ঠিকমতো করতে পারছিলেন না, আবার আশেপাশে কোনো খুব মানসম্মত হাসপাতালও খুঁজে পাচ্ছেন না।</p><p><br></p><p><br></p><p>হঠাৎ করে এক আত্মীয় তাকে সাজেদা হাসপাতালে আনার পরামর্শ দেন, যা তার বাসার কাছাকাছি। ব্যথা ও দুশ্চিন্তায় ভেঙে পড়া ইয়ারুননেসাকে হাসপাতালের সহানুভূতিশীল ও নিবেদিত চিকিৎসা দল তাদের আন্তরিক সেবা দিয়ে নিয়মিত পাশে থেকে আত্মবিশ্বাস ও স্বস্তি জাগিয়েছে।</p><p><br></p><p>ইয়ারুননেসা স্টাফদের সমর্থন এবং আন্তরিক মনোভাবকে তার দ্রুত সুস্থতার মূল কারণ হিসেবে উল্লেখ করেন। এতে তিনি তার উপসর্গগুলো খোলাখুলিভাবে জানাতে পেরেছেন এবং সঠিক রোগ নির্ণয় হয়েছে। তিনি বলেন, \"এই কার্যকর ডাক্তার-রোগী যোগাযোগই সাজেদার মূল দৃষ্টি, যাতে সবার কাছে সহজলভ্য ও সাশ্রয়ী স্বাস্থ্যসেবা পৌঁছে যায়।\"</p><p><br></p><p>তিনি সহজভাবে নিজের রোগ উপসর্গগুলো মনোনয় সঠিক রোগনিরনয়ে সুবিধা হয়েছে। “এরকম কার্যকর দাক্তার-রোগির মধ্যে সংযোগ সাজেদার মূল বৈশিষ্ট, যাতে সবার কাছে সাশ্রয়ী সাস্থ্যসেবা পৌঁছে যায়।&nbsp;</p>",
+                  "link_url": "/quality-care-close-to-home?page_id=160&pageName=Quality Care Close to Home",
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": 0,
+                  "created_at": "2025-10-28T16:21:51.000000Z",
+                  "updated_at": "2026-03-13T07:28:57.000000Z",
+                  "media_files": {
+                    "id": 548,
+                    "title": "Hospital-static_Thumbail_Patients.width-695.format-webp.webp",
+                    "file_name": "mave_EbM1AW.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_EbM1AW.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-11-23T17:20:09.000000Z",
+                    "updated_at": "2025-11-23T17:20:09.000000Z"
+                  }
+                },
+                {
+                  "id": 234,
+                  "page_name": null,
+                  "media_ids": 550,
+                  "title_en": "A True Blessing",
+                  "title_bn": "একটি সত্যিকারের আশীর্বাদ",
+                  "description_en": "<p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">“My profession fills me with immense gratitude. Being a part of bringing a new life into the world is truly a unique feeling” - Dr. Saria Nafia.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Dr. Saria Nafisa has been working as an Obstetrics and Gynecology Specialist with compassion and dedication. For the past three years, she has been fully dedicated to training, treatment and service at Sajida Hospital Keraniganj. She shows equal care to the mother and child and understands the long and difficult time during pregnancy in families, hence treats each patient with compassion and understanding.&nbsp;</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">Saria enjoys treating women in Keraniganj, and their feedback boosts her confidence and inspires her. “The gratitude and blessings of the patients I serve encourage me to do better,” she says.</span></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">His diverse experiences have shaped his medical philosophy. “I believe that as a doctor, providing emotional support to a patient is more important than providing physical treatment,” he says.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">At Sajida Hospital, treating everyone equally is a core value. Medical officers closely monitor maternity patients during delivery. Every patient is given a follow-up call within a week of discharge from the hospital, and nurses also take care of cleanliness, food and medication. “This consistent care and dedication sets Sajida apart,” says Saria.</span></p><p><br></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">After three years of practice, Saria is now a confident and experienced obstetrician, ready for bigger challenges. “These three years at Sajidaya have changed my life,” she says.</span></p>",
+                  "description_bn": "<p>“আমার পেশা আমাকে অসীম কৃতজ্ঞতায় মন ভরিয়ে দেয়। নতুন একটি জীবনকে পৃথিবীতে আনার অংশ হওয়া সত্যিই অনন্য অনুভুতি” - ডা. সারিয়া নাফিয়া।</p><p><br></p><p>ডা. সারিয়া নাফিসা একজন প্রসূতি ও গাইনোকোলজি বিশেষজ্ঞ হিসেবে সহানুভুতি ও নিষ্ঠার সঙ্গে কাজ করে চলেছেন। গত তিন বছর ধরে সাজেদা হাসপাতাল কেরানীগঞ্জে তিনি প্রশিক্ষণ, চিকিৎসা এবং সেবায় সম্পূর্ণ নিবেদিত। তিনি মা ও শিশুর প্রতি সমান যত্ন দেখান এবং পরিবারগুলোতে গর্ভাবস্থায় দীর্ঘ ও কস্টদায়ক সময় বোঝেন, তাই প্রতিটি রোগীর সঙ্গে সহানুভূতি ও বোঝাপড়ার মনোভাব নিয়ে আচরণ করেন।</p><p><br></p><p>সারিয়া কেরানীগঞ্জের নারীদের চিকিৎসা করে আনন্দ পান এবং তাদের প্রতিক্রিয়া তার আত্মবিশ্বাস বাড়ায়, অনুপ্রাণিত করে। তিনি বলেন, “যেসব রোগীদের আমি সেবা দেই, তাদের কৃতজ্ঞতা ও দোয়া আমাকে আরও ভালো কাজ করতে উৎসাহিত করে।”</p><p><br></p><p>বিভিন্ন অভিজ্ঞতা তার চিকিৎসা দর্শনকে গড়ে তুলেছে। তিনি বলেন, “আমি বিশ্বাস করি, একজন ডাক্তার হিসেবে রোগীকে মানসিক সমর্থন দেওয়া শারীরিক চিকিৎসা প্রদানের চেয়েও বেশি গুরুত্বপূর্ণ।”</p><p>সাজেদা হাসপাতালে সকলকে সমভাবে মূল্যায়ন করে দেওয়াই মূল মূল্যবোধ। প্রসূতি রোগীদের ডেলিভারির সময় মেডিকেল অফিসাররা ঘনিষ্ঠভাবে তদারকি করেন। হাসপাতাল থেকে ছারপত্রের এক সপ্তাহের মধ্যে প্রতিটি রোগীকে ফলো-আপ কল দেওয়া হয়, নার্সরা পরিচ্ছন্নতা, খাবার এবং ওষুধের ব্যাবস্থাও খেয়াল রাখেন। সারিয়া বলেন, “এই ধারাবাহিক যত্ন নিষ্ঠা সাজেদাকে আলাদা করে।”</p><p><br></p><p>তিন বছরের প্র্যাকটিস শেষে সারিয়া এখন একজন আত্মবিশ্বাসী ও অভিজ্ঞ প্রসূতি বিশেষজ্ঞ, যিনি আরও বড় চ্যালেঞ্জের জন্য প্রস্তুত। তিনি বলেন, “সাজেদায় এই তিন বছর আমার জিবনের মোড় ঘুরিয়ে দিয়েছে।”&nbsp;&nbsp;</p>",
+                  "link_url": "/a-true-blessing?page_id=158&pageName=A True Blessing",
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": 0,
+                  "created_at": "2025-10-21T16:40:43.000000Z",
+                  "updated_at": "2026-03-13T07:30:19.000000Z",
+                  "media_files": {
+                    "id": 550,
+                    "title": "Hospital-static_Thumbail.width-695.format-webp.webp",
+                    "file_name": "mave_vu1x6y.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_vu1x6y.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-11-23T17:23:02.000000Z",
+                    "updated_at": "2025-11-23T17:23:02.000000Z"
+                  }
+                },
+                {
+                  "id": 232,
+                  "page_name": "A Journey of Care and Hope",
+                  "media_ids": 551,
+                  "title_en": "A Journey of Care and Hope",
+                  "title_bn": "যত্ন এবং আশার একটি যাত্রা",
+                  "description_en": "<p>“I am genuinely pleased with the exceptional care I received at this hospital,” said Suborna Rani Roy after giving birth at SAJIDA Hospital.</p>",
+                  "description_bn": "<p>এই হাসপাতালে যে অসাধারণ সেবা পেয়েছি, তা নিয়ে আমি সত্যিই খুব খুশি,” — জানালেন সুবর্ণা রানি রায়, সাজেদা হাসপাতালে সন্তান জন্ম দেওয়ার পর।</p>",
+                  "link_url": "/a-journey-of-care-and-hope?page_id=157&pageName=A Journey of Care and Hope",
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": 0,
+                  "created_at": "2025-10-21T16:35:25.000000Z",
+                  "updated_at": "2025-11-23T17:41:07.000000Z",
+                  "media_files": {
+                    "id": 551,
+                    "title": "thumbnail_Suborna_Rani_Roy.width-695.format-webp.webp",
+                    "file_name": "mave_3Z8xNA.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_3Z8xNA.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-11-23T17:24:17.000000Z",
+                    "updated_at": "2025-11-23T17:24:17.000000Z"
+                  }
+                },
+                {
+                  "id": 231,
+                  "page_name": "A Quarter-Century of Care",
+                  "media_ids": 552,
+                  "title_en": "A Quarter-Century of Care",
+                  "title_bn": "এক চতুর্থাংশ শতাব্দীর স্বাস্থ্যসেবা",
+                  "description_en": "<p>“The sight of parents lovingly holding their recovered baby, their faces glowing with relief and happiness, brings me immense satisfaction.” - Zinnatur Nahar, Ward In-Charge, SAJIDA Hospital</p>",
+                  "description_bn": "<p>“যখন সুস্থ হয়ে ওঠা শিশুকে তার বাবা-মা ভালোবাসায় জড়িয়ে ধরে, আর তাদের মুখে স্বস্তি ও আনন্দ দেখা যায়, তখন আমার মনে গভীর তৃপ্তি হয়।” — জিন্নাতুর নাহার, ওয়ার্ড ইন-চার্জ, সাজেদা হাসপাতাল।</p>",
+                  "link_url": "/a-quarter-century-of-care?page_id=156&pageName=A Quarter-Century of Care",
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": 0,
+                  "created_at": "2025-10-21T10:11:11.000000Z",
+                  "updated_at": "2025-11-23T17:41:47.000000Z",
+                  "media_files": {
+                    "id": 552,
+                    "title": "thumbnail_Zinnatur_Nahar.width-695.format-webp.webp",
+                    "file_name": "mave_4Z6hDT.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_4Z6hDT.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-11-23T17:25:22.000000Z",
+                    "updated_at": "2025-11-23T17:25:22.000000Z"
+                  }
+                },
+                {
+                  "id": 230,
+                  "page_name": "Frontliner Fighter of SAJIDA Hospital",
+                  "media_ids": 545,
+                  "title_en": "Frontliner Fighter of SAJIDA Hospital",
+                  "title_bn": "সাজেদা হাসপাতালের ফ্রন্টলাইন যোদ্ধা",
+                  "description_en": "<p>“Being a health professional at SAJIDA has been deeply rewarding. I’ve had the privilege of seeing firsthand SAJIDA’s strong commitment to delivering healthcare to those in greatest need.” - Dr. Shirina Akbar, Physician, SAJIDA Hospital</p>",
+                  "description_bn": "<p>“সাজেদা হাসপাতালে কাজ করা আমার জন্য এক পরিপূর্ণ অভিজ্ঞতা। এখানে কাজ করে বুঝেছি, সাজেদা হাসপাতাল কতটা আন্তরিকভাবে প্রয়োজনীয় মানুষের পাশে দাঁড়ায়,” — বললেন সাজেদা হাসপাতালের চিকিৎসক ডা. শিরিনা আকবর।</p>",
+                  "link_url": "/frontliner-fighter-of-sajida-hospital?page_id=163&pageName=Frontliner Fighter of SAJIDA Hospital",
+                  "additional": {
+                    "tags": []
+                  },
+                  "status": 0,
+                  "created_at": "2025-10-21T10:09:05.000000Z",
+                  "updated_at": "2025-11-23T17:42:36.000000Z",
+                  "media_files": {
+                    "id": 545,
+                    "title": "thumbnail_Hospital_Dr.Shirina_Akb.width-695.format-webp.webp",
+                    "file_name": "mave_6teugV.webp",
+                    "file_type": "image/webp",
+                    "file_path": "media/mave_6teugV.webp",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-11-23T17:15:00.000000Z",
+                    "updated_at": "2025-11-23T17:15:00.000000Z"
+                  }
+                }
+              ],
               "config": {
-                "showDescription": true,
-                "showImage": true,
-                "layout": "horizontal"
+                "autoplay": true,
+                "dots": false,
+                "effect": "scroll",
+                "speed": 500,
+                "height": 400
               }
             },
-            "sectionIndex": 2,
+            "sectionIndex": 1,
             "index": 0,
-            "id": 198
+            "id": 71
           }
         ]
       }
@@ -6524,7 +6665,7 @@
     ],
     "status": 1,
     "created_at": "2025-08-27T20:42:39.000000Z",
-    "updated_at": "2025-09-15T17:34:27.000000Z",
+    "updated_at": "2026-05-09T13:53:45.000000Z",
     "favicon_mave": null,
     "cards_mave": [],
     "events_mave": [],
