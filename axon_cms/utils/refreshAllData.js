@@ -1,10 +1,16 @@
 // utils/refreshAllData.js
 
 import instance from "../axios";
-import { cachedApiCall, clearAllApiCache } from "./apiUtils";
+import { cachedApiCall, clearAllApiCache, fetchAllPaginated } from "./apiUtils";
 
 const API_ENDPOINTS = [
-  { key: "pages", url: "/pages" },
+  {
+    key: "pages",
+    fetch: () =>
+      fetchAllPaginated((page, count) =>
+        instance.get("/pages", { params: { page, count } })
+      ).then((data) => ({ data })),
+  },
   { key: "media", url: "/media" },
   { key: "menuitems", url: "/menuitems" },
   { key: "navbars", url: "/navbars" },
@@ -24,8 +30,13 @@ export const refreshAllData = async () => {
 
   const force = { force: true };
   const results = await Promise.allSettled(
-    API_ENDPOINTS.map(({ key, url }) =>
-      cachedApiCall(key, () => instance.get(url), undefined, force)
+    API_ENDPOINTS.map(({ key, url, fetch }) =>
+      cachedApiCall(
+        key,
+        () => (fetch ? fetch() : instance.get(url)),
+        undefined,
+        force
+      )
     )
   );
 

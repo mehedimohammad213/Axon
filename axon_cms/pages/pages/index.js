@@ -3,7 +3,7 @@
 import { message, Pagination, Spin } from "antd";
 import React, { useState, useEffect, useMemo, useCallback } from "react";
 import instance from "../../axios";
-import { cachedApiCall } from "../../utils/apiUtils";
+import { cachedApiCall, fetchAllPaginated } from "../../utils/apiUtils";
 import { useGlobalRefresh } from "../../src/context/MenuRefreshContext";
 import { useRouter } from "next/router";
 import PagesHeader from "../../components/PageBuilder/PagesHeader";
@@ -59,14 +59,18 @@ const Pages = () => {
       setLoading(true);
       const response = await cachedApiCall(
         "pages",
-        () => instance.get("/pages"),
+        () =>
+          fetchAllPaginated((page, count) =>
+            instance.get("/pages", { params: { page, count } })
+          ).then((data) => ({ data })),
         undefined,
         { force: forceRefresh }
       );
 
-      if (response.data) {
-        setAllPages(response.data);
-        setTypePages(response.data.filter((page) => page.type === "Page"));
+      const pages = Array.isArray(response?.data) ? response.data : [];
+      if (pages.length || Array.isArray(response?.data)) {
+        setAllPages(pages);
+        setTypePages(pages.filter((page) => page.type === "Page"));
       } else {
         message.error("Failed to fetch pages.");
       }

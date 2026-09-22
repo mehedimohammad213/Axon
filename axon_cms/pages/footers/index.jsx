@@ -28,7 +28,8 @@ const Footers = () => {
       setLoading(true);
       const response = await cachedApiCall(
         "footers-pages",
-        () => instance.get("/pages?type=Footer"),
+        () =>
+          instance.get("/pages", { params: { type: "Footer", count: 100 } }),
         undefined,
         { force: forceRefresh }
       );

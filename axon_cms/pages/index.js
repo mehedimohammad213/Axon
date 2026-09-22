@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import instance from "../axios";
-import { cachedApiCall } from "../utils/apiUtils";
+import { cachedApiCall, fetchAllPaginated } from "../utils/apiUtils";
 import { useGlobalRefresh } from "../src/context/MenuRefreshContext";
 import WelcomeCard from "../components/dashboard/WelcomeCard";
 import StatsOverview from "../components/dashboard/StatsOverview";
@@ -40,7 +40,15 @@ const Index = () => {
         forms_response,
         footers_response,
       ] = await Promise.all([
-        cachedApiCall("pages", () => instance.get("/pages"), undefined, force),
+        cachedApiCall(
+          "pages",
+          () =>
+            fetchAllPaginated((page, count) =>
+              instance.get("/pages", { params: { page, count } })
+            ).then((data) => ({ data })),
+          undefined,
+          force
+        ),
         cachedApiCall("media", () => instance.get("/media"), undefined, force),
         cachedApiCall("menuitems", () => instance.get("/menuitems"), undefined, force),
         cachedApiCall("navbars", () => instance.get("/navbars"), undefined, force),

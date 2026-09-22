@@ -137,4 +137,28 @@ export const cachedApiCall = async (
   }
 };
 
+/**
+ * Fetch every page of a paginated list endpoint.
+ * Express returns { data, meta }; axios interceptor unwraps data to an array
+ * and attaches response.meta.
+ */
+export const fetchAllPaginated = async (
+  requestPage,
+  { pageSize = 100, maxPages = 50 } = {}
+) => {
+  const all = [];
+  let page = 1;
+  let totalPages = 1;
+
+  do {
+    const response = await requestPage(page, pageSize);
+    const chunk = Array.isArray(response?.data) ? response.data : [];
+    all.push(...chunk);
+    totalPages = response?.meta?.totalPages || 1;
+    page += 1;
+  } while (page <= totalPages && page <= maxPages);
+
+  return all;
+};
+
 export default axiosWithRetry;

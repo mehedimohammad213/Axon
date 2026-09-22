@@ -114,197 +114,6 @@
     "sliders_mave": []
   },
   {
-    "id": 183,
-    "slug": "mehedi",
-    "type": "Blog",
-    "favicon_id": null,
-    "page_name_en": "mehedi",
-    "page_name_bn": "mehedi",
-    "head": {
-      "seoTitle": null,
-      "seoDescription": null,
-      "seoKeywords": null
-    },
-    "body": [
-      {
-        "_id": "p5vhlvA0gqVrw1F5If",
-        "type": "blog-content",
-        "_category": "root",
-        "data": [
-          {
-            "type": "description",
-            "value": "<p>mehedi sleep</p>"
-          },
-          {
-            "type": "media",
-            "id": {
-              "id": 634,
-              "title": "ChatGPT_Image_Jul_1__2026__07_07_13_PM-removebg-preview.png",
-              "file_name": "mave_Vygg85.png",
-              "file_type": "image/png",
-              "file_path": "media/mave_Vygg85.png",
-              "file_size": null,
-              "tags": null,
-              "created_at": "2026-07-01T13:20:39.000000Z",
-              "updated_at": "2026-07-01T13:20:39.000000Z"
-            }
-          }
-        ]
-      }
-    ],
-    "additional": {
-      "category": "news",
-      "tags": [
-        "entertainment",
-        "science",
-        "sports"
-      ]
-    },
-    "status": 1,
-    "created_at": "2026-08-04T10:32:18.000000Z",
-    "updated_at": "2026-08-04T10:32:18.000000Z",
-    "favicon_mave": null,
-    "cards_mave": [],
-    "events_mave": [],
-    "footers_mave": [],
-    "medias_mave": [
-      {
-        "id": 634,
-        "title": "ChatGPT_Image_Jul_1__2026__07_07_13_PM-removebg-preview.png",
-        "file_name": "mave_Vygg85.png",
-        "file_type": "image/png",
-        "file_path": "media/mave_Vygg85.png",
-        "file_size": null,
-        "tags": null,
-        "created_at": "2026-07-01T13:20:39.000000Z",
-        "updated_at": "2026-07-01T13:20:39.000000Z"
-      }
-    ],
-    "menus_mave": [],
-    "navbars_mave": [],
-    "press_releases_mave": [],
-    "sliders_mave": []
-  },
-  {
-    "id": 182,
-    "slug": "fgfg",
-    "type": "Blog",
-    "favicon_id": null,
-    "page_name_en": "fgfg",
-    "page_name_bn": "fgdg",
-    "head": {
-      "seoTitle": null,
-      "seoDescription": null,
-      "seoKeywords": null
-    },
-    "body": [
-      {
-        "_id": "XGJYbcxmy2OQH3J5DB",
-        "type": "blog-content",
-        "_category": "root",
-        "data": [
-          {
-            "type": "description",
-            "value": "<p>dfsdf</p>"
-          },
-          {
-            "type": "media",
-            "id": {
-              "id": 628,
-              "title": "Dr. Md. Tariqul Islam (1) - Copy (1).png",
-              "file_name": "mave_2EYMXv.png",
-              "file_type": "image/png",
-              "file_path": "media/mave_2EYMXv.png",
-              "file_size": null,
-              "tags": null,
-              "created_at": "2026-05-14T13:25:35.000000Z",
-              "updated_at": "2026-05-14T13:25:35.000000Z"
-            }
-          }
-        ]
-      }
-    ],
-    "additional": {
-      "category": "tech",
-      "tags": [
-        "news",
-        "tech"
-      ]
-    },
-    "status": 1,
-    "created_at": "2026-08-04T10:31:25.000000Z",
-    "updated_at": "2026-08-04T10:31:25.000000Z",
-    "favicon_mave": null,
-    "cards_mave": [],
-    "events_mave": [],
-    "footers_mave": [],
-    "medias_mave": [
-      {
-        "id": 628,
-        "title": "Dr. Md. Tariqul Islam (1) - Copy (1).png",
-        "file_name": "mave_2EYMXv.png",
-        "file_type": "image/png",
-        "file_path": "media/mave_2EYMXv.png",
-        "file_size": null,
-        "tags": null,
-        "created_at": "2026-05-14T13:25:35.000000Z",
-        "updated_at": "2026-05-14T13:25:35.000000Z"
-      }
-    ],
-    "menus_mave": [],
-    "navbars_mave": [],
-    "press_releases_mave": [],
-    "sliders_mave": []
-  },
-  {
-    "id": 181,
-    "slug": "aa",
-    "type": "Blog",
-    "favicon_id": null,
-    "page_name_en": "aa",
-    "page_name_bn": null,
-    "head": {
-      "seoTitle": null,
-      "seoDescription": null,
-      "seoKeywords": null
-    },
-    "body": [
-      {
-        "_id": "zXR2tuPlWTkMIhRM1U",
-        "type": "blog-content",
-        "_category": "root",
-        "data": [
-          {
-            "type": "description",
-            "value": "<p>aaa</p>"
-          },
-          {
-            "type": "media",
-            "id": null
-          }
-        ]
-      }
-    ],
-    "additional": {
-      "category": "news",
-      "tags": [
-        "news"
-      ]
-    },
-    "status": 1,
-    "created_at": "2026-07-29T09:32:02.000000Z",
-    "updated_at": "2026-07-29T09:32:02.000000Z",
-    "favicon_mave": null,
-    "cards_mave": [],
-    "events_mave": [],
-    "footers_mave": [],
-    "medias_mave": [],
-    "menus_mave": [],
-    "navbars_mave": [],
-    "press_releases_mave": [],
-    "sliders_mave": []
-  },
-  {
     "id": 178,
     "slug": "ev-product",
     "type": "Page",
@@ -4475,366 +4284,6 @@
     "status": 1,
     "created_at": "2025-09-25T22:57:12.000000Z",
     "updated_at": "2026-05-14T14:36:03.000000Z",
-    "favicon_mave": null,
-    "cards_mave": [],
-    "events_mave": [],
-    "footers_mave": [],
-    "medias_mave": [],
-    "menus_mave": [],
-    "navbars_mave": [],
-    "press_releases_mave": [],
-    "sliders_mave": []
-  },
-  {
-    "id": 149,
-    "slug": null,
-    "type": "Footer",
-    "favicon_id": 10,
-    "page_name_en": "Main Footer",
-    "page_name_bn": "Main Footer",
-    "head": null,
-    "body": [
-      {
-        "_id": "section-1758709122558-8fyf897ca",
-        "title": "Section 1",
-        "data": [
-          {
-            "_id": "component-1758709492403-4q23fybeo",
-            "type": "media",
-            "value": null,
-            "settings": [],
-            "_mave": {
-              "id": 523,
-              "title": "Logo (10).png",
-              "file_name": "mave_J50hDp.png",
-              "file_type": "image/png",
-              "file_path": "media/mave_J50hDp.png",
-              "file_size": null,
-              "tags": null,
-              "created_at": "2025-09-25T10:49:17.000000Z",
-              "updated_at": "2025-09-25T10:49:17.000000Z"
-            },
-            "sectionIndex": 0,
-            "index": 0,
-            "id": 523
-          },
-          {
-            "_id": "component-1758709557133-hband3gf9",
-            "type": "description",
-            "value": "<p><span style=\"color: rgb(136, 136, 136);\">A dedicated team of experienced doctors, nurses, technologists, and support staff deliver patient-friendly, quality, integrated healthcare services, including emergency services, surgery, diagnostics, and specialised treatments.</span></p><p><span style=\"color: rgb(136, 136, 136);\">To continuously improve, a Quality Team monitors care standards and gathers patient feedback, with additional insights collected independently after service.&nbsp;</span></p>",
-            "settings": [],
-            "_mave": {
-              "fontSize": "medium",
-              "primaryColor": "#000000",
-              "secondaryColor": "#000000",
-              "textAlign": "left",
-              "fontWeight": "normal",
-              "isDualColor": false,
-              "altText": null,
-              "altContent": "<p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">এখানে রোগীবান্ধব ও মানসম্মত পরিবেশে অভিজ্ঞ ডাক্তার, নার্স, টেকনোলজিস্ট ও সেবাকর্মীদের একটি দল কাজ করছেন। তারা জরুরি সেবা, সার্জারি, ডায়াগনস্টিক এবং বিভিন্ন বিশেষায়িত চিকিৎসাসহ সমন্বিত স্বাস্থ্যসেবা প্রদান করেন।</span></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">সেবার মান আরও উন্নত করতে একটি কোয়ালিটি টিম নিয়মিতভাবে রোগীসেবার মান পর্যবেক্ষণ করে এবং রোগীদের মতামত গ্রহণ করে। এছাড়া, রোগী সেবা নিয়ে যাওয়ার পর ভিন্ন একটি প্রতিষ্ঠানের মাধ্যমে তাদের অভিজ্ঞতা ও মতামত সংগ্রহ করা হয়।&nbsp;</span></p>",
-              "showAltContent": true
-            },
-            "sectionIndex": 0,
-            "index": 1
-          }
-        ]
-      },
-      {
-        "_id": "section-1758709602784-tippe7gqj",
-        "title": "Section 2",
-        "data": [
-          {
-            "_id": "component-1758709620605-ck45x9van",
-            "type": "title",
-            "value": "<p>Contact Us</p>",
-            "settings": [],
-            "_mave": {
-              "fontSize": "medium",
-              "primaryColor": "#000000",
-              "secondaryColor": "#000000",
-              "textAlign": "left",
-              "fontWeight": "normal",
-              "isDualColor": false,
-              "secondPartText": null,
-              "altText": "<p>যোগাযোগ করুন</p>",
-              "altSecondPartText": "<p>যোগাযোগ করুন</p>",
-              "showAltContent": true
-            },
-            "sectionIndex": 1,
-            "index": 0
-          },
-          {
-            "_id": "component-1758709683863-0o2l94f88",
-            "type": "description",
-            "value": "<p>Mob: 01777-772500</p><p><span style=\"background-color: rgb(249, 249, 249);\">Zinzira, Keraniganj, Dhaka</span></p><p>Keraniganj</p><p>1310</p>",
-            "settings": [],
-            "_mave": {
-              "fontSize": "medium",
-              "primaryColor": "#000000",
-              "secondaryColor": "#000000",
-              "textAlign": "left",
-              "fontWeight": "normal",
-              "isDualColor": false,
-              "altText": null,
-              "altContent": "<p>মোবাইল: ০১৭৭৭-৭৭২৫০০</p><p><span style=\"background-color: rgb(249, 249, 249);\">জিনজিরা, কেরানীগঞ্জ, ঢাকা</span></p><p>কেরানীগঞ্জ</p><p>১৩১০<span style=\"background-color: transparent; color: rgb(0, 0, 0);\"> </span></p>",
-              "showAltContent": true
-            },
-            "sectionIndex": 1,
-            "index": 1
-          }
-        ]
-      },
-      {
-        "_id": "section-1758709727192-kuu18get2",
-        "title": "Section 3",
-        "data": [
-          {
-            "_id": "component-1758709737909-n1clmz8ln",
-            "type": "menu",
-            "value": null,
-            "settings": [],
-            "_mave": {
-              "id": 22,
-              "name": "Quicklinks",
-              "menu_item_ids": [
-                62,
-                40,
-                137
-              ],
-              "menu_items": [
-                {
-                  "id": 62,
-                  "title": "About Us",
-                  "title_bn": "About Us",
-                  "link": "/about",
-                  "parent_id": null,
-                  "created_at": null,
-                  "updated_at": "2025-09-25T07:39:47.000000Z",
-                  "all_children": []
-                },
-                {
-                  "id": 40,
-                  "title": "Contact Us",
-                  "title_bn": "যোগাযোগ",
-                  "link": "/contact",
-                  "parent_id": null,
-                  "created_at": null,
-                  "updated_at": "2025-09-25T08:08:37.000000Z",
-                  "all_children": []
-                },
-                {
-                  "id": 137,
-                  "title": "Our Services",
-                  "title_bn": "Our Services",
-                  "link": "/services",
-                  "parent_id": null,
-                  "created_at": null,
-                  "updated_at": "2025-09-25T07:42:53.000000Z",
-                  "all_children": []
-                }
-              ],
-              "altTitle": null
-            },
-            "sectionIndex": 2,
-            "index": 0,
-            "id": 22,
-            "menuMode": "vertical",
-            "menuTheme": "light"
-          }
-        ]
-      },
-      {
-        "_id": "section-1758710505115-k4fyby4ni",
-        "title": "Section 3 (Copy)_",
-        "data": [
-          {
-            "_id": "component-1758710505115-1muyjxkv6",
-            "type": "menu",
-            "value": null,
-            "settings": [],
-            "_mave": {
-              "id": 23,
-              "name": "Resources",
-              "menu_item_ids": [
-                134,
-                135
-              ],
-              "menu_items": [
-                {
-                  "id": 134,
-                  "title": "Case Stories",
-                  "title_bn": "Case stories",
-                  "link": "/stories",
-                  "parent_id": null,
-                  "created_at": null,
-                  "updated_at": "2025-09-25T08:06:24.000000Z",
-                  "all_children": []
-                },
-                {
-                  "id": 135,
-                  "title": "Specialists",
-                  "title_bn": "Specialists",
-                  "link": "/specialists",
-                  "parent_id": null,
-                  "created_at": null,
-                  "updated_at": "2025-09-25T08:09:29.000000Z",
-                  "all_children": []
-                }
-              ],
-              "altTitle": null
-            },
-            "sectionIndex": 3,
-            "index": 0,
-            "id": 23,
-            "menuMode": "vertical",
-            "menuTheme": "light"
-          }
-        ]
-      },
-      {
-        "_id": "section-1758710477492-1wvnhavpq",
-        "title": "Section 4",
-        "data": [
-          {
-            "_id": "component-1758789155841-sj8n1d1mu",
-            "type": "button",
-            "value": null,
-            "settings": [],
-            "_mave": {
-              "text": "Visit SAJIDA Foundation Website",
-              "altText": "সাজেদা ফাউন্ডেশনের ওয়েবসাইট ভিজিট করুন",
-              "showAltText": true,
-              "icon": null,
-              "action": {
-                "type": "external_link",
-                "url": "https://www.sajida.org"
-              },
-              "alignment": "left"
-            },
-            "sectionIndex": 4,
-            "index": 0,
-            "id": "component-1758789155841-sj8n1d1mu"
-          }
-        ]
-      },
-      {
-        "_id": "section-1758710687366-3cff2pnty",
-        "title": "Section 6",
-        "data": [
-          {
-            "_id": "component-1758790549800-8cxcmibqa",
-            "type": "testimonial",
-            "value": null,
-            "settings": [],
-            "_mave": {
-              "testimonials": [
-                {
-                  "id": 1758790681690,
-                  "quote": "sdfsd",
-                  "author": "https://www.facebook.com/NGOSAJIDA",
-                  "rating": 5,
-                  "image": {
-                    "id": 525,
-                    "title": "Component 50.png",
-                    "file_name": "mave_7p9ifj.png",
-                    "file_type": "image/png",
-                    "file_path": "media/mave_7p9ifj.png",
-                    "file_size": null,
-                    "tags": null,
-                    "created_at": "2025-09-25T08:56:42.000000Z",
-                    "updated_at": "2025-09-25T08:56:42.000000Z"
-                  },
-                  "altQuote": null,
-                  "altAuthor": null
-                },
-                {
-                  "id": 1758790727001,
-                  "quote": "sdfdsf",
-                  "author": "https://www.youtube.com/@sajidafoundation1993",
-                  "rating": 5,
-                  "image": {
-                    "id": 528,
-                    "title": "Component 48.png",
-                    "file_name": "mave_sDI6Dv.png",
-                    "file_type": "image/png",
-                    "file_path": "media/mave_sDI6Dv.png",
-                    "file_size": null,
-                    "tags": null,
-                    "created_at": "2025-09-25T08:56:42.000000Z",
-                    "updated_at": "2025-09-25T08:56:42.000000Z"
-                  },
-                  "altQuote": null,
-                  "altAuthor": null
-                },
-                {
-                  "id": 1758790788625,
-                  "quote": "sdfsdf",
-                  "author": "https://linkedin.com/company/sajida-foundation",
-                  "rating": 5,
-                  "image": {
-                    "id": 524,
-                    "title": "Component 46.png",
-                    "file_name": "mave_XnraPC.png",
-                    "file_type": "image/png",
-                    "file_path": "media/mave_XnraPC.png",
-                    "file_size": null,
-                    "tags": null,
-                    "created_at": "2025-09-25T08:56:40.000000Z",
-                    "updated_at": "2025-09-25T08:56:40.000000Z"
-                  },
-                  "altQuote": null,
-                  "altAuthor": null
-                }
-              ],
-              "layout": "grid",
-              "font": "Arial",
-              "color": "#000000",
-              "background": "#ffffff"
-            },
-            "sectionIndex": 5,
-            "index": 0
-          }
-        ]
-      },
-      {
-        "_id": "section-1758710822155-wwb67g4eo",
-        "title": "Section 7",
-        "data": [
-          {
-            "_id": "component-1758710860797-52plqdzrs",
-            "type": "description",
-            "value": "<p>©2026 SAJIDA Hospital | All Rights Reserved. Design &amp; Development <span style=\"color: rgb(0, 102, 204);\">Ether Tech</span></p>",
-            "settings": [],
-            "_mave": {
-              "fontSize": "medium",
-              "primaryColor": "#000000",
-              "secondaryColor": "#000000",
-              "textAlign": "left",
-              "fontWeight": "normal",
-              "isDualColor": false,
-              "altText": null,
-              "altContent": "<p>©২০২৬ সাজেদা হাসপাতাল | সর্বস্বত্ব সংরক্ষিত। নকশা ও উন্নয়ন: <span style=\"color: rgb(0, 102, 204);\">Ether Tech</span></p>",
-              "showAltContent": true
-            },
-            "sectionIndex": 6,
-            "index": 0
-          }
-        ]
-      }
-    ],
-    "additional": [
-      {
-        "pageType": "Footer",
-        "metaTitle": "Main Footer",
-        "metaDescription": null,
-        "keywords": [],
-        "metaImage": null,
-        "metaImageAlt": null
-      }
-    ],
-    "status": 1,
-    "created_at": "2025-09-24T20:15:57.000000Z",
-    "updated_at": "2026-06-24T05:47:44.000000Z",
     "favicon_mave": null,
     "cards_mave": [],
     "events_mave": [],
@@ -10565,6 +10014,366 @@
     "status": 1,
     "created_at": "2025-08-20T15:20:37.000000Z",
     "updated_at": "2026-09-21T09:59:37.000000Z",
+    "favicon_mave": null,
+    "cards_mave": [],
+    "events_mave": [],
+    "footers_mave": [],
+    "medias_mave": [],
+    "menus_mave": [],
+    "navbars_mave": [],
+    "press_releases_mave": [],
+    "sliders_mave": []
+  },
+  {
+    "id": 149,
+    "slug": null,
+    "type": "Footer",
+    "favicon_id": 10,
+    "page_name_en": "Main Footer",
+    "page_name_bn": "Main Footer",
+    "head": null,
+    "body": [
+      {
+        "_id": "section-1758709122558-8fyf897ca",
+        "title": "Section 1",
+        "data": [
+          {
+            "_id": "component-1758709492403-4q23fybeo",
+            "type": "media",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 523,
+              "title": "Logo (10).png",
+              "file_name": "mave_J50hDp.png",
+              "file_type": "image/png",
+              "file_path": "media/mave_J50hDp.png",
+              "file_size": null,
+              "tags": null,
+              "created_at": "2025-09-25T10:49:17.000000Z",
+              "updated_at": "2025-09-25T10:49:17.000000Z"
+            },
+            "sectionIndex": 0,
+            "index": 0,
+            "id": 523
+          },
+          {
+            "_id": "component-1758709557133-hband3gf9",
+            "type": "description",
+            "value": "<p><span style=\"color: rgb(136, 136, 136);\">A dedicated team of experienced doctors, nurses, technologists, and support staff deliver patient-friendly, quality, integrated healthcare services, including emergency services, surgery, diagnostics, and specialised treatments.</span></p><p><span style=\"color: rgb(136, 136, 136);\">To continuously improve, a Quality Team monitors care standards and gathers patient feedback, with additional insights collected independently after service.&nbsp;</span></p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": "<p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">এখানে রোগীবান্ধব ও মানসম্মত পরিবেশে অভিজ্ঞ ডাক্তার, নার্স, টেকনোলজিস্ট ও সেবাকর্মীদের একটি দল কাজ করছেন। তারা জরুরি সেবা, সার্জারি, ডায়াগনস্টিক এবং বিভিন্ন বিশেষায়িত চিকিৎসাসহ সমন্বিত স্বাস্থ্যসেবা প্রদান করেন।</span></p><p><span style=\"background-color: transparent; color: rgb(136, 136, 136);\">সেবার মান আরও উন্নত করতে একটি কোয়ালিটি টিম নিয়মিতভাবে রোগীসেবার মান পর্যবেক্ষণ করে এবং রোগীদের মতামত গ্রহণ করে। এছাড়া, রোগী সেবা নিয়ে যাওয়ার পর ভিন্ন একটি প্রতিষ্ঠানের মাধ্যমে তাদের অভিজ্ঞতা ও মতামত সংগ্রহ করা হয়।&nbsp;</span></p>",
+              "showAltContent": true
+            },
+            "sectionIndex": 0,
+            "index": 1
+          }
+        ]
+      },
+      {
+        "_id": "section-1758709602784-tippe7gqj",
+        "title": "Section 2",
+        "data": [
+          {
+            "_id": "component-1758709620605-ck45x9van",
+            "type": "title",
+            "value": "<p>Contact Us</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "secondPartText": null,
+              "altText": "<p>যোগাযোগ করুন</p>",
+              "altSecondPartText": "<p>যোগাযোগ করুন</p>",
+              "showAltContent": true
+            },
+            "sectionIndex": 1,
+            "index": 0
+          },
+          {
+            "_id": "component-1758709683863-0o2l94f88",
+            "type": "description",
+            "value": "<p>Mob: 01777-772500</p><p><span style=\"background-color: rgb(249, 249, 249);\">Zinzira, Keraniganj, Dhaka</span></p><p>Keraniganj</p><p>1310</p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": "<p>মোবাইল: ০১৭৭৭-৭৭২৫০০</p><p><span style=\"background-color: rgb(249, 249, 249);\">জিনজিরা, কেরানীগঞ্জ, ঢাকা</span></p><p>কেরানীগঞ্জ</p><p>১৩১০<span style=\"background-color: transparent; color: rgb(0, 0, 0);\"> </span></p>",
+              "showAltContent": true
+            },
+            "sectionIndex": 1,
+            "index": 1
+          }
+        ]
+      },
+      {
+        "_id": "section-1758709727192-kuu18get2",
+        "title": "Section 3",
+        "data": [
+          {
+            "_id": "component-1758709737909-n1clmz8ln",
+            "type": "menu",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 22,
+              "name": "Quicklinks",
+              "menu_item_ids": [
+                62,
+                40,
+                137
+              ],
+              "menu_items": [
+                {
+                  "id": 62,
+                  "title": "About Us",
+                  "title_bn": "About Us",
+                  "link": "/about",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": "2025-09-25T07:39:47.000000Z",
+                  "all_children": []
+                },
+                {
+                  "id": 40,
+                  "title": "Contact Us",
+                  "title_bn": "যোগাযোগ",
+                  "link": "/contact",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": "2025-09-25T08:08:37.000000Z",
+                  "all_children": []
+                },
+                {
+                  "id": 137,
+                  "title": "Our Services",
+                  "title_bn": "Our Services",
+                  "link": "/services",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": "2025-09-25T07:42:53.000000Z",
+                  "all_children": []
+                }
+              ],
+              "altTitle": null
+            },
+            "sectionIndex": 2,
+            "index": 0,
+            "id": 22,
+            "menuMode": "vertical",
+            "menuTheme": "light"
+          }
+        ]
+      },
+      {
+        "_id": "section-1758710505115-k4fyby4ni",
+        "title": "Section 3 (Copy)_",
+        "data": [
+          {
+            "_id": "component-1758710505115-1muyjxkv6",
+            "type": "menu",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "id": 23,
+              "name": "Resources",
+              "menu_item_ids": [
+                134,
+                135
+              ],
+              "menu_items": [
+                {
+                  "id": 134,
+                  "title": "Case Stories",
+                  "title_bn": "Case stories",
+                  "link": "/stories",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": "2025-09-25T08:06:24.000000Z",
+                  "all_children": []
+                },
+                {
+                  "id": 135,
+                  "title": "Specialists",
+                  "title_bn": "Specialists",
+                  "link": "/specialists",
+                  "parent_id": null,
+                  "created_at": null,
+                  "updated_at": "2025-09-25T08:09:29.000000Z",
+                  "all_children": []
+                }
+              ],
+              "altTitle": null
+            },
+            "sectionIndex": 3,
+            "index": 0,
+            "id": 23,
+            "menuMode": "vertical",
+            "menuTheme": "light"
+          }
+        ]
+      },
+      {
+        "_id": "section-1758710477492-1wvnhavpq",
+        "title": "Section 4",
+        "data": [
+          {
+            "_id": "component-1758789155841-sj8n1d1mu",
+            "type": "button",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "text": "Visit SAJIDA Foundation Website",
+              "altText": "সাজেদা ফাউন্ডেশনের ওয়েবসাইট ভিজিট করুন",
+              "showAltText": true,
+              "icon": null,
+              "action": {
+                "type": "external_link",
+                "url": "https://www.sajida.org"
+              },
+              "alignment": "left"
+            },
+            "sectionIndex": 4,
+            "index": 0,
+            "id": "component-1758789155841-sj8n1d1mu"
+          }
+        ]
+      },
+      {
+        "_id": "section-1758710687366-3cff2pnty",
+        "title": "Section 6",
+        "data": [
+          {
+            "_id": "component-1758790549800-8cxcmibqa",
+            "type": "testimonial",
+            "value": null,
+            "settings": [],
+            "_mave": {
+              "testimonials": [
+                {
+                  "id": 1758790681690,
+                  "quote": "sdfsd",
+                  "author": "https://www.facebook.com/NGOSAJIDA",
+                  "rating": 5,
+                  "image": {
+                    "id": 525,
+                    "title": "Component 50.png",
+                    "file_name": "mave_7p9ifj.png",
+                    "file_type": "image/png",
+                    "file_path": "media/mave_7p9ifj.png",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-09-25T08:56:42.000000Z",
+                    "updated_at": "2025-09-25T08:56:42.000000Z"
+                  },
+                  "altQuote": null,
+                  "altAuthor": null
+                },
+                {
+                  "id": 1758790727001,
+                  "quote": "sdfdsf",
+                  "author": "https://www.youtube.com/@sajidafoundation1993",
+                  "rating": 5,
+                  "image": {
+                    "id": 528,
+                    "title": "Component 48.png",
+                    "file_name": "mave_sDI6Dv.png",
+                    "file_type": "image/png",
+                    "file_path": "media/mave_sDI6Dv.png",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-09-25T08:56:42.000000Z",
+                    "updated_at": "2025-09-25T08:56:42.000000Z"
+                  },
+                  "altQuote": null,
+                  "altAuthor": null
+                },
+                {
+                  "id": 1758790788625,
+                  "quote": "sdfsdf",
+                  "author": "https://linkedin.com/company/sajida-foundation",
+                  "rating": 5,
+                  "image": {
+                    "id": 524,
+                    "title": "Component 46.png",
+                    "file_name": "mave_XnraPC.png",
+                    "file_type": "image/png",
+                    "file_path": "media/mave_XnraPC.png",
+                    "file_size": null,
+                    "tags": null,
+                    "created_at": "2025-09-25T08:56:40.000000Z",
+                    "updated_at": "2025-09-25T08:56:40.000000Z"
+                  },
+                  "altQuote": null,
+                  "altAuthor": null
+                }
+              ],
+              "layout": "grid",
+              "font": "Arial",
+              "color": "#000000",
+              "background": "#ffffff"
+            },
+            "sectionIndex": 5,
+            "index": 0
+          }
+        ]
+      },
+      {
+        "_id": "section-1758710822155-wwb67g4eo",
+        "title": "Section 7",
+        "data": [
+          {
+            "_id": "component-1758710860797-52plqdzrs",
+            "type": "description",
+            "value": "<p>©2026 SAJIDA Hospital | All Rights Reserved. Design &amp; Development <span style=\"color: rgb(0, 102, 204);\">Ether Tech</span></p>",
+            "settings": [],
+            "_mave": {
+              "fontSize": "medium",
+              "primaryColor": "#000000",
+              "secondaryColor": "#000000",
+              "textAlign": "left",
+              "fontWeight": "normal",
+              "isDualColor": false,
+              "altText": null,
+              "altContent": "<p>©২০২৬ সাজেদা হাসপাতাল | সর্বস্বত্ব সংরক্ষিত। নকশা ও উন্নয়ন: <span style=\"color: rgb(0, 102, 204);\">Ether Tech</span></p>",
+              "showAltContent": true
+            },
+            "sectionIndex": 6,
+            "index": 0
+          }
+        ]
+      }
+    ],
+    "additional": [
+      {
+        "pageType": "Footer",
+        "metaTitle": "Main Footer",
+        "metaDescription": null,
+        "keywords": [],
+        "metaImage": null,
+        "metaImageAlt": null
+      }
+    ],
+    "status": 1,
+    "created_at": "2025-09-24T20:15:57.000000Z",
+    "updated_at": "2026-06-24T05:47:44.000000Z",
     "favicon_mave": null,
     "cards_mave": [],
     "events_mave": [],

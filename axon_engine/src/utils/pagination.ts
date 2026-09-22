@@ -6,6 +6,7 @@ interface PaginationDefaults {
 interface PaginationQuery {
   page?: string | number;
   limit?: string | number;
+  count?: string | number;
 }
 
 function parsePagination(query: PaginationQuery = {}, defaults: PaginationDefaults = {}) {
@@ -13,7 +14,9 @@ function parsePagination(query: PaginationQuery = {}, defaults: PaginationDefaul
   const defaultLimit = defaults.defaultLimit || 20;
 
   let page = parseInt(String(query.page), 10);
-  let limit = parseInt(String(query.limit), 10);
+  // Accept both `limit` (Express) and `count` (Laravel/CMS) query params.
+  const rawLimit = query.limit ?? query.count;
+  let limit = parseInt(String(rawLimit), 10);
 
   if (Number.isNaN(page) || page < 1) page = 1;
   if (Number.isNaN(limit) || limit < 1) limit = defaultLimit;

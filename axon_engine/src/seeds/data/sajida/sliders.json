@@ -2390,7 +2390,7 @@
     "additional": null,
     "status": 0,
     "created_at": "2025-09-16T17:08:48.000000Z",
-    "updated_at": "2025-09-16T17:08:48.000000Z",
+    "updated_at": "2026-09-15T10:25:20.000000Z",
     "medias": [],
     "cards": [
       {
@@ -3773,6 +3773,166 @@
           "tags": null,
           "created_at": "2026-07-01T12:57:16.000000Z",
           "updated_at": "2026-07-01T12:57:16.000000Z"
+        }
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "type": "image",
+    "title_en": "Home page",
+    "title_bn": "Home page",
+    "description_en": "<p>Home page</p>",
+    "description_bn": "<p>Home page</p>",
+    "media_ids": [
+      682,
+      681,
+      680
+    ],
+    "card_ids": [],
+    "additional": null,
+    "status": 0,
+    "created_at": "2026-09-15T09:51:42.000000Z",
+    "updated_at": "2026-09-15T09:51:42.000000Z",
+    "medias": [
+      {
+        "id": 682,
+        "title": "Dr._Farzana_Khanom_Dalia_optimized_1000.png",
+        "file_name": "mave_6FCdJG.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_6FCdJG.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2026-09-13T09:41:21.000000Z",
+        "updated_at": "2026-09-13T09:41:21.000000Z"
+      },
+      {
+        "id": 681,
+        "title": "Dr._Jafrin_Akhter_optimized_1000.png",
+        "file_name": "mave_mGoGUt.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_mGoGUt.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2026-09-13T09:41:21.000000Z",
+        "updated_at": "2026-09-13T09:41:21.000000Z"
+      },
+      {
+        "id": 680,
+        "title": "Dr._Kazi_Nahid_Morsheda_optimized_1000.png",
+        "file_name": "mave_ndQ6y9.png",
+        "file_type": "image/png",
+        "file_path": "media/mave_ndQ6y9.png",
+        "file_size": null,
+        "tags": null,
+        "created_at": "2026-09-13T09:41:20.000000Z",
+        "updated_at": "2026-09-13T09:41:20.000000Z"
+      }
+    ],
+    "cards": []
+  },
+  {
+    "id": 76,
+    "type": "card",
+    "title_en": "new",
+    "title_bn": "new",
+    "description_en": "<p>new</p>",
+    "description_bn": "<p>new</p>",
+    "media_ids": [],
+    "card_ids": [
+      189,
+      186,
+      183
+    ],
+    "additional": null,
+    "status": 0,
+    "created_at": "2026-09-15T09:58:29.000000Z",
+    "updated_at": "2026-09-15T09:58:29.000000Z",
+    "medias": [],
+    "cards": [
+      {
+        "id": 189,
+        "page_name": "CSR",
+        "media_ids": 465,
+        "title_en": "First Card",
+        "title_bn": "First Card",
+        "description_en": "<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>",
+        "description_bn": "<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>",
+        "link_url": "/csr?page_id=127&pageName=CSR",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2025-03-24T02:24:33.000000Z",
+        "updated_at": "2025-03-24T02:24:33.000000Z",
+        "media_files": {
+          "id": 465,
+          "title": "pexels-photo-3183170.jpeg",
+          "file_name": "mave_GYl0o5.jpg",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_GYl0o5.jpg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-03-23T14:50:52.000000Z",
+          "updated_at": "2025-03-23T14:50:52.000000Z"
+        }
+      },
+      {
+        "id": 186,
+        "page_name": "Al-Muslim Builders Ltd",
+        "media_ids": 476,
+        "title_en": "New Card",
+        "title_bn": "New Card",
+        "description_en": "<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>",
+        "description_bn": "<p>Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>",
+        "link_url": "/al-muslim-builders-ltd?page_id=126&pageName=Al-Muslim Builders Ltd",
+        "additional": {
+          "tags": []
+        },
+        "status": 1,
+        "created_at": "2025-03-24T01:47:49.000000Z",
+        "updated_at": "2025-03-24T01:47:49.000000Z",
+        "media_files": {
+          "id": 476,
+          "title": "pexels-photo-267415.jpeg",
+          "file_name": "mave_W2AeDj.jpg",
+          "file_type": "image/jpeg",
+          "file_path": "media/mave_W2AeDj.jpg",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2025-03-24T01:37:34.000000Z",
+          "updated_at": "2025-03-24T01:37:34.000000Z"
+        }
+      },
+      {
+        "id": 183,
+        "page_name": "Shirts",
+        "media_ids": 399,
+        "title_en": "Atiq",
+        "title_bn": "Israk",
+        "description_en": "<p>Atiq Israk</p>",
+        "description_bn": "<p>Atiq Israk</p>",
+        "link_url": "https://example.com/contact",
+        "additional": {
+          "tags": [
+            "mave",
+            "robust",
+            "bike"
+          ]
+        },
+        "status": 1,
+        "created_at": "2024-12-24T14:58:51.000000Z",
+        "updated_at": "2024-12-24T14:58:51.000000Z",
+        "media_files": {
+          "id": 399,
+          "title": "bikes27.webp",
+          "file_name": "mave_VvcO8z.webp",
+          "file_type": "image/webp",
+          "file_path": "media/mave_VvcO8z.webp",
+          "file_size": null,
+          "tags": null,
+          "created_at": "2024-10-21T13:41:17.000000Z",
+          "updated_at": "2024-10-21T13:41:17.000000Z"
         }
       }
     ]
