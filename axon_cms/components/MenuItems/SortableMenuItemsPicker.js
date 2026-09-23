@@ -21,7 +21,7 @@ import { CSS } from "@dnd-kit/utilities";
 import { Input, Checkbox, Button, Empty, Tag, Tooltip } from "antd";
 import {
   HolderOutlined,
-  DeleteOutlined,
+  MinusOutlined,
   PlusOutlined,
   SearchOutlined,
   EditOutlined,
@@ -135,13 +135,15 @@ const SortableItem = ({
           className="text-gray-400 hover:text-brand-dark"
         />
       )}
-      <Button
-        type="text"
-        size="small"
-        icon={<DeleteOutlined />}
-        onClick={() => onRemove(id)}
-        className="text-gray-400 hover:text-red-500"
-      />
+      <Tooltip title="Remove from menu">
+        <Button
+          type="text"
+          size="small"
+          icon={<MinusOutlined />}
+          onClick={() => onRemove(id)}
+          className="text-gray-400 hover:text-red-500"
+        />
+      </Tooltip>
     </div>
   );
 };
@@ -366,7 +368,7 @@ const SortableMenuItemsPicker = ({
                 type="link"
                 size="small"
                 danger
-                icon={<DeleteOutlined />}
+                icon={<MinusOutlined />}
                 onClick={handleRemoveSelected}
                 className="p-0 h-auto text-xs"
               >
