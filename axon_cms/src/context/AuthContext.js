@@ -78,6 +78,14 @@ function resolveSuperAdminOrganization(organizations, currentOrganization) {
     return currentOrganization;
   }
 
+  if (currentOrganization?.id != null) {
+    const currentId = String(currentOrganization.id);
+    const matched = organizations.find((org) => String(org.id) === currentId);
+    if (matched) {
+      return matched;
+    }
+  }
+
   const headlessPlatform = organizations.find(
     (org) => org.slug === "headless-platform" || org.slug === "mave-platform"
   );
