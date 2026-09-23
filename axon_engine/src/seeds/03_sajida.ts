@@ -20,7 +20,6 @@ export const CONFIG = {
   pageTypes: ['Page', 'Footer'],
   features: {
     footers: true,
-    forms: true,
     formBuilders: true,
     fallbackMedia: true,
   },
@@ -31,7 +30,6 @@ export const CONFIG = {
     footers: 'footers',
     cards: 'cards',
     sliders: 'sliders',
-    forms: 'forms',
     form_builders: 'form_builders',
     pages: 'pages',
   },
@@ -42,7 +40,6 @@ export const CONFIG = {
     footers: 'footers',
     cards: 'cards',
     sliders: 'sliders',
-    forms: 'forms',
     form_builders: 'form_builder',
   },
 };

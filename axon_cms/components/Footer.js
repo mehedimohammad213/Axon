@@ -379,7 +379,7 @@ const Footer = () => {
                     },
                     {
                       title: "Forms",
-                      onClick: () => router.push("/forms"),
+                      onClick: () => router.push("/formbuilder"),
                     },
                     {
                       title: "Footers",

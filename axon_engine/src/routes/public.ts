@@ -8,7 +8,6 @@ import cardController from '../controllers/cardController';
 import tableController from '../controllers/tableController';
 import productTypeController from '../controllers/productTypeController';
 import productController from '../controllers/productController';
-import formController from '../controllers/formController';
 import mediaController from '../controllers/mediaController';
 import * as generatedModelController from '../controllers/generatedModelController';
 import * as dynamicController from '../controllers/dynamicController';
@@ -46,9 +45,6 @@ siteRouter.get('/product-types/:id', productTypeController.show);
 
 siteRouter.get('/products', productController.index);
 siteRouter.get('/products/:id', productController.show);
-
-siteRouter.get('/forms', formController.index);
-siteRouter.get('/forms/:id', formController.show);
 
 siteRouter.get('/form_builder', formBuilderController.index);
 siteRouter.get('/form_builder/:id', formBuilderController.show);

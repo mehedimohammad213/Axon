@@ -150,8 +150,6 @@ const permissionsConfig = {
     'POST:form_builder': 'create_forms',
     'PUT:form_builder/*': 'edit_forms',
     'DELETE:form_builder/*': 'delete_forms',
-    'GET:formdata': 'view_form_responses',
-    'PUT:formdata/*': 'edit_forms',
     'GET:organizations': 'manage_organizations',
     'POST:organizations': 'manage_organizations',
     'GET:organizations/*': 'manage_organizations',

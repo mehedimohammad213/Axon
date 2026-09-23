@@ -14,7 +14,6 @@ export const CONFIG = {
   maveKeyMode: 'both',
   features: {
     footers: true,
-    forms: true,
     formBuilders: true,
     fallbackMedia: false,
   },
@@ -25,7 +24,6 @@ export const CONFIG = {
     footers: 'footers',
     cards: 'cards',
     sliders: 'sliders',
-    forms: 'forms',
     form_builders: 'form_builders',
     pages: 'pages',
   },

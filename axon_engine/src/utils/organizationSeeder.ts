@@ -723,28 +723,6 @@ async function seedOrganizationContent(db: DbContext, organization: any, config:
 
     console.log(`Sliders: ${Object.keys(mapper.idMaps.slider).length}`);
 
-    if (config.features?.forms !== false) {
-      for (const row of data.forms || []) {
-        const oldId = parseInt(row.id, 10);
-        const form = await upsertByKeys(
-          trx,
-          'forms',
-          { organization_id: organization.id, title_en: row.title_en },
-          {
-            title_bn: row.title_bn ?? null,
-            description_en: row.description_en ?? null,
-            description_bn: row.description_bn ?? null,
-            fields: jsonValue(row.fields || []),
-            submit_direction: row.submit_direction ?? null,
-            status: row.status ?? true,
-          }
-        );
-        mapper.idMaps.form[oldId] = form.id;
-      }
-
-      console.log(`Forms: ${(data.forms || []).length}`);
-    }
-
     if (config.features?.formBuilders !== false) {
       for (const row of data.form_builders || []) {
         const oldId = parseInt(row.id, 10);

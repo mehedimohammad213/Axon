@@ -117,14 +117,6 @@ const CONTACT_FORM_ELEMENTS = [
   },
 ];
 
-const LEGACY_FORM_FIELDS = [
-  { name: 'firstName', type: 'text', label: 'First Name', required: true },
-  { name: 'lastName', type: 'text', label: 'Last Name', required: true },
-  { name: 'phone', type: 'text', label: 'Phone Number', required: true },
-  { name: 'email', type: 'email', label: 'Email Address', required: true },
-  { name: 'message', type: 'textarea', label: 'Message', required: true },
-];
-
 const BUSINESS_HOURS = [
   { day: 'Friday', hours: 'Closed' },
   { day: 'Saturday', hours: '9 AM–7 PM' },
@@ -1781,20 +1773,6 @@ async function seedCarVisionContent(knex: any, organization: { id: number }) {
 
     contactFormBuilder.attributes = JSON.stringify(formAttributes);
 
-    await upsertByKeys(
-      trx,
-      'forms',
-      { organization_id: orgId, title_en: 'Website Contact Form' },
-      {
-        title_bn: 'ওয়েবসাইট যোগাযোগ ফর্ম',
-        description_en: 'Contact Dream Agent Car Vision.',
-        description_bn: 'ড্রিম এজেন্ট কার ভিশনের সাথে যোগাযোগ করুন।',
-        fields: JSON.stringify(LEGACY_FORM_FIELDS),
-        submit_direction: '/contact',
-        status: true,
-      }
-    );
-
     const siteSettings = buildSiteSettings(followUsMenu.menu_item_ids, headerMenu.menu_item_ids);
 
     await upsertPage(trx, orgId, 'site-settings', {
@@ -2057,17 +2035,6 @@ async function exportFixtures() {
     status: row.status,
   }));
 
-  const forms = mock.tables.forms.map((row) => ({
-    id: row.id,
-    title_en: row.title_en,
-    title_bn: row.title_bn,
-    description_en: row.description_en,
-    description_bn: row.description_bn,
-    fields: row.fields,
-    submit_direction: row.submit_direction,
-    status: row.status,
-  }));
-
   const form_builders = mock.tables.form_builder.map((row) => ({
     id: row.id,
     title: row.title,
@@ -2097,7 +2064,6 @@ async function exportFixtures() {
   writeFixture(outDir, 'footers', footers);
   writeFixture(outDir, 'cards', cards);
   writeFixture(outDir, 'sliders', sliders);
-  writeFixture(outDir, 'forms', forms);
   writeFixture(outDir, 'form_builders', form_builders);
   writeFixture(outDir, 'pages', pages);
 }

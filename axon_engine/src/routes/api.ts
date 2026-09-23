@@ -10,8 +10,6 @@ import cardController from '../controllers/cardController';
 import tableController from '../controllers/tableController';
 import productTypeController from '../controllers/productTypeController';
 import productController from '../controllers/productController';
-import formController from '../controllers/formController';
-import formDataController from '../controllers/formDataController';
 import * as formSubmissionController from '../controllers/formSubmissionController';
 import * as generatedModelController from '../controllers/generatedModelController';
 import * as dynamicController from '../controllers/dynamicController';
@@ -96,8 +94,6 @@ router.post('/products', productController.store);
 router.put('/products/:id', productController.update);
 router.delete('/products/:id', productController.destroy);
 
-router.get('/forms', formController.index);
-
 router.get('/media', mediaController.index);
 router.get('/media/pageview', mediaController.pageview);
 router.get('/media/:id', mediaController.show);
@@ -111,10 +107,6 @@ router.post(
 );
 router.put('/media/:id', mediaController.update);
 router.delete('/media/:id', mediaController.destroy);
-
-router.get('/formdata', formDataController.index);
-router.get('/formdata/:id', formDataController.show);
-router.put('/formdata/:id', formDataController.update);
 
 router.get('/form_builder', formBuilderController.index);
 router.get('/form_builder/:id', formBuilderController.show);

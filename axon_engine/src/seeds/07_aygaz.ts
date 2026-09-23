@@ -18,7 +18,6 @@ export const CONFIG = {
   pagesFetch: 'list',
   features: {
     footers: true,
-    forms: true,
     formBuilders: true,
     fallbackMedia: true,
   },
@@ -29,7 +28,6 @@ export const CONFIG = {
     footers: 'footers',
     cards: 'cards',
     sliders: 'sliders',
-    forms: 'forms',
     pages: 'pages',
   },
   optionalFixtures: {
@@ -42,7 +40,6 @@ export const CONFIG = {
     footers: 'footers',
     cards: 'cards',
     sliders: 'sliders',
-    forms: 'forms',
   },
 };
 

@@ -18,7 +18,6 @@ export const CONFIG = {
   pagesFetch: null,
   features: {
     footers: false,
-    forms: false,
     formBuilders: true,
     fallbackMedia: true,
   },

@@ -17,7 +17,6 @@ const API_ENDPOINTS = [
   { key: "sliders", url: "/sliders" },
   { key: "cards", url: "/cards" },
   { key: "tables", url: "/tables" },
-  { key: "forms", url: "/forms" },
   { key: "form_builder", url: "/form_builder" },
   { key: "footers", url: "/footers" },
   { key: "roles", url: "/roles" },

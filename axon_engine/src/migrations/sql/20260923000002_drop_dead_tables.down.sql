@@ -63,5 +63,10 @@ CREATE TABLE IF NOT EXISTS personal_access_tokens (
 CREATE INDEX IF NOT EXISTS personal_access_tokens_tokenable_idx
   ON personal_access_tokens (tokenable_type, tokenable_id);
 
-ALTER TABLE forms ADD COLUMN IF NOT EXISTS formable_id BIGINT;
-ALTER TABLE forms ADD COLUMN IF NOT EXISTS formable_type VARCHAR(255);
+DO $$
+BEGIN
+  IF to_regclass('public.forms') IS NOT NULL THEN
+    ALTER TABLE forms ADD COLUMN IF NOT EXISTS formable_id BIGINT;
+    ALTER TABLE forms ADD COLUMN IF NOT EXISTS formable_type VARCHAR(255);
+  END IF;
+END $$;

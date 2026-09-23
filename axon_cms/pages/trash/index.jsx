@@ -33,9 +33,7 @@ const TYPE_COLORS = {
   tables: "lime",
   products: "green",
   "product-types": "volcano",
-  forms: "processing",
   form_builder: "processing",
-  formdata: "default",
   "form-submission": "default",
   "generated-models": "red",
 };

@@ -54,7 +54,7 @@ const Index = () => {
         cachedApiCall("navbars", () => instance.get("/navbars"), undefined, force),
         cachedApiCall("sliders", () => instance.get("/sliders"), undefined, force),
         cachedApiCall("cards", () => instance.get("/cards"), undefined, force),
-        cachedApiCall("forms", () => instance.get("/forms"), undefined, force),
+        cachedApiCall("forms", () => instance.get("/form_builder"), undefined, force),
         cachedApiCall("footers", () => instance.get("/footers"), undefined, force),
       ]);
 

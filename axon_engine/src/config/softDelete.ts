@@ -16,9 +16,7 @@ export const SOFT_DELETE_TABLES = new Set([
   'tables',
   'product_types',
   'products',
-  'forms',
   'form_builder',
-  'form_data',
   'form_submissions',
   'generated_models',
 ]);
@@ -34,9 +32,7 @@ export const TRASHABLE_RESOURCES: TrashableResource[] = [
   { type: 'tables', table: 'tables', label: 'Table', titleFields: ['title_en', 'title_bn', 'page_name'] },
   { type: 'products', table: 'products', label: 'Product', titleFields: ['title', 'slug'] },
   { type: 'product-types', table: 'product_types', label: 'Product Type', titleFields: ['name', 'slug'] },
-  { type: 'forms', table: 'forms', label: 'Form', titleFields: ['title_en', 'title_bn'] },
   { type: 'form_builder', table: 'form_builder', label: 'Form', titleFields: ['title'] },
-  { type: 'formdata', table: 'form_data', label: 'Form Data', titleFields: ['order_id', 'message'] },
   { type: 'form-submission', table: 'form_submissions', label: 'Form Response', titleFields: ['form_type', 'status'] },
   { type: 'generated-models', table: 'generated_models', label: 'Custom Model', titleFields: ['model_name'] },
 ];
