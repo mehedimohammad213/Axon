@@ -309,7 +309,7 @@ const NavbarRow = ({
     >
       {/* Header */}
       <div
-        className="flex cursor-pointer items-start gap-3 px-5 py-4 sm:items-center"
+        className="flex min-h-[88px] cursor-pointer items-center gap-3 px-5 py-4"
         onClick={() => handleExpand(navbar.id)}
         role="button"
         tabIndex={0}
@@ -323,7 +323,7 @@ const NavbarRow = ({
         <button
           type="button"
           aria-label={isExpanded ? "Collapse" : "Expand"}
-          className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border transition-colors ${
+          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border transition-colors ${
             isExpanded
               ? "border-brand/30 bg-brand-light text-brand-dark"
               : "border-gray-200 bg-white text-gray-500 hover:bg-gray-50"
@@ -355,17 +355,18 @@ const NavbarRow = ({
             )}
           </div>
 
-          <h3 className="mt-1.5 truncate text-base font-semibold text-gray-900 sm:text-lg">
+          <h3
+            className="mt-1.5 min-h-7 truncate text-base font-semibold leading-7 text-gray-900 sm:text-lg"
+            title={navbar.title_en || "Untitled navbar"}
+          >
             {navbar.title_en || "Untitled navbar"}
           </h3>
 
-          {navbar.title_bn && (
-            <Tooltip title={navbar.title_bn} placement="topLeft">
-              <p className="mt-0.5 truncate text-sm text-gray-500">
-                {navbar.title_bn}
-              </p>
-            </Tooltip>
-          )}
+          <Tooltip title={navbar.title_bn || undefined} placement="topLeft">
+            <p className="mt-0.5 min-h-5 truncate text-sm leading-5 text-gray-500">
+              {navbar.title_bn || "\u00A0"}
+            </p>
+          </Tooltip>
         </div>
 
         {!isExpanded && (
