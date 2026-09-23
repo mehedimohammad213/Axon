@@ -22,14 +22,18 @@ function validateDynamicFields(fields: Record<string, any>[], data: Record<strin
   return Object.keys(errors).length ? errors : null;
 }
 
-async function findRegisteredModel(tableName: string) {
+async function findRegisteredModel(tableName: string, { withTrashed = false } = {}) {
   const orgId = OrganizationContext.get();
   const params: (string | number)[] = [`%model=${tableName}%`, `%model=${tableName}&%`];
   let sql = `SELECT * FROM generated_models
              WHERE (api_route LIKE $1 OR api_route LIKE $2)`;
 
+  if (!withTrashed) {
+    sql += ' AND deleted_at IS NULL';
+  }
+
   if (orgId && !OrganizationContext.isBypassed()) {
-    sql += ' AND organization_id = $3';
+    sql += ` AND organization_id = $${params.length + 1}`;
     params.push(orgId);
   }
 
@@ -37,7 +41,10 @@ async function findRegisteredModel(tableName: string) {
   return db.queryOne(sql, params);
 }
 
-async function assertAllowedTable(tableName: string, { requireActive = false } = {}) {
+async function assertAllowedTable(
+  tableName: string,
+  { requireActive = false, withTrashed = false } = {}
+) {
   if (!isValidTableName(tableName)) {
     throw new AppError(422, 'Validation failed', {
       model: ['Invalid table name.'],
@@ -52,7 +59,7 @@ async function assertAllowedTable(tableName: string, { requireActive = false } =
     throw new AppError(404, `Table ${tableName} not found`);
   }
 
-  const registered = await findRegisteredModel(tableName);
+  const registered = await findRegisteredModel(tableName, { withTrashed });
   if (!registered) {
     throw new AppError(403, 'This table is not registered as a generated model.');
   }
@@ -68,7 +75,8 @@ async function findArchitecture(architecture: string) {
   const orgId = OrganizationContext.get();
   const params: (string | number)[] = [architecture, `%${architecture}%`];
   let sql = `SELECT * FROM generated_models
-             WHERE (model_name ILIKE $1 OR api_route ILIKE $2)`;
+             WHERE deleted_at IS NULL
+               AND (model_name ILIKE $1 OR api_route ILIKE $2)`;
 
   if (orgId && !OrganizationContext.isBypassed()) {
     sql += ' AND organization_id = $3';
@@ -85,7 +93,7 @@ async function tableExists(tableName: string) {
 
 async function findAllRecords(tableName: string, { page = 1, limit = 20 } = {}) {
   const offset = (page - 1) * limit;
-  const baseQuery = scopedQuery(tableName);
+  const baseQuery = scopedQuery(tableName, { softDelete: true });
   const [data, countRow] = await Promise.all([
     baseQuery.clone().orderBy('id', 'desc').limit(limit).offset(offset),
     baseQuery.clone().count().first(),
@@ -95,11 +103,12 @@ async function findAllRecords(tableName: string, { page = 1, limit = 20 } = {}) 
 }
 
 async function findRecord(tableName: string, id: number | string) {
-  return scopedQuery(tableName).where(`${tableName}.id`, id).first();
+  return scopedQuery(tableName, { softDelete: true }).where(`${tableName}.id`, id).first();
 }
 
 async function createRecord(tableName: string, data: Record<string, any>, fields: Record<string, any>[] = []) {
-  const payload = { ...data, created_at: new Date(), updated_at: new Date() };
+  const payload: Record<string, any> = { ...data, created_at: new Date(), updated_at: new Date() };
+  delete payload.deleted_at;
   for (const field of fields) {
     if ((field.type === 'json' || field.type === 'array') && payload[field.name]) {
       payload[field.name] = JSON.stringify(payload[field.name]);
@@ -118,6 +127,7 @@ async function updateRecord(
   const payload: Record<string, any> = { ...data, updated_at: new Date() };
   delete payload.id;
   delete payload.created_at;
+  delete payload.deleted_at;
 
   for (const field of fields) {
     if ((field.type === 'json' || field.type === 'array') && payload[field.name] !== undefined) {
@@ -128,7 +138,25 @@ async function updateRecord(
   return db.update(tableName, { id }, payload);
 }
 
+async function findTrashedRecord(tableName: string, id: number | string) {
+  return scopedQuery(tableName, { softDelete: true, onlyTrashed: true })
+    .where(`${tableName}.id`, id)
+    .first();
+}
+
+async function findTrashedRecords(tableName: string) {
+  return scopedQuery(tableName, { softDelete: true, onlyTrashed: true }).orderBy('deleted_at', 'desc');
+}
+
 async function deleteRecord(tableName: string, id: number | string) {
+  return db.update(tableName, { id }, { deleted_at: new Date(), updated_at: new Date() });
+}
+
+async function restoreRecord(tableName: string, id: number | string) {
+  return db.update(tableName, { id }, { deleted_at: null, updated_at: new Date() });
+}
+
+async function forceDeleteRecord(tableName: string, id: number | string) {
   return db.remove(tableName, { id });
 }
 
@@ -141,7 +169,11 @@ export default {
   tableExists,
   findAllRecords,
   findRecord,
+  findTrashedRecord,
+  findTrashedRecords,
   createRecord,
   updateRecord,
   deleteRecord,
+  restoreRecord,
+  forceDeleteRecord,
 };

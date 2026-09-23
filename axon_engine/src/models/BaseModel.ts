@@ -2,18 +2,34 @@ import { insert, update, remove, count } from '../db';
 import { scopedQuery, withOrganizationId } from '../db/queryScope';
 import { tableQuery } from '../db/queryBuilder';
 import { paginatedResponse } from '../utils/pagination';
+import { isSoftDeleteTable } from '../config/softDelete';
 
 export interface CreateModelOptions {
   jsonFields?: string[];
   scoped?: boolean;
+  softDelete?: boolean;
+}
+
+export interface QueryOptions {
+  withTrashed?: boolean;
+  onlyTrashed?: boolean;
 }
 
 export function createModel(tableName: string, options: CreateModelOptions = {}) {
   const jsonFields = options.jsonFields || [];
   const scoped = options.scoped !== false;
+  const usesSoftDelete = options.softDelete ?? isSoftDeleteTable(tableName);
 
-  function query() {
-    return scoped ? scopedQuery(tableName) : tableQuery(tableName, { scoped: false });
+  function query(queryOptions: QueryOptions = {}) {
+    const tableOptions = {
+      softDelete: usesSoftDelete,
+      withTrashed: queryOptions.withTrashed === true,
+      onlyTrashed: queryOptions.onlyTrashed === true,
+    };
+
+    return scoped
+      ? scopedQuery(tableName, tableOptions)
+      : tableQuery(tableName, { scoped: false, ...tableOptions });
   }
 
   function serialize(data: Record<string, any>) {
@@ -46,16 +62,20 @@ export function createModel(tableName: string, options: CreateModelOptions = {})
     return paginatedResponse(data, countRow.count, page, limit);
   }
 
-  async function findById(id: number | string) {
-    return query().where(`${tableName}.id`, id).first();
+  async function findById(id: number | string, queryOptions: QueryOptions = {}) {
+    return query(queryOptions).where(`${tableName}.id`, id).first();
   }
 
-  async function findWhere(conditions: Record<string, any>) {
-    return query().where(conditions);
+  async function findTrashedById(id: number | string) {
+    return findById(id, { onlyTrashed: true });
   }
 
-  async function findOneWhere(conditions: Record<string, any>) {
-    return query().where(conditions).first();
+  async function findWhere(conditions: Record<string, any>, queryOptions: QueryOptions = {}) {
+    return query(queryOptions).where(conditions);
+  }
+
+  async function findOneWhere(conditions: Record<string, any>, queryOptions: QueryOptions = {}) {
+    return query(queryOptions).where(conditions).first();
   }
 
   async function create(data: Record<string, any>) {
@@ -64,6 +84,7 @@ export function createModel(tableName: string, options: CreateModelOptions = {})
       created_at: new Date(),
       updated_at: new Date(),
     });
+    delete payload.deleted_at;
 
     return insert(tableName, scoped ? withOrganizationId(payload) : payload);
   }
@@ -72,11 +93,25 @@ export function createModel(tableName: string, options: CreateModelOptions = {})
     const payload = serialize({ ...data, updated_at: new Date() });
     delete payload.id;
     delete payload.created_at;
+    delete payload.deleted_at;
 
     return update(tableName, { id }, payload);
   }
 
   async function removeRecord(id: number | string) {
+    if (!usesSoftDelete) {
+      return remove(tableName, { id });
+    }
+
+    return update(tableName, { id }, { deleted_at: new Date(), updated_at: new Date() });
+  }
+
+  async function restore(id: number | string) {
+    if (!usesSoftDelete) return null;
+    return update(tableName, { id }, { deleted_at: null, updated_at: new Date() });
+  }
+
+  async function forceDelete(id: number | string) {
     return remove(tableName, { id });
   }
 
@@ -90,16 +125,20 @@ export function createModel(tableName: string, options: CreateModelOptions = {})
 
   return {
     tableName,
+    usesSoftDelete,
     query,
     serialize,
     findAll,
     findPaginated,
     findById,
+    findTrashedById,
     findWhere,
     findOneWhere,
     create,
     update: updateRecord,
     remove: removeRecord,
+    restore,
+    forceDelete,
     countWhere,
   };
 }

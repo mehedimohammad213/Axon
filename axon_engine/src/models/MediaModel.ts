@@ -109,11 +109,24 @@ async function removeWithFile(id: number | string) {
   const media = await base.findById(id);
   if (!media) return null;
 
-  if (media.file_path && fs.existsSync(path.resolve(media.file_path))) {
-    fs.unlinkSync(path.resolve(media.file_path));
-  }
-
   await base.remove(id);
+  return media;
+}
+
+function deleteStoredFile(filePath: string | null | undefined) {
+  if (!filePath) return;
+  const resolved = path.resolve(filePath);
+  if (fs.existsSync(resolved)) {
+    fs.unlinkSync(resolved);
+  }
+}
+
+async function forceDeleteWithFile(id: number | string) {
+  const media = await base.findById(id, { withTrashed: true });
+  if (!media) return null;
+
+  deleteStoredFile(media.file_path);
+  await base.forceDelete(id);
   return media;
 }
 
@@ -123,6 +136,8 @@ export default {
   createFromFiles,
   updateMedia,
   removeWithFile,
+  forceDeleteWithFile,
+  deleteStoredFile,
   parseTags,
   normalizeMedia,
   async findPaginated(options?: Parameters<typeof base.findPaginated>[0]) {

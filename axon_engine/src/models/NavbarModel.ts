@@ -29,7 +29,7 @@ async function loadMenuItems(menuItemIds: unknown) {
   if (!ids.length) return [];
 
   const rows = await findWhereIn('menu_items', 'id', ids);
-  return orderByIdList(rows, ids);
+  return orderByIdList(rows.filter((row) => !row.deleted_at), ids);
 }
 
 async function loadRelations(navbar: Record<string, any> | null | undefined) {

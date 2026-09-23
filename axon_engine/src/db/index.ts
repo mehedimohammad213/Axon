@@ -41,6 +41,7 @@ export interface DbContext {
     extraConditions?: Record<string, unknown>
   ) => Promise<any[]>;
   tableExists: (name: string) => Promise<boolean>;
+  columnExists: (table: string, column: string) => Promise<boolean>;
   dropTableIfExists: (name: string) => Promise<void>;
   createDynamicTable: (name: string, fields: DynamicField[]) => Promise<void>;
 }
@@ -253,6 +254,23 @@ async function tableExists(tableName: string, executor: QueryExecutor | null = n
   return row.exists;
 }
 
+async function columnExists(
+  tableName: string,
+  columnName: string,
+  executor: QueryExecutor | null = null
+): Promise<boolean> {
+  const row = await queryOne(
+    `SELECT EXISTS (
+      SELECT 1
+      FROM information_schema.columns
+      WHERE table_schema = 'public' AND table_name = $1 AND column_name = $2
+    ) AS exists`,
+    [tableName, columnName],
+    executor
+  );
+  return row.exists;
+}
+
 async function dropTableIfExists(tableName: string, executor: QueryExecutor | null = null): Promise<void> {
   await query(`DROP TABLE IF EXISTS ${quoteIdent(tableName)} CASCADE`, [], executor);
 }
@@ -290,10 +308,16 @@ async function createDynamicTable(
     }),
     'created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()',
     'updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()',
+    'deleted_at TIMESTAMPTZ',
   ];
 
   const sql = `CREATE TABLE ${quoteIdent(tableName)} (${columns.join(', ')})`;
   await query(sql, [], executor);
+  await query(
+    `CREATE INDEX ${quoteIdent(`${tableName}_deleted_at_idx`)} ON ${quoteIdent(tableName)} (deleted_at) WHERE deleted_at IS NOT NULL`,
+    [],
+    executor
+  );
 }
 
 function createDbContext(executor: QueryExecutor | null = null): DbContext {
@@ -312,6 +336,7 @@ function createDbContext(executor: QueryExecutor | null = null): DbContext {
     findWhereIn: (table, field, values, extraConditions) =>
       findWhereIn(table, field, values, extraConditions, executor),
     tableExists: (name) => tableExists(name, executor),
+    columnExists: (table, column) => columnExists(table, column, executor),
     dropTableIfExists: (name) => dropTableIfExists(name, executor),
     createDynamicTable: (name, fields) => createDynamicTable(name, fields, executor),
   };
@@ -354,6 +379,7 @@ export {
   count,
   findWhereIn,
   tableExists,
+  columnExists,
   dropTableIfExists,
   createDynamicTable,
   createDbContext,

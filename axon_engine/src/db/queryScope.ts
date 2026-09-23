@@ -5,6 +5,9 @@ import type { QueryExecutor } from './index';
 interface ScopedQueryOptions {
   scoped?: boolean;
   executor?: QueryExecutor | null;
+  softDelete?: boolean;
+  withTrashed?: boolean;
+  onlyTrashed?: boolean;
 }
 
 function scopedQuery(tableName: string, options: ScopedQueryOptions = {}) {

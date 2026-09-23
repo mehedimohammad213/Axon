@@ -239,7 +239,13 @@ const SideMenuItems = ({
         }
       }
 
-      return filterMenuByPermissions(menuData, user);
+      const filteredMenu = filterMenuByPermissions(menuData, user);
+      const trashItem = filteredMenu.find((item) => item.link === "/trash");
+      if (!trashItem) {
+        return filteredMenu;
+      }
+
+      return [...filteredMenu.filter((item) => item.link !== "/trash"), trashItem];
     } catch (error) {
       console.error("Error processing menu data:", error);
       return allMenuData;

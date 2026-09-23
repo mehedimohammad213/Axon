@@ -45,16 +45,28 @@ async function updateGeneratedModel(
   });
 }
 
+function tableNameFromModel(model: Record<string, any> | null | undefined) {
+  return model?.api_route?.match(/model=([^&]+)/)?.[1] || null;
+}
+
 async function deleteWithTable(id: number | string) {
   const model = await base.findById(id);
   if (!model) return null;
 
-  const tableName = model.api_route?.match(/model=([^&]+)/)?.[1];
+  await base.remove(id);
+  return model;
+}
+
+async function forceDeleteWithTable(id: number | string) {
+  const model = await base.findById(id, { withTrashed: true });
+  if (!model) return null;
+
+  const tableName = tableNameFromModel(model);
   if (tableName && (await db.tableExists(tableName))) {
     await db.dropTableIfExists(tableName);
   }
 
-  await base.remove(id);
+  await base.forceDelete(id);
   return model;
 }
 
@@ -63,4 +75,6 @@ export default {
   generate,
   updateGeneratedModel,
   deleteWithTable,
+  forceDeleteWithTable,
+  tableNameFromModel,
 };

@@ -16,6 +16,7 @@ import * as formSubmissionController from '../controllers/formSubmissionControll
 import * as generatedModelController from '../controllers/generatedModelController';
 import * as dynamicController from '../controllers/dynamicController';
 import { navbarController, sliderController, formBuilderController } from '../controllers/cmsControllers';
+import * as trashController from '../controllers/trashController';
 
 const router = express.Router();
 
@@ -135,6 +136,10 @@ router.post('/diy-cms', generatedModelController.generate);
 router.get('/generated-models', generatedModelController.getGeneratedModels);
 router.put('/generated-models/:id', generatedModelController.updateGeneratedModel);
 router.delete('/generated-models/:id', generatedModelController.deleteGeneratedModel);
+
+router.get('/trash', trashController.index);
+router.post('/trash/:type/:id/restore', trashController.restore);
+router.delete('/trash/:type/:id', trashController.destroy);
 
 router.get('/dynamic', dynamicController.index);
 router.get('/dynamic/:id', dynamicController.show);

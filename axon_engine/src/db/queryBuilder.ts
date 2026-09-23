@@ -4,6 +4,9 @@ import { query, quoteIdent, type QueryExecutor } from './index';
 interface TableQueryOptions {
   scoped?: boolean;
   executor?: QueryExecutor | null;
+  softDelete?: boolean;
+  withTrashed?: boolean;
+  onlyTrashed?: boolean;
 }
 
 interface WherePart {
@@ -28,6 +31,9 @@ class TableQuery {
   orderDirection: string;
   limitValue: number | null;
   offsetValue: number | null;
+  softDelete: boolean;
+  withTrashed: boolean;
+  onlyTrashed: boolean;
 
   constructor(tableName: string, options: TableQueryOptions = {}) {
     this.tableName = tableName;
@@ -39,12 +45,18 @@ class TableQuery {
     this.orderDirection = 'desc';
     this.limitValue = null;
     this.offsetValue = null;
+    this.softDelete = options.softDelete === true;
+    this.withTrashed = options.withTrashed === true;
+    this.onlyTrashed = options.onlyTrashed === true;
   }
 
   clone(): TableQuery {
     const cloned = new TableQuery(this.tableName, {
       scoped: this.scoped,
       executor: this.executor,
+      softDelete: this.softDelete,
+      withTrashed: this.withTrashed,
+      onlyTrashed: this.onlyTrashed,
     });
     cloned.selectColumns = this.selectColumns;
     cloned.whereGroups = this.whereGroups.map((group) => ({
@@ -147,6 +159,15 @@ class TableQuery {
       if (orgId && !OrganizationContext.isBypassed()) {
         wheres.push(`${quoteIdent(this.tableName)}.organization_id = $${paramIndex++}`);
         params.push(orgId);
+      }
+    }
+
+    if (this.softDelete) {
+      const deletedAtColumn = `${quoteIdent(this.tableName)}.deleted_at`;
+      if (this.onlyTrashed) {
+        wheres.push(`${deletedAtColumn} IS NOT NULL`);
+      } else if (!this.withTrashed) {
+        wheres.push(`${deletedAtColumn} IS NULL`);
       }
     }
 

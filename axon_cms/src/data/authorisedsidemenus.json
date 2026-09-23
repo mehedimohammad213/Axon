@@ -121,5 +121,12 @@
                 "title": "Manage Roles"
             }
         ]
+    },
+    {
+        "id": 40,
+        "menu": "Trash",
+        "title": "Trash",
+        "icon": "/icons/headless/trash.svg",
+        "link": "/trash"
     }
 ]
