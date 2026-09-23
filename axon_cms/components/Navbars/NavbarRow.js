@@ -390,7 +390,38 @@ const NavbarRow = ({
             <div className="rounded-xl border border-gray-200 bg-white p-4 sm:p-5">
               {isEditing ? (
                 <div className="space-y-4">
-                  <div className="grid gap-4 sm:grid-cols-2">
+                  <div className="grid grid-cols-1 gap-4 md:grid-cols-[auto_minmax(0,1fr)_minmax(0,1fr)] md:items-end">
+                    <div>
+                      <label className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-gray-400">
+                        Logo
+                      </label>
+                      <div className="flex items-center gap-2">
+                        <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-md border border-gray-200 bg-gray-50 p-0.5">
+                          <NavbarLogoPreview logo={editLogo} size={28} />
+                        </div>
+                        <Button
+                          icon={<FileImageFilled />}
+                          onClick={() => setMediaModalVisible(true)}
+                          className="rounded-lg border-gray-200"
+                        >
+                          Change logo
+                        </Button>
+                      </div>
+                      <MediaSelectionModal
+                        isVisible={mediaModalVisible}
+                        onClose={() => setMediaModalVisible(false)}
+                        selectionMode="single"
+                        onSelectMedia={(selectedMedia) => {
+                          const media = Array.isArray(selectedMedia)
+                            ? selectedMedia[0]
+                            : selectedMedia;
+                          if (!media?.id) return;
+                          setEditedLogoId(media.id);
+                          setSelectedLogoMedia(media);
+                          setMediaModalVisible(false);
+                        }}
+                      />
+                    </div>
                     <div>
                       <label className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-gray-400">
                         Title (English)
@@ -419,38 +450,6 @@ const NavbarRow = ({
                         allowClear
                       />
                     </div>
-                  </div>
-
-                  <div>
-                    <label className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-gray-400">
-                      Logo
-                    </label>
-                    <div className="flex items-center gap-4">
-                      <div className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-lg border border-gray-200 bg-gray-50 p-1">
-                        <NavbarLogoPreview logo={editLogo} size={56} />
-                      </div>
-                      <Button
-                        icon={<FileImageFilled />}
-                        onClick={() => setMediaModalVisible(true)}
-                        className="rounded-lg border-gray-200"
-                      >
-                        Change logo
-                      </Button>
-                    </div>
-                    <MediaSelectionModal
-                      isVisible={mediaModalVisible}
-                      onClose={() => setMediaModalVisible(false)}
-                      selectionMode="single"
-                      onSelectMedia={(selectedMedia) => {
-                        const media = Array.isArray(selectedMedia)
-                          ? selectedMedia[0]
-                          : selectedMedia;
-                        if (!media?.id) return;
-                        setEditedLogoId(media.id);
-                        setSelectedLogoMedia(media);
-                        setMediaModalVisible(false);
-                      }}
-                    />
                   </div>
 
                   <div>

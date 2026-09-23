@@ -110,30 +110,10 @@ const AddNavbarForm = ({ media, onCancel, fetchNavbars, onNavbarCreated }) => {
 
   return (
     <div>
-      <Row gutter={[16, 16]}>
-        <Col xs={24} md={12}>
-          <Input
-            placeholder="Navbar Title (English)"
-            value={newNavbarTitleEn}
-            onChange={(e) => setNewNavbarTitleEn(e.target.value)}
-          />
-        </Col>
-        <Col xs={24} md={12}>
-          <Input
-            placeholder="Navbar Title (Alternate)"
-            value={newNavbarTitleBn}
-            onChange={(e) => setNewNavbarTitleBn(e.target.value)}
-          />
-        </Col>
-        <Col xs={24} md={12}>
-          <Button
-            onClick={() => setMediaModalVisible(true)}
-            className="h-10 px-4 bg-gradient-to-r from-white to-gray-50 hover:from-gray-50 hover:to-gray-100 text-gray-700 border-2 border-gray-200 hover:border-blue-300 font-semibold shadow-sm hover:shadow-md transition-all rounded-lg"
-          >
-            {newLogoId ? "Change Logo" : "Select Logo"}
-          </Button>
-          {newLogoId && selectedMedia ? (
-            <div className="mt-2">
+      <Row gutter={[16, 16]} align="bottom">
+        <Col xs={24} md={8}>
+          <div className="flex items-center gap-2">
+            {newLogoId && selectedMedia ? (
               <Image
                 src={
                   selectedMedia.file_path
@@ -141,12 +121,32 @@ const AddNavbarForm = ({ media, onCancel, fetchNavbars, onNavbarCreated }) => {
                     : "/images/Image_placeholder.png"
                 }
                 alt={selectedMedia.file_name || "Navbar Logo"}
-                width={100}
-                height={100}
-                className="rounded-lg object-cover"
+                width={32}
+                height={32}
+                className="rounded-md object-contain"
               />
-            </div>
-          ) : null}
+            ) : null}
+            <Button
+              onClick={() => setMediaModalVisible(true)}
+              className="h-10 px-4 bg-gradient-to-r from-white to-gray-50 hover:from-gray-50 hover:to-gray-100 text-gray-700 border-2 border-gray-200 hover:border-blue-300 font-semibold shadow-sm hover:shadow-md transition-all rounded-lg"
+            >
+              {newLogoId ? "Change Logo" : "Select Logo"}
+            </Button>
+          </div>
+        </Col>
+        <Col xs={24} md={8}>
+          <Input
+            placeholder="Navbar Title (English)"
+            value={newNavbarTitleEn}
+            onChange={(e) => setNewNavbarTitleEn(e.target.value)}
+          />
+        </Col>
+        <Col xs={24} md={8}>
+          <Input
+            placeholder="Navbar Title (Alternate)"
+            value={newNavbarTitleBn}
+            onChange={(e) => setNewNavbarTitleBn(e.target.value)}
+          />
         </Col>
       </Row>
 
