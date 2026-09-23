@@ -14,6 +14,7 @@ import PagePreview from "./PagePreview";
 // Hooks
 import { usePageOperations } from "./hooks/usePageOperations";
 import { usePageEffects } from "./hooks/usePageEffects";
+import { getPageListPath } from "./utils/getPageListPath";
 
 const PageBuilder = ({ pageId, editMode = false }) => {
   const dispatch = useDispatch();
@@ -61,8 +62,8 @@ const PageBuilder = ({ pageId, editMode = false }) => {
       const success = await savePageData(true);
       if (!success) return;
     }
-    router.push("/pages");
-  }, [isDirty, savePageData, router]);
+    router.push(getPageListPath(pageData));
+  }, [isDirty, savePageData, router, pageData]);
 
   // Handle editing state changes
   const handleEditingStateChange = (editing) => {

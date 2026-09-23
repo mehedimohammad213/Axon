@@ -13,6 +13,7 @@ import {
   CheckCircleOutlined,
 } from "@ant-design/icons";
 import { useRouter } from "next/router";
+import { getPageListPath } from "../utils/getPageListPath";
 
 const PageHeader = ({
   pageData,
@@ -30,7 +31,7 @@ const PageHeader = ({
   const pageName = pageData?.page_name_en || "Untitled Page";
 
   const handleBack = () => {
-    router.push("/pages");
+    router.push(getPageListPath(pageData));
   };
 
   return (

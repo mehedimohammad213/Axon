@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import instance from "../../axios";
 import ComponentRenderer from "./Components/ComponentRenderer";
 import syncPageLinkedData from "./utils/syncPageLinkedData";
+import { getPageListPath } from "./utils/getPageListPath";
 
 const { Title, Text } = Typography;
 
@@ -116,7 +117,7 @@ const PagePreview = ({ pageId, pageData: propPageData, open, setOpen }) => {
   }, [pageId, propPageData]);
 
   const handleBack = () => {
-    router.push("/pages");
+    router.push(getPageListPath(finalPageData));
   };
 
   const handleEditPage = () => {
