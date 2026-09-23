@@ -24,6 +24,7 @@ import {
   DeleteOutlined,
   PlusOutlined,
   SearchOutlined,
+  EditOutlined,
 } from "@ant-design/icons";
 
 const reorderWithMultiSelect = (items, selectedIds, activeId, overId) => {
@@ -68,6 +69,7 @@ const SortableItem = ({
   isDraggingGroup,
   onToggleSelect,
   onRemove,
+  onEdit,
 }) => {
   const {
     attributes,
@@ -115,6 +117,18 @@ const SortableItem = ({
           {item.title_bn || item.category}
         </Tag>
       )}
+      {onEdit && (
+        <Button
+          type="text"
+          size="small"
+          icon={<EditOutlined />}
+          onClick={(e) => {
+            e.stopPropagation();
+            onEdit(item || { id });
+          }}
+          className="text-gray-400 hover:text-brand-dark"
+        />
+      )}
       <Button
         type="text"
         size="small"
@@ -139,6 +153,7 @@ const SortableMenuItemsPicker = ({
   menuItems = [],
   value = [],
   onChange,
+  onEdit,
   compact = false,
   availableLabel = "Available Items",
   selectedLabel = "Menu Order",
@@ -378,6 +393,7 @@ const SortableMenuItemsPicker = ({
                     }
                     onToggleSelect={handleToggleSelect}
                     onRemove={handleRemove}
+                    onEdit={onEdit}
                   />
                 ))}
               </div>

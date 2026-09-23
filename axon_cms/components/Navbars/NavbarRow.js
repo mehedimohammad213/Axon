@@ -27,6 +27,7 @@ import instance from "../../axios";
 import MediaSelectionModal from "../PageBuilder/Modals/MediaSelectionModal";
 import SortableMenuItemsPicker from "../MenuItems/SortableMenuItemsPicker";
 import AddMenuItemForm from "../MenuItems/AddMenuItemForm";
+import EditMenuItemForm from "../MenuItems/EditMenuItemForm";
 
 const PLACEHOLDER_LOGO = "/images/headless_logo.svg";
 
@@ -153,6 +154,7 @@ const NavbarRow = ({
   const [mediaModalVisible, setMediaModalVisible] = useState(false);
   const [selectedLogoMedia, setSelectedLogoMedia] = useState(null);
   const [isAddMenuItemOpen, setIsAddMenuItemOpen] = useState(false);
+  const [editingMenuItem, setEditingMenuItem] = useState(null);
 
   const isEditing = editingNavbarId === navbar.id;
   const isExpanded = expandedNavbarId === navbar.id;
@@ -196,11 +198,11 @@ const NavbarRow = ({
         // silently fail
       }
     };
-    if (isEditing) {
+    if (isEditing || isExpanded) {
       fetchMenuItems();
       fetchPages();
     }
-  }, [isEditing, navbar.id]);
+  }, [isEditing, isExpanded, navbar.id]);
 
   const handleUpdate = async () => {
     const titleEn = (editedNavbarTitleEn || "").trim();
@@ -268,6 +270,30 @@ const NavbarRow = ({
   const cancelEditing = () => {
     setEditingNavbarId(null);
     setSelectedLogoMedia(null);
+  };
+
+  const openMenuItemEditor = (item) => {
+    if (!item?.id) return;
+    const fullItem =
+      menuItems.find((menuItem) => menuItem.id === item.id) || item;
+    setEditingMenuItem(fullItem);
+  };
+
+  const handleMenuItemUpdated = (updated) => {
+    if (!updated?.id) return;
+    setMenuItems((prev) =>
+      prev.map((item) => (item.id === updated.id ? { ...item, ...updated } : item))
+    );
+    setNavbars((prevNavbars) =>
+      prevNavbars?.map((item) => ({
+        ...item,
+        menu_items: (item.menu_items || []).map((menuItem) =>
+          menuItem.id === updated.id ? { ...menuItem, ...updated } : menuItem
+        ),
+      }))
+    );
+    setEditingMenuItem(null);
+    fetchNavbars?.();
   };
 
   const editLogo = selectedLogoMedia || navbarLogo;
@@ -445,6 +471,7 @@ const NavbarRow = ({
                       menuItems={menuItems}
                       value={editedMenuItemIds}
                       onChange={setEditedMenuItemIds}
+                      onEdit={openMenuItemEditor}
                     />
                   </div>
 
@@ -485,13 +512,22 @@ const NavbarRow = ({
                         <h4 className="text-sm font-semibold text-gray-800">
                           Menu items
                         </h4>
+                        <span className="text-xs text-gray-400">
+                          Click an item to edit
+                        </span>
                       </div>
                       <ul className="flex flex-wrap gap-2">
                         {(navbar.menu_items || []).map((item) => (
                           <li key={item.id}>
-                            <Tag className="m-0 rounded-md border-gray-200 bg-gray-50 px-2.5 py-0.5 text-xs text-gray-700">
-                              {item.title}
-                            </Tag>
+                            <Tooltip title="Edit menu item">
+                              <Tag
+                                className="m-0 inline-flex cursor-pointer items-center gap-1.5 rounded-md border-gray-200 bg-gray-50 px-2.5 py-0.5 text-xs text-gray-700 hover:border-brand hover:bg-brand-light hover:text-brand-dark"
+                                onClick={() => openMenuItemEditor(item)}
+                              >
+                                {item.title}
+                                <EditOutlined className="text-[10px]" />
+                              </Tag>
+                            </Tooltip>
                           </li>
                         ))}
                       </ul>
@@ -550,6 +586,36 @@ const NavbarRow = ({
           </div>
         </div>
       )}
+
+      <Modal
+        open={Boolean(editingMenuItem)}
+        onCancel={() => setEditingMenuItem(null)}
+        destroyOnClose
+        footer={null}
+        title={
+          <div className="flex items-center gap-2">
+            <img
+              src="/icons/headless/menuitems.svg"
+              alt="Menu Items"
+              className="w-6"
+            />
+            <span>Edit Menu Item</span>
+          </div>
+        }
+        width={900}
+        zIndex={1300}
+        getContainer={() => document.body}
+      >
+        {editingMenuItem && (
+          <EditMenuItemForm
+            menuItem={editingMenuItem}
+            pages={pages}
+            menuItems={menuItems}
+            onCancel={() => setEditingMenuItem(null)}
+            onUpdated={handleMenuItemUpdated}
+          />
+        )}
+      </Modal>
 
       <Modal
         open={isAddMenuItemOpen}

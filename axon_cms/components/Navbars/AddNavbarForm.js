@@ -7,6 +7,7 @@ import instance from "../../axios";
 import MediaSelectionModal from "../PageBuilder/Modals/MediaSelectionModal";
 import SortableMenuItemsPicker from "../MenuItems/SortableMenuItemsPicker";
 import AddMenuItemForm from "../MenuItems/AddMenuItemForm";
+import EditMenuItemForm from "../MenuItems/EditMenuItemForm";
 import Image from "next/image";
 
 const AddNavbarForm = ({ media, onCancel, fetchNavbars, onNavbarCreated }) => {
@@ -19,6 +20,7 @@ const AddNavbarForm = ({ media, onCancel, fetchNavbars, onNavbarCreated }) => {
   const [mediaModalVisible, setMediaModalVisible] = useState(false);
   const [selectedMedia, setSelectedMedia] = useState(null);
   const [isAddMenuItemOpen, setIsAddMenuItemOpen] = useState(false);
+  const [editingMenuItem, setEditingMenuItem] = useState(null);
   const [saving, setSaving] = useState(false);
 
   const fetchMenuItems = useCallback(async () => {
@@ -166,6 +168,11 @@ const AddNavbarForm = ({ media, onCancel, fetchNavbars, onNavbarCreated }) => {
             menuItems={menuItems}
             value={newMenuItemIds}
             onChange={setNewMenuItemIds}
+            onEdit={(item) => {
+              const fullItem =
+                menuItems.find((menuItem) => menuItem.id === item?.id) || item;
+              setEditingMenuItem(fullItem);
+            }}
           />
         </div>
       </div>
@@ -201,6 +208,45 @@ const AddNavbarForm = ({ media, onCancel, fetchNavbars, onNavbarCreated }) => {
           setMediaModalVisible(false);
         }}
       />
+
+      <Modal
+        open={Boolean(editingMenuItem)}
+        onCancel={() => setEditingMenuItem(null)}
+        destroyOnClose
+        footer={null}
+        title={
+          <div className="flex items-center gap-2">
+            <img
+              src="/icons/headless/menuitems.svg"
+              alt="Menu Items"
+              className="w-6"
+            />
+            <span>Edit Menu Item</span>
+          </div>
+        }
+        width={900}
+        zIndex={1300}
+        getContainer={() => document.body}
+      >
+        {editingMenuItem && (
+          <EditMenuItemForm
+            menuItem={editingMenuItem}
+            pages={pages}
+            menuItems={menuItems}
+            onCancel={() => setEditingMenuItem(null)}
+            onUpdated={(updated) => {
+              if (updated?.id) {
+                setMenuItems((prev) =>
+                  prev.map((item) =>
+                    item.id === updated.id ? { ...item, ...updated } : item
+                  )
+                );
+              }
+              setEditingMenuItem(null);
+            }}
+          />
+        )}
+      </Modal>
 
       <Modal
         open={isAddMenuItemOpen}
