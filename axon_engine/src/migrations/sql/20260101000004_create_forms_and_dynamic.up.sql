@@ -8,8 +8,6 @@ CREATE TABLE forms (
   fields JSONB NOT NULL,
   submit_direction VARCHAR(255),
   status BOOLEAN DEFAULT FALSE,
-  formable_id BIGINT,
-  formable_type VARCHAR(255),
   created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
   updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
@@ -68,37 +66,6 @@ CREATE TABLE form_submissions (
 );
 
 CREATE INDEX form_submissions_organization_id_idx ON form_submissions (organization_id);
-
-CREATE TABLE cardables (
-  id BIGSERIAL PRIMARY KEY,
-  card_id BIGINT NOT NULL,
-  cardable_id BIGINT NOT NULL,
-  cardable_type VARCHAR(255) NOT NULL,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  UNIQUE (card_id, cardable_id, cardable_type)
-);
-
-CREATE TABLE formables (
-  id BIGSERIAL PRIMARY KEY,
-  form_id BIGINT NOT NULL,
-  formable_id BIGINT NOT NULL,
-  formable_type VARCHAR(255) NOT NULL,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  UNIQUE (form_id, formable_id, formable_type)
-);
-
-CREATE TABLE medex (
-  id BIGSERIAL PRIMARY KEY,
-  media_id BIGINT NOT NULL REFERENCES media(id) ON DELETE CASCADE,
-  entity_id BIGINT NOT NULL,
-  entity_type VARCHAR(255) NOT NULL,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-);
-
-CREATE INDEX medex_entity_idx ON medex (entity_id, entity_type);
 
 CREATE TABLE generated_models (
   id BIGSERIAL PRIMARY KEY,

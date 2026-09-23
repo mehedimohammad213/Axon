@@ -54,24 +54,3 @@ CREATE TABLE users (
 
 CREATE INDEX users_organization_id_idx ON users (organization_id);
 CREATE INDEX users_role_id_idx ON users (role_id);
-
-CREATE TABLE password_reset_tokens (
-  email VARCHAR(255) PRIMARY KEY,
-  token VARCHAR(255) NOT NULL,
-  created_at TIMESTAMPTZ
-);
-
-CREATE TABLE personal_access_tokens (
-  id BIGSERIAL PRIMARY KEY,
-  tokenable_type VARCHAR(255) NOT NULL,
-  tokenable_id BIGINT NOT NULL,
-  name VARCHAR(255) NOT NULL,
-  token VARCHAR(64) NOT NULL UNIQUE,
-  abilities TEXT,
-  last_used_at TIMESTAMPTZ,
-  expires_at TIMESTAMPTZ,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-);
-
-CREATE INDEX personal_access_tokens_tokenable_idx ON personal_access_tokens (tokenable_type, tokenable_id);

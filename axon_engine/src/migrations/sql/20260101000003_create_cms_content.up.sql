@@ -132,15 +132,3 @@ CREATE TABLE pages (
 
 CREATE INDEX pages_organization_id_idx ON pages (organization_id);
 CREATE INDEX pages_slug_idx ON pages (slug);
-
-CREATE TABLE page_cards (
-  id BIGSERIAL PRIMARY KEY,
-  image VARCHAR(255) NOT NULL,
-  title_en VARCHAR(255) NOT NULL,
-  title_bn VARCHAR(255),
-  description_en TEXT NOT NULL,
-  description_bn TEXT,
-  link_url VARCHAR(255) NOT NULL,
-  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-  updated_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
-);
