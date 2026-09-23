@@ -1,4 +1,4 @@
-import { findWhereIn } from '../db';
+import { db, findWhereIn } from '../db';
 import { createModel } from './BaseModel';
 
 const base = createModel('navbars', {
@@ -35,10 +35,14 @@ async function loadMenuItems(menuItemIds: unknown) {
 async function loadRelations(navbar: Record<string, any> | null | undefined) {
   if (!navbar) return navbar;
   const menuItemIds = normalizeIds(navbar.menu_item_ids);
+  const logo = navbar.logo_id
+    ? await db.findOne('media', { id: navbar.logo_id })
+    : null;
   return {
     ...navbar,
     menu_item_ids: menuItemIds,
     menu_items: await loadMenuItems(menuItemIds),
+    logo,
   };
 }
 

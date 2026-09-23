@@ -30,9 +30,12 @@ import AddMenuItemForm from "../MenuItems/AddMenuItemForm";
 
 const PLACEHOLDER_LOGO = "/images/headless_logo.svg";
 
+const getNavbarLogoId = (navbar) =>
+  navbar?.logo_id ?? navbar?.logo?.id ?? null;
+
 const resolveNavbarLogo = (navbar, mediaList = []) => {
   if (navbar?.logo?.file_path) return navbar.logo;
-  const logoId = navbar?.logo_id ?? navbar?.logo?.id;
+  const logoId = getNavbarLogoId(navbar);
   if (logoId && Array.isArray(mediaList)) {
     return mediaList.find((item) => String(item.id) === String(logoId)) || null;
   }
@@ -136,12 +139,12 @@ const NavbarRow = ({
   handleExpand,
 }) => {
   const [editedNavbarTitleEn, setEditedNavbarTitleEn] = useState(
-    navbar.title_en
+    navbar.title_en || ""
   );
   const [editedNavbarTitleBn, setEditedNavbarTitleBn] = useState(
-    navbar.title_bn
+    navbar.title_bn || ""
   );
-  const [editedLogoId, setEditedLogoId] = useState(navbar?.logo?.id || null);
+  const [editedLogoId, setEditedLogoId] = useState(getNavbarLogoId(navbar));
   const [editedMenuItemIds, setEditedMenuItemIds] = useState(
     navbar.menu_items?.map((item) => item.id) || navbar.menu_item_ids || []
   );
@@ -158,14 +161,23 @@ const NavbarRow = ({
 
   useEffect(() => {
     if (isEditing) {
-      setEditedNavbarTitleEn(navbar.title_en);
-      setEditedNavbarTitleBn(navbar.title_bn);
-      setEditedLogoId(navbar?.logo?.id || null);
+      setEditedNavbarTitleEn(navbar.title_en || "");
+      setEditedNavbarTitleBn(navbar.title_bn || "");
+      setEditedLogoId(getNavbarLogoId(navbar));
       setEditedMenuItemIds(
         navbar.menu_items?.map((item) => item.id) || navbar.menu_item_ids || []
       );
     }
-  }, [isEditing, navbar]);
+  }, [
+    isEditing,
+    navbar.id,
+    navbar.title_en,
+    navbar.title_bn,
+    navbar.logo_id,
+    navbar.logo,
+    navbar.menu_items,
+    navbar.menu_item_ids,
+  ]);
 
   useEffect(() => {
     const fetchMenuItems = async () => {
@@ -191,7 +203,9 @@ const NavbarRow = ({
   }, [isEditing, navbar.id]);
 
   const handleUpdate = async () => {
-    if (!editedNavbarTitleEn || !editedLogoId) {
+    const titleEn = (editedNavbarTitleEn || "").trim();
+    const logoId = editedLogoId ?? getNavbarLogoId(navbar);
+    if (!titleEn || !logoId) {
       message.error("Please fill in title and logo");
       return;
     }
@@ -202,9 +216,9 @@ const NavbarRow = ({
 
     try {
       const updatedNavbar = {
-        title_en: editedNavbarTitleEn,
-        title_bn: editedNavbarTitleBn,
-        logo_id: editedLogoId,
+        title_en: titleEn,
+        title_bn: (editedNavbarTitleBn || "").trim(),
+        logo_id: logoId,
         menu_item_ids: editedMenuItemIds,
       };
       const response = await instance.put(
@@ -402,8 +416,12 @@ const NavbarRow = ({
                       onClose={() => setMediaModalVisible(false)}
                       selectionMode="single"
                       onSelectMedia={(selectedMedia) => {
-                        setEditedLogoId(selectedMedia.id);
-                        setSelectedLogoMedia(selectedMedia);
+                        const media = Array.isArray(selectedMedia)
+                          ? selectedMedia[0]
+                          : selectedMedia;
+                        if (!media?.id) return;
+                        setEditedLogoId(media.id);
+                        setSelectedLogoMedia(media);
                         setMediaModalVisible(false);
                       }}
                     />

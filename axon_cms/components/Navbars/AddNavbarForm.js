@@ -73,7 +73,7 @@ const AddNavbarForm = ({ media, onCancel, fetchNavbars, onNavbarCreated }) => {
   };
 
   const handleAddNavbar = async () => {
-    if (!newNavbarTitleEn || !newLogoId) {
+    if (!newNavbarTitleEn.trim() || !newLogoId) {
       message.error("Please fill in title and logo");
       return;
     }
@@ -193,9 +193,10 @@ const AddNavbarForm = ({ media, onCancel, fetchNavbars, onNavbarCreated }) => {
         onClose={() => setMediaModalVisible(false)}
         selectionMode="single"
         onSelectMedia={(selected) => {
-          if (selected) {
-            setNewLogoId(selected.id);
-            setSelectedMedia(selected);
+          const media = Array.isArray(selected) ? selected[0] : selected;
+          if (media?.id) {
+            setNewLogoId(media.id);
+            setSelectedMedia(media);
           }
           setMediaModalVisible(false);
         }}
