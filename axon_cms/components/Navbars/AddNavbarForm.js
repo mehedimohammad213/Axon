@@ -10,11 +10,19 @@ import AddMenuItemForm from "../MenuItems/AddMenuItemForm";
 import EditMenuItemForm from "../MenuItems/EditMenuItemForm";
 import Image from "next/image";
 
-const AddNavbarForm = ({ media, onCancel, fetchNavbars, onNavbarCreated }) => {
+const AddNavbarForm = ({
+  media,
+  onCancel,
+  fetchNavbars,
+  onNavbarCreated,
+  initialMenuItemIds = [],
+}) => {
   const [newNavbarTitleEn, setNewNavbarTitleEn] = useState("");
   const [newNavbarTitleBn, setNewNavbarTitleBn] = useState("");
   const [newLogoId, setNewLogoId] = useState(null);
-  const [newMenuItemIds, setNewMenuItemIds] = useState([]);
+  const [newMenuItemIds, setNewMenuItemIds] = useState(
+    Array.isArray(initialMenuItemIds) ? initialMenuItemIds : []
+  );
   const [menuItems, setMenuItems] = useState([]);
   const [pages, setPages] = useState([]);
   const [mediaModalVisible, setMediaModalVisible] = useState(false);
@@ -63,7 +71,9 @@ const AddNavbarForm = ({ media, onCancel, fetchNavbars, onNavbarCreated }) => {
     setNewNavbarTitleEn("");
     setNewNavbarTitleBn("");
     setNewLogoId(null);
-    setNewMenuItemIds([]);
+    setNewMenuItemIds(
+      Array.isArray(initialMenuItemIds) ? initialMenuItemIds : []
+    );
     setSelectedMedia(null);
     setMediaModalVisible(false);
     setIsAddMenuItemOpen(false);
