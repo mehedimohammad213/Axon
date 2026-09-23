@@ -360,9 +360,11 @@ const NavbarRow = ({
           </h3>
 
           {navbar.title_bn && (
-            <p className="mt-0.5 truncate text-sm text-gray-500">
-              {navbar.title_bn}
-            </p>
+            <Tooltip title={navbar.title_bn} placement="topLeft">
+              <p className="mt-0.5 truncate text-sm text-gray-500">
+                {navbar.title_bn}
+              </p>
+            </Tooltip>
           )}
         </div>
 

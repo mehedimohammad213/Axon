@@ -18,7 +18,7 @@ import {
   useSortable,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
-import { Input, Checkbox, Button, Empty, Tag } from "antd";
+import { Input, Checkbox, Button, Empty, Tag, Tooltip } from "antd";
 import {
   HolderOutlined,
   DeleteOutlined,
@@ -109,13 +109,19 @@ const SortableItem = ({
         onChange={() => onToggleSelect(id)}
         onClick={(e) => e.stopPropagation()}
       />
-      <span className="flex-1 text-sm font-medium text-gray-800 truncate">
-        {item?.title || `Item #${id}`}
-      </span>
+      <Tooltip title={item?.title || `Item #${id}`} placement="topLeft">
+        <span className="min-w-0 flex-1 truncate text-sm font-medium text-gray-800">
+          {item?.title || `Item #${id}`}
+        </span>
+      </Tooltip>
       {(item?.title_bn || item?.category) && (
-        <Tag className="text-xs m-0 hidden sm:inline">
-          {item.title_bn || item.category}
-        </Tag>
+        <Tooltip title={item.title_bn || item.category} placement="top">
+          <Tag className="m-0 hidden max-w-[96px] sm:inline-flex">
+            <span className="truncate">
+              {item.title_bn || item.category}
+            </span>
+          </Tag>
+        </Tooltip>
       )}
       {onEdit && (
         <Button
@@ -314,9 +320,11 @@ const SortableMenuItemsPicker = ({
                   onChange={() => handleToggleAvailableSelect(item.id)}
                   onClick={(e) => e.stopPropagation()}
                 />
-                <span className="flex-1 text-sm text-gray-700 truncate">
-                  {item.title}
-                </span>
+                <Tooltip title={item.title} placement="topLeft">
+                  <span className="min-w-0 flex-1 truncate text-sm text-gray-700">
+                    {item.title}
+                  </span>
+                </Tooltip>
                 <PlusOutlined className="text-gray-400 text-xs" />
               </div>
             ))
