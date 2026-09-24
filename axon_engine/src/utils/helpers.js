@@ -74,33 +74,40 @@ async function seedDefaultRolesForOrganization(organizationId, executor = db) {
   const roles = {};
 
   for (const [title, config] of Object.entries(permissionsConfig.roles)) {
-    const role = await executor.insert('roles', {
+    let role = await executor.findOne('roles', {
       organization_id: organizationId,
       title,
-      description: config.description,
-      status: true,
-      created_at: new Date(),
-      updated_at: new Date(),
     });
 
-    const permissionSlugs = Array.isArray(config.permission_slugs)
-      ? config.permission_slugs
-      : [config.permission_slugs];
+    if (!role) {
+      role = await executor.insert('roles', {
+        organization_id: organizationId,
+        title,
+        description: config.description,
+        status: true,
+        created_at: new Date(),
+        updated_at: new Date(),
+      });
 
-    const ids = config.permission_slugs === 'all_except_system'
-      ? await getPermissionIdsForSlugs('all_except_system', executor)
-      : await getPermissionIdsForSlugs(permissionSlugs, executor);
+      const permissionSlugs = Array.isArray(config.permission_slugs)
+        ? config.permission_slugs
+        : [config.permission_slugs];
 
-    if (ids.length) {
-      await executor.insertMany(
-        'role_permission',
-        ids.map((permissionId) => ({
-          role_id: role.id,
-          permission_id: permissionId,
-          created_at: new Date(),
-          updated_at: new Date(),
-        }))
-      );
+      const ids = config.permission_slugs === 'all_except_system'
+        ? await getPermissionIdsForSlugs('all_except_system', executor)
+        : await getPermissionIdsForSlugs(permissionSlugs, executor);
+
+      if (ids.length) {
+        await executor.insertMany(
+          'role_permission',
+          ids.map((permissionId) => ({
+            role_id: role.id,
+            permission_id: permissionId,
+            created_at: new Date(),
+            updated_at: new Date(),
+          }))
+        );
+      }
     }
 
     roles[title] = role;

@@ -74,11 +74,16 @@ const AppError = require('./utils/AppError');
 app.use((err, req, res, next) => {
   console.error(err);
   if (err instanceof AppError) {
-    if (err.errors) return res.status(err.statusCode).json(err.errors);
+    if (err.errors) {
+      return res.status(err.statusCode).json({ message: err.message, ...err.errors });
+    }
     return res.status(err.statusCode).json({ message: err.message });
   }
   if (err.code === 'LIMIT_FILE_SIZE') {
     return res.status(422).json({ message: 'File too large' });
+  }
+  if (err.code === '23505') {
+    return res.status(422).json({ message: 'A record with this unique value already exists.' });
   }
   res.status(500).json({ message: 'Internal server error' });
 });

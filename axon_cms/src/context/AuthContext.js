@@ -226,10 +226,12 @@ export const AuthProvider = ({ children }) => {
     return () => clearTimeout(forceLoadingFalse);
   }, []);
 
-  const login = async (email, password, callback) => {
+  const login = async (email, password, callback, organization) => {
     try {
       dispatch({ type: "SET_LOADING", payload: true });
-      const response = await instance.post("admin/login", { email, password });
+      const payload = { email, password };
+      if (organization) payload.organization = organization;
+      const response = await instance.post("admin/login", payload);
       const { token, user, organization } = response.data;
 
       localStorage.setItem("token", token);

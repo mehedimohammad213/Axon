@@ -87,7 +87,10 @@ async function ensureOrganization(db, config) {
       updated_at: now,
     };
 
-    const existingUser = await trx.findOne('users', { email: config.adminEmail });
+    const existingUser = await trx.findOne('users', {
+      email: config.adminEmail,
+      organization_id: organization.id,
+    });
     if (existingUser) {
       await trx.update('users', { id: existingUser.id }, userPayload);
     } else {

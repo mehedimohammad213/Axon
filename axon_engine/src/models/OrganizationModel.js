@@ -89,6 +89,9 @@ async function regenerateSiteKey(id) {
 }
 
 async function createRole(organizationId, { title, description, permission_ids, status }) {
+  const { assertRoleTitleAvailable } = require('../utils/uniqueness');
+  await assertRoleTitleAvailable(title, organizationId);
+
   const role = await db.insert('roles', {
     organization_id: organizationId,
     title,
@@ -108,6 +111,11 @@ async function createRole(organizationId, { title, description, permission_ids, 
 async function updateRole(organizationId, roleId, { title, description, permission_ids, status }) {
   const role = await db.findOne('roles', { id: roleId, organization_id: organizationId });
   if (!role) return null;
+
+  if (title && title !== role.title) {
+    const { assertRoleTitleAvailable } = require('../utils/uniqueness');
+    await assertRoleTitleAvailable(title, organizationId, roleId);
+  }
 
   await db.update('roles', { id: roleId }, {
     title: title ?? role.title,
@@ -134,6 +142,9 @@ async function deleteRole(organizationId, roleId) {
 }
 
 async function createUser(organizationId, { name, email, password, role_title }) {
+  const { assertEmailAvailable } = require('../utils/uniqueness');
+  await assertEmailAvailable(email, organizationId);
+
   const role = await db.findOne('roles', { organization_id: organizationId, title: role_title });
 
   const user = await db.insert('users', {
@@ -155,7 +166,11 @@ async function updateUser(organizationId, userId, updates) {
 
   const data = { updated_at: new Date() };
   if (updates.name) data.name = updates.name;
-  if (updates.email) data.email = updates.email;
+  if (updates.email && updates.email !== user.email) {
+    const { assertEmailAvailable } = require('../utils/uniqueness');
+    await assertEmailAvailable(updates.email, organizationId, userId);
+    data.email = updates.email;
+  }
   if (updates.password) data.password = await hashPassword(updates.password);
 
   if (updates.role_title) {

@@ -20,12 +20,12 @@ export default function Login() {
   const isDemoMode = process.env.NEXT_PUBLIC_DEMO === "true";
 
   const handleLogin = (values) => {
-    const { email, password } = values;
+    const { email, password, organization } = values;
     if (!email || !password) {
       message.error("Please fill in all fields");
       return;
     }
-    login(email, password, callback);
+    login(email, password, callback, organization);
   };
 
   const handleDemoLogin = () => {
@@ -102,6 +102,21 @@ export default function Login() {
                     <MailOutlined className="text-base text-slate-400 mr-1" />
                   }
                   placeholder="you@company.com"
+                  size="large"
+                  className="h-11 rounded-lg border-slate-200 hover:border-slate-300"
+                />
+              </Form.Item>
+              <Form.Item
+                name="organization"
+                label={
+                  <span className="text-slate-700 text-sm font-medium">
+                    Organization
+                  </span>
+                }
+                className="mb-4"
+              >
+                <Input
+                  placeholder="Slug or site key (only if the same email is in more than one org)"
                   size="large"
                   className="h-11 rounded-lg border-slate-200 hover:border-slate-300"
                 />

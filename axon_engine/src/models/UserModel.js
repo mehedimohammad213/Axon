@@ -22,8 +22,24 @@ async function findAllForUser(currentUser, organizationId) {
   return Promise.all(users.map((u) => loadUserWithRelations(u.id)));
 }
 
-async function findByEmail(email) {
-  return db.findOne('users', { email });
+async function findByEmail(email, options = {}) {
+  const normalized = String(email || '').trim();
+  if (!normalized) return null;
+
+  if (options.organizationId) {
+    return db.findOne('users', {
+      email: normalized,
+      organization_id: options.organizationId,
+    });
+  }
+
+  return db.findOne('users', { email: normalized });
+}
+
+async function findAllByEmail(email) {
+  const normalized = String(email || '').trim();
+  if (!normalized) return [];
+  return db.findAll('users', { email: normalized }, { orderBy: 'id', orderDirection: 'asc' });
 }
 
 async function findByIdWithRelations(id) {
@@ -61,6 +77,7 @@ module.exports = {
   ...base,
   findAllForUser,
   findByEmail,
+  findAllByEmail,
   findByIdWithRelations,
   createUser,
   updateUser,

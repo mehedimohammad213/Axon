@@ -1,7 +1,9 @@
 const AppError = require('../utils/AppError');
 const { isPlatformSuperAdmin } = require('../db/queryScope');
+const OrganizationContext = require('../context/organizationContext');
 const UserModel = require('../models/UserModel');
 const { hashPassword } = require('../utils/helpers');
+const { assertEmailAvailable } = require('../utils/uniqueness');
 
 async function list(currentUser, organizationId) {
   return UserModel.findAllForUser(currentUser, organizationId);
@@ -27,12 +29,11 @@ async function create(currentUser, body) {
     });
   }
 
-  const existing = await UserModel.findByEmail(email);
-  if (existing) {
-    throw new AppError(422, 'Validation failed', {
-      email: ['The email has already been taken.'],
-    });
-  }
+  const targetOrganizationId = isPlatformSuperAdmin(currentUser)
+    ? organization_id
+    : OrganizationContext.get() || currentUser?.organization_id;
+
+  await assertEmailAvailable(email, targetOrganizationId);
 
   return UserModel.createUser({
     name,
@@ -55,6 +56,10 @@ async function update(id, body) {
   fields.forEach((field) => {
     if (body[field] !== undefined) updates[field] = body[field];
   });
+
+  if (updates.email) {
+    await assertEmailAvailable(updates.email, user.organization_id, user.id);
+  }
 
   const full = await UserModel.updateUser(id, updates);
 

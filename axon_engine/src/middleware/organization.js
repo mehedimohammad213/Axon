@@ -27,8 +27,8 @@ function ensureOrganizationContext(req, res, next) {
       return res.status(403).json({ message: 'You do not have access to this organization.' });
     }
     OrganizationContext.set(user.organization_id);
-  } else if (parsedHeaderOrgId !== null) {
-    OrganizationContext.set(parsedHeaderOrgId);
+  } else {
+    return res.status(403).json({ message: 'User is not assigned to an organization.' });
   }
 
   res.on('finish', () => OrganizationContext.clear());

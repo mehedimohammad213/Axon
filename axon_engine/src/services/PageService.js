@@ -1,5 +1,6 @@
 const AppError = require('../utils/AppError');
 const PageModel = require('../models/PageModel');
+const { assertPageSlugAvailable } = require('../utils/uniqueness');
 
 async function list({ type, page, limit } = {}) {
   if (type) {
@@ -22,6 +23,8 @@ async function create(body) {
     });
   }
 
+  await assertPageSlugAvailable(body.slug, body.type);
+
   return PageModel.createPage(body);
 }
 
@@ -33,6 +36,14 @@ async function update(id, body) {
     throw new AppError(422, 'Validation failed', {
       page_name_en: ['The page_name_en field is required.'],
     });
+  }
+
+  if (body.slug !== undefined || body.type !== undefined) {
+    await assertPageSlugAvailable(
+      body.slug !== undefined ? body.slug : page.slug,
+      body.type !== undefined ? body.type : page.type,
+      page.id
+    );
   }
 
   return PageModel.updatePage(id, body, page);

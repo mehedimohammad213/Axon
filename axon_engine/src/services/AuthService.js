@@ -1,6 +1,7 @@
 const { transaction } = require('../db');
 const AppError = require('../utils/AppError');
 const UserModel = require('../models/UserModel');
+const { findOrganizationByHint } = require('../utils/uniqueness');
 const {
   uniqueOrganizationSlug,
   seedDefaultRolesForOrganization,
@@ -24,13 +25,6 @@ async function register({ name, email, password, password_confirmation, phone, c
   if (password !== password_confirmation) {
     throw new AppError(422, 'Validation failed', {
       password: ['The password confirmation does not match.'],
-    });
-  }
-
-  const existing = await UserModel.findByEmail(email);
-  if (existing) {
-    throw new AppError(422, 'Validation failed', {
-      email: ['The email has already been taken.'],
     });
   }
 
@@ -61,7 +55,7 @@ async function register({ name, email, password, password_confirmation, phone, c
       updated_at: new Date(),
     });
 
-    const createdUser = await trx.findOne('users', { email });
+    const createdUser = await trx.findOne('users', { email, organization_id: org.id });
     const userRecord = await loadUserWithRelations(createdUser.id);
 
     return { user: userRecord, organization: org };
@@ -70,7 +64,16 @@ async function register({ name, email, password, password_confirmation, phone, c
   return { user, organization, token: signToken(user) };
 }
 
-async function login({ email, password }) {
+async function login(body) {
+  const {
+    email,
+    password,
+    organization,
+    organization_id,
+    organization_slug,
+    slug,
+    site_key,
+  } = body;
   if (!email || !password) {
     throw new AppError(422, 'Validation failed', {
       email: !email ? ['The email field is required.'] : undefined,
@@ -78,21 +81,44 @@ async function login({ email, password }) {
     });
   }
 
-  const user = await UserModel.findByEmail(email);
+  const orgHint = organization || organization_id || organization_slug || slug || site_key;
+  const hintedOrg = orgHint ? await findOrganizationByHint(orgHint) : null;
+  if (orgHint && !hintedOrg) {
+    throw new AppError(401, 'Invalid Credentials');
+  }
+
+  const matches = await UserModel.findAllByEmail(email);
+  const tenantUsers = matches.filter((row) => row.organization_id);
+  const platformUsers = matches.filter((row) => !row.organization_id && row.is_super_admin);
+
+  let user = null;
+  if (hintedOrg) {
+    user = tenantUsers.find((row) => Number(row.organization_id) === Number(hintedOrg.id))
+      || platformUsers[0]
+      || null;
+  } else if (tenantUsers.length > 1) {
+    throw new AppError(
+      422,
+      'This email belongs to more than one organization. Provide organization slug or site_key.'
+    );
+  } else {
+    user = tenantUsers[0] || platformUsers[0] || matches[0] || null;
+  }
 
   if (!user || !(await comparePassword(password, user.password))) {
     throw new AppError(401, 'Invalid Credentials');
   }
 
-  if (!user.organization_id) {
+  if (!user.organization_id && !user.is_super_admin) {
     throw new AppError(403, 'User is not assigned to an organization');
   }
 
   const fullUser = await UserModel.findByIdWithRelations(user.id);
+  const organizationRecord = fullUser.organization || (user.is_super_admin ? hintedOrg : null);
 
   return {
     user: fullUser,
-    organization: fullUser.organization,
+    organization: organizationRecord,
     token: signToken(user),
   };
 }

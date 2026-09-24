@@ -1,6 +1,7 @@
 const AppError = require('../utils/AppError');
 const ProductModel = require('../models/ProductModel');
 const ProductTypeModel = require('../models/ProductTypeModel');
+const { assertProductSlugAvailable } = require('../utils/uniqueness');
 
 function slugify(value) {
   return String(value || '')
@@ -100,11 +101,13 @@ async function create(body) {
 
   const fieldSchema = parseFieldSchema(productType.field_schema);
   const fieldValues = validateFieldValues(fieldSchema, body.field_values);
+  const slug = slugify(body.slug || title) || null;
+  await assertProductSlugAvailable(slug, productTypeId);
 
   return ProductModel.createProduct({
     product_type_id: productTypeId,
     title,
-    slug: slugify(body.slug || title) || null,
+    slug,
     description: body.description || null,
     field_values: fieldValues,
     media_ids: body.media_ids || [],
@@ -140,6 +143,12 @@ async function update(id, body) {
     const fieldSchema = parseFieldSchema(productType.field_schema);
     payload.field_values = validateFieldValues(fieldSchema, body.field_values);
   }
+
+  await assertProductSlugAvailable(
+    payload.slug !== undefined ? payload.slug : product.slug,
+    productTypeId,
+    product.id
+  );
 
   return ProductModel.updateProduct(id, payload);
 }

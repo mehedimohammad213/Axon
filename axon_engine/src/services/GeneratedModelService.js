@@ -1,5 +1,6 @@
 const AppError = require('../utils/AppError');
 const GeneratedModelModel = require('../models/GeneratedModelModel');
+const { assertGeneratedRouteAvailable } = require('../utils/uniqueness');
 
 async function list() {
   return GeneratedModelModel.findAll();
@@ -12,7 +13,10 @@ async function generate(body) {
     throw new AppError(422, 'modelSingular, modelPlural, and fields are required.');
   }
 
-  const { tableName, apiRoute } = await GeneratedModelModel.generate({
+  const tableName = String(modelPlural).toLowerCase().replace(/[^a-z0-9_]/g, '_');
+  await assertGeneratedRouteAvailable(`/api/dynamic?model=${tableName}`);
+
+  const { tableName: createdTable, apiRoute } = await GeneratedModelModel.generate({
     modelSingular, modelPlural, fields, status,
   });
 
@@ -21,7 +25,7 @@ async function generate(body) {
     message: 'Model generated successfully',
     details: {
       Model: modelSingular,
-      Migration: tableName,
+      Migration: createdTable,
       Controller: 'DynamicController',
       Route: apiRoute,
     },
@@ -31,6 +35,10 @@ async function generate(body) {
 async function update(id, body) {
   const model = await GeneratedModelModel.findById(id);
   if (!model) throw new AppError(404, 'Generated model not found');
+
+  if (body.api_route) {
+    await assertGeneratedRouteAvailable(body.api_route, model.id);
+  }
 
   return GeneratedModelModel.updateGeneratedModel(id, body, model);
 }

@@ -1,5 +1,6 @@
 const AppError = require('../utils/AppError');
 const ProductTypeModel = require('../models/ProductTypeModel');
+const { assertProductTypeSlugAvailable } = require('../utils/uniqueness');
 
 function slugify(value) {
   return String(value || '')
@@ -68,6 +69,7 @@ async function create(body) {
 
   const slug = slugify(body.slug || name);
   if (!slug) throw new AppError(422, 'Product type slug is required');
+  await assertProductTypeSlugAvailable(slug);
 
   return ProductTypeModel.create({
     name,
@@ -95,6 +97,10 @@ async function update(id, body) {
 
   if (payload.name === '') throw new AppError(422, 'Product type name is required');
   if (payload.slug === '') throw new AppError(422, 'Product type slug is required');
+  await assertProductTypeSlugAvailable(
+    payload.slug !== undefined ? payload.slug : productType.slug,
+    productType.id
+  );
 
   return ProductTypeModel.update(id, payload);
 }
