@@ -15,7 +15,6 @@ async function create(body) {
   const errors = {};
   if (!body.title_en) errors.title_en = ['The title_en field is required.'];
   if (!body.logo_id) errors.logo_id = ['The logo_id field is required.'];
-  if (!body.menu_id) errors.menu_id = ['The menu_id field is required.'];
 
   if (Object.keys(errors).length) {
     throw new AppError(422, 'Validation failed', errors);

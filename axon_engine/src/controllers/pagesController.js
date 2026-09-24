@@ -18,12 +18,12 @@ const show = asyncHandler(async (req, res) => {
 });
 
 const store = asyncHandler(async (req, res) => {
-  const page = await PageService.create(req.body);
+  const page = await PageService.create(req.body, req.user);
   return sendServiceResult(res, page, 201);
 });
 
 const update = asyncHandler(async (req, res) => {
-  return sendServiceResult(res, await PageService.update(req.params.id, req.body));
+  return sendServiceResult(res, await PageService.update(req.params.id, req.body, req.user));
 });
 
 const destroy = asyncHandler(async (req, res) => {

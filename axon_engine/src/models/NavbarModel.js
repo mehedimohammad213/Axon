@@ -1,46 +1,22 @@
 const { db, findWhereIn } = require('../db');
 const { createModel } = require('./BaseModel');
+const {
+  listChildIds,
+  replaceJunction,
+  orderByIdList,
+  resolveMenuItemIdsFromBody,
+} = require('../utils/junctions');
 
 const base = createModel('navbars');
 
-function normalizeIds(value) {
-  if (value == null || value === '') return [];
-  if (typeof value === 'string') {
-    try {
-      const parsed = JSON.parse(value);
-      return normalizeIds(parsed);
-    } catch {
-      return [];
-    }
-  }
-  const ids = Array.isArray(value) ? value : [value];
-  return ids.filter((id) => id != null && id !== '');
-}
-
-function orderByIdList(items, ids) {
-  const map = Object.fromEntries(items.map((item) => [String(item.id), item]));
-  return ids.map((id) => map[String(id)]).filter(Boolean);
-}
-
-async function loadMenuWithItems(menuId) {
-  if (!menuId) return null;
-
-  const menu = await db.findOne('menus', { id: menuId });
-  if (!menu) return null;
-
-  const menuItemIds = normalizeIds(menu.menu_item_ids);
-  let menuItems = [];
-
-  if (menuItemIds.length) {
-    const rows = await findWhereIn('menu_items', 'id', menuItemIds);
-    menuItems = orderByIdList(rows, menuItemIds);
-  }
-
-  return {
-    ...menu,
-    menu_item_ids: menuItemIds,
-    menu_items: menuItems,
-  };
+function navbarRowPayload(data) {
+  const payload = { ...data };
+  delete payload.menu_id;
+  delete payload.menu;
+  delete payload.menu_item_ids;
+  delete payload.menu_items;
+  delete payload.logo;
+  return payload;
 }
 
 async function loadRelations(navbar) {
@@ -53,7 +29,26 @@ async function loadRelations(navbar) {
     result.logo = null;
   }
 
-  result.menu = await loadMenuWithItems(navbar.menu_id);
+  const menuItemIds = await listChildIds(
+    'navbar_menu_items',
+    'navbar_id',
+    navbar.id,
+    'menu_item_id'
+  );
+  result.menu_item_ids = menuItemIds;
+
+  let menuItems = [];
+  if (menuItemIds.length) {
+    const rows = await findWhereIn('menu_items', 'id', menuItemIds);
+    menuItems = orderByIdList(rows, menuItemIds);
+  }
+
+  result.menu = {
+    id: navbar.id,
+    name: navbar.title_en || 'Navbar Menu',
+    menu_item_ids: menuItemIds,
+    menu_items: menuItems,
+  };
 
   return result;
 }
@@ -71,13 +66,28 @@ async function findByIdWithRelations(id) {
   return loadRelations(navbar);
 }
 
+async function syncMenuItems(navbar, body) {
+  const resolved = await resolveMenuItemIdsFromBody(body);
+  if (!resolved.provided) return;
+  await replaceJunction(
+    'navbar_menu_items',
+    'navbar_id',
+    navbar.id,
+    'menu_item_id',
+    resolved.ids,
+    { organizationId: navbar.organization_id }
+  );
+}
+
 async function createNavbar(data) {
-  const navbar = await base.create(data);
+  const navbar = await base.create(navbarRowPayload(data));
+  await syncMenuItems(navbar, data);
   return loadRelations(navbar);
 }
 
 async function updateNavbar(id, data) {
-  const updated = await base.update(id, data);
+  const updated = await base.update(id, navbarRowPayload(data));
+  await syncMenuItems(updated, data);
   return loadRelations(updated);
 }
 

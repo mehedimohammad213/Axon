@@ -1,16 +1,45 @@
 const { createModel } = require('./BaseModel');
 const { extractComponentsFromArray, sortRecursive } = require('../utils/helpers');
 const { paginatedResponse } = require('../utils/pagination');
+const AppError = require('../utils/AppError');
 
 const base = createModel('pages');
 
 const LIST_COLUMNS = [
   'id', 'organization_id', 'slug', 'type', 'favicon_id',
-  'page_name_en', 'page_name_bn', 'head', 'status', 'created_at', 'updated_at',
+  'page_name_en', 'page_name_bn', 'head', 'status', 'lifecycle',
+  'published_at', 'created_by', 'updated_by', 'created_at', 'updated_at',
 ];
 
-function buildPagePayload(body) {
+function actorId(actor) {
+  return actor?.id || null;
+}
+
+function resolveLifecycle(body, existing) {
+  const status = body.status !== undefined
+    ? body.status
+    : (existing ? existing.status : true);
+
+  if (body.lifecycle) return { status, lifecycle: body.lifecycle };
+
+  if (existing && body.status === undefined) {
+    return { status, lifecycle: existing.lifecycle || (status ? 'published' : 'draft') };
+  }
+
+  return { status, lifecycle: status ? 'published' : 'draft' };
+}
+
+function resolvePublishedAt(body, existing, lifecycle, status) {
+  if (body.published_at !== undefined) return body.published_at;
+  if (lifecycle === 'published' && status) {
+    return existing?.published_at || new Date();
+  }
+  return existing?.published_at || null;
+}
+
+function buildPagePayload(body, actor, existing = null) {
   const body_raw = sortRecursive(extractComponentsFromArray(body.body));
+  const { status, lifecycle } = resolveLifecycle(body, existing);
 
   return {
     slug: body.slug,
@@ -22,7 +51,11 @@ function buildPagePayload(body) {
     body: body.body ? JSON.stringify(body.body) : null,
     body_raw: JSON.stringify(body_raw),
     additional: body.additional ? JSON.stringify(body.additional) : null,
-    status: body.status !== undefined ? body.status : true,
+    status,
+    lifecycle,
+    published_at: resolvePublishedAt(body, existing, lifecycle, status),
+    created_by: existing ? existing.created_by : actorId(actor),
+    updated_by: actorId(actor),
   };
 }
 
@@ -83,14 +116,22 @@ async function findPublishedByIdOrSlug(idOrSlug) {
   return page;
 }
 
-async function createPage(body) {
-  return base.create(buildPagePayload(body));
+function assertUnchanged(existing, body) {
+  if (body.if_updated_at == null) return;
+  const loaded = new Date(body.if_updated_at).getTime();
+  const current = new Date(existing.updated_at).getTime();
+  if (Number.isNaN(loaded) || loaded !== current) {
+    throw new AppError(409, 'Page was updated by someone else. Reload and try again.');
+  }
 }
 
-async function updatePage(id, body, existing) {
-  return base.update(id, {
-    ...buildPagePayload({ ...body, status: body.status !== undefined ? body.status : existing.status }),
-  });
+async function createPage(body, actor = null) {
+  return base.create(buildPagePayload(body, actor));
+}
+
+async function updatePage(id, body, existing, actor = null) {
+  assertUnchanged(existing, body);
+  return base.update(id, buildPagePayload(body, actor, existing));
 }
 
 module.exports = {

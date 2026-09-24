@@ -16,7 +16,7 @@ async function show(id) {
   return page;
 }
 
-async function create(body) {
+async function create(body, actor = null) {
   if (!body.page_name_en) {
     throw new AppError(422, 'Validation failed', {
       page_name_en: ['The page_name_en field is required.'],
@@ -25,10 +25,10 @@ async function create(body) {
 
   await assertPageSlugAvailable(body.slug, body.type);
 
-  return PageModel.createPage(body);
+  return PageModel.createPage(body, actor);
 }
 
-async function update(id, body) {
+async function update(id, body, actor = null) {
   const page = await PageModel.findById(id);
   if (!page) throw new AppError(404, 'Page not found');
 
@@ -46,7 +46,7 @@ async function update(id, body) {
     );
   }
 
-  return PageModel.updatePage(id, body, page);
+  return PageModel.updatePage(id, body, page, actor);
 }
 
 async function remove(id) {

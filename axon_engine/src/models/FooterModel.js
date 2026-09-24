@@ -1,7 +1,22 @@
-const { db } = require('../db');
+const { db, findWhereIn } = require('../db');
 const { createModel } = require('./BaseModel');
+const { normalizeIds, orderByIdList } = require('../utils/junctions');
 
 const base = createModel('footers');
+
+const MENU_ITEM_FIELDS = [
+  'column2_menu_item_ids',
+  'column3_menu_item_ids',
+  'column4_menu_item_ids',
+  'bottom_menu_item_ids',
+];
+
+async function loadMenuItems(ids) {
+  const normalized = normalizeIds(ids);
+  if (!normalized.length) return [];
+  const rows = await findWhereIn('menu_items', 'id', normalized);
+  return orderByIdList(rows, normalized);
+}
 
 async function loadRelations(footer) {
   if (!footer) return footer;
@@ -11,10 +26,9 @@ async function loadRelations(footer) {
     result.logo = await db.findOne('media', { id: footer.logo_id });
   }
 
-  for (const field of ['column2_menu_id', 'column3_menu_id', 'bottom_menu_id']) {
-    if (footer[field]) {
-      result[field.replace('_menu_id', '_menu')] = await db.findOne('menus', { id: footer[field] });
-    }
+  for (const field of MENU_ITEM_FIELDS) {
+    result[field] = normalizeIds(footer[field]);
+    result[field.replace('_ids', 's')] = await loadMenuItems(result[field]);
   }
 
   return result;
@@ -23,6 +37,11 @@ async function loadRelations(footer) {
 function preparePayload(data) {
   const payload = { ...data };
   if (payload.column3_logos) payload.column3_logos = JSON.stringify(payload.column3_logos);
+  for (const field of MENU_ITEM_FIELDS) {
+    if (payload[field] !== undefined) {
+      payload[field] = JSON.stringify(normalizeIds(payload[field]));
+    }
+  }
   return payload;
 }
 

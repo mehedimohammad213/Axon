@@ -7,6 +7,7 @@ const {
   extractComponentsFromArray,
   sortRecursive,
 } = require('./helpers');
+const { replaceJunction, normalizeIds } = require('./junctions');
 
 const FIXTURE_ROOT = path.join(__dirname, '../seeds/data');
 
@@ -570,22 +571,16 @@ async function seedOrganizationContent(db, organization, config, data) {
 
     console.log(`Menu items: ${Object.keys(mapper.idMaps.menuitem).length}`);
 
+    const menuItemIdsByOldMenuId = {};
     for (const row of data.menus || []) {
       const oldId = parseInt(row.id, 10);
-      const itemIds = (row.menu_item_ids || [])
+      menuItemIdsByOldMenuId[oldId] = (row.menu_item_ids || [])
         .map((id) => mapper.idMaps.menuitem[parseInt(id, 10)])
         .filter((id) => id);
-
-      const menu = await upsertByKeys(
-        trx,
-        'menus',
-        { organization_id: organization.id, name: row.name },
-        { menu_item_ids: jsonValue(itemIds) }
-      );
-      mapper.idMaps.menu[oldId] = menu.id;
+      mapper.idMaps.menu[oldId] = oldId;
     }
 
-    console.log(`Menus: ${Object.keys(mapper.idMaps.menu).length}`);
+    console.log(`Menus (mapped, not stored): ${Object.keys(menuItemIdsByOldMenuId).length}`);
 
     for (const row of data.navbars || []) {
       const oldId = parseInt(row.id, 10);
@@ -600,11 +595,27 @@ async function seedOrganizationContent(db, organization, config, data) {
         { organization_id: organization.id, title_en: titleEn },
         {
           title_bn: row.title_bn || titleEn,
-          menu_id: mapper.map('menu', row.menu_id),
           logo_id: logoId,
         }
       );
       mapper.idMaps.navbar[oldId] = navbar.id;
+
+      const rawItemIds = row.menu?.menu_item_ids
+        || row.menu_item_ids
+        || menuItemIdsByOldMenuId[parseInt(row.menu_id, 10)]
+        || [];
+      const itemIds = normalizeIds(rawItemIds)
+        .map((id) => mapper.idMaps.menuitem[parseInt(id, 10)] || id)
+        .filter((id) => id);
+      await replaceJunction(
+        'navbar_menu_items',
+        'navbar_id',
+        navbar.id,
+        'menu_item_id',
+        itemIds,
+        { organizationId: organization.id },
+        trx
+      );
     }
 
     console.log(`Navbars: ${Object.keys(mapper.idMaps.navbar).length}`);
@@ -642,9 +653,17 @@ async function seedOrganizationContent(db, organization, config, data) {
             address2_description_bn: row.address2_description_bn ?? null,
             address1_status: row.address1_status ?? 1,
             address2_status: row.address2_status ?? 1,
-            column2_menu_id: mapper.map('menu', row.column2_menu_id),
+            column2_menu_item_ids: jsonValue(
+              row.column2_menu_item_ids
+                ? normalizeIds(row.column2_menu_item_ids).map((id) => mapper.map('menuitem', id)).filter(Boolean)
+                : (menuItemIdsByOldMenuId[parseInt(row.column2_menu_id, 10)] || [])
+            ),
             column2_status: row.column2_status ?? 1,
-            column3_menu_id: mapper.map('menu', row.column3_menu_id),
+            column3_menu_item_ids: jsonValue(
+              row.column3_menu_item_ids
+                ? normalizeIds(row.column3_menu_item_ids).map((id) => mapper.map('menuitem', id)).filter(Boolean)
+                : (menuItemIdsByOldMenuId[parseInt(row.column3_menu_id, 10)] || [])
+            ),
             column3_logos: jsonValue(column3Logos),
             column3_status: row.column3_status ?? 1,
             column4_title_en: row.column4_title_en ?? null,
@@ -652,11 +671,19 @@ async function seedOrganizationContent(db, organization, config, data) {
             column4_image: mapper.map('media', row.column4_image),
             column4_text_en: row.column4_text_en ?? null,
             column4_text_bn: row.column4_text_bn ?? null,
-            column4_menu_id: mapper.map('menu', row.column4_menu_id),
+            column4_menu_item_ids: jsonValue(
+              row.column4_menu_item_ids
+                ? normalizeIds(row.column4_menu_item_ids).map((id) => mapper.map('menuitem', id)).filter(Boolean)
+                : (menuItemIdsByOldMenuId[parseInt(row.column4_menu_id, 10)] || [])
+            ),
             column4_description_en: row.column4_description_en ?? null,
             column4_description_bn: row.column4_description_bn ?? null,
             column4_status: row.column4_status ?? 1,
-            bottom_menu_id: mapper.map('menu', row.bottom_menu_id),
+            bottom_menu_item_ids: jsonValue(
+              row.bottom_menu_item_ids
+                ? normalizeIds(row.bottom_menu_item_ids).map((id) => mapper.map('menuitem', id)).filter(Boolean)
+                : (menuItemIdsByOldMenuId[parseInt(row.bottom_menu_id, 10)] || [])
+            ),
           }
         );
         mapper.idMaps.footer[oldId] = footer.id;
@@ -673,7 +700,6 @@ async function seedOrganizationContent(db, organization, config, data) {
         { organization_id: organization.id, title_en: row.title_en },
         {
           page_name: row.page_name ?? null,
-          media_ids: mapper.map('media', row.media_ids),
           title_bn: row.title_bn ?? null,
           description_en: row.description_en ?? null,
           description_bn: row.description_bn ?? null,
@@ -683,6 +709,16 @@ async function seedOrganizationContent(db, organization, config, data) {
         }
       );
       mapper.idMaps.card[oldId] = card.id;
+      const cardMediaId = mapper.map('media', row.media_ids);
+      await replaceJunction(
+        'card_media',
+        'card_id',
+        card.id,
+        'media_id',
+        cardMediaId ? [cardMediaId] : [],
+        { organizationId: organization.id },
+        trx
+      );
     }
 
     console.log(`Cards: ${Object.keys(mapper.idMaps.card).length}`);
@@ -705,13 +741,29 @@ async function seedOrganizationContent(db, organization, config, data) {
           title_bn: row.title_bn ?? null,
           description_en: row.description_en ?? null,
           description_bn: row.description_bn ?? null,
-          media_ids: jsonValue(mediaIds),
-          card_ids: jsonValue(cardIds),
           additional: jsonValue(row.additional ?? null),
           status: row.status ?? 1,
         }
       );
       mapper.idMaps.slider[oldId] = slider.id;
+      await replaceJunction(
+        'slider_media',
+        'slider_id',
+        slider.id,
+        'media_id',
+        mediaIds,
+        { organizationId: organization.id },
+        trx
+      );
+      await replaceJunction(
+        'slider_cards',
+        'slider_id',
+        slider.id,
+        'card_id',
+        cardIds,
+        { organizationId: organization.id },
+        trx
+      );
     }
 
     console.log(`Sliders: ${Object.keys(mapper.idMaps.slider).length}`);
@@ -796,6 +848,8 @@ async function seedOrganizationContent(db, organization, config, data) {
           body_raw: jsonValue(bodyRaw),
           additional: jsonValue(row.additional ?? null),
           status: row.status ?? true,
+          lifecycle: row.status === false ? 'draft' : 'published',
+          published_at: row.status === false ? null : (row.published_at || new Date()),
         }
       );
       pageCount += 1;

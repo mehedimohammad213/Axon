@@ -15,6 +15,7 @@ const formDataController = require('../controllers/formDataController');
 const formSubmissionController = require('../controllers/formSubmissionController');
 const generatedModelController = require('../controllers/generatedModelController');
 const dynamicController = require('../controllers/dynamicController');
+const apiKeyController = require('../controllers/apiKeyController');
 const { navbarController, menuController, sliderController, formBuilderController } = require('../controllers/cmsControllers');
 
 const router = express.Router();
@@ -154,6 +155,13 @@ router.delete('/pages/:id', pagesController.destroy);
 router.get('/form-submission', formSubmissionController.index);
 router.put('/form-submission/:id', formSubmissionController.update);
 router.delete('/form-submission/:id', formSubmissionController.destroy);
+
+// API keys
+router.get('/api-keys', apiKeyController.index);
+router.get('/api-keys/:id', apiKeyController.show);
+router.post('/api-keys', apiKeyController.store);
+router.put('/api-keys/:id', apiKeyController.update);
+router.delete('/api-keys/:id', apiKeyController.destroy);
 
 // DIY CMS / Generated Models
 router.post('/diy-cms', generatedModelController.generate);

@@ -2,24 +2,17 @@ const { findWhereIn } = require('../db');
 const { createModel } = require('./BaseModel');
 const { paginatedResponse } = require('../utils/pagination');
 const ProductTypeModel = require('./ProductTypeModel');
+const { normalizeIds, listChildIds, replaceJunction } = require('../utils/junctions');
 
 const base = createModel('products', {
-  jsonFields: ['field_values', 'media_ids', 'additional'],
+  jsonFields: ['field_values', 'additional'],
 });
-
-function normalizeMediaIds(mediaIds) {
-  if (mediaIds == null || mediaIds === '') return [];
-  if (Array.isArray(mediaIds)) {
-    return mediaIds.filter((id) => id != null && id !== '');
-  }
-  return [mediaIds];
-}
 
 async function loadRelations(product) {
   if (!product) return product;
 
   const result = { ...product };
-  result.media_ids = normalizeMediaIds(product.media_ids);
+  result.media_ids = await listChildIds('product_media', 'product_id', product.id, 'media_id');
   result.field_values =
     typeof product.field_values === 'string'
       ? JSON.parse(product.field_values || '{}')
@@ -91,9 +84,6 @@ async function findByIdWithRelations(id) {
 function preparePayload(data) {
   const payload = { ...data };
 
-  if (payload.media_ids != null) {
-    payload.media_ids = normalizeMediaIds(payload.media_ids);
-  }
   if (payload.field_values == null) {
     payload.field_values = {};
   }
@@ -101,6 +91,7 @@ function preparePayload(data) {
     payload.additional = {};
   }
 
+  delete payload.media_ids;
   delete payload.product_type;
   delete payload.media;
   delete payload.media_files;
@@ -108,13 +99,31 @@ function preparePayload(data) {
   return payload;
 }
 
+async function syncMedia(product, data) {
+  if (data.media_ids === undefined) return;
+  const ids = normalizeIds(data.media_ids);
+  await replaceJunction(
+    'product_media',
+    'product_id',
+    product.id,
+    'media_id',
+    ids,
+    {
+      organizationId: product.organization_id,
+      extras: (_id, sortOrder) => ({ is_primary: sortOrder === 0 }),
+    }
+  );
+}
+
 async function createProduct(data) {
   const product = await base.create(preparePayload(data));
+  await syncMedia(product, data);
   return loadRelations(product);
 }
 
 async function updateProduct(id, data) {
   const updated = await base.update(id, preparePayload(data));
+  await syncMedia(updated, data);
   return loadRelations(updated);
 }
 
