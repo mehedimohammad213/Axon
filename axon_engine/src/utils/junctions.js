@@ -48,10 +48,10 @@ async function replaceJunction(
   parentId,
   childColumn,
   childIds,
-  { organizationId = null, extras = null } = {},
+  { organizationId = null, extras = null, match = {} } = {},
   executor = null
 ) {
-  await remove(table, { [parentColumn]: parentId }, executor);
+  await remove(table, { [parentColumn]: parentId, ...match }, executor);
 
   const ids = normalizeIds(childIds);
   if (!ids.length) return [];

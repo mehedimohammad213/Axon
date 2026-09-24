@@ -1,9 +1,10 @@
 const { createModel } = require('./BaseModel');
 
-const base = createModel('permissions', { scoped: false });
+const base = createModel('permissions', { scoped: false, active: true });
 
 async function findAllOrdered() {
-  return base.query().orderBy('sl_no', 'asc');
+  const rows = await base.query().orderBy('sl_no', 'asc');
+  return rows.map(base.expose);
 }
 
 module.exports = {

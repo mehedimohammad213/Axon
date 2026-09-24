@@ -146,6 +146,8 @@ router.delete('/form_builder/:id', formBuilderController.destroy);
 
 // Pages
 router.get('/pages', pagesController.index);
+router.get('/pages/:id/revisions', pagesController.revisions);
+router.post('/pages/:id/revisions/:version/restore', pagesController.restore);
 router.get('/pages/:id', pagesController.show);
 router.post('/pages', pagesController.store);
 router.put('/pages/:id', pagesController.update);

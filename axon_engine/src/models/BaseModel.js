@@ -2,27 +2,38 @@ const { insert, update, remove, count } = require('../db');
 const { scopedQuery, withOrganizationId } = require('../db/queryScope');
 const { tableQuery } = require('../db/queryBuilder');
 const { paginatedResponse } = require('../utils/pagination');
+const { stripActiveAliases, exposeActive, mapActiveRows } = require('../utils/activeField');
 
 function createModel(tableName, options = {}) {
   const jsonFields = options.jsonFields || [];
   const scoped = options.scoped !== false;
+  const active = options.active || null;
+  const extraActiveKeys = options.extraActiveKeys || [];
+  const exposeOptions = {
+    numeric: active === 'numeric',
+    extra: options.activeAlias || null,
+  };
 
   function query() {
     return scoped ? scopedQuery(tableName) : tableQuery(tableName, { scoped: false });
   }
 
   function serialize(data) {
-    const result = { ...data };
+    const prepared = active ? stripActiveAliases(data, extraActiveKeys) : { ...data };
     jsonFields.forEach((field) => {
-      if (result[field] !== undefined && result[field] !== null && typeof result[field] !== 'string') {
-        result[field] = JSON.stringify(result[field]);
+      if (prepared[field] !== undefined && prepared[field] !== null && typeof prepared[field] !== 'string') {
+        prepared[field] = JSON.stringify(prepared[field]);
       }
     });
-    return result;
+    return prepared;
+  }
+
+  function expose(row) {
+    return active ? exposeActive(row, exposeOptions) : row;
   }
 
   async function findAll(orderBy = 'id', direction = 'desc') {
-    return query().orderBy(orderBy, direction);
+    return mapActiveRows(await query().orderBy(orderBy, direction), exposeOptions);
   }
 
   async function findPaginated({ page = 1, limit = 20, orderBy = 'id', direction = 'desc' } = {}) {
@@ -33,19 +44,19 @@ function createModel(tableName, options = {}) {
       baseQuery.clone().count().first(),
     ]);
 
-    return paginatedResponse(data, countRow.count, page, limit);
+    return paginatedResponse(data.map(expose), countRow.count, page, limit);
   }
 
   async function findById(id) {
-    return query().where(`${tableName}.id`, id).first();
+    return expose(await query().where(`${tableName}.id`, id).first());
   }
 
   async function findWhere(conditions) {
-    return query().where(conditions);
+    return mapActiveRows(await query().where(conditions), exposeOptions);
   }
 
   async function findOneWhere(conditions) {
-    return query().where(conditions).first();
+    return expose(await query().where(conditions).first());
   }
 
   async function create(data) {
@@ -55,7 +66,7 @@ function createModel(tableName, options = {}) {
       updated_at: new Date(),
     });
 
-    return insert(tableName, scoped ? withOrganizationId(payload) : payload);
+    return expose(await insert(tableName, scoped ? withOrganizationId(payload) : payload));
   }
 
   async function updateRecord(id, data) {
@@ -63,7 +74,7 @@ function createModel(tableName, options = {}) {
     delete payload.id;
     delete payload.created_at;
 
-    return update(tableName, { id }, payload);
+    return expose(await update(tableName, { id }, payload));
   }
 
   async function removeRecord(id) {
@@ -91,6 +102,7 @@ function createModel(tableName, options = {}) {
     update: updateRecord,
     remove: removeRecord,
     countWhere,
+    expose,
   };
 }
 

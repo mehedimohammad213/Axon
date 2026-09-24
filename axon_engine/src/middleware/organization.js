@@ -1,6 +1,6 @@
 const OrganizationContext = require('../context/organizationContext');
 
-function ensureOrganizationContext(req, res, next) {
+async function ensureOrganizationContext(req, res, next) {
   const user = req.user;
   const headerOrgId = req.headers['x-organization-id'];
   const parsedHeaderOrgId = headerOrgId && /^\d+$/.test(headerOrgId)
@@ -31,8 +31,12 @@ function ensureOrganizationContext(req, res, next) {
     return res.status(403).json({ message: 'User is not assigned to an organization.' });
   }
 
-  res.on('finish', () => OrganizationContext.clear());
-  next();
+  try {
+    await OrganizationContext.applyRls();
+    return next();
+  } catch (error) {
+    return next(error);
+  }
 }
 
 module.exports = ensureOrganizationContext;

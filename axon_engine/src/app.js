@@ -5,7 +5,7 @@ const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
 const path = require('path');
 
-const OrganizationContext = require('./context/organizationContext');
+const withRequestDb = require('./middleware/requestDb');
 const ensureOrganizationContext = require('./middleware/organization');
 const checkPermissions = require('./middleware/permissions');
 const { authenticate } = require('./middleware/auth');
@@ -48,19 +48,15 @@ app.get('/health', (req, res) => {
   res.json({ status: 'ok', service: 'headless-engine-express' });
 });
 
-function withOrgContext(req, res, next) {
-  OrganizationContext.run(null, false, () => next());
-}
-
-// Public auth (register, login)
-app.use('/api', withOrgContext, publicAuthRoutes);
+// Public auth (register, login) — bypass RLS so email lookup can see every org.
+app.use('/api', withRequestDb({ bypass: true }), publicAuthRoutes);
 
 // Public site API (site key auth) — must run before JWT-protected routes,
 // otherwise authenticate() 401s every /api/* request that has no Bearer token.
-app.use('/api', withOrgContext, publicRoutes);
+app.use('/api', withRequestDb(), publicRoutes);
 
 // Protected CMS API (JWT + org context + permissions)
-const protectedStack = [withOrgContext, authenticate, ensureOrganizationContext, checkPermissions];
+const protectedStack = [withRequestDb({ bypass: true }), authenticate, ensureOrganizationContext, checkPermissions];
 app.use('/api', ...protectedStack, protectedAuthRoutes);
 app.use('/api', ...protectedStack, apiRoutes);
 
@@ -84,6 +80,9 @@ app.use((err, req, res, next) => {
   }
   if (err.code === '23505') {
     return res.status(422).json({ message: 'A record with this unique value already exists.' });
+  }
+  if (err.code === '42501' || err.code === '23514') {
+    return res.status(403).json({ message: 'This change is not allowed for the current organization.' });
   }
   res.status(500).json({ message: 'Internal server error' });
 });

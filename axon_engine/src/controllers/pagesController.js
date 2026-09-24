@@ -31,4 +31,15 @@ const destroy = asyncHandler(async (req, res) => {
   return sendDeleted(res, resource);
 });
 
-module.exports = { index, show, store, update, destroy };
+const revisions = asyncHandler(async (req, res) => {
+  return sendServiceResult(res, await PageService.listRevisions(req.params.id));
+});
+
+const restore = asyncHandler(async (req, res) => {
+  return sendServiceResult(
+    res,
+    await PageService.restoreRevision(req.params.id, req.params.version, req.user)
+  );
+});
+
+module.exports = { index, show, store, update, destroy, revisions, restore };

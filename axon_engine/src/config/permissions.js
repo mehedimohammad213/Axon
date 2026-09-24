@@ -104,6 +104,8 @@ module.exports = {
     'PUT:permissions/*': 'edit_roles',
     'DELETE:permissions/*': 'delete_roles',
     'GET:pages': 'view_pages',
+    'GET:pages/*/revisions': 'view_pages',
+    'POST:pages/*/revisions/*/restore': 'edit_pages',
     'GET:pages/*': 'view_pages',
     'POST:pages': 'create_page',
     'PUT:pages/*': 'edit_pages',

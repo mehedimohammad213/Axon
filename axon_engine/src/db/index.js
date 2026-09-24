@@ -8,8 +8,29 @@ function quoteIdent(name) {
 }
 
 async function query(sql, params = [], executor = null) {
-  const client = executor || pool;
-  return client.query(sql, params);
+  if (executor) {
+    return executor.query(sql, params);
+  }
+
+  const OrganizationContext = require('../context/organizationContext');
+  const ctxClient = OrganizationContext.getClient();
+  if (ctxClient) {
+    return ctxClient.query(sql, params);
+  }
+
+  const client = await pool.connect();
+  try {
+    await client.query('BEGIN');
+    await client.query("SELECT set_config('app.bypass_rls', 'on', true)");
+    const result = await client.query(sql, params);
+    await client.query('COMMIT');
+    return result;
+  } catch (error) {
+    try { await client.query('ROLLBACK'); } catch (_) { /* ignore */ }
+    throw error;
+  } finally {
+    client.release();
+  }
 }
 
 async function queryOne(sql, params = [], executor = null) {
@@ -216,12 +237,28 @@ function createDbContext(executor = null) {
 }
 
 async function transaction(fn) {
+  const OrganizationContext = require('../context/organizationContext');
+  const existing = OrganizationContext.getClient();
+  if (existing) {
+    const scoped = createDbContext(existing);
+    await existing.query('SAVEPOINT axon_inner');
+    try {
+      const result = await fn(scoped);
+      await existing.query('RELEASE SAVEPOINT axon_inner');
+      return result;
+    } catch (error) {
+      await existing.query('ROLLBACK TO SAVEPOINT axon_inner');
+      throw error;
+    }
+  }
+
   const client = await pool.connect();
-  const db = createDbContext(client);
+  const scoped = createDbContext(client);
 
   try {
     await client.query('BEGIN');
-    const result = await fn(db);
+    await client.query("SELECT set_config('app.bypass_rls', 'on', true)");
+    const result = await fn(scoped);
     await client.query('COMMIT');
     return result;
   } catch (error) {

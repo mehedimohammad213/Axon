@@ -6,7 +6,7 @@ exports.seed = async function seed(db) {
 
   const rows = permissionsConfig.definitions.map((p) => ({
     ...p,
-    status: true,
+    is_active: true,
     created_at: new Date(),
     updated_at: new Date(),
   }));

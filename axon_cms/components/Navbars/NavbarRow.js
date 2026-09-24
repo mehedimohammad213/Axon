@@ -269,6 +269,7 @@ const NavbarRow = ({
         title_bn: editedNavbarTitleBn,
         logo_id: editedLogoId,
         menu_id: menuId,
+        menu_item_ids: editedMenuItemIds,
       };
       const response = await instance.put(
         `/navbars/${navbar.id}`,

@@ -6,6 +6,7 @@ const { normalizeIds, listChildIds, replaceJunction } = require('../utils/juncti
 
 const base = createModel('products', {
   jsonFields: ['field_values', 'additional'],
+  active: true,
 });
 
 async function loadRelations(product) {

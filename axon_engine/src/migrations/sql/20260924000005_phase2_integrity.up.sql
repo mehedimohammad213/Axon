@@ -365,7 +365,7 @@ ALTER TABLE pages
 ALTER TABLE sliders DROP CONSTRAINT IF EXISTS sliders_type_check;
 ALTER TABLE sliders
   ADD CONSTRAINT sliders_type_check
-  CHECK (type IS NULL OR type IN ('image', 'card', 'card_media'));
+  CHECK (type IS NULL OR type IN ('image', 'card', 'card_media', 'hero'));
 
 ALTER TABLE sliders DROP CONSTRAINT IF EXISTS sliders_status_check;
 ALTER TABLE sliders

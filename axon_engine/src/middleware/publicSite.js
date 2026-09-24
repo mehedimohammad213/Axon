@@ -18,8 +18,12 @@ async function identifyPublicSite(req, res, next) {
   req.organization = org;
   req.isPublicSite = true;
 
-  res.on('finish', () => OrganizationContext.clear());
-  next();
+  try {
+    await OrganizationContext.applyRls();
+    return next();
+  } catch (error) {
+    return next(error);
+  }
 }
 
 module.exports = identifyPublicSite;

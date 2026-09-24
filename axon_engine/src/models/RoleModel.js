@@ -1,8 +1,9 @@
 const { db } = require('../db');
 const { createModel } = require('./BaseModel');
 const { syncRolePermissions } = require('../utils/helpers');
+const { exposeActive } = require('../utils/activeField');
 
-const base = createModel('roles');
+const base = createModel('roles', { active: true });
 
 async function loadWithPermissions(roleId) {
   const role = await db.findOne('roles', { id: roleId });
@@ -16,7 +17,7 @@ async function loadWithPermissions(roleId) {
     [roleId]
   );
 
-  return { ...role, permission_headless: perms };
+  return exposeActive({ ...role, permission_headless: perms.map((perm) => exposeActive(perm)) });
 }
 
 async function findAllWithPermissions() {

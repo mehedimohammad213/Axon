@@ -96,7 +96,7 @@ async function createRole(organizationId, { title, description, permission_ids, 
     organization_id: organizationId,
     title,
     description: description || null,
-    status: status !== undefined ? status : true,
+    is_active: status !== undefined ? status !== false && status !== 0 : true,
     created_at: new Date(),
     updated_at: new Date(),
   });
@@ -120,7 +120,7 @@ async function updateRole(organizationId, roleId, { title, description, permissi
   await db.update('roles', { id: roleId }, {
     title: title ?? role.title,
     description: description ?? role.description,
-    status: status !== undefined ? status : role.status,
+    is_active: status !== undefined ? status !== false && status !== 0 : role.is_active,
     updated_at: new Date(),
   });
 

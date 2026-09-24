@@ -84,7 +84,6 @@ async function ensureOrganization(db, config) {
       password: hashedPassword,
       organization_id: organization.id,
       role_id: adminRole.id,
-      is_license_active: true,
       updated_at: now,
     };
 
@@ -574,13 +573,30 @@ async function seedOrganizationContent(db, organization, config, data) {
     const menuItemIdsByOldMenuId = {};
     for (const row of data.menus || []) {
       const oldId = parseInt(row.id, 10);
-      menuItemIdsByOldMenuId[oldId] = (row.menu_item_ids || [])
+      const itemIds = (row.menu_item_ids || [])
         .map((id) => mapper.idMaps.menuitem[parseInt(id, 10)])
         .filter((id) => id);
-      mapper.idMaps.menu[oldId] = oldId;
+      menuItemIdsByOldMenuId[oldId] = itemIds;
+
+      const menu = await upsertByKeys(
+        trx,
+        'menus',
+        { organization_id: organization.id, name: row.name },
+        {}
+      );
+      mapper.idMaps.menu[oldId] = menu.id;
+      await replaceJunction(
+        'menu_menu_items',
+        'menu_id',
+        menu.id,
+        'menu_item_id',
+        itemIds,
+        { organizationId: organization.id },
+        trx
+      );
     }
 
-    console.log(`Menus (mapped, not stored): ${Object.keys(menuItemIdsByOldMenuId).length}`);
+    console.log(`Menus: ${Object.keys(mapper.idMaps.menu).length}`);
 
     for (const row of data.navbars || []) {
       const oldId = parseInt(row.id, 10);
@@ -605,7 +621,7 @@ async function seedOrganizationContent(db, organization, config, data) {
         || menuItemIdsByOldMenuId[parseInt(row.menu_id, 10)]
         || [];
       const itemIds = normalizeIds(rawItemIds)
-        .map((id) => mapper.idMaps.menuitem[parseInt(id, 10)] || id)
+        .map((id) => mapper.idMaps.menuitem[parseInt(id, 10)])
         .filter((id) => id);
       await replaceJunction(
         'navbar_menu_items',
@@ -639,7 +655,7 @@ async function seedOrganizationContent(db, organization, config, data) {
           { organization_id: organization.id, title_en: row.title_en },
           {
             title_bn: row.title_bn || row.title_en,
-            footer_status: row.footer_status ?? 1,
+            is_active: (row.footer_status ?? row.status ?? 1) !== 0 && (row.footer_status ?? row.status ?? 1) !== false,
             logo_id: row.logo_id
               ? mapper.mapMediaOrFallback(row.logo_id)
               : mapper.mapMediaOrFallback(null),
@@ -653,17 +669,7 @@ async function seedOrganizationContent(db, organization, config, data) {
             address2_description_bn: row.address2_description_bn ?? null,
             address1_status: row.address1_status ?? 1,
             address2_status: row.address2_status ?? 1,
-            column2_menu_item_ids: jsonValue(
-              row.column2_menu_item_ids
-                ? normalizeIds(row.column2_menu_item_ids).map((id) => mapper.map('menuitem', id)).filter(Boolean)
-                : (menuItemIdsByOldMenuId[parseInt(row.column2_menu_id, 10)] || [])
-            ),
             column2_status: row.column2_status ?? 1,
-            column3_menu_item_ids: jsonValue(
-              row.column3_menu_item_ids
-                ? normalizeIds(row.column3_menu_item_ids).map((id) => mapper.map('menuitem', id)).filter(Boolean)
-                : (menuItemIdsByOldMenuId[parseInt(row.column3_menu_id, 10)] || [])
-            ),
             column3_logos: jsonValue(column3Logos),
             column3_status: row.column3_status ?? 1,
             column4_title_en: row.column4_title_en ?? null,
@@ -671,22 +677,38 @@ async function seedOrganizationContent(db, organization, config, data) {
             column4_image: mapper.map('media', row.column4_image),
             column4_text_en: row.column4_text_en ?? null,
             column4_text_bn: row.column4_text_bn ?? null,
-            column4_menu_item_ids: jsonValue(
-              row.column4_menu_item_ids
-                ? normalizeIds(row.column4_menu_item_ids).map((id) => mapper.map('menuitem', id)).filter(Boolean)
-                : (menuItemIdsByOldMenuId[parseInt(row.column4_menu_id, 10)] || [])
-            ),
             column4_description_en: row.column4_description_en ?? null,
             column4_description_bn: row.column4_description_bn ?? null,
             column4_status: row.column4_status ?? 1,
-            bottom_menu_item_ids: jsonValue(
-              row.bottom_menu_item_ids
-                ? normalizeIds(row.bottom_menu_item_ids).map((id) => mapper.map('menuitem', id)).filter(Boolean)
-                : (menuItemIdsByOldMenuId[parseInt(row.bottom_menu_id, 10)] || [])
-            ),
           }
         );
         mapper.idMaps.footer[oldId] = footer.id;
+
+        const footerSlots = {
+          column2: row.column2_menu_item_ids
+            ? normalizeIds(row.column2_menu_item_ids).map((id) => mapper.map('menuitem', id)).filter(Boolean)
+            : (menuItemIdsByOldMenuId[parseInt(row.column2_menu_id, 10)] || []),
+          column3: row.column3_menu_item_ids
+            ? normalizeIds(row.column3_menu_item_ids).map((id) => mapper.map('menuitem', id)).filter(Boolean)
+            : (menuItemIdsByOldMenuId[parseInt(row.column3_menu_id, 10)] || []),
+          column4: row.column4_menu_item_ids
+            ? normalizeIds(row.column4_menu_item_ids).map((id) => mapper.map('menuitem', id)).filter(Boolean)
+            : (menuItemIdsByOldMenuId[parseInt(row.column4_menu_id, 10)] || []),
+          bottom: row.bottom_menu_item_ids
+            ? normalizeIds(row.bottom_menu_item_ids).map((id) => mapper.map('menuitem', id)).filter(Boolean)
+            : (menuItemIdsByOldMenuId[parseInt(row.bottom_menu_id, 10)] || []),
+        };
+        for (const [slot, ids] of Object.entries(footerSlots)) {
+          await replaceJunction(
+            'footer_menu_items',
+            'footer_id',
+            footer.id,
+            'menu_item_id',
+            ids,
+            { organizationId: organization.id, extras: { slot } },
+            trx
+          );
+        }
       }
 
       console.log(`Footers: ${Object.keys(mapper.idMaps.footer).length}`);
@@ -705,7 +727,7 @@ async function seedOrganizationContent(db, organization, config, data) {
           description_bn: row.description_bn ?? null,
           link_url: row.link_url ?? null,
           additional: jsonValue(row.additional ?? null),
-          status: row.status ?? true,
+          is_active: row.status !== false && row.status !== 0,
         }
       );
       mapper.idMaps.card[oldId] = card.id;
@@ -737,12 +759,14 @@ async function seedOrganizationContent(db, organization, config, data) {
         'sliders',
         { organization_id: organization.id, title_en: row.title_en },
         {
-          type: row.type || 'image',
+          type: ['image', 'card', 'card_media', 'hero'].includes(row.type)
+            ? row.type
+            : 'image',
           title_bn: row.title_bn ?? null,
           description_en: row.description_en ?? null,
           description_bn: row.description_bn ?? null,
           additional: jsonValue(row.additional ?? null),
-          status: row.status ?? 1,
+          is_active: row.status !== false && row.status !== 0,
         }
       );
       mapper.idMaps.slider[oldId] = slider.id;
@@ -768,7 +792,7 @@ async function seedOrganizationContent(db, organization, config, data) {
 
     console.log(`Sliders: ${Object.keys(mapper.idMaps.slider).length}`);
 
-    if (config.features?.forms !== false) {
+    if (config.features?.forms !== false && await trx.tableExists('forms')) {
       for (const row of data.forms || []) {
         const oldId = parseInt(row.id, 10);
         const form = await upsertByKeys(
@@ -807,7 +831,7 @@ async function seedOrganizationContent(db, organization, config, data) {
             attributes: jsonValue(attributes),
             elements: jsonValue(row.elements || []),
             additional: jsonValue(row.additional ?? null),
-            status: row.status ?? true,
+            is_active: row.status !== false && row.status !== 0,
           }
         );
 
@@ -836,7 +860,7 @@ async function seedOrganizationContent(db, organization, config, data) {
         'pages',
         {
           organization_id: organization.id,
-          page_name_en: row.page_name_en,
+          type: row.type || 'Page',
           slug: row.slug ?? null,
         },
         {
@@ -847,7 +871,7 @@ async function seedOrganizationContent(db, organization, config, data) {
           body: jsonValue(body),
           body_raw: jsonValue(bodyRaw),
           additional: jsonValue(row.additional ?? null),
-          status: row.status ?? true,
+          is_active: row.status !== false && row.status !== 0,
           lifecycle: row.status === false ? 'draft' : 'published',
           published_at: row.status === false ? null : (row.published_at || new Date()),
         }

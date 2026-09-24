@@ -1,12 +1,13 @@
 const { findWhereIn } = require('../db');
 const { createModel } = require('./BaseModel');
 const { normalizeIds, listChildIds, replaceJunction, orderByIdList } = require('../utils/junctions');
+const { exposeActive } = require('../utils/activeField');
 
-const base = createModel('cards');
+const base = createModel('cards', { active: true });
 
 async function loadMedia(card) {
   if (!card) return card;
-  const result = { ...card };
+  const result = exposeActive({ ...card });
 
   const ids = await listChildIds('card_media', 'card_id', card.id, 'media_id');
   // CMS historically treats cards.media_ids as a single id.

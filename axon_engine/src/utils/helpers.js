@@ -36,7 +36,7 @@ async function seedPermissions(executor = db) {
 
   const rows = permissionsConfig.definitions.map((p) => ({
     ...p,
-    status: true,
+    is_active: true,
     created_at: new Date(),
     updated_at: new Date(),
   }));
@@ -84,7 +84,7 @@ async function seedDefaultRolesForOrganization(organizationId, executor = db) {
         organization_id: organizationId,
         title,
         description: config.description,
-        status: true,
+        is_active: true,
         created_at: new Date(),
         updated_at: new Date(),
       });
@@ -171,7 +171,13 @@ async function loadUserWithRelations(userId) {
   }
 
   delete user.password;
-  return { ...user, organization, role_headless };
+  return {
+    ...user,
+    organization,
+    role_headless: role_headless
+      ? { ...role_headless, status: role_headless.is_active !== false, permission_headless: (role_headless.permission_headless || []).map((perm) => ({ ...perm, status: perm.is_active !== false })) }
+      : null,
+  };
 }
 
 async function userHasPermission(user, slug) {

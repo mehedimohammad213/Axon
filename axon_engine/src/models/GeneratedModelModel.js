@@ -1,7 +1,7 @@
 const { db } = require('../db');
 const { createModel } = require('./BaseModel');
 
-const base = createModel('generated_models');
+const base = createModel('generated_models', { active: true });
 
 async function generate({ modelSingular, modelPlural, fields, status }) {
   const tableName = modelPlural.toLowerCase().replace(/[^a-z0-9_]/g, '_');

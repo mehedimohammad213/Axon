@@ -40,7 +40,10 @@ export const usePageOperations = (pageId, pageData, { cancelPendingAutoSave } = 
         }
 
         try {
-            await instance.put(`/pages/${pageData.id}`, pageData);
+            await instance.put(`/pages/${pageData.id}`, {
+                ...pageData,
+                if_updated_at: pageData.updated_at,
+            });
             dispatch(setIsDirty(false));
             dispatch(setLastSaved(new Date().toISOString()));
             dispatch(setLastSavedPageData(pageData));
@@ -170,7 +173,10 @@ export const usePageOperations = (pageId, pageData, { cancelPendingAutoSave } = 
         try {
             dispatch(setLoading(true));
 
-            const response = await instance.put(`/pages/${pageData.id}`, pageData);
+            const response = await instance.put(`/pages/${pageData.id}`, {
+                ...pageData,
+                if_updated_at: pageData.updated_at,
+            });
 
             // Handle axios response directly
             if (response.status === 200) {
@@ -361,7 +367,10 @@ export const usePageOperations = (pageId, pageData, { cancelPendingAutoSave } = 
         if (!dirty || !currentPageData?.id) return;
 
         try {
-            await instance.put(`/pages/${currentPageData.id}`, currentPageData);
+            await instance.put(`/pages/${currentPageData.id}`, {
+                ...currentPageData,
+                if_updated_at: currentPageData.updated_at,
+            });
             dispatch(setIsDirty(false));
             dispatch(setLastSavedPageData(currentPageData));
             dispatch(setLastSaved(new Date().toISOString()));
@@ -404,9 +413,34 @@ export const usePageOperations = (pageId, pageData, { cancelPendingAutoSave } = 
         dispatch(redo());
     }, [dispatch, cancelPendingAutoSave]);
 
+    const restoreRevision = useCallback(async (version) => {
+        if (!pageData?.id || !version) return false;
+        try {
+            dispatch(setLoading(true));
+            const response = await instance.post(
+                `/pages/${pageData.id}/revisions/${version}/restore`
+            );
+            if (response.status === 200) {
+                dispatch(setPageData(response.data));
+                dispatch(setIsDirty(false));
+                dispatch(setLastSaved(new Date().toISOString()));
+                dispatch(setLastSavedPageData(response.data));
+                message.success(`Restored revision ${version}`);
+                return true;
+            }
+            return false;
+        } catch (err) {
+            message.error("Failed to restore revision.");
+            return false;
+        } finally {
+            dispatch(setLoading(false));
+        }
+    }, [pageData, dispatch]);
+
     return {
         fetchPageData,
         savePageData,
+        restoreRevision,
         handleSectionDuplicate,
         handleSectionDelete,
         handleAddSection,

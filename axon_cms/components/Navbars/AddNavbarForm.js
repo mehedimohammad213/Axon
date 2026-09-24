@@ -191,6 +191,7 @@ const AddNavbarForm = ({
         title_bn: newNavbarTitleBn,
         logo_id: newLogoId,
         menu_id: menuId,
+        menu_item_ids: newMenuItemIds,
       };
       const response = await instance.post("/navbars", newNavbar);
       if (response.status === 201) {

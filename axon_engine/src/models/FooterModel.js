@@ -1,21 +1,24 @@
 const { db, findWhereIn } = require('../db');
 const { createModel } = require('./BaseModel');
-const { normalizeIds, orderByIdList } = require('../utils/junctions');
+const { normalizeIds, orderByIdList, replaceJunction } = require('../utils/junctions');
 
-const base = createModel('footers');
+const base = createModel('footers', {
+  active: 'numeric',
+  extraActiveKeys: ['footer_status'],
+  activeAlias: 'footer_status',
+});
 
-const MENU_ITEM_FIELDS = [
-  'column2_menu_item_ids',
-  'column3_menu_item_ids',
-  'column4_menu_item_ids',
-  'bottom_menu_item_ids',
-];
+const SLOTS = ['column2', 'column3', 'column4', 'bottom'];
 
-async function loadMenuItems(ids) {
-  const normalized = normalizeIds(ids);
-  if (!normalized.length) return [];
-  const rows = await findWhereIn('menu_items', 'id', normalized);
-  return orderByIdList(rows, normalized);
+async function loadSlot(footerId, slot) {
+  const rows = await db.queryAll(
+    `SELECT menu_item_id
+     FROM footer_menu_items
+     WHERE footer_id = $1 AND slot = $2
+     ORDER BY sort_order ASC, id ASC`,
+    [footerId, slot]
+  );
+  return rows.map((row) => row.menu_item_id);
 }
 
 async function loadRelations(footer) {
@@ -26,9 +29,15 @@ async function loadRelations(footer) {
     result.logo = await db.findOne('media', { id: footer.logo_id });
   }
 
-  for (const field of MENU_ITEM_FIELDS) {
-    result[field] = normalizeIds(footer[field]);
-    result[field.replace('_ids', 's')] = await loadMenuItems(result[field]);
+  for (const slot of SLOTS) {
+    const ids = await loadSlot(footer.id, slot);
+    result[`${slot}_menu_item_ids`] = ids;
+    if (ids.length) {
+      const items = await findWhereIn('menu_items', 'id', ids);
+      result[`${slot}_menu_items`] = orderByIdList(items, ids);
+    } else {
+      result[`${slot}_menu_items`] = [];
+    }
   }
 
   return result;
@@ -37,12 +46,31 @@ async function loadRelations(footer) {
 function preparePayload(data) {
   const payload = { ...data };
   if (payload.column3_logos) payload.column3_logos = JSON.stringify(payload.column3_logos);
-  for (const field of MENU_ITEM_FIELDS) {
-    if (payload[field] !== undefined) {
-      payload[field] = JSON.stringify(normalizeIds(payload[field]));
-    }
+  for (const slot of SLOTS) {
+    delete payload[`${slot}_menu_item_ids`];
+    delete payload[`${slot}_menu_items`];
+    delete payload[`${slot}_menu_id`];
   }
   return payload;
+}
+
+async function syncSlots(footer, data) {
+  for (const slot of SLOTS) {
+    const key = `${slot}_menu_item_ids`;
+    if (data[key] === undefined && data[`${slot}_menu_id`] === undefined) continue;
+    await replaceJunction(
+      'footer_menu_items',
+      'footer_id',
+      footer.id,
+      'menu_item_id',
+      normalizeIds(data[key]),
+      {
+        organizationId: footer.organization_id,
+        extras: { slot },
+        match: { slot },
+      }
+    );
+  }
 }
 
 async function findAllWithRelationsPaginated({ page = 1, limit = 20 } = {}) {
@@ -60,11 +88,13 @@ async function findByIdWithRelations(id) {
 
 async function createFooter(data) {
   const footer = await base.create(preparePayload(data));
+  await syncSlots(footer, data);
   return loadRelations(footer);
 }
 
 async function updateFooter(id, data) {
   const updated = await base.update(id, preparePayload(data));
+  await syncSlots(updated, data);
   return loadRelations(updated);
 }
 

@@ -2,14 +2,16 @@ const { findWhereIn } = require('../db');
 const { createModel } = require('./BaseModel');
 const CardModel = require('./CardModel');
 const { listChildIds, replaceJunction, orderByIdList } = require('../utils/junctions');
+const { exposeActive } = require('../utils/activeField');
 
 const base = createModel('sliders', {
   jsonFields: ['additional'],
+  active: 'numeric',
 });
 
 async function loadRelations(slider) {
   if (!slider) return slider;
-  const result = { ...slider };
+  const result = exposeActive({ ...slider }, { numeric: true });
 
   const mediaIds = await listChildIds('slider_media', 'slider_id', slider.id, 'media_id');
   result.media_ids = mediaIds;

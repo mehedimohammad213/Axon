@@ -57,6 +57,18 @@ async function remove(id) {
   return 'Page';
 }
 
+async function listRevisions(id) {
+  const page = await PageModel.findById(id);
+  if (!page) throw new AppError(404, 'Page not found');
+  return { data: await PageModel.listRevisions(id) };
+}
+
+async function restoreRevision(id, version, actor = null) {
+  const page = await PageModel.findById(id);
+  if (!page) throw new AppError(404, 'Page not found');
+  return PageModel.restoreRevision(id, version, page, actor);
+}
+
 async function listPublished({ type, page, limit } = {}) {
   return PageModel.findPublishedPaginated({ type, page, limit });
 }
@@ -69,4 +81,5 @@ async function getPublishedBySlug(slug) {
 
 module.exports = {
   list, show, create, update, remove, listPublished, getPublishedBySlug,
+  listRevisions, restoreRevision,
 };
