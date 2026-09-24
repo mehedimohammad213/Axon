@@ -66,8 +66,6 @@ async function update(id: any, body: any) {
     'email',
     'profile_picture_id',
     'role_id',
-    'license_key',
-    'is_license_active',
   ];
   fields.forEach((field) => {
     if (body[field] !== undefined) updates[field] = body[field];

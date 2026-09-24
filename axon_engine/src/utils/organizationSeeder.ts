@@ -87,7 +87,6 @@ async function ensureOrganization(db: DbContext, config: any) {
       password: hashedPassword,
       organization_id: organization.id,
       role_id: adminRole.id,
-      is_license_active: true,
       updated_at: now,
     };
 

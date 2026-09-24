@@ -17,8 +17,6 @@ async function create(body: any) {
     title,
     description,
     slug,
-    api_request_type,
-    api_endpoint,
     sl_no,
     status,
   } = body;
@@ -28,8 +26,6 @@ async function create(body: any) {
     title,
     description,
     slug,
-    api_request_type,
-    api_endpoint,
     sl_no,
     status,
   });
@@ -44,8 +40,6 @@ async function update(id: any, body: any) {
     'title',
     'description',
     'slug',
-    'api_request_type',
-    'api_endpoint',
     'sl_no',
     'status',
   ];

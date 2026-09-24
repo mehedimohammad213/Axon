@@ -1,9 +1,7 @@
 import { useState } from "react";
-import { Form, Input, Switch, Button, Select, message } from "antd";
+import { Form, Input, Switch, Button, message } from "antd";
 import instance from "../../../axios";
 import { CopyOutlined } from "@ant-design/icons";
-
-const { Option } = Select;
 
 export default function CreatePermission({ setModalVisible }) {
   const [loading, setLoading] = useState(false);
@@ -12,8 +10,6 @@ export default function CreatePermission({ setModalVisible }) {
     title: "",
     description: "",
     slug: "",
-    api_request_type: "GET", // Default value
-    api_endpoint: "",
     sl_no: 99,
     status: 0,
   });
@@ -23,14 +19,6 @@ export default function CreatePermission({ setModalVisible }) {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    });
-  };
-
-  // Function to handle Select change
-  const handleSelectChange = (value) => {
-    setFormData({
-      ...formData,
-      api_request_type: value,
     });
   };
 
@@ -53,8 +41,6 @@ export default function CreatePermission({ setModalVisible }) {
           title: "",
           description: "",
           slug: "",
-          api_request_type: "GET",
-          api_endpoint: "",
           sl_no: 99,
           status: 0,
         });
@@ -164,44 +150,6 @@ export default function CreatePermission({ setModalVisible }) {
             icon={<CopyOutlined />}
           />
         </div>
-        <Form.Item
-          labelAlign="left"
-          label="API Request Type"
-          name="api_request_type"
-          rules={[
-            { required: true, message: "Please select the API request type!" },
-          ]}
-        >
-          <Select
-            placeholder="Select API Request Type"
-            onChange={handleSelectChange}
-            value={formData.api_request_type}
-            style={{ width: "100%" }}
-            showSearch
-          >
-            <Option value="GET">GET</Option>
-            <Option value="POST">POST</Option>
-            <Option value="PUT">PUT</Option>
-            <Option value="DELETE">DELETE</Option>
-          </Select>
-        </Form.Item>
-        <Form.Item
-          labelAlign="left"
-          label="API Endpoint"
-          name="api_endpoint"
-          rules={[
-            { required: true, message: "Please input the API endpoint!" },
-          ]}
-        >
-          <Input
-            placeholder="Enter API endpoint"
-            name="api_endpoint"
-            value={formData.api_endpoint}
-            onChange={handleInputChange}
-            allowClear
-            style={{ width: "100%" }}
-          />
-        </Form.Item>
         {/* <Form.Item
           labelAlign="left"
           label="Serial Number"

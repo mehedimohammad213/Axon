@@ -7,7 +7,6 @@ import {
   PhoneOutlined,
   CalendarOutlined,
   LockOutlined,
-  KeyOutlined,
   SafetyCertificateOutlined,
   CrownOutlined,
 } from "@ant-design/icons";
@@ -123,31 +122,6 @@ const UserProfile = () => {
     );
   };
 
-  const renderStatusField = (label, value, icon, status) => {
-    const isActive = status === 1 || status === "1" || status === true;
-
-    return (
-      <div className="relative w-full p-6 rounded-2xl backdrop-blur-md bg-white/30 border border-white/40 shadow-lg transition-all duration-300 hover:shadow-xl hover:bg-white/40">
-        <div className="flex items-center mb-2">
-          <div className="w-10 h-10 rounded-full bg-brand/90 flex items-center justify-center mr-3">
-            <span className="text-white text-lg">{icon}</span>
-          </div>
-          <Text strong className="text-gray-700">
-            {label}
-          </Text>
-        </div>
-        <div className="pl-[52px]">
-          <Tag
-            color={isActive ? "success" : "error"}
-            className="rounded-full px-4 py-1 text-sm"
-          >
-            {isActive ? "Active" : "Inactive"}
-          </Tag>
-        </div>
-      </div>
-    );
-  };
-
   const getRoleName = () => {
     if (userData?.is_super_admin) {
       return "Platform Super Admin";
@@ -195,12 +169,6 @@ const UserProfile = () => {
               </div>
             </div>
 
-            {renderStatusField(
-              "License Status",
-              userData?.license_key,
-              <KeyOutlined />,
-              userData?.is_license_active
-            )}
             {renderField(
               "Last Login",
               moment(userData?.last_login).format("MMMM Do YYYY, h:mm:ss a"),
