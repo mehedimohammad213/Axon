@@ -24,6 +24,33 @@ function jsonValue(value: unknown) {
   return JSON.stringify(value);
 }
 
+function asIdList(value: unknown): unknown[] {
+  return Array.isArray(value) ? value : [];
+}
+
+function menuItemIdsFrom(row: Record<string, any>, directField: string, nestedField?: string): unknown[] {
+  const direct = asIdList(row[directField]);
+  if (direct.length) return direct;
+
+  const nested = nestedField ? row[nestedField] : row.menu;
+  if (nested && typeof nested === 'object') {
+    return asIdList(nested.menu_item_ids);
+  }
+
+  return [];
+}
+
+function remapMenuItemIds(ids: unknown[], idMap: Record<number, unknown>) {
+  return ids
+    .map((id) => idMap[parseInt(String(id), 10)])
+    .filter((id) => id);
+}
+
+function asActive(value: unknown, defaultActive = true): boolean {
+  if (value === undefined || value === null) return defaultActive;
+  return value !== false && value !== 0 && value !== '0';
+}
+
 async function upsertByKeys(db: DbContext, table: string, match: Record<string, unknown>, payload: Record<string, unknown>) {
   const existing = await db.findOne(table, match);
   const now = new Date();
@@ -580,9 +607,10 @@ async function seedOrganizationContent(db: DbContext, organization: any, config:
       const logoId = config.features?.fallbackMedia
         ? mapper.mapMediaOrFallback(row.logo_id)
         : mapper.map('media', row.logo_id);
-      const menuItemIds = (row.menu_item_ids || [])
-        .map((id) => mapper.idMaps.menuitem[parseInt(id, 10)])
-        .filter((id) => id);
+      const menuItemIds = remapMenuItemIds(
+        menuItemIdsFrom(row, 'menu_item_ids', 'menu'),
+        mapper.idMaps.menuitem
+      );
 
       const navbar = await upsertByKeys(
         trx,
@@ -619,6 +647,7 @@ async function seedOrganizationContent(db: DbContext, organization: any, config:
           {
             title_bn: row.title_bn || row.title_en,
             footer_status: row.footer_status ?? 1,
+            is_active: asActive(row.footer_status, true),
             logo_id: row.logo_id
               ? mapper.mapMediaOrFallback(row.logo_id)
               : mapper.mapMediaOrFallback(null),
@@ -633,15 +662,17 @@ async function seedOrganizationContent(db: DbContext, organization: any, config:
             address1_status: row.address1_status ?? 1,
             address2_status: row.address2_status ?? 1,
             column2_menu_item_ids: jsonValue(
-              (row.column2_menu_item_ids || [])
-                .map((id) => mapper.idMaps.menuitem[parseInt(id, 10)])
-                .filter((id) => id)
+              remapMenuItemIds(
+                menuItemIdsFrom(row, 'column2_menu_item_ids', 'column2_menu'),
+                mapper.idMaps.menuitem
+              )
             ),
             column2_status: row.column2_status ?? 1,
             column3_menu_item_ids: jsonValue(
-              (row.column3_menu_item_ids || [])
-                .map((id) => mapper.idMaps.menuitem[parseInt(id, 10)])
-                .filter((id) => id)
+              remapMenuItemIds(
+                menuItemIdsFrom(row, 'column3_menu_item_ids', 'column3_menu'),
+                mapper.idMaps.menuitem
+              )
             ),
             column3_logos: jsonValue(column3Logos),
             column3_status: row.column3_status ?? 1,
@@ -651,17 +682,19 @@ async function seedOrganizationContent(db: DbContext, organization: any, config:
             column4_text_en: row.column4_text_en ?? null,
             column4_text_bn: row.column4_text_bn ?? null,
             column4_menu_item_ids: jsonValue(
-              (row.column4_menu_item_ids || [])
-                .map((id) => mapper.idMaps.menuitem[parseInt(id, 10)])
-                .filter((id) => id)
+              remapMenuItemIds(
+                menuItemIdsFrom(row, 'column4_menu_item_ids', 'column4_menu'),
+                mapper.idMaps.menuitem
+              )
             ),
             column4_description_en: row.column4_description_en ?? null,
             column4_description_bn: row.column4_description_bn ?? null,
             column4_status: row.column4_status ?? 1,
             bottom_menu_item_ids: jsonValue(
-              (row.bottom_menu_item_ids || [])
-                .map((id) => mapper.idMaps.menuitem[parseInt(id, 10)])
-                .filter((id) => id)
+              remapMenuItemIds(
+                menuItemIdsFrom(row, 'bottom_menu_item_ids', 'bottom_menu'),
+                mapper.idMaps.menuitem
+              )
             ),
           }
         );
@@ -686,6 +719,7 @@ async function seedOrganizationContent(db: DbContext, organization: any, config:
           link_url: row.link_url ?? null,
           additional: jsonValue(row.additional ?? null),
           status: row.status ?? true,
+          is_active: asActive(row.status, true),
         }
       );
       mapper.idMaps.card[oldId] = card.id;
@@ -715,6 +749,7 @@ async function seedOrganizationContent(db: DbContext, organization: any, config:
           card_ids: jsonValue(cardIds),
           additional: jsonValue(row.additional ?? null),
           status: row.status ?? 1,
+          is_active: asActive(row.status, true),
         }
       );
       mapper.idMaps.slider[oldId] = slider.id;
@@ -740,6 +775,7 @@ async function seedOrganizationContent(db: DbContext, organization: any, config:
             elements: jsonValue(row.elements || []),
             additional: jsonValue(row.additional ?? null),
             status: row.status ?? true,
+            is_active: asActive(row.status, true),
           }
         );
 
@@ -762,17 +798,19 @@ async function seedOrganizationContent(db: DbContext, organization: any, config:
     for (const row of data.pages || []) {
       const body = mapper.remapPageBody(row.body || []);
       const bodyRaw = sortRecursive(extractComponentsFromArray(body));
+      const type = row.type || 'Page';
+      const slug = typeof row.slug === 'string' ? row.slug.trim() : row.slug;
+      const match = slug
+        ? { organization_id: organization.id, type, slug }
+        : { organization_id: organization.id, page_name_en: row.page_name_en, slug: row.slug ?? null };
 
       await upsertByKeys(
         trx,
         'pages',
+        match,
         {
-          organization_id: organization.id,
+          type,
           page_name_en: row.page_name_en,
-          slug: row.slug ?? null,
-        },
-        {
-          type: row.type || 'Page',
           favicon_id: mapper.map('media', row.favicon_id),
           page_name_bn: row.page_name_bn || row.page_name_en,
           head: jsonValue(row.head ?? null),
@@ -780,6 +818,7 @@ async function seedOrganizationContent(db: DbContext, organization: any, config:
           body_raw: jsonValue(bodyRaw),
           additional: jsonValue(row.additional ?? null),
           status: row.status ?? true,
+          is_active: asActive(row.status, true),
         }
       );
       pageCount += 1;
