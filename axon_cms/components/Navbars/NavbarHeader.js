@@ -9,6 +9,7 @@ import {
   SearchOutlined,
 } from "@ant-design/icons";
 import Image from "next/image";
+import { copyApiEndpoint } from "../../utils/copyApiEndpoint";
 
 const { Option } = Select;
 
@@ -65,12 +66,7 @@ const NavbarHeader = ({
             <Tooltip title="Copy API endpoint">
               <Button
                 icon={<CopyOutlined />}
-                onClick={() => {
-                  navigator.clipboard.writeText(
-                    `${process.env.NEXT_PUBLIC_API_BASE_URL}/navbars`
-                  );
-                  message.success("API endpoint copied");
-                }}
+                onClick={() => copyApiEndpoint("/navbars")}
               />
             </Tooltip>
             <Tooltip title="Refresh">

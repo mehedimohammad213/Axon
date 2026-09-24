@@ -7,6 +7,7 @@ import CreateOrganization from "../../../components/admin/CreateOrganization";
 import EditOrganization from "../../../components/admin/EditOrganization";
 import { usePermissions } from "../../../src/hooks/usePermissions";
 import { setPageTitle } from "../../../global/constants/pageTitle";
+import { buildApiEndpoint } from "../../../utils/copyApiEndpoint";
 
 const { Option } = Select;
 
@@ -128,7 +129,7 @@ export default function OrganizationsPage() {
         countLabel={{ singular: "Organization", plural: "Organizations" }}
         createLabel="Create Organization"
         onCreate={() => setCreateDrawerVisible(true)}
-        apiEndpoint={`${process.env.NEXT_PUBLIC_API_BASE_URL}/organizations`}
+        apiEndpoint={buildApiEndpoint("/organizations")}
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         searchPlaceholder="Search organizations..."

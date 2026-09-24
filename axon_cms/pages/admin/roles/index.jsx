@@ -6,6 +6,7 @@ import RolesList from "../../../components/admin/RolesList";
 import OrgCreateRole from "../../../components/admin/OrgCreateRole";
 import { usePermissions } from "../../../src/hooks/usePermissions";
 import { setPageTitle } from "../../../global/constants/pageTitle";
+import { buildApiEndpoint } from "../../../utils/copyApiEndpoint";
 
 export default function AdminRolesPage() {
   const { canManagePlatform } = usePermissions();
@@ -158,7 +159,7 @@ export default function AdminRolesPage() {
         showCreate={Boolean(selectedOrgId)}
         apiEndpoint={
           selectedOrgId
-            ? `${process.env.NEXT_PUBLIC_API_BASE_URL}/organizations/${selectedOrgId}/roles`
+            ? buildApiEndpoint(`/organizations/${selectedOrgId}/roles`)
             : undefined
         }
         searchTerm={searchTerm}

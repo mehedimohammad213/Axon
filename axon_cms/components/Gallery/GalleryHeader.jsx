@@ -7,6 +7,7 @@ import {
   SearchOutlined,
 } from "@ant-design/icons";
 import Image from "next/image";
+import { copyApiEndpoint } from "../../utils/copyApiEndpoint";
 
 const { Option } = Select;
 
@@ -81,12 +82,7 @@ const GalleryHeader = ({
               <Button
                 icon={<CopyOutlined />}
                 className="flex h-10 w-10 items-center justify-center rounded-lg border-gray-200 text-gray-600 hover:border-gray-300 hover:text-gray-800"
-                onClick={() => {
-                  navigator.clipboard.writeText(
-                    `${process.env.NEXT_PUBLIC_API_BASE_URL}/media`
-                  );
-                  message.success("API endpoint copied");
-                }}
+                onClick={() => copyApiEndpoint("/media")}
                 size="large"
               />
             </Tooltip>

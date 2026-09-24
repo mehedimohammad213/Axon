@@ -7,6 +7,7 @@ import UserForm from "../../../components/settings/user/UserForm";
 import { usePermissions } from "../../../src/hooks/usePermissions";
 import { useGlobalRefresh } from "../../../src/context/MenuRefreshContext";
 import { setPageTitle } from "../../../global/constants/pageTitle";
+import { buildApiEndpoint } from "../../../utils/copyApiEndpoint";
 
 const { Option } = Select;
 
@@ -177,7 +178,7 @@ export default function AdminUsersPage() {
         createLabel="Add User"
         onCreate={canCreateUser ? () => setCreateUser(true) : undefined}
         showCreate={canCreateUser}
-        apiEndpoint={`${process.env.NEXT_PUBLIC_API_BASE_URL}/admin/users`}
+        apiEndpoint={buildApiEndpoint("/admin/users")}
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         searchPlaceholder="Search users..."

@@ -10,6 +10,7 @@ import {
   DeleteOutlined,
   EditFilled,
 } from "@ant-design/icons";
+import { copyApiEndpoint } from "../../utils/copyApiEndpoint";
 
 export default function ModelsShowcase() {
   const [loading, setLoading] = useState(false);
@@ -133,11 +134,11 @@ export default function ModelsShowcase() {
                 </code>
                 <Button
                   icon={<CopyOutlined />}
-                  onClick={() => {
-                    const url = `${process.env.NEXT_PUBLIC_DYNAMIC_MODEL_URL}${model.api_route}`;
-                    navigator.clipboard.writeText(url);
-                    message.success("Copied to clipboard!");
-                  }}
+                  onClick={() =>
+                    copyApiEndpoint(model.api_route, {
+                      successMessage: "Copied to clipboard!",
+                    })
+                  }
                 />
               </div>
             </div>

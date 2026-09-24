@@ -7,6 +7,7 @@ import instance from "../../../axios";
 import BuilderPanel from "./BuilderPanel";
 import ElementPanel from "./ElementPanel";
 import FormPreview from "./FormPreview";
+import { getApiBaseUrl } from "../../../utils/copyApiEndpoint";
 
 const { TabPane } = Tabs;
 
@@ -194,7 +195,7 @@ const FormBuilder = () => {
         // Auto-update action URL with form ID
         const updatedAttributes = {
           ...formAttributes,
-          action_url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/form-submission?form_id=${formId}`
+          action_url: `${getApiBaseUrl()}/form-submission?form_id=${formId}`
         };
 
         // Update the form with the correct action URL

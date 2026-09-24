@@ -9,6 +9,7 @@ import {
   EditFilled,
 } from "@ant-design/icons";
 import CustomModelData from "./CustomModelData";
+import { copyApiEndpoint } from "../../utils/copyApiEndpoint";
 
 const CustomModelTable = ({ model }) => {
   const [data, setData] = useState([]);
@@ -56,11 +57,11 @@ const CustomModelTable = ({ model }) => {
           <code className="bg-gray-100 p-2 rounded-lg">{model.api_route}</code>
           <Button
             icon={<CopyOutlined />}
-            onClick={() => {
-              const url = `${process.env.NEXT_PUBLIC_DYNAMIC_MODEL_URL}${model.api_route}`;
-              navigator.clipboard.writeText(url);
-              message.success("Copied to clipboard!");
-            }}
+            onClick={() =>
+              copyApiEndpoint(model.api_route, {
+                successMessage: "Copied to clipboard!",
+              })
+            }
           />
         </div>
       </div>

@@ -29,6 +29,7 @@ import {
 import Loader from "./Loader";
 import router from "next/router";
 import MediaSelectionModal1 from "./PageBuilder/Modals/MediaSelectionModal.jsx";
+import { copyApiEndpoint } from "../utils/copyApiEndpoint";
 const MEDIA_URL = process.env.NEXT_PUBLIC_MEDIA_URL;
 const { Panel } = Collapse;
 const Footer = () => {
@@ -424,12 +425,11 @@ const Footer = () => {
                 fontSize: "1.2em",
               }}
               icon={<CopyOutlined />}
-              onClick={() => {
-                navigator.clipboard.writeText(
-                  `${process.env.NEXT_PUBLIC_API_BASE_URL}/footers`
-                );
-                message.success("API Endpoint Copied");
-              }}
+              onClick={() =>
+                copyApiEndpoint("/footers", {
+                  successMessage: "API Endpoint Copied",
+                })
+              }
             >
               Copy API Endpoint
             </Button>

@@ -17,6 +17,7 @@ import {
   SearchOutlined,
 } from "@ant-design/icons";
 import Image from "next/image";
+import { copyApiEndpoint } from "../../utils/copyApiEndpoint";
 
 const { Option } = Select;
 
@@ -126,10 +127,7 @@ const AdminListHeader = ({
                 <Button
                   icon={<CopyOutlined />}
                   className="flex h-10 w-10 items-center justify-center rounded-lg border-gray-200 text-gray-600 hover:border-gray-300 hover:text-gray-800"
-                  onClick={() => {
-                    navigator.clipboard.writeText(apiEndpoint);
-                    message.success("API endpoint copied");
-                  }}
+                  onClick={() => copyApiEndpoint(apiEndpoint)}
                   size="large"
                 />
               </Tooltip>

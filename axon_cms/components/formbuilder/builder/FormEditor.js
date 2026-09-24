@@ -10,6 +10,7 @@ import instance from "../../../axios";
 import FormPreview from "./FormPreview";
 import { useRouter } from "next/router";
 import RichTextEditor from "../../RichTextEditor";
+import { copyApiEndpoint, getApiBaseUrl } from "../../../utils/copyApiEndpoint";
 
 const { TabPane } = Tabs;
 
@@ -210,7 +211,7 @@ const FormEditor = ({ formId }) => {
       if (!formId) {
         attributes = {
           ...formAttributes,
-          action_url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/form-submission`
+          action_url: `${getApiBaseUrl()}/form-submission`
         };
       }
 
@@ -230,7 +231,7 @@ const FormEditor = ({ formId }) => {
           const newFormId = response.data.id;
           const updatedAttributes = {
             ...attributes,
-            action_url: `${process.env.NEXT_PUBLIC_API_BASE_URL}/form-submission?form_id=${newFormId}`
+            action_url: `${getApiBaseUrl()}/form-submission?form_id=${newFormId}`
           };
 
           await instance.put(`/form_builder/${newFormId}`, {
@@ -352,13 +353,15 @@ const FormEditor = ({ formId }) => {
                 {(formAttributes.action_url || formId) && (
                   <Button
                     icon={<CopyOutlined />}
-                    onClick={() => {
-                      const endpoint =
+                    onClick={() =>
+                      copyApiEndpoint(
                         formAttributes.action_url ||
-                        `${process.env.NEXT_PUBLIC_API_BASE_URL}/form-submission?form_id=${formId}`;
-                      navigator.clipboard.writeText(endpoint);
-                      message.success("Form submission API endpoint copied");
-                    }}
+                          `/form-submission?form_id=${formId}`,
+                        {
+                          successMessage: "Form submission API endpoint copied",
+                        }
+                      )
+                    }
                   >
                     Copy
                   </Button>
