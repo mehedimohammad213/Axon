@@ -94,8 +94,7 @@ const MenuItemsHeader = ({
             <Button
               icon={<PlusCircleOutlined />}
               onClick={onAddMenuItem}
-              className="h-10 rounded-lg border-0 bg-brand px-5 font-medium text-white shadow-sm hover:bg-brand-dark"
-              size="large"
+              className="headlessbutton headlessbutton-pill !mr-0"
             >
               Create Menu Item
             </Button>
@@ -212,8 +211,17 @@ const MenuItemsHeader = ({
             </Form.Item>
           )}
           <div className="mt-4 flex justify-end gap-2">
-            <Button onClick={handleResetFilters}>Reset</Button>
-            <Button type="primary" htmlType="submit" className="bg-brand">
+            <Button
+              onClick={handleResetFilters}
+              className="headlesscancelbutton headlessbutton-pill !mr-0"
+            >
+              Reset
+            </Button>
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
               Apply
             </Button>
           </div>

@@ -9,7 +9,6 @@ import {
   Popconfirm,
   message,
   Tooltip,
-  Tag,
   Card,
 } from "antd";
 import {
@@ -168,34 +167,32 @@ const MenuItemRow = ({
     return parentMenuItem ? parentMenuItem.title : "No parent";
   };
 
-  const truncateLink = (link, max = 40) =>
-    link?.length > max ? `${link.slice(0, max)}...` : link;
+  const toggleCard = () => {
+    if (isEditing) return;
+    handleExpand(menuItem.id);
+  };
 
   return (
     <Card
-      className={`w-full overflow-hidden rounded-xl border transition-shadow duration-200 ${
+      className={`w-full cursor-pointer overflow-hidden rounded-xl border transition-shadow duration-200 ${
         isExpanded
           ? "border-brand/40 shadow-md"
           : "border-gray-200 shadow-sm hover:border-gray-300 hover:shadow-md"
       }`}
       bodyStyle={{ padding: 0 }}
+      onClick={toggleCard}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleCard();
+        }
+      }}
     >
-      <div
-        className="flex cursor-pointer items-start gap-3 px-5 py-4 sm:items-center"
-        onClick={() => handleExpand(menuItem.id)}
-        role="button"
-        tabIndex={0}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            handleExpand(menuItem.id);
-          }
-        }}
-      >
+      <div className="flex min-h-[88px] items-center gap-3 px-5 py-4">
         <button
           type="button"
           aria-label={isExpanded ? "Collapse" : "Expand"}
-          className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border transition-colors ${
+          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border transition-colors ${
             isExpanded
               ? "border-brand/30 bg-brand-light text-brand-dark"
               : "border-gray-200 bg-white text-gray-500 hover:bg-gray-50"
@@ -218,55 +215,86 @@ const MenuItemRow = ({
               #{menuItem.id}
             </span>
             {menuItem.parent_id && (
-              <span className="inline-flex items-center gap-1 rounded-md bg-purple-50 px-2 py-0.5 text-xs font-medium text-purple-700">
+              <span className="inline-flex items-center gap-1 rounded-md bg-brand-light px-2 py-0.5 text-xs font-medium text-brand-dark">
                 <MenuOutlined className="text-[10px]" />
                 {getParentTitle(menuItem.parent_id)}
               </span>
             )}
           </div>
 
-          <h3 className="mt-1.5 truncate text-base font-semibold text-gray-900 sm:text-lg">
+          <h3
+            className="mt-1.5 min-h-7 truncate text-base font-semibold leading-7 text-gray-900 sm:text-lg"
+            title={menuItem.title || "Untitled item"}
+          >
             {menuItem.title || "Untitled item"}
           </h3>
 
-          {menuItem.title_bn && (
-            <p className="mt-0.5 truncate text-sm text-gray-500">
-              {menuItem.title_bn}
+          <Tooltip title={menuItem.title_bn || undefined} placement="topLeft">
+            <p className="mt-0.5 min-h-5 truncate text-sm leading-5 text-gray-500">
+              {menuItem.title_bn || "\u00A0"}
             </p>
-          )}
-
-          {menuItem.link && (
-            <p
-              className="mt-1 flex items-center gap-1.5 truncate text-sm text-gray-500"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <LinkOutlined className="shrink-0 text-xs" />
-              <span>{truncateLink(menuItem.link, 50)}</span>
-            </p>
-          )}
+          </Tooltip>
         </div>
 
-        {!isExpanded && (
-          <div
-            className="flex shrink-0 items-center gap-1.5"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <Tooltip title="Edit menu item">
+        <div
+          className="flex shrink-0 items-center gap-2"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {isEditing ? (
+            <>
               <Button
-                type="text"
+                icon={<CheckCircleOutlined />}
+                onClick={handleUpdate}
+                className="headlessbutton headlessbutton-pill !mr-0"
+              >
+                Save changes
+              </Button>
+              <Button
+                icon={<CloseCircleOutlined />}
+                onClick={() => setEditingItemId(null)}
+                className="headlesscancelbutton headlessbutton-pill !mr-0"
+              >
+                Cancel
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button
                 icon={<EditOutlined />}
                 onClick={startEditing}
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 hover:bg-brand-light hover:text-brand-dark"
-              />
-            </Tooltip>
-          </div>
-        )}
+                className="headlessbutton headlessbutton-pill !mr-0"
+              >
+                Edit
+              </Button>
+              <Popconfirm
+                title="Delete this menu item?"
+                description="This cannot be undone."
+                onConfirm={handleDelete}
+                okText="Delete"
+                cancelText="Cancel"
+                okButtonProps={{
+                  danger: true,
+                  icon: <DeleteFilled />,
+                }}
+                cancelButtonProps={{
+                  icon: <CloseCircleOutlined />,
+                }}
+              >
+                <Button
+                  icon={<DeleteFilled />}
+                  className="headlesscancelbutton headlessbutton-pill !mr-0"
+                >
+                  Delete
+                </Button>
+              </Popconfirm>
+            </>
+          )}
+        </div>
       </div>
 
       {isExpanded && (
-        <div className="border-t border-gray-100 bg-gray-50/60 px-5 py-5">
-          <div className="space-y-4">
-            <div className="rounded-xl border border-gray-200 bg-white p-4 sm:p-5">
+        <div className="border-t border-gray-100 px-5 pb-5">
+          <div className="pt-4" onClick={(e) => e.stopPropagation()}>
               {isEditing ? (
                 <div className="space-y-4">
                   <div className="grid gap-4 sm:grid-cols-2">
@@ -385,54 +413,6 @@ const MenuItemRow = ({
                   </dl>
                 </div>
               )}
-            </div>
-
-            <div className="flex flex-wrap items-center gap-2">
-              {isEditing ? (
-                <>
-                  <Button
-                    icon={<CheckCircleOutlined />}
-                    onClick={handleUpdate}
-                    className="!mr-0 h-9 rounded-lg border-0 bg-brand px-4 text-sm font-medium text-white hover:bg-brand-dark"
-                  >
-                    Save changes
-                  </Button>
-                  <Button
-                    icon={<CloseCircleOutlined />}
-                    onClick={() => setEditingItemId(null)}
-                    className="headlesscancelbutton !mr-0"
-                  >
-                    Cancel
-                  </Button>
-                </>
-              ) : (
-                <>
-                  <Button
-                    icon={<EditOutlined />}
-                    onClick={startEditing}
-                    className="!mr-0 h-9 rounded-lg border-gray-200 bg-white px-4 text-sm font-medium text-gray-700 hover:border-brand hover:text-brand-dark"
-                  >
-                    Edit
-                  </Button>
-                  <Popconfirm
-                    title="Delete this menu item?"
-                    description="This cannot be undone."
-                    onConfirm={handleDelete}
-                    okText="Delete"
-                    cancelText="Cancel"
-                    okButtonProps={{ danger: true }}
-                  >
-                    <Button
-                      icon={<DeleteFilled />}
-                      danger
-                      className="!mr-0 ml-auto h-9 rounded-lg px-4 text-sm font-medium"
-                    >
-                      Delete
-                    </Button>
-                  </Popconfirm>
-                </>
-              )}
-            </div>
           </div>
         </div>
       )}

@@ -39,7 +39,7 @@ const MenuItemsList = ({
               type="primary"
               icon={<PlusOutlined />}
               onClick={onCreate}
-              className="mt-2 bg-brand hover:bg-brand-dark"
+              className="headlessbutton headlessbutton-pill !mr-0 mt-2"
             >
               Create menu item
             </Button>
