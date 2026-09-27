@@ -512,30 +512,32 @@ const NavbarRow = ({
                 </div>
               ) : (
                 <div className="space-y-5">
-                  <div className="grid gap-5 sm:grid-cols-[1fr_80px]">
-                    <dl className="grid gap-4 sm:grid-cols-2">
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
+                    <div className="flex min-w-0 flex-col gap-4 sm:flex-row sm:items-start sm:gap-10">
+                      <div className="w-16 shrink-0">
+                        <span className="text-xs font-medium uppercase tracking-wide text-gray-400">
+                          Logo
+                        </span>
+                        <div
+                          className="mt-1 flex h-16 w-16 items-center justify-center overflow-hidden rounded-lg border border-gray-200 bg-gray-50 p-1"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <NavbarLogoPreview logo={navbarLogo} size={56} />
+                        </div>
+                      </div>
                       <InfoRow label="Title (English)">
                         {navbar.title_en || "—"}
                       </InfoRow>
                       <InfoRow label="Title (Bangla)">
                         {navbar.title_bn || "—"}
                       </InfoRow>
+                    </div>
+                    <div className="shrink-0 sm:text-right">
                       <InfoRow label="Menu items">
                         {menuItemsCount > 0
                           ? `${menuItemsCount} item${menuItemsCount !== 1 ? "s" : ""}`
                           : "No items"}
                       </InfoRow>
-                    </dl>
-                    <div className="flex flex-col items-start sm:items-end">
-                      <span className="text-xs font-medium uppercase tracking-wide text-gray-400">
-                        Logo
-                      </span>
-                      <div
-                        className="flex h-16 w-16 items-center justify-center overflow-hidden rounded-lg border border-gray-200 bg-gray-50 p-1"
-                        onClick={(e) => e.stopPropagation()}
-                      >
-                        <NavbarLogoPreview logo={navbarLogo} size={56} />
-                      </div>
                     </div>
                   </div>
 
