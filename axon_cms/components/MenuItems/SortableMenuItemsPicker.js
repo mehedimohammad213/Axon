@@ -25,7 +25,37 @@ import {
   PlusOutlined,
   SearchOutlined,
   EditOutlined,
+  PlusCircleFilled,
+  MinusCircleFilled,
 } from "@ant-design/icons";
+
+const ICON_ACTION_STYLES = {
+  add: "text-brand hover:bg-brand-light hover:text-brand-dark",
+  edit: "text-gray-500 hover:bg-brand-light hover:text-brand-dark",
+  remove: "text-gray-500 hover:bg-red-50 hover:text-red-500",
+};
+
+const IconActionButton = ({
+  title,
+  icon,
+  onClick,
+  variant = "edit",
+  className = "",
+}) => (
+  <Tooltip title={title}>
+    <button
+      type="button"
+      aria-label={title}
+      onClick={(e) => {
+        e.stopPropagation();
+        onClick?.(e);
+      }}
+      className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm transition-colors ${ICON_ACTION_STYLES[variant]} ${className}`}
+    >
+      {icon}
+    </button>
+  </Tooltip>
+);
 
 const reorderWithMultiSelect = (items, selectedIds, activeId, overId) => {
   const selectedSet = new Set(selectedIds);
@@ -91,7 +121,7 @@ const SortableItem = ({
       ref={setNodeRef}
       style={style}
       className={`
-        flex items-center gap-2 px-3 py-2 rounded-lg border-2 transition-all
+        flex items-center gap-3 px-4 py-3 rounded-xl border-2 transition-all
         ${isSelected ? "border-brand bg-blue-50" : "border-gray-200 bg-white"}
         ${isDraggingGroup && isSelected && !isDragging ? "opacity-50" : ""}
         hover:border-blue-300
@@ -124,26 +154,19 @@ const SortableItem = ({
         </Tooltip>
       )}
       {onEdit && (
-        <Button
-          type="text"
-          size="small"
+        <IconActionButton
+          title="Edit menu item"
+          variant="edit"
           icon={<EditOutlined />}
-          onClick={(e) => {
-            e.stopPropagation();
-            onEdit(item || { id });
-          }}
-          className="text-gray-400 hover:text-brand-dark"
+          onClick={() => onEdit(item || { id })}
         />
       )}
-      <Tooltip title="Remove from menu">
-        <Button
-          type="text"
-          size="small"
-          icon={<MinusOutlined />}
-          onClick={() => onRemove(id)}
-          className="text-gray-400 hover:text-red-500"
-        />
-      </Tooltip>
+      <IconActionButton
+        title="Remove from menu"
+        variant="remove"
+        icon={<MinusCircleFilled />}
+        onClick={() => onRemove(id)}
+      />
     </div>
   );
 };
@@ -278,9 +301,13 @@ const SortableMenuItemsPicker = ({
       : 1;
 
   return (
-    <div className={`${compact ? "" : "grid grid-cols-1 md:grid-cols-2 gap-4"}`}>
+    <div
+      className={`${
+        compact ? "" : "grid grid-cols-1 gap-4 md:grid-cols-[minmax(0,1fr)_minmax(0,2fr)]"
+      }`}
+    >
       {/* Available items panel */}
-      <div className="border-2 border-gray-200 rounded-xl p-3 bg-gray-50">
+      <div className="min-w-0 border-2 border-gray-200 rounded-xl p-3 bg-gray-50">
         <div className="flex items-center justify-between mb-2">
           <span className="text-xs font-bold text-gray-600 uppercase tracking-wide">
             {availableLabel}
@@ -309,12 +336,12 @@ const SortableMenuItemsPicker = ({
           size="small"
           allowClear
         />
-        <div className="max-h-48 overflow-y-auto space-y-1">
+        <div className="max-h-40 overflow-y-auto space-y-0.5">
           {availableItems.length > 0 ? (
             availableItems.map((item) => (
               <div
                 key={item.id}
-                className="flex items-center gap-2 px-2 py-1.5 rounded-lg hover:bg-white transition-colors cursor-pointer"
+                className="flex items-center gap-1.5 px-1.5 py-1 rounded-md hover:bg-white transition-colors cursor-pointer"
                 onClick={() => handleAddItem(item.id)}
               >
                 <Checkbox
@@ -323,11 +350,17 @@ const SortableMenuItemsPicker = ({
                   onClick={(e) => e.stopPropagation()}
                 />
                 <Tooltip title={item.title} placement="topLeft">
-                  <span className="min-w-0 flex-1 truncate text-sm text-gray-700">
+                  <span className="min-w-0 flex-1 truncate text-xs text-gray-700">
                     {item.title}
                   </span>
                 </Tooltip>
-                <PlusOutlined className="text-gray-400 text-xs" />
+                <IconActionButton
+                  title="Add to menu"
+                  variant="add"
+                  className="!h-6 !w-6 text-xs"
+                  icon={<PlusCircleFilled />}
+                  onClick={() => handleAddItem(item.id)}
+                />
               </div>
             ))
           ) : (
@@ -341,7 +374,7 @@ const SortableMenuItemsPicker = ({
       </div>
 
       {/* Selected / ordered items panel */}
-      <div className="border-2 border-gray-200 rounded-xl p-3 bg-white">
+      <div className="min-w-0 border-2 border-gray-200 rounded-xl p-4 bg-white">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
             <span className="text-xs font-bold text-gray-600 uppercase tracking-wide">
@@ -389,7 +422,7 @@ const SortableMenuItemsPicker = ({
               items={value}
               strategy={verticalListSortingStrategy}
             >
-              <div className="max-h-64 overflow-y-auto space-y-1.5">
+              <div className="max-h-80 overflow-y-auto space-y-2">
                 {value.map((id) => (
                   <SortableItem
                     key={id}
