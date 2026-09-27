@@ -526,6 +526,16 @@ a:hover {
     box-shadow 0.15s ease;
 }
 
+.headlessbutton-pill,
+.headlessbutton.headlessbutton-pill,
+.headlesscancelbutton.headlessbutton-pill {
+  height: 2.5rem !important;
+  min-height: 2.5rem !important;
+  padding: 0 1.25rem !important;
+  border-radius: 9999px !important;
+  line-height: 1 !important;
+}
+
 .headlessbutton.ant-btn-icon-only,
 .headlessbutton-warning.ant-btn-icon-only,
 .headlessbutton-success.ant-btn-icon-only,

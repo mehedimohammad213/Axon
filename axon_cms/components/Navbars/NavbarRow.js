@@ -13,6 +13,7 @@ import {
 } from "antd";
 import {
   EditOutlined,
+  DeleteFilled,
   CheckCircleOutlined,
   CloseCircleOutlined,
   FileImageFilled,
@@ -369,7 +370,7 @@ const NavbarRow = ({
         </div>
 
         <div
-          className="flex shrink-0 items-center gap-1.5"
+          className="flex shrink-0 items-center gap-2"
           onClick={(e) => e.stopPropagation()}
         >
           {isEditing ? (
@@ -377,14 +378,14 @@ const NavbarRow = ({
               <Button
                 icon={<CheckCircleOutlined />}
                 onClick={handleUpdate}
-                className="!mr-0 inline-flex h-10 items-center gap-1.5 !rounded-full border-0 bg-[#5BA8F5] px-5 text-sm font-medium text-white shadow-[0_4px_10px_rgba(91,168,245,0.4)] hover:!bg-[#4A97E8] hover:!text-white"
+                className="headlessbutton headlessbutton-pill !mr-0"
               >
                 Save changes
               </Button>
               <Button
                 icon={<CloseCircleOutlined />}
                 onClick={cancelEditing}
-                className="!mr-0 inline-flex h-10 items-center gap-1.5 !rounded-full border-0 bg-[#F07171] px-5 text-sm font-medium text-white shadow-[0_4px_10px_rgba(240,113,113,0.4)] hover:!bg-[#E55A5A] hover:!text-white"
+                className="headlesscancelbutton headlessbutton-pill !mr-0"
               >
                 Cancel
               </Button>
@@ -392,8 +393,9 @@ const NavbarRow = ({
           ) : (
             <>
               <Button
+                icon={<EditOutlined />}
                 onClick={startEditing}
-                className="!mr-0 h-9 rounded-lg border-gray-200 bg-white px-4 text-sm font-medium text-gray-700 hover:border-brand hover:text-brand-dark"
+                className="headlessbutton headlessbutton-pill !mr-0"
               >
                 Edit
               </Button>
@@ -406,8 +408,8 @@ const NavbarRow = ({
                 okButtonProps={{ danger: true }}
               >
                 <Button
-                  danger
-                  className="!mr-0 h-9 rounded-lg px-4 text-sm font-medium"
+                  icon={<DeleteFilled />}
+                  className="headlesscancelbutton headlessbutton-pill !mr-0"
                 >
                   Delete
                 </Button>
@@ -494,8 +496,7 @@ const NavbarRow = ({
                       <Button
                         icon={<PlusCircleOutlined />}
                         onClick={() => setIsAddMenuItemOpen(true)}
-                        size="small"
-                        className="rounded-lg border-brand text-brand-dark hover:border-brand-dark"
+                        className="headlessbutton headlessbutton-pill !mr-0"
                       >
                         Add item
                       </Button>
