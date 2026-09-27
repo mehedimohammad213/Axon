@@ -13,11 +13,10 @@ import {
 } from "antd";
 import {
   EditOutlined,
-  DeleteFilled,
+  CheckCircleOutlined,
   CloseCircleOutlined,
   FileImageFilled,
   MenuOutlined,
-  CheckCircleOutlined,
   GlobalOutlined,
   PlusCircleOutlined,
   CaretRightOutlined,
@@ -369,21 +368,53 @@ const NavbarRow = ({
           </Tooltip>
         </div>
 
-        {!isExpanded && (
-          <div
-            className="flex shrink-0 items-center gap-1.5"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <Tooltip title="Edit navbar">
+        <div
+          className="flex shrink-0 items-center gap-1.5"
+          onClick={(e) => e.stopPropagation()}
+        >
+          {isEditing ? (
+            <>
               <Button
-                type="text"
-                icon={<EditOutlined />}
+                icon={<CheckCircleOutlined />}
+                onClick={handleUpdate}
+                className="!mr-0 inline-flex h-10 items-center gap-1.5 !rounded-full border-0 bg-[#5BA8F5] px-5 text-sm font-medium text-white shadow-[0_4px_10px_rgba(91,168,245,0.4)] hover:!bg-[#4A97E8] hover:!text-white"
+              >
+                Save changes
+              </Button>
+              <Button
+                icon={<CloseCircleOutlined />}
+                onClick={cancelEditing}
+                className="!mr-0 inline-flex h-10 items-center gap-1.5 !rounded-full border-0 bg-[#F07171] px-5 text-sm font-medium text-white shadow-[0_4px_10px_rgba(240,113,113,0.4)] hover:!bg-[#E55A5A] hover:!text-white"
+              >
+                Cancel
+              </Button>
+            </>
+          ) : (
+            <>
+              <Button
                 onClick={startEditing}
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 hover:bg-brand-light hover:text-brand-dark"
-              />
-            </Tooltip>
-          </div>
-        )}
+                className="!mr-0 h-9 rounded-lg border-gray-200 bg-white px-4 text-sm font-medium text-gray-700 hover:border-brand hover:text-brand-dark"
+              >
+                Edit
+              </Button>
+              <Popconfirm
+                title="Delete this navbar?"
+                description="This cannot be undone."
+                onConfirm={handleDelete}
+                okText="Delete"
+                cancelText="Cancel"
+                okButtonProps={{ danger: true }}
+              >
+                <Button
+                  danger
+                  className="!mr-0 h-9 rounded-lg px-4 text-sm font-medium"
+                >
+                  Delete
+                </Button>
+              </Popconfirm>
+            </>
+          )}
+        </div>
       </div>
 
       {/* Expanded */}
@@ -536,53 +567,6 @@ const NavbarRow = ({
                     </div>
                   )}
                 </div>
-              )}
-            </div>
-
-            <div className="flex flex-wrap items-center gap-2">
-              {isEditing ? (
-                <>
-                  <Button
-                    icon={<CheckCircleOutlined />}
-                    onClick={handleUpdate}
-                    className="!mr-0 h-9 rounded-lg border-0 bg-brand px-4 text-sm font-medium text-white hover:bg-brand-dark"
-                  >
-                    Save changes
-                  </Button>
-                  <Button
-                    icon={<CloseCircleOutlined />}
-                    onClick={cancelEditing}
-                    className="headlesscancelbutton !mr-0"
-                  >
-                    Cancel
-                  </Button>
-                </>
-              ) : (
-                <>
-                  <Button
-                    icon={<EditOutlined />}
-                    onClick={startEditing}
-                    className="!mr-0 h-9 rounded-lg border-gray-200 bg-white px-4 text-sm font-medium text-gray-700 hover:border-brand hover:text-brand-dark"
-                  >
-                    Edit
-                  </Button>
-                  <Popconfirm
-                    title="Delete this navbar?"
-                    description="This cannot be undone."
-                    onConfirm={handleDelete}
-                    okText="Delete"
-                    cancelText="Cancel"
-                    okButtonProps={{ danger: true }}
-                  >
-                    <Button
-                      icon={<DeleteFilled />}
-                      danger
-                      className="!mr-0 ml-auto h-9 rounded-lg px-4 text-sm font-medium"
-                    >
-                      Delete
-                    </Button>
-                  </Popconfirm>
-                </>
               )}
             </div>
           </div>
