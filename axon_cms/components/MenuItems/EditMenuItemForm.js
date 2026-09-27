@@ -227,7 +227,7 @@ const EditMenuItemForm = ({
           icon={<CheckCircleOutlined />}
           onClick={handleSave}
           loading={saving}
-          className="headlessbutton"
+          className="headlessbutton headlessbutton-pill !mr-0"
         >
           Save changes
         </Button>
