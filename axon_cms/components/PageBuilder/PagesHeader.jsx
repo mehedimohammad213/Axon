@@ -176,9 +176,8 @@ const PagesHeader = ({
                 {showPagesSection && (
                   <Button
                     icon={<PlusCircleOutlined />}
-                    className="h-10 rounded-lg border-0 bg-brand px-5 font-medium text-white shadow-sm hover:bg-brand-dark"
+                    className="headlessbutton headlessbutton-pill !mr-0"
                     onClick={onCreate}
-                    size="large"
                   >
                     Create Page
                   </Button>
@@ -186,9 +185,8 @@ const PagesHeader = ({
                 {showFootersSection && onFooterCreate && (
                   <Button
                     icon={<PlusCircleOutlined />}
-                    className="h-10 rounded-lg border-0 bg-brand px-5 font-medium text-white shadow-sm hover:bg-brand-dark"
+                    className="headlessbutton headlessbutton-pill !mr-0"
                     onClick={onFooterCreate}
-                    size="large"
                   >
                     Create Footer
                   </Button>
@@ -196,9 +194,8 @@ const PagesHeader = ({
                 {section === "footers" && onCreate && !onFooterCreate && (
                   <Button
                     icon={<PlusCircleOutlined />}
-                    className="h-10 rounded-lg border-0 bg-brand px-5 font-medium text-white shadow-sm hover:bg-brand-dark"
+                    className="headlessbutton headlessbutton-pill !mr-0"
                     onClick={onCreate}
-                    size="large"
                   >
                     Create Footer
                   </Button>

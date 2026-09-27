@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Modal, Input, Button, Row, Col, message } from "antd";
-import { PlusCircleOutlined, CloseCircleOutlined } from "@ant-design/icons";
+import { PlusCircleOutlined } from "@ant-design/icons";
 import instance from "../../axios";
 
 const CreateFooterModal = ({
@@ -138,19 +138,12 @@ const CreateFooterModal = ({
           />
         </div>
 
-        <div className="flex justify-end gap-3 mt-4">
-          <Button
-            onClick={handleCancel}
-            icon={<CloseCircleOutlined />}
-            className="h-10 px-6 headlesscancelbutton"
-          >
-            Cancel
-          </Button>
+        <div className="flex justify-end mt-4">
           <Button
             onClick={handleCreateFooter}
             icon={<PlusCircleOutlined />}
             loading={loading}
-            className="h-10 px-6 headlessbutton"
+            className="headlessbutton headlessbutton-pill !mr-0"
             type="primary"
           >
             Create Footer

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback, useMemo } from "react";
 import { Modal, Input, Button, Select, message } from "antd";
-import { PlusCircleOutlined, CloseCircleOutlined } from "@ant-design/icons";
+import { PlusCircleOutlined, ThunderboltOutlined } from "@ant-design/icons";
 import instance from "../../axios";
 import AddMenuItemForm from "../MenuItems/AddMenuItemForm";
 import AddNavbarForm from "../Navbars/AddNavbarForm";
@@ -396,8 +396,9 @@ const CreatePageModal = ({
                   size="large"
                 />
                 <Button
+                  icon={<ThunderboltOutlined />}
                   onClick={handleGenerateSlug}
-                  className="h-12 px-4 headlessbutton"
+                  className="headlessbutton headlessbutton-pill !mr-0"
                   type="primary"
                 >
                   Generate
@@ -419,7 +420,7 @@ const CreatePageModal = ({
                   <Button
                     icon={<PlusCircleOutlined />}
                     onClick={() => setIsAddMenuItemOpen(true)}
-                    className="h-9 px-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0 font-semibold shadow-md hover:shadow-lg transition-all rounded-lg text-xs"
+                    className="headlessbutton headlessbutton-pill !mr-0"
                   >
                     Create Item
                   </Button>
@@ -452,7 +453,7 @@ const CreatePageModal = ({
                   <Button
                     icon={<PlusCircleOutlined />}
                     onClick={() => setIsAddNavbarOpen(true)}
-                    className="h-9 px-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0 font-semibold shadow-md hover:shadow-lg transition-all rounded-lg text-xs"
+                    className="headlessbutton headlessbutton-pill !mr-0"
                   >
                     Create Navbar
                   </Button>
@@ -479,19 +480,12 @@ const CreatePageModal = ({
             </div>
           )}
 
-          <div className="flex justify-end gap-3 mt-4">
-            <Button
-              onClick={handleCancel}
-              icon={<CloseCircleOutlined />}
-              className="h-10 px-6 headlesscancelbutton"
-            >
-              Cancel
-            </Button>
+          <div className="flex justify-end mt-4">
             <Button
               onClick={handleCreatePage}
               icon={<PlusCircleOutlined />}
               loading={loading}
-              className="h-10 px-6 headlessbutton"
+              className="headlessbutton headlessbutton-pill !mr-0"
               type="primary"
             >
               Create {type}
