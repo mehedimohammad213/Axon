@@ -455,7 +455,26 @@ video {
 }
 
 .ant-modal-close {
-  color: var(--danger) !important;
+  top: 14px !important;
+  inset-inline-end: 14px !important;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 32px !important;
+  height: 32px !important;
+  border-radius: 9999px !important;
+  color: var(--danger-dark) !important;
+  background-color: var(--danger-light) !important;
+}
+
+.ant-modal-close-x {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 32px !important;
+  height: 32px !important;
+  line-height: 32px !important;
+  border-radius: 9999px !important;
 }
 
 .ant-modal-close:hover {

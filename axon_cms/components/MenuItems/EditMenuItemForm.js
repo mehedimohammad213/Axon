@@ -9,7 +9,7 @@ import {
   message,
   Typography,
 } from "antd";
-import { CheckCircleOutlined, CloseCircleOutlined } from "@ant-design/icons";
+import { CheckCircleOutlined } from "@ant-design/icons";
 import instance from "../../axios";
 
 const { Option } = Select;
@@ -222,7 +222,7 @@ const EditMenuItemForm = ({
         </Col>
       </Row>
 
-      <div className="flex justify-end mt-4 gap-5">
+      <div className="flex justify-end mt-4">
         <Button
           icon={<CheckCircleOutlined />}
           onClick={handleSave}
@@ -230,13 +230,6 @@ const EditMenuItemForm = ({
           className="headlessbutton"
         >
           Save changes
-        </Button>
-        <Button
-          icon={<CloseCircleOutlined />}
-          onClick={onCancel}
-          className="headlesscancelbutton mr-2"
-        >
-          Cancel
         </Button>
       </div>
     </div>
