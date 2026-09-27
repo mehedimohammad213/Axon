@@ -37,11 +37,6 @@ app.use('/uploads', express.static(path.resolve('uploads')));
 const mediaUploadDir = path.resolve(process.env.UPLOAD_DIR || 'uploads/media');
 app.use('/media', express.static(mediaUploadDir));
 
-// Optional legacy Laravel public assets (banners/, etc.) if the old tree exists.
-const legacyPublicDir = path.resolve(__dirname, '../../headless-engine/public');
-app.use('/banners', express.static(path.join(legacyPublicDir, 'banners')));
-app.use(express.static(legacyPublicDir));
-
 const limiter = rateLimit({
   windowMs: 60 * 1000,
   max: 3600,
