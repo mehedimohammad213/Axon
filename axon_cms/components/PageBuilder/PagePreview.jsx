@@ -221,7 +221,7 @@ const PagePreview = ({ pageId, pageData: propPageData, open, setOpen }) => {
             <button
               type="button"
               onClick={handleEditPage}
-              className="inline-flex shrink-0 items-center gap-2 rounded-lg bg-brand px-4 py-2 text-sm font-medium text-white transition-colors hover:bg-brand-dark"
+              className="inline-flex h-10 shrink-0 items-center gap-2 rounded-full bg-brand px-5 text-sm font-semibold text-white transition-colors hover:bg-brand-dark"
             >
               <EditOutlined />
               Edit Page
