@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useCallback } from "react";
 import { Row, Col, Input, Button, message, Modal } from "antd";
-import { PlusCircleOutlined, CloseCircleOutlined } from "@ant-design/icons";
+import { PlusCircleOutlined, FileImageFilled } from "@ant-design/icons";
 import instance from "../../axios";
 import MediaSelectionModal from "../PageBuilder/Modals/MediaSelectionModal";
 import SortableMenuItemsPicker from "../MenuItems/SortableMenuItemsPicker";
@@ -79,11 +79,6 @@ const AddNavbarForm = ({
     setIsAddMenuItemOpen(false);
   };
 
-  const handleCancel = () => {
-    resetForm();
-    onCancel();
-  };
-
   const handleAddNavbar = async () => {
     if (!newNavbarTitleEn.trim() || !newLogoId) {
       message.error("Please fill in title and logo");
@@ -137,8 +132,9 @@ const AddNavbarForm = ({
               />
             ) : null}
             <Button
+              icon={<FileImageFilled />}
               onClick={() => setMediaModalVisible(true)}
-              className="h-10 px-4 bg-gradient-to-r from-white to-gray-50 hover:from-gray-50 hover:to-gray-100 text-gray-700 border-2 border-gray-200 hover:border-blue-300 font-semibold shadow-sm hover:shadow-md transition-all rounded-lg"
+              className="headlessbutton headlessbutton-pill !mr-0"
             >
               {newLogoId ? "Change Logo" : "Select Logo"}
             </Button>
@@ -169,7 +165,7 @@ const AddNavbarForm = ({
             <Button
               icon={<PlusCircleOutlined />}
               onClick={() => setIsAddMenuItemOpen(true)}
-              className="h-9 px-4 bg-gradient-to-r from-blue-500 to-cyan-500 hover:from-blue-600 hover:to-cyan-600 text-white border-0 font-semibold shadow-md hover:shadow-lg transition-all rounded-lg text-xs"
+              className="headlessbutton headlessbutton-pill !mr-0"
             >
               Create Item
             </Button>
@@ -187,19 +183,12 @@ const AddNavbarForm = ({
         </div>
       </div>
 
-      <div className="flex justify-end mt-4 gap-4">
-        <Button
-          icon={<CloseCircleOutlined />}
-          onClick={handleCancel}
-          className="headlesscancelbutton h-11 px-6"
-        >
-          Cancel
-        </Button>
+      <div className="flex justify-end mt-4">
         <Button
           icon={<PlusCircleOutlined />}
           onClick={handleAddNavbar}
           loading={saving}
-          className="h-11 px-6 bg-gradient-to-r from-brand to-brand-dark hover:from-brand-dark hover:to-blue-600 text-white border-0 font-semibold shadow-md hover:shadow-xl transition-all rounded-xl"
+          className="headlessbutton headlessbutton-pill !mr-0"
         >
           Create Navbar
         </Button>

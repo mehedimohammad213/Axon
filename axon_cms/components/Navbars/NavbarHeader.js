@@ -76,7 +76,7 @@ const NavbarHeader = ({
               type="primary"
               icon={<PlusCircleOutlined />}
               onClick={onAddNavbar}
-              className="bg-brand hover:bg-brand-dark"
+              className="headlessbutton headlessbutton-pill !mr-0"
             >
               Add Navbar
             </Button>
