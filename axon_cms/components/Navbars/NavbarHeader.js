@@ -11,8 +11,6 @@ import {
 import Image from "next/image";
 import { copyApiEndpoint } from "../../utils/copyApiEndpoint";
 
-const { Option } = Select;
-
 const NavbarHeader = ({
   onAddNavbar,
   searchTerm,
@@ -62,16 +60,7 @@ const NavbarHeader = ({
             </div>
           </div>
 
-          <div className="flex flex-wrap items-center gap-2">
-            <Tooltip title="Copy API endpoint">
-              <Button
-                icon={<CopyOutlined />}
-                onClick={() => copyApiEndpoint("/navbars")}
-              />
-            </Tooltip>
-            <Tooltip title="Refresh">
-              <Button icon={<ReloadOutlined />} onClick={handleRefresh} />
-            </Tooltip>
+          <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             <Button
               type="primary"
               icon={<PlusCircleOutlined />}
@@ -80,36 +69,80 @@ const NavbarHeader = ({
             >
               Add Navbar
             </Button>
+            <Tooltip title="Refresh">
+              <Button
+                icon={<ReloadOutlined />}
+                className="flex h-10 w-10 items-center justify-center rounded-lg border-gray-200 text-gray-600 hover:border-gray-300 hover:text-gray-800"
+                onClick={handleRefresh}
+                size="large"
+              />
+            </Tooltip>
+            <Tooltip title="Copy API endpoint">
+              <Button
+                icon={<CopyOutlined />}
+                className="flex h-10 w-10 items-center justify-center rounded-lg border-gray-200 text-gray-600 hover:border-gray-300 hover:text-gray-800"
+                onClick={() => copyApiEndpoint("/navbars")}
+                size="large"
+              />
+            </Tooltip>
           </div>
         </div>
+      </div>
 
-        <div className="mt-4 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-          <div className="flex flex-wrap items-center gap-2">
-            <Select
-              value={sortType}
-              onChange={setSortType}
-              className="w-36"
-              options={[
-                { value: "desc", label: "Newest first" },
-                { value: "asc", label: "Oldest first" },
-              ]}
-            />
-            <Select
-              defaultValue="10"
-              onChange={onShowChange}
-              className="w-28"
-            >
-              <Option value="5">Show 5</Option>
-              <Option value="10">Show 10</Option>
-              <Option value="20">Show 20</Option>
-              <Option value="50">Show 50</Option>
-            </Select>
+      <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
+        <div className="flex flex-col items-stretch justify-between gap-4 lg:flex-row lg:items-center">
+          <div className="flex flex-wrap items-center gap-4">
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-medium text-gray-600">Sort</span>
+              <div className="flex items-center rounded-lg border border-gray-200 bg-gray-50 p-0.5">
+                <Button
+                  type={sortType === "desc" ? "primary" : "text"}
+                  size="small"
+                  onClick={() => setSortType("desc")}
+                  className={`rounded-md px-3 py-1 text-sm font-medium ${
+                    sortType === "desc"
+                      ? "bg-brand text-white"
+                      : "text-gray-600 hover:bg-white hover:text-gray-800"
+                  }`}
+                >
+                  Newest
+                </Button>
+                <Button
+                  type={sortType === "asc" ? "primary" : "text"}
+                  size="small"
+                  onClick={() => setSortType("asc")}
+                  className={`rounded-md px-3 py-1 text-sm font-medium ${
+                    sortType === "asc"
+                      ? "bg-brand text-white"
+                      : "text-gray-600 hover:bg-white hover:text-gray-800"
+                  }`}
+                >
+                  Oldest
+                </Button>
+              </div>
+            </div>
           </div>
-          <div className="w-full sm:max-w-xs">
+
+          <div className="flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center lg:w-auto">
+            <div className="flex items-center gap-2">
+              <span className="text-sm font-medium text-gray-600">Show</span>
+              <Select
+                defaultValue="10"
+                className="w-24 [&_.ant-select-selector]:h-9 [&_.ant-select-selector]:rounded-lg [&_.ant-select-selector]:border-gray-200"
+                onChange={onShowChange}
+              >
+                <Select.Option value="10">10</Select.Option>
+                <Select.Option value="20">20</Select.Option>
+                <Select.Option value="50">50</Select.Option>
+                <Select.Option value="100">100</Select.Option>
+              </Select>
+            </div>
+
             <Input
               placeholder="Search navbars..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
+              className="h-9 w-full rounded-lg border-gray-200 sm:w-72 [&_.ant-input]:placeholder:text-gray-400"
               allowClear
               prefix={<SearchOutlined className="text-gray-400" />}
             />
