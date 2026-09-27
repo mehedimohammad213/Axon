@@ -739,6 +739,10 @@ a:hover {
   color: #ffffff !important;
 }
 
+.ant-popconfirm-buttons .ant-btn {
+  border-radius: 9999px !important;
+}
+
 .ant-popconfirm-buttons .ant-btn-default {
   color: #ffffff !important;
   border-color: var(--danger-dark) !important;

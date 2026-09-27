@@ -426,7 +426,13 @@ const NavbarRow = ({
                 onConfirm={handleDelete}
                 okText="Delete"
                 cancelText="Cancel"
-                okButtonProps={{ danger: true }}
+                okButtonProps={{
+                  danger: true,
+                  icon: <DeleteFilled />,
+                }}
+                cancelButtonProps={{
+                  icon: <CloseCircleOutlined />,
+                }}
               >
                 <Button
                   icon={<DeleteFilled />}
