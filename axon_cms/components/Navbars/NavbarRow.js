@@ -1,6 +1,6 @@
 // components/Navbars/NavbarRow.js
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   Input,
   Button,
@@ -155,6 +155,7 @@ const NavbarRow = ({
   const [selectedLogoMedia, setSelectedLogoMedia] = useState(null);
   const [isAddMenuItemOpen, setIsAddMenuItemOpen] = useState(false);
   const [editingMenuItem, setEditingMenuItem] = useState(null);
+  const skipCardToggleRef = useRef(false);
 
   const isEditing = editingNavbarId === navbar.id;
   const isExpanded = expandedNavbarId === navbar.id;
@@ -272,6 +273,30 @@ const NavbarRow = ({
     setSelectedLogoMedia(null);
   };
 
+  const suppressCardToggle = () => {
+    skipCardToggleRef.current = true;
+    window.setTimeout(() => {
+      skipCardToggleRef.current = false;
+    }, 300);
+  };
+
+  const closeMenuItemEditor = () => {
+    setEditingMenuItem(null);
+    suppressCardToggle();
+  };
+
+  const closeAddMenuItem = () => {
+    setIsAddMenuItemOpen(false);
+    suppressCardToggle();
+  };
+
+  const toggleCard = () => {
+    if (skipCardToggleRef.current || editingMenuItem || isAddMenuItemOpen) {
+      return;
+    }
+    handleExpand(navbar.id);
+  };
+
   const openMenuItemEditor = (item) => {
     if (!item?.id) return;
     const fullItem =
@@ -292,7 +317,7 @@ const NavbarRow = ({
         ),
       }))
     );
-    setEditingMenuItem(null);
+    closeMenuItemEditor();
     fetchNavbars?.();
   };
 
@@ -306,11 +331,11 @@ const NavbarRow = ({
           : "border-gray-200 shadow-sm hover:border-gray-300 hover:shadow-md"
       }`}
       bodyStyle={{ padding: 0 }}
-      onClick={() => handleExpand(navbar.id)}
+      onClick={toggleCard}
       onKeyDown={(e) => {
         if (e.key === "Enter" || e.key === " ") {
           e.preventDefault();
-          handleExpand(navbar.id);
+          toggleCard();
         }
       }}
     >
@@ -575,7 +600,7 @@ const NavbarRow = ({
 
       <Modal
         open={Boolean(editingMenuItem)}
-        onCancel={() => setEditingMenuItem(null)}
+        onCancel={closeMenuItemEditor}
         destroyOnClose
         footer={null}
         title={
@@ -597,7 +622,7 @@ const NavbarRow = ({
             menuItem={editingMenuItem}
             pages={pages}
             menuItems={menuItems}
-            onCancel={() => setEditingMenuItem(null)}
+            onCancel={closeMenuItemEditor}
             onUpdated={handleMenuItemUpdated}
           />
         )}
@@ -605,7 +630,7 @@ const NavbarRow = ({
 
       <Modal
         open={isAddMenuItemOpen}
-        onCancel={() => setIsAddMenuItemOpen(false)}
+        onCancel={closeAddMenuItem}
         destroyOnClose
         footer={null}
         title={
@@ -626,7 +651,7 @@ const NavbarRow = ({
           <AddMenuItemForm
             pages={pages}
             menuItems={menuItems}
-            onCancel={() => setIsAddMenuItemOpen(false)}
+            onCancel={closeAddMenuItem}
             fetchMenuItems={async () => {
               const response = await instance("/menuitems");
               if (Array.isArray(response.data)) {
