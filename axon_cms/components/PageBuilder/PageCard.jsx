@@ -155,18 +155,18 @@ const PageCard = ({
             onClick={(e) => e.stopPropagation()}
           >
             {isEditing ? (
-              <div className="flex w-[8.5rem] flex-col gap-2">
+              <div className="flex items-center gap-2">
                 <Button
                   icon={<CheckCircleOutlined />}
                   onClick={() => editFormRef.current?.submit()}
-                  className="headlessbutton headlessbutton-pill !mr-0 w-full"
+                  className="headlessbutton headlessbutton-pill !mr-0"
                 >
                   Save changes
                 </Button>
                 <Button
                   icon={<CloseCircleOutlined />}
                   onClick={cancelEditing}
-                  className="headlesscancelbutton headlessbutton-pill !mr-0 w-full"
+                  className="headlesscancelbutton headlessbutton-pill !mr-0"
                 >
                   Cancel
                 </Button>
