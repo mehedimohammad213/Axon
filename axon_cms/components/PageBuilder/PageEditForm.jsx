@@ -1,19 +1,15 @@
 // components/PageBuilder/PageEditForm.jsx
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, forwardRef, useImperativeHandle } from "react";
 import { Button, Input, Radio, Select, message } from "antd";
-import {
-  CheckCircleFilled,
-  CloseCircleFilled,
-  PlusCircleOutlined,
-} from "@ant-design/icons";
+import { PlusCircleOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import MediaSelectionModal from "./Modals/MediaSelectionModal";
 import RichTextEditor from "../RichTextEditor";
 
 const { Option } = Select;
 
-const PageEditForm = ({ page, onSubmit, onCancel }) => {
+const PageEditForm = forwardRef(({ page, onSubmit }, ref) => {
   const [formData, setFormData] = useState({
     pageNameEn: "",
     pageNameBn: "",
@@ -108,6 +104,10 @@ const PageEditForm = ({ page, onSubmit, onCancel }) => {
     // Submit the form data
     onSubmit(payload);
   };
+
+  useImperativeHandle(ref, () => ({
+    submit: handleSubmit,
+  }));
 
   // Handle media selection from the modal
   const handleSelectMedia = (media) => {
@@ -223,7 +223,7 @@ const PageEditForm = ({ page, onSubmit, onCancel }) => {
         <Button
           icon={<PlusCircleOutlined />}
           onClick={() => setIsModalVisible(true)}
-          className="headlessbutton !mr-0 w-fit"
+          className="headlessbutton headlessbutton-pill !mr-0 w-fit"
         >
           Select Meta Image
         </Button>
@@ -257,27 +257,10 @@ const PageEditForm = ({ page, onSubmit, onCancel }) => {
           size="large"
         />
       </div>
-
-      {/* Action Buttons */}
-      <div className="flex flex-wrap gap-2 border-t border-slate-100 pt-4">
-        <Button
-          icon={<CheckCircleFilled />}
-          onClick={handleSubmit}
-          className="headlessbutton !mr-0"
-          type="primary"
-        >
-          Save Changes
-        </Button>
-        <Button
-          icon={<CloseCircleFilled />}
-          onClick={onCancel}
-          className="headlesscancelbutton !mr-0"
-        >
-          Discard
-        </Button>
-      </div>
     </div>
   );
-};
+});
+
+PageEditForm.displayName = "PageEditForm";
 
 export default PageEditForm;

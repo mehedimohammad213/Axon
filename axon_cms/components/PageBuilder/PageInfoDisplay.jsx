@@ -88,7 +88,7 @@ const PageInfoDisplay = ({ page, linkedMenuItems = [] }) => {
               {linkedMenuItems.map((item) => (
                 <li
                   key={item.id}
-                  className="flex flex-col gap-0.5 rounded-lg border border-gray-100 bg-gray-50/80 px-3 py-2.5 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
+                  className="flex flex-col gap-0.5 rounded-lg border border-gray-200 bg-gray-50/80 px-3 py-2.5 transition-colors hover:border-brand hover:bg-brand-light/60 sm:flex-row sm:items-center sm:justify-between sm:gap-4"
                 >
                   <span className="text-sm font-medium text-gray-800">
                     {item.title}
