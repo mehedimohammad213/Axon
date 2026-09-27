@@ -23,7 +23,7 @@ import PageEditForm from "./PageEditForm";
 const TYPE_CONFIG = {
   Event: { icon: <CalendarOutlined />, color: "#1890ff", bgColor: "#e6f7ff" },
   Blog: { icon: <FileTextOutlined />, color: "#52c41a", bgColor: "#f6ffed" },
-  Footer: { icon: <LayoutOutlined />, color: "#13c2c2", bgColor: "#e6fffb" },
+  Footer: { icon: <LayoutOutlined />, color: "var(--theme)", bgColor: "var(--theme-transparent)" },
   Page: { icon: <GlobalOutlined />, color: "var(--theme)", bgColor: "var(--theme-transparent)" },
   Subpage: { icon: <BookOutlined />, color: "#595959", bgColor: "#f5f5f5" },
   Unknown: { icon: <FileTextOutlined />, color: "#8c8c8c", bgColor: "#f5f5f5" },
@@ -146,7 +146,7 @@ const PageCard = ({
               #{page.id}
             </span>
             {linkedMenuItems.length > 0 && (
-              <span className="inline-flex items-center gap-1 rounded-md bg-teal-50 px-2 py-0.5 text-xs font-medium text-teal-700">
+              <span className="inline-flex items-center gap-1 rounded-md bg-brand-light px-2 py-0.5 text-xs font-medium text-brand-dark">
                 <MenuOutlined className="text-[10px]" />
                 {linkedMenuItems.length} menu
                 {linkedMenuItems.length > 1 ? "s" : ""}
@@ -178,7 +178,7 @@ const PageCard = ({
                 >
                   <Tag
                     icon={<MenuOutlined />}
-                    className="m-0 inline-flex items-center rounded-md border-teal-100 bg-teal-50 px-2 py-0.5 text-xs text-teal-700"
+                    className="m-0 inline-flex items-center rounded-md border-brand/20 bg-brand-light px-2 py-0.5 text-xs text-brand-dark"
                   >
                     {truncateText(item.title, 20)}
                   </Tag>

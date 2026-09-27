@@ -144,14 +144,14 @@ const PagesHeader = ({
                   </div>
                 )}
                 {showFootersSection && (
-                  <div className="flex items-center gap-1.5 rounded-lg border border-teal-100 bg-teal-50/80 px-2.5 py-1">
-                    <LayoutOutlined className="text-xs text-teal-600" />
+                  <div className="flex items-center gap-1.5 rounded-lg border border-blue-100 bg-blue-50/80 px-2.5 py-1">
+                    <LayoutOutlined className="text-xs text-brand-dark" />
                     <Badge
                       count={totalFooters}
                       showZero
-                      className="[&_.ant-badge-count]:bg-teal-500 [&_.ant-badge-count]:text-white [&_.ant-badge-count]:text-xs [&_.ant-badge-count]:min-w-[20px] [&_.ant-badge-count]:h-5 [&_.ant-badge-count]:leading-5"
+                      className="[&_.ant-badge-count]:bg-brand [&_.ant-badge-count]:text-white [&_.ant-badge-count]:text-xs [&_.ant-badge-count]:min-w-[20px] [&_.ant-badge-count]:h-5 [&_.ant-badge-count]:leading-5"
                     />
-                    <span className="ml-0.5 text-xs font-medium text-teal-700">
+                    <span className="ml-0.5 text-xs font-medium text-blue-700">
                       Footers
                     </span>
                   </div>

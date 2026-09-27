@@ -79,7 +79,7 @@ const PageInfoDisplay = ({ page, linkedMenuItems = [] }) => {
       {type !== "Footer" && (
         <div className="border-t border-gray-100 pt-4">
           <div className="mb-3 flex items-center gap-2">
-            <MenuOutlined className="text-sm text-teal-600" />
+            <MenuOutlined className="text-sm text-brand-dark" />
             <h4 className="text-sm font-semibold text-gray-800">Menu links</h4>
           </div>
 
