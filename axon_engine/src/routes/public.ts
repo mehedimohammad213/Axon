@@ -1,25 +1,28 @@
 import express from 'express';
 import identifyPublicSite from '../middleware/publicSite';
-import * as publicPageController from '../controllers/publicPageController';
-import { navbarController, sliderController, formBuilderController } from '../controllers/cmsControllers';
-import menuItemController from '../controllers/menuItemController';
-import footerController from '../controllers/footerController';
-import cardController from '../controllers/cardController';
-import tableController from '../controllers/tableController';
-import productTypeController from '../controllers/productTypeController';
-import productController from '../controllers/productController';
-import mediaController from '../controllers/mediaController';
-import * as generatedModelController from '../controllers/generatedModelController';
-import * as dynamicController from '../controllers/dynamicController';
-import * as formSubmissionController from '../controllers/formSubmissionController';
+import * as pageController from '../controllers/page.controller';
+import navbarController from '../controllers/navbar.controller';
+import sliderController from '../controllers/slider.controller';
+import formBuilderController from '../controllers/formBuilder.controller';
+import menuItemController from '../controllers/menuItem.controller';
+import footerController from '../controllers/footer.controller';
+import cardController from '../controllers/card.controller';
+import tableController from '../controllers/table.controller';
+import productTypeController from '../controllers/productType.controller';
+import productController from '../controllers/product.controller';
+import mediaController from '../controllers/media.controller';
+import * as generatedModelController from '../controllers/generatedModel.controller';
+import * as dynamicController from '../controllers/dynamic.controller';
+import * as formSubmissionController from '../controllers/formSubmission.controller';
+import { validateCreateFormSubmission } from '../validators/formSubmission.validator';
 
 const router = express.Router();
 
 const siteRouter = express.Router();
 siteRouter.use(identifyPublicSite);
 
-siteRouter.get('/pages', publicPageController.index);
-siteRouter.get('/pages/:slug', publicPageController.show);
+siteRouter.get('/pages', pageController.publicIndex);
+siteRouter.get('/pages/:slug', pageController.publicShow);
 
 siteRouter.get('/navbars', navbarController.index);
 siteRouter.get('/navbars/:id', navbarController.show);
@@ -58,6 +61,6 @@ siteRouter.get('/dynamic', dynamicController.index);
 siteRouter.get('/dynamic/:id', dynamicController.show);
 
 router.use('/public', siteRouter);
-router.post('/form-submission', identifyPublicSite, formSubmissionController.store);
+router.post('/form-submission', identifyPublicSite, validateCreateFormSubmission, formSubmissionController.store);
 
 export default router;

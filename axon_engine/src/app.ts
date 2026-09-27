@@ -10,8 +10,8 @@ import ensureOrganizationContext from './middleware/organization';
 import checkPermissions from './middleware/permissions';
 import { authenticate } from './middleware/auth';
 
-import publicAuthRoutes from './routes/publicAuth';
-import protectedAuthRoutes from './routes/auth';
+import { publicAuthRoutes, protectedAuthRoutes } from './routes/auth.routes';
+import userRoutes from './routes/user.routes';
 import apiRoutes from './routes/api';
 import publicRoutes from './routes/public';
 
@@ -63,6 +63,7 @@ app.use('/api', withOrgContext, publicRoutes);
 // Protected CMS API (JWT + org context + permissions)
 const protectedStack = [withOrgContext, authenticate, ensureOrganizationContext, checkPermissions];
 app.use('/api', ...protectedStack, protectedAuthRoutes);
+app.use('/api', ...protectedStack, userRoutes);
 app.use('/api', ...protectedStack, apiRoutes);
 
 // Backward compatibility for legacy dynamic routes
