@@ -150,16 +150,16 @@ const ParagraphComponent = ({
               </>
             ) : (
               <>
+                <ComponentDuplicateButton
+                  onClick={onDuplicateElement}
+                  title="Duplicate component"
+                />
                 {(component?.value || component?._headless?.altContent) && (
                   <ComponentEditButton
                     onClick={() => setIsEditing(true)}
                     title="Edit paragraph"
                   />
                 )}
-                <ComponentDuplicateButton
-                  onClick={onDuplicateElement}
-                  title="Duplicate component"
-                />
                 <ComponentDeleteButton
                   onConfirm={handleDelete}
                   title="Delete component"

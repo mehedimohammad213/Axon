@@ -55,15 +55,15 @@ const BaseComponent = ({
           <div className="flex items-center gap-2">
             {!isEditing ? (
               <>
-                {showChangeButton ? (
-                  <ComponentEditButton onClick={onEdit} title="Edit component" />
-                ) : null}
                 {showDuplicateButton && (
                   <ComponentDuplicateButton
                     onClick={onDuplicateElement}
                     title="Duplicate component"
                   />
                 )}
+                {showChangeButton ? (
+                  <ComponentEditButton onClick={onEdit} title="Edit component" />
+                ) : null}
                 {showDeleteButton && (
                   <ComponentDeleteButton
                     onConfirm={handleDelete}

@@ -370,16 +370,16 @@ const InfoBoxComponent = ({
               </>
             ) : (
               <>
+                <ComponentDuplicateButton
+                  onClick={onDuplicateElement}
+                  title="Duplicate component"
+                />
                 {hasInfoBoxContent(infoBox) && (
                   <ComponentEditButton
                     onClick={() => setIsEditMode(true)}
                     title="Edit component"
                   />
                 )}
-                <ComponentDuplicateButton
-                  onClick={onDuplicateElement}
-                  title="Duplicate component"
-                />
               </>
             )}
             <ComponentDeleteButton

@@ -199,16 +199,16 @@ const NavbarComponent = ({
         </div>
         <div className="flex items-center gap-2">
           <Space>
+            <ComponentDuplicateButton
+              onClick={onDuplicateElement}
+              title="Duplicate component"
+            />
             {navbarData && (
               <ComponentEditButton
                 onClick={() => setIsDrawerVisible(true)}
                 title="Edit navbar"
               />
             )}
-            <ComponentDuplicateButton
-              onClick={onDuplicateElement}
-              title="Duplicate component"
-            />
             <ComponentDeleteButton
               onConfirm={handleDelete}
               title="Delete component"

@@ -298,15 +298,15 @@ const Section = ({
             onKeyDown={stopDragPropagation}
           >
             {(onDuplicate || onSectionDuplicate) && (
-              <Tooltip title="Duplicate section">
-                <Button
-                  icon={<CopyOutlined />}
-                  onClick={handleDuplicateClick}
-                  size="small"
-                  type="text"
-                  className="!mr-0 flex h-8 w-8 items-center justify-center rounded-full text-slate-500 hover:!bg-slate-200 hover:!text-slate-800"
-                />
-              </Tooltip>
+              <Button
+                icon={<CopyOutlined />}
+                onClick={handleDuplicateClick}
+                size="small"
+                type="text"
+                className="!mr-0 inline-flex h-8 items-center rounded-full px-3 text-slate-500 hover:!bg-slate-200 hover:!text-slate-800"
+              >
+                Duplicate
+              </Button>
             )}
             {(onDelete || onSectionDelete) && (
               <Popconfirm
@@ -317,15 +317,15 @@ const Section = ({
                 cancelText="Cancel"
                 okButtonProps={{ danger: true }}
               >
-                <Tooltip title="Delete section">
-                  <Button
-                    icon={<DeleteOutlined />}
-                    onClick={handleDeleteClick}
-                    size="small"
-                    type="text"
-                    className="headlesscancelbutton headlessbutton-pill !mr-0"
-                  />
-                </Tooltip>
+                <Button
+                  icon={<DeleteOutlined />}
+                  onClick={handleDeleteClick}
+                  size="small"
+                  type="text"
+                  className="headlesscancelbutton headlessbutton-pill !mr-0"
+                >
+                  Delete
+                </Button>
               </Popconfirm>
             )}
           </div>

@@ -142,16 +142,16 @@ const MenuComponent = ({
         </div>
         <div className="flex items-center gap-2">
           <Space>
+            <ComponentDuplicateButton
+              onClick={onDuplicateElement}
+              title="Duplicate component"
+            />
             {menuData?.menu_items?.length > 0 && (
               <ComponentEditButton
                 onClick={() => setIsDrawerVisible(true)}
                 title="Edit menu"
               />
             )}
-            <ComponentDuplicateButton
-              onClick={onDuplicateElement}
-              title="Duplicate component"
-            />
             <ComponentDeleteButton
               onConfirm={handleDelete}
               title="Delete component"

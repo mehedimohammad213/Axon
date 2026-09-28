@@ -299,16 +299,16 @@ const VideoComponent = ({
         <div>
           {!isEditing ? (
             <>
+              <ComponentDuplicateButton
+                onClick={onDuplicateElement}
+                title="Duplicate component"
+              />
               {hasSelectedVideo(videoData) && (
                 <ComponentEditButton
                   onClick={() => setIsModalVisible(true)}
                   title="Edit video"
                 />
               )}
-              <ComponentDuplicateButton
-                onClick={onDuplicateElement}
-                title="Duplicate component"
-              />
               <ComponentDeleteButton
                 onConfirm={handleDelete}
                 title="Delete component"

@@ -191,16 +191,16 @@ const FooterComponent = ({
         <div className="flex items-center gap-2">
           {!isEditing ? (
             <Space>
+              <ComponentDuplicateButton
+                onClick={onDuplicateElement}
+                title="Duplicate component"
+              />
               {footerData && (
                 <ComponentEditButton
                   onClick={() => setIsModalVisible(true)}
                   title="Edit footer"
                 />
               )}
-              <ComponentDuplicateButton
-                onClick={onDuplicateElement}
-                title="Duplicate component"
-              />
               <ComponentDeleteButton
                 onConfirm={handleDelete}
                 title="Delete component"

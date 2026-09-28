@@ -1,23 +1,25 @@
 import React from "react";
-import { Button, Tooltip } from "antd";
+import { Button } from "antd";
 import { EditOutlined } from "@ant-design/icons";
 
 const ComponentEditButton = ({
   onClick,
   title = "Edit",
+  label = "Edit",
   disabled = false,
   className = "",
 }) => (
-  <Tooltip title={title}>
-    <Button
-      type="text"
-      size="small"
-      icon={<EditOutlined />}
-      onClick={onClick}
-      disabled={disabled}
-      className={`!mr-0 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-slate-500 hover:!bg-slate-200 hover:!text-slate-800 ${className}`.trim()}
-    />
-  </Tooltip>
+  <Button
+    type="text"
+    size="small"
+    icon={<EditOutlined />}
+    onClick={onClick}
+    disabled={disabled}
+    aria-label={title}
+    className={`headlessbutton headlessbutton-pill !mr-0 ${className}`.trim()}
+  >
+    {label}
+  </Button>
 );
 
 export default ComponentEditButton;

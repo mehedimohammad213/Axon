@@ -156,16 +156,16 @@ const ButtonComponent = ({
           </h3>
         </div>
         <div className="flex flex-wrap items-center gap-2">
+          <ComponentDuplicateButton
+            onClick={onDuplicateElement}
+            title="Duplicate component"
+          />
           {hasConfiguredButton(buttonData) && (
             <ComponentEditButton
               onClick={() => setIsModalVisible(true)}
               title="Edit button"
             />
           )}
-          <ComponentDuplicateButton
-            onClick={onDuplicateElement}
-            title="Duplicate component"
-          />
           <ComponentDeleteButton
             onConfirm={handleDelete}
             title="Delete component"

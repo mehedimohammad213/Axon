@@ -499,16 +499,16 @@ const MediaComponent = ({
           {!isEditing ? (
             <>
               <Space>
+                <ComponentDuplicateButton
+                  onClick={onDuplicateElement}
+                  title="Duplicate component"
+                />
                 {mediaSelected && (
                   <ComponentEditButton
                     onClick={() => setIsModalVisible(true)}
                     title="Edit media"
                   />
                 )}
-                <ComponentDuplicateButton
-                  onClick={onDuplicateElement}
-                  title="Duplicate component"
-                />
                 <ComponentDeleteButton
                   onConfirm={handleDelete}
                   title="Delete component"

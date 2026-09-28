@@ -453,16 +453,16 @@ const CardComponent = ({
         </div>
         <div className="flex items-center gap-2">
           <Space>
+            <ComponentDuplicateButton
+              onClick={onDuplicateElement}
+              title="Duplicate component"
+            />
             {cardSelected && (
               <ComponentEditButton
                 onClick={() => setIsModalVisible(true)}
                 title="Edit card"
               />
             )}
-            <ComponentDuplicateButton
-              onClick={onDuplicateElement}
-              title="Duplicate component"
-            />
             <ComponentDeleteButton
               onConfirm={handleDelete}
               title="Delete component"

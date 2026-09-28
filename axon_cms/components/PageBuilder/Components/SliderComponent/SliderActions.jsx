@@ -58,13 +58,13 @@ const SliderActions = React.memo(
         <div className="flex items-center gap-2">
           {!isEditing ? (
             <Space>
-              {sliderData && (
-                <ComponentEditButton onClick={onEdit} title="Edit slider" />
-              )}
               <ComponentDuplicateButton
                 onClick={onDuplicate}
                 title="Duplicate component"
               />
+              {sliderData && (
+                <ComponentEditButton onClick={onEdit} title="Edit slider" />
+              )}
               <ComponentDeleteButton
                 onConfirm={handleDelete}
                 title="Delete component"

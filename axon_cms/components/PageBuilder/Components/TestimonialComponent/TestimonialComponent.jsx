@@ -258,16 +258,16 @@ const TestimonialComponent = ({
               </>
             ) : (
               <>
+                <ComponentDuplicateButton
+                  onClick={onDuplicateElement}
+                  title="Duplicate component"
+                />
                 {testimonials.length > 0 && (
                   <ComponentEditButton
                     onClick={() => setIsEditMode(true)}
                     title="Edit component"
                   />
                 )}
-                <ComponentDuplicateButton
-                  onClick={onDuplicateElement}
-                  title="Duplicate component"
-                />
               </>
             )}
             <ComponentDeleteButton

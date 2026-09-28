@@ -345,16 +345,16 @@ const GalleryComponent = ({
           </div>
         </div>
         <Space>
+          <ComponentDuplicateButton
+            onClick={onDuplicateElement}
+            title="Duplicate gallery"
+          />
           {hasSelectedGallery(galleryData) && (
             <ComponentEditButton
               onClick={() => setIsDrawerVisible(true)}
               title="Edit gallery"
             />
           )}
-          <ComponentDuplicateButton
-            onClick={onDuplicateElement}
-            title="Duplicate gallery"
-          />
           <ComponentDeleteButton
             onConfirm={handleDelete}
             title="Delete gallery"

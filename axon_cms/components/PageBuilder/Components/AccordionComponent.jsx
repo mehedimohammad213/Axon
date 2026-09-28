@@ -280,19 +280,19 @@ const AccordionComponent = ({
               </div>
               {!preview && (
                 <div className="ml-2 flex gap-1">
-                  <ComponentEditButton
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      handleEditItem(item, index);
-                    }}
-                    title="Edit item"
-                  />
                   <ComponentDuplicateButton
                     onClick={(e) => {
                       e.stopPropagation();
                       handleDuplicateItem(item, index);
                     }}
                     title="Duplicate item"
+                  />
+                  <ComponentEditButton
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      handleEditItem(item, index);
+                    }}
+                    title="Edit item"
                   />
                   <ComponentDeleteButton
                     onConfirm={() => handleDeleteItem(index)}
@@ -402,14 +402,14 @@ const AccordionComponent = ({
               Add Item
             </Button>
           </Tooltip>
-          <ComponentEditButton
-            onClick={() => setIsModalVisible(true)}
-            title="Edit all items"
-            disabled={preview}
-          />
           <ComponentDuplicateButton
             onClick={onDuplicateElement}
             title="Duplicate component"
+            disabled={preview}
+          />
+          <ComponentEditButton
+            onClick={() => setIsModalVisible(true)}
+            title="Edit all items"
             disabled={preview}
           />
           <ComponentDeleteButton

@@ -191,13 +191,13 @@ const TableComponent = ({
         <div>
           {tableData?.headers?.length > 0 && (
             <>
-              <ComponentEditButton
-                onClick={() => setIsDrawerVisible(true)}
-                title="Edit table"
-              />
               <ComponentDuplicateButton
                 onClick={onDuplicateElement}
                 title="Duplicate component"
+              />
+              <ComponentEditButton
+                onClick={() => setIsDrawerVisible(true)}
+                title="Edit table"
               />
               <ComponentDeleteButton
                 onConfirm={handleDelete}

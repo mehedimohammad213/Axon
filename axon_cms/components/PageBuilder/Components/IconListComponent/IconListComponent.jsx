@@ -172,16 +172,16 @@ const IconListComponent = ({
           <Space>
             {!isEditing ? (
               <>
+                <ComponentDuplicateButton
+                  onClick={onDuplicateElement}
+                  title="Duplicate component"
+                />
                 {items.length > 0 && (
                   <ComponentEditButton
                     onClick={handleEditClick}
                     title="Edit component"
                   />
                 )}
-                <ComponentDuplicateButton
-                  onClick={onDuplicateElement}
-                  title="Duplicate component"
-                />
                 <ComponentDeleteButton
                   onConfirm={handleDeleteComponent}
                   title="Delete component"

@@ -401,16 +401,16 @@ const TitleDescriptionComponent = ({
           <Space>
             {!isEditing ? (
               <>
+                <ComponentDuplicateButton
+                  onClick={onDuplicateElement}
+                  title="Duplicate component"
+                />
                 {(title || description) && (
                   <ComponentEditButton
                     onClick={handleEditClick}
                     title="Edit component"
                   />
                 )}
-                <ComponentDuplicateButton
-                  onClick={onDuplicateElement}
-                  title="Duplicate component"
-                />
                 <ComponentDeleteButton
                   onConfirm={handleDelete}
                   title="Delete component"
