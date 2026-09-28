@@ -224,12 +224,13 @@ const SliderForm = ({
 
   return (
     <Drawer
-      title={editingItemId ? "Edit Slider" : "Add Slider"}
+      title={editingItemId ? "Edit Slider" : "Create Slider"}
       open={isFormVisible}
       onClose={onCancelEdit}
       footer={null}
       width={`calc(100% - 40vw)`}
       destroyOnClose
+      rootClassName="media-preview-drawer"
     >
       <Form
         form={form}

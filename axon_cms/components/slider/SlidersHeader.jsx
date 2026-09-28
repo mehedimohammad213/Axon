@@ -1,7 +1,8 @@
-import React from "react";
-import { Input, Button, Select, message, Tooltip, Badge } from "antd";
+import React, { useState } from "react";
+import { Input, Button, Select, message, Tooltip, Badge, Modal, Form } from "antd";
 import {
   CopyOutlined,
+  FilterOutlined,
   PlusCircleOutlined,
   ReloadOutlined,
   SearchOutlined,
@@ -24,11 +25,33 @@ const SlidersHeader = ({
   onRefresh,
   itemCount,
 }) => {
+  const [isFilterModalVisible, setIsFilterModalVisible] = useState(false);
+  const [form] = Form.useForm();
+
+  const openFilterModal = () => {
+    form.setFieldsValue({
+      tag: selectedTag || undefined,
+    });
+    setIsFilterModalVisible(true);
+  };
+  const closeFilterModal = () => setIsFilterModalVisible(false);
+
   const handleRefresh = () => {
     if (onRefresh) {
       onRefresh();
       message.success("Data refreshed successfully");
     }
+  };
+
+  const onFinish = (values) => {
+    setSelectedTag?.(values.tag || "");
+    closeFilterModal();
+  };
+
+  const handleResetFilters = () => {
+    form.resetFields();
+    setSelectedTag?.("");
+    closeFilterModal();
   };
 
   return (
@@ -63,9 +86,10 @@ const SlidersHeader = ({
 
           <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             <Button
+              type="primary"
               icon={<PlusCircleOutlined />}
               onClick={onAddSlider}
-              className="h-10 rounded-lg border-0 bg-brand px-5 font-medium text-white shadow-sm hover:bg-brand-dark"
+              className="h-10 rounded-full border-0 bg-brand px-5 font-medium text-white shadow-sm"
               size="large"
             >
               Create Slider
@@ -123,22 +147,13 @@ const SlidersHeader = ({
               </div>
             </div>
 
-            {allTags?.length > 0 && (
-              <Select
-                allowClear
-                showSearch
-                placeholder="Filter by tag"
-                className="w-44 [&_.ant-select-selector]:h-9 [&_.ant-select-selector]:rounded-lg [&_.ant-select-selector]:border-gray-200"
-                value={selectedTag || undefined}
-                onChange={(value) => setSelectedTag(value || "")}
-              >
-                {allTags.map((tag) => (
-                  <Option key={tag} value={tag}>
-                    {tag}
-                  </Option>
-                ))}
-              </Select>
-            )}
+            <Button
+              icon={<FilterOutlined />}
+              className="h-9 rounded-lg border-gray-200 font-medium text-gray-700 hover:border-brand hover:text-brand-dark"
+              onClick={openFilterModal}
+            >
+              Filter
+            </Button>
           </div>
 
           <div className="flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center lg:w-auto">
@@ -167,6 +182,45 @@ const SlidersHeader = ({
           </div>
         </div>
       </div>
+
+      <Modal
+        title="Filter sliders"
+        open={isFilterModalVisible}
+        onCancel={closeFilterModal}
+        footer={null}
+      >
+        <Form
+          form={form}
+          layout="vertical"
+          onFinish={onFinish}
+          initialValues={{ tag: selectedTag || undefined }}
+        >
+          <Form.Item label="Tag" name="tag">
+            <Select placeholder="Select a tag" allowClear showSearch>
+              {(allTags || []).map((tag) => (
+                <Option key={tag} value={tag}>
+                  {tag}
+                </Option>
+              ))}
+            </Select>
+          </Form.Item>
+          <div className="mt-4 flex justify-end gap-2">
+            <Button
+              onClick={handleResetFilters}
+              className="headlesscancelbutton headlessbutton-pill !mr-0"
+            >
+              Reset
+            </Button>
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
+              Apply
+            </Button>
+          </div>
+        </Form>
+      </Modal>
     </div>
   );
 };

@@ -79,7 +79,7 @@ const SliderList = ({
           label: `Image Sliders (${imageSliders.length})`,
           children: paginatedImageSliders.length ? (
             <>
-              <div className="grid grid-cols-1 items-start gap-4 md:grid-cols-2 xl:grid-cols-3">
+              <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
                 {paginatedImageSliders.map((slider) => (
                   <ImageSlider
                     key={slider.id}
@@ -106,7 +106,7 @@ const SliderList = ({
           label: `Card Sliders (${cardSliders.length})`,
           children: paginatedCardSliders.length ? (
             <>
-              <div className="grid grid-cols-1 items-start gap-4 md:grid-cols-2 xl:grid-cols-3">
+              <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
                 {paginatedCardSliders.map((slider) => (
                   <CardSlider
                     key={slider.id}

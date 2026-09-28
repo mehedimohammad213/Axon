@@ -1,5 +1,5 @@
 import React from "react";
-import { Carousel, Button, Popconfirm, Space, Card, Tag, Badge } from "antd";
+import { Carousel, Button, Popconfirm, Card, Tag, Badge } from "antd";
 import { DeleteOutlined, EditOutlined, EyeOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import { capitalize } from "lodash";
@@ -28,7 +28,7 @@ const ImageSlider = ({
       key="preview"
       icon={<EyeOutlined />}
       onClick={() => handlePreviewClick?.(slider)}
-      className="headlessbutton"
+      className="headlessbutton headlessbutton-pill"
     >
       Preview
     </Button>,
@@ -36,7 +36,7 @@ const ImageSlider = ({
       key="edit"
       icon={<EditOutlined />}
       onClick={() => handleEditClick(slider.id)}
-      className="headlessbutton"
+      className="headlessbutton headlessbutton-pill"
     >
       Edit
     </Button>,
@@ -48,7 +48,7 @@ const ImageSlider = ({
       cancelText="No"
       okButtonProps={{ danger: true }}
     >
-      <Button className="headlesscancelbutton" icon={<DeleteOutlined />}>
+      <Button className="headlesscancelbutton headlessbutton-pill" icon={<DeleteOutlined />}>
         Delete
       </Button>
     </Popconfirm>,
@@ -71,69 +71,63 @@ const ImageSlider = ({
           >
             {orderedMedias.map((media) => (
               <div key={media.id}>
-                <Image
-                  src={
-                    media.file_path
-                      ? resolveMediaUrl(media.file_path)
-                      : imagePlaceholder
-                  }
-                  alt={media.title || "Image Unavailable"}
-                  width={800}
-                  height={400}
-                  objectFit="cover"
-                  className="rounded-md"
-                  unoptimized
-                />
+                <div className="relative h-64 w-full overflow-hidden bg-gray-100">
+                  <Image
+                    src={
+                      media.file_path
+                        ? resolveMediaUrl(media.file_path)
+                        : imagePlaceholder
+                    }
+                    alt={media.title || "Image Unavailable"}
+                    layout="fill"
+                    objectFit="cover"
+                    unoptimized
+                  />
+                </div>
               </div>
             ))}
           </Carousel>
         ) : (
-          <div className="flex items-center justify-center h-64 bg-gray-200">
+          <div className="relative flex h-64 w-full items-center justify-center overflow-hidden bg-gray-100">
             <Image
               src={imagePlaceholder}
               alt="Placeholder Image"
-              width={400}
-              height={200}
+              layout="fill"
               objectFit="cover"
-              className="rounded-md"
             />
           </div>
         )
       }
       actions={actions}
-      className="slider-card shadow-md rounded-md"
+      className="media-card slider-card h-full overflow-hidden shadow-md rounded-md"
     >
-      <div className="min-h-16">
-        <Space
-          className="media-card-meta flex flex-col sm:flex-row justify-between items-start sm:items-center"
-          direction="vertical"
-        >
-          <div className="flex items-center gap-2 flex-wrap max-w-xs">
+      <div className="flex min-h-16 flex-1 flex-col pt-4">
+        <div className="media-card-meta flex items-center justify-between gap-3">
+          <div className="flex min-w-0 items-center gap-2">
             <Badge count={`ID-${slider.id}`} style={idBadgeStyle} />
-            <h3 className="text-lg font-semibold truncate m-0">
+            <h3 className="m-0 truncate text-lg font-semibold">
               {slider.title_en || "Title Unavailable"}
             </h3>
           </div>
-          <h5 className="text-md text-gray-400 font-bold">
+          <h5 className="mb-0 shrink-0 text-md font-bold text-gray-400">
             {capitalize(slider.type) || "Type Unavailable"}
           </h5>
-        </Space>
+        </div>
 
-        {Array.isArray(slider.additional?.tags) &&
-          slider.additional.tags.length > 0 && (
-            <div className="mt-3">
-              {slider.additional.tags.slice(0, 6).map((tagItem) => (
-                <Tag key={tagItem} color="yellow" className="mb-1">
-                  {tagItem}
-                </Tag>
-              ))}
-              {slider.additional.tags.length > 6 && (
-                <Tag key="more" color="green" className="mb-1">
-                  ...
-                </Tag>
-              )}
-            </div>
-          )}
+        <div className="mt-3 min-h-7 overflow-hidden whitespace-nowrap">
+          {Array.isArray(slider.additional?.tags) &&
+            slider.additional.tags.slice(0, 6).map((tagItem) => (
+              <Tag key={tagItem} color="yellow" className="mb-0">
+                {tagItem}
+              </Tag>
+            ))}
+          {Array.isArray(slider.additional?.tags) &&
+            slider.additional.tags.length > 6 && (
+              <Tag key="more" color="green" className="mb-0">
+                ...
+              </Tag>
+            )}
+        </div>
       </div>
     </Card>
   );

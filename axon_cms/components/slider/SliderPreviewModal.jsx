@@ -1,6 +1,5 @@
 import React from "react";
-import { Drawer, Button, Tag, Badge, Space, Descriptions, Empty } from "antd";
-import { EditOutlined } from "@ant-design/icons";
+import { Drawer, Tag, Badge, Space, Descriptions, Empty } from "antd";
 import { capitalize } from "lodash";
 import SliderRenderer from "../PageBuilder/Components/SliderComponent/SliderRenderer";
 import { orderByIds } from "./SliderForm/orderByIds";
@@ -18,7 +17,6 @@ const SliderPreviewModal = ({
   visible,
   slider,
   onClose,
-  onEdit,
 }) => {
   if (!slider) return null;
 
@@ -36,6 +34,7 @@ const SliderPreviewModal = ({
       placement="right"
       width="50%"
       destroyOnClose
+      rootClassName="media-preview-drawer"
       title={
         <div className="flex items-center gap-2 flex-wrap pr-2">
           <Badge count={`ID-${slider.id}`} style={idBadgeStyle} />
@@ -44,19 +43,6 @@ const SliderPreviewModal = ({
           </span>
           <Tag color="blue">{capitalize(slider.type || "image")}</Tag>
         </div>
-      }
-      extra={
-        <Button
-          type="primary"
-          icon={<EditOutlined />}
-          className="headlessbutton"
-          onClick={() => {
-            onClose();
-            onEdit?.(slider.id);
-          }}
-        >
-          Edit Slider
-        </Button>
       }
     >
       <div className="space-y-6 pb-6">

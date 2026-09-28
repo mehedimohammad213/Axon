@@ -3,8 +3,6 @@ import {
   Carousel,
   Button,
   Popconfirm,
-  Space,
-  Typography,
   Card,
   Tag,
   Badge,
@@ -14,8 +12,6 @@ import Image from "next/image";
 import { capitalize } from "lodash";
 import { orderByIds } from "./SliderForm/orderByIds";
 import { resolveMediaUrl } from "../../utils/mediaUrl";
-
-const { Title } = Typography;
 
 const idBadgeStyle = {
   backgroundColor: "#f0f0f0",
@@ -43,7 +39,7 @@ const CardSlider = ({
       key="preview"
       icon={<EyeOutlined />}
       onClick={() => handlePreviewClick?.(slider)}
-      className="headlessbutton"
+      className="headlessbutton headlessbutton-pill"
     >
       Preview
     </Button>,
@@ -51,7 +47,7 @@ const CardSlider = ({
       key="edit"
       icon={<EditOutlined />}
       onClick={() => handleEditClick(slider.id)}
-      className="headlessbutton"
+      className="headlessbutton headlessbutton-pill"
     >
       Edit
     </Button>,
@@ -63,7 +59,7 @@ const CardSlider = ({
       cancelText="No"
       okButtonProps={{ danger: true }}
     >
-      <Button className="headlesscancelbutton" icon={<DeleteOutlined />}>
+      <Button className="headlesscancelbutton headlessbutton-pill" icon={<DeleteOutlined />}>
         Delete
       </Button>
     </Popconfirm>,
@@ -82,13 +78,7 @@ const CardSlider = ({
               const mediaFile = getCardMedia(card);
               return (
                 <div key={card.id}>
-                  <div
-                    className="flex flex-col items-center justify-center bg-gray-200 pt-6"
-                    style={{ height: "250px" }}
-                  >
-                    <Title level={5}>
-                      {card.title_en || "Title Unavailable"}
-                    </Title>
+                  <div className="relative h-64 w-full overflow-hidden bg-gray-100">
                     <Image
                       src={
                         mediaFile?.file_path
@@ -96,10 +86,8 @@ const CardSlider = ({
                           : cardPlaceholder
                       }
                       alt={card.title_en || "Card Unavailable"}
-                      width={400}
-                      height={200}
+                      layout="fill"
                       objectFit="cover"
-                      className="rounded-md"
                       unoptimized
                     />
                   </div>
@@ -108,51 +96,45 @@ const CardSlider = ({
             })}
           </Carousel>
         ) : (
-          <div className="flex items-center justify-center h-64 bg-gray-200">
+          <div className="relative flex h-64 w-full items-center justify-center overflow-hidden bg-gray-100">
             <Image
               src={cardPlaceholder}
               alt="Placeholder Card"
-              width={400}
-              height={200}
-              objectFit="contain"
-              className="rounded-md"
+              layout="fill"
+              objectFit="cover"
             />
           </div>
         )
       }
       actions={actions}
-      className="slider-card shadow-md rounded-md"
+      className="media-card slider-card h-full overflow-hidden shadow-md rounded-md"
     >
-      <div className="min-h-16">
-        <Space
-          className="media-card-meta flex flex-col sm:flex-row justify-between items-start sm:items-center"
-          direction="vertical"
-        >
-          <div className="flex items-center gap-2 flex-wrap max-w-xs">
+      <div className="flex min-h-16 flex-1 flex-col pt-4">
+        <div className="media-card-meta flex items-center justify-between gap-3">
+          <div className="flex min-w-0 items-center gap-2">
             <Badge count={`ID-${slider.id}`} style={idBadgeStyle} />
-            <h3 className="text-lg font-semibold truncate m-0">
+            <h3 className="m-0 truncate text-lg font-semibold">
               {slider.title_en || "Title Unavailable"}
             </h3>
           </div>
-          <h5 className="text-md text-gray-400 font-bold">
+          <h5 className="mb-0 shrink-0 text-md font-bold text-gray-400">
             {capitalize(slider.type) || "Type Unavailable"}
           </h5>
-        </Space>
-        {Array.isArray(slider.additional?.tags) &&
-          slider.additional.tags.length > 0 && (
-            <div className="mt-3">
-              {slider.additional.tags.slice(0, 6).map((tagItem) => (
-                <Tag key={tagItem} color="yellow" className="mb-1">
-                  {tagItem}
-                </Tag>
-              ))}
-              {slider.additional.tags.length > 6 && (
-                <Tag key="more" color="green" className="mb-1">
-                  ...
-                </Tag>
-              )}
-            </div>
-          )}
+        </div>
+        <div className="mt-3 min-h-7 overflow-hidden whitespace-nowrap">
+          {Array.isArray(slider.additional?.tags) &&
+            slider.additional.tags.slice(0, 6).map((tagItem) => (
+              <Tag key={tagItem} color="yellow" className="mb-0">
+                {tagItem}
+              </Tag>
+            ))}
+          {Array.isArray(slider.additional?.tags) &&
+            slider.additional.tags.length > 6 && (
+              <Tag key="more" color="green" className="mb-0">
+                ...
+              </Tag>
+            )}
+        </div>
       </div>
     </Card>
   );
