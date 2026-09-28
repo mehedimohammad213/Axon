@@ -1239,6 +1239,30 @@ a:hover {
   font-weight: bold;
 }
 
+.csv-import-dragger.ant-upload-wrapper .ant-upload-drag,
+.csv-import-dragger.ant-upload.ant-upload-drag {
+  border: 1px dashed #d1d5db !important;
+  border-radius: 12px !important;
+  background: #f9fafb !important;
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.csv-import-dragger.ant-upload-wrapper .ant-upload-drag:hover,
+.csv-import-dragger.ant-upload.ant-upload-drag:hover,
+.csv-import-dragger.ant-upload-wrapper .ant-upload-drag-hover,
+.csv-import-dragger.ant-upload.ant-upload-drag-hover {
+  border-color: var(--theme) !important;
+  background: var(--theme-transparent) !important;
+}
+
+.csv-import-dragger .ant-upload-drag-icon,
+.csv-import-dragger .ant-upload-text,
+.csv-import-dragger .ant-upload-hint {
+  margin: 0;
+}
+
 /* Utility Classes */
 .border {
   border: 1px solid #f0f0f0;

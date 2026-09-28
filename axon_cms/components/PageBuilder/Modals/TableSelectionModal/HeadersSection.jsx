@@ -62,11 +62,11 @@ const SortableHeaderItem = ({
     <div
       ref={setNodeRef}
       style={style}
-      className="flex items-center gap-2 bg-white my-2 rounded-lg py-2 px-4 border-2 border-gray-300 shadow-md"
+      className="flex items-center gap-2 rounded-xl border border-gray-200 bg-white px-3 py-2 shadow-sm"
     >
       <button
         type="button"
-        className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-300 bg-gray-50 text-gray-600"
+        className="flex h-8 w-8 items-center justify-center rounded-lg border border-gray-200 bg-gray-50 text-gray-500 hover:bg-white hover:text-gray-700"
         style={{ cursor: "grab", touchAction: "none" }}
         aria-label="Drag column"
         {...attributes}
@@ -177,8 +177,10 @@ const HeadersSection = ({
   };
 
   return (
-    <>
-      <Title level={4}>Columns</Title>
+    <div>
+      <Title level={5} className="!mb-3 !text-gray-900">
+        Columns
+      </Title>
       <DndContext
         sensors={sensors}
         collisionDetection={closestCenter}
@@ -188,7 +190,7 @@ const HeadersSection = ({
           items={headers.map((header) => header.id)}
           strategy={rectSortingStrategy}
         >
-          <div className="bg-orange-100 p-4 rounded-lg flex flex-row flex-wrap gap-4 border-2 border-gray-400">
+          <div className="flex flex-row flex-wrap gap-3 rounded-2xl border border-gray-200 bg-gray-50/80 p-4">
             {headers.map((colObj, index) => (
               <SortableHeaderItem
                 key={colObj.id}
@@ -214,7 +216,7 @@ const HeadersSection = ({
           Add Column
         </Button>
       </div>
-    </>
+    </div>
   );
 };
 

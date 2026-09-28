@@ -220,12 +220,14 @@ const TableFormDrawer = ({
 
         <RowsSection headers={headers} rows={rows} setRows={setRows} />
 
-        <div className="grid grid-cols-10 items-center gap-4">
-          <Title level={4} className="col-span-7 !mb-0">
+        <div className="mt-8 grid items-start gap-4 md:grid-cols-10">
+          <Title level={5} className="col-span-7 !mb-0 !text-gray-900">
             Preview
           </Title>
           <div className="col-span-3">
-            <Title level={5}>Filterable Columns</Title>
+            <Title level={5} className="!mb-2 !text-gray-900">
+              Filterable Columns
+            </Title>
             <FilterableColumns
               headers={headers}
               filterColumns={filterColumns}

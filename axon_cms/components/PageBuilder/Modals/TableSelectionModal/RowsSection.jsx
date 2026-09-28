@@ -400,17 +400,17 @@ const RowsSection = ({ headers, rows, setRows }) => {
   };
 
   return (
-    <div className="mt-10">
-      <Title level={4} className="mb-2">
+    <div className="mt-8">
+      <Title level={5} className="!mb-1 !text-gray-900">
         Rows
       </Title>
-      <Typography.Text type="secondary" className="block mb-2">
+      <Typography.Text type="secondary" className="mb-3 block text-xs">
         Type text in any cell, or click the image icon to upload an image for
         that cell only.
       </Typography.Text>
 
       <div
-        className={`my-4 border border-gray-300 rounded-md p-4 ${
+        className={`my-4 overflow-hidden rounded-2xl border border-gray-200 bg-gray-50/80 p-3 ${
           headers.length > 5 ? "overflow-x-auto" : ""
         }`}
         style={{ maxWidth: "100%" }}
