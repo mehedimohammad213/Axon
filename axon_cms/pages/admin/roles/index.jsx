@@ -1,17 +1,18 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Empty, Drawer, Pagination, Select, Spin, message, Button } from "antd";
+import { Empty, Drawer, Pagination, Spin, message, Button } from "antd";
 import instance from "../../../axios";
 import AdminListHeader from "../../../components/admin/AdminListHeader";
 import RolesList from "../../../components/admin/RolesList";
 import OrgCreateRole from "../../../components/admin/OrgCreateRole";
 import { usePermissions } from "../../../src/hooks/usePermissions";
+import { useAuth } from "../../../src/context/AuthContext";
 import { setPageTitle } from "../../../global/constants/pageTitle";
 import { buildApiEndpoint } from "../../../utils/copyApiEndpoint";
 
 export default function AdminRolesPage() {
   const { canManagePlatform } = usePermissions();
-  const [organizations, setOrganizations] = useState([]);
-  const [selectedOrgId, setSelectedOrgId] = useState(null);
+  const { organization } = useAuth();
+  const selectedOrgId = organization?.id != null ? String(organization.id) : null;
   const [allRoles, setAllRoles] = useState([]);
   const [permissions, setPermissions] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -26,22 +27,6 @@ export default function AdminRolesPage() {
 
   useEffect(() => {
     setPageTitle("Manage Roles");
-  }, []);
-
-  const fetchOrganizations = useCallback(async () => {
-    try {
-      const response = await instance.get("/organizations");
-      if (response.status === 200) {
-        setOrganizations(response.data);
-        setSelectedOrgId((prev) => {
-          if (prev) return prev;
-          return response.data.length ? String(response.data[0].id) : null;
-        });
-      }
-    } catch (error) {
-      console.error(error);
-      message.error("Failed to load organizations");
-    }
   }, []);
 
   const fetchRoles = useCallback(async (organizationId) => {
@@ -80,15 +65,17 @@ export default function AdminRolesPage() {
 
   useEffect(() => {
     if (canManage) {
-      fetchOrganizations();
       fetchPermissions();
     }
-  }, [canManage, fetchOrganizations, fetchPermissions]);
+  }, [canManage, fetchPermissions]);
 
   useEffect(() => {
     if (selectedOrgId) {
       fetchRoles(selectedOrgId);
       setCurrentPage(1);
+    } else {
+      setAllRoles([]);
+      setLoading(false);
     }
   }, [selectedOrgId, fetchRoles]);
 
@@ -135,10 +122,6 @@ export default function AdminRolesPage() {
     );
   }
 
-  const selectedOrganization = organizations.find(
-    (org) => String(org.id) === String(selectedOrgId)
-  );
-
   if (loading && !allRoles.length) {
     return (
       <div className="headlesscontainer flex h-screen items-center justify-center">
@@ -170,30 +153,12 @@ export default function AdminRolesPage() {
         setSortType={setSortType}
         onShowChange={handleShowChange}
         onRefresh={refreshRoles}
-        toolbarExtra={
-          <div className="flex w-full flex-col gap-2 sm:w-auto sm:flex-row sm:items-center">
-            <span className="text-sm font-medium text-gray-600">Organization</span>
-            <Select
-              className="w-full sm:min-w-[220px] sm:w-56 [&_.ant-select-selector]:h-9 [&_.ant-select-selector]:rounded-lg [&_.ant-select-selector]:border-gray-200"
-              placeholder="Select organization"
-              value={selectedOrgId}
-              onChange={setSelectedOrgId}
-              showSearch
-              optionFilterProp="label"
-              options={organizations.map((org) => ({
-                value: String(org.id),
-                label: org.name,
-              }))}
-            />
-          </div>
-        }
       />
 
-      {selectedOrganization && (
+      {organization && (
         <p className="mt-2 text-sm text-gray-500">
-          Managing roles for {selectedOrganization.name} ·{" "}
-          {selectedOrganization.slug} · {selectedOrganization.users_count ?? 0}{" "}
-          users
+          Managing roles for {organization.name}
+          {organization.slug ? ` · ${organization.slug}` : ""}
         </p>
       )}
 
@@ -230,7 +195,7 @@ export default function AdminRolesPage() {
             />
             <span>
               Create Role
-              {selectedOrganization ? ` — ${selectedOrganization.name}` : ""}
+              {organization ? ` — ${organization.name}` : ""}
             </span>
           </div>
         }
