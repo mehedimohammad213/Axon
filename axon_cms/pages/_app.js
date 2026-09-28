@@ -54,7 +54,7 @@ function MyApp({ Component, pageProps }) {
               <div className="hidden h-2 w-2 shrink-0 rounded-full bg-gradient-to-r from-brand to-brand-dark sm:block"></div>
               <span className="font-light">Powered by</span>
               <span className="bg-gradient-to-r from-brand to-brand-dark bg-clip-text font-semibold text-transparent">
-                MEHEDI
+                KUTSAB
               </span>
             </div>
           </div>
