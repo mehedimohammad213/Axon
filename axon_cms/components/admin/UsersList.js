@@ -3,6 +3,7 @@ import { Button, Empty, message } from "antd";
 import { PlusOutlined, UserOutlined } from "@ant-design/icons";
 import UserRow from "./UserRow";
 import UserEditModal from "../settings/userv2/UserEditModal";
+import UserViewModal from "../settings/userv2/UserViewModal";
 import instance from "../../axios";
 import { usePermissions } from "../../src/hooks/usePermissions";
 
@@ -15,7 +16,8 @@ const UsersList = ({
 }) => {
   const [expandedUserId, setExpandedUserId] = useState(null);
   const [selectedUser, setSelectedUser] = useState(null);
-  const [isEditModalVisible, setIsEditModalVisible] = useState(false);
+  const [isEditDrawerVisible, setIsEditDrawerVisible] = useState(false);
+  const [isViewDrawerVisible, setIsViewDrawerVisible] = useState(false);
 
   const { hasPermission, isSuperAdmin } = usePermissions();
   const isAdmin =
@@ -46,6 +48,17 @@ const UsersList = ({
     } catch {
       message.error("Failed to delete user");
     }
+  };
+
+  const openView = (record) => {
+    setSelectedUser(record);
+    setIsViewDrawerVisible(true);
+  };
+
+  const openEdit = (record) => {
+    setSelectedUser(record);
+    setIsViewDrawerVisible(false);
+    setIsEditDrawerVisible(true);
   };
 
   if (!users.length) {
@@ -95,19 +108,23 @@ const UsersList = ({
             onExpand={(id) =>
               setExpandedUserId((prev) => (prev === id ? null : id))
             }
-            onEdit={(record) => {
-              setSelectedUser(record);
-              setIsEditModalVisible(true);
-            }}
+            onView={openView}
+            onEdit={openEdit}
             onDelete={handleDeleteUser}
           />
         ))}
       </div>
 
-      <UserEditModal
-        visible={isEditModalVisible}
+      <UserViewModal
+        visible={isViewDrawerVisible}
         user={selectedUser}
-        onCancel={() => setIsEditModalVisible(false)}
+        roles={roles}
+        onCancel={() => setIsViewDrawerVisible(false)}
+      />
+      <UserEditModal
+        visible={isEditDrawerVisible}
+        user={selectedUser}
+        onCancel={() => setIsEditDrawerVisible(false)}
         fetchUsers={fetchUsers}
         roles={roles}
         currentUser={currentUser}

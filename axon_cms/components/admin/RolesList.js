@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Button, Empty, Modal, message } from "antd";
+import { Button, Empty, Drawer, message } from "antd";
 import { PlusOutlined, SafetyCertificateOutlined } from "@ant-design/icons";
 import instance from "../../axios";
-import RoleRow, { RolePermissionsModal } from "./RoleRow";
+import RoleRow, { RoleViewDrawer } from "./RoleRow";
 import EditRole from "../rolepermission/role/EditRole";
 
 const RolesList = ({
@@ -14,10 +14,10 @@ const RolesList = ({
 }) => {
   const [expandedRoleId, setExpandedRoleId] = useState(null);
   const [isDeleting, setIsDeleting] = useState(false);
-  const [viewModalVisible, setViewModalVisible] = useState(false);
-  const [editModalVisible, setEditModalVisible] = useState(false);
+  const [viewDrawerVisible, setViewDrawerVisible] = useState(false);
+  const [editDrawerVisible, setEditDrawerVisible] = useState(false);
   const [selectedRole, setSelectedRole] = useState(null);
-  const [selectedPermissions, setSelectedPermissions] = useState([]);
+  const [editSubmitting, setEditSubmitting] = useState(false);
 
   const handleToggleStatus = async (role, checked, orgId) => {
     try {
@@ -42,6 +42,17 @@ const RolesList = ({
     } finally {
       setIsDeleting(false);
     }
+  };
+
+  const openView = (record) => {
+    setSelectedRole(record);
+    setViewDrawerVisible(true);
+  };
+
+  const openEdit = (record) => {
+    setSelectedRole(record);
+    setViewDrawerVisible(false);
+    setEditDrawerVisible(true);
   };
 
   if (!organizationId) {
@@ -97,30 +108,24 @@ const RolesList = ({
             onExpand={(id) =>
               setExpandedRoleId((prev) => (prev === id ? null : id))
             }
-            onEdit={(record) => {
-              setSelectedRole(record);
-              setEditModalVisible(true);
-            }}
+            onView={openView}
+            onEdit={openEdit}
             onDelete={handleDelete}
             onToggleStatus={handleToggleStatus}
-            onShowPermissions={(record) => {
-              setSelectedPermissions(record.permission_headless || []);
-              setViewModalVisible(true);
-            }}
             isDeleting={isDeleting}
           />
         ))}
       </div>
 
-      <RolePermissionsModal
-        open={viewModalVisible}
-        onClose={() => setViewModalVisible(false)}
-        permissions={selectedPermissions}
+      <RoleViewDrawer
+        open={viewDrawerVisible}
+        onClose={() => setViewDrawerVisible(false)}
+        role={selectedRole}
       />
 
-      <Modal
+      <Drawer
         title={
-          <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
+          <div className="flex items-center gap-2">
             <img
               src="/icons/headless/settings.svg"
               alt="Edit Role"
@@ -129,23 +134,38 @@ const RolesList = ({
             <span>Edit Role</span>
           </div>
         }
-        open={editModalVisible}
-        footer={null}
-        onCancel={() => {
-          setEditModalVisible(false);
+        open={editDrawerVisible}
+        onClose={() => {
+          setEditDrawerVisible(false);
           setSelectedRole(null);
         }}
-        width={960}
+        placement="right"
+        width="min(800px, 92vw)"
         destroyOnClose
+        rootClassName="media-preview-drawer"
+        footer={
+          <div className="flex w-full justify-end">
+            <Button
+              type="primary"
+              form="edit-role-form"
+              htmlType="submit"
+              loading={editSubmitting}
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
+              Save
+            </Button>
+          </div>
+        }
       >
         <EditRole
           role={selectedRole}
           permissions={permissions}
           organizationId={organizationId}
-          setModalVisible={setEditModalVisible}
+          setModalVisible={setEditDrawerVisible}
           onSuccess={fetchRoles}
+          onLoadingChange={setEditSubmitting}
         />
-      </Modal>
+      </Drawer>
     </div>
   );
 };

@@ -1,10 +1,11 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Empty, Form, Modal, Pagination, Select, Spin, message } from "antd";
+import { Empty, Form, Drawer, Pagination, Select, Spin, message, Button } from "antd";
 import instance from "../../../axios";
 import AdminListHeader from "../../../components/admin/AdminListHeader";
 import OrganizationsList from "../../../components/admin/OrganizationsList";
 import CreateOrganization from "../../../components/admin/CreateOrganization";
 import EditOrganization from "../../../components/admin/EditOrganization";
+import OrganizationViewDrawer from "../../../components/admin/OrganizationViewDrawer";
 import { usePermissions } from "../../../src/hooks/usePermissions";
 import { setPageTitle } from "../../../global/constants/pageTitle";
 import { buildApiEndpoint } from "../../../utils/copyApiEndpoint";
@@ -17,7 +18,10 @@ export default function OrganizationsPage() {
   const [loading, setLoading] = useState(true);
   const [createDrawerVisible, setCreateDrawerVisible] = useState(false);
   const [editDrawerVisible, setEditDrawerVisible] = useState(false);
+  const [viewDrawerVisible, setViewDrawerVisible] = useState(false);
   const [selectedOrganization, setSelectedOrganization] = useState(null);
+  const [createSubmitting, setCreateSubmitting] = useState(false);
+  const [editSubmitting, setEditSubmitting] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortType, setSortType] = useState("desc");
   const [itemsPerPage, setItemsPerPage] = useState(10);
@@ -98,8 +102,14 @@ export default function OrganizationsPage() {
     setFilters({ is_active: undefined });
   }, []);
 
+  const handleViewOrganization = (organization) => {
+    setSelectedOrganization(organization);
+    setViewDrawerVisible(true);
+  };
+
   const handleEditOrganization = (organization) => {
     setSelectedOrganization(organization);
+    setViewDrawerVisible(false);
     setEditDrawerVisible(true);
   };
 
@@ -155,6 +165,7 @@ export default function OrganizationsPage() {
       <OrganizationsList
         organizations={paginatedOrganizations}
         fetchOrganizations={fetchOrganizations}
+        onView={handleViewOrganization}
         onEdit={handleEditOrganization}
         onCreate={() => setCreateDrawerVisible(true)}
       />
@@ -174,12 +185,11 @@ export default function OrganizationsPage() {
         </div>
       )}
 
-      <Modal
+      <Drawer
         open={createDrawerVisible}
-        onCancel={() => setCreateDrawerVisible(false)}
-        footer={null}
+        onClose={() => setCreateDrawerVisible(false)}
         title={
-          <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
+          <div className="flex items-center gap-2">
             <img
               src="/icons/headless/settings2.svg"
               alt="Organizations"
@@ -188,24 +198,39 @@ export default function OrganizationsPage() {
             <span>Create Organization</span>
           </div>
         }
-        width={800}
+        placement="right"
+        width="min(720px, 92vw)"
         destroyOnClose
+        rootClassName="media-preview-drawer"
+        footer={
+          <div className="flex w-full justify-end">
+            <Button
+              type="primary"
+              form="create-organization-form"
+              htmlType="submit"
+              loading={createSubmitting}
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
+              Create
+            </Button>
+          </div>
+        }
       >
         <CreateOrganization
           setModalVisible={setCreateDrawerVisible}
           fetchOrganizations={fetchOrganizations}
+          onLoadingChange={setCreateSubmitting}
         />
-      </Modal>
+      </Drawer>
 
-      <Modal
+      <Drawer
         open={editDrawerVisible}
-        onCancel={() => {
+        onClose={() => {
           setEditDrawerVisible(false);
           setSelectedOrganization(null);
         }}
-        footer={null}
         title={
-          <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
+          <div className="flex items-center gap-2">
             <img
               src="/icons/headless/settings2.svg"
               alt="Organizations"
@@ -214,15 +239,41 @@ export default function OrganizationsPage() {
             <span>Edit Organization</span>
           </div>
         }
-        width={800}
+        placement="right"
+        width="min(720px, 92vw)"
         destroyOnClose
+        rootClassName="media-preview-drawer"
+        footer={
+          <div className="flex w-full justify-end">
+            <Button
+              type="primary"
+              form="edit-organization-form"
+              htmlType="submit"
+              loading={editSubmitting}
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
+              Save
+            </Button>
+          </div>
+        }
       >
         <EditOrganization
           organization={selectedOrganization}
           setModalVisible={setEditDrawerVisible}
           fetchOrganizations={fetchOrganizations}
+          onLoadingChange={setEditSubmitting}
         />
-      </Modal>
+      </Drawer>
+
+      <OrganizationViewDrawer
+        open={viewDrawerVisible}
+        organization={selectedOrganization}
+        onClose={() => {
+          setViewDrawerVisible(false);
+          setSelectedOrganization(null);
+        }}
+        fetchOrganizations={fetchOrganizations}
+      />
     </div>
   );
 }

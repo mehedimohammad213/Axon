@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Form, Input, Button, message, Select, Space } from "antd";
+import { Form, Input, Button, message, Select } from "antd";
 import { PlusOutlined, MinusCircleOutlined } from "@ant-design/icons";
 import instance from "../../axios";
 
@@ -51,9 +51,10 @@ function RoleSelect({ roleTemplates, ...props }) {
 export default function CreateOrganization({
   setModalVisible,
   fetchOrganizations,
+  formId = "create-organization-form",
+  onLoadingChange,
 }) {
   const [form] = Form.useForm();
-  const [loading, setLoading] = useState(false);
   const [roleTemplates, setRoleTemplates] = useState(DEFAULT_ROLES);
 
   useEffect(() => {
@@ -70,7 +71,7 @@ export default function CreateOrganization({
   }, []);
 
   const createOrganization = async (values) => {
-    setLoading(true);
+    onLoadingChange?.(true);
 
     try {
       const payload = {
@@ -104,12 +105,13 @@ export default function CreateOrganization({
           "An error occurred while creating the organization."
       );
     } finally {
-      setLoading(false);
+      onLoadingChange?.(false);
     }
   };
 
   return (
     <Form
+      id={formId}
       form={form}
       layout="vertical"
       onFinish={createOrganization}
@@ -257,19 +259,6 @@ export default function CreateOrganization({
           </>
         )}
       </Form.List>
-
-      <Form.Item>
-        <Space>
-          <Button
-            type="primary"
-            htmlType="submit"
-            loading={loading}
-            className="headlessbutton headlessbutton-pill !mr-0"
-          >
-            Create Organization
-          </Button>
-        </Space>
-      </Form.Item>
     </Form>
   );
 }

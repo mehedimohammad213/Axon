@@ -10,7 +10,6 @@ import {
   EyeOutlined,
   TeamOutlined,
 } from "@ant-design/icons";
-import { useRouter } from "next/router";
 
 const InfoRow = ({ label, children }) => (
   <div className="min-w-0">
@@ -27,12 +26,12 @@ const OrganizationRow = ({
   organization,
   isExpanded,
   onExpand,
+  onView,
   onEdit,
   onDelete,
   onToggleActive,
   isDeleting,
 }) => {
-  const router = useRouter();
   const userCount = organization.users_count ?? 0;
 
   const toggleCard = () => {
@@ -116,9 +115,7 @@ const OrganizationRow = ({
         >
           <Button
             icon={<EyeOutlined />}
-            onClick={() =>
-              router.push(`/admin/organizations/${organization.id}`)
-            }
+            onClick={() => onView(organization)}
             className="headlessbutton headlessbutton-pill !mr-0"
           >
             View

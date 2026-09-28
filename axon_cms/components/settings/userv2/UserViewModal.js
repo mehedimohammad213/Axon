@@ -1,83 +1,88 @@
 import React from "react";
-import { Modal, Table, Button, Avatar } from "antd";
-import moment from "moment";
+import { Avatar, Drawer } from "antd";
+import { UserOutlined } from "@ant-design/icons";
 
-const UserViewModal = ({ visible, user, onCancel, onEdit }) => {
-  const getRoleName = () => {
-    if (user?.is_super_admin) {
-      return "Platform Super Admin";
-    }
+const InfoRow = ({ label, children }) => (
+  <div className="min-w-0">
+    <dt className="text-xs font-medium uppercase tracking-wide text-gray-400">
+      {label}
+    </dt>
+    <dd className="mt-1 break-words text-sm font-medium text-gray-800">
+      {children}
+    </dd>
+  </div>
+);
 
-    return user?.role_headless?.title || "No Role Assigned";
-  };
+function formatDate(value) {
+  if (!value) return "—";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "—";
+  return date.toLocaleString();
+}
 
-  const columns = [
-    { title: "Field", dataIndex: "field", key: "field", width: "30%" },
-    { title: "Value", dataIndex: "value", key: "value", width: "70%" },
-  ];
+const UserViewModal = ({ visible, user, onCancel, roles }) => {
+  if (!user) return null;
 
-  const dataSource = [
-    {
-      key: "avatar",
-      field: "Avatar",
-      value: user?.profile_picture ? (
-        <Avatar src={user.profile_picture} size={64} />
-      ) : (
-        <Avatar size={64}>{user?.name?.charAt(0)?.toUpperCase()}</Avatar>
-      ),
-    },
-    { key: "name", field: "Name", value: user?.name || "N/A" },
-    { key: "email", field: "Email", value: user?.email || "N/A" },
-    { key: "phone", field: "Phone", value: user?.phone || "N/A" },
-    { key: "role", field: "Role", value: getRoleName() },
-    {
-      key: "created",
-      field: "Created At",
-      value: user?.created_at
-        ? moment(user.created_at).format("YYYY-MM-DD HH:mm:ss")
-        : "N/A",
-    },
-    {
-      key: "updated",
-      field: "Last Updated",
-      value: user?.updated_at
-        ? moment(user.updated_at).format("YYYY-MM-DD HH:mm:ss")
-        : "N/A",
-    },
-  ];
+  const roleTitle = user.is_super_admin
+    ? "Platform Super Admin"
+    : roles?.find((item) => String(item.id) === String(user.role_id))?.title ||
+      user.role_headless?.title ||
+      "No Role Assigned";
 
   return (
-    <Modal
-      title="User Details"
+    <Drawer
+      title={
+        <div className="flex items-center gap-2">
+          <img
+            src="/icons/headless/user-settings.svg"
+            alt="Users"
+            className="w-6"
+          />
+          <span>View User</span>
+        </div>
+      }
       open={visible}
-      onCancel={onCancel}
-      width={600}
-      footer={[
-        <Button key="close" onClick={onCancel} danger>
-          Close
-        </Button>,
-        <Button
-          key="edit"
-          type="primary"
-          onClick={onEdit}
-          style={{
-            backgroundColor: "var(--theme)",
-            borderColor: "var(--theme)",
-          }}
-          disabled={user?.role_id === "2"}
-        >
-          Edit User
-        </Button>,
-      ]}
+      onClose={onCancel}
+      placement="right"
+      width="min(720px, 92vw)"
+      rootClassName="media-preview-drawer"
     >
-      <Table
-        columns={columns}
-        dataSource={dataSource}
-        pagination={false}
-        showHeader={false}
-        bordered
-      />
-    </Modal>
+      <div className="space-y-5">
+        <div className="flex items-center gap-4">
+          <Avatar
+            src={user.profile_picture || "/images/profile_avatar.png"}
+            icon={<UserOutlined />}
+            size={64}
+            className="border border-gray-200"
+          />
+          <div className="min-w-0">
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="rounded-md bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-500">
+                #{user.id}
+              </span>
+              <span className="rounded-md bg-brand-light px-2 py-0.5 text-xs font-medium text-brand-dark">
+                {roleTitle}
+              </span>
+            </div>
+            <h2 className="mt-1 truncate text-xl font-semibold text-gray-900">
+              {user.name || "Unnamed user"}
+            </h2>
+            <p className="truncate text-sm text-gray-500">{user.email}</p>
+          </div>
+        </div>
+
+        <div className="rounded-xl border border-gray-200 bg-white p-4 sm:p-5">
+          <dl className="grid gap-4 sm:grid-cols-2">
+            <InfoRow label="Name">{user.name || "—"}</InfoRow>
+            <InfoRow label="Email">{user.email || "—"}</InfoRow>
+            <InfoRow label="Phone">{user.phone || "—"}</InfoRow>
+            <InfoRow label="Role">{roleTitle}</InfoRow>
+            <InfoRow label="Created">{formatDate(user.created_at)}</InfoRow>
+            <InfoRow label="Updated">{formatDate(user.updated_at)}</InfoRow>
+          </dl>
+        </div>
+      </div>
+    </Drawer>
   );
 };
 

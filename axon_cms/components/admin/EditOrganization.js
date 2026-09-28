@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Form, Input, Button, message, Select, Space, Spin } from "antd";
+import { Form, Input, Button, message, Select, Spin } from "antd";
 import { PlusOutlined, MinusCircleOutlined } from "@ant-design/icons";
 import instance from "../../axios";
 
@@ -52,9 +52,10 @@ export default function EditOrganization({
   organization,
   setModalVisible,
   fetchOrganizations,
+  formId = "edit-organization-form",
+  onLoadingChange,
 }) {
   const [form] = Form.useForm();
-  const [loading, setLoading] = useState(false);
   const [fetching, setFetching] = useState(false);
   const [roleTemplates, setRoleTemplates] = useState(DEFAULT_ROLES);
 
@@ -112,7 +113,7 @@ export default function EditOrganization({
   const updateOrganization = async (values) => {
     if (!organization?.id) return;
 
-    setLoading(true);
+    onLoadingChange?.(true);
 
     try {
       const payload = {
@@ -159,7 +160,7 @@ export default function EditOrganization({
           "An error occurred while updating the organization."
       );
     } finally {
-      setLoading(false);
+      onLoadingChange?.(false);
     }
   };
 
@@ -173,6 +174,7 @@ export default function EditOrganization({
 
   return (
     <Form
+      id={formId}
       form={form}
       layout="vertical"
       onFinish={updateOrganization}
@@ -361,19 +363,6 @@ export default function EditOrganization({
           </>
         )}
       </Form.List>
-
-      <Form.Item>
-        <Space>
-          <Button
-            type="primary"
-            htmlType="submit"
-            loading={loading}
-            className="headlessbutton headlessbutton-pill !mr-0"
-          >
-            Save Changes
-          </Button>
-        </Space>
-      </Form.Item>
     </Form>
   );
 }

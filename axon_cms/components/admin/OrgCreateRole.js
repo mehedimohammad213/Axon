@@ -1,5 +1,4 @@
-import { useState } from "react";
-import { Form, Input, Switch, Button, message } from "antd";
+import { Form, Input, Switch, message } from "antd";
 import instance from "../../axios";
 import PermissionPicker from "../rolepermission/role/PermissionPicker";
 
@@ -8,12 +7,13 @@ export default function OrgCreateRole({
   permissions,
   setModalVisible,
   fetchRoles,
+  formId = "create-role-form",
+  onLoadingChange,
 }) {
-  const [loading, setLoading] = useState(false);
   const [form] = Form.useForm();
 
   const createRole = async (values) => {
-    setLoading(true);
+    onLoadingChange?.(true);
     const { title, description, status, selectedPermissions } = values;
 
     try {
@@ -37,12 +37,13 @@ export default function OrgCreateRole({
       console.error(error);
       message.error("An error occurred while creating the role.");
     } finally {
-      setLoading(false);
+      onLoadingChange?.(false);
     }
   };
 
   return (
     <Form
+      id={formId}
       form={form}
       name="create_org_role"
       layout="vertical"
@@ -92,17 +93,6 @@ export default function OrgCreateRole({
         ]}
       >
         <PermissionPicker permissions={permissions} />
-      </Form.Item>
-
-      <Form.Item>
-        <Button
-          type="primary"
-          htmlType="submit"
-          loading={loading}
-          className="headlessbutton headlessbutton-pill !mr-0"
-        >
-          Create Role
-        </Button>
       </Form.Item>
     </Form>
   );

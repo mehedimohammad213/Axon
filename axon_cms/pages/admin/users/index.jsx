@@ -230,15 +230,13 @@ export default function AdminUsersPage() {
         </div>
       )}
 
-      {createUser && (
-        <UserForm
-          visible={createUser}
-          onCancel={() => setCreateUser(false)}
-          fetchUsers={fetchUsers}
-          roles={roles}
-          currentUser={currentUser}
-        />
-      )}
+      <UserForm
+        visible={createUser}
+        onCancel={() => setCreateUser(false)}
+        fetchUsers={fetchUsers}
+        roles={roles}
+        currentUser={currentUser}
+      />
     </div>
   );
 }

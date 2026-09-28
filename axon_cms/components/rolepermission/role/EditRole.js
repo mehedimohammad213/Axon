@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import { Form, Input, Switch, Button, message } from "antd";
+import { useEffect } from "react";
+import { Form, Input, Switch, message } from "antd";
 import instance from "../../../axios";
 import PermissionPicker from "./PermissionPicker";
 
@@ -9,8 +9,9 @@ export default function EditRole({
   organizationId,
   setModalVisible,
   onSuccess,
+  formId = "edit-role-form",
+  onLoadingChange,
 }) {
-  const [loading, setLoading] = useState(false);
   const [form] = Form.useForm();
 
   useEffect(() => {
@@ -33,7 +34,7 @@ export default function EditRole({
       return;
     }
 
-    setLoading(true);
+    onLoadingChange?.(true);
     const { title, description, status, selectedPermissions } = values;
 
     const payload = {
@@ -64,12 +65,13 @@ export default function EditRole({
           "An error occurred while updating the role."
       );
     } finally {
-      setLoading(false);
+      onLoadingChange?.(false);
     }
   };
 
   return (
     <Form
+      id={formId}
       form={form}
       name="edit_role"
       layout="vertical"
@@ -113,17 +115,6 @@ export default function EditRole({
         ]}
       >
         <PermissionPicker permissions={permissions} />
-      </Form.Item>
-
-      <Form.Item>
-        <Button
-          type="primary"
-          htmlType="submit"
-          loading={loading}
-          className="headlessbutton headlessbutton-pill !mr-0"
-        >
-          Update Role
-        </Button>
       </Form.Item>
     </Form>
   );

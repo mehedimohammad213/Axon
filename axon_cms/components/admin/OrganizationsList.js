@@ -7,6 +7,7 @@ import OrganizationRow from "./OrganizationRow";
 const OrganizationsList = ({
   organizations,
   fetchOrganizations,
+  onView,
   onEdit,
   onCreate,
 }) => {
@@ -86,6 +87,7 @@ const OrganizationsList = ({
             onExpand={(id) =>
               setExpandedOrgId((prev) => (prev === id ? null : id))
             }
+            onView={onView}
             onEdit={onEdit}
             onDelete={handleDelete}
             onToggleActive={handleToggleActive}

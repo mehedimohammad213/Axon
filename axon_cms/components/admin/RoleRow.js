@@ -1,11 +1,12 @@
 import React from "react";
-import { Button, Card, Modal, Popconfirm, Switch, Table, Tooltip } from "antd";
+import { Button, Card, Drawer, Popconfirm, Switch, Table, Tag, Tooltip } from "antd";
 import {
   CaretDownOutlined,
   CaretRightOutlined,
   CloseCircleOutlined,
   DeleteFilled,
   EditOutlined,
+  EyeOutlined,
   SafetyCertificateOutlined,
 } from "@ant-design/icons";
 
@@ -25,13 +26,14 @@ const RoleRow = ({
   organizationId,
   isExpanded,
   onExpand,
+  onView,
   onEdit,
   onDelete,
   onToggleStatus,
-  onShowPermissions,
   isDeleting,
 }) => {
   const permissionCount = role.permission_headless?.length || 0;
+  const isActive = role.status === 1 || role.status === true;
 
   const toggleCard = () => {
     onExpand(role.id);
@@ -99,9 +101,16 @@ const RoleRow = ({
         </div>
 
         <div
-          className="flex shrink-0 items-center gap-2"
+          className="flex shrink-0 flex-wrap items-center justify-end gap-2"
           onClick={(e) => e.stopPropagation()}
         >
+          <Button
+            icon={<EyeOutlined />}
+            onClick={() => onView(role)}
+            className="headlessbutton headlessbutton-pill !mr-0"
+          >
+            View
+          </Button>
           <Button
             icon={<EditOutlined />}
             onClick={() => onEdit(role)}
@@ -141,22 +150,14 @@ const RoleRow = ({
               <InfoRow label="Role name">{role.title || "—"}</InfoRow>
               <InfoRow label="Status">
                 <Switch
-                  checked={role.status === 1 || role.status === true}
+                  checked={isActive}
                   onChange={(checked) =>
                     onToggleStatus(role, checked, organizationId)
                   }
                 />
               </InfoRow>
               <InfoRow label="Description">{role.description || "—"}</InfoRow>
-              <InfoRow label="Permissions">
-                <button
-                  type="button"
-                  onClick={() => onShowPermissions(role)}
-                  className="text-sm font-medium text-brand-dark hover:underline"
-                >
-                  {permissionCount} assigned
-                </button>
-              </InfoRow>
+              <InfoRow label="Permissions">{permissionCount} assigned</InfoRow>
             </dl>
           </div>
         </div>
@@ -165,7 +166,7 @@ const RoleRow = ({
   );
 };
 
-export const RolePermissionsModal = ({ open, onClose, permissions }) => {
+export const RoleViewDrawer = ({ open, onClose, role }) => {
   const columns = [
     { title: "Title", dataIndex: "title", key: "title" },
     {
@@ -175,48 +176,80 @@ export const RolePermissionsModal = ({ open, onClose, permissions }) => {
       render: (description) => (
         <Tooltip title={description}>
           <span>
-            {description?.length > 24
-              ? `${description.substring(0, 24)}...`
-              : description}
+            {description?.length > 48
+              ? `${description.substring(0, 48)}...`
+              : description || "—"}
           </span>
         </Tooltip>
       ),
     },
   ];
 
+  const permissionCount = role?.permission_headless?.length || 0;
+  const isActive = role?.status === 1 || role?.status === true;
+
   return (
-    <Modal
+    <Drawer
       title={
-        <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
+        <div className="flex items-center gap-2">
           <img
             src="/icons/headless/settings.svg"
-            alt="Permissions"
+            alt="Roles"
             className="w-6"
           />
-          <span>Permissions</span>
+          <span>View Role</span>
         </div>
       }
       open={open}
-      onOk={onClose}
-      onCancel={onClose}
-      footer={[
-        <Button
-          key="close"
-          onClick={onClose}
-          className="headlesscancelbutton headlessbutton-pill !mr-0"
-        >
-          Close
-        </Button>,
-      ]}
-      width={900}
+      onClose={onClose}
+      placement="right"
+      width="min(720px, 92vw)"
+      rootClassName="media-preview-drawer"
     >
-      <Table
-        columns={columns}
-        dataSource={permissions}
-        rowKey={(record) => record.id}
-        pagination={false}
-      />
-    </Modal>
+      {role && (
+        <div className="space-y-5">
+          <div>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="rounded-md bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-500">
+                #{role.id}
+              </span>
+              <Tag color={isActive ? "green" : "default"}>
+                {isActive ? "Active" : "Inactive"}
+              </Tag>
+            </div>
+            <h2 className="mt-2 text-xl font-semibold text-gray-900">
+              {role.title || "Untitled role"}
+            </h2>
+            {role.description && (
+              <p className="mt-1 text-sm text-gray-500">{role.description}</p>
+            )}
+          </div>
+
+          <div className="rounded-xl border border-gray-200 bg-white p-4 sm:p-5">
+            <dl className="grid gap-4 sm:grid-cols-2">
+              <InfoRow label="Role name">{role.title || "—"}</InfoRow>
+              <InfoRow label="Status">{isActive ? "Active" : "Inactive"}</InfoRow>
+              <InfoRow label="Permissions">{permissionCount} assigned</InfoRow>
+              <InfoRow label="Description">{role.description || "—"}</InfoRow>
+            </dl>
+          </div>
+
+          <div>
+            <h3 className="mb-3 text-sm font-semibold text-gray-800">
+              Permissions
+            </h3>
+            <Table
+              columns={columns}
+              dataSource={role.permission_headless || []}
+              rowKey={(record) => record.id}
+              pagination={false}
+              locale={{ emptyText: "No permissions assigned" }}
+              size="small"
+            />
+          </div>
+        </div>
+      )}
+    </Drawer>
   );
 };
 

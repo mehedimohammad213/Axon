@@ -265,8 +265,6 @@ const UserTable = ({ users, fetchUsers, roles, currentUser }) => {
             visible={isViewModalVisible}
             user={selectedUser}
             onCancel={() => setIsViewModalVisible(false)}
-            onEdit={() => handleEditUser(selectedUser)}
-            currentUser={currentUser}
           />
           <FilterDrawer
             visible={isFilterDrawerVisible}

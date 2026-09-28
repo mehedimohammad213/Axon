@@ -6,6 +6,7 @@ import {
   CloseCircleOutlined,
   DeleteFilled,
   EditOutlined,
+  EyeOutlined,
   UserOutlined,
 } from "@ant-design/icons";
 
@@ -34,6 +35,7 @@ const UserRow = ({
   isAdmin,
   isExpanded,
   onExpand,
+  onView,
   onEdit,
   onDelete,
 }) => {
@@ -122,9 +124,16 @@ const UserRow = ({
         </div>
 
         <div
-          className="flex shrink-0 items-center gap-2"
+          className="flex shrink-0 flex-wrap items-center justify-end gap-2"
           onClick={(e) => e.stopPropagation()}
         >
+          <Button
+            icon={<EyeOutlined />}
+            onClick={() => onView(user)}
+            className="headlessbutton headlessbutton-pill !mr-0"
+          >
+            View
+          </Button>
           {canEdit && (
             <Button
               icon={<EditOutlined />}

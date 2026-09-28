@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Empty, Modal, Pagination, Select, Spin, message } from "antd";
+import { Empty, Drawer, Pagination, Select, Spin, message, Button } from "antd";
 import instance from "../../../axios";
 import AdminListHeader from "../../../components/admin/AdminListHeader";
 import RolesList from "../../../components/admin/RolesList";
@@ -16,6 +16,7 @@ export default function AdminRolesPage() {
   const [permissions, setPermissions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [modalVisible, setModalVisible] = useState(false);
+  const [createSubmitting, setCreateSubmitting] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortType, setSortType] = useState("desc");
   const [itemsPerPage, setItemsPerPage] = useState(10);
@@ -219,9 +220,9 @@ export default function AdminRolesPage() {
         </div>
       )}
 
-      <Modal
+      <Drawer
         title={
-          <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
+          <div className="flex items-center gap-2">
             <img
               src="/icons/headless/settings.svg"
               alt="Manage Roles"
@@ -234,10 +235,24 @@ export default function AdminRolesPage() {
           </div>
         }
         open={modalVisible}
-        footer={null}
-        onCancel={() => setModalVisible(false)}
-        width={800}
+        onClose={() => setModalVisible(false)}
+        placement="right"
+        width="min(800px, 92vw)"
         destroyOnClose
+        rootClassName="media-preview-drawer"
+        footer={
+          <div className="flex w-full justify-end">
+            <Button
+              type="primary"
+              form="create-role-form"
+              htmlType="submit"
+              loading={createSubmitting}
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
+              Create
+            </Button>
+          </div>
+        }
       >
         {selectedOrgId && (
           <OrgCreateRole
@@ -245,9 +260,10 @@ export default function AdminRolesPage() {
             permissions={permissions}
             setModalVisible={setModalVisible}
             fetchRoles={refreshRoles}
+            onLoadingChange={setCreateSubmitting}
           />
         )}
-      </Modal>
+      </Drawer>
     </div>
   );
 }

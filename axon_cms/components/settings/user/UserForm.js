@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Form, Input, Button, Select, Modal, message, Progress } from "antd";
+import { Form, Input, Button, Select, Drawer, message, Progress } from "antd";
 import instance from "../../../axios";
 import { usePermissions } from "../../../src/hooks/usePermissions";
 
@@ -11,7 +11,6 @@ const UserForm = ({
   onCancel,
   initialValues,
   roles,
-  currentUser,
 }) => {
   const [form] = Form.useForm();
   const { hasPermission, isSuperAdmin } = usePermissions();
@@ -29,17 +28,24 @@ const UserForm = ({
   }, [visible, canCreateUser, onCancel]);
 
   useEffect(() => {
-    if (visible && roles?.length) {
+    if (!visible) {
+      form.resetFields();
+      setPasswordStrength(0);
+      return;
+    }
+
+    if (roles?.length) {
       const defaultRole =
         roles.find((role) => role.title === "Editor") ||
         roles.find((role) => role.title === "Viewer") ||
         roles[0];
 
-      if (defaultRole) {
-        form.setFieldsValue({ role_id: defaultRole.id });
-      }
+      form.setFieldsValue({
+        ...initialValues,
+        role_id: initialValues?.role_id || defaultRole?.id,
+      });
     }
-  }, [visible, roles, form]);
+  }, [visible, roles, form, initialValues]);
 
   const handleCreateUser = async () => {
     if (!canCreateUser) {
@@ -60,7 +66,7 @@ const UserForm = ({
     } catch (error) {
       if (error.response?.status === 403) {
         message.error("You don't have permission to create users");
-      } else {
+      } else if (!error.errorFields) {
         message.error(
           error.response?.data?.message ||
             "Something went wrong while creating the user."
@@ -95,15 +101,15 @@ const UserForm = ({
     setPasswordStrength(strength);
   };
 
-  if (!visible || !canCreateUser) {
+  if (!canCreateUser) {
     return null;
   }
 
   return (
-    <Modal
+    <Drawer
       open={visible}
       title={
-        <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
+        <div className="flex items-center gap-2">
           <img
             src="/icons/headless/user-settings.svg"
             alt="Users"
@@ -112,26 +118,23 @@ const UserForm = ({
           <span>Create User</span>
         </div>
       }
-      onCancel={onCancel}
-      width={800}
-      footer={[
-        <Button
-          key="back"
-          onClick={onCancel}
-          className="headlesscancelbutton headlessbutton-pill !mr-0"
-        >
-          Cancel
-        </Button>,
-        <Button
-          key="submit"
-          type="primary"
-          loading={loading}
-          onClick={handleCreateUser}
-          className="headlessbutton headlessbutton-pill !mr-0"
-        >
-          Create
-        </Button>,
-      ]}
+      placement="right"
+      onClose={onCancel}
+      width="min(720px, 92vw)"
+      destroyOnClose
+      rootClassName="media-preview-drawer"
+      footer={
+        <div className="flex w-full justify-end">
+          <Button
+            type="primary"
+            loading={loading}
+            onClick={handleCreateUser}
+            className="headlessbutton headlessbutton-pill !mr-0"
+          >
+            Create
+          </Button>
+        </div>
+      }
     >
       <Form
         form={form}
@@ -180,7 +183,7 @@ const UserForm = ({
         </Form.Item>
         <Button
           onClick={passwordGenerator}
-          style={{ marginTop: "8px", width: "fit-content" }}
+          className="mb-2"
         >
           Generate Password
         </Button>
@@ -191,7 +194,7 @@ const UserForm = ({
             "0%": "#ff4d4f",
             "100%": "#52c41a",
           }}
-          style={{ marginTop: "8px" }}
+          className="mb-4"
         />
         <Form.Item
           name="password_confirmation"
@@ -224,7 +227,7 @@ const UserForm = ({
           </Select>
         </Form.Item>
       </Form>
-    </Modal>
+    </Drawer>
   );
 };
 

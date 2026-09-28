@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Modal, Form, Input, Button, Upload, Select, message } from "antd";
+import { Drawer, Form, Input, Button, Upload, Select, message } from "antd";
 import { UploadOutlined } from "@ant-design/icons";
 import instance from "../../../axios";
 import { usePermissions } from "../../../src/hooks/usePermissions";
@@ -25,6 +25,8 @@ const UserEditModal = ({
   const canEdit = canManageUsers || isEditingSelf;
 
   useEffect(() => {
+    if (!visible) return;
+
     if (!canEdit) {
       message.error("You don't have permission to edit this user");
       onCancel();
@@ -40,7 +42,7 @@ const UserEditModal = ({
       });
       setAvatar(user.profile_picture);
     }
-  }, [user, form, canEdit, onCancel]);
+  }, [visible, user, form, canEdit, onCancel]);
 
   const handleUploadChange = (info) => {
     if (info.file.status === "done") {
@@ -74,14 +76,10 @@ const UserEditModal = ({
     }
   };
 
-  if (!canEdit) {
-    return null;
-  }
-
   return (
-    <Modal
+    <Drawer
       title={
-        <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
+        <div className="flex items-center gap-2">
           <img
             src="/icons/headless/user-settings.svg"
             alt="Users"
@@ -91,26 +89,23 @@ const UserEditModal = ({
         </div>
       }
       open={visible}
-      onCancel={onCancel}
-      width={800}
-      footer={[
-        <Button
-          key="back"
-          onClick={onCancel}
-          className="headlesscancelbutton headlessbutton-pill !mr-0"
-        >
-          Cancel
-        </Button>,
-        <Button
-          key="submit"
-          type="primary"
-          loading={loading}
-          className="headlessbutton headlessbutton-pill !mr-0"
-          onClick={() => form.submit()}
-        >
-          Update
-        </Button>,
-      ]}
+      onClose={onCancel}
+      placement="right"
+      width="min(720px, 92vw)"
+      destroyOnClose
+      rootClassName="media-preview-drawer"
+      footer={
+        <div className="flex w-full justify-end">
+          <Button
+            type="primary"
+            loading={loading}
+            className="headlessbutton headlessbutton-pill !mr-0"
+            onClick={() => form.submit()}
+          >
+            Save
+          </Button>
+        </div>
+      }
     >
       <Form form={form} layout="vertical" onFinish={handleUpdateUser}>
         <Form.Item
@@ -156,7 +151,7 @@ const UserEditModal = ({
           </Upload>
         </Form.Item>
       </Form>
-    </Modal>
+    </Drawer>
   );
 };
 
