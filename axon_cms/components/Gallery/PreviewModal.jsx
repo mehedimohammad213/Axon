@@ -1,13 +1,8 @@
 // components/Gallery/PreviewModal.jsx
 
 import React, { useState, useEffect } from "react";
-import { Button, Form, Input, message, Drawer, Select, Tag, Space } from "antd";
-import {
-  CloseOutlined,
-  CloudOutlined,
-  CopyOutlined,
-  EditOutlined,
-} from "@ant-design/icons";
+import { Button, Form, Input, message, Drawer, Select, Tag } from "antd";
+import { CloudOutlined, CopyOutlined } from "@ant-design/icons";
 import instance from "../../axios";
 import Image from "next/image";
 import { resolveMediaUrl } from "../../utils/mediaUrl";
@@ -20,6 +15,7 @@ const PreviewModal = ({
   media,
   mediaType,
   handleEdit,
+  initialEditMode = false,
   availableTags, // New prop for available tags
 }) => {
   const [editMode, setEditMode] = useState(false);
@@ -66,10 +62,12 @@ const PreviewModal = ({
   }, [editMode, media, form]);
 
   useEffect(() => {
-    if (!visible) {
+    if (visible) {
+      setEditMode(!!initialEditMode);
+    } else {
       setEditMode(false);
     }
-  }, [visible]);
+  }, [visible, initialEditMode]);
 
   const handleFormSubmit = async (values) => {
     setIsSubmitting(true);
@@ -158,36 +156,27 @@ const PreviewModal = ({
         ))}
       </div>
 
-      <div className="flex flex-wrap items-center justify-between gap-3">
+      <div className="flex flex-wrap items-center gap-3">
         <Button
-          icon={<EditOutlined />}
-          onClick={() => setEditMode(true)}
-          className="headlessbutton"
+          className="headlessbutton headlessbutton-pill"
+          onClick={() => {
+            navigator.clipboard.writeText(`/${media.file_path}`);
+            message.success("Relative Path copied to clipboard.");
+          }}
+          icon={<CopyOutlined />}
         >
-          Edit
+          Copy Path
         </Button>
-        <Space wrap>
-          <Button
-            className="headlessbutton"
-            onClick={() => {
-              navigator.clipboard.writeText(`/${media.file_path}`);
-              message.success("Relative Path copied to clipboard.");
-            }}
-            icon={<CopyOutlined />}
-          >
-            Copy Path
-          </Button>
-          <Button
-            className="headlessbutton"
-            onClick={() => {
-              navigator.clipboard.writeText(mediaUrl);
-              message.success("Full Link copied to clipboard.");
-            }}
-            icon={<CopyOutlined />}
-          >
-            Copy Link
-          </Button>
-        </Space>
+        <Button
+          className="headlessbutton headlessbutton-pill"
+          onClick={() => {
+            navigator.clipboard.writeText(mediaUrl);
+            message.success("Full Link copied to clipboard.");
+          }}
+          icon={<CopyOutlined />}
+        >
+          Copy Link
+        </Button>
       </div>
     </>
   );
@@ -217,22 +206,15 @@ const PreviewModal = ({
         </Select>
       </Form.Item>
 
-      <div className="flex justify-between">
+      <div>
         <Button
           type="primary"
           htmlType="submit"
           icon={<CloudOutlined />}
           loading={isSubmitting}
-          className="headlessbutton"
+          className="headlessbutton headlessbutton-pill"
         >
           Save
-        </Button>
-        <Button
-          onClick={() => setEditMode(false)}
-          icon={<CloseOutlined />}
-          className="headlesscancelbutton"
-        >
-          Cancel
         </Button>
       </div>
     </Form>
@@ -245,6 +227,7 @@ const PreviewModal = ({
       placement="right"
       width="50%"
       destroyOnClose
+      rootClassName="media-preview-drawer"
       title={media.title || media.file_name}
     >
       {editMode ? renderEditForm() : renderNonEditContent()}

@@ -1,10 +1,9 @@
 import React from "react";
-import { Card, Button, Tag, Popconfirm, Badge } from "antd";
-import { DeleteOutlined, EyeOutlined } from "@ant-design/icons";
+import { Card, Button, Tag, Popconfirm, Badge, Space } from "antd";
+import { DeleteOutlined, EditOutlined, EyeOutlined } from "@ant-design/icons";
 import Image from "next/image";
+import { capitalize } from "lodash";
 import { resolveMediaUrl } from "../../utils/mediaUrl";
-
-const { Meta } = Card;
 
 const idBadgeStyle = {
   backgroundColor: "#f0f0f0",
@@ -13,45 +12,38 @@ const idBadgeStyle = {
   fontWeight: "500",
 };
 
-const MediaCard = ({ media, mediaType, handleDelete, handlePreview }) => {
-  // Render tags with horizontal scroll and consistent height
-  const renderTags = () => {
-    return (
-      <div className="mt-2 flex space-x-2 overflow-x-auto no-scrollbar min-h-[24px]">
-        {media.tags && media.tags.length > 0 ? (
-          media.tags.map((t) => (
-            <Tag color="orange" key={t} className="flex-shrink-0">
-              {t}
-            </Tag>
-          ))
-        ) : (
-          <div className="invisible">No Tags</div> // Placeholder for consistent height
-        )}
-      </div>
-    );
-  };
-
+const MediaCard = ({ media, mediaType, handleDelete, handlePreview, handleEdit }) => {
   const actions = [
     <Button
-      type="link"
+      key="preview"
       icon={<EyeOutlined />}
       onClick={() => handlePreview(media)}
-      key="preview"
-      className="hover:text-green-500"
-    />,
+      className="headlessbutton headlessbutton-pill"
+    >
+      Preview
+    </Button>,
+    <Button
+      key="edit"
+      icon={<EditOutlined />}
+      onClick={() => handleEdit?.(media)}
+      className="headlessbutton headlessbutton-pill"
+    >
+      Edit
+    </Button>,
     <Popconfirm
+      key="delete"
       title="Are you sure you want to delete this media?"
       onConfirm={() => handleDelete(media.id)}
       okText="Yes"
       cancelText="No"
-      key="delete"
       okButtonProps={{ danger: true }}
     >
       <Button
-        type="link"
+        className="headlesscancelbutton headlessbutton-pill"
         icon={<DeleteOutlined />}
-        className="headlesscancelbutton"
-      />
+      >
+        Delete
+      </Button>
     </Popconfirm>,
   ];
 
@@ -85,6 +77,8 @@ const MediaCard = ({ media, mediaType, handleDelete, handlePreview }) => {
   };
 
   const getMediaUrl = () => resolveMediaUrl(media.file_path);
+  const coverClassName =
+    "relative h-64 w-full overflow-hidden bg-gray-100";
 
   // Render media content based on type
   const renderMedia = () => {
@@ -92,11 +86,13 @@ const MediaCard = ({ media, mediaType, handleDelete, handlePreview }) => {
       if (isSupportedImageFormat()) {
         if (isSvgImage()) {
           return (
-            <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-64 bg-white flex items-center justify-center">
+            <div
+              className={`${coverClassName} flex items-center justify-center bg-white`}
+            >
               <img
                 src={getMediaUrl()}
                 alt={media.file_name}
-                className="max-w-full max-h-full p-4"
+                className="max-h-full max-w-full p-4"
                 loading="lazy"
                 style={{ objectFit: "contain" }}
               />
@@ -104,105 +100,62 @@ const MediaCard = ({ media, mediaType, handleDelete, handlePreview }) => {
           );
         }
         return (
-          <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-64">
+          <div className={coverClassName}>
             <Image
               src={getMediaUrl()}
               alt={media.file_name}
-              width={300}
-              height={200}
+              layout="fill"
+              objectFit="cover"
+              objectPosition="center"
               sizes="(max-width: 768px) 100vw, 33vw"
               quality={80}
               loading="lazy"
-              placeholder="blur"
-              blurDataURL="/images/Image_Placeholder.png"
-              style={{
-                objectPosition: "center",
-                width: "100%",
-                height: "100%",
-              }}
-              objectFit="cover"
-              className="rounded-t-md"
             />
           </div>
         );
       } else {
         return (
-          <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-64">
+          <div className={coverClassName}>
             <Image
               src="/images/Image_Placeholder.png"
               alt="Unsupported Image Format"
-              width={300}
-              height={200}
+              layout="fill"
+              objectFit="cover"
               sizes="(max-width: 768px) 100vw, 33vw"
               quality={80}
               loading="lazy"
-              placeholder="blur"
-              blurDataURL="/images/Image_Placeholder.png"
-              style={{
-                objectFit: "cover",
-                width: "100%",
-                height: "100%",
-              }}
-              className="rounded-t-md"
             />
           </div>
         );
       }
     } else if (resolvedMediaType === "video") {
       return (
-        <div className="relative w-full h-48 sm:h-56 md:h-64 lg:h-64">
-          <div className="absolute inset-0 bg-gray-900 rounded-t-md overflow-hidden">
-            <Image
-              src={media.thumbnail_url || "/images/Video_Placeholder.png"}
-              alt={media.file_name}
-              width={300}
-              height={200}
-              sizes="(max-width: 768px) 100vw, 33vw"
-              quality={80}
-              loading="lazy"
-              style={{
-                objectFit: "cover",
-                width: "100%",
-                height: "100%",
-              }}
-              className="rounded-t-md"
-            />
-            <div className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center group-hover:bg-opacity-50 transition-all duration-300">
-              <div className="w-12 h-12 rounded-full bg-black bg-opacity-50 flex items-center justify-center">
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <div className="absolute bottom-2 right-2 bg-black bg-opacity-75 px-2 py-1 rounded text-white text-xs">
-                <svg
-                  className="w-4 h-4 inline-block mr-1"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                  />
-                </svg>
-                Video
-              </div>
+        <div className={`${coverClassName} bg-gray-900`}>
+          <Image
+            src={media.thumbnail_url || "/images/Video_Placeholder.png"}
+            alt={media.file_name}
+            layout="fill"
+            objectFit="cover"
+            sizes="(max-width: 768px) 100vw, 33vw"
+            quality={80}
+            loading="lazy"
+          />
+          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black bg-opacity-50">
+              <svg
+                className="h-6 w-6 text-white"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                  clipRule="evenodd"
+                />
+              </svg>
+            </div>
+            <div className="absolute bottom-2 right-2 rounded bg-black bg-opacity-75 px-2 py-1 text-xs text-white">
+              Video
             </div>
           </div>
         </div>
@@ -210,17 +163,19 @@ const MediaCard = ({ media, mediaType, handleDelete, handlePreview }) => {
     } else {
       // Document preview
       const isOfficeDoc =
-        media.file_type.includes("word") ||
-        media.file_type.includes("excel") ||
-        media.file_type.includes("powerpoint");
+        media.file_type?.includes("word") ||
+        media.file_type?.includes("excel") ||
+        media.file_type?.includes("powerpoint");
 
       return (
-        <div className="flex items-center justify-center h-48 sm:h-56 md:h-64 lg:h-64 bg-gray-100 rounded-t-md">
+        <div
+          className={`${coverClassName} flex items-center justify-center`}
+        >
           <div className="text-center">
-            <div className="text-4xl mb-2">
+            <div className="mb-2 text-4xl">
               {isOfficeDoc ? (
                 <svg
-                  className="w-16 h-16 mx-auto text-brand"
+                  className="mx-auto h-16 w-16 text-brand"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -228,7 +183,7 @@ const MediaCard = ({ media, mediaType, handleDelete, handlePreview }) => {
                 </svg>
               ) : (
                 <svg
-                  className="w-16 h-16 mx-auto text-red-500"
+                  className="mx-auto h-16 w-16 text-red-500"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -248,23 +203,39 @@ const MediaCard = ({ media, mediaType, handleDelete, handlePreview }) => {
       hoverable
       cover={renderMedia()}
       actions={actions}
-      className="media-card shadow-md rounded-md overflow-hidden"
+      className="media-card slider-card overflow-hidden shadow-md rounded-md"
     >
-      <Meta
-        className="pt-6"
-        title={
-          <div className="flex items-center gap-2 flex-wrap">
+      <div className="min-h-16 pt-4">
+        <Space
+          className="media-card-meta flex flex-col sm:flex-row justify-between items-start sm:items-center"
+          direction="vertical"
+        >
+          <div className="flex items-center gap-2 flex-wrap max-w-xs">
             <Badge count={`ID-${media.id}`} style={idBadgeStyle} />
-            <span className="truncate">{media.title || media.file_name}</span>
+            <h3 className="text-lg font-semibold truncate m-0">
+              {media.title || media.file_name || "Title Unavailable"}
+            </h3>
           </div>
-        }
-        description={
-          <>
-            <p className="text-gray-500 text-sm truncate">{media.file_name}</p>
-            {renderTags()}
-          </>
-        }
-      />
+          <h5 className="text-md text-gray-400 font-bold">
+            {capitalize(resolvedMediaType) || "Type Unavailable"}
+          </h5>
+        </Space>
+
+        {Array.isArray(media.tags) && media.tags.length > 0 && (
+          <div className="mt-3">
+            {media.tags.slice(0, 6).map((tagItem) => (
+              <Tag key={tagItem} color="yellow" className="mb-1">
+                {tagItem}
+              </Tag>
+            ))}
+            {media.tags.length > 6 && (
+              <Tag key="more" color="green" className="mb-1">
+                ...
+              </Tag>
+            )}
+          </div>
+        )}
+      </div>
     </Card>
   );
 };

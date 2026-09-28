@@ -446,6 +446,41 @@ video {
   padding: 0 1rem 1rem;
 }
 
+.media-card .ant-card-cover,
+.slider-card .ant-card-cover {
+  overflow: hidden;
+}
+
+.media-card .ant-card-actions,
+.slider-card .ant-card-actions {
+  display: flex;
+  align-items: stretch;
+}
+
+.media-card .ant-card-actions > li,
+.slider-card .ant-card-actions > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 12px 0;
+  float: none;
+}
+
+.media-card .ant-card-actions > li > span,
+.slider-card .ant-card-actions > li > span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.media-card .ant-card-actions .headlessbutton,
+.media-card .ant-card-actions .headlesscancelbutton,
+.slider-card .ant-card-actions .headlessbutton,
+.slider-card .ant-card-actions .headlesscancelbutton {
+  margin-right: 0 !important;
+}
+
 .ant-modal-content {
   background-color: #ffffff;
 }
@@ -488,6 +523,38 @@ video {
 
 .ant-drawer-close:hover {
   color: var(--danger-dark) !important;
+}
+
+.media-preview-drawer .ant-drawer-header-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.media-preview-drawer .ant-drawer-title {
+  order: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+.media-preview-drawer .ant-drawer-close {
+  order: 2;
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin-inline-end: 0 !important;
+  margin-inline-start: 8px !important;
+  border-radius: 9999px;
+  color: var(--danger) !important;
+  background: var(--danger-light) !important;
+}
+
+.media-preview-drawer .ant-drawer-close:hover,
+.media-preview-drawer .ant-drawer-close:focus {
+  color: var(--danger) !important;
+  background: var(--danger-light) !important;
 }
 
 .ant-switch.ant-switch-checked {
@@ -717,25 +784,25 @@ a:hover {
   color: #ffffff !important;
 }
 
-.ant-btn:has(.anticon-delete):not(.headlessbutton):not(.headlessbutton-warning):not(.headlessbutton-success),
-.ant-btn:has(.anticon-close):not(.headlessbutton):not(.headlessbutton-warning):not(.headlessbutton-success),
-.ant-btn:has(.anticon-close-circle):not(.headlessbutton):not(.headlessbutton-warning):not(.headlessbutton-success) {
+.ant-btn:has(.anticon-delete):not(.headlessbutton):not(.headlessbutton-warning):not(.headlessbutton-success):not(.media-drawer-close),
+.ant-btn:has(.anticon-close):not(.headlessbutton):not(.headlessbutton-warning):not(.headlessbutton-success):not(.media-drawer-close),
+.ant-btn:has(.anticon-close-circle):not(.headlessbutton):not(.headlessbutton-warning):not(.headlessbutton-success):not(.media-drawer-close) {
   background-color: var(--danger) !important;
   color: #ffffff !important;
   border-color: var(--danger-dark) !important;
 }
 
-.ant-btn:has(.anticon-delete):not(.headlessbutton):not(.headlessbutton-warning):not(.headlessbutton-success):hover,
-.ant-btn:has(.anticon-close):not(.headlessbutton):not(.headlessbutton-warning):not(.headlessbutton-success):hover,
-.ant-btn:has(.anticon-close-circle):not(.headlessbutton):not(.headlessbutton-warning):not(.headlessbutton-success):hover {
+.ant-btn:has(.anticon-delete):not(.headlessbutton):not(.headlessbutton-warning):not(.headlessbutton-success):not(.media-drawer-close):hover,
+.ant-btn:has(.anticon-close):not(.headlessbutton):not(.headlessbutton-warning):not(.headlessbutton-success):not(.media-drawer-close):hover,
+.ant-btn:has(.anticon-close-circle):not(.headlessbutton):not(.headlessbutton-warning):not(.headlessbutton-success):not(.media-drawer-close):hover {
   background-color: var(--danger-dark) !important;
   color: #ffffff !important;
   border-color: var(--danger-dark) !important;
 }
 
-.ant-btn:has(.anticon-delete) .anticon,
-.ant-btn:has(.anticon-close) .anticon,
-.ant-btn:has(.anticon-close-circle) .anticon {
+.ant-btn:has(.anticon-delete):not(.media-drawer-close) .anticon,
+.ant-btn:has(.anticon-close):not(.media-drawer-close) .anticon,
+.ant-btn:has(.anticon-close-circle):not(.media-drawer-close) .anticon {
   color: #ffffff !important;
 }
 

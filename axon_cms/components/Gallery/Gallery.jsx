@@ -36,6 +36,7 @@ const Gallery = () => {
   const [isPreviewModalVisible, setIsPreviewModalVisible] = useState(false);
   const [selectedMedia, setSelectedMedia] = React.useState(null);
   const [isUploadModalVisible, setIsUploadModalVisible] = React.useState(false);
+  const [isEditMode, setIsEditMode] = useState(false);
 
   // State for Unique Tags
   const [uniqueTags, setUniqueTags] = useState([]);
@@ -64,12 +65,20 @@ const Gallery = () => {
 
   const handlePreview = (media) => {
     setSelectedMedia(media);
+    setIsEditMode(false);
+    setIsPreviewModalVisible(true);
+  };
+
+  const handleEditClick = (media) => {
+    setSelectedMedia(media);
+    setIsEditMode(true);
     setIsPreviewModalVisible(true);
   };
 
   const handlePreviewModalClose = () => {
     setIsPreviewModalVisible(false);
     setSelectedMedia(null);
+    setIsEditMode(false);
   };
 
   // Callback function to update mediaAssets after upload
@@ -115,6 +124,7 @@ const Gallery = () => {
                 : "document"
           }
           handleEdit={editMedia}
+          initialEditMode={isEditMode}
           availableTags={uniqueTags} // Pass uniqueTags to PreviewModal
         />
       )}
@@ -148,7 +158,7 @@ const Gallery = () => {
           images={mediaAssets.filter((m) => m.file_type?.startsWith("image/"))}
           videos={mediaAssets.filter((m) => m.file_type?.startsWith("video/"))}
           docs={mediaAssets.filter((m) => m.file_type === "application/pdf")}
-          handleEdit={editMedia}
+          handleEdit={handleEditClick}
           handleDelete={deleteMedia}
           handlePreview={handlePreview}
         />
