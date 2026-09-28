@@ -16,8 +16,6 @@ const FormBuilder = () => {
   const [formMeta, setFormMeta] = useState({});
   const [loading, setLoading] = useState(false);
   const [createdFormId, setCreatedFormId] = useState(null);
-  const [testFormData, setTestFormData] = useState(null);
-  const [testLoading, setTestLoading] = useState(false);
   const router = useRouter();
 
   useEffect(() => {
@@ -47,135 +45,6 @@ const FormBuilder = () => {
   // Overwrite entire array of elements
   const updateElement = (newElements) => {
     setFormElements(newElements);
-  };
-
-  // Generate test data based on form fields
-  const generateTestData = (elements) => {
-    const testData = {};
-
-    elements.forEach((element) => {
-      if (element.element_type === 'button') return; // Skip button elements
-
-      const fieldName = element.label || element.placeholder || 'field';
-      const fieldType = element.input_type || element.element_type;
-
-      switch (fieldType) {
-        case 'text':
-          testData[fieldName] = `Test ${fieldName}`;
-          break;
-        case 'email':
-          testData[fieldName] = `test.${fieldName}@example.com`;
-          break;
-        case 'number':
-          testData[fieldName] = Math.floor(Math.random() * 1000) + 1;
-          break;
-        case 'tel':
-          testData[fieldName] = `+1${Math.floor(Math.random() * 9000000000) + 1000000000}`;
-          break;
-        case 'password':
-          testData[fieldName] = 'TestPassword123!';
-          break;
-        case 'date':
-          testData[fieldName] = new Date().toISOString().split('T')[0];
-          break;
-        case 'radio':
-          // If options exist, pick the first one, otherwise use a default
-          if (element.options && element.options.length > 0) {
-            testData[fieldName] = element.options[0].value || element.options[0].title || 'Test Option';
-          } else {
-            testData[fieldName] = 'Test Option';
-          }
-          break;
-        case 'select':
-          // If options exist, pick the first one, otherwise use a default
-          if (element.options && element.options.length > 0) {
-            testData[fieldName] = element.options[0].value || element.options[0].title || 'Test Option';
-          } else {
-            testData[fieldName] = 'Test Option';
-          }
-          break;
-        case 'location':
-          testData[fieldName] = {
-            latitude: 40.7128 + (Math.random() - 0.5) * 0.1,
-            longitude: -74.0060 + (Math.random() - 0.5) * 0.1,
-            address: 'Test Location Address'
-          };
-          break;
-        case 'textarea':
-          testData[fieldName] = `This is a test message for ${fieldName} field.`;
-          break;
-        case 'file':
-          testData[fieldName] = 'test-file.txt';
-          break;
-        default:
-          testData[fieldName] = `Test ${fieldName}`;
-      }
-    });
-
-    return testData;
-  };
-
-  // Test form submission
-  const testFormSubmission = async () => {
-    if (!createdFormId) {
-      message.error("Please save the form first before testing.");
-      return;
-    }
-
-    try {
-      setTestLoading(true);
-
-      // Generate test data based on actual form fields
-      const generatedFormData = generateTestData(formElements);
-
-      const testData = {
-        form_id: createdFormId,
-        form_data: generatedFormData,
-        submitted_at: new Date().toISOString()
-      };
-
-      const response = await instance.post(
-        `/form-submission?form_id=${createdFormId}`,
-        testData
-      );
-
-      if (response.status === 200 || response.status === 201) {
-        message.success("Test submission successful! Check the form responses.");
-        setTestFormData(response.data);
-      } else {
-        message.error("Test submission failed.");
-      }
-    } catch (error) {
-      console.error("Error testing form submission:", error);
-      message.error("Test submission failed. Please check your form configuration.");
-    } finally {
-      setTestLoading(false);
-    }
-  };
-
-  // Fetch form submissions for testing
-  const fetchFormSubmissions = async () => {
-    if (!createdFormId) {
-      message.error("Please save the form first before testing.");
-      return;
-    }
-
-    try {
-      setTestLoading(true);
-      const response = await instance.get(
-        `/form-submission?form_id=${createdFormId}`
-      );
-
-      if (response.status === 200) {
-        setTestFormData(response.data);
-        message.success(`Found ${response.data.length} form submissions.`);
-      }
-    } catch (error) {
-      console.error("Error fetching form submissions:", error);
-      message.error("Failed to fetch form submissions.");
-    } finally {
-      setTestLoading(false);
-    }
   };
 
   // Save form to server
@@ -323,63 +192,6 @@ const FormBuilder = () => {
                 <p className="text-sm text-gray-500 mb-4">
                   💡 The Action URL will be automatically generated after you save the form.
                 </p>
-              )}
-            </Card>
-          </TabPane>
-
-          <TabPane tab="Test" key="3">
-            <Card className="mb-4">
-              <div className="mb-4">
-                <h3 className="text-lg font-bold text-gray-800 mb-2">Form Testing</h3>
-                <p className="text-gray-600 mb-4">
-                  Test your form submission to ensure it's working correctly.
-                </p>
-
-                {!createdFormId ? (
-                  <div className="bg-blue-50 border border-blue-200 rounded-md p-4 mb-4">
-                    <p className="text-blue-800">
-                      ⚠️ Please save the form first before testing. The form needs to be created to get a form ID.
-                    </p>
-                  </div>
-                ) : (
-                  <div className="space-y-4">
-                    <div className="bg-green-50 border border-green-200 rounded-md p-4">
-                      <p className="text-green-800">
-                        ✅ Form is ready for testing! Form ID: <strong>{createdFormId}</strong>
-                      </p>
-                    </div>
-
-                    <div className="flex space-x-4">
-                      <Button
-                        type="primary"
-                        onClick={testFormSubmission}
-                        loading={testLoading}
-                        className="bg-theme hover:bg-theme-dark"
-                      >
-                        Test Form Submission
-                      </Button>
-                      <Button
-                        onClick={fetchFormSubmissions}
-                        loading={testLoading}
-                        className="bg-gray-600 hover:bg-gray-700 text-white"
-                      >
-                        View Form Responses
-                      </Button>
-                    </div>
-                  </div>
-                )}
-              </div>
-
-              {/* Test Results */}
-              {testFormData && (
-                <div className="mt-6">
-                  <h4 className="text-md font-bold text-gray-800 mb-3">Test Results</h4>
-                  <div className="bg-gray-50 border rounded-md p-4">
-                    <pre className="text-sm text-gray-700 whitespace-pre-wrap">
-                      {JSON.stringify(testFormData, null, 2)}
-                    </pre>
-                  </div>
-                </div>
               )}
             </Card>
           </TabPane>
