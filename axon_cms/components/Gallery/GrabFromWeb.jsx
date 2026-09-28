@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { Input, Button, message, Image, Modal } from "antd";
-import {
-  DownloadOutlined,
-  CheckOutlined,
-  CloseOutlined,
-} from "@ant-design/icons";
+import { DownloadOutlined, CheckOutlined } from "@ant-design/icons";
 
 const GrabFromWeb = ({ onUploadSuccess, addMediaToDB }) => {
   const [imageUrl, setImageUrl] = useState("");
@@ -56,10 +52,25 @@ const GrabFromWeb = ({ onUploadSuccess, addMediaToDB }) => {
     }
   };
 
+  const getOrganizationId = () => {
+    try {
+      const organization = JSON.parse(localStorage.getItem("organization"));
+      return organization?.id || null;
+    } catch {
+      return null;
+    }
+  };
+
   const handleUpload = async () => {
     try {
       setIsLoading(true);
       const token = localStorage.getItem("token");
+      const organizationId = getOrganizationId();
+
+      if (!organizationId) {
+        message.error("Select an organization before uploading.");
+        return;
+      }
 
       const response = await fetch("/api/fetchAndUpload", {
         method: "POST",
@@ -67,25 +78,27 @@ const GrabFromWeb = ({ onUploadSuccess, addMediaToDB }) => {
         body: JSON.stringify({
           imageUrl,
           token,
+          organizationId,
         }),
       });
 
+      const result = await response.json();
+
       if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
+        throw new Error(result.error || `HTTP error! status: ${response.status}`);
       }
 
-      const result = await response.json();
+      const uploadedMedia = result.media || result.data || [];
       message.success("Successfully grabbed and uploaded!");
-      onUploadSuccess?.(result.data || []);
-      addMediaToDB?.(result.data || []);
+      onUploadSuccess?.(uploadedMedia);
+      addMediaToDB?.(uploadedMedia);
 
-      // Reset form
       setImageUrl("");
       setPreviewImage(null);
       setIsModalVisible(false);
     } catch (error) {
       console.error("Upload error:", error);
-      message.error("Failed to upload the image.");
+      message.error(error.message || "Failed to upload the image.");
     } finally {
       setIsLoading(false);
     }
@@ -120,13 +133,6 @@ const GrabFromWeb = ({ onUploadSuccess, addMediaToDB }) => {
         open={isModalVisible}
         onCancel={handleCancel}
         footer={[
-          <Button
-            key="cancel"
-            onClick={handleCancel}
-            className="headlesscancelbutton headlessbutton-pill"
-          >
-            Cancel
-          </Button>,
           <Button
             key="upload"
             type="primary"
