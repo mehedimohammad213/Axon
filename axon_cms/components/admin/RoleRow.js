@@ -1,14 +1,19 @@
 import React from "react";
-import { Button, Card, Drawer, Popconfirm, Switch, Table, Tag, Tooltip } from "antd";
+import { Button, Card, Drawer, Popconfirm, Switch, Table, Tag, Tooltip, Badge } from "antd";
 import {
-  CaretDownOutlined,
-  CaretRightOutlined,
   CloseCircleOutlined,
   DeleteFilled,
+  DeleteOutlined,
   EditOutlined,
   EyeOutlined,
-  SafetyCertificateOutlined,
 } from "@ant-design/icons";
+
+const idBadgeStyle = {
+  backgroundColor: "#f0f0f0",
+  color: "#666",
+  fontSize: "12px",
+  fontWeight: "500",
+};
 
 const InfoRow = ({ label, children }) => (
   <div className="min-w-0">
@@ -24,144 +29,132 @@ const InfoRow = ({ label, children }) => (
 const RoleRow = ({
   role,
   organizationId,
-  isExpanded,
-  onExpand,
   onView,
   onEdit,
   onDelete,
   onToggleStatus,
   isDeleting,
 }) => {
-  const permissionCount = role.permission_headless?.length || 0;
+  const permissions = role.permission_headless || [];
+  const permissionCount = permissions.length;
   const isActive = role.status === 1 || role.status === true;
 
-  const toggleCard = () => {
-    onExpand(role.id);
-  };
+  const actions = [
+    <Button
+      key="view"
+      icon={<EyeOutlined />}
+      onClick={() => onView(role)}
+      className="headlessbutton headlessbutton-pill !mr-0"
+    >
+      View
+    </Button>,
+    <Button
+      key="edit"
+      icon={<EditOutlined />}
+      onClick={() => onEdit(role)}
+      className="headlessbutton headlessbutton-pill !mr-0"
+    >
+      Edit
+    </Button>,
+    <Popconfirm
+      key="delete"
+      title="Delete this role?"
+      description="This cannot be undone."
+      onConfirm={() => onDelete(role.id)}
+      okText="Delete"
+      cancelText="Cancel"
+      okButtonProps={{
+        danger: true,
+        icon: <DeleteFilled />,
+      }}
+      cancelButtonProps={{
+        icon: <CloseCircleOutlined />,
+      }}
+    >
+      <Button
+        className="headlesscancelbutton headlessbutton-pill !mr-0"
+        icon={<DeleteOutlined />}
+        loading={isDeleting}
+      >
+        Delete
+      </Button>
+    </Popconfirm>,
+  ];
 
   return (
     <Card
-      className={`w-full cursor-pointer overflow-hidden rounded-xl border transition-shadow duration-200 ${
-        isExpanded
-          ? "border-brand/40 shadow-md"
-          : "border-gray-200 shadow-sm hover:border-gray-300 hover:shadow-md"
-      }`}
-      bodyStyle={{ padding: 0 }}
-      onClick={toggleCard}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          toggleCard();
-        }
-      }}
+      hoverable
+      actions={actions}
+      className="media-card slider-card page-list-card overflow-hidden shadow-md rounded-md"
     >
-      <div className="flex min-h-[88px] items-center gap-3 px-5 py-4">
-        <button
-          type="button"
-          aria-label={isExpanded ? "Collapse" : "Expand"}
-          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border transition-colors ${
-            isExpanded
-              ? "border-brand/30 bg-brand-light text-brand-dark"
-              : "border-gray-200 bg-white text-gray-500 hover:bg-gray-50"
-          }`}
-          onClick={(e) => {
-            e.stopPropagation();
-            onExpand(role.id);
-          }}
-        >
-          {isExpanded ? <CaretDownOutlined /> : <CaretRightOutlined />}
-        </button>
-
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg border border-gray-200 bg-brand-light text-brand-dark">
-          <SafetyCertificateOutlined className="text-lg" />
-        </div>
-
-        <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded-md bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-500">
-              #{role.id}
-            </span>
-            <span className="inline-flex items-center gap-1 rounded-md bg-brand-light px-2 py-0.5 text-xs font-medium text-brand-dark">
-              {permissionCount} permission{permissionCount !== 1 ? "s" : ""}
-            </span>
-          </div>
-
-          <h3
-            className="mt-1.5 min-h-7 truncate text-base font-semibold leading-7 text-gray-900 sm:text-lg"
-            title={role.title || "Untitled role"}
-          >
-            {role.title || "Untitled role"}
-          </h3>
-
-          <Tooltip title={role.description || undefined} placement="topLeft">
-            <p className="mt-0.5 min-h-5 truncate text-sm leading-5 text-gray-500">
-              {role.description || "\u00A0"}
-            </p>
-          </Tooltip>
-        </div>
-
-        <div
-          className="flex shrink-0 flex-wrap items-center justify-end gap-2"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <Button
-            icon={<EyeOutlined />}
-            onClick={() => onView(role)}
-            className="headlessbutton headlessbutton-pill !mr-0"
-          >
-            View
-          </Button>
-          <Button
-            icon={<EditOutlined />}
-            onClick={() => onEdit(role)}
-            className="headlessbutton headlessbutton-pill !mr-0"
-          >
-            Edit
-          </Button>
-          <Popconfirm
-            title="Delete this role?"
-            description="This cannot be undone."
-            onConfirm={() => onDelete(role.id)}
-            okText="Delete"
-            cancelText="Cancel"
-            okButtonProps={{
-              danger: true,
-              icon: <DeleteFilled />,
-            }}
-            cancelButtonProps={{
-              icon: <CloseCircleOutlined />,
-            }}
-          >
-            <Button
-              icon={<DeleteFilled />}
-              loading={isDeleting}
-              className="headlesscancelbutton headlessbutton-pill !mr-0"
+      <div className="flex flex-1 flex-col pt-3">
+        <div className="media-card-meta flex items-center justify-between gap-3">
+          <div className="flex min-w-0 items-center gap-2">
+            <Badge count={`ID-${role.id}`} style={idBadgeStyle} />
+            <h3
+              className="m-0 truncate text-base font-semibold"
+              title={role.title || "Untitled role"}
             >
-              Delete
-            </Button>
-          </Popconfirm>
+              {role.title || "Untitled role"}
+            </h3>
+          </div>
+          <h5 className="mb-0 shrink-0 text-sm font-bold text-gray-400">
+            Role
+          </h5>
         </div>
-      </div>
 
-      {isExpanded && (
-        <div className="border-t border-gray-100 px-5 pb-5">
-          <div className="pt-4" onClick={(e) => e.stopPropagation()}>
-            <dl className="grid gap-4 sm:grid-cols-2">
-              <InfoRow label="Role name">{role.title || "—"}</InfoRow>
-              <InfoRow label="Status">
-                <Switch
-                  checked={isActive}
-                  onChange={(checked) =>
-                    onToggleStatus(role, checked, organizationId)
-                  }
-                />
-              </InfoRow>
-              <InfoRow label="Description">{role.description || "—"}</InfoRow>
-              <InfoRow label="Permissions">{permissionCount} assigned</InfoRow>
-            </dl>
+        <Tooltip title={role.description || undefined} placement="topLeft">
+          <p className="mt-2 truncate text-sm leading-5 text-gray-500">
+            {role.description || "No description"}
+          </p>
+        </Tooltip>
+
+        <div className="mt-3 space-y-3 text-sm">
+          <div className="flex items-center justify-between gap-3">
+            <span className="text-xs font-medium uppercase tracking-wide text-gray-400">
+              Status
+            </span>
+            <div className="flex shrink-0 items-center gap-2">
+              <Switch
+                size="small"
+                checked={isActive}
+                onChange={(checked) =>
+                  onToggleStatus(role, checked, organizationId)
+                }
+              />
+              <span className="text-sm font-medium text-gray-800">
+                {isActive ? "Active" : "Inactive"}
+              </span>
+            </div>
+          </div>
+          <div className="flex items-center justify-between gap-2">
+            <span className="text-xs font-medium uppercase tracking-wide text-gray-400">
+              Permissions
+            </span>
+            <span className="text-sm font-medium text-gray-800">
+              {permissionCount} assigned
+            </span>
           </div>
         </div>
-      )}
+
+        {permissionCount > 0 && (
+          <div className="mt-3 flex flex-wrap gap-2">
+            {permissions.slice(0, 6).map((permission) => (
+              <Tag
+                key={permission.id}
+                className="m-0 rounded-md border-gray-200 bg-gray-50 px-2.5 py-0.5 text-xs text-gray-700"
+              >
+                {permission.title}
+              </Tag>
+            ))}
+            {permissionCount > 6 && (
+              <Tag className="m-0 rounded-md border-gray-200 bg-gray-50 px-2.5 py-0.5 text-xs text-gray-700">
+                +{permissionCount - 6}
+              </Tag>
+            )}
+          </div>
+        )}
+      </div>
     </Card>
   );
 };
@@ -213,7 +206,7 @@ export const RoleViewDrawer = ({ open, onClose, role }) => {
               <span className="rounded-md bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-500">
                 #{role.id}
               </span>
-              <Tag color={isActive ? "green" : "default"}>
+              <Tag className="mb-0 border-gray-200 bg-gray-50 text-gray-700">
                 {isActive ? "Active" : "Inactive"}
               </Tag>
             </div>

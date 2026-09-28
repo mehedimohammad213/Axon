@@ -12,7 +12,6 @@ const RolesList = ({
   fetchRoles,
   onCreate,
 }) => {
-  const [expandedRoleId, setExpandedRoleId] = useState(null);
   const [isDeleting, setIsDeleting] = useState(false);
   const [viewDrawerVisible, setViewDrawerVisible] = useState(false);
   const [editDrawerVisible, setEditDrawerVisible] = useState(false);
@@ -98,16 +97,12 @@ const RolesList = ({
 
   return (
     <div className="mt-6 space-y-4">
-      <div className="grid grid-cols-1 items-start gap-4 xl:grid-cols-2">
+      <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
         {roles.map((role) => (
           <RoleRow
             key={role.id}
             role={role}
             organizationId={organizationId}
-            isExpanded={expandedRoleId === role.id}
-            onExpand={(id) =>
-              setExpandedRoleId((prev) => (prev === id ? null : id))
-            }
             onView={openView}
             onEdit={openEdit}
             onDelete={handleDelete}

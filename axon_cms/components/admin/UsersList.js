@@ -14,7 +14,6 @@ const UsersList = ({
   fetchUsers,
   onCreate,
 }) => {
-  const [expandedUserId, setExpandedUserId] = useState(null);
   const [selectedUser, setSelectedUser] = useState(null);
   const [isEditDrawerVisible, setIsEditDrawerVisible] = useState(false);
   const [isViewDrawerVisible, setIsViewDrawerVisible] = useState(false);
@@ -96,7 +95,7 @@ const UsersList = ({
 
   return (
     <div className="mt-6 space-y-4">
-      <div className="grid grid-cols-1 items-start gap-4 xl:grid-cols-2">
+      <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
         {users.map((user) => (
           <UserRow
             key={user.id}
@@ -104,10 +103,6 @@ const UsersList = ({
             roles={roles}
             currentUser={currentUser}
             isAdmin={isAdmin}
-            isExpanded={expandedUserId === user.id}
-            onExpand={(id) =>
-              setExpandedUserId((prev) => (prev === id ? null : id))
-            }
             onView={openView}
             onEdit={openEdit}
             onDelete={handleDeleteUser}

@@ -11,7 +11,6 @@ const OrganizationsList = ({
   onEdit,
   onCreate,
 }) => {
-  const [expandedOrgId, setExpandedOrgId] = useState(null);
   const [isDeleting, setIsDeleting] = useState(false);
 
   const handleToggleActive = async (organization, checked) => {
@@ -78,15 +77,11 @@ const OrganizationsList = ({
 
   return (
     <div className="mt-6 space-y-4">
-      <div className="grid grid-cols-1 items-start gap-4 xl:grid-cols-2">
+      <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
         {organizations.map((organization) => (
           <OrganizationRow
             key={organization.id}
             organization={organization}
-            isExpanded={expandedOrgId === organization.id}
-            onExpand={(id) =>
-              setExpandedOrgId((prev) => (prev === id ? null : id))
-            }
             onView={onView}
             onEdit={onEdit}
             onDelete={handleDelete}
