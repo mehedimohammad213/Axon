@@ -121,7 +121,7 @@ const DraggableComponent = ({
             icon={isCollapsed ? <DownOutlined /> : <UpOutlined />}
             onClick={handleToggleCollapse}
             onPointerDown={stopDragPropagation}
-            className="!mr-0 shrink-0 text-slate-400 hover:!bg-slate-200 hover:!text-slate-700"
+            className="!mr-0 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-slate-400 hover:!bg-slate-200 hover:!text-slate-700"
           />
         </Tooltip>
 

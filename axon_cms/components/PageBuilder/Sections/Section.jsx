@@ -227,7 +227,7 @@ const Section = ({
               icon={isCollapsed ? <DownOutlined /> : <UpOutlined />}
               onClick={handleToggleCollapse}
               onPointerDown={stopDragPropagation}
-              className="!mr-0 shrink-0 text-slate-500 hover:!bg-slate-200 hover:!text-slate-800"
+              className="!mr-0 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-slate-500 hover:!bg-slate-200 hover:!text-slate-800"
             />
           </Tooltip>
 
@@ -255,13 +255,13 @@ const Section = ({
               <Button
                 icon={<CheckOutlined />}
                 onClick={handleTitleSave}
-                className="headlessbutton !mr-0"
+                className="headlessbutton headlessbutton-pill !mr-0"
                 size="small"
               />
               <Button
                 icon={<CloseOutlined />}
                 onClick={handleTitleCancel}
-                className="headlesscancelbutton !mr-0"
+                className="headlesscancelbutton headlessbutton-pill !mr-0"
                 size="small"
               />
             </div>
@@ -282,7 +282,7 @@ const Section = ({
                     onPointerDown={stopDragPropagation}
                     size="small"
                     type="text"
-                    className="!mr-0 shrink-0 text-slate-400 hover:!bg-slate-200 hover:!text-slate-700"
+                    className="!mr-0 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-slate-400 hover:!bg-slate-200 hover:!text-slate-700"
                   />
                 </Tooltip>
               )}
@@ -304,7 +304,7 @@ const Section = ({
                   onClick={handleDuplicateClick}
                   size="small"
                   type="text"
-                  className="!mr-0 text-slate-500 hover:!bg-slate-200 hover:!text-slate-800"
+                  className="!mr-0 flex h-8 w-8 items-center justify-center rounded-full text-slate-500 hover:!bg-slate-200 hover:!text-slate-800"
                 />
               </Tooltip>
             )}
@@ -323,7 +323,7 @@ const Section = ({
                     onClick={handleDeleteClick}
                     size="small"
                     type="text"
-                    className="headlesscancelbutton !mr-0"
+                    className="headlesscancelbutton headlessbutton-pill !mr-0"
                   />
                 </Tooltip>
               </Popconfirm>

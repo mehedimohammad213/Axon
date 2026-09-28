@@ -15,7 +15,7 @@ const ComponentEditButton = ({
       icon={<EditOutlined />}
       onClick={onClick}
       disabled={disabled}
-      className={`!mr-0 shrink-0 text-slate-500 hover:!bg-slate-200 hover:!text-slate-800 ${className}`.trim()}
+      className={`!mr-0 flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-slate-500 hover:!bg-slate-200 hover:!text-slate-800 ${className}`.trim()}
     />
   </Tooltip>
 );

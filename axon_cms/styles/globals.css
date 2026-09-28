@@ -644,8 +644,23 @@ a:hover {
 .headlesscancelbutton.ant-btn-icon-only {
   width: 2.25rem !important;
   min-width: 2.25rem !important;
+  height: 2.25rem !important;
+  min-height: 2.25rem !important;
   padding: 0 !important;
   margin-right: 0.35rem;
+  border-radius: 9999px !important;
+}
+
+.headlessbutton.headlessbutton-pill.ant-btn-icon-only,
+.headlessbutton-warning.headlessbutton-pill.ant-btn-icon-only,
+.headlessbutton-success.headlessbutton-pill.ant-btn-icon-only,
+.headlessbutton-danger.headlessbutton-pill.ant-btn-icon-only,
+.headlesscancelbutton.headlessbutton-pill.ant-btn-icon-only {
+  width: 2.5rem !important;
+  min-width: 2.5rem !important;
+  height: 2.5rem !important;
+  min-height: 2.5rem !important;
+  padding: 0 !important;
 }
 
 .headlessbutton {

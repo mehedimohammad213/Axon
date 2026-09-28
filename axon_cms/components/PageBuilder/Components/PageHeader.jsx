@@ -42,7 +42,7 @@ const PageHeader = ({
             <button
               type="button"
               onClick={handleBack}
-              className="mt-0.5 shrink-0 rounded-lg p-2 text-slate-600 transition-colors hover:bg-slate-100"
+              className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full p-0 text-slate-600 transition-colors hover:bg-slate-100"
               aria-label="Back to pages"
               title="Back to pages"
             >
@@ -91,7 +91,7 @@ const PageHeader = ({
                   icon={<UndoOutlined />}
                   onClick={onUndo}
                   disabled={!canUndo}
-                  className="!mr-0"
+                  className="headlessbutton-pill !mr-0"
                 >
                   Undo
                 </Button>
@@ -100,7 +100,7 @@ const PageHeader = ({
                   icon={<SaveOutlined />}
                   onClick={onSave}
                   loading={loading}
-                  className={`headlessbutton !mr-0 ${
+                  className={`headlessbutton headlessbutton-pill !mr-0 ${
                     isDirty
                       ? ""
                       : "!border-emerald-600 !bg-emerald-500 hover:!bg-emerald-600"
@@ -119,7 +119,7 @@ const PageHeader = ({
                 {/* <Button
                   icon={<EyeOutlined />}
                   onClick={onToggleEdit}
-                  className="headlessbutton !mr-0"
+                  className="headlessbutton headlessbutton-pill !mr-0"
                 >
                   Preview
                 </Button> */}
@@ -128,7 +128,7 @@ const PageHeader = ({
               <Button
                 icon={<EditOutlined />}
                 onClick={onToggleEdit}
-                className="headlessbutton !mr-0"
+                className="headlessbutton headlessbutton-pill !mr-0"
               >
                 Edit Page
               </Button>

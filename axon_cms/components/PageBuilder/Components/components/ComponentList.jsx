@@ -11,7 +11,7 @@ const AddComponentDivider = ({ onClick, label = "Add component" }) => (
       icon={<PlusOutlined />}
       onClick={onClick}
       size="small"
-      className="!mr-0 inline-flex items-center gap-1.5 rounded-md border-0 bg-emerald-600 px-3 text-xs font-semibold text-white shadow-sm transition-colors hover:!border-0 hover:!bg-emerald-700 hover:!text-white"
+      className="!mr-0 inline-flex items-center gap-1.5 rounded-full border-0 bg-emerald-600 px-4 text-xs font-semibold text-white shadow-sm transition-colors hover:!border-0 hover:!bg-emerald-700 hover:!text-white"
     >
       {label}
     </Button>
@@ -47,7 +47,7 @@ const ComponentList = ({
               icon={<PlusOutlined />}
               onClick={() => onAddComponent && onAddComponent(0)}
               size="middle"
-              className="!mr-0 inline-flex items-center gap-2 rounded-lg border-0 bg-emerald-600 px-5 text-sm font-semibold text-white shadow-sm transition-colors hover:!border-0 hover:!bg-emerald-700 hover:!text-white"
+              className="!mr-0 inline-flex items-center gap-2 rounded-full border-0 bg-emerald-600 px-5 text-sm font-semibold text-white shadow-sm transition-colors hover:!border-0 hover:!bg-emerald-700 hover:!text-white"
             >
               Add component
             </Button>

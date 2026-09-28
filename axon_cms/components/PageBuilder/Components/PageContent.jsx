@@ -253,7 +253,7 @@ const PageContent = ({
                   <Button
                     icon={<PlusOutlined />}
                     onClick={onAddSection}
-                    className="headlessbutton !mr-0 !border-0 shadow-sm"
+                    className="headlessbutton headlessbutton-pill !mr-0 !border-0 shadow-sm"
                     size="large"
                   >
                     Add section
@@ -276,7 +276,7 @@ const PageContent = ({
                   <Button
                     icon={<PlusOutlined />}
                     onClick={onAddSection}
-                    className="headlessbutton !mr-0 !border-0 shadow-sm"
+                    className="headlessbutton headlessbutton-pill !mr-0 !border-0 shadow-sm"
                     size="large"
                   >
                     Add first section

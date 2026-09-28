@@ -35,7 +35,7 @@ const ComponentDeleteButton = ({
           icon={<DeleteOutlined />}
           onClick={handleClick}
           disabled={disabled}
-          className={`headlesscancelbutton !mr-0 shrink-0 ${className}`.trim()}
+          className={`headlesscancelbutton headlessbutton-pill !mr-0 shrink-0 ${className}`.trim()}
         />
       </Tooltip>
     </Popconfirm>
