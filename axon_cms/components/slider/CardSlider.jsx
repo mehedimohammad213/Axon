@@ -73,7 +73,7 @@ const CardSlider = ({
       hoverable
       cover={
         hasCards ? (
-          <Carousel autoplay className="mb-4">
+          <Carousel autoplay className="mb-4 max-w-full overflow-hidden">
             {orderedCards.map((card) => {
               const mediaFile = getCardMedia(card);
               return (

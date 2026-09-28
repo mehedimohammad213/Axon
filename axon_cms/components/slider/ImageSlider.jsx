@@ -67,7 +67,7 @@ const ImageSlider = ({
             arrows
             prevArrow={<CustomPrevArrow />}
             nextArrow={<CustomNextArrow />}
-            className="mb-4"
+            className="mb-4 max-w-full overflow-hidden"
           >
             {orderedMedias.map((media) => (
               <div key={media.id}>

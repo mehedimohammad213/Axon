@@ -72,14 +72,14 @@ const SliderList = ({
   return (
     <Tabs
       defaultActiveKey="1"
-      className="[&_.ant-tabs-nav]:mb-4"
+      className="min-w-0 [&_.ant-tabs-nav]:mb-4 [&_.ant-tabs-content]:min-w-0"
       items={[
         {
           key: "1",
           label: `Image Sliders (${imageSliders.length})`,
           children: paginatedImageSliders.length ? (
             <>
-              <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
+              <div className="grid min-w-0 grid-cols-1 items-stretch gap-4 [&>*]:min-w-0 md:grid-cols-2 xl:grid-cols-3">
                 {paginatedImageSliders.map((slider) => (
                   <ImageSlider
                     key={slider.id}
@@ -106,7 +106,7 @@ const SliderList = ({
           label: `Card Sliders (${cardSliders.length})`,
           children: paginatedCardSliders.length ? (
             <>
-              <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
+              <div className="grid min-w-0 grid-cols-1 items-stretch gap-4 [&>*]:min-w-0 md:grid-cols-2 xl:grid-cols-3">
                 {paginatedCardSliders.map((slider) => (
                   <CardSlider
                     key={slider.id}

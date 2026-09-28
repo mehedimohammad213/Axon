@@ -48,7 +48,7 @@ const RenderPages = ({
   }
 
   return (
-    <div className="mt-6 grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
+    <div className="mt-6 grid min-w-0 grid-cols-1 items-stretch gap-4 [&>*]:min-w-0 md:grid-cols-2 xl:grid-cols-3">
       {webpages.map((page) => (
         <PageCard
           key={page.id}

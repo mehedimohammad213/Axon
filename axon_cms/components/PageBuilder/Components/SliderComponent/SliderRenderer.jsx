@@ -106,7 +106,7 @@ const SliderRenderer = React.memo(({ sliderData, config = {} }) => {
       dots={finalConfig.dots}
       effect={finalConfig.effect}
       speed={finalConfig.speed}
-      className="rounded-lg overflow-hidden"
+      className="max-w-full overflow-hidden rounded-lg"
     >
       {children}
     </Carousel>

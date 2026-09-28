@@ -219,11 +219,10 @@ const SiteContent = ({ children }) => {
             marginLeft:
               shouldShowSidebar && !isMobile
                 ? `calc(${contentMargin}px + var(--shell-gap))`
-                : "0",
-            width:
-              shouldShowSidebar && !isMobile
-                ? `calc(100vw - ${contentMargin}px - var(--shell-gap))`
-                : "100vw",
+                : 0,
+            marginRight:
+              shouldShowSidebar && !isMobile ? "0.1rem" : 0,
+            width: "auto",
             maxWidth: "100%",
             boxSizing: "border-box",
           }}
@@ -265,6 +264,7 @@ const SiteContent = ({ children }) => {
           >
             {/* Content wrapper */}
             <div
+              className="min-w-0 overflow-x-hidden"
               style={{ width: "100%", height: "100%", boxSizing: "border-box" }}
             >
               {children}
