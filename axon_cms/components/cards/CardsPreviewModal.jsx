@@ -589,8 +589,7 @@ const CardsPreviewModal = ({
                 )}
               </div>
 
-              {/* Form Actions */}
-              <Form.Item>
+              <div className="flex justify-end">
                 <Button
                   type="primary"
                   htmlType="submit"
@@ -598,7 +597,7 @@ const CardsPreviewModal = ({
                 >
                   Save
                 </Button>
-              </Form.Item>
+              </div>
 
               {/* Media Selection Modal */}
               <MediaSelectionModal

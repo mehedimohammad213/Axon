@@ -362,22 +362,16 @@ const CreateCardForm = ({ onSuccess, onCancel, pages, media, uniqueTags }) => {
           )}
         </div>
 
-        {/* Form Actions */}
-        <Form.Item>
-          <div className="flex justify-end gap-2">
-            <Button onClick={onCancel} className="headlesscancelbutton headlessbutton-pill">
-              Cancel
-            </Button>
-            <Button
-              type="primary"
-              htmlType="submit"
-              loading={submitting}
-              className="headlessbutton headlessbutton-pill"
-            >
-              Submit
-            </Button>
-          </div>
-        </Form.Item>
+        <div className="flex justify-end">
+          <Button
+            type="primary"
+            htmlType="submit"
+            loading={submitting}
+            className="headlessbutton headlessbutton-pill"
+          >
+            Submit
+          </Button>
+        </div>
       </Form>
 
       {/* Media Selection Modal */}

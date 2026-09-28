@@ -1,6 +1,6 @@
 // components/cards/CardItem.jsx
 import React from "react";
-import { Card, Button, Popconfirm, List, Tag, Badge, Space } from "antd";
+import { Card, Button, Popconfirm, List, Tag, Badge } from "antd";
 import { EyeOutlined, DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import { resolveMediaUrl } from "../../utils/mediaUrl";
@@ -182,38 +182,33 @@ const CardItem = ({
         hoverable
         cover={<MediaCover card={card} mediaList={media} />}
         actions={actions}
-        className="media-card slider-card overflow-hidden shadow-md rounded-md"
+        className="media-card slider-card h-full overflow-hidden shadow-md rounded-md"
       >
-        <div className="min-h-16 pt-4">
-          <Space
-            className="media-card-meta flex flex-col sm:flex-row justify-between items-start sm:items-center"
-            direction="vertical"
-          >
-            <div className="flex items-center gap-2 flex-wrap max-w-xs">
+        <div className="flex min-h-16 flex-1 flex-col pt-4">
+          <div className="media-card-meta flex items-center justify-between gap-3">
+            <div className="flex min-w-0 items-center gap-2">
               <Badge count={`ID-${card.id}`} style={idBadgeStyle} />
-              <h3 className="text-lg font-semibold truncate m-0">
+              <h3 className="m-0 truncate text-lg font-semibold">
                 {card?.title_en || "Title Unavailable"}
               </h3>
             </div>
-            <h5 className="text-md text-gray-400 font-bold">
+            <h5 className="mb-0 shrink-0 text-md font-bold text-gray-400">
               {card?.page_name || "Card"}
             </h5>
-          </Space>
+          </div>
 
-          {tags.length > 0 && (
-            <div className="mt-3">
-              {tags.slice(0, 6).map((tagItem) => (
-                <Tag key={tagItem} color="yellow" className="mb-1">
-                  {tagItem}
-                </Tag>
-              ))}
-              {tags.length > 6 && (
-                <Tag key="more" color="green" className="mb-1">
-                  ...
-                </Tag>
-              )}
-            </div>
-          )}
+          <div className="mt-3 min-h-7 overflow-hidden whitespace-nowrap">
+            {tags.slice(0, 6).map((tagItem) => (
+              <Tag key={tagItem} color="yellow" className="mb-0">
+                {tagItem}
+              </Tag>
+            ))}
+            {tags.length > 6 && (
+              <Tag key="more" color="green" className="mb-0">
+                ...
+              </Tag>
+            )}
+          </div>
         </div>
       </Card>
     );
