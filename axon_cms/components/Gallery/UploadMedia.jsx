@@ -1,10 +1,6 @@
 import React, { useState } from "react";
 import { Upload, Button, message, Progress, Tag } from "antd";
-import {
-  UploadOutlined,
-  InboxOutlined,
-  DeleteOutlined,
-} from "@ant-design/icons";
+import { InboxOutlined, DeleteOutlined } from "@ant-design/icons";
 import axios from "axios"; // Use axios directly for Cloudinary
 import instance from "../../axios"; // Existing axios instance for your backend
 import Image from "next/image";
@@ -217,23 +213,6 @@ const UploadMedia = ({
           ))}
         </div>
       )}
-      <Button
-        type="primary"
-        onClick={() => {
-          if (fileList.length === 0) {
-            message.warning("Please select at least one file to upload.");
-            return;
-          }
-          // Trigger upload for all files
-          // Since customRequest handles upload, we might not need to do anything here
-        }}
-        disabled={fileList.length === 0 || uploading}
-        loading={uploading}
-        className="headlessbutton headlessbutton-pill mt-4 w-full"
-        icon={<UploadOutlined />}
-      >
-        Start Upload
-      </Button>
     </div>
   );
 };
