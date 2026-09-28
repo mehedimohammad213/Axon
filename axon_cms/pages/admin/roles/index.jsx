@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Empty, Drawer, Pagination, Spin, message, Button } from "antd";
+import { Empty, Drawer, Form, Pagination, Select, Spin, message, Button } from "antd";
 import instance from "../../../axios";
 import AdminListHeader from "../../../components/admin/AdminListHeader";
 import RolesList from "../../../components/admin/RolesList";
@@ -8,6 +8,8 @@ import { usePermissions } from "../../../src/hooks/usePermissions";
 import { useAuth } from "../../../src/context/AuthContext";
 import { setPageTitle } from "../../../global/constants/pageTitle";
 import { buildApiEndpoint } from "../../../utils/copyApiEndpoint";
+
+const { Option } = Select;
 
 export default function AdminRolesPage() {
   const { canManagePlatform } = usePermissions();
@@ -22,6 +24,7 @@ export default function AdminRolesPage() {
   const [sortType, setSortType] = useState("desc");
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
+  const [filters, setFilters] = useState({ status: undefined });
 
   const canManage = canManagePlatform;
 
@@ -80,14 +83,26 @@ export default function AdminRolesPage() {
   }, [selectedOrgId, fetchRoles]);
 
   const filteredRoles = useMemo(() => {
-    if (!searchTerm.trim()) return allRoles;
-    const query = searchTerm.toLowerCase();
-    return allRoles.filter(
-      (role) =>
-        role.title?.toLowerCase().includes(query) ||
-        role.description?.toLowerCase().includes(query)
-    );
-  }, [allRoles, searchTerm]);
+    let results = [...allRoles];
+
+    if (searchTerm.trim()) {
+      const query = searchTerm.toLowerCase();
+      results = results.filter(
+        (role) =>
+          role.title?.toLowerCase().includes(query) ||
+          role.description?.toLowerCase().includes(query)
+      );
+    }
+
+    if (filters.status !== undefined) {
+      results = results.filter((role) => {
+        const isActive = role.status === 1 || role.status === true;
+        return isActive === filters.status;
+      });
+    }
+
+    return results;
+  }, [allRoles, searchTerm, filters]);
 
   const sortedRoles = useMemo(() => {
     return [...filteredRoles].sort((a, b) =>
@@ -97,7 +112,7 @@ export default function AdminRolesPage() {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchTerm, sortType, itemsPerPage]);
+  }, [searchTerm, filters, sortType, itemsPerPage]);
 
   const paginatedRoles = useMemo(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -106,6 +121,14 @@ export default function AdminRolesPage() {
 
   const handleShowChange = useCallback((value) => {
     setItemsPerPage(parseInt(value, 10));
+  }, []);
+
+  const applyFilters = useCallback((filterValues) => {
+    setFilters(filterValues);
+  }, []);
+
+  const resetFilters = useCallback(() => {
+    setFilters({ status: undefined });
   }, []);
 
   const refreshRoles = useCallback(() => {
@@ -153,6 +176,19 @@ export default function AdminRolesPage() {
         setSortType={setSortType}
         onShowChange={handleShowChange}
         onRefresh={refreshRoles}
+        showFilter
+        filterTitle="Filter roles"
+        applyFilters={applyFilters}
+        resetFilters={resetFilters}
+        filterInitialValues={{ status: undefined }}
+        renderFilterFields={() => (
+          <Form.Item label="Status" name="status">
+            <Select placeholder="Select status" allowClear>
+              <Option value={true}>Active</Option>
+              <Option value={false}>Inactive</Option>
+            </Select>
+          </Form.Item>
+        )}
       />
 
       {organization && (
