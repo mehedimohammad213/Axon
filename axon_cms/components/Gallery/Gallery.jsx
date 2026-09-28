@@ -83,11 +83,11 @@ const Gallery = () => {
 
   // Callback function to update mediaAssets after upload
   const handleMediaUploadSuccess = async (newMedia) => {
-    handleUploadModalClose();
     if (newMedia?.length || newMedia?.id) {
       await addMedia(newMedia);
     }
-    await refreshMedia();
+    await refreshMedia(1);
+    handleUploadModalClose();
   };
 
   return (
@@ -103,6 +103,7 @@ const Gallery = () => {
         onCancel={handleUploadModalClose}
         footer={null}
         width={800}
+        destroyOnClose
       >
         <UploadMediaTabs
           onUploadSuccess={handleMediaUploadSuccess} // Pass the callback

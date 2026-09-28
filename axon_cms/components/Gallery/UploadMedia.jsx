@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Upload, Button, message, Progress, Tag } from "antd";
 import { InboxOutlined, DeleteOutlined } from "@ant-design/icons";
 import axios from "axios"; // Use axios directly for Cloudinary
@@ -6,6 +6,15 @@ import instance from "../../axios"; // Existing axios instance for your backend
 import Image from "next/image";
 
 const { Dragger } = Upload;
+
+const extractUploadedMedia = (payload) => {
+  if (!payload) return [];
+  if (Array.isArray(payload)) return payload;
+  if (Array.isArray(payload.media)) return payload.media;
+  if (Array.isArray(payload.data)) return payload.data;
+  if (payload.id) return [payload];
+  return [];
+};
 
 const UploadMedia = ({
   onUploadSuccess,
@@ -16,6 +25,8 @@ const UploadMedia = ({
 }) => {
   const [fileList, setFileList] = useState([]);
   const [uploading, setUploading] = useState(false);
+  const pendingUploads = useRef(0);
+  const uploadedMedia = useRef([]);
 
   const handleBeforeUpload = (file) => {
     const maxSize = 1024 * 1024 * 1024; // 1GB in bytes
@@ -76,14 +87,25 @@ const UploadMedia = ({
     setFileList((prev) => prev.filter((f) => f.uid !== file.uid));
   };
 
+  const finishBatchIfIdle = () => {
+    if (pendingUploads.current > 0 || uploadedMedia.current.length === 0) {
+      return;
+    }
+    const batch = uploadedMedia.current;
+    uploadedMedia.current = [];
+    setFileList([]);
+    onUploadSuccess?.(batch);
+  };
+
   const customUpload = async ({ onSuccess, onError, file, onProgress }) => {
     const formData = new FormData();
     let response;
 
+    pendingUploads.current += 1;
+    setUploading(true);
+
     try {
-      setUploading(true);
       if (uploadDestination === "cloudinary") {
-        // Cloudinary Upload
         formData.append("file", file);
         formData.append("upload_preset", "headless_cms_preset");
 
@@ -100,15 +122,10 @@ const UploadMedia = ({
           }
         );
 
-        // Simulate a delay for testing purposes
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-
-        // Call onSuccess with the response data
         onSuccess(response.data, file);
+        uploadedMedia.current.push(...extractUploadedMedia(response.data));
         message.success(`${file.name} uploaded successfully to Cloudinary.`);
-        onUploadSuccess([response.data]); // Pass the new media to the callback
       } else {
-        // Backend Upload — field name must be `file` (multer .array('file'))
         formData.append("file", file);
 
         response = await instance.post("/media/upload", formData, {
@@ -123,21 +140,18 @@ const UploadMedia = ({
           },
         });
 
-        // Simulate a delay for testing purposes
-        await new Promise((resolve) => setTimeout(resolve, 1000));
-
-        // Call onSuccess with the response data
         onSuccess(response.data, file);
+        uploadedMedia.current.push(...extractUploadedMedia(response.data));
         message.success(`${file.name} uploaded successfully.`);
-        onUploadSuccess(response.data.media || response.data.data || []);
       }
-
-      setUploading(false);
     } catch (error) {
       console.error("Upload error:", error);
       onError(error);
       message.error(`${file.name} upload failed.`);
-      setUploading(false);
+    } finally {
+      pendingUploads.current -= 1;
+      setUploading(pendingUploads.current > 0);
+      finishBatchIfIdle();
     }
   };
 
@@ -150,7 +164,7 @@ const UploadMedia = ({
         onChange={handleChange}
         onRemove={handleRemove}
         fileList={fileList}
-        listType="picture"
+        showUploadList={false}
         className="rounded-md"
       >
         <p className="ant-upload-drag-icon">

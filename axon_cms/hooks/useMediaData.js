@@ -58,6 +58,9 @@ const useMediaData = () => {
 
         setMediaAssets(data);
         setTotalMediaAssets(total);
+        if (data.length > 0) {
+          await addMediaToDB(data);
+        }
       } catch (error) {
         console.error("Error fetching media from API:", error);
         message.error("Error fetching media from API.");
@@ -232,19 +235,17 @@ const useMediaData = () => {
   // Add Media
   const addMedia = useCallback(async (media) => {
     try {
-      await addMediaToDB(Array.isArray(media) ? media : [media]);
-      //   setMediaAssets((prev) =>
-      //     Array.isArray(media) ? [...media, ...prev] : [media, ...prev]
-      //   );
-
-      setMediaAssets((prev) =>
-        Array.isArray(media) ? [...prev, ...media] : [...prev, media]
+      const items = (Array.isArray(media) ? media : [media]).filter(
+        (item) => item && item.id
       );
+      if (items.length === 0) return;
 
-      setTotalMediaAssets((prev) =>
-        Array.isArray(media) ? prev + media.length : prev + 1
-      );
-      // message.success("Media added successfully.");
+      await addMediaToDB(items);
+      setMediaAssets((prev) => {
+        const newIds = new Set(items.map((item) => item.id));
+        return [...items, ...prev.filter((item) => !newIds.has(item.id))];
+      });
+      setTotalMediaAssets((prev) => prev + items.length);
     } catch (error) {
       console.error("Error adding media:", error);
       message.error("Error adding media.");
@@ -298,22 +299,29 @@ const useMediaData = () => {
     setCurrentPage(1); // Reset to first page on tag change
   };
 
-  const refreshMedia = useCallback(async () => {
-    await fetchFromAPI(
+  const refreshMedia = useCallback(
+    async (page) => {
+      const targetPage = typeof page === "number" ? page : currentPage;
+      if (typeof page === "number" && page !== currentPage) {
+        setCurrentPage(page);
+      }
+      await fetchFromAPI(
+        targetPage,
+        itemsPerPage,
+        sortType,
+        searchText,
+        selectedTag
+      );
+    },
+    [
       currentPage,
       itemsPerPage,
       sortType,
       searchText,
-      selectedTag
-    );
-  }, [
-    currentPage,
-    itemsPerPage,
-    sortType,
-    searchText,
-    selectedTag,
-    fetchFromAPI,
-  ]);
+      selectedTag,
+      fetchFromAPI,
+    ]
+  );
 
   return {
     mediaAssets,
