@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo } from "react";
 import { Button, Empty } from "antd";
 import { PlusOutlined, ShoppingOutlined } from "@ant-design/icons";
 import ProductRow from "./ProductRow";
@@ -14,24 +14,11 @@ const ProductsList = ({
   emptyDescription = "Click Upload Product to add your first item.",
   createLabel = "Upload Product",
 }) => {
-  const [expandedProductId, setExpandedProductId] = useState(null);
-
   const typeById = useMemo(() => {
     const map = new Map();
     productTypes.forEach((type) => map.set(String(type.id), type));
     return map;
   }, [productTypes]);
-
-  const handleExpand = (productId) => {
-    setExpandedProductId((prev) => (prev === productId ? null : productId));
-  };
-
-  const handleDelete = async (productId) => {
-    await onDelete?.(productId);
-    if (expandedProductId === productId) {
-      setExpandedProductId(null);
-    }
-  };
 
   if (!products.length) {
     return (
@@ -66,7 +53,7 @@ const ProductsList = ({
 
   return (
     <div className="mt-6 space-y-4">
-      <div className="grid grid-cols-1 items-start gap-4 xl:grid-cols-2">
+      <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
         {products.map((product) => (
           <ProductRow
             key={product.id}
@@ -75,11 +62,9 @@ const ProductsList = ({
               product.product_type ||
               typeById.get(String(product.product_type_id))
             }
-            expandedProductId={expandedProductId}
-            handleExpand={handleExpand}
             onView={onView}
             onEdit={onEdit}
-            onDelete={handleDelete}
+            onDelete={onDelete}
           />
         ))}
       </div>

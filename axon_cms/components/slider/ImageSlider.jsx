@@ -99,35 +99,34 @@ const ImageSlider = ({
         )
       }
       actions={actions}
-      className="media-card slider-card h-full overflow-hidden shadow-md rounded-md"
+      className="media-card slider-card page-list-card overflow-hidden shadow-md rounded-md"
     >
-      <div className="flex min-h-16 flex-1 flex-col pt-4">
+      <div className="flex flex-col pt-3">
         <div className="media-card-meta flex items-center justify-between gap-3">
           <div className="flex min-w-0 items-center gap-2">
             <Badge count={`ID-${slider.id}`} style={idBadgeStyle} />
-            <h3 className="m-0 truncate text-lg font-semibold">
+            <h3 className="m-0 truncate text-base font-semibold">
               {slider.title_en || "Title Unavailable"}
             </h3>
           </div>
-          <h5 className="mb-0 shrink-0 text-md font-bold text-gray-400">
+          <h5 className="mb-0 shrink-0 text-sm font-bold text-gray-400">
             {capitalize(slider.type) || "Type Unavailable"}
           </h5>
         </div>
 
-        <div className="mt-3 min-h-7 overflow-hidden whitespace-nowrap">
-          {Array.isArray(slider.additional?.tags) &&
-            slider.additional.tags.slice(0, 6).map((tagItem) => (
-              <Tag key={tagItem} color="yellow" className="mb-0">
-                {tagItem}
-              </Tag>
-            ))}
-          {Array.isArray(slider.additional?.tags) &&
-            slider.additional.tags.length > 6 && (
-              <Tag key="more" color="green" className="mb-0">
-                ...
-              </Tag>
-            )}
-        </div>
+        {Array.isArray(slider.additional?.tags) &&
+          slider.additional.tags.length > 0 && (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {slider.additional.tags.map((tagItem) => (
+                <Tag
+                  key={tagItem}
+                  className="m-0 rounded-md border-gray-200 bg-gray-50 px-2.5 py-0.5 text-xs text-gray-700"
+                >
+                  {tagItem}
+                </Tag>
+              ))}
+            </div>
+          )}
       </div>
     </Card>
   );

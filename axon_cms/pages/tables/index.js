@@ -20,7 +20,6 @@ const TablesPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [filters, setFilters] = useState({ status: undefined });
-  const [expandedTableId, setExpandedTableId] = useState(null);
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [editingTable, setEditingTable] = useState(null);
   const [previewTable, setPreviewTable] = useState(null);
@@ -96,10 +95,6 @@ const TablesPage = () => {
     return sortedTables.slice(start, start + itemsPerPage);
   }, [sortedTables, currentPage, itemsPerPage]);
 
-  const handleExpand = useCallback((tableId) => {
-    setExpandedTableId((prev) => (prev === tableId ? null : tableId));
-  }, []);
-
   const handleAddTable = useCallback(() => {
     setEditingTable(null);
     setIsFormOpen(true);
@@ -122,7 +117,6 @@ const TablesPage = () => {
       await instance.delete(`/tables/${id}`);
       message.success("Table deleted successfully.");
       setAllTables((prev) => prev.filter((table) => table.id !== id));
-      if (expandedTableId === id) setExpandedTableId(null);
     } catch (error) {
       console.error("Error deleting table:", error);
       message.error("Failed to delete table.");
@@ -154,8 +148,6 @@ const TablesPage = () => {
 
       <TablesList
         tables={paginatedTables}
-        expandedTableId={expandedTableId}
-        handleExpand={handleExpand}
         onPreview={setPreviewTable}
         onEdit={(table) => {
           setEditingTable(table);

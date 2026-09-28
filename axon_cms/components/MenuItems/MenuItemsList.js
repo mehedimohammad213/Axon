@@ -10,8 +10,6 @@ const MenuItemsList = ({
   setMenuItems,
   editingItemId,
   setEditingItemId,
-  expandedItemId,
-  handleExpand,
   onCreate,
 }) => {
   if (!menuItems.length) {
@@ -51,7 +49,7 @@ const MenuItemsList = ({
 
   return (
     <div className="mt-6 space-y-4">
-      <div className="grid grid-cols-1 items-start gap-4 xl:grid-cols-2">
+      <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
         {menuItems.map((menuItem) => (
           <MenuItemRow
             key={menuItem.id}
@@ -61,8 +59,6 @@ const MenuItemsList = ({
             setMenuItems={setMenuItems}
             editingItemId={editingItemId}
             setEditingItemId={setEditingItemId}
-            expandedItemId={expandedItemId}
-            handleExpand={handleExpand}
           />
         ))}
       </div>

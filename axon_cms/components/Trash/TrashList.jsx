@@ -5,8 +5,6 @@ import TrashRow from "./TrashRow";
 
 const TrashList = ({
   items,
-  expandedItemId,
-  handleExpand,
   onRestore,
   onDelete,
   busyKey,
@@ -41,15 +39,13 @@ const TrashList = ({
 
   return (
     <div className="mt-6 space-y-4">
-      <div className="grid grid-cols-1 items-start gap-4 xl:grid-cols-2">
+      <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
         {items.map((item) => {
           const key = itemKey(item);
           return (
             <TrashRow
               key={key}
               item={item}
-              expandedItemId={expandedItemId}
-              handleExpand={handleExpand}
               onRestore={onRestore}
               onDelete={onDelete}
               busy={busyKey === key}

@@ -14,7 +14,6 @@ const ProductTypesPage = () => {
   const [productTypes, setProductTypes] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortType, setSortType] = useState("desc");
-  const [expandedTypeId, setExpandedTypeId] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [filters, setFilters] = useState({ status: undefined });
@@ -93,10 +92,6 @@ const ProductTypesPage = () => {
     return sortedTypes.slice(startIndex, startIndex + itemsPerPage);
   }, [sortedTypes, currentPage, itemsPerPage]);
 
-  const handleExpand = useCallback((typeId) => {
-    setExpandedTypeId((prev) => (prev === typeId ? null : typeId));
-  }, []);
-
   const handleCreate = useCallback(() => {
     router.push("/products/create-type");
   }, [router]);
@@ -118,7 +113,6 @@ const ProductTypesPage = () => {
       try {
         await instance.delete(`/product-types/${id}`);
         message.success("Product type deleted successfully.");
-        if (expandedTypeId === id) setExpandedTypeId(null);
         fetchProductTypes();
       } catch (error) {
         message.error(
@@ -126,7 +120,7 @@ const ProductTypesPage = () => {
         );
       }
     },
-    [expandedTypeId, fetchProductTypes]
+    [fetchProductTypes]
   );
 
   if (loading) {
@@ -160,8 +154,6 @@ const ProductTypesPage = () => {
 
       <ProductTypesList
         productTypes={paginatedTypes}
-        expandedTypeId={expandedTypeId}
-        handleExpand={handleExpand}
         onUploadProduct={(type) =>
           router.push(`/products/upload?typeId=${type.id}`)
         }

@@ -5,8 +5,6 @@ import ProductTypeRow from "./ProductTypeRow";
 
 const ProductTypesList = ({
   productTypes,
-  expandedTypeId,
-  handleExpand,
   onUploadProduct,
   onDelete,
   onCreate,
@@ -49,13 +47,11 @@ const ProductTypesList = ({
 
   return (
     <div className="mt-6 space-y-4">
-      <div className="grid grid-cols-1 items-start gap-4 xl:grid-cols-2">
+      <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
         {productTypes.map((type) => (
           <ProductTypeRow
             key={type.id}
             productType={type}
-            expandedTypeId={expandedTypeId}
-            handleExpand={handleExpand}
             onUploadProduct={onUploadProduct}
             onDelete={onDelete}
           />

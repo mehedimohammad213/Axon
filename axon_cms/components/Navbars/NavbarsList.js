@@ -51,7 +51,7 @@ const NavbarsList = ({
 
   return (
     <div className="mt-6 space-y-4">
-      <div className="grid grid-cols-1 items-start gap-4 md:grid-cols-2 xl:grid-cols-3">
+      <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
         {navbars.map((navbar) => (
           <NavbarRow
             key={navbar.id}

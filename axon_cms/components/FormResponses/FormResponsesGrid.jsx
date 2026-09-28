@@ -12,14 +12,9 @@ const FormResponsesGrid = ({
   emptyTitle = "No responses yet",
   emptyDescription = "Submitted form responses will appear here.",
 }) => {
-  const [expandedResponseId, setExpandedResponseId] = useState(null);
   const [viewDrawerVisible, setViewDrawerVisible] = useState(false);
   const [editDrawerVisible, setEditDrawerVisible] = useState(false);
   const [selectedResponse, setSelectedResponse] = useState(null);
-
-  const handleExpand = (responseId) => {
-    setExpandedResponseId((prev) => (prev === responseId ? null : responseId));
-  };
 
   const handleView = (response) => {
     setSelectedResponse(response);
@@ -36,7 +31,6 @@ const FormResponsesGrid = ({
       const response = await instance.delete(`/form-submission/${id}`);
       if (response.status === 200) {
         message.success("Form response deleted successfully.");
-        if (expandedResponseId === id) setExpandedResponseId(null);
         refreshData();
       } else {
         message.error("Failed to delete the form response.");
@@ -90,13 +84,11 @@ const FormResponsesGrid = ({
   return (
     <>
       <div className="mt-6 space-y-4">
-        <div className="grid grid-cols-1 items-start gap-4 xl:grid-cols-2">
+        <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
           {responses.map((response) => (
             <FormResponseRow
               key={response.id}
               response={response}
-              expandedResponseId={expandedResponseId}
-              handleExpand={handleExpand}
               onView={handleView}
               onEdit={handleEdit}
               onDelete={handleDelete}

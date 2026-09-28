@@ -19,7 +19,6 @@ const TrashPage = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [selectedType, setSelectedType] = useState("all");
-  const [expandedItemId, setExpandedItemId] = useState(null);
   const [busyKey, setBusyKey] = useState("");
 
   const fetchTrash = useCallback(async () => {
@@ -90,10 +89,6 @@ const TrashPage = () => {
 
   const itemKey = (item) => `${item.type}-${item.id}`;
 
-  const handleExpand = useCallback((itemId) => {
-    setExpandedItemId((prev) => (prev === itemId ? null : itemId));
-  }, []);
-
   const onShowChange = useCallback((value) => {
     setItemsPerPage(parseInt(value, 10));
   }, []);
@@ -162,8 +157,6 @@ const TrashPage = () => {
 
       <TrashList
         items={paginatedItems}
-        expandedItemId={expandedItemId}
-        handleExpand={handleExpand}
         onRestore={handleRestore}
         onDelete={handlePermanentDelete}
         busyKey={busyKey}

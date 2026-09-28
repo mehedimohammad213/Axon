@@ -20,7 +20,6 @@ const MenuItems = () => {
   const [allMenuItems, setAllMenuItems] = useState([]);
   const [pages, setPages] = useState([]);
   const [editingItemId, setEditingItemId] = useState(null);
-  const [expandedItemId, setExpandedItemId] = useState(null);
   const [isAddMenuItemOpen, setIsAddMenuItemOpen] = useState(false);
   const [loading, setLoading] = useState(true);
   const [sortType, setSortType] = useState("desc");
@@ -115,10 +114,6 @@ const MenuItems = () => {
     return sortedMenuItems.slice(startIndex, startIndex + itemsPerPage);
   }, [sortedMenuItems, currentPage, itemsPerPage]);
 
-  const handleExpand = useCallback((itemId) => {
-    setExpandedItemId((prev) => (prev === itemId ? null : itemId));
-  }, []);
-
   const handleAddMenuItem = useCallback(() => setIsAddMenuItemOpen(true), []);
   const handleCancelAddMenuItem = useCallback(
     () => setIsAddMenuItemOpen(false),
@@ -196,8 +191,6 @@ const MenuItems = () => {
         setMenuItems={setMenuItems}
         editingItemId={editingItemId}
         setEditingItemId={setEditingItemId}
-        expandedItemId={expandedItemId}
-        handleExpand={handleExpand}
         onCreate={handleAddMenuItem}
       />
 

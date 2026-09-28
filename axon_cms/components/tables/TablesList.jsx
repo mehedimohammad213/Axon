@@ -5,8 +5,6 @@ import TableRow from "./TableRow";
 
 const TablesList = ({
   tables,
-  expandedTableId,
-  handleExpand,
   onPreview,
   onEdit,
   onDelete,
@@ -49,13 +47,11 @@ const TablesList = ({
 
   return (
     <div className="mt-6 space-y-4">
-      <div className="grid grid-cols-1 items-start gap-4 xl:grid-cols-2">
+      <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
         {tables.map((table) => (
           <TableRow
             key={table.id}
             table={table}
-            expandedTableId={expandedTableId}
-            handleExpand={handleExpand}
             onPreview={onPreview}
             onEdit={onEdit}
             onDelete={onDelete}

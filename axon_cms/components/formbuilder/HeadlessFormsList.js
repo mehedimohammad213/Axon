@@ -14,17 +14,12 @@ const HeadlessFormsList = ({
   createLabel = "Create form",
 }) => {
   const { reset } = useContext(FormBuilderContext);
-  const [expandedFormId, setExpandedFormId] = useState(null);
   const [selectedFormId, setSelectedFormId] = useState(null);
   const [drawerVisible, setDrawerVisible] = useState(false);
 
   useEffect(() => {
     setDrawerVisible(Boolean(selectedFormId));
   }, [selectedFormId]);
-
-  const handleExpand = (formId) => {
-    setExpandedFormId((prev) => (prev === formId ? null : formId));
-  };
 
   const handlePreview = (formId) => {
     setSelectedFormId(formId);
@@ -40,9 +35,6 @@ const HeadlessFormsList = ({
     if (selectedFormId === formId) {
       handleCloseDrawer();
       reset();
-    }
-    if (expandedFormId === formId) {
-      setExpandedFormId(null);
     }
   };
 
@@ -79,13 +71,11 @@ const HeadlessFormsList = ({
 
   return (
     <div className="mt-6 space-y-4">
-      <div className="grid grid-cols-1 items-start gap-4 xl:grid-cols-2">
+      <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
         {forms.map((form) => (
           <FormRow
             key={form.id}
             form={form}
-            expandedFormId={expandedFormId}
-            handleExpand={handleExpand}
             onPreview={handlePreview}
             onDelete={handleDelete}
           />
