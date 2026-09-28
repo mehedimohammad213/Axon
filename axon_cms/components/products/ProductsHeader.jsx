@@ -76,8 +76,7 @@ const ProductsHeader = ({
               <Button
                 icon={<PlusCircleOutlined />}
                 onClick={onPrimaryAction}
-                className="h-10 rounded-lg border-0 bg-brand px-5 font-medium text-white shadow-sm hover:bg-brand-dark"
-                size="large"
+                className="headlessbutton headlessbutton-pill !mr-0"
               >
                 {primaryActionLabel}
               </Button>

@@ -69,7 +69,7 @@ const HeadlessFormsList = ({
               type="primary"
               icon={<PlusOutlined />}
               onClick={onCreate}
-              className="mt-2 bg-brand hover:bg-brand-dark"
+              className="headlessbutton headlessbutton-pill !mr-0 mt-2"
             >
               {createLabel}
             </Button>
@@ -113,7 +113,7 @@ const HeadlessFormsList = ({
               router.push(`/formbuilder/edit-form?id=${selectedFormId}`);
               handleCloseDrawer();
             }}
-            className="bg-brand hover:bg-brand-dark"
+            className="headlessbutton headlessbutton-pill !mr-0"
           >
             Edit Form
           </Button>

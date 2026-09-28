@@ -66,8 +66,7 @@ const FormBuilderHeader = ({
             <Button
               icon={<PlusCircleOutlined />}
               onClick={() => router.push("/formbuilder/create-form")}
-              className="h-10 rounded-lg border-0 bg-brand px-5 font-medium text-white shadow-sm hover:bg-brand-dark"
-              size="large"
+              className="headlessbutton headlessbutton-pill !mr-0"
             >
               Create Form
             </Button>
