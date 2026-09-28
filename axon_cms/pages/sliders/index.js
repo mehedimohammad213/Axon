@@ -285,7 +285,6 @@ const Sliders = () => {
         visible={isPreviewVisible}
         slider={previewSlider}
         onClose={handleClosePreview}
-        onEdit={handleEditClick}
       />
 
       {loading ? (
