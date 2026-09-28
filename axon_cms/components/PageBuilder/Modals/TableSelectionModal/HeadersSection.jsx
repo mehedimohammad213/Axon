@@ -66,7 +66,7 @@ const SortableHeaderItem = ({
     >
       <button
         type="button"
-        className="flex h-8 w-8 items-center justify-center rounded border border-gray-300 bg-gray-50 text-gray-600"
+        className="flex h-8 w-8 items-center justify-center rounded-full border border-gray-300 bg-gray-50 text-gray-600"
         style={{ cursor: "grab", touchAction: "none" }}
         aria-label="Drag column"
         {...attributes}
@@ -91,6 +91,7 @@ const SortableHeaderItem = ({
 
       {headers.length > 1 && (
         <Button
+          shape="circle"
           icon={<MinusOutlined />}
           danger
           onClick={() => removeHeader(index)}
@@ -208,7 +209,7 @@ const HeadersSection = ({
         <Button
           onClick={addHeader}
           icon={<PlusOutlined />}
-          className="headlessbutton"
+          className="headlessbutton headlessbutton-pill"
         >
           Add Column
         </Button>

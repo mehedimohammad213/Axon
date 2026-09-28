@@ -45,6 +45,7 @@ const TablePreviewDrawer = ({ open, onClose, table }) => {
       open={open}
       onClose={onClose}
       width="min(900px, 92vw)"
+      rootClassName="media-preview-drawer"
     >
       <div className="mb-4 space-y-3">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">

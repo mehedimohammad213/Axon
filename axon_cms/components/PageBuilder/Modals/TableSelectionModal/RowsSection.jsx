@@ -47,7 +47,7 @@ const actionBtnStyle = {
   display: "inline-flex",
   alignItems: "center",
   justifyContent: "center",
-  borderRadius: 6,
+  borderRadius: 9999,
   border: "1px solid #e5e7eb",
   background: "#f9fafb",
   color: "#4b5563",
@@ -167,15 +167,17 @@ const CellEditor = ({
       <Tooltip title="Upload image">
         <Button
           type="text"
+          shape="circle"
           icon={<CloudUploadOutlined style={{ fontSize: 15 }} />}
           onClick={() => onOpenImagePicker(rowIndex, colIndex)}
-          className="!rounded-none"
+          className="m-1"
           style={{
-            height: "auto",
-            width: 36,
-            borderLeft: "1px solid #e5e7eb",
+            width: 28,
+            height: 28,
+            minWidth: 28,
             color: "#2563eb",
-            background: "#f8fafc",
+            background: "#eff6ff",
+            border: "1px solid #bfdbfe",
           }}
         />
       </Tooltip>
@@ -258,13 +260,13 @@ const SortableRow = ({
             <Tooltip title="Delete row">
               <Button
                 type="text"
+                shape="circle"
                 icon={<MinusOutlined style={{ fontSize: 12 }} />}
                 style={{
                   width: 28,
                   height: 28,
                   minWidth: 28,
                   padding: 0,
-                  borderRadius: 6,
                   border: "1px solid #fecaca",
                   background: "#fef2f2",
                   color: "#dc2626",
@@ -445,7 +447,7 @@ const RowsSection = ({ headers, rows, setRows }) => {
         <Button
           onClick={addRow}
           icon={<PlusOutlined />}
-          className="headlessbutton"
+          className="headlessbutton headlessbutton-pill"
         >
           Add Row
         </Button>
