@@ -39,7 +39,7 @@ export default function Login() {
   return (
     <div className="fixed inset-0 flex w-full h-screen overflow-hidden bg-white">
       {/* Left — Login form */}
-      <div className="relative flex h-full w-full items-start justify-center overflow-y-auto bg-white px-4 py-8 pb-24 sm:px-6 md:px-12 lg:w-[46%]">
+      <div className="relative flex h-full w-full items-start justify-center overflow-y-auto bg-white px-4 py-8 pb-24 sm:px-6 md:px-12 lg:w-1/2">
         <div className="relative z-10 w-full max-w-[400px] my-auto">
           <div className="mb-10">
             <Image
@@ -153,7 +153,7 @@ export default function Login() {
       </div>
 
       {/* Right — Visual panel */}
-      <div className="hidden lg:flex relative w-[54%] h-full overflow-hidden bg-slate-700">
+      <div className="hidden lg:flex relative w-1/2 h-full overflow-hidden bg-[#c5def7]">
         <Image
           src="/images/ui/rrightbg.png"
           alt="Axon workspace"
@@ -161,18 +161,19 @@ export default function Login() {
           objectFit="cover"
           objectPosition="center"
           priority
+          className="opacity-[0.22] mix-blend-multiply"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-slate-800/45 via-slate-700/30 to-brand/20" />
+        <div className="absolute inset-0 bg-gradient-to-br from-brand/55 via-brand-dark/45 to-brand-dark/60" />
 
         <div className="absolute inset-0 flex flex-col items-center justify-center p-12 xl:p-16 z-10 text-center">
           <div className="max-w-md">
-            <p className="text-sm font-medium text-white/70 mb-3 tracking-wide">
+            <p className="text-sm font-medium text-white/80 mb-3 tracking-wide">
               Axon
             </p>
             <h2 className="text-3xl xl:text-4xl font-semibold text-white leading-tight tracking-tight mb-4">
               Manage content with clarity and speed
             </h2>
-            <p className="text-[15px] text-slate-200/90 leading-relaxed">
+            <p className="text-[15px] text-white/85 leading-relaxed">
               Build pages, organize media, and publish across sites from one
               calm workspace designed for modern teams.
             </p>
