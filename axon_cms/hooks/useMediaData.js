@@ -266,19 +266,28 @@ const useMediaData = () => {
     }
   }, []);
 
+  const removeMediaLocally = useCallback(async (id) => {
+    await deleteMediaFromDB(id);
+    setMediaAssets((prev) => prev.filter((item) => item.id !== id));
+    setTotalMediaAssets((prev) => Math.max(0, prev - 1));
+  }, []);
+
   // Delete Media
   const deleteMedia = useCallback(async (id) => {
     try {
       await instance.delete(`/media/${id}`);
-      await deleteMediaFromDB(id);
-      setMediaAssets((prev) => prev.filter((item) => item.id !== id));
-      setTotalMediaAssets((prev) => prev - 1);
+      await removeMediaLocally(id);
       message.success("Media deleted successfully.");
     } catch (error) {
+      if (error?.response?.status === 404) {
+        await removeMediaLocally(id);
+        message.success("Media removed.");
+        return;
+      }
       console.error("Error deleting media:", error);
       message.error("Error deleting media.");
     }
-  }, []);
+  }, [removeMediaLocally]);
 
   // Handlers for Pagination, Search, and Filter
   const handlePageChange = (page) => setCurrentPage(page);

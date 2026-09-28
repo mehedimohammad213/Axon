@@ -65,7 +65,7 @@ const GalleryHeader = ({
             <Button
               icon={<PlusCircleOutlined />}
               onClick={onCreate}
-              className="h-10 rounded-lg border-0 bg-brand px-5 font-medium text-white shadow-sm hover:bg-brand-dark"
+              className="h-10 rounded-full border-0 bg-brand px-5 font-medium text-white shadow-sm hover:bg-brand-dark"
               size="large"
             >
               Add Media

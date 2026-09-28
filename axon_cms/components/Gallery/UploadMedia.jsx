@@ -229,7 +229,7 @@ const UploadMedia = ({
         }}
         disabled={fileList.length === 0 || uploading}
         loading={uploading}
-        className="headlessbutton mt-4 w-full hidden"
+        className="headlessbutton headlessbutton-pill mt-4 w-full"
         icon={<UploadOutlined />}
       >
         Start Upload

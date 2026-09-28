@@ -110,6 +110,7 @@ const GrabFromWeb = ({ onUploadSuccess, addMediaToDB }) => {
         loading={isLoading}
         onClick={handleGrabAndPreview}
         icon={<DownloadOutlined />}
+        className="headlessbutton headlessbutton-pill"
       >
         Preview Image
       </Button>
@@ -119,7 +120,11 @@ const GrabFromWeb = ({ onUploadSuccess, addMediaToDB }) => {
         open={isModalVisible}
         onCancel={handleCancel}
         footer={[
-          <Button key="cancel" onClick={handleCancel}>
+          <Button
+            key="cancel"
+            onClick={handleCancel}
+            className="headlesscancelbutton headlessbutton-pill"
+          >
             Cancel
           </Button>,
           <Button
@@ -128,6 +133,7 @@ const GrabFromWeb = ({ onUploadSuccess, addMediaToDB }) => {
             loading={isLoading}
             onClick={handleUpload}
             icon={<CheckOutlined />}
+            className="headlessbutton headlessbutton-pill"
           >
             Upload Image
           </Button>,
