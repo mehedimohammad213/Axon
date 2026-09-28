@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { Drawer, Empty, Form, Pagination, Select, Spin, message } from "antd";
+import { Empty, Form, Modal, Pagination, Select, Spin, message } from "antd";
 import instance from "../../../axios";
 import AdminListHeader from "../../../components/admin/AdminListHeader";
 import OrganizationsList from "../../../components/admin/OrganizationsList";
@@ -174,29 +174,47 @@ export default function OrganizationsPage() {
         </div>
       )}
 
-      <Drawer
-        title="Create Organization"
-        placement="right"
+      <Modal
         open={createDrawerVisible}
-        onClose={() => setCreateDrawerVisible(false)}
-        width="min(720px, 92vw)"
+        onCancel={() => setCreateDrawerVisible(false)}
+        footer={null}
+        title={
+          <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
+            <img
+              src="/icons/headless/settings2.svg"
+              alt="Organizations"
+              className="w-6"
+            />
+            <span>Create Organization</span>
+          </div>
+        }
+        width={800}
         destroyOnClose
       >
         <CreateOrganization
           setModalVisible={setCreateDrawerVisible}
           fetchOrganizations={fetchOrganizations}
         />
-      </Drawer>
+      </Modal>
 
-      <Drawer
-        title="Edit Organization"
-        placement="right"
+      <Modal
         open={editDrawerVisible}
-        onClose={() => {
+        onCancel={() => {
           setEditDrawerVisible(false);
           setSelectedOrganization(null);
         }}
-        width="min(720px, 92vw)"
+        footer={null}
+        title={
+          <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
+            <img
+              src="/icons/headless/settings2.svg"
+              alt="Organizations"
+              className="w-6"
+            />
+            <span>Edit Organization</span>
+          </div>
+        }
+        width={800}
         destroyOnClose
       >
         <EditOrganization
@@ -204,7 +222,7 @@ export default function OrganizationsPage() {
           setModalVisible={setEditDrawerVisible}
           fetchOrganizations={fetchOrganizations}
         />
-      </Drawer>
+      </Modal>
     </div>
   );
 }

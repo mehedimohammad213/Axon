@@ -102,10 +102,24 @@ const UserForm = ({
   return (
     <Modal
       open={visible}
-      title="Create New User"
+      title={
+        <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
+          <img
+            src="/icons/headless/user-settings.svg"
+            alt="Users"
+            className="w-6"
+          />
+          <span>Create User</span>
+        </div>
+      }
       onCancel={onCancel}
+      width={800}
       footer={[
-        <Button key="back" onClick={onCancel} danger>
+        <Button
+          key="back"
+          onClick={onCancel}
+          className="headlesscancelbutton headlessbutton-pill !mr-0"
+        >
           Cancel
         </Button>,
         <Button
@@ -113,12 +127,7 @@ const UserForm = ({
           type="primary"
           loading={loading}
           onClick={handleCreateUser}
-          style={{
-            backgroundColor: "var(--theme)",
-            borderColor: "var(--theme)",
-            color: "white",
-            fontWeight: 600,
-          }}
+          className="headlessbutton headlessbutton-pill !mr-0"
         >
           Create
         </Button>,

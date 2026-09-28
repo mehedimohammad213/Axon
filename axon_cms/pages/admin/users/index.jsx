@@ -175,7 +175,7 @@ export default function AdminUsersPage() {
         iconAlt="Users"
         itemCount={allUsers.length}
         countLabel={{ singular: "User", plural: "Users" }}
-        createLabel="Add User"
+        createLabel="Create User"
         onCreate={canCreateUser ? () => setCreateUser(true) : undefined}
         showCreate={canCreateUser}
         apiEndpoint={buildApiEndpoint("/admin/users")}

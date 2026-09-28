@@ -80,22 +80,32 @@ const UserEditModal = ({
 
   return (
     <Modal
-      title={isEditingSelf ? "Edit Your Profile" : "Edit User"}
+      title={
+        <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
+          <img
+            src="/icons/headless/user-settings.svg"
+            alt="Users"
+            className="w-6"
+          />
+          <span>{isEditingSelf ? "Edit Your Profile" : "Edit User"}</span>
+        </div>
+      }
       open={visible}
       onCancel={onCancel}
+      width={800}
       footer={[
-        <Button key="back" onClick={onCancel} danger>
+        <Button
+          key="back"
+          onClick={onCancel}
+          className="headlesscancelbutton headlessbutton-pill !mr-0"
+        >
           Cancel
         </Button>,
         <Button
           key="submit"
           type="primary"
           loading={loading}
-          style={{
-            backgroundColor: "var(--theme)",
-            borderColor: "var(--theme)",
-            fontWeight: 600,
-          }}
+          className="headlessbutton headlessbutton-pill !mr-0"
           onClick={() => form.submit()}
         >
           Update

@@ -3,7 +3,6 @@ import { Button, Empty, message } from "antd";
 import { PlusOutlined, UserOutlined } from "@ant-design/icons";
 import UserRow from "./UserRow";
 import UserEditModal from "../settings/userv2/UserEditModal";
-import UserViewModal from "../settings/userv2/UserViewModal";
 import instance from "../../axios";
 import { usePermissions } from "../../src/hooks/usePermissions";
 
@@ -17,7 +16,6 @@ const UsersList = ({
   const [expandedUserId, setExpandedUserId] = useState(null);
   const [selectedUser, setSelectedUser] = useState(null);
   const [isEditModalVisible, setIsEditModalVisible] = useState(false);
-  const [isViewModalVisible, setIsViewModalVisible] = useState(false);
 
   const { hasPermission, isSuperAdmin } = usePermissions();
   const isAdmin =
@@ -73,9 +71,9 @@ const UsersList = ({
               type="primary"
               icon={<PlusOutlined />}
               onClick={onCreate}
-              className="mt-2 bg-brand hover:bg-brand-dark"
+              className="headlessbutton headlessbutton-pill !mr-0 mt-2"
             >
-              Add user
+              Create user
             </Button>
           )}
         </Empty>
@@ -97,10 +95,6 @@ const UsersList = ({
             onExpand={(id) =>
               setExpandedUserId((prev) => (prev === id ? null : id))
             }
-            onView={(record) => {
-              setSelectedUser(record);
-              setIsViewModalVisible(true);
-            }}
             onEdit={(record) => {
               setSelectedUser(record);
               setIsEditModalVisible(true);
@@ -116,16 +110,6 @@ const UsersList = ({
         onCancel={() => setIsEditModalVisible(false)}
         fetchUsers={fetchUsers}
         roles={roles}
-        currentUser={currentUser}
-      />
-      <UserViewModal
-        visible={isViewModalVisible}
-        user={selectedUser}
-        onCancel={() => setIsViewModalVisible(false)}
-        onEdit={() => {
-          setIsViewModalVisible(false);
-          setIsEditModalVisible(true);
-        }}
         currentUser={currentUser}
       />
     </div>

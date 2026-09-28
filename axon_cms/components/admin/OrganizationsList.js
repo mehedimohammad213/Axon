@@ -65,7 +65,7 @@ const OrganizationsList = ({
               type="primary"
               icon={<PlusOutlined />}
               onClick={onCreate}
-              className="mt-2 bg-brand hover:bg-brand-dark"
+              className="headlessbutton headlessbutton-pill !mr-0 mt-2"
             >
               Create organization
             </Button>
@@ -76,21 +76,23 @@ const OrganizationsList = ({
   }
 
   return (
-    <div className="mt-6 grid grid-cols-1 items-start gap-4 xl:grid-cols-2">
-      {organizations.map((organization) => (
-        <OrganizationRow
-          key={organization.id}
-          organization={organization}
-          isExpanded={expandedOrgId === organization.id}
-          onExpand={(id) =>
-            setExpandedOrgId((prev) => (prev === id ? null : id))
-          }
-          onEdit={onEdit}
-          onDelete={handleDelete}
-          onToggleActive={handleToggleActive}
-          isDeleting={isDeleting}
-        />
-      ))}
+    <div className="mt-6 space-y-4">
+      <div className="grid grid-cols-1 items-start gap-4 xl:grid-cols-2">
+        {organizations.map((organization) => (
+          <OrganizationRow
+            key={organization.id}
+            organization={organization}
+            isExpanded={expandedOrgId === organization.id}
+            onExpand={(id) =>
+              setExpandedOrgId((prev) => (prev === id ? null : id))
+            }
+            onEdit={onEdit}
+            onDelete={handleDelete}
+            onToggleActive={handleToggleActive}
+            isDeleting={isDeleting}
+          />
+        ))}
+      </div>
     </div>
   );
 };

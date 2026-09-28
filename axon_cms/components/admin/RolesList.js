@@ -75,9 +75,9 @@ const RolesList = ({
               type="primary"
               icon={<PlusOutlined />}
               onClick={onCreate}
-              className="mt-2 bg-brand hover:bg-brand-dark"
+              className="headlessbutton headlessbutton-pill !mr-0 mt-2"
             >
-              Add role
+              Create role
             </Button>
           )}
         </Empty>
@@ -119,7 +119,16 @@ const RolesList = ({
       />
 
       <Modal
-        title="Edit Role"
+        title={
+          <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
+            <img
+              src="/icons/headless/settings.svg"
+              alt="Edit Role"
+              className="w-6"
+            />
+            <span>Edit Role</span>
+          </div>
+        }
         open={editModalVisible}
         footer={null}
         onCancel={() => {

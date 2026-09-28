@@ -108,8 +108,7 @@ const AdminListHeader = ({
               <Button
                 icon={<PlusCircleOutlined />}
                 onClick={onCreate}
-                className="h-10 rounded-lg border-0 bg-brand px-5 font-medium text-white shadow-sm hover:bg-brand-dark"
-                size="large"
+                className="headlessbutton headlessbutton-pill !mr-0"
               >
                 {createLabel}
               </Button>
@@ -224,8 +223,17 @@ const AdminListHeader = ({
           >
             {renderFilterFields?.({ filterOptions })}
             <div className="mt-4 flex justify-end gap-2">
-              <Button onClick={handleResetFilters}>Reset</Button>
-              <Button type="primary" htmlType="submit" className="bg-brand">
+              <Button
+                onClick={handleResetFilters}
+                className="headlesscancelbutton headlessbutton-pill !mr-0"
+              >
+                Reset
+              </Button>
+              <Button
+                type="primary"
+                htmlType="submit"
+                className="headlessbutton headlessbutton-pill !mr-0"
+              >
                 Apply
               </Button>
             </div>

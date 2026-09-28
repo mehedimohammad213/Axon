@@ -264,10 +264,7 @@ export default function CreateOrganization({
             type="primary"
             htmlType="submit"
             loading={loading}
-            style={{
-              backgroundColor: "var(--theme)",
-              color: "white",
-            }}
+            className="headlessbutton headlessbutton-pill !mr-0"
           >
             Create Organization
           </Button>

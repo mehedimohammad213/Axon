@@ -99,10 +99,7 @@ export default function OrgCreateRole({
           type="primary"
           htmlType="submit"
           loading={loading}
-          style={{
-            backgroundColor: "var(--theme)",
-            color: "white",
-          }}
+          className="headlessbutton headlessbutton-pill !mr-0"
         >
           Create Role
         </Button>

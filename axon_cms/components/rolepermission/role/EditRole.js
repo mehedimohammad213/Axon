@@ -120,10 +120,7 @@ export default function EditRole({
           type="primary"
           htmlType="submit"
           loading={loading}
-          style={{
-            backgroundColor: "var(--theme)",
-            color: "white",
-          }}
+          className="headlessbutton headlessbutton-pill !mr-0"
         >
           Update Role
         </Button>

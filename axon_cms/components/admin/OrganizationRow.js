@@ -1,15 +1,27 @@
 import React from "react";
-import { Button, Card, Popconfirm, Switch, Tag, Tooltip } from "antd";
+import { Button, Card, Popconfirm, Switch, Tooltip } from "antd";
 import {
+  BankOutlined,
   CaretDownOutlined,
   CaretRightOutlined,
-  DeleteOutlined,
+  CloseCircleOutlined,
+  DeleteFilled,
   EditOutlined,
   EyeOutlined,
   TeamOutlined,
-  BankOutlined,
 } from "@ant-design/icons";
 import { useRouter } from "next/router";
+
+const InfoRow = ({ label, children }) => (
+  <div className="min-w-0">
+    <dt className="text-xs font-medium uppercase tracking-wide text-gray-400">
+      {label}
+    </dt>
+    <dd className="mt-1 break-words text-sm font-medium text-gray-800">
+      {children}
+    </dd>
+  </div>
+);
 
 const OrganizationRow = ({
   organization,
@@ -21,32 +33,33 @@ const OrganizationRow = ({
   isDeleting,
 }) => {
   const router = useRouter();
+  const userCount = organization.users_count ?? 0;
+
+  const toggleCard = () => {
+    onExpand(organization.id);
+  };
 
   return (
     <Card
-      className={`w-full overflow-hidden rounded-xl border transition-shadow duration-200 ${
+      className={`w-full cursor-pointer overflow-hidden rounded-xl border transition-shadow duration-200 ${
         isExpanded
           ? "border-brand/40 shadow-md"
           : "border-gray-200 shadow-sm hover:border-gray-300 hover:shadow-md"
       }`}
       bodyStyle={{ padding: 0 }}
+      onClick={toggleCard}
+      onKeyDown={(e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          toggleCard();
+        }
+      }}
     >
-      <div
-        className="flex cursor-pointer items-start gap-3 px-5 py-4 sm:items-center"
-        onClick={() => onExpand(organization.id)}
-        role="button"
-        tabIndex={0}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" || e.key === " ") {
-            e.preventDefault();
-            onExpand(organization.id);
-          }
-        }}
-      >
+      <div className="flex min-h-[88px] items-center gap-3 px-5 py-4">
         <button
           type="button"
           aria-label={isExpanded ? "Collapse" : "Expand"}
-          className={`mt-0.5 flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border transition-colors ${
+          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border transition-colors ${
             isExpanded
               ? "border-brand/30 bg-brand-light text-brand-dark"
               : "border-gray-200 bg-white text-gray-500 hover:bg-gray-50"
@@ -68,126 +81,98 @@ const OrganizationRow = ({
             <span className="rounded-md bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-500">
               #{organization.id}
             </span>
-            <Tag color={organization.is_active ? "green" : "default"}>
+            <span
+              className={`rounded-md px-2 py-0.5 text-xs font-medium ${
+                organization.is_active
+                  ? "bg-green-50 text-green-700"
+                  : "bg-gray-100 text-gray-500"
+              }`}
+            >
               {organization.is_active ? "Active" : "Inactive"}
-            </Tag>
-            <Tag icon={<TeamOutlined />} color="blue">
-              {organization.users_count ?? 0} users
-            </Tag>
+            </span>
+            <span className="inline-flex items-center gap-1 rounded-md bg-brand-light px-2 py-0.5 text-xs font-medium text-brand-dark">
+              <TeamOutlined className="text-[10px]" />
+              {userCount} user{userCount !== 1 ? "s" : ""}
+            </span>
           </div>
 
-          <h3 className="mt-1.5 truncate text-base font-semibold text-gray-900 sm:text-lg">
-            {organization.name}
+          <h3
+            className="mt-1.5 min-h-7 truncate text-base font-semibold leading-7 text-gray-900 sm:text-lg"
+            title={organization.name || "Untitled organization"}
+          >
+            {organization.name || "Untitled organization"}
           </h3>
 
-          <p className="mt-1 truncate text-sm text-gray-500">{organization.slug}</p>
+          <Tooltip title={organization.slug || undefined} placement="topLeft">
+            <p className="mt-0.5 min-h-5 truncate text-sm leading-5 text-gray-500">
+              {organization.slug || "\u00A0"}
+            </p>
+          </Tooltip>
         </div>
 
-        {!isExpanded && (
-          <div
-            className="flex shrink-0 items-center gap-1.5"
-            onClick={(e) => e.stopPropagation()}
+        <div
+          className="flex shrink-0 flex-wrap items-center justify-end gap-2"
+          onClick={(e) => e.stopPropagation()}
+        >
+          <Button
+            icon={<EyeOutlined />}
+            onClick={() =>
+              router.push(`/admin/organizations/${organization.id}`)
+            }
+            className="headlessbutton headlessbutton-pill !mr-0"
           >
-            <Tooltip title="Edit organization">
-              <Button
-                type="text"
-                icon={<EditOutlined />}
-                onClick={() => onEdit(organization)}
-                className="flex h-9 w-9 items-center justify-center rounded-lg text-gray-500 hover:bg-brand-light hover:text-brand-dark"
-              />
-            </Tooltip>
-          </div>
-        )}
+            View
+          </Button>
+          <Button
+            icon={<EditOutlined />}
+            onClick={() => onEdit(organization)}
+            className="headlessbutton headlessbutton-pill !mr-0"
+          >
+            Edit
+          </Button>
+          <Popconfirm
+            title="Delete this organization?"
+            description="This only works if the organization has no users."
+            onConfirm={() => onDelete(organization.id)}
+            okText="Delete"
+            cancelText="Cancel"
+            okButtonProps={{
+              danger: true,
+              icon: <DeleteFilled />,
+            }}
+            cancelButtonProps={{
+              icon: <CloseCircleOutlined />,
+            }}
+          >
+            <Button
+              icon={<DeleteFilled />}
+              loading={isDeleting}
+              className="headlesscancelbutton headlessbutton-pill !mr-0"
+            >
+              Delete
+            </Button>
+          </Popconfirm>
+        </div>
       </div>
 
       {isExpanded && (
-        <div className="border-t border-gray-100 bg-gray-50/60 px-5 py-5">
-          <div className="space-y-4">
-            <div className="rounded-xl border border-gray-200 bg-white p-4 sm:p-5">
-              <dl className="grid gap-4 sm:grid-cols-2">
-                <div>
-                  <dt className="text-xs font-medium uppercase tracking-wide text-gray-400">
-                    Name
-                  </dt>
-                  <dd className="mt-1 text-sm font-medium text-gray-800">
-                    {organization.name}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-medium uppercase tracking-wide text-gray-400">
-                    Slug
-                  </dt>
-                  <dd className="mt-1 text-sm font-medium text-gray-800">
-                    {organization.slug}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-medium uppercase tracking-wide text-gray-400">
-                    Email
-                  </dt>
-                  <dd className="mt-1 text-sm font-medium text-gray-800">
-                    {organization.email || "—"}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-medium uppercase tracking-wide text-gray-400">
-                    Phone
-                  </dt>
-                  <dd className="mt-1 text-sm font-medium text-gray-800">
-                    {organization.phone || "—"}
-                  </dd>
-                </div>
-                <div>
-                  <dt className="text-xs font-medium uppercase tracking-wide text-gray-400">
-                    Status
-                  </dt>
-                  <dd className="mt-1">
-                    <Switch
-                      checked={organization.is_active}
-                      checkedChildren="Active"
-                      unCheckedChildren="Inactive"
-                      onChange={(checked) => onToggleActive(organization, checked)}
-                    />
-                  </dd>
-                </div>
-              </dl>
-            </div>
-
-            <div className="flex flex-wrap items-center gap-2">
-              <Button
-                icon={<EyeOutlined />}
-                onClick={() =>
-                  router.push(`/admin/organizations/${organization.id}`)
-                }
-                className="!mr-0 h-9 rounded-lg border-gray-200 bg-white px-4 text-sm font-medium text-gray-700 hover:border-brand hover:text-brand-dark"
-              >
-                View
-              </Button>
-              <Button
-                icon={<EditOutlined />}
-                onClick={() => onEdit(organization)}
-                className="!mr-0 h-9 rounded-lg border-gray-200 bg-white px-4 text-sm font-medium text-gray-700 hover:border-brand hover:text-brand-dark"
-              >
-                Edit
-              </Button>
-              <Popconfirm
-                title="Delete this organization?"
-                description="This only works if the organization has no users."
-                onConfirm={() => onDelete(organization.id)}
-                okText="Delete"
-                cancelText="Cancel"
-                okButtonProps={{ danger: true }}
-              >
-                <Button
-                  icon={<DeleteOutlined />}
-                  danger
-                  loading={isDeleting}
-                  className="!mr-0 ml-auto h-9 rounded-lg px-4 text-sm font-medium"
-                >
-                  Delete
-                </Button>
-              </Popconfirm>
-            </div>
+        <div className="border-t border-gray-100 px-5 pb-5">
+          <div className="pt-4" onClick={(e) => e.stopPropagation()}>
+            <dl className="grid gap-4 sm:grid-cols-2">
+              <InfoRow label="Name">{organization.name || "—"}</InfoRow>
+              <InfoRow label="Slug">{organization.slug || "—"}</InfoRow>
+              <InfoRow label="Email">{organization.email || "—"}</InfoRow>
+              <InfoRow label="Phone">{organization.phone || "—"}</InfoRow>
+              <InfoRow label="Users">{userCount}</InfoRow>
+              <InfoRow label="Status">
+                <Switch
+                  checked={organization.is_active}
+                  checkedChildren="Active"
+                  unCheckedChildren="Inactive"
+                  onChange={(checked) => onToggleActive(organization, checked)}
+                />
+              </InfoRow>
+            </dl>
           </div>
         </div>
       )}

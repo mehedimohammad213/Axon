@@ -154,7 +154,7 @@ export default function AdminRolesPage() {
         iconAlt="Manage Roles"
         itemCount={allRoles.length}
         countLabel={{ singular: "Role", plural: "Roles" }}
-        createLabel="Add Role"
+        createLabel="Create Role"
         onCreate={() => setModalVisible(true)}
         showCreate={Boolean(selectedOrgId)}
         apiEndpoint={
@@ -222,6 +222,11 @@ export default function AdminRolesPage() {
       <Modal
         title={
           <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
+            <img
+              src="/icons/headless/settings.svg"
+              alt="Manage Roles"
+              className="w-6"
+            />
             <span>
               Create Role
               {selectedOrganization ? ` — ${selectedOrganization.name}` : ""}
