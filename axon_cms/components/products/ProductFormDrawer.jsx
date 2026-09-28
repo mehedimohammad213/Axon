@@ -186,18 +186,18 @@ const ProductFormDrawer = ({
         open={open}
         onClose={onClose}
         destroyOnClose
-        extra={
-          <Space>
-            <Button onClick={onClose}>Cancel</Button>
+        rootClassName="media-preview-drawer"
+        footer={
+          <div className="flex w-full justify-end">
             <Button
               type="primary"
               loading={submitting}
               onClick={handleSubmit}
-              className="bg-brand"
+              className="headlessbutton headlessbutton-pill !mr-0"
             >
               {editingProduct?.id ? "Save Product" : "Upload Product"}
             </Button>
-          </Space>
+          </div>
         }
       >
         <Form form={form} layout="vertical">

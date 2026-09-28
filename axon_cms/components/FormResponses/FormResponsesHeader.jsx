@@ -206,7 +206,7 @@ const FormResponsesHeader = ({
           form={form}
           layout="vertical"
           onFinish={onFinish}
-          initialValues={{ form_type: undefined }}
+          initialValues={{ form_type: undefined, status: undefined }}
         >
           {filterOptions?.formTypes?.length > 0 && (
             <Form.Item label="Form type" name="form_type">
@@ -219,9 +219,24 @@ const FormResponsesHeader = ({
               </Select>
             </Form.Item>
           )}
+          <Form.Item label="Status" name="status">
+            <Select placeholder="Select status" allowClear>
+              <Option value="pending">Pending</Option>
+              <Option value="resolved">Resolved</Option>
+            </Select>
+          </Form.Item>
           <div className="mt-4 flex justify-end gap-2">
-            <Button onClick={handleResetFilters}>Reset</Button>
-            <Button type="primary" htmlType="submit" className="bg-brand">
+            <Button
+              onClick={handleResetFilters}
+              className="headlesscancelbutton headlessbutton-pill !mr-0"
+            >
+              Reset
+            </Button>
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
               Apply
             </Button>
           </div>

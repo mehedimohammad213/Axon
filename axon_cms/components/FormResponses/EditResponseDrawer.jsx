@@ -42,10 +42,10 @@ const EditResponseDrawer = ({ visible, onClose, data, onUpdate }) => {
     return (
       <Drawer
         title="Edit Form Response"
-        width={"50%"}
+        width="min(720px, 92vw)"
         onClose={onClose}
         open={visible}
-        bodyStyle={{ padding: "20px" }}
+        rootClassName="media-preview-drawer"
       >
         <Empty description="No Data Available for Editing" />
       </Drawer>
@@ -55,10 +55,22 @@ const EditResponseDrawer = ({ visible, onClose, data, onUpdate }) => {
   return (
     <Drawer
       title="Edit Form Response"
-      width={"50%"}
+      width="min(720px, 92vw)"
       onClose={onClose}
       open={visible}
-      bodyStyle={{ paddingBottom: 80 }}
+      destroyOnClose
+      rootClassName="media-preview-drawer"
+      footer={
+        <div className="flex w-full justify-end">
+          <Button
+            type="primary"
+            className="headlessbutton headlessbutton-pill !mr-0"
+            onClick={() => form.submit()}
+          >
+            Update Response
+          </Button>
+        </div>
+      }
     >
       <Form layout="vertical" form={form} onFinish={onFinish}>
         {Object.entries(data.form_data).map(([key, value]) => (
@@ -96,12 +108,6 @@ const EditResponseDrawer = ({ visible, onClose, data, onUpdate }) => {
             )}
           </Form.Item>
         ))}
-
-        <Form.Item>
-          <Button className="headlessbutton" htmlType="submit">
-            Update Response
-          </Button>
-        </Form.Item>
       </Form>
     </Drawer>
   );

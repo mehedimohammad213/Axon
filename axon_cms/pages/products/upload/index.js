@@ -255,11 +255,6 @@ const UploadProductsPage = () => {
           )
         }
         onClose={() => setViewingProduct(null)}
-        onEdit={(product) => {
-          setEditingProduct(product);
-          setDefaultTypeId(product.product_type_id);
-          setIsProductFormOpen(true);
-        }}
       />
 
       <ProductFormDrawer

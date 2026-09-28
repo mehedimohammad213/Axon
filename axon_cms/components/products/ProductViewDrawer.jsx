@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
-import { Button, Drawer, Image, Tag } from "antd";
-import { EditOutlined, ShoppingOutlined } from "@ant-design/icons";
+import { Drawer, Image, Tag } from "antd";
+import { ShoppingOutlined } from "@ant-design/icons";
 import {
   getFieldDisplayValue,
   parseFieldSchema,
@@ -25,7 +25,6 @@ const ProductViewDrawer = ({
   product,
   productType,
   onClose,
-  onEdit,
 }) => {
   const fields = useMemo(
     () =>
@@ -62,21 +61,7 @@ const ProductViewDrawer = ({
       open={open}
       onClose={onClose}
       width="min(720px, 92vw)"
-      extra={
-        onEdit && (
-          <Button
-            type="primary"
-            icon={<EditOutlined />}
-            onClick={() => {
-              onEdit(product);
-              onClose?.();
-            }}
-            className="bg-brand hover:bg-brand-dark"
-          >
-            Edit Product
-          </Button>
-        )
-      }
+      rootClassName="media-preview-drawer"
     >
       <div className="space-y-5">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-start">

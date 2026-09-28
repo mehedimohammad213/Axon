@@ -2,7 +2,7 @@
 
 import React from "react";
 import { Drawer, Table, Empty, Button, Space, Tag } from "antd";
-import { DownloadOutlined, EditOutlined } from "@ant-design/icons";
+import { DownloadOutlined } from "@ant-design/icons";
 import moment from "moment";
 
 const ViewDetailsDrawer = ({
@@ -11,14 +11,8 @@ const ViewDetailsDrawer = ({
   data,
   mediaList,
   formType,
-  currentUser,
-  onEdit,
 }) => {
-  // Safely handle cases where data is not an object
   const isValidData = data && typeof data === "object" && !Array.isArray(data);
-
-  // Check if user is admin
-  const isAdmin = currentUser?.role_id === "1";
 
   // Function to get CV URL
   const getCvUrl = () => {
@@ -83,34 +77,20 @@ const ViewDetailsDrawer = ({
   return (
     <Drawer
       title={
-        <Space style={{ width: "100%", justifyContent: "space-between" }}>
-          <Space>
-            Form Response Details
-            {formType && (
-              <Tag color={formType === "career" ? "yellow" : "default"}>
-                {formType.toUpperCase()}
-              </Tag>
-            )}
-          </Space>
-          {isAdmin && (
-            <Button
-              type="primary"
-              icon={<EditOutlined />}
-              onClick={onEdit}
-              style={{
-                backgroundColor: "var(--theme)",
-                borderColor: "var(--theme)",
-              }}
-            >
-              Edit
-            </Button>
+        <Space>
+          Form Response Details
+          {formType && (
+            <Tag color={formType === "career" ? "yellow" : "default"}>
+              {formType.toUpperCase()}
+            </Tag>
           )}
         </Space>
       }
       placement="right"
       onClose={onClose}
       open={visible}
-      width={"50%"}
+      width="min(720px, 92vw)"
+      rootClassName="media-preview-drawer"
     >
       {isValidData && dataSource.length > 0 ? (
         <>
@@ -121,12 +101,12 @@ const ViewDetailsDrawer = ({
             rowKey="key"
           />
           {formType === "career" && mediaList?.cv && (
-            <div style={{ marginTop: 16, textAlign: "center" }}>
+            <div className="mt-4">
               <Button
                 type="primary"
                 icon={<DownloadOutlined />}
                 onClick={handleDownloadCV}
-                style={{ width: "100%" }}
+                className="headlessbutton headlessbutton-pill !mr-0 w-full"
               >
                 Download CV
               </Button>

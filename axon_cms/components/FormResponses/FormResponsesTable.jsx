@@ -316,11 +316,6 @@ const FormResponsesTable = ({ responses, refreshData, currentUser }) => {
         data={selectedResponse?.form_data}
         mediaList={selectedResponse?.media_list}
         formType={selectedResponse?.form_type}
-        currentUser={currentUser}
-        onEdit={() => {
-          setViewDrawerVisible(false);
-          setEditDrawerVisible(true);
-        }}
       />
 
       {/* Edit Response Drawer */}

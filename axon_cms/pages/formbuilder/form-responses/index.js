@@ -8,6 +8,7 @@ import FormResponsesTable from "../../../components/FormResponses/FormResponsesT
 import FormResponsesGrid from "../../../components/FormResponses/FormResponsesGrid";
 import { getResponseDisplayName } from "../../../components/FormResponses/getResponseDisplayName";
 import instance from "../../../axios";
+import { useGlobalRefresh } from "../../../src/context/MenuRefreshContext";
 
 const FormResponsesIndexPage = () => {
   const [allResponses, setAllResponses] = useState([]);
@@ -18,7 +19,10 @@ const FormResponsesIndexPage = () => {
   const [sortType, setSortType] = useState("desc");
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
-  const [filters, setFilters] = useState({ form_type: undefined });
+  const [filters, setFilters] = useState({
+    form_type: undefined,
+    status: undefined,
+  });
 
   useEffect(() => {
     setPageTitle("Form Responses");
@@ -53,6 +57,8 @@ const FormResponsesIndexPage = () => {
     fetchResponses();
   }, [fetchResponses]);
 
+  useGlobalRefresh(fetchResponses);
+
   const formTypes = useMemo(() => {
     const types = new Set(
       allResponses.map((item) => item.form_type).filter(Boolean)
@@ -82,6 +88,13 @@ const FormResponsesIndexPage = () => {
       results = results.filter((item) => item.form_type === filters.form_type);
     }
 
+    if (filters.status) {
+      results = results.filter(
+        (item) =>
+          String(item.status || "pending").toLowerCase() === filters.status
+      );
+    }
+
     return results;
   }, [allResponses, searchTerm, filters]);
 
@@ -109,7 +122,7 @@ const FormResponsesIndexPage = () => {
   }, []);
 
   const resetFilters = useCallback(() => {
-    setFilters({ form_type: undefined });
+    setFilters({ form_type: undefined, status: undefined });
   }, []);
 
   if (loading) {
@@ -145,19 +158,27 @@ const FormResponsesIndexPage = () => {
         itemCount={allResponses.length}
       />
 
-      <div className="mt-6">
-        {viewMode === "table" ? (
+      {viewMode === "table" && paginatedResponses.length > 0 ? (
+        <div className="mt-6">
           <FormResponsesTable
             responses={paginatedResponses}
             refreshData={fetchResponses}
           />
-        ) : (
-          <FormResponsesGrid
-            responses={paginatedResponses}
-            refreshData={fetchResponses}
-          />
-        )}
-      </div>
+        </div>
+      ) : (
+        <FormResponsesGrid
+          responses={paginatedResponses}
+          refreshData={fetchResponses}
+          emptyTitle={
+            allResponses.length ? "No matching responses" : "No responses yet"
+          }
+          emptyDescription={
+            allResponses.length
+              ? "Try a different search or reset the filters."
+              : "Submitted form responses will appear here."
+          }
+        />
+      )}
 
       {sortedResponses.length > itemsPerPage && (
         <div className="mt-4 flex justify-center">
