@@ -1,6 +1,7 @@
 // components/formbuilder/builder/FormBuilder.js
 import React, { useState, useEffect } from "react";
 import { Tabs, Card, Button, Popconfirm, message } from "antd";
+import { CloseOutlined } from "@ant-design/icons";
 import { useRouter } from "next/router";
 import instance from "../../../axios";
 import BuilderPanel from "./BuilderPanel";
@@ -222,8 +223,16 @@ const FormBuilder = () => {
 
   return (
     <div>
-      <div className="mb-4">
+      <div className="mb-4 flex items-center justify-between gap-3">
         <h1 className="text-xl font-semibold text-gray-900">Create Form</h1>
+        <button
+          type="button"
+          onClick={() => router.push("/formbuilder")}
+          aria-label="Back to form list"
+          className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--danger-light)] text-[var(--danger)] transition-colors hover:text-[var(--danger-dark)]"
+        >
+          <CloseOutlined />
+        </button>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
