@@ -1,7 +1,8 @@
-import React from "react";
-import { Input, Button, Select, message, Tooltip, Badge } from "antd";
+import React, { useState } from "react";
+import { Input, Button, Select, message, Tooltip, Badge, Modal, Form } from "antd";
 import {
   CopyOutlined,
+  FilterOutlined,
   PlusCircleOutlined,
   ReloadOutlined,
   SearchOutlined,
@@ -22,11 +23,28 @@ const GalleryHeader = ({
   onRefresh,
   itemCount,
 }) => {
+  const [isFilterModalVisible, setIsFilterModalVisible] = useState(false);
+  const [form] = Form.useForm();
+
+  const openFilterModal = () => setIsFilterModalVisible(true);
+  const closeFilterModal = () => setIsFilterModalVisible(false);
+
   const handleRefresh = () => {
     if (onRefresh) {
       onRefresh();
       message.success("Data refreshed successfully");
     }
+  };
+
+  const onFinish = (values) => {
+    onTagFilterChange?.(values.tag || null);
+    closeFilterModal();
+  };
+
+  const handleResetFilters = () => {
+    form.resetFields();
+    onTagFilterChange?.(null);
+    closeFilterModal();
   };
 
   return (
@@ -69,7 +87,7 @@ const GalleryHeader = ({
               className="h-10 rounded-full border-0 bg-brand px-5 font-medium text-white shadow-sm"
               size="large"
             >
-              Add Media
+              Create Media
             </Button>
             <Tooltip title="Refresh">
               <Button
@@ -124,21 +142,13 @@ const GalleryHeader = ({
               </div>
             </div>
 
-            {availableTags?.length > 0 && (
-              <Select
-                placeholder="Filter by tag"
-                allowClear
-                showSearch
-                className="w-44 [&_.ant-select-selector]:h-9 [&_.ant-select-selector]:rounded-lg [&_.ant-select-selector]:border-gray-200"
-                onChange={(value) => onTagFilterChange(value || null)}
-              >
-                {availableTags.map((tag) => (
-                  <Option key={tag} value={tag}>
-                    {tag}
-                  </Option>
-                ))}
-              </Select>
-            )}
+            <Button
+              icon={<FilterOutlined />}
+              className="h-9 rounded-lg border-gray-200 font-medium text-gray-700 hover:border-brand hover:text-brand-dark"
+              onClick={openFilterModal}
+            >
+              Filter
+            </Button>
           </div>
 
           <div className="flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center lg:w-auto">
@@ -166,6 +176,45 @@ const GalleryHeader = ({
           </div>
         </div>
       </div>
+
+      <Modal
+        title="Filter media"
+        open={isFilterModalVisible}
+        onCancel={closeFilterModal}
+        footer={null}
+      >
+        <Form
+          form={form}
+          layout="vertical"
+          onFinish={onFinish}
+          initialValues={{ tag: undefined }}
+        >
+          <Form.Item label="Tag" name="tag">
+            <Select placeholder="Select a tag" allowClear showSearch>
+              {(availableTags || []).map((tag) => (
+                <Option key={tag} value={tag}>
+                  {tag}
+                </Option>
+              ))}
+            </Select>
+          </Form.Item>
+          <div className="mt-4 flex justify-end gap-2">
+            <Button
+              onClick={handleResetFilters}
+              className="headlesscancelbutton headlessbutton-pill !mr-0"
+            >
+              Reset
+            </Button>
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
+              Apply
+            </Button>
+          </div>
+        </Form>
+      </Modal>
     </div>
   );
 };
