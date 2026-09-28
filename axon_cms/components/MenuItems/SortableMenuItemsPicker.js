@@ -43,17 +43,19 @@ const IconActionButton = ({
   className = "",
 }) => (
   <Tooltip title={title}>
-    <button
-      type="button"
-      aria-label={title}
-      onClick={(e) => {
-        e.stopPropagation();
-        onClick?.(e);
-      }}
-      className={`flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-sm transition-colors ${ICON_ACTION_STYLES[variant]} ${className}`}
-    >
-      {icon}
-    </button>
+    <span className="inline-flex shrink-0">
+      <button
+        type="button"
+        aria-label={title}
+        onClick={(e) => {
+          e.stopPropagation();
+          onClick?.(e);
+        }}
+        className={`flex h-7 w-7 shrink-0 items-center justify-center overflow-visible rounded-full leading-none transition-colors [&_.anticon]:block [&_.anticon]:text-[16px] ${ICON_ACTION_STYLES[variant]} ${className}`}
+      >
+        {icon}
+      </button>
+    </span>
   </Tooltip>
 );
 
@@ -333,12 +335,12 @@ const SortableMenuItemsPicker = ({
           size="small"
           allowClear
         />
-        <div className="min-h-0 flex-1 overflow-y-auto space-y-0.5">
+        <div className="min-h-0 flex-1 overflow-y-auto space-y-0.5 pr-1">
           {availableItems.length > 0 ? (
             availableItems.map((item) => (
               <div
                 key={item.id}
-                className="flex items-center gap-1.5 px-1.5 py-1 rounded-md hover:bg-white transition-colors cursor-pointer"
+                className="flex items-center gap-1.5 rounded-md py-1 pl-1.5 pr-1 hover:bg-white transition-colors cursor-pointer"
                 onClick={() => handleAddItem(item.id)}
               >
                 <Checkbox
@@ -354,7 +356,7 @@ const SortableMenuItemsPicker = ({
                 <IconActionButton
                   title="Add to menu"
                   variant="add"
-                  className="!h-6 !w-6 text-xs"
+                  className="!h-6 !w-6"
                   icon={<PlusCircleFilled />}
                   onClick={() => handleAddItem(item.id)}
                 />
