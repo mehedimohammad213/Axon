@@ -979,7 +979,7 @@ main.headlesscontainer {
   max-width: 100%;
   margin: 0;
   padding-left: var(--shell-gap);
-  padding-right: var(--shell-gap);
+  padding-right: 0.5rem;
   padding-top: var(--shell-gap);
   padding-bottom: calc(var(--footer-height) + var(--shell-gap));
 }

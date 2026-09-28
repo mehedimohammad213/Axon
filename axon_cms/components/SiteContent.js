@@ -220,8 +220,7 @@ const SiteContent = ({ children }) => {
               shouldShowSidebar && !isMobile
                 ? `calc(${contentMargin}px + var(--shell-gap))`
                 : 0,
-            marginRight:
-              shouldShowSidebar && !isMobile ? "0.1rem" : 0,
+            marginRight: 0,
             width: "auto",
             maxWidth: "100%",
             boxSizing: "border-box",
