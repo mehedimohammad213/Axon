@@ -17,6 +17,7 @@ export default function FormBuilder() {
   const [sortType, setSortType] = useState("desc");
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
+  const [filters, setFilters] = useState({ status: undefined });
 
   useEffect(() => {
     setPageTitle("Form Builder");
@@ -41,14 +42,29 @@ export default function FormBuilder() {
   useGlobalRefresh(fetchForms);
 
   const filteredForms = useMemo(() => {
-    if (!searchTerm.trim()) return allForms;
-    const query = searchTerm.toLowerCase();
-    return allForms.filter(
-      (form) =>
-        form.title?.toLowerCase().includes(query) ||
-        form.description?.toLowerCase().includes(query)
-    );
-  }, [allForms, searchTerm]);
+    let results = [...allForms];
+    const query = searchTerm.trim().toLowerCase();
+
+    if (query) {
+      results = results.filter(
+        (form) =>
+          form.title?.toLowerCase().includes(query) ||
+          form.description?.toLowerCase().includes(query)
+      );
+    }
+
+    if (filters.status === "active") {
+      results = results.filter(
+        (form) => form.status !== false && form.status !== 0
+      );
+    } else if (filters.status === "inactive") {
+      results = results.filter(
+        (form) => form.status === false || form.status === 0
+      );
+    }
+
+    return results;
+  }, [allForms, searchTerm, filters]);
 
   const sortedForms = useMemo(() => {
     return [...filteredForms].sort((a, b) =>
@@ -58,7 +74,7 @@ export default function FormBuilder() {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchTerm, sortType, itemsPerPage]);
+  }, [searchTerm, filters, sortType, itemsPerPage]);
 
   const paginatedForms = useMemo(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -67,6 +83,14 @@ export default function FormBuilder() {
 
   const handleShowChange = useCallback((value) => {
     setItemsPerPage(parseInt(value, 10));
+  }, []);
+
+  const applyFilters = useCallback((filterValues) => {
+    setFilters(filterValues);
+  }, []);
+
+  const resetFilters = useCallback(() => {
+    setFilters({ status: undefined });
   }, []);
 
   const handleDeleteForm = useCallback(async (formId) => {
@@ -96,6 +120,8 @@ export default function FormBuilder() {
           sortType={sortType}
           setSortType={setSortType}
           onShowChange={handleShowChange}
+          applyFilters={applyFilters}
+          resetFilters={resetFilters}
           onRefresh={fetchForms}
           itemCount={allForms.length}
         />

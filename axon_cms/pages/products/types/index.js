@@ -17,6 +17,7 @@ const ProductTypesPage = () => {
   const [expandedTypeId, setExpandedTypeId] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
+  const [filters, setFilters] = useState({ status: undefined });
 
   useEffect(() => {
     setPageTitle("Product Types");
@@ -49,18 +50,33 @@ const ProductTypesPage = () => {
 
   const filteredTypes = useMemo(() => {
     const term = searchTerm.trim().toLowerCase();
-    if (!term) return productTypes;
-    return productTypes.filter((type) => {
-      const fieldLabels = parseFieldSchema(type.field_schema)
-        .map((field) => field.label)
-        .join(" ");
-      return [type.name, type.slug, type.description, String(type.id), fieldLabels]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase()
-        .includes(term);
-    });
-  }, [productTypes, searchTerm]);
+    let results = [...productTypes];
+
+    if (term) {
+      results = results.filter((type) => {
+        const fieldLabels = parseFieldSchema(type.field_schema)
+          .map((field) => field.label)
+          .join(" ");
+        return [type.name, type.slug, type.description, String(type.id), fieldLabels]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase()
+          .includes(term);
+      });
+    }
+
+    if (filters.status === "active") {
+      results = results.filter(
+        (type) => type.status !== false && type.status !== 0
+      );
+    } else if (filters.status === "inactive") {
+      results = results.filter(
+        (type) => type.status === false || type.status === 0
+      );
+    }
+
+    return results;
+  }, [productTypes, searchTerm, filters]);
 
   const sortedTypes = useMemo(() => {
     return [...filteredTypes].sort((a, b) =>
@@ -70,7 +86,7 @@ const ProductTypesPage = () => {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchTerm, sortType, itemsPerPage]);
+  }, [searchTerm, filters, sortType, itemsPerPage]);
 
   const paginatedTypes = useMemo(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -87,6 +103,14 @@ const ProductTypesPage = () => {
 
   const handleShowChange = useCallback((value) => {
     setItemsPerPage(parseInt(value, 10));
+  }, []);
+
+  const applyFilters = useCallback((filterValues) => {
+    setFilters(filterValues);
+  }, []);
+
+  const resetFilters = useCallback(() => {
+    setFilters({ status: undefined });
   }, []);
 
   const handleDeleteType = useCallback(
@@ -124,6 +148,9 @@ const ProductTypesPage = () => {
         sortType={sortType}
         setSortType={setSortType}
         onShowChange={handleShowChange}
+        applyFilters={applyFilters}
+        resetFilters={resetFilters}
+        filterTitle="Filter product types"
         onRefresh={fetchProductTypes}
         searchPlaceholder="Search product types..."
         primaryActionLabel="Create Product Type"

@@ -1,7 +1,17 @@
-import React from "react";
-import { Input, Button, Select, message, Tooltip, Badge } from "antd";
+import React, { useState } from "react";
+import {
+  Input,
+  Button,
+  Select,
+  Modal,
+  Form,
+  message,
+  Tooltip,
+  Badge,
+} from "antd";
 import {
   CopyOutlined,
+  FilterOutlined,
   PlusCircleOutlined,
   ReloadOutlined,
   SearchOutlined,
@@ -21,15 +31,36 @@ const ProductsHeader = ({
   sortType = "desc",
   setSortType,
   onShowChange,
+  applyFilters,
+  resetFilters,
+  productTypes,
+  filterTitle = "Filter products",
   onRefresh,
   searchPlaceholder = "Search...",
   primaryActionLabel,
   onPrimaryAction,
   apiEndpoint = "/products",
 }) => {
+  const [isFilterModalVisible, setIsFilterModalVisible] = useState(false);
+  const [form] = Form.useForm();
+
   const handleSearchChange = (value) => {
     if (setSearchTerm) setSearchTerm(value);
     else onSearch?.(value);
+  };
+
+  const openFilterModal = () => setIsFilterModalVisible(true);
+  const closeFilterModal = () => setIsFilterModalVisible(false);
+
+  const onFinish = (values) => {
+    applyFilters?.(values);
+    closeFilterModal();
+  };
+
+  const handleResetFilters = () => {
+    form.resetFields();
+    resetFilters?.();
+    closeFilterModal();
   };
 
   const handleRefresh = () => {
@@ -135,6 +166,16 @@ const ProductsHeader = ({
                 </div>
               </div>
             )}
+
+            {applyFilters && (
+              <Button
+                icon={<FilterOutlined />}
+                className="h-9 rounded-lg border-gray-200 font-medium text-gray-700 hover:border-brand hover:text-brand-dark"
+                onClick={openFilterModal}
+              >
+                Filter
+              </Button>
+            )}
           </div>
 
           <div className="flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center lg:w-auto">
@@ -165,6 +206,55 @@ const ProductsHeader = ({
           </div>
         </div>
       </div>
+
+      {applyFilters && (
+        <Modal
+          title={filterTitle}
+          open={isFilterModalVisible}
+          onCancel={closeFilterModal}
+          footer={null}
+        >
+          <Form
+            form={form}
+            layout="vertical"
+            onFinish={onFinish}
+            initialValues={{ status: undefined, product_type_id: undefined }}
+          >
+            <Form.Item label="Status" name="status">
+              <Select placeholder="Select status" allowClear>
+                <Option value="active">Active</Option>
+                <Option value="inactive">Inactive</Option>
+              </Select>
+            </Form.Item>
+            {productTypes?.length > 0 && (
+              <Form.Item label="Product type" name="product_type_id">
+                <Select placeholder="Select a product type" allowClear showSearch>
+                  {productTypes.map((type) => (
+                    <Option key={type.id} value={type.id}>
+                      {type.name}
+                    </Option>
+                  ))}
+                </Select>
+              </Form.Item>
+            )}
+            <div className="mt-4 flex justify-end gap-2">
+              <Button
+                onClick={handleResetFilters}
+                className="headlesscancelbutton headlessbutton-pill !mr-0"
+              >
+                Reset
+              </Button>
+              <Button
+                type="primary"
+                htmlType="submit"
+                className="headlessbutton headlessbutton-pill !mr-0"
+              >
+                Apply
+              </Button>
+            </div>
+          </Form>
+        </Modal>
+      )}
     </div>
   );
 };

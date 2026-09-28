@@ -1,7 +1,17 @@
-import React from "react";
-import { Input, Button, Select, message, Tooltip, Badge } from "antd";
+import React, { useState } from "react";
+import {
+  Input,
+  Button,
+  Select,
+  Modal,
+  Form,
+  message,
+  Tooltip,
+  Badge,
+} from "antd";
 import {
   CopyOutlined,
+  FilterOutlined,
   PlusCircleOutlined,
   ReloadOutlined,
   SearchOutlined,
@@ -18,10 +28,28 @@ const FormBuilderHeader = ({
   sortType,
   setSortType,
   onShowChange,
+  applyFilters,
+  resetFilters,
   onRefresh,
   itemCount,
 }) => {
   const router = useRouter();
+  const [isFilterModalVisible, setIsFilterModalVisible] = useState(false);
+  const [form] = Form.useForm();
+
+  const openFilterModal = () => setIsFilterModalVisible(true);
+  const closeFilterModal = () => setIsFilterModalVisible(false);
+
+  const onFinish = (values) => {
+    applyFilters?.(values);
+    closeFilterModal();
+  };
+
+  const handleResetFilters = () => {
+    form.resetFields();
+    resetFilters?.();
+    closeFilterModal();
+  };
 
   const handleRefresh = () => {
     if (onRefresh) {
@@ -122,6 +150,14 @@ const FormBuilderHeader = ({
                 </Button>
               </div>
             </div>
+
+            <Button
+              icon={<FilterOutlined />}
+              className="h-9 rounded-lg border-gray-200 font-medium text-gray-700 hover:border-brand hover:text-brand-dark"
+              onClick={openFilterModal}
+            >
+              Filter
+            </Button>
           </div>
 
           <div className="flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center lg:w-auto">
@@ -150,6 +186,42 @@ const FormBuilderHeader = ({
           </div>
         </div>
       </div>
+
+      <Modal
+        title="Filter forms"
+        open={isFilterModalVisible}
+        onCancel={closeFilterModal}
+        footer={null}
+      >
+        <Form
+          form={form}
+          layout="vertical"
+          onFinish={onFinish}
+          initialValues={{ status: undefined }}
+        >
+          <Form.Item label="Status" name="status">
+            <Select placeholder="Select status" allowClear>
+              <Option value="active">Active</Option>
+              <Option value="inactive">Inactive</Option>
+            </Select>
+          </Form.Item>
+          <div className="mt-4 flex justify-end gap-2">
+            <Button
+              onClick={handleResetFilters}
+              className="headlesscancelbutton headlessbutton-pill !mr-0"
+            >
+              Reset
+            </Button>
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
+              Apply
+            </Button>
+          </div>
+        </Form>
+      </Modal>
     </div>
   );
 };

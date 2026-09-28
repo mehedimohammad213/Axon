@@ -20,6 +20,10 @@ const UploadProductsPage = () => {
   const [sortType, setSortType] = useState("desc");
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(10);
+  const [filters, setFilters] = useState({
+    status: undefined,
+    product_type_id: undefined,
+  });
 
   const [isProductFormOpen, setIsProductFormOpen] = useState(false);
   const [editingProduct, setEditingProduct] = useState(null);
@@ -84,22 +88,44 @@ const UploadProductsPage = () => {
 
   const filteredProducts = useMemo(() => {
     const term = searchTerm.trim().toLowerCase();
-    if (!term) return allProducts;
-    return allProducts.filter((product) => {
-      const haystack = [
-        product.title,
-        product.slug,
-        product.description,
-        product.product_type?.name,
-        String(product.id),
-        ...Object.values(product.field_values || {}),
-      ]
-        .filter(Boolean)
-        .join(" ")
-        .toLowerCase();
-      return haystack.includes(term);
-    });
-  }, [allProducts, searchTerm]);
+    let results = [...allProducts];
+
+    if (term) {
+      results = results.filter((product) => {
+        const haystack = [
+          product.title,
+          product.slug,
+          product.description,
+          product.product_type?.name,
+          String(product.id),
+          ...Object.values(product.field_values || {}),
+        ]
+          .filter(Boolean)
+          .join(" ")
+          .toLowerCase();
+        return haystack.includes(term);
+      });
+    }
+
+    if (filters.status === "active") {
+      results = results.filter(
+        (product) => product.status !== false && product.status !== 0
+      );
+    } else if (filters.status === "inactive") {
+      results = results.filter(
+        (product) => product.status === false || product.status === 0
+      );
+    }
+
+    if (filters.product_type_id) {
+      results = results.filter(
+        (product) =>
+          String(product.product_type_id) === String(filters.product_type_id)
+      );
+    }
+
+    return results;
+  }, [allProducts, searchTerm, filters]);
 
   const sortedProducts = useMemo(() => {
     return [...filteredProducts].sort((a, b) =>
@@ -109,7 +135,7 @@ const UploadProductsPage = () => {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchTerm, sortType, itemsPerPage]);
+  }, [searchTerm, filters, sortType, itemsPerPage]);
 
   const paginatedProducts = useMemo(() => {
     const start = (currentPage - 1) * itemsPerPage;
@@ -118,6 +144,14 @@ const UploadProductsPage = () => {
 
   const handleShowChange = useCallback((value) => {
     setItemsPerPage(parseInt(value, 10));
+  }, []);
+
+  const applyFilters = useCallback((filterValues) => {
+    setFilters(filterValues);
+  }, []);
+
+  const resetFilters = useCallback(() => {
+    setFilters({ status: undefined, product_type_id: undefined });
   }, []);
 
   const handleDeleteProduct = useCallback(async (id) => {
@@ -162,6 +196,10 @@ const UploadProductsPage = () => {
         sortType={sortType}
         setSortType={setSortType}
         onShowChange={handleShowChange}
+        applyFilters={applyFilters}
+        resetFilters={resetFilters}
+        productTypes={productTypes}
+        filterTitle="Filter products"
         onRefresh={refreshAll}
         searchPlaceholder="Search products..."
         primaryActionLabel="Upload Product"
