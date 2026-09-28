@@ -7,7 +7,6 @@ import ElementPanel from "./ElementPanel";
 import { FormBuilderContext } from "../../../src/context/FormBuilderContext";
 import { message } from "antd";
 import instance from "../../../axios";
-import FormPreview from "./FormPreview";
 import { useRouter } from "next/router";
 import RichTextEditor from "../../RichTextEditor";
 import { copyApiEndpoint, getApiBaseUrl } from "../../../utils/copyApiEndpoint";
@@ -18,7 +17,6 @@ const FormEditor = ({ formId }) => {
   const [formElements, setFormElements] = useState([]);
   const [formAttributes, setFormAttributes] = useState({});
   const [formMeta, setFormMeta] = useState({});
-  const [preview, setPreview] = useState(false);
   const [loading, setLoading] = useState(false);
   const [testFormData, setTestFormData] = useState(null);
   const [testLoading, setTestLoading] = useState(false);
@@ -241,7 +239,6 @@ const FormEditor = ({ formId }) => {
         }
 
         message.success("Form saved successfully!");
-        setPreview(false);
         reset();
         router.push("/formbuilder");
       } else {
@@ -272,12 +269,6 @@ const FormEditor = ({ formId }) => {
             />
             <div className="flex justify-between mt-4">
               <div className="flex items-center gap-2">
-                <Button
-                  className="headlessbutton headlessbutton-pill !mr-0"
-                  onClick={() => setPreview(true)}
-                >
-                  Preview
-                </Button>
                 <Button
                   className="headlessbutton headlessbutton-pill !mr-0"
                   onClick={saveForm}
@@ -438,17 +429,6 @@ const FormEditor = ({ formId }) => {
       <div className="lg:col-span-1">
         <ElementPanel />
       </div>
-      {preview && (
-        <FormPreview
-          visible={preview}
-          onCancel={() => setPreview(false)}
-          onSave={saveForm}
-          formMeta={formMeta}
-          formAttributes={formAttributes}
-          formElements={formElements}
-          loading={loading}
-        />
-      )}
     </div>
     </div>
   );

@@ -5,7 +5,6 @@ import { useRouter } from "next/router";
 import instance from "../../../axios";
 import BuilderPanel from "./BuilderPanel";
 import ElementPanel from "./ElementPanel";
-import FormPreview from "./FormPreview";
 import { getApiBaseUrl } from "../../../utils/copyApiEndpoint";
 
 const { TabPane } = Tabs;
@@ -14,7 +13,6 @@ const FormBuilder = () => {
   const [formElements, setFormElements] = useState([]);
   const [formAttributes, setFormAttributes] = useState({});
   const [formMeta, setFormMeta] = useState({});
-  const [preview, setPreview] = useState(false);
   const [loading, setLoading] = useState(false);
   const [createdFormId, setCreatedFormId] = useState(null);
   const [testFormData, setTestFormData] = useState(null);
@@ -210,7 +208,6 @@ const FormBuilder = () => {
         setCreatedFormId(formId);
 
         message.success("Form saved successfully with auto-generated action URL!");
-        setPreview(false);
         await router.push("/formbuilder");
       } else {
         message.error("Failed to save form.");
@@ -240,12 +237,6 @@ const FormBuilder = () => {
             />
             <div className="flex justify-between mt-4">
               <div className="flex items-center gap-2">
-                <Button
-                  className="headlessbutton headlessbutton-pill !mr-0"
-                  onClick={() => setPreview(true)}
-                >
-                  Preview
-                </Button>
                 <Button
                   className="headlessbutton headlessbutton-pill !mr-0"
                   onClick={saveForm}
@@ -390,19 +381,6 @@ const FormBuilder = () => {
       <div className="lg:col-span-1">
         <ElementPanel />
       </div>
-
-      {/* Drawer/Preview */}
-      {preview && (
-        <FormPreview
-          visible={preview}
-          onCancel={() => setPreview(false)}
-          onSave={saveForm}
-          formMeta={formMeta}
-          formAttributes={formAttributes}
-          formElements={formElements}
-          loading={loading}
-        />
-      )}
       </div>
     </div>
   );
