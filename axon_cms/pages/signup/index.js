@@ -135,7 +135,7 @@ export default function Signup() {
                   className="block text-brand mt-2"
                   style={{ WebkitTextStroke: "1px rgba(75, 85, 99, 0.5)" }}
                 >
-                  With Headless CMS
+                  With Axon
                 </span>
               </motion.h1>
               <motion.p
@@ -186,7 +186,7 @@ export default function Signup() {
             <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Image
                 src="/images/ui/headless_logo.svg"
-                alt="Headless Logo"
+                alt="Axon Logo"
                 width={200}
                 height={48}
                 className="drop-shadow-lg"
@@ -200,7 +200,7 @@ export default function Signup() {
               Create Account
             </h1>
             <p className="text-gray-600 text-sm">
-              Sign up to get started with Headless CMS
+              Sign up to get started with Axon
             </p>
           </motion.div>
 

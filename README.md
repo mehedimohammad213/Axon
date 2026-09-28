@@ -1,6 +1,6 @@
 # Axon
 
-Headless CMS with an API-first Express backend and a Next.js admin UI. Manage structured content, media, menus, pages, forms, and more, then deliver it to websites, apps, or any client over REST.
+Axon with an API-first Express backend and a Next.js admin UI. Manage structured content, media, menus, pages, forms, and more, then deliver it to websites, apps, or any client over REST.
 
 ## Architecture
 

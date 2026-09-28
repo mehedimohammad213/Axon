@@ -62,7 +62,7 @@ siteRouter.get('/dynamic/:id', dynamicController.show);
 
 router.use('/public', siteRouter);
 
-// Public websites submit with X-Headless-Site-Key. CMS preview/editor
+// Public websites submit with X-Axon-Site-Key. CMS preview/editor
 // submissions use JWT and must fall through to the protected router.
 router.post(
   '/form-submission',

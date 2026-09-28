@@ -45,7 +45,7 @@ function MyApp({ Component, pageProps }) {
               <span className="truncate text-xs leading-none sm:text-sm">
                 © {new Date().getFullYear()}{" "}
                 <span className="bg-gradient-to-r from-brand via-blue-400 to-blue-500 bg-clip-text font-semibold text-transparent">
-                  HEADLESS CMS
+                  AXON
                 </span>
               </span>
             </div>

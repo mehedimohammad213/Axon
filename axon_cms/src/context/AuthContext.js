@@ -86,11 +86,14 @@ function resolveSuperAdminOrganization(organizations, currentOrganization) {
     }
   }
 
-  const headlessPlatform = organizations.find(
-    (org) => org.slug === "headless-platform" || org.slug === "mave-platform"
+  const axonPlatform = organizations.find(
+    (org) =>
+      org.slug === "axon-platform" ||
+      org.slug === "headless-platform" ||
+      org.slug === "mave-platform"
   );
 
-  return headlessPlatform || organizations[0] || currentOrganization;
+  return axonPlatform || organizations[0] || currentOrganization;
 }
 
 export const AuthProvider = ({ children }) => {

@@ -44,7 +44,7 @@ export default function Login() {
           <div className="mb-10">
             <Image
               src="/images/ui/headless_logo.svg"
-              alt="Headless Logo"
+              alt="Axon Logo"
               width={180}
               height={44}
               priority
@@ -156,7 +156,7 @@ export default function Login() {
       <div className="hidden lg:flex relative w-[54%] h-full overflow-hidden bg-slate-700">
         <Image
           src="/images/ui/rrightbg.png"
-          alt="Headless CMS workspace"
+          alt="Axon workspace"
           layout="fill"
           objectFit="cover"
           objectPosition="center"
@@ -167,7 +167,7 @@ export default function Login() {
         <div className="absolute inset-0 flex flex-col items-center justify-center p-12 xl:p-16 z-10 text-center">
           <div className="max-w-md">
             <p className="text-sm font-medium text-white/70 mb-3 tracking-wide">
-              Headless CMS
+              Axon
             </p>
             <h2 className="text-3xl xl:text-4xl font-semibold text-white leading-tight tracking-tight mb-4">
               Manage content with clarity and speed

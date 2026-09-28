@@ -9,7 +9,7 @@ export default function DIYCMS() {
     <div className="headlesscontainer pt-10">
       <center>
         <h1 className="text-3xl text-theme font-bold">
-          Welcome to the Headless DIY CMS
+          Welcome to the Axon DIY CMS
         </h1>
       </center>
       <p style={{ textAlign: "center", fontSize: "1.2rem", padding: "2rem 0" }}>

@@ -6,7 +6,7 @@ dotenv.config();
 const PORT = process.env.PORT || 6006;
 
 app.listen(PORT, () => {
-  console.log(`Headless Engine Express running on http://localhost:${PORT}`);
+  console.log(`Axon Engine Express running on http://localhost:${PORT}`);
 });
 
 export default app;

@@ -3,10 +3,10 @@ import { db } from '../db';
 import OrganizationContext from '../context/organizationContext';
 
 const identifyPublicSite: RequestHandler = async (req, res, next) => {
-  const siteKey = req.headers['x-headless-site-key'];
+  const siteKey = req.headers['x-axon-site-key'] || req.headers['x-headless-site-key'];
 
   if (!siteKey) {
-    return res.status(401).json({ message: 'X-Headless-Site-Key header is required.' });
+    return res.status(401).json({ message: 'X-Axon-Site-Key header is required.' });
   }
 
   const org = await db.findOne('organizations', { site_key: siteKey, is_active: true });

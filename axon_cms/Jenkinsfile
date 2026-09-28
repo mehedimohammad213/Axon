@@ -46,7 +46,7 @@ pipeline {
 
     post {
         success {
-            echo 'Congratulations Atiq Israk! Headless CMS has been deployed Successfully!'
+            echo 'Congratulations! Axon has been deployed Successfully!'
         }
         failure {
             echo 'Oops!!! Deployment Failed! Let us try again.'

@@ -203,7 +203,7 @@ export default function NavItems({
         >
           <Image
             src="/images/ui/headless_logo.svg"
-            alt="Headless Logo"
+            alt="Axon Logo"
             layout="fill"
             objectFit="contain"
             objectPosition="left"

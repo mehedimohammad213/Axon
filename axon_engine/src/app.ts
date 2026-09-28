@@ -46,7 +46,7 @@ const limiter = rateLimit({
 app.use(limiter);
 
 app.get('/health', (_req: Request, res: Response) => {
-  res.json({ status: 'ok', service: 'headless-engine-express' });
+  res.json({ status: 'ok', service: 'axon-engine-express' });
 });
 
 function withOrgContext(_req: Request, _res: Response, next: NextFunction) {

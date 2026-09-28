@@ -182,7 +182,7 @@ export default function OrganizationViewPage() {
                 </Button>
                 <Popconfirm
                   title="Regenerate site key?"
-                  description="The live website will stop working until you update HEADLESS_SITE_KEY."
+                  description="The live website will stop working until you update AXON_SITE_KEY."
                   okText="Regenerate"
                   cancelText="Cancel"
                   onConfirm={regenerateSiteKey}

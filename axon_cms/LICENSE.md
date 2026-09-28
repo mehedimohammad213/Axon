@@ -1,4 +1,4 @@
-# HEADLESS CMS License Agreement
+# AXON License Agreement
 
 ## MIT License
 
@@ -19,20 +19,20 @@ Users must provide the following contact information when downloading or modifyi
 - Phone Number
 - Profession
 - Company Name
-- Team Size managing HEADLESS CMS
+- Team Size managing AXON
 - Monthly Traffic Volume the CMS will serve
 - Agreement to in-app purchases
 
 ### 2. License Key for Modifications
 
-Users are required to complete a form either on the download page or during the installation of HEADLESS CMS. A license key will be issued and delivered via email. Any form of code modification necessitates a valid license key.
+Users are required to complete a form either on the download page or during the installation of AXON. A license key will be issued and delivered via email. Any form of code modification necessitates a valid license key.
 
 ### 3. Data Usage
 
 Collected contact information will be utilized for the following purposes:
 
 - Enhancing service quality
-- Supporting the ongoing development of HEADLESS CMS
+- Supporting the ongoing development of AXON
 - Communicating updates, support information, and other relevant notices
 
 ### 4. Privacy Compliance

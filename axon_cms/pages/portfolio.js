@@ -15,8 +15,8 @@ const Portfolio = () => {
     return (
         <>
             <Head>
-                <title>Headless CMS - Portfolio</title>
-                <meta name="description" content="Explore the powerful features of Headless CMS - A modern headless content management system" />
+                <title>Axon - Portfolio</title>
+                <meta name="description" content="Explore the powerful features of Axon - A modern content management system" />
             </Head>
 
             <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-blue-50">
@@ -42,7 +42,7 @@ const Portfolio = () => {
                         >
                             <Image
                                 src="/images/ui/headless_logo.svg"
-                                alt="Headless Logo"
+                                alt="Axon Logo"
                                 width={280}
                                 height={56}
                                 className="mx-auto"
@@ -56,7 +56,7 @@ const Portfolio = () => {
                             className="space-y-6"
                         >
                             <p className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-brand-dark via-blue-500 to-brand bg-clip-text text-transparent">
-                                AI Powered Modern Headless Content Management System
+                                AI Powered Modern Axon
                             </p>
                             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
                                 Built on MACH (Microservices, API-first, Cloud-native, Headless) architecture principles.

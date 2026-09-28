@@ -1,7 +1,7 @@
 {
-  "name": "headless-engine-express",
+  "name": "axon-engine-express",
   "version": "1.0.0",
-  "description": "Headless CMS Engine - Express + pg + PostgreSQL",
+  "description": "Axon Engine - Express + pg + PostgreSQL",
   "main": "dist/index.js",
   "scripts": {
     "build": "tsc",
