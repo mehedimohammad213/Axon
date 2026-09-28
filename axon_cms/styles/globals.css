@@ -60,18 +60,24 @@ body {
   min-height: 100vh;
 }
 
-/* Scrollbar Styles */
-body::-webkit-scrollbar {
-  width: 10px;
+/* Thin scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--theme) transparent;
 }
 
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
   background-color: var(--theme);
   border-radius: 10px;
 }
 
-body::-webkit-scrollbar-track {
-  background-color: var(--notwhite);
+::-webkit-scrollbar-track {
+  background-color: transparent;
 }
 
 /* Responsive Scaling */
