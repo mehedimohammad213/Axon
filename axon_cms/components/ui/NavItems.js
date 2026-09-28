@@ -198,7 +198,7 @@ export default function NavItems({
           </button>
         )}
         <div
-          className="relative h-8 w-[92px] shrink-0 cursor-pointer sm:w-[140px]"
+          className="relative h-8 w-[120px] shrink-0 cursor-pointer sm:w-[140px]"
           onClick={() => router.push("/")}
         >
           <Image

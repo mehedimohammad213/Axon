@@ -41,7 +41,7 @@ export default function Login() {
       {/* Left — Login form */}
       <div className="relative flex h-full w-full items-start justify-center overflow-y-auto bg-white px-4 py-8 pb-24 sm:px-6 md:px-12 lg:w-1/2">
         <div className="relative z-10 w-full max-w-[400px] my-auto">
-          <div className="mb-10">
+          <div className="mb-10 flex items-center justify-center">
             <Image
               src="/images/ui/headless_logo.svg"
               alt="Axon Logo"
