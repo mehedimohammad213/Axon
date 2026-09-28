@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Tabs, Card, Button, Popconfirm, Switch, message } from "antd";
-import { CloseCircleOutlined } from "@ant-design/icons";
+import { CloseOutlined } from "@ant-design/icons";
 import { useRouter } from "next/router";
 import instance from "../../../axios";
 import ProductBuilderCanvas from "./ProductBuilderCanvas";
 import ProductFieldPanel from "./ProductFieldPanel";
-import ProductTypePreview from "./ProductTypePreview";
 import {
   createFieldFromPalette,
   ensureFieldOptions,
@@ -20,12 +19,11 @@ const ProductTypeBuilder = ({ editingType = null }) => {
   const router = useRouter();
   const [fields, setFields] = useState([]);
   const [typeMeta, setTypeMeta] = useState({
-    name: "New Product Type",
-    slug: "new-product-type",
-    description: "Describe this product form for your team.",
+    name: "Demo",
+    slug: "demo",
+    description: "This is a demo product type.",
     status: true,
   });
-  const [preview, setPreview] = useState(false);
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
@@ -100,7 +98,6 @@ const ProductTypeBuilder = ({ editingType = null }) => {
         await instance.post("/product-types", payload);
         message.success("Product type created successfully.");
       }
-      setPreview(false);
       router.push("/products/types");
     } catch (error) {
       message.error(
@@ -113,13 +110,23 @@ const ProductTypeBuilder = ({ editingType = null }) => {
 
   return (
     <div>
-      <div className="mb-4">
-        <h1 className="text-xl font-semibold text-gray-900">
-          {editingType?.id ? "Edit Product Type" : "Create Product Type"}
-        </h1>
-        <p className="text-sm text-gray-500 mt-1">
-          Build a product form by dragging fields, just like Form Builder.
-        </p>
+      <div className="mb-4 flex items-start justify-between gap-3">
+        <div>
+          <h1 className="text-xl font-semibold text-gray-900">
+            {editingType?.id ? "Edit Product Type" : "Create Product Type"}
+          </h1>
+          <p className="text-sm text-gray-500 mt-1">
+            Build a product form by dragging fields, just like Form Builder.
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={() => router.push("/products/types")}
+          aria-label="Back to product type list"
+          className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-[var(--danger-light)] text-[var(--danger)] transition-colors hover:text-[var(--danger-dark)]"
+        >
+          <CloseOutlined />
+        </button>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-5 gap-4">
@@ -134,17 +141,11 @@ const ProductTypeBuilder = ({ editingType = null }) => {
               <div className="flex justify-between mt-4">
                 <div className="flex items-center gap-2">
                   <Button
-                    className="bg-theme text-white"
-                    onClick={() => setPreview(true)}
+                    className="headlessbutton headlessbutton-pill !mr-0"
+                    onClick={saveType}
+                    loading={loading}
                   >
-                    Preview
-                  </Button>
-                  <Button
-                    icon={<CloseCircleOutlined />}
-                    onClick={() => router.push("/products/types")}
-                    className="headlesscancelbutton"
-                  >
-                    Cancel
+                    Publish
                   </Button>
                 </div>
                 <Popconfirm
@@ -154,7 +155,9 @@ const ProductTypeBuilder = ({ editingType = null }) => {
                   cancelText="No"
                   okButtonProps={{ danger: true }}
                 >
-                  <Button danger>Clear Form</Button>
+                  <Button danger className="headlesscancelbutton headlessbutton-pill !mr-0">
+                    Clear Form
+                  </Button>
                 </Popconfirm>
               </div>
             </TabPane>
@@ -224,52 +227,12 @@ const ProductTypeBuilder = ({ editingType = null }) => {
                 />
               </Card>
             </TabPane>
-
-            <TabPane tab="Publish" key="3">
-              <Card className="mb-4">
-                <h3 className="text-lg font-bold text-gray-800 mb-2">
-                  Ready to publish?
-                </h3>
-                <p className="text-gray-600 mb-4">
-                  Save this product type so your team can upload products using
-                  this form.
-                </p>
-
-                <div className="bg-blue-50 border border-blue-200 rounded-md p-4 mb-4">
-                  <p className="text-blue-800">
-                    Type: <strong>{typeMeta.name || "Untitled"}</strong>
-                    <br />
-                    Fields: <strong>{fields.length}</strong>
-                  </p>
-                </div>
-
-                <Button
-                  type="primary"
-                  loading={loading}
-                  onClick={saveType}
-                  className="bg-theme hover:bg-theme-dark"
-                >
-                  {editingType?.id ? "Update Product Type" : "Publish Product Type"}
-                </Button>
-              </Card>
-            </TabPane>
           </Tabs>
         </div>
 
         <div className="lg:col-span-1">
           <ProductFieldPanel />
         </div>
-
-        {preview && (
-          <ProductTypePreview
-            visible={preview}
-            onCancel={() => setPreview(false)}
-            onSave={saveType}
-            loading={loading}
-            typeMeta={typeMeta}
-            fields={fields}
-          />
-        )}
       </div>
     </div>
   );

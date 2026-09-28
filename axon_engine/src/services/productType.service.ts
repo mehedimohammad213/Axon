@@ -18,15 +18,67 @@ async function show(id: any) {
   return productType;
 }
 
+async function uniqueSlug(baseSlug: string, excludeId?: string | number) {
+  let slug = baseSlug;
+  let counter = 1;
+
+  while (true) {
+    const existing = await ProductTypeRepository.findOneWhere(
+      { slug },
+      { withTrashed: true }
+    );
+    if (!existing || (excludeId != null && String(existing.id) === String(excludeId))) {
+      return slug;
+    }
+    slug = `${baseSlug}-${counter}`;
+    counter += 1;
+  }
+}
+
 async function create(body: CreateProductTypeInput) {
-  return ProductTypeRepository.create(validateCreateProductTypeBody(body));
+  const payload = validateCreateProductTypeBody(body);
+  payload.slug = await uniqueSlug(payload.slug);
+
+  try {
+    return await ProductTypeRepository.create(payload);
+  } catch (error: any) {
+    if (error?.code === '23505') {
+      payload.slug = await uniqueSlug(payload.slug);
+      return ProductTypeRepository.create(payload);
+    }
+    throw error;
+  }
 }
 
 async function update(id: any, body: UpdateProductTypeInput) {
   const productType = await ProductTypeRepository.findById(id);
   if (!productType) throw new AppError(404, 'Product type not found');
 
-  return ProductTypeRepository.update(id, validateUpdateProductTypeBody(body));
+  const payload = validateUpdateProductTypeBody(body);
+  if (payload.slug) {
+    const existing = await ProductTypeRepository.findOneWhere(
+      { slug: payload.slug },
+      { withTrashed: true }
+    );
+    if (existing && String(existing.id) !== String(id)) {
+      throw new AppError(
+        422,
+        'A product type with this slug already exists. Choose a different name or slug.'
+      );
+    }
+  }
+
+  try {
+    return await ProductTypeRepository.update(id, payload);
+  } catch (error: any) {
+    if (error?.code === '23505') {
+      throw new AppError(
+        422,
+        'A product type with this slug already exists. Choose a different name or slug.'
+      );
+    }
+    throw error;
+  }
 }
 
 async function remove(id: any) {

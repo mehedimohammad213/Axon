@@ -237,7 +237,7 @@ const ProductFieldElement = ({
         {!isPreview && (
           <div className="flex items-center gap-2">
             <Button
-              size="small"
+              className="headlessbutton-pill !mr-0"
               onClick={(e) => {
                 e.stopPropagation();
                 setConfigVisible(!configVisible);
@@ -255,7 +255,7 @@ const ProductFieldElement = ({
               cancelText="No"
               okButtonProps={{ danger: true }}
             >
-              <Button size="small" danger>
+              <Button className="headlesscancelbutton headlessbutton-pill !mr-0">
                 Remove
               </Button>
             </Popconfirm>
