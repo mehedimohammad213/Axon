@@ -32,6 +32,9 @@
   --notwhite: #ffffff;
   --surface: #edf5fc;
   --border: #e8eaed;
+  --header-height: 4rem;
+  --footer-height: 2.5rem;
+  --shell-gap: clamp(1rem, 2vw, 2rem);
 }
 
 /* Reset and Base Styles */
@@ -925,12 +928,15 @@ a:hover {
   padding: 0 clamp(0.75rem, 2vw, 1.5rem);
 }
 
-.headlesscontainer {
+div.headlesscontainer,
+main.headlesscontainer {
   width: 100%;
   max-width: 100%;
   margin: 0;
-  padding: clamp(1rem, 2vw, 2rem);
-  padding-bottom: clamp(4rem, 6vw, 6rem);
+  padding-left: var(--shell-gap);
+  padding-right: var(--shell-gap);
+  padding-top: var(--shell-gap);
+  padding-bottom: calc(var(--footer-height) + var(--shell-gap));
 }
 
 /* Flex and Grid Utilities */

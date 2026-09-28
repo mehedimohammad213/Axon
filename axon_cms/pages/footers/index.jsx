@@ -238,7 +238,7 @@ const Footers = () => {
   }
 
   return (
-    <div className="headlesscontainer rounded-xl bg-surface px-4 pt-4 pb-10 sm:px-6 sm:pt-6 sm:pb-12">
+    <div className="headlesscontainer">
       <PagesHeader
         section="footers"
         title="Footers"

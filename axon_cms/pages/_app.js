@@ -37,8 +37,8 @@ function MyApp({ Component, pageProps }) {
           </ThemeProvider>
         </MenuRefreshProvider>
       </AuthProvider>
-      <footer className="fixed bottom-0 left-0 right-0 z-40 border-t border-gray-200 bg-white">
-        <div className="mx-auto max-w-7xl px-3 py-2 sm:px-6">
+      <footer className="fixed bottom-0 left-0 right-0 z-40 flex h-10 items-center border-t border-gray-200 bg-white">
+        <div className="mx-auto w-full max-w-7xl px-3 sm:px-6">
           <div className="flex items-center justify-between gap-3">
             <div className="flex min-w-0 items-center gap-2 leading-none text-gray-600">
               <div className="h-2 w-2 shrink-0 rounded-full bg-gradient-to-r from-brand to-brand-dark"></div>

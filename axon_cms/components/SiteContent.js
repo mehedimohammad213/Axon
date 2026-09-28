@@ -173,7 +173,7 @@ const SiteContent = ({ children }) => {
 
         {shouldShowSidebar && (
           <div
-            className={`fixed top-16 bottom-0 left-0 z-40 transition-transform duration-300 ${
+            className={`fixed top-[calc(var(--header-height)+var(--shell-gap))] bottom-[calc(var(--footer-height)+var(--shell-gap))] left-0 z-40 transition-transform duration-300 ${
               isMobile
                 ? mobileOpen
                   ? "translate-x-0"
@@ -188,16 +188,16 @@ const SiteContent = ({ children }) => {
               theme={theme}
               width={260}
               style={{
-                height: "calc(100vh - 4rem)",
-                minHeight: "calc(100vh - 4rem)",
-                maxHeight: "calc(100vh - 4rem)",
+                height: "100%",
+                minHeight: "100%",
+                maxHeight: "100%",
               }}
               className="overflow-x-hidden overflow-y-auto rounded-r-2xl bg-white px-2
                 shadow-lg scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent"
               collapsedWidth={isMobile ? 0 : 80}
               trigger={null}
             >
-              <div className="flex pb-16 pt-6">
+              <div className="flex py-3">
                 <SideMenuItems
                   token={token}
                   user={user}
@@ -229,7 +229,7 @@ const SiteContent = ({ children }) => {
           {/* Conditionally render the Collapse Button */}
           {shouldShowSidebar && !isMobile && (
             <div
-              className="hidden lg:flex fixed top-20 z-40 transition-all duration-300"
+              className="hidden lg:flex fixed top-[calc(var(--header-height)+var(--shell-gap)+0.75rem)] z-40 transition-all duration-300"
               style={{
                 left: collapsed ? "52px" : "235px",
               }}
@@ -251,7 +251,7 @@ const SiteContent = ({ children }) => {
           )}
 
           <Content
-            className="bg-surface min-h-[calc(100vh-4rem)] pb-16"
+            className="min-h-[calc(100vh-var(--header-height))] bg-surface"
             style={{
               width: "100%",
               maxWidth: "100%",

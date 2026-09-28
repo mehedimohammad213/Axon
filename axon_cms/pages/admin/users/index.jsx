@@ -168,7 +168,7 @@ export default function AdminUsersPage() {
   }
 
   return (
-    <div className="headlesscontainer rounded-xl bg-surface px-4 pt-4 pb-10 sm:px-6 sm:pt-6 sm:pb-12">
+    <div className="headlesscontainer">
       <AdminListHeader
         title="Users"
         iconSrc="/icons/headless/user-settings.svg"

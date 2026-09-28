@@ -136,7 +136,7 @@ const Events = () => {
   }
 
   return (
-    <div className="headlesscontainer bg-surface rounded-xl p-4">
+    <div className="headlesscontainer">
       <PagesHeader
         onSearch={handleEventSearch}
         onCreate={openCreateEventPage}
