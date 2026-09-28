@@ -1,7 +1,6 @@
 // components/formbuilder/builder/FormBuilder.js
 import React, { useState, useEffect } from "react";
 import { Tabs, Card, Button, Popconfirm, message } from "antd";
-import { CloseCircleOutlined } from "@ant-design/icons";
 import { useRouter } from "next/router";
 import instance from "../../../axios";
 import BuilderPanel from "./BuilderPanel";
@@ -242,17 +241,17 @@ const FormBuilder = () => {
             <div className="flex justify-between mt-4">
               <div className="flex items-center gap-2">
                 <Button
-                  className="bg-theme text-white"
+                  className="headlessbutton headlessbutton-pill !mr-0"
                   onClick={() => setPreview(true)}
                 >
                   Preview
                 </Button>
                 <Button
-                  icon={<CloseCircleOutlined />}
-                  onClick={() => router.push("/formbuilder")}
-                  className="headlesscancelbutton"
+                  className="headlessbutton headlessbutton-pill !mr-0"
+                  onClick={saveForm}
+                  loading={loading}
                 >
-                  Cancel
+                  Publish
                 </Button>
               </div>
               <Popconfirm
@@ -262,7 +261,9 @@ const FormBuilder = () => {
                 cancelText="No"
                 okButtonProps={{ danger: true }}
               >
-                <Button danger>Clear Form</Button>
+                <Button danger className="headlesscancelbutton headlessbutton-pill !mr-0">
+                  Clear Form
+                </Button>
               </Popconfirm>
             </div>
           </TabPane>

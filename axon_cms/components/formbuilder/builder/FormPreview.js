@@ -22,13 +22,16 @@ const FormPreview = ({
       onClose={onCancel}
       width="60%"
       footer={
-        <div className="flex justify-end">
-          <Button onClick={onCancel} className="mr-2">
+        <div className="flex justify-end gap-2">
+          <Button
+            onClick={onCancel}
+            className="headlesscancelbutton headlessbutton-pill !mr-0"
+          >
             Discard
           </Button>
           <Button
             onClick={onSave}
-            className="bg-theme text-white"
+            className="headlessbutton headlessbutton-pill !mr-0"
             loading={loading}
           >
             Publish Form

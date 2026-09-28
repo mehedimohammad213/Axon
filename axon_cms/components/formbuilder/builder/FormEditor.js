@@ -1,7 +1,7 @@
 // components/formbuilder/builder/FormEditor.js
 import React, { useEffect, useState, useContext } from "react";
 import { Tabs, Card, Button, Popconfirm } from "antd";
-import { CopyOutlined, CloseCircleOutlined } from "@ant-design/icons";
+import { CopyOutlined } from "@ant-design/icons";
 import BuilderPanel from "./BuilderPanel";
 import ElementPanel from "./ElementPanel";
 import { FormBuilderContext } from "../../../src/context/FormBuilderContext";
@@ -273,17 +273,17 @@ const FormEditor = ({ formId }) => {
             <div className="flex justify-between mt-4">
               <div className="flex items-center gap-2">
                 <Button
-                  className="bg-theme text-white"
+                  className="headlessbutton headlessbutton-pill !mr-0"
                   onClick={() => setPreview(true)}
                 >
                   Preview
                 </Button>
                 <Button
-                  icon={<CloseCircleOutlined />}
-                  onClick={() => router.push("/formbuilder")}
-                  className="headlesscancelbutton"
+                  className="headlessbutton headlessbutton-pill !mr-0"
+                  onClick={saveForm}
+                  loading={loading}
                 >
-                  Cancel
+                  Publish
                 </Button>
               </div>
               <Popconfirm
@@ -293,7 +293,9 @@ const FormEditor = ({ formId }) => {
                 cancelText="No"
                 okButtonProps={{ danger: true }}
               >
-                <Button danger>Clear Form</Button>
+                <Button danger className="headlesscancelbutton headlessbutton-pill !mr-0">
+                  Clear Form
+                </Button>
               </Popconfirm>
             </div>
           </TabPane>
