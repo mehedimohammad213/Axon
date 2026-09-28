@@ -1,7 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Drawer, Button, Empty } from "antd";
-import { EditOutlined, FileTextOutlined, PlusOutlined } from "@ant-design/icons";
-import { useRouter } from "next/router";
+import { FileTextOutlined, PlusOutlined } from "@ant-design/icons";
 import HeadlessFormElements from "./HeadlessFormElements";
 import FormRow from "./FormRow";
 import { FormBuilderContext } from "../../src/context/FormBuilderContext";
@@ -14,7 +13,6 @@ const HeadlessFormsList = ({
   emptyDescription = "Create a form to collect submissions from your site.",
   createLabel = "Create form",
 }) => {
-  const router = useRouter();
   const { reset } = useContext(FormBuilderContext);
   const [expandedFormId, setExpandedFormId] = useState(null);
   const [selectedFormId, setSelectedFormId] = useState(null);
@@ -105,19 +103,7 @@ const HeadlessFormsList = ({
         onClose={handleCloseDrawer}
         open={drawerVisible}
         width="60vw"
-        extra={
-          <Button
-            type="primary"
-            icon={<EditOutlined />}
-            onClick={() => {
-              router.push(`/formbuilder/edit-form?id=${selectedFormId}`);
-              handleCloseDrawer();
-            }}
-            className="headlessbutton headlessbutton-pill !mr-0"
-          >
-            Edit Form
-          </Button>
-        }
+        rootClassName="media-preview-drawer"
       >
         {selectedFormId && (
           <HeadlessFormElements
