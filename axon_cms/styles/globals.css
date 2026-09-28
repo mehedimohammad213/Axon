@@ -34,7 +34,7 @@
   --border: #e8eaed;
   --header-height: 4rem;
   --footer-height: 2.5rem;
-  --shell-gap: clamp(1rem, 2vw, 2rem);
+  --shell-gap: 0.75rem;
 }
 
 /* Reset and Base Styles */

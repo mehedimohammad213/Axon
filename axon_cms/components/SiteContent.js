@@ -173,7 +173,7 @@ const SiteContent = ({ children }) => {
 
         {shouldShowSidebar && (
           <div
-            className={`fixed top-[calc(var(--header-height)+var(--shell-gap))] bottom-[calc(var(--footer-height)+var(--shell-gap))] left-0 z-40 transition-transform duration-300 ${
+            className={`fixed top-[calc(var(--header-height)+var(--shell-gap))] bottom-[calc(var(--footer-height)+var(--shell-gap))] left-[var(--shell-gap)] z-40 transition-transform duration-300 ${
               isMobile
                 ? mobileOpen
                   ? "translate-x-0"
@@ -192,12 +192,12 @@ const SiteContent = ({ children }) => {
                 minHeight: "100%",
                 maxHeight: "100%",
               }}
-              className="overflow-x-hidden overflow-y-auto rounded-r-2xl bg-white px-2
+              className="overflow-x-hidden overflow-y-auto rounded-2xl bg-white px-2
                 shadow-lg scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent"
               collapsedWidth={isMobile ? 0 : 80}
               trigger={null}
             >
-              <div className="flex py-3">
+              <div className="flex py-2">
                 <SideMenuItems
                   token={token}
                   user={user}
@@ -217,10 +217,12 @@ const SiteContent = ({ children }) => {
           className="min-h-[calc(100vh-4rem)] bg-surface transition-all duration-300 ease-in-out"
           style={{
             marginLeft:
-              shouldShowSidebar && !isMobile ? `${contentMargin}px` : "0",
+              shouldShowSidebar && !isMobile
+                ? `calc(${contentMargin}px + var(--shell-gap))`
+                : "0",
             width:
               shouldShowSidebar && !isMobile
-                ? `calc(100vw - ${contentMargin}px)`
+                ? `calc(100vw - ${contentMargin}px - var(--shell-gap))`
                 : "100vw",
             maxWidth: "100%",
             boxSizing: "border-box",
@@ -229,9 +231,11 @@ const SiteContent = ({ children }) => {
           {/* Conditionally render the Collapse Button */}
           {shouldShowSidebar && !isMobile && (
             <div
-              className="hidden lg:flex fixed top-[calc(var(--header-height)+var(--shell-gap)+0.75rem)] z-40 transition-all duration-300"
+              className="hidden lg:flex fixed top-[calc(var(--header-height)+var(--shell-gap)+0.5rem)] z-40 transition-all duration-300"
               style={{
-                left: collapsed ? "52px" : "235px",
+                left: collapsed
+                  ? "calc(var(--shell-gap) + 52px)"
+                  : "calc(var(--shell-gap) + 235px)",
               }}
             >
               <Image
