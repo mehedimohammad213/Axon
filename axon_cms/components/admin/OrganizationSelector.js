@@ -18,7 +18,7 @@ export default function OrganizationSelector() {
   return (
     <div className="flex max-w-full items-center gap-2 sm:ml-2 md:ml-6 lg:ml-10">
       <div
-        className="hidden whitespace-nowrap rounded-lg bg-violet-600 px-3 py-1.5 text-xs
+          className="hidden whitespace-nowrap rounded-lg bg-theme px-3 py-1.5 text-xs
           font-bold text-white shadow-sm md:block"
         title="Platform Super Admin"
       >

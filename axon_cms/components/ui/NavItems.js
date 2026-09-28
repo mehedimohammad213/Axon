@@ -3,11 +3,13 @@
 import {
   SearchOutlined,
   LoginOutlined,
+  LogoutOutlined,
   UserOutlined,
   DeploymentUnitOutlined,
   ReloadOutlined,
   MenuOutlined,
   CloseOutlined,
+  StopOutlined,
 } from "@ant-design/icons";
 import { Input, Layout, Dropdown, Button, Tooltip, message, Modal } from "antd";
 import { useEffect, useState, useRef } from "react";
@@ -128,6 +130,15 @@ export default function NavItems({
       okText: "Logout",
       okType: "danger",
       cancelText: "Cancel",
+      okButtonProps: {
+        danger: true,
+        shape: "round",
+        icon: <LogoutOutlined />,
+      },
+      cancelButtonProps: {
+        shape: "round",
+        icon: <StopOutlined />,
+      },
       onOk: () => handleLogout(),
     });
   };
@@ -157,9 +168,10 @@ export default function NavItems({
             e.stopPropagation();
             confirmLogout();
           }}
-          className="cursor-pointer text-base rounded-md px-2 py-1 text-gray-700
-            hover:bg-black/5 hover:text-gray-900 transition-colors duration-200"
+          className="flex cursor-pointer items-center gap-2 text-base rounded-md px-2 py-1
+            text-gray-700 hover:bg-black/5 hover:text-gray-900 transition-colors duration-200"
         >
+          <LogoutOutlined />
           Logout
         </div>
       ),
