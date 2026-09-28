@@ -24,6 +24,10 @@ const Navbars = () => {
   const [sortType, setSortType] = useState("desc");
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
+  const [filters, setFilters] = useState({
+    logo: undefined,
+    menu_items: undefined,
+  });
 
   const fetchNavbars = useCallback(async () => {
     try {
@@ -69,8 +73,33 @@ const Navbars = () => {
       );
     }
 
+    if (filters.logo === "with") {
+      results = results.filter((navbar) => navbar.logo_id || navbar.logo?.id);
+    } else if (filters.logo === "without") {
+      results = results.filter((navbar) => !navbar.logo_id && !navbar.logo?.id);
+    }
+
+    if (filters.menu_items === "with") {
+      results = results.filter((navbar) => {
+        const ids = navbar.menu_item_ids;
+        const items = navbar.menu_items;
+        if (Array.isArray(items) && items.length) return true;
+        if (Array.isArray(ids) && ids.length) return true;
+        return false;
+      });
+    } else if (filters.menu_items === "without") {
+      results = results.filter((navbar) => {
+        const ids = navbar.menu_item_ids;
+        const items = navbar.menu_items;
+        const hasItems =
+          (Array.isArray(items) && items.length > 0) ||
+          (Array.isArray(ids) && ids.length > 0);
+        return !hasItems;
+      });
+    }
+
     return results;
-  }, [allNavbars, searchTerm]);
+  }, [allNavbars, searchTerm, filters]);
 
   const sortedNavbars = useMemo(() => {
     return [...filteredNavbars].sort((a, b) =>
@@ -80,7 +109,7 @@ const Navbars = () => {
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [searchTerm, sortType, itemsPerPage]);
+  }, [searchTerm, filters, sortType, itemsPerPage]);
 
   const paginatedNavbars = useMemo(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -96,6 +125,14 @@ const Navbars = () => {
 
   const handleShowChange = useCallback((value) => {
     setItemsPerPage(parseInt(value, 10));
+  }, []);
+
+  const applyFilters = useCallback((filterValues) => {
+    setFilters(filterValues);
+  }, []);
+
+  const resetFilters = useCallback(() => {
+    setFilters({ logo: undefined, menu_items: undefined });
   }, []);
 
   const setNavbars = useCallback((updater) => {
@@ -119,6 +156,8 @@ const Navbars = () => {
         sortType={sortType}
         setSortType={setSortType}
         onShowChange={handleShowChange}
+        applyFilters={applyFilters}
+        resetFilters={resetFilters}
         onRefresh={refreshAll}
         itemCount={allNavbars.length}
       />

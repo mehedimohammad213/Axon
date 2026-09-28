@@ -20,11 +20,15 @@ import {
   message,
   Badge,
   Dropdown,
+  Modal,
+  Form,
 } from "antd";
 import React, { useState } from "react";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { copyApiEndpoint } from "../../utils/copyApiEndpoint";
+
+const { Option } = Select;
 
 const PagesHeader = ({
   onSearch,
@@ -36,6 +40,9 @@ const PagesHeader = ({
   setSortType,
   onShowChange,
   handleFilter,
+  applyFilters,
+  resetFilters,
+  menuItems,
   onRefresh,
   title = "Pages",
   section = "all",
@@ -45,6 +52,8 @@ const PagesHeader = ({
 }) => {
   const router = useRouter();
   const [searchValue, setSearchValue] = useState("");
+  const [isFilterModalVisible, setIsFilterModalVisible] = useState(false);
+  const [form] = Form.useForm();
 
   const showPagesSection = section === "all" || section === "pages";
   const showFootersSection = section === "all" || section === "footers";
@@ -60,6 +69,20 @@ const PagesHeader = ({
       onRefresh();
       message.success("Data refreshed successfully");
     }
+  };
+
+  const openFilterModal = () => setIsFilterModalVisible(true);
+  const closeFilterModal = () => setIsFilterModalVisible(false);
+
+  const onFinish = (values) => {
+    applyFilters?.(values);
+    closeFilterModal();
+  };
+
+  const handleResetFilters = () => {
+    form.resetFields();
+    resetFilters?.();
+    closeFilterModal();
   };
 
   const filterMenuItems = [
@@ -265,6 +288,15 @@ const PagesHeader = ({
             </div>
 
             {/* Filter Control */}
+            {applyFilters && (
+              <Button
+                icon={<FilterOutlined />}
+                className="h-9 rounded-lg border-gray-200 font-medium text-gray-700 hover:border-brand hover:text-brand-dark"
+                onClick={openFilterModal}
+              >
+                Filter
+              </Button>
+            )}
             {showTypeFilter && handleFilter && (
               <div className="flex items-center gap-2">
                 <span className="text-sm font-medium text-gray-600">Filter</span>
@@ -320,6 +352,55 @@ const PagesHeader = ({
           </div>
         </div>
       </div>
+
+      {applyFilters && (
+        <Modal
+          title={section === "footers" ? "Filter footers" : "Filter pages"}
+          open={isFilterModalVisible}
+          onCancel={closeFilterModal}
+          footer={null}
+        >
+          <Form
+            form={form}
+            layout="vertical"
+            onFinish={onFinish}
+            initialValues={{ status: undefined, menu_item_id: undefined }}
+          >
+            <Form.Item label="Status" name="status">
+              <Select placeholder="Select status" allowClear>
+                <Option value="active">Active</Option>
+                <Option value="inactive">Inactive</Option>
+              </Select>
+            </Form.Item>
+            {menuItems?.length > 0 && (
+              <Form.Item label="Menu item" name="menu_item_id">
+                <Select placeholder="Select a menu item" allowClear showSearch>
+                  {menuItems.map((item) => (
+                    <Option key={item.id} value={item.id}>
+                      {item.title}
+                    </Option>
+                  ))}
+                </Select>
+              </Form.Item>
+            )}
+            <div className="mt-4 flex justify-end gap-2">
+              <Button
+                onClick={handleResetFilters}
+                className="headlesscancelbutton headlessbutton-pill !mr-0"
+              >
+                Reset
+              </Button>
+              <Button
+                type="primary"
+                htmlType="submit"
+                className="headlessbutton headlessbutton-pill !mr-0"
+              >
+                Apply
+              </Button>
+            </div>
+          </Form>
+        </Modal>
+      )}
     </div>
   );
 };

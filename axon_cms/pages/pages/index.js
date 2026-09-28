@@ -9,29 +9,73 @@ import { useRouter } from "next/router";
 import PagesHeader from "../../components/PageBuilder/PagesHeader";
 import CreatePageModal from "../../components/PageBuilder/CreatePageModal";
 import RenderPages from "../../components/PageBuilder/Renderpages";
+import { menuItemLinksToPage } from "../../utils/menuItemPageLink";
 
 const Pages = () => {
   const [allPages, setAllPages] = useState([]);
-  const [typePages, setTypePages] = useState([]);
   const [menuItems, setMenuItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [createModalVisible, setCreateModalVisible] = useState(false);
   const [expandedPageId, setExpandedPageId] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
   const [sortType, setSortType] = useState("desc");
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
+  const [filters, setFilters] = useState({
+    status: undefined,
+    menu_item_id: undefined,
+  });
 
   const router = useRouter();
 
+  const pageList = useMemo(
+    () => allPages.filter((page) => page.type === "Page"),
+    [allPages]
+  );
+
+  const filteredPages = useMemo(() => {
+    let results = [...pageList];
+    const term = searchTerm.trim().toLowerCase();
+
+    if (term) {
+      results = results.filter((page) =>
+        (page.page_name_en || "").toLowerCase().includes(term)
+      );
+    }
+
+    if (filters.status === "active") {
+      results = results.filter(
+        (page) => page.status !== false && page.status !== 0
+      );
+    } else if (filters.status === "inactive") {
+      results = results.filter(
+        (page) => page.status === false || page.status === 0
+      );
+    }
+
+    if (filters.menu_item_id) {
+      const selectedMenuItem = menuItems.find(
+        (item) => String(item.id) === String(filters.menu_item_id)
+      );
+      if (selectedMenuItem) {
+        results = results.filter((page) =>
+          menuItemLinksToPage(selectedMenuItem, page)
+        );
+      }
+    }
+
+    return results;
+  }, [pageList, searchTerm, filters, menuItems]);
+
   const sortedTypePages = useMemo(() => {
-    return [...typePages].sort((a, b) =>
+    return [...filteredPages].sort((a, b) =>
       sortType === "asc" ? a.id - b.id : b.id - a.id
     );
-  }, [typePages, sortType]);
+  }, [filteredPages, sortType]);
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [sortType, itemsPerPage]);
+  }, [searchTerm, filters, sortType, itemsPerPage]);
 
   const paginatedPages = useMemo(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -70,7 +114,6 @@ const Pages = () => {
       const pages = Array.isArray(response?.data) ? response.data : [];
       if (pages.length || Array.isArray(response?.data)) {
         setAllPages(pages);
-        setTypePages(pages.filter((page) => page.type === "Page"));
       } else {
         message.error("Failed to fetch pages.");
       }
@@ -106,7 +149,7 @@ const Pages = () => {
     try {
       await instance.delete(`/pages/${deletePageId}`);
       message.success("Page deleted successfully.");
-      setTypePages((prevPages) =>
+      setAllPages((prevPages) =>
         prevPages.filter((page) => page.id !== deletePageId)
       );
     } catch (error) {
@@ -196,7 +239,7 @@ const Pages = () => {
 
       if (response.status === 200) {
         message.success("Page info updated successfully.");
-        setTypePages((prevPages) =>
+        setAllPages((prevPages) =>
           prevPages?.map((page) =>
             page.id === id
               ? {
@@ -228,25 +271,8 @@ const Pages = () => {
     }
   }, []);
 
-  const handlePageSearch = useCallback(
-    (searchText) => {
-      setCurrentPage(1);
-      if (!searchText.trim()) {
-        setTypePages(allPages.filter((page) => page.type === "Page"));
-        return;
-      }
-
-      const filteredPages = allPages.filter((page) =>
-        page.page_name_en.toLowerCase().includes(searchText.toLowerCase())
-      );
-
-      setTypePages(filteredPages.filter((page) => page.type === "Page"));
-    },
-    [allPages]
-  );
-
   const handlePageCreated = useCallback((newPage) => {
-    setTypePages((prevPages) => [newPage, ...prevPages]);
+    setAllPages((prevPages) => [newPage, ...prevPages]);
   }, []);
 
   const openCreateModal = useCallback(() => setCreateModalVisible(true), []);
@@ -256,6 +282,14 @@ const Pages = () => {
     (value) => setItemsPerPage(parseInt(value, 10)),
     []
   );
+
+  const applyFilters = useCallback((filterValues) => {
+    setFilters(filterValues);
+  }, []);
+
+  const resetFilters = useCallback(() => {
+    setFilters({ status: undefined, menu_item_id: undefined });
+  }, []);
 
   if (loading) {
     return (
@@ -270,15 +304,18 @@ const Pages = () => {
       <PagesHeader
         section="pages"
         title="Pages"
-        onSearch={handlePageSearch}
+        onSearch={setSearchTerm}
         onCreate={openCreateModal}
         createMode={createModalVisible}
         onCancelCreate={closeCreateModal}
         sortType={sortType}
         setSortType={setSortType}
         onShowChange={handleShowChange}
+        applyFilters={applyFilters}
+        resetFilters={resetFilters}
+        menuItems={menuItems}
         onRefresh={() => refreshAll(true)}
-        totalPages={typePages.length}
+        totalPages={pageList.length}
       />
 
       <CreatePageModal

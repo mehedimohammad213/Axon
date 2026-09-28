@@ -12,14 +12,15 @@ import RenderPages from "../../components/PageBuilder/Renderpages";
 
 const Footers = () => {
   const [allFooters, setAllFooters] = useState([]);
-  const [footers, setFooters] = useState([]);
   const [loading, setLoading] = useState(true);
   const [createFooterModalVisible, setCreateFooterModalVisible] =
     useState(false);
   const [expandedPageId, setExpandedPageId] = useState(null);
+  const [searchTerm, setSearchTerm] = useState("");
   const [sortType, setSortType] = useState("desc");
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [currentPage, setCurrentPage] = useState(1);
+  const [filters, setFilters] = useState({ status: undefined });
 
   const router = useRouter();
 
@@ -35,7 +36,6 @@ const Footers = () => {
       );
       if (response.data) {
         setAllFooters(response.data);
-        setFooters(response.data);
       } else {
         message.error("Failed to fetch footers.");
       }
@@ -53,15 +53,38 @@ const Footers = () => {
 
   useGlobalRefresh(() => fetchFooters(true));
 
+  const filteredFooters = useMemo(() => {
+    let results = [...allFooters];
+    const term = searchTerm.trim().toLowerCase();
+
+    if (term) {
+      results = results.filter((page) =>
+        (page.page_name_en || "").toLowerCase().includes(term)
+      );
+    }
+
+    if (filters.status === "active") {
+      results = results.filter(
+        (page) => page.status !== false && page.status !== 0
+      );
+    } else if (filters.status === "inactive") {
+      results = results.filter(
+        (page) => page.status === false || page.status === 0
+      );
+    }
+
+    return results;
+  }, [allFooters, searchTerm, filters]);
+
   const sortedFooters = useMemo(() => {
-    return [...footers].sort((a, b) =>
+    return [...filteredFooters].sort((a, b) =>
       sortType === "asc" ? a.id - b.id : b.id - a.id
     );
-  }, [footers, sortType]);
+  }, [filteredFooters, sortType]);
 
   useEffect(() => {
     setCurrentPage(1);
-  }, [sortType, itemsPerPage]);
+  }, [searchTerm, filters, sortType, itemsPerPage]);
 
   const paginatedFooters = useMemo(() => {
     const startIndex = (currentPage - 1) * itemsPerPage;
@@ -84,7 +107,6 @@ const Footers = () => {
 
   const handleFooterCreated = useCallback((newFooter) => {
     setAllFooters((prev) => [newFooter, ...prev]);
-    setFooters((prev) => [newFooter, ...prev]);
   }, []);
 
   const handleDeleteFooter = useCallback(async (deletePageId) => {
@@ -92,7 +114,6 @@ const Footers = () => {
       await instance.delete(`/pages/${deletePageId}`);
       message.success("Footer deleted successfully.");
       setAllFooters((prev) => prev.filter((page) => page.id !== deletePageId));
-      setFooters((prev) => prev.filter((page) => page.id !== deletePageId));
     } catch (error) {
       console.error("Error deleting footer:", error);
       message.error("An error occurred while deleting the footer.");
@@ -191,7 +212,6 @@ const Footers = () => {
               }
             : page;
         setAllFooters((prev) => prev.map(mapFooter));
-        setFooters((prev) => prev.map(mapFooter));
       } else {
         message.error("Failed to update footer info.");
       }
@@ -201,25 +221,18 @@ const Footers = () => {
     }
   }, []);
 
-  const handleFooterSearch = useCallback(
-    (searchText) => {
-      setCurrentPage(1);
-      if (!searchText.trim()) {
-        setFooters(allFooters);
-        return;
-      }
-      const filtered = allFooters.filter((page) =>
-        page.page_name_en.toLowerCase().includes(searchText.toLowerCase())
-      );
-      setFooters(filtered);
-    },
-    [allFooters]
-  );
-
   const handleShowChange = useCallback(
     (value) => setItemsPerPage(parseInt(value, 10)),
     []
   );
+
+  const applyFilters = useCallback((filterValues) => {
+    setFilters(filterValues);
+  }, []);
+
+  const resetFilters = useCallback(() => {
+    setFilters({ status: undefined });
+  }, []);
 
   if (loading) {
     return (
@@ -234,15 +247,17 @@ const Footers = () => {
       <PagesHeader
         section="footers"
         title="Footers"
-        onSearch={handleFooterSearch}
+        onSearch={setSearchTerm}
         onCreate={openCreateFooterModal}
         createMode={createFooterModalVisible}
         onCancelCreate={closeCreateFooterModal}
         sortType={sortType}
         setSortType={setSortType}
         onShowChange={handleShowChange}
+        applyFilters={applyFilters}
+        resetFilters={resetFilters}
         onRefresh={() => fetchFooters(true)}
-        totalFooters={footers.length}
+        totalFooters={allFooters.length}
       />
 
       <CreateFooterModal

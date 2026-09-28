@@ -1,9 +1,19 @@
 // components/Navbars/NavbarHeader.js
 
-import React from "react";
-import { Input, Button, Select, message, Tooltip, Badge } from "antd";
+import React, { useState } from "react";
+import {
+  Input,
+  Button,
+  Select,
+  Modal,
+  Form,
+  message,
+  Tooltip,
+  Badge,
+} from "antd";
 import {
   CopyOutlined,
+  FilterOutlined,
   MenuOutlined,
   PlusCircleOutlined,
   ReloadOutlined,
@@ -12,6 +22,8 @@ import {
 import Image from "next/image";
 import { copyApiEndpoint } from "../../utils/copyApiEndpoint";
 
+const { Option } = Select;
+
 const NavbarHeader = ({
   onAddNavbar,
   searchTerm,
@@ -19,9 +31,28 @@ const NavbarHeader = ({
   sortType,
   setSortType,
   onShowChange,
+  applyFilters,
+  resetFilters,
   onRefresh,
   itemCount,
 }) => {
+  const [isFilterModalVisible, setIsFilterModalVisible] = useState(false);
+  const [form] = Form.useForm();
+
+  const openFilterModal = () => setIsFilterModalVisible(true);
+  const closeFilterModal = () => setIsFilterModalVisible(false);
+
+  const onFinish = (values) => {
+    applyFilters?.(values);
+    closeFilterModal();
+  };
+
+  const handleResetFilters = () => {
+    form.resetFields();
+    resetFilters?.();
+    closeFilterModal();
+  };
+
   const handleRefresh = () => {
     if (onRefresh) {
       onRefresh();
@@ -124,6 +155,14 @@ const NavbarHeader = ({
                 </Button>
               </div>
             </div>
+
+            <Button
+              icon={<FilterOutlined />}
+              className="h-9 rounded-lg border-gray-200 font-medium text-gray-700 hover:border-brand hover:text-brand-dark"
+              onClick={openFilterModal}
+            >
+              Filter
+            </Button>
           </div>
 
           <div className="flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center lg:w-auto">
@@ -152,6 +191,48 @@ const NavbarHeader = ({
           </div>
         </div>
       </div>
+
+      <Modal
+        title="Filter navbars"
+        open={isFilterModalVisible}
+        onCancel={closeFilterModal}
+        footer={null}
+      >
+        <Form
+          form={form}
+          layout="vertical"
+          onFinish={onFinish}
+          initialValues={{ logo: undefined, menu_items: undefined }}
+        >
+          <Form.Item label="Logo" name="logo">
+            <Select placeholder="Select logo" allowClear>
+              <Option value="with">With logo</Option>
+              <Option value="without">Without logo</Option>
+            </Select>
+          </Form.Item>
+          <Form.Item label="Menu items" name="menu_items">
+            <Select placeholder="Select menu items" allowClear>
+              <Option value="with">With menu items</Option>
+              <Option value="without">Without menu items</Option>
+            </Select>
+          </Form.Item>
+          <div className="mt-4 flex justify-end gap-2">
+            <Button
+              onClick={handleResetFilters}
+              className="headlesscancelbutton headlessbutton-pill !mr-0"
+            >
+              Reset
+            </Button>
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
+              Apply
+            </Button>
+          </div>
+        </Form>
+      </Modal>
     </div>
   );
 };
