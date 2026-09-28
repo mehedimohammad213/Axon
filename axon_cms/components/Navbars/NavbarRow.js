@@ -1,6 +1,6 @@
 // components/Navbars/NavbarRow.js
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import {
   Input,
   Button,
@@ -10,18 +10,18 @@ import {
   Tooltip,
   Modal,
   Card,
+  Badge,
 } from "antd";
 import {
   EditOutlined,
   DeleteFilled,
+  DeleteOutlined,
   CheckCircleOutlined,
   CloseCircleOutlined,
   FileImageFilled,
   MenuOutlined,
   GlobalOutlined,
   PlusCircleOutlined,
-  CaretRightOutlined,
-  CaretDownOutlined,
 } from "@ant-design/icons";
 import instance from "../../axios";
 import MediaSelectionModal from "../PageBuilder/Modals/MediaSelectionModal";
@@ -30,6 +30,13 @@ import AddMenuItemForm from "../MenuItems/AddMenuItemForm";
 import EditMenuItemForm from "../MenuItems/EditMenuItemForm";
 
 const PLACEHOLDER_LOGO = "/images/headless_logo.svg";
+
+const idBadgeStyle = {
+  backgroundColor: "#f0f0f0",
+  color: "#666",
+  fontSize: "12px",
+  fontWeight: "500",
+};
 
 const getNavbarLogoId = (navbar) =>
   navbar?.logo_id ?? navbar?.logo?.id ?? null;
@@ -118,17 +125,6 @@ const NavbarLogoPreview = ({
   );
 };
 
-const InfoRow = ({ label, children }) => (
-  <div className="min-w-0">
-    <dt className="text-xs font-medium uppercase tracking-wide text-gray-400">
-      {label}
-    </dt>
-    <dd className="mt-1 break-words text-sm font-medium text-gray-800">
-      {children}
-    </dd>
-  </div>
-);
-
 const NavbarRow = ({
   navbar,
   media,
@@ -136,8 +132,6 @@ const NavbarRow = ({
   editingNavbarId,
   setEditingNavbarId,
   fetchNavbars,
-  expandedNavbarId,
-  handleExpand,
 }) => {
   const [editedNavbarTitleEn, setEditedNavbarTitleEn] = useState(
     navbar.title_en || ""
@@ -155,10 +149,8 @@ const NavbarRow = ({
   const [selectedLogoMedia, setSelectedLogoMedia] = useState(null);
   const [isAddMenuItemOpen, setIsAddMenuItemOpen] = useState(false);
   const [editingMenuItem, setEditingMenuItem] = useState(null);
-  const skipCardToggleRef = useRef(false);
 
   const isEditing = editingNavbarId === navbar.id;
-  const isExpanded = expandedNavbarId === navbar.id;
   const menuItemsCount = navbar.menu_items?.length || 0;
   const navbarLogo = resolveNavbarLogo(navbar, media);
 
@@ -199,11 +191,11 @@ const NavbarRow = ({
         // silently fail
       }
     };
-    if (isEditing || isExpanded) {
+    if (isEditing || editingMenuItem || isAddMenuItemOpen) {
       fetchMenuItems();
       fetchPages();
     }
-  }, [isEditing, isExpanded, navbar.id]);
+  }, [isEditing, editingMenuItem, isAddMenuItemOpen, navbar.id]);
 
   const handleUpdate = async () => {
     const titleEn = (editedNavbarTitleEn || "").trim();
@@ -265,7 +257,6 @@ const NavbarRow = ({
   const startEditing = (e) => {
     e?.stopPropagation?.();
     setEditingNavbarId(navbar.id);
-    if (!isExpanded) handleExpand(navbar.id);
   };
 
   const cancelEditing = () => {
@@ -273,28 +264,12 @@ const NavbarRow = ({
     setSelectedLogoMedia(null);
   };
 
-  const suppressCardToggle = () => {
-    skipCardToggleRef.current = true;
-    window.setTimeout(() => {
-      skipCardToggleRef.current = false;
-    }, 300);
-  };
-
   const closeMenuItemEditor = () => {
     setEditingMenuItem(null);
-    suppressCardToggle();
   };
 
   const closeAddMenuItem = () => {
     setIsAddMenuItemOpen(false);
-    suppressCardToggle();
-  };
-
-  const toggleCard = () => {
-    if (skipCardToggleRef.current || editingMenuItem || isAddMenuItemOpen) {
-      return;
-    }
-    handleExpand(navbar.id);
   };
 
   const openMenuItemEditor = (item) => {
@@ -323,282 +298,204 @@ const NavbarRow = ({
 
   const editLogo = selectedLogoMedia || navbarLogo;
 
-  return (
-    <Card
-      className={`w-full cursor-pointer overflow-hidden rounded-xl border transition-shadow duration-200 ${
-        isExpanded
-          ? "border-brand/40 shadow-md"
-          : "border-gray-200 shadow-sm hover:border-gray-300 hover:shadow-md"
-      }`}
-      bodyStyle={{ padding: 0 }}
-      onClick={toggleCard}
-      onKeyDown={(e) => {
-        if (e.key === "Enter" || e.key === " ") {
-          e.preventDefault();
-          toggleCard();
-        }
+  const editingActions = [
+    <Button
+      key="save"
+      icon={<CheckCircleOutlined />}
+      onClick={handleUpdate}
+      className="headlessbutton headlessbutton-pill !mr-0"
+    >
+      Save changes
+    </Button>,
+    <Button
+      key="cancel"
+      icon={<CloseCircleOutlined />}
+      onClick={cancelEditing}
+      className="headlesscancelbutton headlessbutton-pill !mr-0"
+    >
+      Cancel
+    </Button>,
+  ];
+
+  const defaultActions = [
+    <Button
+      key="edit"
+      icon={<EditOutlined />}
+      onClick={startEditing}
+      className="headlessbutton headlessbutton-pill !mr-0"
+    >
+      Edit
+    </Button>,
+    <Popconfirm
+      key="delete"
+      title="Delete this navbar?"
+      description="This cannot be undone."
+      onConfirm={handleDelete}
+      okText="Delete"
+      cancelText="Cancel"
+      okButtonProps={{
+        danger: true,
+        icon: <DeleteFilled />,
+      }}
+      cancelButtonProps={{
+        icon: <CloseCircleOutlined />,
       }}
     >
-      {/* Header */}
-      <div className="flex min-h-[88px] items-center gap-3 px-5 py-4">
-        <button
-          type="button"
-          aria-label={isExpanded ? "Collapse" : "Expand"}
-          className={`flex h-8 w-8 shrink-0 items-center justify-center rounded-lg border transition-colors ${
-            isExpanded
-              ? "border-brand/30 bg-brand-light text-brand-dark"
-              : "border-gray-200 bg-white text-gray-500 hover:bg-gray-50"
-          }`}
-          onClick={(e) => {
-            e.stopPropagation();
-            handleExpand(navbar.id);
-          }}
-        >
-          {isExpanded ? <CaretDownOutlined /> : <CaretRightOutlined />}
-        </button>
+      <Button
+        className="headlesscancelbutton headlessbutton-pill !mr-0"
+        icon={<DeleteOutlined />}
+      >
+        Delete
+      </Button>
+    </Popconfirm>,
+  ];
 
-        <div
-          className="flex h-12 w-12 shrink-0 items-center justify-center overflow-hidden rounded-lg border border-gray-200 bg-white p-1"
-          onClick={(e) => e.stopPropagation()}
-        >
-          <NavbarLogoPreview logo={navbarLogo} size={40} />
-        </div>
-
-        <div className="min-w-0 flex-1">
-          <div className="flex flex-wrap items-center gap-2">
-            <span className="rounded-md bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-500">
-              #{navbar.id}
-            </span>
-            {menuItemsCount > 0 && (
-              <span className="rounded-md bg-brand-light px-2 py-0.5 text-xs font-medium text-brand-dark">
-                {menuItemsCount} item{menuItemsCount !== 1 ? "s" : ""}
-              </span>
-            )}
+  return (
+    <Card
+      hoverable
+      actions={isEditing ? editingActions : defaultActions}
+      className="media-card slider-card page-list-card overflow-hidden shadow-md rounded-md"
+    >
+      {isEditing ? (
+        <div className="space-y-4 pt-3" onClick={(e) => e.stopPropagation()}>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-[auto_minmax(0,1fr)_minmax(0,1fr)] md:items-end">
+            <div>
+              <label className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-gray-400">
+                Logo
+              </label>
+              <div className="flex items-center gap-2">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-md border border-gray-200 bg-gray-50 p-0.5">
+                  <NavbarLogoPreview logo={editLogo} size={28} />
+                </div>
+                <Button
+                  icon={<FileImageFilled />}
+                  onClick={() => setMediaModalVisible(true)}
+                  className="rounded-lg border-gray-200"
+                >
+                  Change logo
+                </Button>
+              </div>
+              <MediaSelectionModal
+                isVisible={mediaModalVisible}
+                onClose={() => setMediaModalVisible(false)}
+                selectionMode="single"
+                onSelectMedia={(selectedMedia) => {
+                  const mediaItem = Array.isArray(selectedMedia)
+                    ? selectedMedia[0]
+                    : selectedMedia;
+                  if (!mediaItem?.id) return;
+                  setEditedLogoId(mediaItem.id);
+                  setSelectedLogoMedia(mediaItem);
+                  setMediaModalVisible(false);
+                }}
+              />
+            </div>
+            <div>
+              <label className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-gray-400">
+                Title (English)
+              </label>
+              <Input
+                value={editedNavbarTitleEn}
+                onChange={(e) => setEditedNavbarTitleEn(e.target.value)}
+                placeholder="Title (English)"
+                prefix={<MenuOutlined className="text-gray-400" />}
+                allowClear
+              />
+            </div>
+            <div>
+              <label className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-gray-400">
+                Title (Bangla)
+              </label>
+              <Input
+                value={editedNavbarTitleBn}
+                onChange={(e) => setEditedNavbarTitleBn(e.target.value)}
+                placeholder="শিরোনাম (বাংলা)"
+                prefix={<GlobalOutlined className="text-gray-400" />}
+                allowClear
+              />
+            </div>
           </div>
 
-          <h3
-            className="mt-1.5 min-h-7 truncate text-base font-semibold leading-7 text-gray-900 sm:text-lg"
-            title={navbar.title_en || "Untitled navbar"}
-          >
-            {navbar.title_en || "Untitled navbar"}
-          </h3>
+          <div>
+            <div className="mb-2 flex items-center justify-between">
+              <label className="text-xs font-medium uppercase tracking-wide text-gray-400">
+                Menu items — select multiple and drag to order
+              </label>
+              <Button
+                icon={<PlusCircleOutlined />}
+                onClick={() => setIsAddMenuItemOpen(true)}
+                className="headlessbutton headlessbutton-pill !mr-0"
+              >
+                Add item
+              </Button>
+            </div>
+            <SortableMenuItemsPicker
+              menuItems={menuItems}
+              value={editedMenuItemIds}
+              onChange={setEditedMenuItemIds}
+              onEdit={openMenuItemEditor}
+            />
+          </div>
+        </div>
+      ) : (
+        <div className="flex flex-col pt-3">
+          <div className="media-card-meta flex items-center justify-between gap-3">
+            <div className="flex min-w-0 items-center gap-2">
+              <Badge count={`ID-${navbar.id}`} style={idBadgeStyle} />
+              <h3
+                className="m-0 truncate text-base font-semibold"
+                title={navbar.title_en || "Untitled navbar"}
+              >
+                {navbar.title_en || "Untitled navbar"}
+              </h3>
+            </div>
+            <h5 className="mb-0 shrink-0 text-sm font-bold text-gray-400">
+              Navbar
+            </h5>
+          </div>
 
           <Tooltip title={navbar.title_bn || undefined} placement="topLeft">
-            <p className="mt-0.5 min-h-5 truncate text-sm leading-5 text-gray-500">
-              {navbar.title_bn || "\u00A0"}
+            <p className="mt-2 truncate text-sm leading-5 text-gray-500">
+              {navbar.title_bn || "No alternate title"}
             </p>
           </Tooltip>
-        </div>
 
-        <div
-          className="flex shrink-0 items-center gap-2"
-          onClick={(e) => e.stopPropagation()}
-        >
-          {isEditing ? (
-            <>
-              <Button
-                icon={<CheckCircleOutlined />}
-                onClick={handleUpdate}
-                className="headlessbutton headlessbutton-pill !mr-0"
-              >
-                Save changes
-              </Button>
-              <Button
-                icon={<CloseCircleOutlined />}
-                onClick={cancelEditing}
-                className="headlesscancelbutton headlessbutton-pill !mr-0"
-              >
-                Cancel
-              </Button>
-            </>
-          ) : (
-            <>
-              <Button
-                icon={<EditOutlined />}
-                onClick={startEditing}
-                className="headlessbutton headlessbutton-pill !mr-0"
-              >
-                Edit
-              </Button>
-              <Popconfirm
-                title="Delete this navbar?"
-                description="This cannot be undone."
-                onConfirm={handleDelete}
-                okText="Delete"
-                cancelText="Cancel"
-                okButtonProps={{
-                  danger: true,
-                  icon: <DeleteFilled />,
-                }}
-                cancelButtonProps={{
-                  icon: <CloseCircleOutlined />,
-                }}
-              >
-                <Button
-                  icon={<DeleteFilled />}
-                  className="headlesscancelbutton headlessbutton-pill !mr-0"
-                >
-                  Delete
-                </Button>
-              </Popconfirm>
-            </>
-          )}
-        </div>
-      </div>
-
-      {/* Expanded */}
-      {isExpanded && (
-        <div className="border-t border-gray-100 px-5 pb-5">
-          {isEditing ? (
-            <div
-              className="space-y-4 pt-4"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-[auto_minmax(0,1fr)_minmax(0,1fr)] md:items-end">
-                <div>
-                  <label className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-gray-400">
-                    Logo
-                  </label>
-                  <div className="flex items-center gap-2">
-                    <div className="flex h-8 w-8 shrink-0 items-center justify-center overflow-hidden rounded-md border border-gray-200 bg-gray-50 p-0.5">
-                      <NavbarLogoPreview logo={editLogo} size={28} />
-                    </div>
-                    <Button
-                      icon={<FileImageFilled />}
-                      onClick={() => setMediaModalVisible(true)}
-                      className="rounded-lg border-gray-200"
-                    >
-                      Change logo
-                    </Button>
-                  </div>
-                  <MediaSelectionModal
-                    isVisible={mediaModalVisible}
-                    onClose={() => setMediaModalVisible(false)}
-                    selectionMode="single"
-                    onSelectMedia={(selectedMedia) => {
-                      const media = Array.isArray(selectedMedia)
-                        ? selectedMedia[0]
-                        : selectedMedia;
-                      if (!media?.id) return;
-                      setEditedLogoId(media.id);
-                      setSelectedLogoMedia(media);
-                      setMediaModalVisible(false);
-                    }}
-                  />
-                </div>
-                <div>
-                  <label className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-gray-400">
-                    Title (English)
-                  </label>
-                  <Input
-                    value={editedNavbarTitleEn}
-                    onChange={(e) =>
-                      setEditedNavbarTitleEn(e.target.value)
-                    }
-                    placeholder="Title (English)"
-                    prefix={<MenuOutlined className="text-gray-400" />}
-                    allowClear
-                  />
-                </div>
-                <div>
-                  <label className="mb-1.5 block text-xs font-medium uppercase tracking-wide text-gray-400">
-                    Title (Bangla)
-                  </label>
-                  <Input
-                    value={editedNavbarTitleBn}
-                    onChange={(e) =>
-                      setEditedNavbarTitleBn(e.target.value)
-                    }
-                    placeholder="শিরোনাম (বাংলা)"
-                    prefix={<GlobalOutlined className="text-gray-400" />}
-                    allowClear
-                  />
-                </div>
-              </div>
-
-              <div>
-                <div className="mb-2 flex items-center justify-between">
-                  <label className="text-xs font-medium uppercase tracking-wide text-gray-400">
-                    Menu items — select multiple and drag to order
-                  </label>
-                  <Button
-                    icon={<PlusCircleOutlined />}
-                    onClick={() => setIsAddMenuItemOpen(true)}
-                    className="headlessbutton headlessbutton-pill !mr-0"
-                  >
-                    Add item
-                  </Button>
-                </div>
-                <SortableMenuItemsPicker
-                  menuItems={menuItems}
-                  value={editedMenuItemIds}
-                  onChange={setEditedMenuItemIds}
-                  onEdit={openMenuItemEditor}
-                />
+          <div className="mt-3 space-y-2 text-sm">
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-xs font-medium uppercase tracking-wide text-gray-400">
+                Logo
+              </span>
+              <div className="flex h-8 w-8 items-center justify-center overflow-hidden rounded-md border border-gray-200 bg-gray-50 p-0.5">
+                <NavbarLogoPreview logo={navbarLogo} size={28} />
               </div>
             </div>
-          ) : (
-            <div className="space-y-5 pt-4">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
-                <div className="flex min-w-0 flex-col gap-4 sm:flex-row sm:items-start sm:gap-10">
-                  <div className="w-16 shrink-0">
-                    <span className="text-xs font-medium uppercase tracking-wide text-gray-400">
-                      Logo
-                    </span>
-                    <div
-                      className="mt-1 flex h-16 w-16 items-center justify-center overflow-hidden rounded-lg border border-gray-200 bg-gray-50 p-1"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <NavbarLogoPreview logo={navbarLogo} size={56} />
-                    </div>
-                  </div>
-                  <InfoRow label="Title (English)">
-                    {navbar.title_en || "—"}
-                  </InfoRow>
-                  <InfoRow label="Title (Bangla)">
-                    {navbar.title_bn || "—"}
-                  </InfoRow>
-                </div>
-                <div className="shrink-0 sm:text-right">
-                  <InfoRow label="Menu items">
-                    {menuItemsCount > 0
-                      ? `${menuItemsCount} item${menuItemsCount !== 1 ? "s" : ""}`
-                      : "No items"}
-                  </InfoRow>
-                </div>
-              </div>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-xs font-medium uppercase tracking-wide text-gray-400">
+                Menu items
+              </span>
+              <span className="text-sm font-medium text-gray-800">
+                {menuItemsCount > 0
+                  ? `${menuItemsCount} item${menuItemsCount !== 1 ? "s" : ""}`
+                  : "No items"}
+              </span>
+            </div>
+          </div>
 
-              {menuItemsCount > 0 && (
-                <div className="border-t border-gray-100 pt-4">
-                  <div className="mb-3 flex items-center gap-2">
-                    <MenuOutlined className="text-sm text-brand-dark" />
-                    <h4 className="text-sm font-semibold text-gray-800">
-                      Menu items
-                    </h4>
-                    <span className="text-xs text-gray-400">
-                      Click an item to edit
-                    </span>
-                  </div>
-                  <ul className="flex flex-wrap gap-2">
-                    {(navbar.menu_items || []).map((item) => (
-                      <li key={item.id}>
-                        <Tooltip title="Edit menu item">
-                          <Tag
-                            className="m-0 inline-flex cursor-pointer items-center gap-1.5 rounded-md border-gray-200 bg-gray-50 px-2.5 py-0.5 text-xs text-gray-700 hover:border-brand hover:bg-brand-light hover:text-brand-dark"
-                            onClick={(e) => {
-                              e.stopPropagation();
-                              openMenuItemEditor(item);
-                            }}
-                          >
-                            {item.title}
-                            <EditOutlined className="text-[10px]" />
-                          </Tag>
-                        </Tooltip>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
+          {menuItemsCount > 0 && (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {(navbar.menu_items || []).map((item) => (
+                <Tag
+                  key={item.id}
+                  className="m-0 inline-flex cursor-pointer items-center gap-1.5 rounded-md border-gray-200 bg-gray-50 px-2.5 py-0.5 text-xs text-gray-700 hover:border-brand hover:bg-brand-light hover:text-brand-dark"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    openMenuItemEditor(item);
+                  }}
+                >
+                  {item.title}
+                  <EditOutlined className="text-[10px]" />
+                </Tag>
+              ))}
             </div>
           )}
         </div>

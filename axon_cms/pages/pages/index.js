@@ -16,7 +16,6 @@ const Pages = () => {
   const [menuItems, setMenuItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const [createModalVisible, setCreateModalVisible] = useState(false);
-  const [expandedPageId, setExpandedPageId] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortType, setSortType] = useState("desc");
   const [itemsPerPage, setItemsPerPage] = useState(10);
@@ -140,10 +139,6 @@ const Pages = () => {
   }, [refreshAll]);
 
   useGlobalRefresh(() => refreshAll(true));
-
-  const handleExpand = useCallback((pageId) => {
-    setExpandedPageId((prevId) => (prevId === pageId ? null : pageId));
-  }, []);
 
   const handleDeletePage = useCallback(async (deletePageId) => {
     try {
@@ -330,9 +325,6 @@ const Pages = () => {
 
       <RenderPages
         webpages={paginatedPages}
-        menuItems={menuItems}
-        handleExpand={handleExpand}
-        expandedPageId={expandedPageId}
         handleDeletePage={handleDeletePage}
         handlePreviewPage={handlePreviewPage}
         handleEditPageInfo={handleEditPageInfo}

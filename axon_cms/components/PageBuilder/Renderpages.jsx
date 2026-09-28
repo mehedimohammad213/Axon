@@ -4,14 +4,10 @@ import React from "react";
 import { Empty, Button } from "antd";
 import { FileTextOutlined, PlusOutlined } from "@ant-design/icons";
 import PageCard from "./PageCard";
-import { getLinkedMenuItems } from "../../utils/menuItemPageLink";
 
 const RenderPages = ({
   webpages = [],
-  menuItems = [],
   handlePreviewPage,
-  handleExpand,
-  expandedPageId,
   handleDeletePage,
   handleEditPageInfo,
   handleDuplicatePage,
@@ -52,15 +48,12 @@ const RenderPages = ({
   }
 
   return (
-    <div className="mt-6 grid grid-cols-1 items-start gap-4 xl:grid-cols-2">
+    <div className="mt-6 grid grid-cols-1 items-start gap-4 md:grid-cols-2 xl:grid-cols-3">
       {webpages.map((page) => (
         <PageCard
           key={page.id}
           page={page}
-          linkedMenuItems={getLinkedMenuItems(menuItems, page)}
           handlePreviewPage={handlePreviewPage}
-          handleExpand={handleExpand}
-          expandedPageId={expandedPageId}
           handleDeletePage={handleDeletePage}
           handleEditPageInfo={handleEditPageInfo}
           handleDuplicatePage={handleDuplicatePage}

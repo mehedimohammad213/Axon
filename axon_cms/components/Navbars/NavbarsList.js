@@ -12,8 +12,6 @@ const NavbarsList = ({
   editingNavbarId,
   setEditingNavbarId,
   fetchNavbars,
-  expandedNavbarId,
-  handleExpand,
   onCreate,
 }) => {
   if (!navbars.length) {
@@ -53,7 +51,7 @@ const NavbarsList = ({
 
   return (
     <div className="mt-6 space-y-4">
-      <div className="grid grid-cols-1 items-start gap-4 xl:grid-cols-2">
+      <div className="grid grid-cols-1 items-start gap-4 md:grid-cols-2 xl:grid-cols-3">
         {navbars.map((navbar) => (
           <NavbarRow
             key={navbar.id}
@@ -63,8 +61,6 @@ const NavbarsList = ({
             editingNavbarId={editingNavbarId}
             setEditingNavbarId={setEditingNavbarId}
             fetchNavbars={fetchNavbars}
-            expandedNavbarId={expandedNavbarId}
-            handleExpand={handleExpand}
           />
         ))}
       </div>

@@ -18,7 +18,6 @@ const Navbars = () => {
   const [media, setMedia] = useState([]);
   const [loading, setLoading] = useState(true);
   const [editingNavbarId, setEditingNavbarId] = useState(null);
-  const [expandedNavbarId, setExpandedNavbarId] = useState(null);
   const [isAddNavbarOpen, setIsAddNavbarOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortType, setSortType] = useState("desc");
@@ -116,10 +115,6 @@ const Navbars = () => {
     return sortedNavbars.slice(startIndex, startIndex + itemsPerPage);
   }, [sortedNavbars, currentPage, itemsPerPage]);
 
-  const handleExpand = useCallback((navbarId) => {
-    setExpandedNavbarId((prev) => (prev === navbarId ? null : navbarId));
-  }, []);
-
   const handleAddNavbar = useCallback(() => setIsAddNavbarOpen(true), []);
   const handleCancelAddNavbar = useCallback(() => setIsAddNavbarOpen(false), []);
 
@@ -195,8 +190,6 @@ const Navbars = () => {
         editingNavbarId={editingNavbarId}
         setEditingNavbarId={setEditingNavbarId}
         fetchNavbars={fetchNavbars}
-        expandedNavbarId={expandedNavbarId}
-        handleExpand={handleExpand}
         onCreate={handleAddNavbar}
       />
 

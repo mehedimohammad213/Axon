@@ -15,7 +15,6 @@ const Footers = () => {
   const [loading, setLoading] = useState(true);
   const [createFooterModalVisible, setCreateFooterModalVisible] =
     useState(false);
-  const [expandedPageId, setExpandedPageId] = useState(null);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortType, setSortType] = useState("desc");
   const [itemsPerPage, setItemsPerPage] = useState(10);
@@ -90,10 +89,6 @@ const Footers = () => {
     const startIndex = (currentPage - 1) * itemsPerPage;
     return sortedFooters.slice(startIndex, startIndex + itemsPerPage);
   }, [sortedFooters, currentPage, itemsPerPage]);
-
-  const handleExpand = useCallback((pageId) => {
-    setExpandedPageId((prevId) => (prevId === pageId ? null : pageId));
-  }, []);
 
   const openCreateFooterModal = useCallback(
     () => setCreateFooterModalVisible(true),
@@ -270,8 +265,6 @@ const Footers = () => {
       <RenderPages
         webpages={paginatedFooters}
         handlePreviewPage={handlePreviewPage}
-        handleExpand={handleExpand}
-        expandedPageId={expandedPageId}
         handleDeletePage={handleDeleteFooter}
         handleEditPageInfo={handleEditFooterInfo}
         handleDuplicatePage={handleDuplicateFooter}

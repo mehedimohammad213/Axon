@@ -468,6 +468,7 @@ video {
 .media-card .ant-card-actions,
 .slider-card .ant-card-actions {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
@@ -501,6 +502,20 @@ video {
 .slider-card .ant-card-actions .headlesscancelbutton {
   margin-right: 0 !important;
   white-space: nowrap;
+}
+
+.page-list-card.ant-card {
+  height: auto;
+}
+
+.page-list-card .ant-card-body {
+  flex: 0 0 auto;
+  padding: 0 1rem 0.75rem;
+}
+
+.page-list-card .ant-card-actions {
+  margin-top: 0;
+  padding: 0.75rem 1rem;
 }
 
 .ant-modal-content {
