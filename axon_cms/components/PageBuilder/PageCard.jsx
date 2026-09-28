@@ -151,7 +151,7 @@ const PageCard = ({
           </div>
 
           <div
-            className="flex shrink-0 gap-2"
+            className="flex shrink-0 flex-col gap-2"
             onClick={(e) => e.stopPropagation()}
           >
             {isEditing ? (
@@ -173,12 +173,12 @@ const PageCard = ({
               </div>
             ) : (
               <>
-                <div className="flex w-[8.5rem] flex-col gap-2">
+                <div className="flex gap-2">
                   {handlePreviewPage && (
                     <Button
                       icon={<EyeOutlined />}
                       onClick={() => handlePreviewPage(page.id)}
-                      className="headlessbutton headlessbutton-pill !mr-0 w-full"
+                      className="headlessbutton headlessbutton-pill !mr-0 w-[8.5rem]"
                     >
                       Preview
                     </Button>
@@ -186,17 +186,17 @@ const PageCard = ({
                   <Button
                     icon={<EditOutlined />}
                     onClick={startEditing}
-                    className="headlessbutton headlessbutton-pill !mr-0 w-full"
+                    className="headlessbutton headlessbutton-pill !mr-0 w-[8.5rem]"
                   >
                     Edit
                   </Button>
                 </div>
-                <div className="flex w-[8.5rem] flex-col gap-2">
+                <div className="flex gap-2">
                   {handleDuplicatePage && (
                     <Button
                       icon={<CopyOutlined />}
                       onClick={() => handleDuplicatePage(page.id)}
-                      className="headlessbutton headlessbutton-pill !mr-0 w-full"
+                      className="headlessbutton headlessbutton-pill !mr-0 w-[8.5rem]"
                     >
                       Duplicate
                     </Button>
@@ -217,7 +217,7 @@ const PageCard = ({
                   >
                     <Button
                       icon={<DeleteFilled />}
-                      className="headlesscancelbutton headlessbutton-pill !mr-0 w-full"
+                      className="headlesscancelbutton headlessbutton-pill !mr-0 w-[8.5rem]"
                     >
                       Delete
                     </Button>
