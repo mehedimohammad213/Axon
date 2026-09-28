@@ -61,6 +61,19 @@ siteRouter.get('/dynamic', dynamicController.index);
 siteRouter.get('/dynamic/:id', dynamicController.show);
 
 router.use('/public', siteRouter);
-router.post('/form-submission', identifyPublicSite, validateCreateFormSubmission, formSubmissionController.store);
+
+// Public websites submit with X-Headless-Site-Key. CMS preview/editor
+// submissions use JWT and must fall through to the protected router.
+router.post(
+  '/form-submission',
+  (req, res, next) => {
+    if (req.headers['x-headless-site-key']) {
+      return identifyPublicSite(req, res, next);
+    }
+    return next('router');
+  },
+  validateCreateFormSubmission,
+  formSubmissionController.store
+);
 
 export default router;

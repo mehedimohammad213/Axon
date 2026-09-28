@@ -16,7 +16,9 @@ const HeadlessFormElements = ({ formId, setDrawerVisible }) => {
       const response = await instance.get(`/form_builder/${formId}`);
       if (response.status === 200) {
         setFormData(response.data);
-        reset(); // Clear form states in context if needed
+        if (typeof reset === "function") {
+          reset();
+        }
       }
     } catch (error) {
       console.error("Error fetching form data:", error);

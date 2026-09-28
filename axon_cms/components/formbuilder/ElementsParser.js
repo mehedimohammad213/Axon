@@ -1,14 +1,39 @@
 // components/formbuilder/ElementsParser.jsx
-import React, { useContext } from "react";
-import { FormBuilderContext } from "../../src/context/FormBuilderContext";
-import { Button, message } from "antd";
+import React, { useState } from "react";
+import { useForm } from "react-hook-form";
+import { message } from "antd";
 import instance from "../../axios";
+
+function getFieldName(element) {
+  if (element?.name) return element.name;
+  if (element?.label) return String(element.label).toLowerCase().replace(/\s+/g, "_");
+  return `field_${element?.updated_on || "unknown"}`;
+}
+
+function getElementType(element) {
+  return element?.element_type || element?.type;
+}
+
+function getRegisterOptions(element) {
+  const options = {
+    required: element.required ? `${element.label || "This field"} is required` : false,
+  };
+
+  if (element.input_type === "email") {
+    options.pattern = {
+      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+      message: "Please enter a valid email address",
+    };
+  }
+
+  return options;
+}
 
 // A simpler "DisplayField" w/o drag-and-drop
 function DisplayField({ element, register, errors }) {
-  const fieldName = element.label?.toLowerCase().replace(/\s+/g, '_') || `field_${element.updated_on}`;
+  const fieldName = getFieldName(element);
 
-  switch (element.element_type) {
+  switch (getElementType(element)) {
     case "input":
       if (element.input_type === "radio") {
         return (
@@ -23,7 +48,7 @@ function DisplayField({ element, register, errors }) {
                   <input
                     type="radio"
                     value={opt.value}
-                    {...register(fieldName, { required: element.required })}
+                    {...register(fieldName, getRegisterOptions(element))}
                     className="mr-2"
                   />
                   {opt.title}
@@ -45,9 +70,7 @@ function DisplayField({ element, register, errors }) {
           <input
             type={element.input_type}
             placeholder={element.placeholder}
-            {...register(fieldName, {
-              required: element.required ? `${element.label} is required` : false
-            })}
+            {...register(fieldName, getRegisterOptions(element))}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           {errors[fieldName] && (
@@ -65,9 +88,7 @@ function DisplayField({ element, register, errors }) {
           <textarea
             rows={3}
             placeholder={element.placeholder}
-            {...register(fieldName, {
-              required: element.required ? `${element.label} is required` : false
-            })}
+            {...register(fieldName, getRegisterOptions(element))}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
           {errors[fieldName] && (
@@ -83,9 +104,7 @@ function DisplayField({ element, register, errors }) {
             {element.required && <span className="text-red-500 ml-1">*</span>}
           </label>
           <select
-            {...register(fieldName, {
-              required: element.required ? `${element.label} is required` : false
-            })}
+            {...register(fieldName, getRegisterOptions(element))}
             className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="">{element.placeholder || "Select an option"}</option>
@@ -130,22 +149,24 @@ export default function ElementsParser({ form, setDrawerVisible }) {
     register,
     formState: { errors },
     reset,
-  } = useContext(FormBuilderContext);
+  } = useForm();
+  const [submitting, setSubmitting] = useState(false);
 
   const formId = form?.id;
 
   const onSubmit = async (values) => {
-    const submissionData = {
-      form_id: formId,
-      form_data: values,
-      submitted_at: new Date().toISOString()
-    };
+    if (!formId) {
+      message.error("This form cannot be submitted yet.");
+      return;
+    }
 
+    setSubmitting(true);
     try {
-      const response = await instance.post(
-        form?.attributes?.action_url,
-        submissionData
-      );
+      const response = await instance.post("/form-submission", {
+        form_id: formId,
+        form_type: form?.title || null,
+        form_data: values,
+      });
       if (response.status === 201 || response.status === 200) {
         message.success("Form submitted successfully!");
         reset();
@@ -155,7 +176,12 @@ export default function ElementsParser({ form, setDrawerVisible }) {
       }
     } catch (error) {
       console.error("Error submitting form:", error);
-      message.error("An error occurred while submitting the form.");
+      message.error(
+        error?.response?.data?.message ||
+          "An error occurred while submitting the form."
+      );
+    } finally {
+      setSubmitting(false);
     }
   };
 
@@ -167,6 +193,7 @@ export default function ElementsParser({ form, setDrawerVisible }) {
         id={form?.attributes?.component_id}
         className={form?.attributes?.component_class}
         encType={form?.attributes?.enctype}
+        noValidate
         onSubmit={handleSubmit(onSubmit)}
       >
         <div className="mb-6">
@@ -208,9 +235,10 @@ export default function ElementsParser({ form, setDrawerVisible }) {
           </button>
           <button
             type="submit"
-            className="bg-theme text-white px-6 py-2 rounded-md hover:bg-theme-dark focus:outline-none focus:ring-2 focus:ring-theme"
+            disabled={submitting}
+            className="bg-theme text-white px-6 py-2 rounded-md hover:bg-theme-dark focus:outline-none focus:ring-2 focus:ring-theme disabled:opacity-60"
           >
-            Submit Form
+            {submitting ? "Submitting..." : "Submit Form"}
           </button>
         </div>
       </form>

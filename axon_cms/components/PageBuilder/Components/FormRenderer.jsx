@@ -19,19 +19,12 @@ const FormRenderer = ({ formData, preview = false }) => {
     try {
       setLoading(true);
       const submissionData = {
-        form_id: formData.formId,
+        form_id: formData.formId ?? formData.id,
+        form_type: formData.title || null,
         form_data: values,
-        submitted_at: new Date().toISOString(),
       };
 
-      // Get the action URL from the form attributes
-      const actionUrl = formData.attributes?.action_url;
-      if (!actionUrl) {
-        message.error("Form action URL not configured");
-        return;
-      }
-
-      const response = await instance.post(actionUrl, submissionData);
+      const response = await instance.post("/form-submission", submissionData);
 
       if (response.status === 201 || response.status === 200) {
         message.success("Form submitted successfully!");

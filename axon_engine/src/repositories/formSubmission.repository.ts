@@ -1,8 +1,10 @@
 import { createModel } from '../models/BaseModel';
 import { paginatedResponse } from '../utils/pagination';
-import { FORM_SUBMISSION_TABLE } from '../models/formSubmission.model';
+import { FORM_SUBMISSION_JSON_FIELDS, FORM_SUBMISSION_TABLE } from '../models/formSubmission.model';
 
-const base = createModel(FORM_SUBMISSION_TABLE);
+const base = createModel(FORM_SUBMISSION_TABLE, {
+  jsonFields: [...FORM_SUBMISSION_JSON_FIELDS],
+});
 
 async function findAllFilteredPaginated({
   form_id,
@@ -27,7 +29,7 @@ async function createSubmission({ form_id, form_type, form_data, status }: Recor
   return base.create({
     form_id: form_id || null,
     form_type: form_type || null,
-    form_data: form_data ? JSON.stringify(form_data) : null,
+    form_data: form_data ?? null,
     media_list: null,
     status: status || null,
   });
@@ -41,7 +43,7 @@ async function updateSubmission(
   return base.update(id, {
     form_id: form_id ?? existing.form_id,
     form_type: form_type ?? existing.form_type,
-    form_data: form_data ? JSON.stringify(form_data) : existing.form_data,
+    form_data: form_data ?? existing.form_data,
     status: status ?? existing.status,
   });
 }

@@ -1,5 +1,7 @@
 export const FORM_SUBMISSION_TABLE = 'form_submissions';
 
+export const FORM_SUBMISSION_JSON_FIELDS = ['form_data', 'media_list'] as const;
+
 export interface FormSubmission {
   id: number;
   organization_id: number | null;

@@ -159,7 +159,7 @@ const FormEditor = ({ formId }) => {
       };
 
       const response = await instance.post(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/form-submission?form_id=${formId}`,
+        `/form-submission?form_id=${formId}`,
         testData
       );
 
@@ -187,7 +187,7 @@ const FormEditor = ({ formId }) => {
     try {
       setTestLoading(true);
       const response = await instance.get(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/form-submission?form_id=${formId}`
+        `/form-submission?form_id=${formId}`
       );
 
       if (response.status === 200) {

@@ -105,6 +105,7 @@ const permissionsConfig = {
     'PUT:pages/*': 'edit_pages',
     'DELETE:pages/*': 'delete_pages',
     'GET:form-submission': 'view_form_responses',
+    'POST:form-submission': 'view_forms',
     'PUT:form-submission/*': 'edit_forms',
     'DELETE:form-submission/*': 'delete_forms',
     'POST:organizations/*/regenerate-site-key': 'manage_organizations',

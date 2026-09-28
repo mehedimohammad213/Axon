@@ -14,7 +14,10 @@ const index = asyncHandler(async (req, res) => {
 });
 
 const store = asyncHandler(async (req, res) => {
-  const result = await FormSubmissionService.create(req.body);
+  const result = await FormSubmissionService.create({
+    ...req.body,
+    form_id: req.body?.form_id ?? req.query?.form_id,
+  });
   return sendServiceResult(res, result, 201);
 });
 

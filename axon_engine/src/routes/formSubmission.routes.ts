@@ -8,6 +8,7 @@ import {
 const router = express.Router();
 
 router.get('/form-submission', formSubmissionController.index);
+router.post('/form-submission', validateCreateFormSubmission, formSubmissionController.store);
 router.put('/form-submission/:id', validateUpdateFormSubmission, formSubmissionController.update);
 router.delete('/form-submission/:id', formSubmissionController.destroy);
 

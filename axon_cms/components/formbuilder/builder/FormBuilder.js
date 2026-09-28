@@ -137,7 +137,7 @@ const FormBuilder = () => {
       };
 
       const response = await instance.post(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/form-submission?form_id=${createdFormId}`,
+        `/form-submission?form_id=${createdFormId}`,
         testData
       );
 
@@ -165,7 +165,7 @@ const FormBuilder = () => {
     try {
       setTestLoading(true);
       const response = await instance.get(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/form-submission?form_id=${createdFormId}`
+        `/form-submission?form_id=${createdFormId}`
       );
 
       if (response.status === 200) {
