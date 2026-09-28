@@ -28,7 +28,7 @@ const ImageSlider = ({
       key="preview"
       icon={<EyeOutlined />}
       onClick={() => handlePreviewClick?.(slider)}
-      className="headlessbutton headlessbutton-pill"
+      className="headlessbutton headlessbutton-pill !mr-0"
     >
       Preview
     </Button>,
@@ -36,7 +36,7 @@ const ImageSlider = ({
       key="edit"
       icon={<EditOutlined />}
       onClick={() => handleEditClick(slider.id)}
-      className="headlessbutton headlessbutton-pill"
+      className="headlessbutton headlessbutton-pill !mr-0"
     >
       Edit
     </Button>,
@@ -48,7 +48,7 @@ const ImageSlider = ({
       cancelText="No"
       okButtonProps={{ danger: true }}
     >
-      <Button className="headlesscancelbutton headlessbutton-pill" icon={<DeleteOutlined />}>
+      <Button className="headlesscancelbutton headlessbutton-pill !mr-0" icon={<DeleteOutlined />}>
         Delete
       </Button>
     </Popconfirm>,

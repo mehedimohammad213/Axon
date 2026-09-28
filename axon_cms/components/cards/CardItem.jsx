@@ -147,7 +147,7 @@ const CardItem = ({
       key="preview"
       icon={<EyeOutlined />}
       onClick={() => onPreviewCard(card)}
-      className="headlessbutton headlessbutton-pill"
+      className="headlessbutton headlessbutton-pill !mr-0"
     >
       Preview
     </Button>,
@@ -155,7 +155,7 @@ const CardItem = ({
       key="edit"
       icon={<EditOutlined />}
       onClick={() => onEditCard?.(card)}
-      className="headlessbutton headlessbutton-pill"
+      className="headlessbutton headlessbutton-pill !mr-0"
     >
       Edit
     </Button>,
@@ -168,7 +168,7 @@ const CardItem = ({
       okButtonProps={{ danger: true }}
     >
       <Button
-        className="headlesscancelbutton headlessbutton-pill"
+        className="headlesscancelbutton headlessbutton-pill !mr-0"
         icon={<DeleteOutlined />}
       >
         Delete

@@ -18,7 +18,7 @@ const MediaCard = ({ media, mediaType, handleDelete, handlePreview, handleEdit }
       key="preview"
       icon={<EyeOutlined />}
       onClick={() => handlePreview(media)}
-      className="headlessbutton headlessbutton-pill"
+      className="headlessbutton headlessbutton-pill !mr-0"
     >
       Preview
     </Button>,
@@ -26,7 +26,7 @@ const MediaCard = ({ media, mediaType, handleDelete, handlePreview, handleEdit }
       key="edit"
       icon={<EditOutlined />}
       onClick={() => handleEdit?.(media)}
-      className="headlessbutton headlessbutton-pill"
+      className="headlessbutton headlessbutton-pill !mr-0"
     >
       Edit
     </Button>,
@@ -39,7 +39,7 @@ const MediaCard = ({ media, mediaType, handleDelete, handlePreview, handleEdit }
       okButtonProps={{ danger: true }}
     >
       <Button
-        className="headlesscancelbutton headlessbutton-pill"
+        className="headlesscancelbutton headlessbutton-pill !mr-0"
         icon={<DeleteOutlined />}
       >
         Delete

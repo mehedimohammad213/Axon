@@ -468,8 +468,11 @@ video {
 .media-card .ant-card-actions,
 .slider-card .ant-card-actions {
   display: flex;
-  align-items: stretch;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
   margin-top: auto;
+  padding: 0.75rem 1rem;
 }
 
 .media-card .ant-card-actions > li,
@@ -477,8 +480,11 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 12px 0;
+  flex: 0 0 auto;
+  width: auto !important;
+  margin: 0;
   float: none;
+  border-inline-end: none !important;
 }
 
 .media-card .ant-card-actions > li > span,
@@ -486,7 +492,7 @@ video {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: auto;
 }
 
 .media-card .ant-card-actions .headlessbutton,
@@ -494,6 +500,7 @@ video {
 .slider-card .ant-card-actions .headlessbutton,
 .slider-card .ant-card-actions .headlesscancelbutton {
   margin-right: 0 !important;
+  white-space: nowrap;
 }
 
 .ant-modal-content {

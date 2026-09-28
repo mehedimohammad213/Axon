@@ -86,11 +86,9 @@ const SlidersHeader = ({
 
           <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             <Button
-              type="primary"
               icon={<PlusCircleOutlined />}
               onClick={onAddSlider}
-              className="h-10 rounded-full border-0 bg-brand px-5 font-medium text-white shadow-sm"
-              size="large"
+              className="headlessbutton headlessbutton-pill !mr-0"
             >
               Create Slider
             </Button>
