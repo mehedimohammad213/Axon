@@ -30,7 +30,7 @@
   --lightblue: #3a8ee615;
   --transparentwhite: rgba(255, 255, 255, 0.85);
   --notwhite: #ffffff;
-  --surface: #fafbfc;
+  --surface: #edf5fc;
   --border: #e8eaed;
 }
 
@@ -320,6 +320,7 @@ video {
 /* Ant Design Overrides */
 .ant-layout {
   width: 100%;
+  background: var(--surface);
 }
 
 .ant-layout-content {

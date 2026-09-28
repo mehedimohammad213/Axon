@@ -142,7 +142,7 @@ const SiteContent = ({ children }) => {
   const contentMargin = shouldShowSidebar ? sidebarWidth : 0;
 
   return (
-    <Layout className="min-h-screen overflow-x-hidden">
+    <Layout className="min-h-screen overflow-x-hidden bg-surface">
       {/* Fixed Header */}
       <Header
         className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md flex
@@ -161,7 +161,7 @@ const SiteContent = ({ children }) => {
         />
       </Header>
 
-      <Layout className="pt-16">
+      <Layout className="bg-surface pt-16">
         {shouldShowSidebar && isMobile && mobileOpen && (
           <button
             type="button"
@@ -214,7 +214,7 @@ const SiteContent = ({ children }) => {
 
         {/* Main Content Area */}
         <Layout
-          className="transition-all duration-300 ease-in-out min-h-[calc(100vh-4rem)]"
+          className="min-h-[calc(100vh-4rem)] bg-surface transition-all duration-300 ease-in-out"
           style={{
             marginLeft:
               shouldShowSidebar && !isMobile ? `${contentMargin}px` : "0",
