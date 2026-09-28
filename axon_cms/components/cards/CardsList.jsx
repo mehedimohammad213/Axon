@@ -12,6 +12,7 @@ const CardsList = ({
   onRefresh,
   onDeleteCard,
   onPreviewCard,
+  onEditCard,
 }) => {
   return (
     <>
@@ -26,6 +27,7 @@ const CardsList = ({
               viewType="grid"
               onDeleteCard={onDeleteCard}
               onPreviewCard={onPreviewCard}
+              onEditCard={onEditCard}
             />
           ))}
         </div>
@@ -42,6 +44,7 @@ const CardsList = ({
               viewType="list"
               onDeleteCard={onDeleteCard}
               onPreviewCard={onPreviewCard}
+              onEditCard={onEditCard}
             />
           )}
         />

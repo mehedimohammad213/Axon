@@ -1,7 +1,7 @@
 // components/cards/CardItem.jsx
 import React from "react";
-import { Card, Button, Popconfirm, List, Tag, Badge } from "antd";
-import { EyeOutlined, DeleteOutlined } from "@ant-design/icons";
+import { Card, Button, Popconfirm, List, Tag, Badge, Space } from "antd";
+import { EyeOutlined, DeleteOutlined, EditOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import { resolveMediaUrl } from "../../utils/mediaUrl";
 
@@ -12,20 +12,7 @@ const idBadgeStyle = {
   fontWeight: "500",
 };
 
-const tagColors = [
-  "magenta",
-  "purple",
-  "orange",
-  "lime",
-  "red",
-  "volcano",
-  "gold",
-  "green",
-  "cyan",
-  "yellow",
-  "geekblue",
-  "pink",
-];
+const coverClassName = "relative h-64 w-full overflow-hidden bg-gray-100";
 
 function getExcerpt(html = "", length = 30) {
   if (!html || html.trim() === "") return "Not Available";
@@ -42,26 +29,22 @@ function getCardMedia(card, mediaList = []) {
     const id = Array.isArray(card.media_ids)
       ? card.media_ids[0]
       : card.media_ids;
-    return (
-      mediaList.find((item) => String(item.id) === String(id)) || null
-    );
+    return mediaList.find((item) => String(item.id) === String(id)) || null;
   }
 
   return null;
 }
 
-// Helper to render media
 function MediaCover({ card, mediaList }) {
   const mediaFile = getCardMedia(card, mediaList);
 
   if (!mediaFile?.file_path) {
     return (
-      <div className="relative w-full h-full flex items-center justify-center bg-gray-200">
+      <div className={coverClassName}>
         <Image
           alt="No Media"
           src="/images/Image_Placeholder.png"
-          width={500}
-          height={300}
+          layout="fill"
           objectFit="cover"
         />
       </div>
@@ -94,88 +77,87 @@ function MediaCover({ card, mediaList }) {
     }
   };
 
-  return (
-    <div className="relative w-full h-full flex items-center justify-center bg-gray-200">
-      {isVideo ? (
-        <>
-          <video
-            className="w-full h-full object-cover cursor-pointer"
-            preload="metadata"
-            muted={!isPlaying}
-            playsInline
-            onClick={handleVideoClick}
-            onEnded={() => setIsPlaying(false)}
-            onPause={() => setIsPlaying(false)}
+  if (isVideo) {
+    return (
+      <div className={`${coverClassName} bg-gray-900`}>
+        <video
+          className="h-full w-full cursor-pointer object-cover"
+          preload="metadata"
+          muted={!isPlaying}
+          playsInline
+          onClick={handleVideoClick}
+          onEnded={() => setIsPlaying(false)}
+          onPause={() => setIsPlaying(false)}
+        >
+          <source src={`${mediaUrl}#t=0.1`} type={mediaFile.file_type} />
+        </video>
+        {!isPlaying && (
+          <div
+            className="absolute inset-0 flex cursor-pointer items-center justify-center bg-black bg-opacity-30"
+            onClick={handlePlayClick}
           >
-            <source src={`${mediaUrl}#t=0.1`} type={mediaFile.file_type} />
-            <Image
-              alt={card?.title_en || "No Title"}
-              src="/images/Video_Placeholder.png"
-              width={500}
-              height={300}
-              objectFit="cover"
-            />
-          </video>
-          {!isPlaying && (
-            <div
-              className="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center cursor-pointer"
-              onClick={handlePlayClick}
-            >
-              <div className="w-12 h-12 rounded-full bg-black bg-opacity-50 flex items-center justify-center hover:bg-opacity-75 transition-all">
-                <svg
-                  className="w-6 h-6 text-white"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <div className="absolute bottom-2 right-2 bg-black bg-opacity-75 px-2 py-1 rounded text-white text-xs">
-                {mediaFile.file_type?.split("/")[0]?.toUpperCase() || "Video"}
-              </div>
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-black bg-opacity-50">
+              <svg
+                className="h-6 w-6 text-white"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
+                  clipRule="evenodd"
+                />
+              </svg>
             </div>
-          )}
-        </>
-      ) : (
-        <Image
-          alt={card?.title_en || "No Title"}
-          src={mediaUrl || "/images/Image_Placeholder.png"}
-          width={500}
-          height={300}
-          objectFit="cover"
-          onError={(e) => {
-            e.target.onerror = null;
-            e.target.src = "/images/Image_Placeholder.png";
-          }}
-        />
-      )}
+            <div className="absolute bottom-2 right-2 rounded bg-black bg-opacity-75 px-2 py-1 text-xs text-white">
+              Video
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  return (
+    <div className={coverClassName}>
+      <Image
+        alt={card?.title_en || "No Title"}
+        src={mediaUrl || "/images/Image_Placeholder.png"}
+        layout="fill"
+        objectFit="cover"
+      />
     </div>
   );
 }
 
-// Helper to render tags
-function renderTags(card) {
-  const tags = card?.additional?.tags || [];
-  return tags.map((tag, i) => (
-    <Tag color={tagColors[i % tagColors.length]} key={tag}>
-      {tag}
-    </Tag>
-  ));
-}
+const CardItem = ({
+  card,
+  media,
+  viewType,
+  onDeleteCard,
+  onPreviewCard,
+  onEditCard,
+}) => {
+  const tags = Array.isArray(card?.additional?.tags)
+    ? card.additional.tags
+    : [];
 
-const CardItem = ({ card, media, viewType, onDeleteCard, onPreviewCard }) => {
   const actions = [
     <Button
       key="preview"
       icon={<EyeOutlined />}
       onClick={() => onPreviewCard(card)}
-      className="headlessbutton"
+      className="headlessbutton headlessbutton-pill"
     >
       Preview
+    </Button>,
+    <Button
+      key="edit"
+      icon={<EditOutlined />}
+      onClick={() => onEditCard?.(card)}
+      className="headlessbutton headlessbutton-pill"
+    >
+      Edit
     </Button>,
     <Popconfirm
       key="delete"
@@ -185,7 +167,10 @@ const CardItem = ({ card, media, viewType, onDeleteCard, onPreviewCard }) => {
       cancelText="No"
       okButtonProps={{ danger: true }}
     >
-      <Button className="headlesscancelbutton" icon={<DeleteOutlined />}>
+      <Button
+        className="headlesscancelbutton headlessbutton-pill"
+        icon={<DeleteOutlined />}
+      >
         Delete
       </Button>
     </Popconfirm>,
@@ -197,35 +182,49 @@ const CardItem = ({ card, media, viewType, onDeleteCard, onPreviewCard }) => {
         hoverable
         cover={<MediaCover card={card} mediaList={media} />}
         actions={actions}
-        className="flex flex-col"
+        className="media-card slider-card overflow-hidden shadow-md rounded-md"
       >
-        <Card.Meta
-          className="pt-10"
-          title={
-            <div className="flex items-center gap-2 flex-wrap">
+        <div className="min-h-16 pt-4">
+          <Space
+            className="media-card-meta flex flex-col sm:flex-row justify-between items-start sm:items-center"
+            direction="vertical"
+          >
+            <div className="flex items-center gap-2 flex-wrap max-w-xs">
               <Badge count={`ID-${card.id}`} style={idBadgeStyle} />
-              <span>{card?.title_en || "Title Unavailable"}</span>
+              <h3 className="text-lg font-semibold truncate m-0">
+                {card?.title_en || "Title Unavailable"}
+              </h3>
             </div>
-          }
-          description={
-            <>
-              <div className="mt-4 min-h-[24px] flex flex-wrap gap-2">
-                {renderTags(card)}
-              </div>
-            </>
-          }
-        />
+            <h5 className="text-md text-gray-400 font-bold">
+              {card?.page_name || "Card"}
+            </h5>
+          </Space>
+
+          {tags.length > 0 && (
+            <div className="mt-3">
+              {tags.slice(0, 6).map((tagItem) => (
+                <Tag key={tagItem} color="yellow" className="mb-1">
+                  {tagItem}
+                </Tag>
+              ))}
+              {tags.length > 6 && (
+                <Tag key="more" color="green" className="mb-1">
+                  ...
+                </Tag>
+              )}
+            </div>
+          )}
+        </div>
       </Card>
     );
   }
 
-  // LIST VIEW
   const listMedia = getCardMedia(card, media);
   return (
     <List.Item actions={actions}>
       <List.Item.Meta
         avatar={
-          <div className="flex items-center justify-center bg-gray-200">
+          <div className="flex h-24 w-24 items-center justify-center overflow-hidden bg-gray-200">
             <Image
               alt={card?.title_en || "No Title"}
               src={
@@ -236,10 +235,6 @@ const CardItem = ({ card, media, viewType, onDeleteCard, onPreviewCard }) => {
               width={100}
               height={100}
               objectFit="cover"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = "/images/Image_Placeholder.png";
-              }}
             />
           </div>
         }
@@ -256,9 +251,13 @@ const CardItem = ({ card, media, viewType, onDeleteCard, onPreviewCard }) => {
                 __html: getExcerpt(card?.description_en || "", 100),
               }}
             />
-            {card?.additional?.tags?.length > 0 && (
-              <div className="mt-2 min-h-[24px] flex flex-wrap gap-2">
-                {renderTags(card)}
+            {tags.length > 0 && (
+              <div className="mt-2">
+                {tags.slice(0, 6).map((tagItem) => (
+                  <Tag key={tagItem} color="yellow" className="mb-1">
+                    {tagItem}
+                  </Tag>
+                ))}
               </div>
             )}
           </>

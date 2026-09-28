@@ -190,6 +190,12 @@ const CardsPage = () => {
     setIsEditing(false);
   };
 
+  const handleEditClick = (card) => {
+    setSelectedCard(card);
+    setIsPreviewModalVisible(true);
+    setIsEditing(true);
+  };
+
   const handleEditCard = () => {
     setIsEditing(true);
     // Determine link type based on link_url
@@ -306,6 +312,7 @@ const CardsPage = () => {
             onRefresh={fetchData}
             onDeleteCard={handleDeleteCard}
             onPreviewCard={handlePreviewCard}
+            onEditCard={handleEditClick}
           />
         </div>
       ) : (

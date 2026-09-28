@@ -68,7 +68,7 @@ const CardsHeader = ({
             <Button
               icon={<PlusCircleOutlined />}
               onClick={onAddCard}
-              className="h-10 rounded-lg border-0 bg-brand px-5 font-medium text-white shadow-sm hover:bg-brand-dark"
+              className="h-10 rounded-full border-0 bg-brand px-5 font-medium text-white shadow-sm hover:bg-brand-dark"
               size="large"
             >
               Create Card

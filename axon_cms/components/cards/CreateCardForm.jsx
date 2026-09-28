@@ -143,7 +143,9 @@ const CreateCardForm = ({ onSuccess, onCancel, pages, media, uniqueTags }) => {
       open={true}
       onClose={onCancel}
       width={`50%`}
+      placement="right"
       destroyOnClose
+      rootClassName="media-preview-drawer"
     >
       <Form
         form={form}
@@ -199,7 +201,7 @@ const CreateCardForm = ({ onSuccess, onCancel, pages, media, uniqueTags }) => {
             <div className="flex flex-col">
               <Button
                 onClick={() => setIsMediaModalVisible(true)}
-                className="headlessbutton"
+                className="headlessbutton headlessbutton-pill"
               >
                 Select Media
               </Button>
@@ -363,14 +365,14 @@ const CreateCardForm = ({ onSuccess, onCancel, pages, media, uniqueTags }) => {
         {/* Form Actions */}
         <Form.Item>
           <div className="flex justify-end gap-2">
-            <Button onClick={onCancel} className="headlesscancelbutton">
+            <Button onClick={onCancel} className="headlesscancelbutton headlessbutton-pill">
               Cancel
             </Button>
             <Button
               type="primary"
               htmlType="submit"
               loading={submitting}
-              className="headlessbutton"
+              className="headlessbutton headlessbutton-pill"
             >
               Submit
             </Button>

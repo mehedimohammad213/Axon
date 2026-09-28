@@ -345,11 +345,6 @@ const CardsPreviewModal = ({
   };
 
   // Wrap the handleCancelEdit prop to include media change state reset
-  const handleCancelEditWrapper = () => {
-    setHasMediaChanged(false);
-    handleCancelEdit();
-  };
-
   return (
     <Drawer
       title={isEditing ? "Edit Card" : "Card Details"}
@@ -357,6 +352,9 @@ const CardsPreviewModal = ({
       onClose={onCancel}
       footer={null}
       width="50%"
+      placement="right"
+      destroyOnClose
+      rootClassName="media-preview-drawer"
     >
       {selectedCard && (
         <>
@@ -407,7 +405,7 @@ const CardsPreviewModal = ({
                   <div className="flex flex-col">
                     <Button
                       onClick={() => setIsMediaModalVisible(true)}
-                      className="headlessbutton"
+                      className="headlessbutton headlessbutton-pill"
                     >
                       Change Media
                     </Button>
@@ -593,21 +591,13 @@ const CardsPreviewModal = ({
 
               {/* Form Actions */}
               <Form.Item>
-                <div className="flex justify-end gap-2">
-                  <Button
-                    onClick={handleCancelEditWrapper}
-                    className="headlesscancelbutton"
-                  >
-                    Cancel
-                  </Button>
-                  <Button
-                    type="primary"
-                    htmlType="submit"
-                    className="headlessbutton"
-                  >
-                    Save Changes
-                  </Button>
-                </div>
+                <Button
+                  type="primary"
+                  htmlType="submit"
+                  className="headlessbutton headlessbutton-pill"
+                >
+                  Save
+                </Button>
               </Form.Item>
 
               {/* Media Selection Modal */}
@@ -626,15 +616,6 @@ const CardsPreviewModal = ({
                 pagination={false}
                 showHeader={false}
               />
-              <div className="flex justify-end mt-4">
-                <Button
-                  type="primary"
-                  onClick={handleEditCard}
-                  className="headlessbutton"
-                >
-                  Edit
-                </Button>
-              </div>
             </>
           )}
         </>
