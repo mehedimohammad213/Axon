@@ -343,7 +343,11 @@ const SideMenuItems = ({
           <SubMenu
             key={item.id.toString()}
             title={
-              <div className="flex items-center gap-2 font-semibold">
+              <div
+                className={`flex items-center font-semibold ${
+                  collapsed ? "w-full justify-center" : "gap-2"
+                }`}
+              >
                 <div className="flex items-center justify-center w-6 h-6">
                   <MenuIcon
                     src={item.icon}
@@ -401,7 +405,11 @@ const SideMenuItems = ({
           key={item.id.toString()}
           className={`border-2 ${token ? "border-brand" : "border-gray-400"}`}
         >
-          <div className="flex items-center gap-2">
+          <div
+            className={`flex items-center ${
+              collapsed ? "w-full justify-center" : "gap-2"
+            }`}
+          >
             <div className="flex items-center justify-center w-6 h-6">
               <MenuIcon
                 src={item.icon}

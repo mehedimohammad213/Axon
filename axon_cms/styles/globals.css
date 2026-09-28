@@ -404,6 +404,27 @@ video {
   border: none;
 }
 
+.ant-layout-sider .ant-menu.ant-menu-inline-collapsed > .ant-menu-item,
+.ant-layout-sider .ant-menu.ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
+  padding-inline: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.ant-layout-sider .ant-menu.ant-menu-inline-collapsed .ant-menu-title-content {
+  margin-inline: 0 !important;
+  max-width: 100% !important;
+  opacity: 1 !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.ant-layout-sider .ant-menu.ant-menu-inline-collapsed .ant-menu-submenu-arrow {
+  display: none !important;
+}
+
 .ant-menu-light.ant-menu-horizontal > .ant-menu-item-selected {
   color: var(--theme);
 }
