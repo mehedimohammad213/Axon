@@ -181,7 +181,13 @@ const PageCard = ({
                 <span className="text-xs font-medium uppercase tracking-wide text-gray-400">
                   Status
                 </span>
-                <Tag color={isActive ? "green" : "red"} className="mb-0">
+                <Tag
+                  className={`mb-0 ${
+                    isActive
+                      ? "!border-[var(--theme)] !bg-[var(--theme-transparent)] !text-[var(--theme)]"
+                      : "!border-gray-200 !bg-gray-50 !text-gray-500"
+                  }`}
+                >
                   {isActive ? "Active" : "Inactive"}
                 </Tag>
               </div>
