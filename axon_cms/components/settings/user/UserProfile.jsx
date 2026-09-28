@@ -18,7 +18,6 @@ import {
   Card,
   Modal,
   Form,
-  Tag,
   Tooltip,
   Divider,
   Drawer,
@@ -163,9 +162,9 @@ const UserProfile = () => {
                 </Text>
               </div>
               <div className="pl-[52px]">
-                <Tag color="warning" className="rounded-full px-4 py-1 text-sm">
+                <span className="inline-flex items-center rounded-full bg-brand-light px-4 py-1 text-sm font-medium text-brand-dark">
                   {getRoleName()}
-                </Tag>
+                </span>
               </div>
             </div>
 
@@ -235,19 +234,11 @@ const UserProfile = () => {
             setIsPasswordModalVisible(false);
             form.resetFields();
           }}
+          placement="right"
           width={500}
+          rootClassName="media-preview-drawer"
           footer={
-            <div className="flex justify-end gap-4">
-              <Button
-                onClick={() => {
-                  setIsPasswordModalVisible(false);
-                  form.resetFields();
-                }}
-                size="large"
-                className="rounded-full px-8 h-12 backdrop-blur-md bg-white/50"
-              >
-                Cancel
-              </Button>
+            <div className="flex justify-end">
               <Button
                 type="primary"
                 onClick={() => form.submit()}
@@ -260,7 +251,7 @@ const UserProfile = () => {
           }
           className="rounded-2xl"
           bodyStyle={{
-            background: "linear-gradient(to bottom right, #fefce8, #ffffff)",
+            background: "linear-gradient(to bottom right, #edf5fc, #ffffff)",
           }}
         >
           <Form
