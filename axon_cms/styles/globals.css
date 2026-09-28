@@ -446,6 +446,20 @@ video {
   padding: 0 1rem 1rem;
 }
 
+.media-card.ant-card,
+.slider-card.ant-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.media-card .ant-card-body,
+.slider-card .ant-card-body {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
 .media-card .ant-card-cover,
 .slider-card .ant-card-cover {
   overflow: hidden;
@@ -455,6 +469,7 @@ video {
 .slider-card .ant-card-actions {
   display: flex;
   align-items: stretch;
+  margin-top: auto;
 }
 
 .media-card .ant-card-actions > li,
