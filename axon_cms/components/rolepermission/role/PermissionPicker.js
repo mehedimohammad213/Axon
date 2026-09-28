@@ -11,7 +11,6 @@ export default function PermissionPicker({ permissions = [], value, onChange }) 
       availableSearchPlaceholder="Search permissions..."
       emptyAvailableDescription="No permissions available"
       emptySelectedDescription="Add permissions from the left panel"
-      selectedHint="Click to add, drag to reorder, or use checkboxes for bulk actions"
     />
   );
 }

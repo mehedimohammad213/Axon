@@ -144,12 +144,10 @@ const SortableItem = ({
           {item?.title || `Item #${id}`}
         </span>
       </Tooltip>
-      {(item?.title_bn || item?.category) && (
-        <Tooltip title={item.title_bn || item.category} placement="top">
+      {item?.category && (
+        <Tooltip title={item.category} placement="top">
           <Tag className="m-0 hidden max-w-[96px] sm:inline-flex">
-            <span className="truncate">
-              {item.title_bn || item.category}
-            </span>
+            <span className="truncate">{item.category}</span>
           </Tag>
         </Tooltip>
       )}
@@ -191,7 +189,6 @@ const SortableMenuItemsPicker = ({
   availableSearchPlaceholder = "Search items...",
   emptyAvailableDescription = "No items available",
   emptySelectedDescription = "Add items from the left panel",
-  selectedHint = "Select multiple items, then drag to reposition them together",
 }) => {
   const [selectedIds, setSelectedIds] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
@@ -307,7 +304,7 @@ const SortableMenuItemsPicker = ({
       }`}
     >
       {/* Available items panel */}
-      <div className="min-w-0 border-2 border-gray-200 rounded-xl p-3 bg-gray-50">
+      <div className="flex min-h-0 min-w-0 flex-col border-2 border-gray-200 rounded-xl p-3 bg-gray-50">
         <div className="flex items-center justify-between mb-2">
           <span className="text-xs font-bold text-gray-600 uppercase tracking-wide">
             {availableLabel}
@@ -336,7 +333,7 @@ const SortableMenuItemsPicker = ({
           size="small"
           allowClear
         />
-        <div className="max-h-40 overflow-y-auto space-y-0.5">
+        <div className="min-h-0 flex-1 overflow-y-auto space-y-0.5">
           {availableItems.length > 0 ? (
             availableItems.map((item) => (
               <div
@@ -374,7 +371,7 @@ const SortableMenuItemsPicker = ({
       </div>
 
       {/* Selected / ordered items panel */}
-      <div className="min-w-0 border-2 border-gray-200 rounded-xl p-4 bg-white">
+      <div className="flex min-h-0 min-w-0 flex-col border-2 border-gray-200 rounded-xl p-4 bg-white">
         <div className="flex items-center justify-between mb-2">
           <div className="flex items-center gap-2">
             <span className="text-xs font-bold text-gray-600 uppercase tracking-wide">
@@ -454,8 +451,6 @@ const SortableMenuItemsPicker = ({
             className="my-4"
           />
         )}
-
-        <p className="text-xs text-gray-400 mt-2 italic">{selectedHint}</p>
       </div>
     </div>
   );
