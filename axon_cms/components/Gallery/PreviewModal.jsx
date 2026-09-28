@@ -156,7 +156,7 @@ const PreviewModal = ({
         ))}
       </div>
 
-      <div className="flex flex-wrap items-center gap-3">
+      <div className="flex flex-wrap items-center justify-end gap-3">
         <Button
           className="headlessbutton headlessbutton-pill"
           onClick={() => {
@@ -206,7 +206,7 @@ const PreviewModal = ({
         </Select>
       </Form.Item>
 
-      <div>
+      <div className="flex justify-end">
         <Button
           type="primary"
           htmlType="submit"
