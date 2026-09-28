@@ -367,7 +367,7 @@ const SideMenuItems = ({
                 )}
               </div>
             }
-            className="border-2 border-gray-200 mb-2"
+            className={`border-2 mb-2 ${token ? "border-brand/20" : "border-gray-400"}`}
           >
             {item.submenu.map((subItem) => {
               const isActive =
@@ -403,7 +403,7 @@ const SideMenuItems = ({
       return (
         <Item
           key={item.id.toString()}
-          className={`border-2 ${token ? "border-brand" : "border-gray-400"}`}
+            className={`border-2 mb-2 ${token ? "border-brand/20" : "border-gray-400"}`}
         >
           <div
             className={`flex items-center ${
