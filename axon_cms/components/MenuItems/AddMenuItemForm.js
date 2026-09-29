@@ -188,7 +188,7 @@ const AddMenuItemForm = ({
           onClick={handleAddMenuItem}
           className="headlessbutton headlessbutton-pill"
         >
-          Add
+          Create Menu
         </Button>
       </div>
     </div>

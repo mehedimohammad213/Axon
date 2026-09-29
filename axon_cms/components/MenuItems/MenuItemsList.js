@@ -39,7 +39,7 @@ const MenuItemsList = ({
               onClick={onCreate}
               className="headlessbutton headlessbutton-pill !mr-0 mt-2"
             >
-              Create menu
+              Create Menu
             </Button>
           )}
         </Empty>

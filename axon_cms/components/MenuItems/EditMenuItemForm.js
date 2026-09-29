@@ -229,7 +229,7 @@ const EditMenuItemForm = ({
           loading={saving}
           className="headlessbutton headlessbutton-pill !mr-0"
         >
-          Save changes
+          Update Menu
         </Button>
       </div>
     </div>

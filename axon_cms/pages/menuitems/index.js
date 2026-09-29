@@ -171,7 +171,7 @@ const MenuItems = () => {
               alt="Menu"
               className="w-6"
             />
-            <span>Add Menu</span>
+            <span>Create Menu</span>
           </div>
         }
         width={800}

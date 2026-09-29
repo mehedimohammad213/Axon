@@ -214,7 +214,7 @@ const PreviewModal = ({
           loading={isSubmitting}
           className="headlessbutton headlessbutton-pill"
         >
-          Save
+          Update Media
         </Button>
       </div>
     </Form>

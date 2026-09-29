@@ -165,7 +165,7 @@ const MenuItemRow = ({
       onClick={handleUpdate}
       className="page-card-btn page-card-btn-primary !mr-0"
     >
-      Save
+      Update Menu
     </Button>,
     <Button
       key="cancel"
