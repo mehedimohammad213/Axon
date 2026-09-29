@@ -10,24 +10,21 @@ const EditResponseDrawer = ({ visible, onClose, data, onUpdate }) => {
 
   useEffect(() => {
     if (data && data.form_data && typeof data.form_data === "object") {
-      // Populate the form with existing data
       form.setFieldsValue(data.form_data);
     } else {
-      // Reset form if data is invalid
       form.resetFields();
     }
   }, [data, form]);
 
   const onFinish = async (values) => {
     try {
-      // Assuming the API endpoint for updating a submission is /form-submission/{id}
       const response = await instance.put(`/form-submission/${data.id}`, {
         form_data: values,
       });
 
       if (response.status === 200) {
         message.success("Form response updated successfully.");
-        onUpdate(); // Refresh the table data
+        onUpdate();
         onClose();
       } else {
         message.error("Failed to update the form response.");
@@ -45,12 +42,23 @@ const EditResponseDrawer = ({ visible, onClose, data, onUpdate }) => {
         width="min(720px, 92vw)"
         onClose={onClose}
         open={visible}
-        rootClassName="media-preview-drawer"
+        rootClassName="media-preview-drawer org-form-drawer"
       >
-        <Empty description="No Data Available for Editing" />
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 24,
+            background: "#ffffff",
+          }}
+        >
+          <Empty description="No Data Available for Editing" />
+        </div>
       </Drawer>
     );
   }
+
+  const entries = Object.entries(data.form_data);
 
   return (
     <Drawer
@@ -59,7 +67,7 @@ const EditResponseDrawer = ({ visible, onClose, data, onUpdate }) => {
       onClose={onClose}
       open={visible}
       destroyOnClose
-      rootClassName="media-preview-drawer"
+      rootClassName="media-preview-drawer org-form-drawer"
       footer={
         <div className="flex w-full justify-end">
           <Button
@@ -73,41 +81,54 @@ const EditResponseDrawer = ({ visible, onClose, data, onUpdate }) => {
       }
     >
       <Form layout="vertical" form={form} onFinish={onFinish}>
-        {Object.entries(data.form_data).map(([key, value]) => (
-          <Form.Item
-            key={key}
-            name={key}
-            label={key
-              .replace(/_/g, " ")
-              .replace(/\b\w/g, (l) => l.toUpperCase())}
-            rules={[
-              {
-                required: true,
-                message: `Please enter ${key.replace(/_/g, " ")}`,
-              },
-            ]}
-          >
-            {Array.isArray(value) ? (
-              <RichTextEditor
-                defaultValue={
-                  Array.isArray(value) ? JSON.stringify(value) : String(value)
-                }
-                onChange={(html) => form.setFieldValue(key, html)}
-                editMode={true}
-                maxLength={2000}
-              />
-            ) : typeof value === "object" && value !== null ? (
-              <RichTextEditor
-                defaultValue={JSON.stringify(value)}
-                onChange={(html) => form.setFieldValue(key, html)}
-                editMode={true}
-                maxLength={2000}
-              />
-            ) : (
-              <Input placeholder={`Enter ${key.replace(/_/g, " ")}`} />
-            )}
-          </Form.Item>
-        ))}
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            background: "#ffffff",
+          }}
+        >
+          <div className="grid gap-x-4 md:grid-cols-2">
+            {entries.map(([key, value]) => {
+              const isComplex =
+                Array.isArray(value) ||
+                (typeof value === "object" && value !== null);
+
+              return (
+                <Form.Item
+                  key={key}
+                  name={key}
+                  label={key
+                    .replace(/_/g, " ")
+                    .replace(/\b\w/g, (l) => l.toUpperCase())}
+                  rules={[
+                    {
+                      required: true,
+                      message: `Please enter ${key.replace(/_/g, " ")}`,
+                    },
+                  ]}
+                  className={isComplex ? "md:col-span-2" : undefined}
+                >
+                  {isComplex ? (
+                    <RichTextEditor
+                      defaultValue={
+                        Array.isArray(value)
+                          ? JSON.stringify(value)
+                          : JSON.stringify(value)
+                      }
+                      onChange={(html) => form.setFieldValue(key, html)}
+                      editMode={true}
+                      maxLength={2000}
+                    />
+                  ) : (
+                    <Input placeholder={`Enter ${key.replace(/_/g, " ")}`} />
+                  )}
+                </Form.Item>
+              );
+            })}
+          </div>
+        </div>
       </Form>
     </Drawer>
   );

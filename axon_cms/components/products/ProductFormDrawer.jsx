@@ -182,11 +182,11 @@ const ProductFormDrawer = ({
       <Drawer
         title={editingProduct?.id ? "Edit Product" : "Upload Product"}
         placement="right"
-        width={560}
+        width="min(720px, 92vw)"
         open={open}
         onClose={onClose}
         destroyOnClose
-        rootClassName="media-preview-drawer"
+        rootClassName="media-preview-drawer org-form-drawer"
         footer={
           <div className="flex w-full justify-end">
             <Button
@@ -195,85 +195,120 @@ const ProductFormDrawer = ({
               onClick={handleSubmit}
               className="headlessbutton headlessbutton-pill !mr-0"
             >
-              {editingProduct?.id ? "Save Product" : "Upload Product"}
+              {editingProduct?.id ? "Update Product" : "Upload Product"}
             </Button>
           </div>
         }
       >
         <Form form={form} layout="vertical">
-          <Form.Item
-            label="Product type"
-            name="product_type_id"
-            rules={[{ required: true, message: "Product type is required" }]}
+          <div
+            style={{
+              border: "1px solid #e8eef5",
+              borderRadius: 12,
+              padding: 16,
+              marginBottom: 16,
+              background: "#ffffff",
+            }}
           >
-            <Select
-              placeholder="Select product type / form"
-              options={productTypes.map((type) => ({
-                label: type.name,
-                value: type.id,
-              }))}
-              onChange={(value) => {
-                setSelectedTypeId(value);
-                form.setFieldsValue({ field_values: {} });
-                setFieldMedia({});
-              }}
-              disabled={Boolean(editingProduct?.id)}
-            />
-          </Form.Item>
-
-          <Form.Item
-            label="Title"
-            name="title"
-            rules={[{ required: true, message: "Title is required" }]}
-          >
-            <Input placeholder="Product title" />
-          </Form.Item>
-
-          <Form.Item label="Slug" name="slug">
-            <Input placeholder="optional-slug" />
-          </Form.Item>
-
-          <Form.Item label="Description" name="description">
-            <TextArea rows={3} placeholder="Short product description" />
-          </Form.Item>
-
-          <Form.Item label="Product images">
-            <Space direction="vertical" className="w-full">
-              <div className="flex flex-wrap gap-2">
-                {selectedMedia.map((media) => (
-                  <Image
-                    key={media.id}
-                    src={resolveMediaUrl(media.file_path)}
-                    alt={media.file_name || "Product media"}
-                    width={88}
-                    height={66}
-                    className="rounded-lg object-cover"
-                  />
-                ))}
-              </div>
-              <Button
-                icon={<PictureOutlined />}
-                onClick={() => openMediaPicker("gallery")}
+            <div className="grid gap-x-4 md:grid-cols-2">
+              <Form.Item
+                label="Product type"
+                name="product_type_id"
+                rules={[{ required: true, message: "Product type is required" }]}
               >
-                {selectedMedia.length ? "Change images" : "Select images"}
-              </Button>
-            </Space>
-          </Form.Item>
+                <Select
+                  placeholder="Select product type / form"
+                  options={productTypes.map((type) => ({
+                    label: type.name,
+                    value: type.id,
+                  }))}
+                  onChange={(value) => {
+                    setSelectedTypeId(value);
+                    form.setFieldsValue({ field_values: {} });
+                    setFieldMedia({});
+                  }}
+                  disabled={Boolean(editingProduct?.id)}
+                />
+              </Form.Item>
 
-          <div className="mb-3 rounded-xl border border-gray-200 bg-gray-50 px-3 py-2 text-sm text-gray-600">
-            Custom fields for{" "}
-            <strong>{selectedType?.name || "selected type"}</strong>
+              <Form.Item label="Status" name="status" valuePropName="checked">
+                <Switch checkedChildren="Active" unCheckedChildren="Inactive" />
+              </Form.Item>
+
+              <Form.Item
+                label="Title"
+                name="title"
+                rules={[{ required: true, message: "Title is required" }]}
+              >
+                <Input placeholder="Product title" />
+              </Form.Item>
+
+              <Form.Item label="Slug" name="slug">
+                <Input placeholder="optional-slug" />
+              </Form.Item>
+            </div>
+
+            <Form.Item
+              label="Description"
+              name="description"
+              style={{ marginBottom: 0 }}
+            >
+              <TextArea rows={3} placeholder="Short product description" />
+            </Form.Item>
           </div>
 
-          <DynamicProductFields
-            fields={fields}
-            mediaByField={fieldMedia}
-            onOpenMediaPicker={openMediaPicker}
-          />
+          <div
+            style={{
+              border: "1px solid #e8eef5",
+              borderRadius: 12,
+              padding: 16,
+              marginBottom: 16,
+              background: "#ffffff",
+            }}
+          >
+            <Form.Item label="Product images" style={{ marginBottom: 0 }}>
+              <Space direction="vertical" className="w-full">
+                <div className="flex flex-wrap gap-2">
+                  {selectedMedia.map((media) => (
+                    <Image
+                      key={media.id}
+                      src={resolveMediaUrl(media.file_path)}
+                      alt={media.file_name || "Product media"}
+                      width={88}
+                      height={66}
+                      className="rounded-lg object-cover"
+                    />
+                  ))}
+                </div>
+                <Button
+                  icon={<PictureOutlined />}
+                  onClick={() => openMediaPicker("gallery")}
+                >
+                  {selectedMedia.length ? "Change images" : "Select images"}
+                </Button>
+              </Space>
+            </Form.Item>
+          </div>
 
-          <Form.Item label="Status" name="status" valuePropName="checked">
-            <Switch checkedChildren="Active" unCheckedChildren="Inactive" />
-          </Form.Item>
+          <div
+            style={{
+              border: "1px solid #e8eef5",
+              borderRadius: 12,
+              padding: 16,
+              background: "#ffffff",
+            }}
+          >
+            <div className="mb-3 text-sm text-gray-600">
+              Custom fields for{" "}
+              <strong>{selectedType?.name || "selected type"}</strong>
+            </div>
+
+            <DynamicProductFields
+              fields={fields}
+              mediaByField={fieldMedia}
+              onOpenMediaPicker={openMediaPicker}
+            />
+          </div>
         </Form>
       </Drawer>
 

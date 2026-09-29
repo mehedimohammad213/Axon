@@ -20,7 +20,8 @@ const FormPreview = ({
       title="Draft Form Preview"
       open={visible}
       onClose={onCancel}
-      width="60%"
+      width="min(800px, 92vw)"
+      rootClassName="media-preview-drawer org-form-drawer"
       footer={
         <div className="flex justify-end gap-2">
           <Button
@@ -30,6 +31,7 @@ const FormPreview = ({
             Discard
           </Button>
           <Button
+            type="primary"
             onClick={onSave}
             className="headlessbutton headlessbutton-pill !mr-0"
             loading={loading}
@@ -39,27 +41,43 @@ const FormPreview = ({
         </div>
       }
     >
-      <div className="mb-4">
-        <h3 className="text-xl font-bold">
-          {formMeta.title || "Untitled Form"}
-        </h3>
+      <div className="space-y-4">
         <div
-          className="text-gray-700"
-          dangerouslySetInnerHTML={{ __html: safeDescription }}
-        />
-      </div>
-      <div className="border border-dashed p-4">
-        {formElements.map((element, idx) => (
-          <FormElement
-            key={element.updated_on}
-            element={element}
-            index={idx}
-            // We disable reordering & editing in preview
-            moveElement={() => {}}
-            onUpdateElement={() => {}}
-            isPreview={true}
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            background: "#ffffff",
+          }}
+        >
+          <h3 className="mb-2 text-xl font-bold text-gray-900">
+            {formMeta.title || "Untitled Form"}
+          </h3>
+          <div
+            className="mb-0 text-gray-700"
+            dangerouslySetInnerHTML={{ __html: safeDescription }}
           />
-        ))}
+        </div>
+
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            background: "#ffffff",
+          }}
+        >
+          {formElements.map((element, idx) => (
+            <FormElement
+              key={element.updated_on}
+              element={element}
+              index={idx}
+              moveElement={() => {}}
+              onUpdateElement={() => {}}
+              isPreview={true}
+            />
+          ))}
+        </div>
       </div>
     </Drawer>
   );

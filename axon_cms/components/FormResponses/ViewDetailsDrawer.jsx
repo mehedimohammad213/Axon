@@ -14,7 +14,6 @@ const ViewDetailsDrawer = ({
 }) => {
   const isValidData = data && typeof data === "object" && !Array.isArray(data);
 
-  // Function to get CV URL
   const getCvUrl = () => {
     if (mediaList?.cv?.file_path) {
       return `${process.env.NEXT_PUBLIC_MEDIA_URL}/${mediaList.cv.file_path}`;
@@ -22,7 +21,6 @@ const ViewDetailsDrawer = ({
     return null;
   };
 
-  // Function to handle CV download
   const handleDownloadCV = () => {
     const cvUrl = getCvUrl();
     if (cvUrl) {
@@ -30,15 +28,13 @@ const ViewDetailsDrawer = ({
     }
   };
 
-  // Function to format time to 12-hour format with AM/PM
   const formatTime = (time) => {
     return moment(time, "HH:mm").format("hh:mm A");
   };
 
-  // Convert the form_data object into an array of key-value pairs for the table
   const dataSource = isValidData
     ? Object.entries(data)
-        .filter(([_, value]) => value !== null) // Filter out null values
+        .filter(([_, value]) => value !== null)
         .map(([key, value], index) => ({
           key: index,
           field: key,
@@ -49,7 +45,7 @@ const ViewDetailsDrawer = ({
                 ? value.join(", ")
                 : typeof value === "object"
                   ? JSON.stringify(value)
-                  : String(value), // Convert all non-null values to string
+                  : String(value),
         }))
     : [];
 
@@ -90,18 +86,35 @@ const ViewDetailsDrawer = ({
       onClose={onClose}
       open={visible}
       width="min(720px, 92vw)"
-      rootClassName="media-preview-drawer"
+      rootClassName="media-preview-drawer org-form-drawer"
     >
       {isValidData && dataSource.length > 0 ? (
-        <>
-          <Table
-            dataSource={dataSource}
-            columns={columns}
-            pagination={false}
-            rowKey="key"
-          />
+        <div className="space-y-4">
+          <div
+            style={{
+              border: "1px solid #e8eef5",
+              borderRadius: 12,
+              padding: 16,
+              background: "#ffffff",
+            }}
+          >
+            <Table
+              dataSource={dataSource}
+              columns={columns}
+              pagination={false}
+              rowKey="key"
+              size="small"
+            />
+          </div>
           {formType === "career" && mediaList?.cv && (
-            <div className="mt-4">
+            <div
+              style={{
+                border: "1px solid #e8eef5",
+                borderRadius: 12,
+                padding: 16,
+                background: "#ffffff",
+              }}
+            >
               <Button
                 type="primary"
                 icon={<DownloadOutlined />}
@@ -112,9 +125,18 @@ const ViewDetailsDrawer = ({
               </Button>
             </div>
           )}
-        </>
+        </div>
       ) : (
-        <Empty description="No Details Available" />
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 24,
+            background: "#ffffff",
+          }}
+        >
+          <Empty description="No Details Available" />
+        </div>
       )}
     </Drawer>
   );

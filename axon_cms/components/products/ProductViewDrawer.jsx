@@ -61,55 +61,78 @@ const ProductViewDrawer = ({
       open={open}
       onClose={onClose}
       width="min(720px, 92vw)"
-      rootClassName="media-preview-drawer"
+      rootClassName="media-preview-drawer org-form-drawer"
     >
-      <div className="space-y-5">
-        <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
-          <div className="flex h-28 w-28 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-gray-200 bg-gray-50">
-            {gallery[0]?.file_path ? (
-              <Image
-                src={resolveMediaUrl(gallery[0].file_path)}
-                alt={product.title || "Product"}
-                width={112}
-                height={112}
-                className="h-28 w-28 object-cover"
-              />
-            ) : (
-              <ShoppingOutlined className="text-3xl text-gray-300" />
-            )}
-          </div>
-          <div className="min-w-0 flex-1 space-y-2">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="rounded-md bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-500">
-                #{product.id}
-              </span>
-              <Tag color={inactive ? "default" : "green"}>
-                {inactive ? "Inactive" : "Active"}
-              </Tag>
-              <Tag color="blue">{typeName}</Tag>
+      <div className="space-y-4">
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            background: "#ffffff",
+          }}
+        >
+          <div className="flex flex-col gap-4 sm:flex-row sm:items-start">
+            <div className="flex h-28 w-28 shrink-0 items-center justify-center overflow-hidden rounded-xl border border-gray-200 bg-gray-50">
+              {gallery[0]?.file_path ? (
+                <Image
+                  src={resolveMediaUrl(gallery[0].file_path)}
+                  alt={product.title || "Product"}
+                  width={112}
+                  height={112}
+                  className="h-28 w-28 object-cover"
+                />
+              ) : (
+                <ShoppingOutlined className="text-3xl text-gray-300" />
+              )}
             </div>
-            <h2 className="text-xl font-semibold text-gray-900">
-              {product.title || "Untitled product"}
-            </h2>
-            {product.slug && (
-              <p className="text-sm text-gray-500">{product.slug}</p>
-            )}
+            <div className="min-w-0 flex-1 space-y-2">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="rounded-md bg-brand-light px-2 py-0.5 text-xs font-medium text-brand-dark">
+                  #{product.id}
+                </span>
+                <Tag color={inactive ? "default" : "green"}>
+                  {inactive ? "Inactive" : "Active"}
+                </Tag>
+                <Tag color="blue">{typeName}</Tag>
+              </div>
+              <h2 className="mb-0 text-xl font-semibold text-gray-900">
+                {product.title || "Untitled product"}
+              </h2>
+              {product.slug && (
+                <p className="mb-0 text-sm text-gray-500">{product.slug}</p>
+              )}
+            </div>
           </div>
         </div>
 
         {product.description && (
-          <div className="rounded-xl border border-gray-200 bg-white p-4">
+          <div
+            style={{
+              border: "1px solid #e8eef5",
+              borderRadius: 12,
+              padding: 16,
+              background: "#ffffff",
+            }}
+          >
             <p className="text-xs font-medium uppercase tracking-wide text-gray-400">
               Description
             </p>
-            <p className="mt-2 whitespace-pre-wrap text-sm text-gray-700">
+            <p className="mb-0 mt-2 whitespace-pre-wrap text-sm text-gray-700">
               {product.description}
             </p>
           </div>
         )}
 
         {gallery.length > 1 && (
-          <div className="rounded-xl border border-gray-200 bg-white p-4">
+          <div
+            style={{
+              border: "1px solid #e8eef5",
+              borderRadius: 12,
+              padding: 16,
+              background: "#ffffff",
+            }}
+          >
             <p className="mb-3 text-xs font-medium uppercase tracking-wide text-gray-400">
               Gallery
             </p>
@@ -128,8 +151,14 @@ const ProductViewDrawer = ({
           </div>
         )}
 
-        <div className="rounded-xl border border-gray-200 bg-white p-4 sm:p-5">
-          <p className="mb-4 text-sm font-semibold text-gray-800">Details</p>
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            background: "#ffffff",
+          }}
+        >
           <dl className="grid gap-4 sm:grid-cols-2">
             <InfoRow label="Title">{product.title || "—"}</InfoRow>
             <InfoRow label="Slug">{product.slug || "—"}</InfoRow>

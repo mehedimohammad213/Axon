@@ -92,14 +92,23 @@ const HeadlessFormsList = ({
         placement="right"
         onClose={handleCloseDrawer}
         open={drawerVisible}
-        width="60vw"
-        rootClassName="media-preview-drawer"
+        width="min(800px, 92vw)"
+        rootClassName="media-preview-drawer org-form-drawer"
       >
         {selectedFormId && (
-          <HeadlessFormElements
-            formId={selectedFormId}
-            setDrawerVisible={setDrawerVisible}
-          />
+          <div
+            style={{
+              border: "1px solid #e8eef5",
+              borderRadius: 12,
+              padding: 16,
+              background: "#ffffff",
+            }}
+          >
+            <HeadlessFormElements
+              formId={selectedFormId}
+              setDrawerVisible={setDrawerVisible}
+            />
+          </div>
         )}
       </Drawer>
     </div>
