@@ -1,8 +1,22 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import { Empty, Pagination, Tabs } from "antd";
-import { PlayCircleOutlined } from "@ant-design/icons";
+import {
+  AppstoreOutlined,
+  PictureOutlined,
+  PlayCircleOutlined,
+} from "@ant-design/icons";
 import ImageSlider from "./ImageSlider";
 import CardSlider from "./CardSlider";
+
+const TabLabel = ({ icon, label, count }) => (
+  <span className="media-tab-label">
+    <span className="media-tab-icon">{icon}</span>
+    <span className="media-tab-text">{label}</span>
+    {typeof count === "number" && (
+      <span className="media-tab-count">{count}</span>
+    )}
+  </span>
+);
 
 const SliderList = ({
   imageSliders = [],
@@ -69,66 +83,98 @@ const SliderList = ({
     </div>
   );
 
+  const items = useMemo(
+    () => [
+      {
+        key: "1",
+        label: (
+          <TabLabel
+            icon={<PictureOutlined />}
+            label="Image Sliders"
+            count={imageSliders.length}
+          />
+        ),
+        children: paginatedImageSliders.length ? (
+          <>
+            <div className="grid min-w-0 grid-cols-1 items-stretch gap-4 [&>*]:min-w-0 md:grid-cols-2 xl:grid-cols-3">
+              {paginatedImageSliders.map((slider) => (
+                <ImageSlider
+                  key={slider.id}
+                  slider={slider}
+                  CustomNextArrow={CustomNextArrow}
+                  CustomPrevArrow={CustomPrevArrow}
+                  MEDIA_URL={MEDIA_URL}
+                  handlePreviewClick={handlePreviewClick}
+                  handleEditClick={handleEditClick}
+                  handleDeleteSlider={handleDeleteSlider}
+                />
+              ))}
+            </div>
+            {renderPagination(imageCurrentPage, imageSliders.length, (page) =>
+              setImageCurrentPage(page)
+            )}
+          </>
+        ) : (
+          renderEmpty("image sliders")
+        ),
+      },
+      {
+        key: "2",
+        label: (
+          <TabLabel
+            icon={<AppstoreOutlined />}
+            label="Card Sliders"
+            count={cardSliders.length}
+          />
+        ),
+        children: paginatedCardSliders.length ? (
+          <>
+            <div className="grid min-w-0 grid-cols-1 items-stretch gap-4 [&>*]:min-w-0 md:grid-cols-2 xl:grid-cols-3">
+              {paginatedCardSliders.map((slider) => (
+                <CardSlider
+                  key={slider.id}
+                  slider={slider}
+                  CustomNextArrow={CustomNextArrow}
+                  CustomPrevArrow={CustomPrevArrow}
+                  MEDIA_URL={MEDIA_URL}
+                  handlePreviewClick={handlePreviewClick}
+                  handleEditClick={handleEditClick}
+                  handleDeleteSlider={handleDeleteSlider}
+                />
+              ))}
+            </div>
+            {renderPagination(cardCurrentPage, cardSliders.length, (page) =>
+              setCardCurrentPage(page)
+            )}
+          </>
+        ) : (
+          renderEmpty("card sliders")
+        ),
+      },
+    ],
+    [
+      imageSliders.length,
+      cardSliders.length,
+      paginatedImageSliders,
+      paginatedCardSliders,
+      imageCurrentPage,
+      cardCurrentPage,
+      itemsPerPage,
+      CustomNextArrow,
+      CustomPrevArrow,
+      MEDIA_URL,
+      handlePreviewClick,
+      handleEditClick,
+      handleDeleteSlider,
+    ]
+  );
+
   return (
     <Tabs
       defaultActiveKey="1"
-      className="min-w-0 [&_.ant-tabs-nav]:mb-4 [&_.ant-tabs-content]:min-w-0"
-      items={[
-        {
-          key: "1",
-          label: `Image Sliders (${imageSliders.length})`,
-          children: paginatedImageSliders.length ? (
-            <>
-              <div className="grid min-w-0 grid-cols-1 items-stretch gap-4 [&>*]:min-w-0 md:grid-cols-2 xl:grid-cols-3">
-                {paginatedImageSliders.map((slider) => (
-                  <ImageSlider
-                    key={slider.id}
-                    slider={slider}
-                    CustomNextArrow={CustomNextArrow}
-                    CustomPrevArrow={CustomPrevArrow}
-                    MEDIA_URL={MEDIA_URL}
-                    handlePreviewClick={handlePreviewClick}
-                    handleEditClick={handleEditClick}
-                    handleDeleteSlider={handleDeleteSlider}
-                  />
-                ))}
-              </div>
-              {renderPagination(imageCurrentPage, imageSliders.length, (page) =>
-                setImageCurrentPage(page)
-              )}
-            </>
-          ) : (
-            renderEmpty("image sliders")
-          ),
-        },
-        {
-          key: "2",
-          label: `Card Sliders (${cardSliders.length})`,
-          children: paginatedCardSliders.length ? (
-            <>
-              <div className="grid min-w-0 grid-cols-1 items-stretch gap-4 [&>*]:min-w-0 md:grid-cols-2 xl:grid-cols-3">
-                {paginatedCardSliders.map((slider) => (
-                  <CardSlider
-                    key={slider.id}
-                    slider={slider}
-                    CustomNextArrow={CustomNextArrow}
-                    CustomPrevArrow={CustomPrevArrow}
-                    MEDIA_URL={MEDIA_URL}
-                    handlePreviewClick={handlePreviewClick}
-                    handleEditClick={handleEditClick}
-                    handleDeleteSlider={handleDeleteSlider}
-                  />
-                ))}
-              </div>
-              {renderPagination(cardCurrentPage, cardSliders.length, (page) =>
-                setCardCurrentPage(page)
-              )}
-            </>
-          ) : (
-            renderEmpty("card sliders")
-          ),
-        },
-      ]}
+      animated
+      items={items}
+      className="media-filter-tabs min-w-0"
     />
   );
 };
