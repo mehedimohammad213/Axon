@@ -313,6 +313,7 @@ const CardsPage = () => {
             onDeleteCard={handleDeleteCard}
             onPreviewCard={handlePreviewCard}
             onEditCard={handleEditClick}
+            onViewTypeChange={setViewType}
           />
         </div>
       ) : (
