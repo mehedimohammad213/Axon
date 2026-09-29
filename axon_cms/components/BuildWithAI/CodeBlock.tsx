@@ -6,7 +6,7 @@ const SyntaxHighlighter = dynamic(
 );
 import { oneDark } from "react-syntax-highlighter/dist/cjs/styles/prism"; // Ensure CJS version
 import { CopyOutlined } from "@ant-design/icons";
-import { Button } from "antd";
+import { Button, message as antdMessage } from "antd";
 
 export default function CodeBlock({ language, content }) {
   const copyToClipboard = () => {

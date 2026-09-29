@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { Button, Input, Switch, Modal } from "antd";
-import MediaSelectionModal from "../../PageBuilder/Modals/MediaSelectionModal.jsx";
+import MediaSelectionModal from "../../PageBuilder/Modals/MediaSelectionModal";
 import RichTextEditor from "../../RichTextEditor";
 
 const ElementConfig = ({ element, onUpdate }) => {

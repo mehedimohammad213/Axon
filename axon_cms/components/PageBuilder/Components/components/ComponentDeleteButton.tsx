@@ -7,12 +7,23 @@ const ComponentDeleteButton = ({
   title = "Delete",
   label = "Delete",
   confirmTitle = "Delete component?",
-  confirmDescription,
+  confirmDescription = undefined,
   okText = "Delete",
   cancelText = "Cancel",
   disabled = false,
   className = "",
   stopPropagation = false,
+}: {
+  onConfirm: any;
+  title?: string;
+  label?: string;
+  confirmTitle?: string;
+  confirmDescription?: any;
+  okText?: string;
+  cancelText?: string;
+  disabled?: boolean;
+  className?: string;
+  stopPropagation?: boolean;
 }) => {
   const handleClick = (e) => {
     if (stopPropagation) {

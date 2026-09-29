@@ -1,12 +1,21 @@
-// axios.js
-import axios from "axios";
+// axios.ts — shared API client (behavior unchanged from prior JS)
+import axios, { type AxiosInstance, type InternalAxiosRequestConfig } from "axios";
+
+type CmsAxiosConfig = InternalAxiosRequestConfig & {
+  flyURL?: string;
+  __retryCount?: number;
+};
+
+type CmsAxiosInstance = AxiosInstance & {
+  logout: (redirectUrl?: string) => void;
+};
 
 // Rate limiting configuration
 const RATE_LIMIT_DELAY = 2000; // 2 seconds base delay
 const MAX_RETRIES = 3;
 
 // Track request timestamps for rate limiting
-const requestTimestamps = new Map();
+const requestTimestamps = new Map<string, number>();
 
 const instance = axios.create({
   baseURL: process.env.NEXT_PUBLIC_API_BASE_URL || "http://127.0.0.1:8000/api",
@@ -16,10 +25,10 @@ const instance = axios.create({
     Accept: "application/json",
     "Access-Control-Allow-Origin": "*",
   },
-});
+}) as CmsAxiosInstance;
 
 instance.interceptors.request.use(
-  (config) => {
+  (config: CmsAxiosConfig) => {
     // Get token from localStorage
     const token = localStorage.getItem("token");
     const organization = localStorage.getItem("organization");
@@ -47,12 +56,12 @@ instance.interceptors.request.use(
     }
 
     // Rate limiting for API calls
-    const url = config.url;
+    const url = config.url || "";
     const now = Date.now();
 
     // Check if we've made a request to this URL recently
     if (requestTimestamps.has(url)) {
-      const lastRequest = requestTimestamps.get(url);
+      const lastRequest = requestTimestamps.get(url) || 0;
       const timeSinceLastRequest = now - lastRequest;
 
       // If less than 1 second has passed, add a delay
@@ -88,13 +97,16 @@ instance.interceptors.response.use(
       body.meta &&
       typeof body.meta === "object"
     ) {
-      response.meta = body.meta;
+      (response as typeof response & { meta?: unknown }).meta = body.meta;
       response.data = body.data;
     }
     return response;
   },
   async (error) => {
-    const { config, response } = error;
+    const { config, response } = error as {
+      config?: CmsAxiosConfig;
+      response?: { status?: number };
+    };
 
     if (error.response && error.response.status === 401) {
       // Clear localStorage on unauthorized
@@ -112,16 +124,20 @@ instance.interceptors.response.use(
     }
 
     // Handle rate limiting (429) with exponential backoff
-    if (response && response.status === 429) {
+    if (response && response.status === 429 && config) {
       config.__retryCount = config.__retryCount || 0;
 
       if (config.__retryCount < MAX_RETRIES) {
         config.__retryCount += 1;
 
         // Exponential backoff with jitter
-        const delay = Math.pow(2, config.__retryCount) * RATE_LIMIT_DELAY + Math.random() * 1000;
+        const delay =
+          Math.pow(2, config.__retryCount) * RATE_LIMIT_DELAY +
+          Math.random() * 1000;
 
-        console.log(`Rate limited, retrying in ${delay}ms (attempt ${config.__retryCount}/${MAX_RETRIES})`);
+        console.log(
+          `Rate limited, retrying in ${delay}ms (attempt ${config.__retryCount}/${MAX_RETRIES})`
+        );
 
         await new Promise((resolve) => setTimeout(resolve, delay));
         return instance(config);

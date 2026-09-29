@@ -28,7 +28,7 @@ import {
 } from "@ant-design/icons";
 import Loader from "./Loader";
 import router from "next/router";
-import MediaSelectionModal1 from "./PageBuilder/Modals/MediaSelectionModal.jsx";
+import MediaSelectionModal1 from "./PageBuilder/Modals/MediaSelectionModal";
 import { copyApiEndpoint } from "../utils/copyApiEndpoint";
 const MEDIA_URL = process.env.NEXT_PUBLIC_MEDIA_URL;
 const { Panel } = Collapse;
