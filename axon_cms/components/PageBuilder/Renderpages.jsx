@@ -48,17 +48,19 @@ const RenderPages = ({
   }
 
   return (
-    <div className="mt-6 grid min-w-0 grid-cols-1 items-stretch gap-4 [&>*]:min-w-0 md:grid-cols-2 xl:grid-cols-3">
-      {webpages.map((page) => (
-        <PageCard
-          key={page.id}
-          page={page}
-          handlePreviewPage={handlePreviewPage}
-          handleDeletePage={handleDeletePage}
-          handleEditPageInfo={handleEditPageInfo}
-          handleDuplicatePage={handleDuplicatePage}
-        />
-      ))}
+    <div className="mt-6 media-content-card">
+      <div className="grid min-w-0 grid-cols-1 items-stretch gap-4 [&>*]:min-w-0 md:grid-cols-2 xl:grid-cols-3">
+        {webpages.map((page) => (
+          <PageCard
+            key={page.id}
+            page={page}
+            handlePreviewPage={handlePreviewPage}
+            handleDeletePage={handleDeletePage}
+            handleEditPageInfo={handleEditPageInfo}
+            handleDuplicatePage={handleDuplicatePage}
+          />
+        ))}
+      </div>
     </div>
   );
 };

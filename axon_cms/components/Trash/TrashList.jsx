@@ -38,7 +38,7 @@ const TrashList = ({
   }
 
   return (
-    <div className="mt-6 space-y-4">
+    <div className="mt-6 media-content-card">
       <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
         {items.map((item) => {
           const key = itemKey(item);
