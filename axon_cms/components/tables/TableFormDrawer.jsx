@@ -154,16 +154,9 @@ const TableFormDrawer = ({
       destroyOnClose
       rootClassName="media-preview-drawer"
       footer={
-        <div className="flex justify-end gap-2">
-          {!editingTable?.id && (
-            <Button
-              onClick={onClose}
-              className="headlesscancelbutton headlessbutton-pill !mr-0"
-            >
-              Cancel
-            </Button>
-          )}
+        <div className="flex justify-end">
           <Button
+            type="primary"
             loading={submitting}
             onClick={handleSubmit}
             className="headlessbutton headlessbutton-pill !mr-0"

@@ -123,7 +123,12 @@ const CellEditor = ({
               size="small"
               icon={<CloudUploadOutlined style={{ fontSize: 14 }} />}
               onClick={() => onOpenImagePicker(rowIndex, colIndex)}
-              style={{ ...actionBtnStyle, color: "#2563eb", borderColor: "#bfdbfe", background: "#eff6ff" }}
+              style={{
+                ...actionBtnStyle,
+                color: "var(--theme)",
+                borderColor: "var(--themes-light)",
+                background: "var(--theme-transparent)",
+              }}
             />
           </Tooltip>
           <Tooltip title="Switch to text">
@@ -175,9 +180,9 @@ const CellEditor = ({
             width: 28,
             height: 28,
             minWidth: 28,
-            color: "#2563eb",
-            background: "#eff6ff",
-            border: "1px solid #bfdbfe",
+            color: "var(--theme)",
+            background: "var(--theme-transparent)",
+            border: "1px solid var(--themelite)",
           }}
         />
       </Tooltip>
