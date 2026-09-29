@@ -53,11 +53,107 @@ body {
   font-size: 90%;
   color: var(--black);
   background: var(--notwhite);
+  cursor: default;
 }
 
 #__next {
   width: 100%;
   min-height: 100vh;
+}
+
+/* Cursor: arrow by default, hand only on clickable controls */
+.ant-card,
+.ant-card-hoverable,
+.ant-card-hoverable .ant-card-body,
+.ant-card-hoverable .ant-card-meta,
+.ant-card-hoverable .ant-card-cover,
+.ant-card-body,
+.ant-card-meta,
+.ant-card-cover,
+.ant-list-item,
+.ant-table,
+.ant-table-tbody > tr > td,
+.ant-typography {
+  cursor: default !important;
+}
+
+a,
+a[href],
+button,
+[role="button"],
+[role="link"],
+[role="menuitem"],
+[role="option"],
+[role="tab"],
+[role="switch"],
+[role="checkbox"],
+[role="radio"],
+[type="button"],
+[type="submit"],
+[type="reset"],
+[type="checkbox"],
+[type="radio"],
+[type="file"],
+summary,
+select,
+.ant-btn,
+.ant-btn > *,
+.ant-switch,
+.ant-checkbox-wrapper,
+.ant-radio-wrapper,
+.ant-select-selector,
+.ant-select-item,
+.ant-dropdown-menu-item,
+.ant-menu-item,
+.ant-menu-submenu-title,
+.ant-tabs-tab,
+.ant-pagination-item,
+.ant-pagination-prev,
+.ant-pagination-next,
+.ant-pagination-jump-prev,
+.ant-pagination-jump-next,
+.ant-tag-checkable,
+.ant-upload,
+.ant-upload-drag,
+.ant-picker,
+.ant-collapse-header,
+.ant-card-actions > li,
+.ant-card-actions .ant-btn,
+.ant-card-actions button,
+.ant-modal-close,
+.ant-drawer-close,
+.cursor-pointer,
+.headlessbutton,
+.headlesscancelbutton,
+.page-card-btn {
+  cursor: pointer !important;
+}
+
+a:hover,
+button:hover,
+.ant-btn:hover,
+[role="button"]:hover {
+  cursor: pointer !important;
+}
+
+button:disabled,
+button[disabled],
+.ant-btn[disabled],
+.ant-btn-disabled,
+.ant-switch-disabled,
+.ant-checkbox-wrapper-disabled,
+.ant-select-disabled,
+.ant-input-disabled,
+input:disabled,
+textarea:disabled,
+select:disabled,
+[aria-disabled="true"] {
+  cursor: not-allowed !important;
+}
+
+input:not([type="button"]):not([type="submit"]):not([type="reset"]):not([type="checkbox"]):not([type="radio"]):not([type="file"]):not(:disabled),
+textarea:not(:disabled) {
+  cursor: text !important;
 }
 
 /* Thin scrollbars */
