@@ -211,7 +211,7 @@ export default function OrganizationsPage() {
               loading={createSubmitting}
               className="headlessbutton headlessbutton-pill !mr-0"
             >
-              Create
+              Create Organization
             </Button>
           </div>
         }
@@ -252,7 +252,7 @@ export default function OrganizationsPage() {
               loading={editSubmitting}
               className="headlessbutton headlessbutton-pill !mr-0"
             >
-              Save
+              Update Organization
             </Button>
           </div>
         }
