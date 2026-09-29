@@ -164,11 +164,11 @@ const Gallery = () => {
       />
 
       {isLoading ? (
-        <div className="mt-6 flex items-center justify-center py-20">
+        <div className="mt-4 flex items-center justify-center py-20">
           <Spin size="large" />
         </div>
       ) : (
-        <div className="mt-6">
+        <div className="mt-4">
           <MediaTabs
             activeTab={activeTab}
             allMedia={mediaAssets}

@@ -307,11 +307,11 @@ const CardsPage = () => {
       )}
 
       {loading ? (
-        <div className="mt-6 flex items-center justify-center py-20">
+        <div className="mt-4 flex items-center justify-center py-20">
           <Spin size="large" />
         </div>
       ) : filteredCards.length > 0 ? (
-        <div className="mt-6">
+        <div className="mt-4">
           <CardsList
             cards={currentCards}
             viewType={viewType}
@@ -324,7 +324,7 @@ const CardsPage = () => {
           />
         </div>
       ) : (
-        <div className="mt-6 flex items-center justify-center rounded-2xl border border-dashed border-gray-200 bg-white py-16">
+        <div className="mt-4 flex items-center justify-center rounded-2xl border border-dashed border-gray-200 bg-white py-16">
           <Empty
             image={
               <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-light text-2xl text-brand-dark">

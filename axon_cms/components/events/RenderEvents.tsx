@@ -13,7 +13,7 @@ const RenderEvents = ({
   handleEditEventInfo,
 }) => {
   return (
-    <div className="media-content-card">
+    <div className="mt-4 media-content-card">
       {events.length > 0 ? (
         <div className="columns-1 gap-4 xl:columns-2 2xl:columns-2">
           {events.map((event) => (

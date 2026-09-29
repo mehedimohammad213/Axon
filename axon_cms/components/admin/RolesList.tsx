@@ -56,7 +56,7 @@ const RolesList = ({
 
   if (!organizationId) {
     return (
-      <div className="mt-6 flex items-center justify-center rounded-2xl border border-dashed border-gray-200 bg-white py-16">
+      <div className="mt-4 flex items-center justify-center rounded-2xl border border-dashed border-gray-200 bg-white py-16">
         <Empty description="Select an organization to manage roles." />
       </div>
     );
@@ -64,7 +64,7 @@ const RolesList = ({
 
   if (!roles.length) {
     return (
-      <div className="mt-6 flex items-center justify-center rounded-2xl border border-dashed border-gray-200 bg-white py-16">
+      <div className="mt-4 flex items-center justify-center rounded-2xl border border-dashed border-gray-200 bg-white py-16">
         <Empty
           image={
             <div className="mx-auto mb-2 flex h-14 w-14 items-center justify-center rounded-2xl bg-brand-light text-2xl text-brand-dark">
@@ -96,7 +96,7 @@ const RolesList = ({
   }
 
   return (
-    <div className="mt-6 media-content-card">
+    <div className="mt-4 media-content-card">
       <div className="grid grid-cols-1 items-stretch gap-4 md:grid-cols-2 xl:grid-cols-3">
         {roles.map((role) => (
           <RoleRow

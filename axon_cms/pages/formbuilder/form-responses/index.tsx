@@ -159,7 +159,7 @@ const FormResponsesIndexPage = () => {
       />
 
       {viewMode === "table" && paginatedResponses.length > 0 ? (
-        <div className="mt-6">
+        <div className="mt-4">
           <FormResponsesTable
             responses={paginatedResponses}
             refreshData={fetchResponses}
