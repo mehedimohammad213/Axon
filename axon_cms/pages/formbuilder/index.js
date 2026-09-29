@@ -20,7 +20,7 @@ export default function FormBuilder() {
   const [filters, setFilters] = useState({ status: undefined });
 
   useEffect(() => {
-    setPageTitle("Form Builder");
+    setPageTitle("Form");
   }, []);
 
   const fetchForms = useCallback(async () => {

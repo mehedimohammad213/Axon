@@ -24,10 +24,10 @@ const MenuItemsList = ({
           description={
             <div className="space-y-1">
               <p className="text-base font-medium text-gray-800">
-                No menu items yet
+                No menu yet
               </p>
               <p className="text-sm text-gray-500">
-                Create a menu item to build your navigation links.
+                Create a menu to build your navigation links.
               </p>
             </div>
           }
@@ -39,7 +39,7 @@ const MenuItemsList = ({
               onClick={onCreate}
               className="headlessbutton headlessbutton-pill !mr-0 mt-2"
             >
-              Create menu item
+              Create menu
             </Button>
           )}
         </Empty>

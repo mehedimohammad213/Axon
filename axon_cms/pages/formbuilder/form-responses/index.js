@@ -25,7 +25,7 @@ const FormResponsesIndexPage = () => {
   });
 
   useEffect(() => {
-    setPageTitle("Form Responses");
+    setPageTitle("Responses");
   }, []);
 
   const fetchResponses = useCallback(async () => {

@@ -31,7 +31,7 @@ const UploadProductsPage = () => {
   const [defaultTypeId, setDefaultTypeId] = useState(null);
 
   useEffect(() => {
-    setPageTitle("Upload Product");
+    setPageTitle("Upload");
   }, []);
 
   const fetchProductTypes = useCallback(async () => {
@@ -188,7 +188,7 @@ const UploadProductsPage = () => {
   return (
     <div className="headlesscontainer">
       <ProductsHeader
-        title="Upload Product"
+        title="Upload"
         countLabel={allProducts.length === 1 ? "Product" : "Products"}
         itemCount={allProducts.length}
         searchTerm={searchTerm}

@@ -14,7 +14,7 @@ const LOCAL_KEY_PAGES = "headless_pages";
 
 const MenuItems = () => {
   useEffect(() => {
-    setPageTitle("Menu Items");
+    setPageTitle("Menu");
   }, []);
 
   const [allMenuItems, setAllMenuItems] = useState([]);
@@ -168,10 +168,10 @@ const MenuItems = () => {
           <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
             <img
               src="/icons/headless/menuitems.svg"
-              alt="Menu Items"
+              alt="Menu"
               className="w-6"
             />
-            <span>Add Menu Item</span>
+            <span>Add Menu</span>
           </div>
         }
         width={800}

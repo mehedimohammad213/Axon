@@ -70,12 +70,12 @@ const FormResponsesHeader = ({
                 src="/icons/headless/forms.svg"
                 width={28}
                 height={28}
-                alt="Form Responses"
+                alt="Responses"
               />
             </div>
             <div className="flex flex-col">
               <h1 className="text-2xl font-bold text-gray-900 lg:text-3xl">
-                Form Responses
+                Responses
               </h1>
               {typeof itemCount === "number" && (
                 <div className="mt-2 flex items-center gap-1.5 rounded-lg border border-blue-100 bg-blue-50/80 px-2.5 py-1">

@@ -36,7 +36,7 @@ const Gallery = () => {
   const [uniqueTags, setUniqueTags] = useState([]);
 
   useEffect(() => {
-    setPageTitle("Media Library");
+    setPageTitle("Media");
   }, []);
 
   useGlobalRefresh(refreshMedia);

@@ -163,7 +163,7 @@ const FormResponsesPage = () => {
             <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden mb-6">
               <div className="bg-gradient-to-r from-brand via-blue-600 to-brand-dark px-8 py-6">
                 <h1 className="text-3xl font-bold text-white mb-2">
-                  Form Responses
+                  Responses
                   {formInfo && (
                     <span className="text-xl text-blue-100 ml-3">
                       {formInfo.title}

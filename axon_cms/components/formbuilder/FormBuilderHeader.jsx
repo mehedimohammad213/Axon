@@ -68,12 +68,12 @@ const FormBuilderHeader = ({
                 src="/icons/headless/forms.svg"
                 width={28}
                 height={28}
-                alt="Form Builder"
+                alt="Form"
               />
             </div>
             <div className="flex flex-col">
               <h1 className="text-2xl font-bold text-gray-900 lg:text-3xl">
-                Form Builder
+                Form
               </h1>
               {typeof itemCount === "number" && (
                 <div className="mt-2 flex items-center gap-1.5 rounded-lg border border-blue-100 bg-blue-50/80 px-2.5 py-1">

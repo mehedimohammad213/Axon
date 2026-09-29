@@ -68,12 +68,12 @@ const MenuItemsHeader = ({
                 src="/icons/headless/menuitems.svg"
                 width={28}
                 height={28}
-                alt="Menu Items"
+                alt="Menu"
               />
             </div>
             <div className="flex flex-col">
               <h1 className="text-2xl font-bold text-gray-900 lg:text-3xl">
-                Menu Items
+                Menu
               </h1>
               {typeof itemCount === "number" && (
                 <div className="mt-2 flex items-center gap-1.5 rounded-lg border border-blue-100 bg-blue-50/80 px-2.5 py-1">
@@ -83,7 +83,7 @@ const MenuItemsHeader = ({
                     className="[&_.ant-badge-count]:bg-brand [&_.ant-badge-count]:text-white [&_.ant-badge-count]:text-xs [&_.ant-badge-count]:min-w-[20px] [&_.ant-badge-count]:h-5 [&_.ant-badge-count]:leading-5"
                   />
                   <span className="ml-0.5 text-xs font-medium text-blue-700">
-                    {itemCount === 1 ? "Item" : "Items"}
+                    Menu
                   </span>
                 </div>
               )}
@@ -96,7 +96,7 @@ const MenuItemsHeader = ({
               onClick={onAddMenuItem}
               className="headlessbutton headlessbutton-pill !mr-0"
             >
-              Create Menu Item
+              Create Menu
             </Button>
             <Tooltip title="Refresh">
               <Button

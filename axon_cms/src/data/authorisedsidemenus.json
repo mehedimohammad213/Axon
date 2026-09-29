@@ -9,13 +9,13 @@
                 "id": 4,
                 "icon": "/icons/headless/menuitems.svg",
                 "link": "/menuitems",
-                "title": "Menu Items"
+                "title": "Menu"
             },
             {
                 "id": 3,
                 "icon": "/icons/headless/media.svg",
                 "link": "/gallery",
-                "title": "Media Library"
+                "title": "Media"
             },
             {
                 "id": 9,
@@ -74,7 +74,7 @@
                 "id": 27,
                 "icon": "/icons/headless/exam.svg",
                 "link": "/formbuilder",
-                "title": "Form Builder"
+                "title": "Form"
             },
             {
                 "id": 28,
@@ -86,7 +86,7 @@
                 "id": 16,
                 "icon": "/icons/headless/forms.svg",
                 "link": "/products/types",
-                "title": "Product Builder"
+                "title": "Product"
             },
             {
                 "id": 17,

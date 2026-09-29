@@ -241,7 +241,7 @@ const Footers = () => {
     <div className="headlesscontainer">
       <PagesHeader
         section="footers"
-        title="Footers"
+        title="Footer"
         onSearch={setSearchTerm}
         onCreate={openCreateFooterModal}
         createMode={createFooterModalVisible}

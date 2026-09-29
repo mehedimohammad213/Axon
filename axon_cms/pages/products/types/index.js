@@ -19,7 +19,7 @@ const ProductTypesPage = () => {
   const [filters, setFilters] = useState({ status: undefined });
 
   useEffect(() => {
-    setPageTitle("Product Types");
+    setPageTitle("Product");
   }, []);
 
   const fetchProductTypes = useCallback(async () => {
@@ -134,8 +134,8 @@ const ProductTypesPage = () => {
   return (
     <div className="headlesscontainer">
       <ProductsHeader
-        title="Product Types"
-        countLabel={productTypes.length === 1 ? "Type" : "Types"}
+        title="Product"
+        countLabel={productTypes.length === 1 ? "Product" : "Products"}
         itemCount={productTypes.length}
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
