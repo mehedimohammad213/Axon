@@ -595,7 +595,7 @@ const CardsPreviewModal = ({
                   htmlType="submit"
                   className="headlessbutton headlessbutton-pill"
                 >
-                  Save
+                  Update Card
                 </Button>
               </div>
 

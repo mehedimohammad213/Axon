@@ -369,7 +369,7 @@ const CreateCardForm = ({ onSuccess, onCancel, pages, media, uniqueTags }) => {
             loading={submitting}
             className="headlessbutton headlessbutton-pill"
           >
-            Submit
+            Create Card
           </Button>
         </div>
       </Form>
