@@ -454,11 +454,9 @@ const NavbarRow = ({
             </h5>
           </div>
 
-          <Tooltip title={navbar.title_bn || undefined} placement="topLeft">
-            <p className="mt-2 truncate text-sm leading-5 text-gray-500">
-              {navbar.title_bn || "No alternate title"}
-            </p>
-          </Tooltip>
+          <p className="mt-2 truncate text-sm leading-5 text-gray-500">
+            {navbar.title_bn || "No alternate title"}
+          </p>
 
           <div className="mt-3 space-y-2 text-sm">
             <div className="flex items-center justify-between gap-2">

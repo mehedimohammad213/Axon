@@ -10,7 +10,7 @@ import {
   CloseCircleOutlined,
   LinkOutlined,
 } from "@ant-design/icons";
-import { Button, Card, Popconfirm, Badge, Tag, Tooltip } from "antd";
+import { Button, Card, Popconfirm, Badge, Tag } from "antd";
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import PageEditForm from "./PageEditForm";
@@ -159,11 +159,9 @@ const PageCard = ({
             </h5>
           </div>
 
-          <Tooltip title={page.page_name_bn || undefined} placement="topLeft">
-            <p className="mt-2 truncate text-sm leading-5 text-gray-500">
-              {page.page_name_bn || "No alternate title"}
-            </p>
-          </Tooltip>
+          <p className="mt-2 truncate text-sm leading-5 text-gray-500">
+            {page.page_name_bn || "No alternate title"}
+          </p>
 
           <div className="mt-3 space-y-2 text-sm">
             <div className="flex items-center justify-between gap-2">
