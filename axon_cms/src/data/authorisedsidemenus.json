@@ -59,7 +59,7 @@
                 "id": 14,
                 "icon": "/icons/headless/footer.svg",
                 "link": "/footers",
-                "title": "Footer"
+                "title": "Footers"
             }
         ]
     },
@@ -74,7 +74,7 @@
                 "id": 27,
                 "icon": "/icons/headless/exam.svg",
                 "link": "/formbuilder",
-                "title": "Form"
+                "title": "Forms"
             },
             {
                 "id": 28,
@@ -86,7 +86,7 @@
                 "id": 16,
                 "icon": "/icons/headless/forms.svg",
                 "link": "/products/types",
-                "title": "Product"
+                "title": "Product Types"
             },
             {
                 "id": 17,

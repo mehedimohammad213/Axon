@@ -493,7 +493,7 @@ const SideMenuItems = ({
                   onClick={handleLoginClick}
                   className="border-2 border-gray-400 mt-4 hover:border-blue-400 transition-colors"
                 >
-                  {!collapsed && <span>Login</span>}
+                  {!collapsed && <span>Log in</span>}
                 </Item>
               </Tooltip>
             )}
