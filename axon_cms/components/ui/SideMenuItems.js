@@ -486,7 +486,7 @@ const SideMenuItems = ({
 
             {/* Login Menu Item for Unauthorized Users */}
             {!token && (
-              <Tooltip title="Click to login" placement="right">
+              <Tooltip title="Click to log in" placement="right">
                 <Item
                   key="login"
                   icon={<LoginOutlined />}

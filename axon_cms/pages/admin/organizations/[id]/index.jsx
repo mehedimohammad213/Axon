@@ -70,7 +70,7 @@ export default function OrganizationViewPage() {
           ...current,
           site_key: response.data.site_key,
         }));
-        message.success("Site key regenerated. Update the live website env.");
+        message.success("Site key regenerated. Update the live website's environment variables.");
       }
     } catch (error) {
       console.error(error);

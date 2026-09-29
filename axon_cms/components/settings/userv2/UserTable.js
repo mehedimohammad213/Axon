@@ -209,7 +209,7 @@ const UserTable = ({ users, fetchUsers, roles, currentUser }) => {
             )}
             {canDelete && (
               <Popconfirm
-                title="Are you sure to delete this user?"
+                title="Are you sure you want to delete this user?"
                 onConfirm={() => handleDeleteUser(record.id)}
                 onCancel={() => message.info("User not deleted")}
                 okText="Yes"

@@ -62,7 +62,7 @@ async function remove(user: any, id: any) {
 
   const userCount = await OrganizationRepository.countUsers(id);
   if (userCount > 0) {
-    throw new AppError(422, 'Cannot delete organization with users.');
+    throw new AppError(422, 'Cannot delete an organization that has users.');
   }
 
   await OrganizationRepository.remove(id);
@@ -82,7 +82,7 @@ async function regenerateSiteKey(user: any, id: any) {
   const site_key = await OrganizationRepository.regenerateSiteKey(id);
 
   return {
-    message: 'Site key regenerated. Update the live website env with the new key.',
+    message: "Site key regenerated. Update the live website's environment variable with the new key.",
     organization_id: parseInt(String(id), 10),
     site_key,
   };

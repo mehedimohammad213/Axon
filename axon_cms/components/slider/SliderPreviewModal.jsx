@@ -99,8 +99,8 @@ const SliderPreviewModal = ({ visible, slider, onClose }) => {
             </InfoRow>
             <InfoRow label="Media / Cards">
               {type === "card"
-                ? `${cards.length} card(s)`
-                : `${medias.length} media item(s)`}
+                ? `${cards.length} ${cards.length === 1 ? "card" : "cards"}`
+                : `${medias.length} ${medias.length === 1 ? "media item" : "media items"}`}
             </InfoRow>
             <InfoRow label="Tags">
               {tags.length ? (

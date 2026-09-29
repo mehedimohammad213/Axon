@@ -73,7 +73,7 @@ export default function PermissionTable({
             }}
           />
           <Popconfirm
-            title="Are you sure to delete this permission?"
+            title="Are you sure you want to delete this permission?"
             onConfirm={async () => {
               try {
                 await instance.delete(`/permissions/${record.id}`);

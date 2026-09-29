@@ -73,7 +73,7 @@ const resetPasword = () => {
     } catch (error) {
       // Handle errors, e.g., display an error message or log the error
       if (error?.response?.status === 500) {
-        message.error("Invalid Credentials");
+        message.error("Invalid credentials");
         setIsLoading(false);
       }
       console.error("Error data:", error);

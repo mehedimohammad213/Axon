@@ -65,7 +65,7 @@ const TopBar = ({
             Filter
           </Button>
           <Popconfirm
-            title="Are you sure to delete selected users?"
+            title="Are you sure you want to delete the selected users?"
             onConfirm={onDelete}
             okText="Yes"
             cancelText="No"

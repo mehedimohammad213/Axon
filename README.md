@@ -1,6 +1,6 @@
 # Axon
 
-Axon with an API-first Express backend and a Next.js admin UI. Manage structured content, media, menus, pages, forms, and more, then deliver it to websites, apps, or any client over REST.
+Axon is an API-first Express backend with a Next.js admin UI. Manage structured content, media, menus, pages, forms, and more, then deliver it to websites, apps, or any client over REST.
 
 ## Architecture
 

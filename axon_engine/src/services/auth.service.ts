@@ -76,7 +76,7 @@ async function login(body: LoginInput) {
   const user = await UserRepository.findByEmail(email);
 
   if (!user || !(await comparePassword(password, user.password))) {
-    throw new AppError(401, 'Invalid Credentials');
+    throw new AppError(401, 'Invalid credentials');
   }
 
   if (!user.organization_id) {

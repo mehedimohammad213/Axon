@@ -67,7 +67,7 @@ async function resolveResource(type: string) {
 
   await DynamicRepository.assertAllowedTable(type, { withTrashed: true });
   if (!(await TrashRepository.columnExists(type, 'deleted_at'))) {
-    throw new AppError(404, 'This resource does not support trash.');
+    throw new AppError(404, 'This resource does not support the trash.');
   }
 
   const registered = await DynamicRepository.findRegisteredModel(type, { withTrashed: true });
@@ -128,7 +128,7 @@ async function restore(type: string, id: number | string) {
   const row = await TrashRepository.findTrashedById(resource.table, id);
 
   if (!row) {
-    throw new AppError(404, `${resource.label} not found in trash`);
+    throw new AppError(404, `${resource.label} not found in the trash`);
   }
 
   await TrashRepository.restoreRow(resource.table, id);
@@ -140,7 +140,7 @@ async function forceDelete(type: string, id: number | string) {
   const row = await TrashRepository.findTrashedById(resource.table, id);
 
   if (!row) {
-    throw new AppError(404, `${resource.label} not found in trash`);
+    throw new AppError(404, `${resource.label} not found in the trash`);
   }
 
   if (resource.type === 'media') {

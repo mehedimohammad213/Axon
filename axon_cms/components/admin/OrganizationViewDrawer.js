@@ -88,7 +88,7 @@ const OrganizationViewDrawer = ({
           site_key: response.data.site_key,
         }));
         fetchOrganizations?.();
-        message.success("Site key regenerated. Update the live website env.");
+        message.success("Site key regenerated. Update the live website's environment variables.");
       }
     } catch (error) {
       message.error(

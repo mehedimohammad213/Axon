@@ -11,7 +11,7 @@ const ProductsList = ({
   onDelete,
   onCreate,
   emptyTitle = "No products uploaded yet",
-  emptyDescription = "Click Upload Product to add your first item.",
+  emptyDescription = 'Click "Upload Product" to add your first item.',
   createLabel = "Upload Product",
 }) => {
   const typeById = useMemo(() => {

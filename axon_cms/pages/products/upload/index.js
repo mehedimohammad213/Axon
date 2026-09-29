@@ -168,7 +168,7 @@ const UploadProductsPage = () => {
 
   const openUploadProduct = useCallback(() => {
     if (!productTypes.length) {
-      message.info("Create a product type form first.");
+      message.info("Create a product type first.");
       router.push("/products/create-type");
       return;
     }
@@ -221,7 +221,7 @@ const UploadProductsPage = () => {
         emptyTitle="No products uploaded yet"
         emptyDescription={
           productTypes.length
-            ? "Click Upload Product to add your first item."
+            ? 'Click "Upload Product" to add your first item.'
             : "Create a product type first, then upload products."
         }
         createLabel={

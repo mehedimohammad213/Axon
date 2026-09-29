@@ -147,7 +147,7 @@ async function updateRole(
 async function deleteRole(organizationId: number | string, roleId: number | string) {
   const assigned = await db.count('users', { role_id: roleId });
   if (assigned > 0) {
-    return { error: 'Cannot delete role assigned to users.' };
+    return { error: 'Cannot delete a role that is assigned to users.' };
   }
 
   await db.remove('roles', { id: roleId, organization_id: organizationId });

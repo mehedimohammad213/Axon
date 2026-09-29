@@ -87,7 +87,7 @@ async function remove(id: any) {
 
   const linked = await ProductRepository.countWhere({ product_type_id: id });
   if (linked > 0) {
-    throw new AppError(422, 'Cannot delete product type while products are using it');
+    throw new AppError(422, 'Cannot delete this product type because products are using it');
   }
 
   await ProductTypeRepository.remove(id);

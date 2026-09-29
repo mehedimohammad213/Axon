@@ -164,7 +164,7 @@ const CategoriesTable = ({ categories, fetchCategories, currentUser, loading }) 
                         )}
                         {canDelete && (
                             <Popconfirm
-                                title="Are you sure to delete this category?"
+                                title="Are you sure you want to delete this category?"
                                 onConfirm={() => handleDeleteCategory(record.id)}
                                 onCancel={() => message.info("Category not deleted")}
                                 okText="Yes"

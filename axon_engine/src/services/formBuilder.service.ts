@@ -12,7 +12,7 @@ async function list({ page, limit }: { page?: number; limit?: number } = {}) {
 
 async function show(id: any) {
   const item = await FormBuilderRepository.findById(id);
-  if (!item) throw new AppError(404, 'form_builder not found');
+  if (!item) throw new AppError(404, 'Form builder not found');
   return item;
 }
 
@@ -22,14 +22,14 @@ async function create(body: CreateFormBuilderInput) {
 
 async function update(id: any, body: UpdateFormBuilderInput) {
   const item = await FormBuilderRepository.findById(id);
-  if (!item) throw new AppError(404, 'form_builder not found');
+  if (!item) throw new AppError(404, 'Form builder not found');
 
   return FormBuilderRepository.update(id, validateUpdateFormBuilderBody(body));
 }
 
 async function remove(id: any) {
   const item = await FormBuilderRepository.findById(id);
-  if (!item) throw new AppError(404, 'form_builder not found');
+  if (!item) throw new AppError(404, 'Form builder not found');
 
   await FormBuilderRepository.remove(id);
   return 'form_builder';

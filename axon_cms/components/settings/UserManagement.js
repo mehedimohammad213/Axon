@@ -103,7 +103,7 @@ const UserManagement = () => {
         userIds.includes(user.id) ? { ...user, role } : user
       )
     );
-    message.success("Selected users roles updated successfully.");
+    message.success("Selected users' roles updated successfully.");
   };
 
   const handleImport = (importedUsers) => {

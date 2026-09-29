@@ -24,7 +24,7 @@ const ProductTypesList = ({
                 No product types yet
               </p>
               <p className="text-sm text-gray-500">
-                Create a product form with drag-and-drop fields, then upload
+                Create a product type with drag-and-drop fields, then upload
                 products.
               </p>
             </div>

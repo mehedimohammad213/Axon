@@ -127,7 +127,7 @@ export default function NavItems({
   const confirmLogout = () => {
     Modal.confirm({
       title: "Logout",
-      content: "Are you sure you want to logout?",
+      content: "Are you sure you want to log out?",
       okText: "Logout",
       okType: "danger",
       cancelText: "Cancel",

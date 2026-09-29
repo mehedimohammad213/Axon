@@ -136,7 +136,7 @@ export default function CustomModelData({ model }) {
             Edit
           </Button>
           <Popconfirm
-            title="Are you sure to delete this item?"
+            title="Are you sure you want to delete this item?"
             onConfirm={() => handleDelete(record.id)}
             okText="Yes"
             cancelText="No"

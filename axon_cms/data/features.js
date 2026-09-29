@@ -2,7 +2,7 @@ export const features = [
     {
         icon: "/icons/headless/component.svg",
         title: "Advanced Page Builder",
-        description: "16+ pre-built components with drag-and-drop interface and real-time preview capabilities.",
+        description: "16+ pre-built components with a drag-and-drop interface and real-time preview capabilities.",
         details: {
             overview: "A powerful component-based architecture that enables developers and content creators to build complex layouts with ease.",
             capabilities: [

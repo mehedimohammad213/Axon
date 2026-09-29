@@ -294,7 +294,7 @@ const UserList = ({
                           <EditOutlined />
                         </Button>
                         <Popconfirm
-                          title="Are you sure to delete this user?"
+                          title="Are you sure you want to delete this user?"
                           onConfirm={() => handleDeleteUser(user?.id)}
                           onCancel={() => message.info("User not deleted")}
                           okText="Yes"

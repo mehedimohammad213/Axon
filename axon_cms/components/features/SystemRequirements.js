@@ -12,7 +12,7 @@ const SystemRequirements = () => {
                 { name: "RAM", value: "4 GB", icon: "🧠" },
                 { name: "Storage", value: "20 GB SSD", icon: "💾" },
                 { name: "OS", value: "Ubuntu 18.04+, Windows 10+, macOS 10.15+", icon: "🖥️" },
-                { name: "Browser", value: "Modern browsers with V8 engine", icon: "🌐" }
+                { name: "Browser", value: "Modern browsers with a V8 engine", icon: "🌐" }
             ]
         },
         recommended: {
@@ -36,7 +36,7 @@ const SystemRequirements = () => {
             gradient: "from-brand to-blue-600",
             items: [
                 { name: "Cloud deployment", icon: "☁️" },
-                { name: "On-premise installation", icon: "🏢" },
+                { name: "On-premises installation", icon: "🏢" },
                 { name: "Docker containerization", icon: "🐳" },
                 { name: "CI/CD pipeline integration", icon: "🔄" },
                 { name: "Automated deployment", icon: "🤖" }

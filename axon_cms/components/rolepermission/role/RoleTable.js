@@ -128,7 +128,7 @@ export default function RoleTable({
           />
 
           <Popconfirm
-            title="Are you sure to delete this role?"
+            title="Are you sure you want to delete this role?"
             onConfirm={() => handleDeleteRole(record?.id)}
             okButtonProps={{ danger: true }}
           >

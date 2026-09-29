@@ -243,7 +243,7 @@ const PackagesTable = ({ packages, fetchPackages, setPackages, currentUser, load
           )}
           {canEditDelete && (
             <Popconfirm
-              title="Are you sure to delete this package?"
+              title="Are you sure you want to delete this package?"
               description="This action cannot be undone."
               onConfirm={() => handleDeletePackage(record.id)}
               onCancel={() => message.info("Package not deleted")}
