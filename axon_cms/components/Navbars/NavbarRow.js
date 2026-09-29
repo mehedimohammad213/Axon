@@ -305,7 +305,7 @@ const NavbarRow = ({
       onClick={handleUpdate}
       className="page-card-btn page-card-btn-primary !mr-0"
     >
-      Save
+      Update Navbar
     </Button>,
     <Button
       key="cancel"
