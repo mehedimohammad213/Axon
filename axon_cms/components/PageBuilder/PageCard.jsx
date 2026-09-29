@@ -10,7 +10,7 @@ import {
   CloseCircleOutlined,
   LinkOutlined,
 } from "@ant-design/icons";
-import { Button, Card, Popconfirm, Tooltip, Badge, Tag } from "antd";
+import { Button, Card, Popconfirm, Badge, Tag, Tooltip } from "antd";
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import PageEditForm from "./PageEditForm";
@@ -65,55 +65,55 @@ const PageCard = ({
       key="save"
       icon={<CheckCircleOutlined />}
       onClick={() => editFormRef.current?.submit()}
-      className="headlessbutton headlessbutton-pill !mr-0"
+      className="page-card-btn page-card-btn-primary !mr-0"
     >
-      Save changes
+      Save
     </Button>,
     <Button
       key="cancel"
       icon={<CloseCircleOutlined />}
       onClick={cancelEditing}
-      className="headlesscancelbutton headlessbutton-pill !mr-0"
+      className="page-card-btn page-card-btn-muted !mr-0"
     >
       Cancel
     </Button>,
   ];
 
   const defaultActions = [
-    handleDuplicatePage && (
-      <Button
-        key="duplicate"
-        icon={<CopyOutlined />}
-        onClick={() => handleDuplicatePage(page.id)}
-        className="headlessbutton headlessbutton-pill !mr-0"
-      >
-        Duplicate
-      </Button>
-    ),
+    <Button
+      key="edit"
+      icon={<EditOutlined />}
+      onClick={startEditing}
+      className="page-card-btn page-card-btn-primary !mr-0"
+    >
+      Edit
+    </Button>,
     handlePreviewPage && (
       <Button
         key="preview"
         icon={<EyeOutlined />}
         onClick={() => handlePreviewPage(page.id)}
-        className="headlessbutton headlessbutton-pill !mr-0"
+        className="page-card-btn page-card-btn-soft !mr-0"
       >
         Preview
       </Button>
     ),
-    <Button
-      key="edit"
-      icon={<EditOutlined />}
-      onClick={startEditing}
-      className="headlessbutton headlessbutton-pill !mr-0"
-    >
-      Edit
-    </Button>,
+    handleDuplicatePage && (
+      <Button
+        key="duplicate"
+        icon={<CopyOutlined />}
+        onClick={() => handleDuplicatePage(page.id)}
+        className="page-card-btn page-card-btn-soft !mr-0"
+      >
+        Duplicate
+      </Button>
+    ),
     <Popconfirm
       key="delete"
-      title={`Delete this ${itemLabel}?`}
-      description="This cannot be undone."
+      title={`Move this ${itemLabel} to trash?`}
+      description="You can restore it later from Trash."
       onConfirm={() => handleDeletePage(page.id)}
-      okText="Delete"
+      okText="Move to trash"
       cancelText="Cancel"
       okButtonProps={{
         danger: true,
@@ -124,10 +124,10 @@ const PageCard = ({
       }}
     >
       <Button
-        className="headlesscancelbutton headlessbutton-pill !mr-0"
+        className="page-card-btn page-card-btn-danger !mr-0"
         icon={<DeleteOutlined />}
       >
-        Delete
+        Trash
       </Button>
     </Popconfirm>,
   ].filter(Boolean);
@@ -136,79 +136,79 @@ const PageCard = ({
     <Card
       hoverable
       actions={isEditing ? editingActions : defaultActions}
-        className="media-card slider-card page-list-card overflow-hidden shadow-md rounded-md"
-      >
-        {isEditing ? (
-          <div className="pt-3" onClick={(e) => e.stopPropagation()}>
-            <PageEditForm ref={editFormRef} page={page} onSubmit={confirmEdit} />
-          </div>
-        ) : (
-          <div className="flex flex-col pt-3">
-            <div className="media-card-meta flex items-center justify-between gap-3">
-              <div className="flex min-w-0 items-center gap-2">
-                <Badge count={`ID-${page.id}`} style={idBadgeStyle} />
-                <h3
-                  className="m-0 truncate text-base font-semibold"
-                  title={page.page_name_en || `Untitled ${itemLabel}`}
-                >
-                  {page.page_name_en || `Untitled ${itemLabel}`}
-                </h3>
-              </div>
-              <h5 className="mb-0 shrink-0 text-sm font-bold text-gray-400">
-                {pageTypeLabel}
-              </h5>
+      className="media-card slider-card page-list-card overflow-hidden shadow-md rounded-md"
+    >
+      {isEditing ? (
+        <div className="pt-3" onClick={(e) => e.stopPropagation()}>
+          <PageEditForm ref={editFormRef} page={page} onSubmit={confirmEdit} />
+        </div>
+      ) : (
+        <div className="flex flex-col pt-3">
+          <div className="media-card-meta flex items-center justify-between gap-3">
+            <div className="flex min-w-0 items-center gap-2">
+              <Badge count={`ID-${page.id}`} style={idBadgeStyle} />
+              <h3
+                className="m-0 truncate text-base font-semibold"
+                title={page.page_name_en || `Untitled ${itemLabel}`}
+              >
+                {page.page_name_en || `Untitled ${itemLabel}`}
+              </h3>
             </div>
+            <h5 className="mb-0 shrink-0 text-sm font-bold text-gray-400">
+              {pageTypeLabel}
+            </h5>
+          </div>
 
-            <Tooltip title={page.page_name_bn || undefined} placement="topLeft">
-              <p className="mt-2 truncate text-sm leading-5 text-gray-500">
-                {page.page_name_bn || "No alternate title"}
-              </p>
-            </Tooltip>
+          <Tooltip title={page.page_name_bn || undefined} placement="topLeft">
+            <p className="mt-2 truncate text-sm leading-5 text-gray-500">
+              {page.page_name_bn || "No alternate title"}
+            </p>
+          </Tooltip>
 
-            <div className="mt-3 space-y-2 text-sm">
-              <div className="flex items-center justify-between gap-2">
-                <span className="text-xs font-medium uppercase tracking-wide text-gray-400">
-                  Builder
-                </span>
-                <Link href={`/page-builder/${page.id}`}>
-                  <a className="inline-flex min-w-0 items-center gap-1.5 truncate text-brand-dark hover:underline">
-                    <LinkOutlined className="text-xs" />
-                    <span className="truncate">/{page.slug || page.id}</span>
-                  </a>
-                </Link>
-              </div>
-              <div className="flex items-center justify-between gap-2">
-                <span className="text-xs font-medium uppercase tracking-wide text-gray-400">
-                  Status
-                </span>
-                <Tag
-                  className={`mb-0 ${
-                    isActive
-                      ? "!border-[var(--theme)] !bg-[var(--theme-transparent)] !text-[var(--theme)]"
-                      : "!border-gray-200 !bg-gray-50 !text-gray-500"
-                  }`}
-                >
-                  {isActive ? "Active" : "Inactive"}
+          <div className="mt-3 space-y-2 text-sm">
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-xs font-medium uppercase tracking-wide text-gray-400">
+                Builder
+              </span>
+              <Link href={`/page-builder/${page.id}`}>
+                <a className="inline-flex min-w-0 items-center gap-1.5 truncate text-brand-dark hover:underline">
+                  <LinkOutlined className="text-xs" />
+                  <span className="truncate">/{page.slug || page.id}</span>
+                </a>
+              </Link>
+            </div>
+            <div className="flex items-center justify-between gap-2">
+              <span className="text-xs font-medium uppercase tracking-wide text-gray-400">
+                Status
+              </span>
+              <Tag
+                className={`mb-0 ${
+                  isActive
+                    ? "!border-[var(--theme)] !bg-[var(--theme-transparent)] !text-[var(--theme)]"
+                    : "!border-gray-200 !bg-gray-50 !text-gray-500"
+                }`}
+              >
+                {isActive ? "Active" : "Inactive"}
+              </Tag>
+            </div>
+          </div>
+
+          {keywords.length > 0 && (
+            <div className="mt-3 overflow-hidden whitespace-nowrap">
+              {keywords.slice(0, 6).map((tagItem) => (
+                <Tag key={tagItem} color="yellow" className="mb-0">
+                  {tagItem}
                 </Tag>
-              </div>
+              ))}
+              {keywords.length > 6 && (
+                <Tag key="more" color="green" className="mb-0">
+                  ...
+                </Tag>
+              )}
             </div>
-
-            {keywords.length > 0 && (
-              <div className="mt-3 overflow-hidden whitespace-nowrap">
-                {keywords.slice(0, 6).map((tagItem) => (
-                  <Tag key={tagItem} color="yellow" className="mb-0">
-                    {tagItem}
-                  </Tag>
-                ))}
-                {keywords.length > 6 && (
-                  <Tag key="more" color="green" className="mb-0">
-                    ...
-                  </Tag>
-                )}
-              </div>
-            )}
-          </div>
-        )}
+          )}
+        </div>
+      )}
     </Card>
   );
 };
