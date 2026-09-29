@@ -85,7 +85,7 @@ const UsersList = ({
               onClick={onCreate}
               className="headlessbutton headlessbutton-pill !mr-0 mt-2"
             >
-              Create user
+              Create User
             </Button>
           )}
         </Empty>

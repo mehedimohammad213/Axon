@@ -93,7 +93,7 @@ const UserEditModal = ({
       placement="right"
       width="min(720px, 92vw)"
       destroyOnClose
-      rootClassName="media-preview-drawer"
+      rootClassName="media-preview-drawer org-form-drawer"
       footer={
         <div className="flex w-full justify-end">
           <Button
@@ -102,54 +102,76 @@ const UserEditModal = ({
             className="headlessbutton headlessbutton-pill !mr-0"
             onClick={() => form.submit()}
           >
-            Save
+            Update User
           </Button>
         </div>
       }
     >
       <Form form={form} layout="vertical" onFinish={handleUpdateUser}>
-        <Form.Item
-          name="name"
-          label="Name"
-          rules={[{ required: true, message: "Please enter the name" }]}
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            marginBottom: 16,
+            background: "#ffffff",
+          }}
         >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          name="email"
-          label="Email"
-          rules={[
-            { required: true, message: "Please enter the email" },
-            { type: "email", message: "Please enter a valid email" },
-          ]}
+          <div className="grid gap-x-4 md:grid-cols-2">
+            <Form.Item
+              name="name"
+              label="Name"
+              rules={[{ required: true, message: "Please enter the name" }]}
+            >
+              <Input placeholder="Jane Admin" />
+            </Form.Item>
+            <Form.Item
+              name="email"
+              label="Email"
+              rules={[
+                { required: true, message: "Please enter the email" },
+                { type: "email", message: "Please enter a valid email" },
+              ]}
+            >
+              <Input placeholder="user@acme.com" />
+            </Form.Item>
+            <Form.Item name="phone" label="Phone">
+              <Input placeholder="+1 555 0100" />
+            </Form.Item>
+            <Form.Item name="role_id" label="Role">
+              <Select
+                disabled={isEditingSelf || !canManageUsers}
+                placeholder="Select a role"
+              >
+                {roles?.map((role) => (
+                  <Option key={role.id} value={role.id}>
+                    {role.title}
+                  </Option>
+                ))}
+              </Select>
+            </Form.Item>
+          </div>
+        </div>
+
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            background: "#ffffff",
+          }}
         >
-          <Input />
-        </Form.Item>
-        <Form.Item name="phone" label="Phone">
-          <Input />
-        </Form.Item>
-        <Form.Item name="role_id" label="Role">
-          <Select
-            disabled={isEditingSelf || !canManageUsers}
-            placeholder="Select a role"
-          >
-            {roles?.map((role) => (
-              <Option key={role.id} value={role.id}>
-                {role.title}
-              </Option>
-            ))}
-          </Select>
-        </Form.Item>
-        <Form.Item label="Avatar">
-          <Upload
-            name="avatar"
-            action="/upload"
-            onChange={handleUploadChange}
-            listType="picture"
-          >
-            <Button icon={<UploadOutlined />}>Click to Upload</Button>
-          </Upload>
-        </Form.Item>
+          <Form.Item label="Avatar" style={{ marginBottom: 0 }}>
+            <Upload
+              name="avatar"
+              action="/upload"
+              onChange={handleUploadChange}
+              listType="picture"
+            >
+              <Button icon={<UploadOutlined />}>Click to Upload</Button>
+            </Upload>
+          </Form.Item>
+        </div>
       </Form>
     </Drawer>
   );

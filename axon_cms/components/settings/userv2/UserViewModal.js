@@ -45,33 +45,49 @@ const UserViewModal = ({ visible, user, onCancel, roles }) => {
       onClose={onCancel}
       placement="right"
       width="min(720px, 92vw)"
-      rootClassName="media-preview-drawer"
+      rootClassName="media-preview-drawer org-form-drawer"
     >
-      <div className="space-y-5">
-        <div className="flex items-center gap-4">
-          <Avatar
-            src={user.profile_picture || "/images/profile_avatar.png"}
-            icon={<UserOutlined />}
-            size={64}
-            className="border border-gray-200"
-          />
-          <div className="min-w-0">
-            <div className="flex flex-wrap items-center gap-2">
-              <span className="rounded-md bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-500">
-                #{user.id}
-              </span>
-              <span className="rounded-md bg-brand-light px-2 py-0.5 text-xs font-medium text-brand-dark">
-                {roleTitle}
-              </span>
+      <div className="space-y-4">
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            background: "#ffffff",
+          }}
+        >
+          <div className="flex items-center gap-4">
+            <Avatar
+              src={user.profile_picture || "/images/profile_avatar.png"}
+              icon={<UserOutlined />}
+              size={64}
+              className="border border-gray-200"
+            />
+            <div className="min-w-0">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="rounded-md bg-brand-light px-2 py-0.5 text-xs font-medium text-brand-dark">
+                  #{user.id}
+                </span>
+                <span className="rounded-md bg-brand-light px-2 py-0.5 text-xs font-medium text-brand-dark">
+                  {roleTitle}
+                </span>
+              </div>
+              <h2 className="mt-1 truncate text-xl font-semibold text-gray-900">
+                {user.name || "Unnamed user"}
+              </h2>
+              <p className="mb-0 truncate text-sm text-gray-500">{user.email}</p>
             </div>
-            <h2 className="mt-1 truncate text-xl font-semibold text-gray-900">
-              {user.name || "Unnamed user"}
-            </h2>
-            <p className="truncate text-sm text-gray-500">{user.email}</p>
           </div>
         </div>
 
-        <div className="rounded-xl border border-gray-200 bg-white p-4 sm:p-5">
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            background: "#ffffff",
+          }}
+        >
           <dl className="grid gap-4 sm:grid-cols-2">
             <InfoRow label="Name">{user.name || "—"}</InfoRow>
             <InfoRow label="Email">{user.email || "—"}</InfoRow>

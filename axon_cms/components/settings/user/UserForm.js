@@ -122,7 +122,7 @@ const UserForm = ({
       onClose={onCancel}
       width="min(720px, 92vw)"
       destroyOnClose
-      rootClassName="media-preview-drawer"
+      rootClassName="media-preview-drawer org-form-drawer"
       footer={
         <div className="flex w-full justify-end">
           <Button
@@ -131,7 +131,7 @@ const UserForm = ({
             onClick={handleCreateUser}
             className="headlessbutton headlessbutton-pill !mr-0"
           >
-            Create
+            Create User
           </Button>
         </div>
       }
@@ -147,85 +147,108 @@ const UserForm = ({
           }
         }}
       >
-        <Form.Item
-          name="name"
-          label="Name"
-          rules={[{ required: true, message: "Please input the name!" }]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          name="phone"
-          label="Phone"
-          rules={[{ required: true, message: "Please input the phone!" }]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          name="email"
-          label="Email"
-          rules={[
-            { required: true, message: "Please input the email!" },
-            { type: "email", message: "Please enter a valid email!" },
-          ]}
-        >
-          <Input />
-        </Form.Item>
-        <Form.Item
-          name="password"
-          label="Password"
-          rules={[
-            { required: true, message: "Please input the password!" },
-            { min: 6, message: "Password must be at least 6 characters!" },
-          ]}
-        >
-          <Input.Password />
-        </Form.Item>
-        <Button
-          onClick={passwordGenerator}
-          className="mb-2"
-        >
-          Generate Password
-        </Button>
-        <Progress
-          percent={passwordStrength}
-          showInfo={false}
-          strokeColor={{
-            "0%": "#ff4d4f",
-            "100%": "#52c41a",
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            marginBottom: 16,
+            background: "#ffffff",
           }}
-          className="mb-4"
-        />
-        <Form.Item
-          name="password_confirmation"
-          label="Confirm Password"
-          rules={[
-            { required: true, message: "Please confirm the password!" },
-            ({ getFieldValue }) => ({
-              validator(_, value) {
-                if (!value || getFieldValue("password") === value) {
-                  return Promise.resolve();
-                }
-                return Promise.reject(new Error("Passwords do not match!"));
-              },
-            }),
-          ]}
         >
-          <Input.Password />
-        </Form.Item>
-        <Form.Item
-          name="role_id"
-          label="Role"
-          rules={[{ required: true, message: "Please select the role!" }]}
+          <div className="grid gap-x-4 md:grid-cols-2">
+            <Form.Item
+              name="name"
+              label="Name"
+              rules={[{ required: true, message: "Please input the name!" }]}
+            >
+              <Input placeholder="Jane Admin" />
+            </Form.Item>
+            <Form.Item
+              name="phone"
+              label="Phone"
+              rules={[{ required: true, message: "Please input the phone!" }]}
+            >
+              <Input placeholder="+1 555 0100" />
+            </Form.Item>
+            <Form.Item
+              name="email"
+              label="Email"
+              rules={[
+                { required: true, message: "Please input the email!" },
+                { type: "email", message: "Please enter a valid email!" },
+              ]}
+            >
+              <Input placeholder="user@acme.com" />
+            </Form.Item>
+            <Form.Item
+              name="role_id"
+              label="Role"
+              rules={[{ required: true, message: "Please select the role!" }]}
+            >
+              <Select placeholder="Select a role">
+                {roles?.map((role) => (
+                  <Option key={role.id} value={role.id}>
+                    {role.title}
+                  </Option>
+                ))}
+              </Select>
+            </Form.Item>
+          </div>
+        </div>
+
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            background: "#ffffff",
+          }}
         >
-          <Select placeholder="Select a role">
-            {roles?.map((role) => (
-              <Option key={role.id} value={role.id}>
-                {role.title}
-              </Option>
-            ))}
-          </Select>
-        </Form.Item>
+          <div className="grid gap-x-4 md:grid-cols-2">
+            <Form.Item
+              name="password"
+              label="Password"
+              rules={[
+                { required: true, message: "Please input the password!" },
+                { min: 6, message: "Password must be at least 6 characters!" },
+              ]}
+            >
+              <Input.Password placeholder="Minimum 6 characters" />
+            </Form.Item>
+            <Form.Item
+              name="password_confirmation"
+              label="Confirm Password"
+              rules={[
+                { required: true, message: "Please confirm the password!" },
+                ({ getFieldValue }) => ({
+                  validator(_, value) {
+                    if (!value || getFieldValue("password") === value) {
+                      return Promise.resolve();
+                    }
+                    return Promise.reject(new Error("Passwords do not match!"));
+                  },
+                }),
+              ]}
+            >
+              <Input.Password placeholder="Confirm password" />
+            </Form.Item>
+          </div>
+          <div className="flex flex-wrap items-center gap-3">
+            <Button onClick={passwordGenerator} className="!mr-0">
+              Generate Password
+            </Button>
+            <Progress
+              percent={passwordStrength}
+              showInfo={false}
+              strokeColor={{
+                "0%": "#ff4d4f",
+                "100%": "#52c41a",
+              }}
+              className="mb-0 min-w-[160px] flex-1"
+            />
+          </div>
+        </div>
       </Form>
     </Drawer>
   );
