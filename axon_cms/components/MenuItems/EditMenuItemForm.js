@@ -1,15 +1,5 @@
 import React, { useMemo, useState } from "react";
-import {
-  Row,
-  Col,
-  Input,
-  Select,
-  Button,
-  Radio,
-  message,
-  Typography,
-} from "antd";
-import { CheckCircleOutlined } from "@ant-design/icons";
+import { Form, Input, Select, Radio, Button, message } from "antd";
 import instance from "../../axios";
 
 const { Option } = Select;
@@ -56,19 +46,13 @@ const EditMenuItemForm = ({
   menuItems = [],
   onCancel,
   onUpdated,
+  formId = "edit-menu-item-form",
+  onLoadingChange,
+  showSubmitButton = true,
 }) => {
-  const [titleEn, setTitleEn] = useState(menuItem?.title || "");
-  const [titleBn, setTitleBn] = useState(menuItem?.title_bn || "");
-  const [parentId, setParentId] = useState(menuItem?.parent_id || null);
-  const [linkType, setLinkType] = useState(
-    isPageLink(menuItem?.link) ? "page" : "independent"
-  );
-  const [customLink, setCustomLink] = useState(
-    isPageLink(menuItem?.link) ? "" : menuItem?.link || ""
-  );
-  const [pageSlug, setPageSlug] = useState(
-    getPageSlugFromLink(menuItem?.link, pages)
-  );
+  const initialLinkType = isPageLink(menuItem?.link) ? "page" : "independent";
+  const [form] = Form.useForm();
+  const [linkType, setLinkType] = useState(initialLinkType);
   const [saving, setSaving] = useState(false);
 
   const parentOptions = useMemo(
@@ -79,9 +63,12 @@ const EditMenuItemForm = ({
     [menuItems, menuItem?.id]
   );
 
-  const buildLink = () => {
+  const buildLink = (values) => {
+    const titleEn = (values.title || "").trim();
+    const parentId = values.parent_id || null;
+
     if (linkType === "page") {
-      const selectedPage = pages.find((page) => page.slug === pageSlug);
+      const selectedPage = pages.find((page) => page.slug === values.link);
       const slugs = buildParentPath(parentId, menuItems);
       slugs.push(generateSlug(titleEn));
       const pageId = selectedPage ? selectedPage.id : "";
@@ -93,28 +80,29 @@ const EditMenuItemForm = ({
       }`;
     }
 
-    if (customLink?.trim()) return customLink.trim();
+    if (values.link?.trim()) return values.link.trim();
 
     const slugs = buildParentPath(parentId, menuItems);
     slugs.push(generateSlug(titleEn));
     return `/${slugs.join("/")}`;
   };
 
-  const handleSave = async () => {
-    if (!titleEn.trim()) {
+  const handleSave = async (values) => {
+    const titleEn = (values.title || "").trim();
+    if (!titleEn) {
       message.error("Please provide a valid menu item title.");
       return;
     }
-    if (linkType === "page" && !pageSlug) {
+    if (linkType === "page" && !values.link) {
       message.error("Please select a page.");
       return;
     }
 
     const payload = {
-      title: titleEn.trim(),
-      title_bn: titleBn.trim() || null,
-      parent_id: parentId || null,
-      link: buildLink(),
+      title: titleEn,
+      title_bn: (values.title_bn || "").trim() || null,
+      parent_id: values.parent_id || null,
+      link: buildLink(values),
     };
 
     if (!payload.link) {
@@ -124,10 +112,8 @@ const EditMenuItemForm = ({
 
     try {
       setSaving(true);
-      const response = await instance.put(
-        `/menuitems/${menuItem.id}`,
-        payload
-      );
+      onLoadingChange?.(true);
+      const response = await instance.put(`/menuitems/${menuItem.id}`, payload);
       if (response.status === 200) {
         message.success("Menu item updated successfully");
         onUpdated?.(response.data);
@@ -143,67 +129,90 @@ const EditMenuItemForm = ({
       message.error(apiMessage || "Error updating menu item");
     } finally {
       setSaving(false);
+      onLoadingChange?.(false);
     }
   };
 
   return (
-    <div>
-      <Row gutter={[16, 16]}>
-        <Col xs={24} md={12}>
-          <Typography.Title level={5}>Item Name</Typography.Title>
-          <Input
-            placeholder="Menu Item Title"
-            value={titleEn}
-            onChange={(e) => setTitleEn(e.target.value)}
-          />
-        </Col>
-        <Col xs={24} md={12}>
-          <Typography.Title level={5}>আইটেম নাম</Typography.Title>
-          <Input
-            placeholder="মেনু আইটেম শিরোনাম"
-            value={titleBn}
-            onChange={(e) => setTitleBn(e.target.value)}
-          />
-        </Col>
-
-        <Col xs={24} md={12}>
-          <Typography.Title level={5}>Parent Menu</Typography.Title>
-          <Select
-            showSearch
-            placeholder="Select a Parent Menu"
-            optionFilterProp="children"
-            onChange={(value) => setParentId(value || null)}
-            className="w-full mt-2"
-            allowClear
-            value={parentId || undefined}
+    <Form
+      id={formId}
+      form={form}
+      layout="vertical"
+      onFinish={handleSave}
+      initialValues={{
+        title: menuItem?.title || "",
+        title_bn: menuItem?.title_bn || "",
+        parent_id: menuItem?.parent_id || undefined,
+        link_type: initialLinkType,
+        link:
+          initialLinkType === "page"
+            ? getPageSlugFromLink(menuItem?.link, pages) || undefined
+            : menuItem?.link || "",
+      }}
+    >
+      <div
+        style={{
+          border: "1px solid #e8eef5",
+          borderRadius: 12,
+          padding: 16,
+          background: "#ffffff",
+        }}
+      >
+        <div className="grid gap-x-4 md:grid-cols-2">
+          <Form.Item
+            label="Item Name"
+            name="title"
+            rules={[{ required: true, message: "Please enter item name" }]}
           >
-            {parentOptions.map((item) => (
-              <Option key={item.id} value={item.id}>
-                {item.title}
-              </Option>
-            ))}
-          </Select>
-        </Col>
-
-        <Col xs={24} md={12}>
-          <div className="flex justify-between">
-            <Typography.Title level={5}>Item Link</Typography.Title>
+            <Input placeholder="Menu Item Title" disabled={saving} />
+          </Form.Item>
+          <Form.Item label="আইটেম নাম" name="title_bn">
+            <Input placeholder="মেনু আইটেম শিরোনাম" disabled={saving} />
+          </Form.Item>
+          <Form.Item label="Parent Menu" name="parent_id">
+            <Select
+              showSearch
+              placeholder="Select a Parent Menu"
+              optionFilterProp="children"
+              allowClear
+              disabled={saving}
+            >
+              {parentOptions.map((item) => (
+                <Option key={item.id} value={item.id}>
+                  {item.title}
+                </Option>
+              ))}
+            </Select>
+          </Form.Item>
+          <Form.Item label="Link Type" name="link_type">
             <Radio.Group
-              value={linkType}
-              onChange={(e) => setLinkType(e.target.value)}
+              onChange={(e) => {
+                setLinkType(e.target.value);
+                form.setFieldsValue({ link: undefined });
+              }}
+              disabled={saving}
             >
               <Radio value="independent">Independent</Radio>
               <Radio value="page">Page</Radio>
             </Radio.Group>
-          </div>
+          </Form.Item>
+        </div>
+
+        <Form.Item
+          label="Item Link"
+          name="link"
+          rules={
+            linkType === "page"
+              ? [{ required: true, message: "Please select a page" }]
+              : undefined
+          }
+        >
           {linkType === "page" ? (
             <Select
               showSearch
               placeholder="Select a page"
               optionFilterProp="children"
-              onChange={setPageSlug}
-              className="w-full mt-2"
-              value={pageSlug || undefined}
+              disabled={saving}
             >
               {(Array.isArray(pages) ? pages : []).map((page) => (
                 <Option key={page.id} value={page.slug}>
@@ -212,27 +221,24 @@ const EditMenuItemForm = ({
               ))}
             </Select>
           ) : (
-            <Input
-              placeholder="Menu Item Link"
-              value={customLink}
-              onChange={(e) => setCustomLink(e.target.value)}
-              className="mt-2"
-            />
+            <Input placeholder="Menu Item Link" disabled={saving} />
           )}
-        </Col>
-      </Row>
-
-      <div className="flex justify-end mt-4">
-        <Button
-          icon={<CheckCircleOutlined />}
-          onClick={handleSave}
-          loading={saving}
-          className="headlessbutton headlessbutton-pill !mr-0"
-        >
-          Update Menu
-        </Button>
+        </Form.Item>
       </div>
-    </div>
+
+      {showSubmitButton && (
+        <div className="mt-4 flex justify-end">
+          <Button
+            type="primary"
+            htmlType="submit"
+            loading={saving}
+            className="headlessbutton headlessbutton-pill !mr-0"
+          >
+            Update Menu
+          </Button>
+        </div>
+      )}
+    </Form>
   );
 };
 

@@ -9,9 +9,8 @@ const NavbarsList = ({
   navbars,
   media,
   setNavbars,
-  editingNavbarId,
-  setEditingNavbarId,
-  fetchNavbars,
+  onView,
+  onEdit,
   onCreate,
 }) => {
   if (!navbars.length) {
@@ -58,9 +57,8 @@ const NavbarsList = ({
             navbar={navbar}
             media={media}
             setNavbars={setNavbars}
-            editingNavbarId={editingNavbarId}
-            setEditingNavbarId={setEditingNavbarId}
-            fetchNavbars={fetchNavbars}
+            onView={onView}
+            onEdit={onEdit}
           />
         ))}
       </div>

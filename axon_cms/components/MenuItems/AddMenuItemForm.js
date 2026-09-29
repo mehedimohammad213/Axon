@@ -1,15 +1,5 @@
 import React, { useState } from "react";
-import {
-  Row,
-  Col,
-  Input,
-  Select,
-  Button,
-  Radio,
-  message,
-  Typography,
-} from "antd";
-import { PlusCircleOutlined } from "@ant-design/icons";
+import { Form, Input, Select, Radio, Button, message } from "antd";
 import instance from "../../axios";
 
 const { Option } = Select;
@@ -20,12 +10,13 @@ const AddMenuItemForm = ({
   onCancel,
   fetchMenuItems,
   onMenuItemCreated,
+  formId = "add-menu-item-form",
+  onLoadingChange,
+  showSubmitButton = true,
 }) => {
-  const [newMenuItemTitle, setNewMenuItemTitle] = useState("");
-  const [newMenuItemTitleBn, setNewMenuItemTitleBn] = useState("");
-  const [newMenuItemLink, setNewMenuItemLink] = useState("");
+  const [form] = Form.useForm();
   const [linkType, setLinkType] = useState("independent");
-  const [newParentId, setNewParentId] = useState(null);
+  const [saving, setSaving] = useState(false);
 
   const generateSlug = (text) =>
     text
@@ -34,7 +25,6 @@ const AddMenuItemForm = ({
       .replace(/\s+/g, "-")
       .replace(/[^\w-]+/g, "");
 
-  // Build parent paths recursively
   const buildParentPath = (parentId) => {
     const slugs = [];
     let currentId = parentId;
@@ -47,43 +37,46 @@ const AddMenuItemForm = ({
     return slugs;
   };
 
-  const handleAddMenuItem = async () => {
-    if (!newMenuItemTitle.trim()) {
+  const handleAddMenuItem = async (values) => {
+    const title = (values.title || "").trim();
+    if (!title) {
       message.error("Please provide a valid Menu Item Title.");
       return;
     }
-    // Decide how to build the link
+
+    const parentId = values.parent_id || null;
+    const linkValue = values.link || "";
     let fullLink = "/";
+
     if (linkType === "page") {
-      const selectedPage = pages.find((p) => p.slug === newMenuItemLink);
-      // Build path + query
-      const slugs = buildParentPath(newParentId);
-      slugs.push(generateSlug(newMenuItemTitle));
+      const selectedPage = pages.find((p) => p.slug === linkValue);
+      const slugs = buildParentPath(parentId);
+      slugs.push(generateSlug(title));
       const pageId = selectedPage ? selectedPage.id : "";
       const pageName = selectedPage
         ? generateSlug(selectedPage.page_name_en)
         : "";
-      fullLink = `/${slugs.join("/")}${pageId ? `?pageId=${pageId}&pageName=${pageName}` : ""}`;
+      fullLink = `/${slugs.join("/")}${
+        pageId ? `?pageId=${pageId}&pageName=${pageName}` : ""
+      }`;
     } else {
-      // Independent link
-      const slugs = buildParentPath(newParentId);
-      slugs.push(generateSlug(newMenuItemTitle));
-      fullLink = `/${slugs.join("/")}`;
+      const slugs = buildParentPath(parentId);
+      slugs.push(generateSlug(title));
+      fullLink = linkValue?.trim() ? linkValue.trim() : `/${slugs.join("/")}`;
     }
 
     const payload = [
       {
-        title: newMenuItemTitle || "N/A",
-        title_bn: newMenuItemTitleBn || "N/A",
-        parent_id: newParentId || null,
-        link:
-          linkType === "independent" && newMenuItemLink?.trim()
-            ? newMenuItemLink.trim()
-            : fullLink,
+        title: title || "N/A",
+        title_bn: (values.title_bn || "").trim() || "N/A",
+        parent_id: parentId,
+        link: fullLink,
       },
     ];
 
     try {
+      setSaving(true);
+      onLoadingChange?.(true);
       const res = await instance.post("/menuitems", payload);
       if (res.status === 201) {
         const created = Array.isArray(res.data)
@@ -94,7 +87,8 @@ const AddMenuItemForm = ({
         message.success("Menu item added successfully");
         await fetchMenuItems?.();
         onMenuItemCreated?.(created);
-        onCancel();
+        form.resetFields();
+        onCancel?.();
       } else {
         message.error("Error adding menu item");
       }
@@ -104,66 +98,83 @@ const AddMenuItemForm = ({
         (error?.response?.data?.errors &&
           Object.values(error.response.data.errors).flat().join(" "));
       message.error(apiMessage || "Error adding menu item");
+    } finally {
+      setSaving(false);
+      onLoadingChange?.(false);
     }
   };
 
   return (
-    <div>
-      <Row gutter={[16, 16]}>
-        <Col xs={24} md={12}>
-          <Typography.Title level={5}>Item Name</Typography.Title>
-          <Input
-            placeholder="Menu Item Title"
-            value={newMenuItemTitle}
-            onChange={(e) => setNewMenuItemTitle(e.target.value)}
-          />
-        </Col>
-        <Col xs={24} md={12}>
-          <Typography.Title level={5}>আইটেম নাম</Typography.Title>
-          <Input
-            placeholder="মেনু আইটেম শিরোনাম"
-            value={newMenuItemTitleBn}
-            onChange={(e) => setNewMenuItemTitleBn(e.target.value)}
-          />
-        </Col>
-
-        <Col xs={24} md={12}>
-          <Typography.Title level={5}>Parent Menu</Typography.Title>
-          <Select
-            showSearch
-            placeholder="Select a Parent Menu"
-            optionFilterProp="children"
-            onChange={(value) => setNewParentId(value)}
-            className="w-full mt-2"
-            allowClear
+    <Form
+      id={formId}
+      form={form}
+      layout="vertical"
+      onFinish={handleAddMenuItem}
+      initialValues={{ link_type: "independent" }}
+    >
+      <div
+        style={{
+          border: "1px solid #e8eef5",
+          borderRadius: 12,
+          padding: 16,
+          background: "#ffffff",
+        }}
+      >
+        <div className="grid gap-x-4 md:grid-cols-2">
+          <Form.Item
+            label="Item Name"
+            name="title"
+            rules={[{ required: true, message: "Please enter item name" }]}
           >
-            <Option value={undefined}>No Parent</Option>
-            {(Array.isArray(menuItems) ? menuItems : []).map((m) => (
-              <Option key={m.id} value={m.id}>
-                {m.title}
-              </Option>
-            ))}
-          </Select>
-        </Col>
-
-        <Col xs={24} md={12}>
-          <div className="flex justify-between">
-            <Typography.Title level={5}>Item Link</Typography.Title>
+            <Input placeholder="Menu Item Title" disabled={saving} />
+          </Form.Item>
+          <Form.Item label="আইটেম নাম" name="title_bn">
+            <Input placeholder="মেনু আইটেম শিরোনাম" disabled={saving} />
+          </Form.Item>
+          <Form.Item label="Parent Menu" name="parent_id">
+            <Select
+              showSearch
+              placeholder="Select a Parent Menu"
+              optionFilterProp="children"
+              allowClear
+              disabled={saving}
+            >
+              {(Array.isArray(menuItems) ? menuItems : []).map((m) => (
+                <Option key={m.id} value={m.id}>
+                  {m.title}
+                </Option>
+              ))}
+            </Select>
+          </Form.Item>
+          <Form.Item label="Link Type" name="link_type">
             <Radio.Group
-              value={linkType}
-              onChange={(e) => setLinkType(e.target.value)}
+              onChange={(e) => {
+                setLinkType(e.target.value);
+                form.setFieldsValue({ link: undefined });
+              }}
+              disabled={saving}
             >
               <Radio value="independent">Independent</Radio>
               <Radio value="page">Page</Radio>
             </Radio.Group>
-          </div>
+          </Form.Item>
+        </div>
+
+        <Form.Item
+          label="Item Link"
+          name="link"
+          rules={
+            linkType === "page"
+              ? [{ required: true, message: "Please select a page" }]
+              : undefined
+          }
+        >
           {linkType === "page" ? (
             <Select
               showSearch
               placeholder="Select a page"
               optionFilterProp="children"
-              onChange={(value) => setNewMenuItemLink(value)}
-              className="w-full mt-2"
+              disabled={saving}
             >
               {(Array.isArray(pages) ? pages : []).map((p) => (
                 <Option key={p.id} value={p.slug}>
@@ -174,24 +185,25 @@ const AddMenuItemForm = ({
           ) : (
             <Input
               placeholder="Menu Item Link (leave empty to auto-generate)"
-              value={newMenuItemLink}
-              onChange={(e) => setNewMenuItemLink(e.target.value)}
-              className="mt-2"
+              disabled={saving}
             />
           )}
-        </Col>
-      </Row>
-
-      <div className="flex justify-end mt-4">
-        <Button
-          icon={<PlusCircleOutlined />}
-          onClick={handleAddMenuItem}
-          className="headlessbutton headlessbutton-pill"
-        >
-          Create Menu
-        </Button>
+        </Form.Item>
       </div>
-    </div>
+
+      {showSubmitButton && (
+        <div className="mt-4 flex justify-end">
+          <Button
+            type="primary"
+            htmlType="submit"
+            loading={saving}
+            className="headlessbutton headlessbutton-pill !mr-0"
+          >
+            Create Menu
+          </Button>
+        </div>
+      )}
+    </Form>
   );
 };
 

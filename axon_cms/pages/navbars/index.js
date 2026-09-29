@@ -1,11 +1,12 @@
 // pages/Navbars.js
 
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { message, Modal, Pagination, Spin } from "antd";
+import { message, Drawer, Button, Pagination, Spin } from "antd";
 import instance from "../../axios";
 import { setPageTitle } from "../../global/constants/pageTitle";
 import NavbarHeader from "../../components/Navbars/NavbarHeader";
 import AddNavbarForm from "../../components/Navbars/AddNavbarForm";
+import NavbarViewDrawer from "../../components/Navbars/NavbarViewDrawer";
 import NavbarsList from "../../components/Navbars/NavbarsList";
 import { useGlobalRefresh } from "../../src/context/MenuRefreshContext";
 
@@ -17,8 +18,12 @@ const Navbars = () => {
   const [allNavbars, setAllNavbars] = useState([]);
   const [media, setMedia] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [editingNavbarId, setEditingNavbarId] = useState(null);
-  const [isAddNavbarOpen, setIsAddNavbarOpen] = useState(false);
+  const [selectedNavbar, setSelectedNavbar] = useState(null);
+  const [isAddOpen, setIsAddOpen] = useState(false);
+  const [isEditOpen, setIsEditOpen] = useState(false);
+  const [isViewOpen, setIsViewOpen] = useState(false);
+  const [createSubmitting, setCreateSubmitting] = useState(false);
+  const [editSubmitting, setEditSubmitting] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
   const [sortType, setSortType] = useState("desc");
   const [itemsPerPage, setItemsPerPage] = useState(10);
@@ -115,8 +120,15 @@ const Navbars = () => {
     return sortedNavbars.slice(startIndex, startIndex + itemsPerPage);
   }, [sortedNavbars, currentPage, itemsPerPage]);
 
-  const handleAddNavbar = useCallback(() => setIsAddNavbarOpen(true), []);
-  const handleCancelAddNavbar = useCallback(() => setIsAddNavbarOpen(false), []);
+  const handleAdd = useCallback(() => setIsAddOpen(true), []);
+  const handleView = useCallback((navbar) => {
+    setSelectedNavbar(navbar);
+    setIsViewOpen(true);
+  }, []);
+  const handleEdit = useCallback((navbar) => {
+    setSelectedNavbar(navbar);
+    setIsEditOpen(true);
+  }, []);
 
   const handleShowChange = useCallback((value) => {
     setItemsPerPage(parseInt(value, 10));
@@ -145,7 +157,7 @@ const Navbars = () => {
   return (
     <div className="headlesscontainer">
       <NavbarHeader
-        onAddNavbar={handleAddNavbar}
+        onAddNavbar={handleAdd}
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         sortType={sortType}
@@ -157,40 +169,116 @@ const Navbars = () => {
         itemCount={allNavbars.length}
       />
 
-      <Modal
-        open={isAddNavbarOpen}
-        onCancel={handleCancelAddNavbar}
+      <Drawer
+        open={isAddOpen}
+        onClose={() => setIsAddOpen(false)}
         destroyOnClose
-        footer={null}
         title={
-          <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
+          <div className="flex items-center gap-2">
             <img
               src="/icons/headless/navbar.svg"
               alt="Navbars"
               className="w-6"
             />
-            <span>Add Navbar</span>
+            <span>Create Navbar</span>
           </div>
         }
-        width={800}
+        placement="right"
+        width="min(800px, 92vw)"
+        rootClassName="media-preview-drawer org-form-drawer"
+        footer={
+          <div className="flex w-full justify-end">
+            <Button
+              type="primary"
+              form="create-navbar-form"
+              htmlType="submit"
+              loading={createSubmitting}
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
+              Create Navbar
+            </Button>
+          </div>
+        }
       >
-        {isAddNavbarOpen && (
+        {isAddOpen && (
           <AddNavbarForm
+            formId="create-navbar-form"
             media={media}
-            onCancel={handleCancelAddNavbar}
+            onCancel={() => setIsAddOpen(false)}
             fetchNavbars={fetchNavbars}
+            onLoadingChange={setCreateSubmitting}
+            showSubmitButton={false}
           />
         )}
-      </Modal>
+      </Drawer>
+
+      <Drawer
+        open={isEditOpen}
+        onClose={() => {
+          setIsEditOpen(false);
+          setSelectedNavbar(null);
+        }}
+        destroyOnClose
+        title={
+          <div className="flex items-center gap-2">
+            <img
+              src="/icons/headless/navbar.svg"
+              alt="Navbars"
+              className="w-6"
+            />
+            <span>Edit Navbar</span>
+          </div>
+        }
+        placement="right"
+        width="min(800px, 92vw)"
+        rootClassName="media-preview-drawer org-form-drawer"
+        footer={
+          <div className="flex w-full justify-end">
+            <Button
+              type="primary"
+              form="edit-navbar-form"
+              htmlType="submit"
+              loading={editSubmitting}
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
+              Update Navbar
+            </Button>
+          </div>
+        }
+      >
+        {isEditOpen && selectedNavbar && (
+          <AddNavbarForm
+            formId="edit-navbar-form"
+            media={media}
+            editingNavbar={selectedNavbar}
+            onCancel={() => {
+              setIsEditOpen(false);
+              setSelectedNavbar(null);
+            }}
+            fetchNavbars={fetchNavbars}
+            onLoadingChange={setEditSubmitting}
+            showSubmitButton={false}
+          />
+        )}
+      </Drawer>
+
+      <NavbarViewDrawer
+        open={isViewOpen}
+        navbar={selectedNavbar}
+        media={media}
+        onClose={() => {
+          setIsViewOpen(false);
+          setSelectedNavbar(null);
+        }}
+      />
 
       <NavbarsList
         navbars={paginatedNavbars}
         media={media}
         setNavbars={setNavbars}
-        editingNavbarId={editingNavbarId}
-        setEditingNavbarId={setEditingNavbarId}
-        fetchNavbars={fetchNavbars}
-        onCreate={handleAddNavbar}
+        onView={handleView}
+        onEdit={handleEdit}
+        onCreate={handleAdd}
       />
 
       {sortedNavbars.length > itemsPerPage && (

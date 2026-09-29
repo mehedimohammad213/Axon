@@ -5,11 +5,10 @@ import MenuItemRow from "./MenuItemRow";
 
 const MenuItemsList = ({
   menuItems,
-  pages,
   allMenuItems,
   setMenuItems,
-  editingItemId,
-  setEditingItemId,
+  onView,
+  onEdit,
   onCreate,
 }) => {
   if (!menuItems.length) {
@@ -23,9 +22,7 @@ const MenuItemsList = ({
           }
           description={
             <div className="space-y-1">
-              <p className="text-base font-medium text-gray-800">
-                No menu yet
-              </p>
+              <p className="text-base font-medium text-gray-800">No menu yet</p>
               <p className="text-sm text-gray-500">
                 Create a menu to build your navigation links.
               </p>
@@ -55,10 +52,9 @@ const MenuItemsList = ({
             key={menuItem.id}
             menuItem={menuItem}
             allMenuItems={allMenuItems}
-            pages={pages}
             setMenuItems={setMenuItems}
-            editingItemId={editingItemId}
-            setEditingItemId={setEditingItemId}
+            onView={onView}
+            onEdit={onEdit}
           />
         ))}
       </div>

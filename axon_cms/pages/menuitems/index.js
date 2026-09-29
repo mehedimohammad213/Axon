@@ -1,11 +1,13 @@
 // pages/MenuItems.js
 
 import React, { useState, useEffect, useMemo, useCallback } from "react";
-import { message, Modal, Pagination, Spin } from "antd";
+import { message, Drawer, Button, Pagination, Spin } from "antd";
 import instance from "../../axios";
 import { setPageTitle } from "../../global/constants/pageTitle";
 import MenuItemsHeader from "../../components/MenuItems/MenuItemsHeader";
 import AddMenuItemForm from "../../components/MenuItems/AddMenuItemForm";
+import EditMenuItemForm from "../../components/MenuItems/EditMenuItemForm";
+import MenuItemViewDrawer from "../../components/MenuItems/MenuItemViewDrawer";
 import MenuItemsList from "../../components/MenuItems/MenuItemsList";
 import { useGlobalRefresh } from "../../src/context/MenuRefreshContext";
 
@@ -19,8 +21,12 @@ const MenuItems = () => {
 
   const [allMenuItems, setAllMenuItems] = useState([]);
   const [pages, setPages] = useState([]);
-  const [editingItemId, setEditingItemId] = useState(null);
-  const [isAddMenuItemOpen, setIsAddMenuItemOpen] = useState(false);
+  const [selectedMenuItem, setSelectedMenuItem] = useState(null);
+  const [isAddOpen, setIsAddOpen] = useState(false);
+  const [isEditOpen, setIsEditOpen] = useState(false);
+  const [isViewOpen, setIsViewOpen] = useState(false);
+  const [createSubmitting, setCreateSubmitting] = useState(false);
+  const [editSubmitting, setEditSubmitting] = useState(false);
   const [loading, setLoading] = useState(true);
   const [sortType, setSortType] = useState("desc");
   const [searchTerm, setSearchTerm] = useState("");
@@ -91,9 +97,7 @@ const MenuItems = () => {
     }
 
     if (filters.parent_id) {
-      results = results.filter(
-        (item) => item.parent_id === filters.parent_id
-      );
+      results = results.filter((item) => item.parent_id === filters.parent_id);
     }
 
     return results;
@@ -114,11 +118,15 @@ const MenuItems = () => {
     return sortedMenuItems.slice(startIndex, startIndex + itemsPerPage);
   }, [sortedMenuItems, currentPage, itemsPerPage]);
 
-  const handleAddMenuItem = useCallback(() => setIsAddMenuItemOpen(true), []);
-  const handleCancelAddMenuItem = useCallback(
-    () => setIsAddMenuItemOpen(false),
-    []
-  );
+  const handleAdd = useCallback(() => setIsAddOpen(true), []);
+  const handleView = useCallback((item) => {
+    setSelectedMenuItem(item);
+    setIsViewOpen(true);
+  }, []);
+  const handleEdit = useCallback((item) => {
+    setSelectedMenuItem(item);
+    setIsEditOpen(true);
+  }, []);
 
   const onShowChange = useCallback((value) => {
     setItemsPerPage(parseInt(value, 10));
@@ -147,7 +155,7 @@ const MenuItems = () => {
   return (
     <div className="headlesscontainer">
       <MenuItemsHeader
-        onAddMenuItem={handleAddMenuItem}
+        onAddMenuItem={handleAdd}
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         sortType={sortType}
@@ -160,12 +168,11 @@ const MenuItems = () => {
         itemCount={allMenuItems.length}
       />
 
-      <Modal
-        open={isAddMenuItemOpen}
-        onCancel={handleCancelAddMenuItem}
-        footer={null}
+      <Drawer
+        open={isAddOpen}
+        onClose={() => setIsAddOpen(false)}
         title={
-          <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
+          <div className="flex items-center gap-2">
             <img
               src="/icons/headless/menuitems.svg"
               alt="Menu"
@@ -174,24 +181,110 @@ const MenuItems = () => {
             <span>Create Menu</span>
           </div>
         }
-        width={800}
+        placement="right"
+        width="min(720px, 92vw)"
+        destroyOnClose
+        rootClassName="media-preview-drawer org-form-drawer"
+        footer={
+          <div className="flex w-full justify-end">
+            <Button
+              type="primary"
+              form="add-menu-item-form"
+              htmlType="submit"
+              loading={createSubmitting}
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
+              Create Menu
+            </Button>
+          </div>
+        }
       >
         <AddMenuItemForm
           pages={pages}
           menuItems={allMenuItems}
-          onCancel={handleCancelAddMenuItem}
+          onCancel={() => setIsAddOpen(false)}
           fetchMenuItems={fetchMenuItems}
+          onLoadingChange={setCreateSubmitting}
+          showSubmitButton={false}
         />
-      </Modal>
+      </Drawer>
+
+      <Drawer
+        open={isEditOpen}
+        onClose={() => {
+          setIsEditOpen(false);
+          setSelectedMenuItem(null);
+        }}
+        title={
+          <div className="flex items-center gap-2">
+            <img
+              src="/icons/headless/menuitems.svg"
+              alt="Menu"
+              className="w-6"
+            />
+            <span>Edit Menu</span>
+          </div>
+        }
+        placement="right"
+        width="min(720px, 92vw)"
+        destroyOnClose
+        rootClassName="media-preview-drawer org-form-drawer"
+        footer={
+          <div className="flex w-full justify-end">
+            <Button
+              type="primary"
+              form="edit-menu-item-form"
+              htmlType="submit"
+              loading={editSubmitting}
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
+              Update Menu
+            </Button>
+          </div>
+        }
+      >
+        {selectedMenuItem && (
+          <EditMenuItemForm
+            menuItem={selectedMenuItem}
+            pages={pages}
+            menuItems={allMenuItems}
+            onCancel={() => {
+              setIsEditOpen(false);
+              setSelectedMenuItem(null);
+            }}
+            onUpdated={(updated) => {
+              if (updated?.id) {
+                setAllMenuItems((prev) =>
+                  prev.map((item) =>
+                    item.id === updated.id ? { ...item, ...updated } : item
+                  )
+                );
+              }
+              fetchMenuItems();
+            }}
+            onLoadingChange={setEditSubmitting}
+            showSubmitButton={false}
+          />
+        )}
+      </Drawer>
+
+      <MenuItemViewDrawer
+        open={isViewOpen}
+        menuItem={selectedMenuItem}
+        allMenuItems={allMenuItems}
+        onClose={() => {
+          setIsViewOpen(false);
+          setSelectedMenuItem(null);
+        }}
+      />
 
       <MenuItemsList
         menuItems={paginatedMenuItems}
-        pages={pages}
         allMenuItems={allMenuItems}
         setMenuItems={setMenuItems}
-        editingItemId={editingItemId}
-        setEditingItemId={setEditingItemId}
-        onCreate={handleAddMenuItem}
+        onView={handleView}
+        onEdit={handleEdit}
+        onCreate={handleAdd}
       />
 
       {sortedMenuItems.length > itemsPerPage && (
