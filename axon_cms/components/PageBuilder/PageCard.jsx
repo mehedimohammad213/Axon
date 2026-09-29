@@ -67,7 +67,7 @@ const PageCard = ({
       onClick={() => editFormRef.current?.submit()}
       className="page-card-btn page-card-btn-primary !mr-0"
     >
-      Save
+      Update Page
     </Button>,
     <Button
       key="cancel"

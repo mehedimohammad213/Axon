@@ -78,7 +78,7 @@ const PageHeader = ({
               </div>
               <p className="mt-1 text-xs text-slate-500">
                 {isEditing
-                  ? "Edit sections and components · Ctrl/⌘+S to save"
+                  ? "Edit sections and components · Ctrl/⌘+S to update"
                   : "Read-only view · switch to Edit to make changes"}
               </p>
             </div>
@@ -106,7 +106,7 @@ const PageHeader = ({
                       : "!border-emerald-600 !bg-emerald-500 hover:!bg-emerald-600"
                   }`}
                 >
-                  {isDirty ? "Save Page" : "Saved"}
+                  Update Page
                 </Button>
                 {/* <Button
                   icon={<RedoOutlined />}
