@@ -191,13 +191,6 @@ export default function AdminRolesPage() {
         )}
       />
 
-      {organization && (
-        <p className="mt-2 text-sm text-gray-500">
-          Managing roles for {organization.name}
-          {organization.slug ? ` · ${organization.slug}` : ""}
-        </p>
-      )}
-
       <RolesList
         organizationId={selectedOrgId}
         roles={paginatedRoles}
