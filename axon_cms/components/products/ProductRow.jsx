@@ -32,27 +32,27 @@ const ProductRow = ({ product, productType, onView, onEdit, onDelete }) => {
 
   const actions = [
     <Button
-      key="view"
-      icon={<EyeOutlined />}
-      onClick={() => onView?.(product)}
-      className="headlessbutton headlessbutton-pill !mr-0"
-    >
-      View
-    </Button>,
-    <Button
       key="edit"
       icon={<EditOutlined />}
       onClick={() => onEdit?.(product)}
-      className="headlessbutton headlessbutton-pill !mr-0"
+      className="page-card-btn page-card-btn-primary !mr-0"
     >
       Edit
     </Button>,
+    <Button
+      key="view"
+      icon={<EyeOutlined />}
+      onClick={() => onView?.(product)}
+      className="page-card-btn page-card-btn-soft !mr-0"
+    >
+      Preview
+    </Button>,
     <Popconfirm
       key="delete"
-      title="Delete this product?"
-      description="This cannot be undone."
+      title="Move this product to trash?"
+      description="You can restore it later from Trash."
       onConfirm={() => onDelete?.(product.id)}
-      okText="Delete"
+      okText="Move to trash"
       cancelText="Cancel"
       okButtonProps={{
         danger: true,
@@ -63,10 +63,10 @@ const ProductRow = ({ product, productType, onView, onEdit, onDelete }) => {
       }}
     >
       <Button
-        className="headlesscancelbutton headlessbutton-pill !mr-0"
+        className="page-card-btn page-card-btn-danger !mr-0"
         icon={<DeleteOutlined />}
       >
-        Delete
+        Trash
       </Button>
     </Popconfirm>,
   ];

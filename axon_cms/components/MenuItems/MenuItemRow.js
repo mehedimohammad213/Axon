@@ -164,15 +164,15 @@ const MenuItemRow = ({
       key="save"
       icon={<CheckCircleOutlined />}
       onClick={handleUpdate}
-      className="headlessbutton headlessbutton-pill !mr-0"
+      className="page-card-btn page-card-btn-primary !mr-0"
     >
-      Save changes
+      Save
     </Button>,
     <Button
       key="cancel"
       icon={<CloseCircleOutlined />}
       onClick={() => setEditingItemId(null)}
-      className="headlesscancelbutton headlessbutton-pill !mr-0"
+      className="page-card-btn page-card-btn-muted !mr-0"
     >
       Cancel
     </Button>,
@@ -183,16 +183,16 @@ const MenuItemRow = ({
       key="edit"
       icon={<EditOutlined />}
       onClick={startEditing}
-      className="headlessbutton headlessbutton-pill !mr-0"
+      className="page-card-btn page-card-btn-primary !mr-0"
     >
       Edit
     </Button>,
     <Popconfirm
       key="delete"
-      title="Delete this menu item?"
-      description="This cannot be undone."
+      title="Move this menu item to trash?"
+      description="You can restore it later from Trash."
       onConfirm={handleDelete}
-      okText="Delete"
+      okText="Move to trash"
       cancelText="Cancel"
       okButtonProps={{
         danger: true,
@@ -203,10 +203,10 @@ const MenuItemRow = ({
       }}
     >
       <Button
-        className="headlesscancelbutton headlessbutton-pill !mr-0"
+        className="page-card-btn page-card-btn-danger !mr-0"
         icon={<DeleteOutlined />}
       >
-        Delete
+        Trash
       </Button>
     </Popconfirm>,
   ];

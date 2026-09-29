@@ -72,45 +72,45 @@ const FormResponseRow = ({
 
   const actions = [
     <Button
-      key="status"
-      icon={<CheckCircleOutlined />}
-      onClick={() => onToggleStatus?.(response)}
-      className="headlessbutton headlessbutton-pill !mr-0"
+      key="edit"
+      icon={<EditOutlined />}
+      onClick={() => onEdit?.(response)}
+      className="page-card-btn page-card-btn-primary !mr-0"
     >
-      {isPending ? "Resolve" : "Pending"}
+      Edit
     </Button>,
     <Button
       key="view"
       icon={<EyeOutlined />}
       onClick={() => onView?.(response)}
-      className="headlessbutton headlessbutton-pill !mr-0"
+      className="page-card-btn page-card-btn-soft !mr-0"
     >
-      View
+      Preview
     </Button>,
     <Button
-      key="edit"
-      icon={<EditOutlined />}
-      onClick={() => onEdit?.(response)}
-      className="headlessbutton headlessbutton-pill !mr-0"
+      key="status"
+      icon={<CheckCircleOutlined />}
+      onClick={() => onToggleStatus?.(response)}
+      className="page-card-btn page-card-btn-soft !mr-0"
     >
-      Edit
+      {isPending ? "Resolve" : "Pending"}
     </Button>,
     cvUrl && (
       <Button
         key="cv"
         icon={<DownloadOutlined />}
         onClick={() => window.open(cvUrl, "_blank")}
-        className="headlessbutton headlessbutton-pill !mr-0"
+        className="page-card-btn page-card-btn-soft !mr-0"
       >
         CV
       </Button>
     ),
     <Popconfirm
       key="delete"
-      title="Delete this response?"
+      title="Move this response to trash?"
       description="This cannot be undone."
       onConfirm={() => onDelete?.(response.id)}
-      okText="Delete"
+      okText="Move to trash"
       cancelText="Cancel"
       okButtonProps={{
         danger: true,
@@ -121,10 +121,10 @@ const FormResponseRow = ({
       }}
     >
       <Button
-        className="headlesscancelbutton headlessbutton-pill !mr-0"
+        className="page-card-btn page-card-btn-danger !mr-0"
         icon={<DeleteOutlined />}
       >
-        Delete
+        Trash
       </Button>
     </Popconfirm>,
   ].filter(Boolean);

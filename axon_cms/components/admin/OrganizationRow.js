@@ -27,27 +27,27 @@ const OrganizationRow = ({
 
   const actions = [
     <Button
-      key="view"
-      icon={<EyeOutlined />}
-      onClick={() => onView(organization)}
-      className="headlessbutton headlessbutton-pill !mr-0"
-    >
-      View
-    </Button>,
-    <Button
       key="edit"
       icon={<EditOutlined />}
       onClick={() => onEdit(organization)}
-      className="headlessbutton headlessbutton-pill !mr-0"
+      className="page-card-btn page-card-btn-primary !mr-0"
     >
       Edit
     </Button>,
+    <Button
+      key="view"
+      icon={<EyeOutlined />}
+      onClick={() => onView(organization)}
+      className="page-card-btn page-card-btn-soft !mr-0"
+    >
+      Preview
+    </Button>,
     <Popconfirm
       key="delete"
-      title="Delete this organization?"
+      title="Move this organization to trash?"
       description="This only works if the organization has no users."
       onConfirm={() => onDelete(organization.id)}
-      okText="Delete"
+      okText="Move to trash"
       cancelText="Cancel"
       okButtonProps={{
         danger: true,
@@ -58,11 +58,11 @@ const OrganizationRow = ({
       }}
     >
       <Button
-        className="headlesscancelbutton headlessbutton-pill !mr-0"
+        className="page-card-btn page-card-btn-danger !mr-0"
         icon={<DeleteOutlined />}
         loading={isDeleting}
       >
-        Delete
+        Trash
       </Button>
     </Popconfirm>,
   ];

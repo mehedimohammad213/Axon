@@ -41,27 +41,27 @@ const RoleRow = ({
 
   const actions = [
     <Button
-      key="view"
-      icon={<EyeOutlined />}
-      onClick={() => onView(role)}
-      className="headlessbutton headlessbutton-pill !mr-0"
-    >
-      View
-    </Button>,
-    <Button
       key="edit"
       icon={<EditOutlined />}
       onClick={() => onEdit(role)}
-      className="headlessbutton headlessbutton-pill !mr-0"
+      className="page-card-btn page-card-btn-primary !mr-0"
     >
       Edit
     </Button>,
+    <Button
+      key="view"
+      icon={<EyeOutlined />}
+      onClick={() => onView(role)}
+      className="page-card-btn page-card-btn-soft !mr-0"
+    >
+      Preview
+    </Button>,
     <Popconfirm
       key="delete"
-      title="Delete this role?"
+      title="Move this role to trash?"
       description="This cannot be undone."
       onConfirm={() => onDelete(role.id)}
-      okText="Delete"
+      okText="Move to trash"
       cancelText="Cancel"
       okButtonProps={{
         danger: true,
@@ -72,11 +72,11 @@ const RoleRow = ({
       }}
     >
       <Button
-        className="headlesscancelbutton headlessbutton-pill !mr-0"
+        className="page-card-btn page-card-btn-danger !mr-0"
         icon={<DeleteOutlined />}
         loading={isDeleting}
       >
-        Delete
+        Trash
       </Button>
     </Popconfirm>,
   ];

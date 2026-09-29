@@ -521,6 +521,7 @@ video {
   gap: 0.5rem;
   margin-top: auto;
   padding: 0.75rem 1rem;
+  border-top: none !important;
 }
 
 .media-card .ant-card-actions > li,
@@ -545,8 +546,10 @@ video {
 
 .media-card .ant-card-actions .headlessbutton,
 .media-card .ant-card-actions .headlesscancelbutton,
+.media-card .ant-card-actions .page-card-btn,
 .slider-card .ant-card-actions .headlessbutton,
-.slider-card .ant-card-actions .headlesscancelbutton {
+.slider-card .ant-card-actions .headlesscancelbutton,
+.slider-card .ant-card-actions .page-card-btn {
   margin-right: 0 !important;
   white-space: nowrap;
 }
@@ -575,8 +578,16 @@ video {
   justify-content: center;
 }
 
-/* Soft card action buttons — labeled, light backgrounds */
-.page-list-card .page-card-btn {
+/* Soft card action buttons — all list/media cards */
+.media-card .ant-card-actions .page-card-btn,
+.media-card .ant-card-actions .headlessbutton,
+.media-card .ant-card-actions .headlesscancelbutton,
+.slider-card .ant-card-actions .page-card-btn,
+.slider-card .ant-card-actions .headlessbutton,
+.slider-card .ant-card-actions .headlesscancelbutton,
+.page-list-card .ant-card-actions .page-card-btn,
+.page-list-card .ant-card-actions .headlessbutton,
+.page-list-card .ant-card-actions .headlesscancelbutton {
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
@@ -595,56 +606,131 @@ video {
     color 0.15s ease;
 }
 
-.page-list-card .page-card-btn-primary {
+.media-card .ant-card-actions .page-card-btn-primary,
+.media-card .ant-card-actions .headlessbutton,
+.slider-card .ant-card-actions .page-card-btn-primary,
+.slider-card .ant-card-actions .headlessbutton,
+.page-list-card .ant-card-actions .page-card-btn-primary,
+.page-list-card .ant-card-actions .headlessbutton {
   background-color: var(--theme-transparent) !important;
   border: 1px solid #cfe3f8 !important;
   color: var(--theme-dark) !important;
 }
 
-.page-list-card .page-card-btn-primary:hover,
-.page-list-card .page-card-btn-primary:focus {
+.media-card .ant-card-actions .page-card-btn-primary:hover,
+.media-card .ant-card-actions .page-card-btn-primary:focus,
+.media-card .ant-card-actions .headlessbutton:hover,
+.media-card .ant-card-actions .headlessbutton:focus,
+.slider-card .ant-card-actions .page-card-btn-primary:hover,
+.slider-card .ant-card-actions .page-card-btn-primary:focus,
+.slider-card .ant-card-actions .headlessbutton:hover,
+.slider-card .ant-card-actions .headlessbutton:focus,
+.page-list-card .ant-card-actions .page-card-btn-primary:hover,
+.page-list-card .ant-card-actions .page-card-btn-primary:focus,
+.page-list-card .ant-card-actions .headlessbutton:hover,
+.page-list-card .ant-card-actions .headlessbutton:focus {
   background-color: #dcebfa !important;
   border-color: var(--theme) !important;
   color: var(--theme-dark) !important;
 }
 
-.page-list-card .page-card-btn-soft {
+.media-card .ant-card-actions .page-card-btn-soft,
+.slider-card .ant-card-actions .page-card-btn-soft,
+.page-list-card .ant-card-actions .page-card-btn-soft {
   background-color: var(--gray) !important;
   border: 1px solid var(--border) !important;
   color: var(--gray-dark) !important;
 }
 
-.page-list-card .page-card-btn-soft:hover,
-.page-list-card .page-card-btn-soft:focus {
+.media-card .ant-card-actions .page-card-btn-soft:hover,
+.media-card .ant-card-actions .page-card-btn-soft:focus,
+.slider-card .ant-card-actions .page-card-btn-soft:hover,
+.slider-card .ant-card-actions .page-card-btn-soft:focus,
+.page-list-card .ant-card-actions .page-card-btn-soft:hover,
+.page-list-card .ant-card-actions .page-card-btn-soft:focus {
   background-color: var(--theme-transparent) !important;
   border-color: #cfe3f8 !important;
   color: var(--theme-dark) !important;
 }
 
-.page-list-card .page-card-btn-muted {
+.media-card .ant-card-actions .page-card-btn-muted,
+.slider-card .ant-card-actions .page-card-btn-muted,
+.page-list-card .ant-card-actions .page-card-btn-muted {
   background-color: #f3f4f6 !important;
   border: 1px solid #e5e7eb !important;
   color: #6b7280 !important;
 }
 
-.page-list-card .page-card-btn-muted:hover,
-.page-list-card .page-card-btn-muted:focus {
+.media-card .ant-card-actions .page-card-btn-muted:hover,
+.media-card .ant-card-actions .page-card-btn-muted:focus,
+.slider-card .ant-card-actions .page-card-btn-muted:hover,
+.slider-card .ant-card-actions .page-card-btn-muted:focus,
+.page-list-card .ant-card-actions .page-card-btn-muted:hover,
+.page-list-card .ant-card-actions .page-card-btn-muted:focus {
   background-color: #e5e7eb !important;
   border-color: #d1d5db !important;
   color: #4b5563 !important;
 }
 
-.page-list-card .page-card-btn-danger {
-  background-color: var(--danger-light) !important;
-  border: 1px solid #f5c6c2 !important;
-  color: var(--danger-dark) !important;
+.media-card .ant-card-actions .page-card-btn-danger,
+.media-card .ant-card-actions .headlesscancelbutton,
+.slider-card .ant-card-actions .page-card-btn-danger,
+.slider-card .ant-card-actions .headlesscancelbutton,
+.page-list-card .ant-card-actions .page-card-btn-danger,
+.page-list-card .ant-card-actions .headlesscancelbutton {
+  background-color: var(--danger) !important;
+  border: 1px solid var(--danger-dark) !important;
+  color: #ffffff !important;
 }
 
-.page-list-card .page-card-btn-danger:hover,
-.page-list-card .page-card-btn-danger:focus {
-  background-color: #f8d7d4 !important;
-  border-color: var(--danger) !important;
-  color: var(--danger-dark) !important;
+.media-card .ant-card-actions .page-card-btn-danger:hover,
+.media-card .ant-card-actions .page-card-btn-danger:focus,
+.media-card .ant-card-actions .headlesscancelbutton:hover,
+.media-card .ant-card-actions .headlesscancelbutton:focus,
+.slider-card .ant-card-actions .page-card-btn-danger:hover,
+.slider-card .ant-card-actions .page-card-btn-danger:focus,
+.slider-card .ant-card-actions .headlesscancelbutton:hover,
+.slider-card .ant-card-actions .headlesscancelbutton:focus,
+.page-list-card .ant-card-actions .page-card-btn-danger:hover,
+.page-list-card .ant-card-actions .page-card-btn-danger:focus,
+.page-list-card .ant-card-actions .headlesscancelbutton:hover,
+.page-list-card .ant-card-actions .headlesscancelbutton:focus {
+  background-color: var(--danger-dark) !important;
+  border-color: var(--danger-dark) !important;
+  color: #ffffff !important;
+}
+
+.media-card .ant-card-actions .headlessbutton .anticon,
+.media-card .ant-card-actions .page-card-btn-primary .anticon,
+.slider-card .ant-card-actions .headlessbutton .anticon,
+.slider-card .ant-card-actions .page-card-btn-primary .anticon,
+.page-list-card .ant-card-actions .headlessbutton .anticon,
+.page-list-card .ant-card-actions .page-card-btn-primary .anticon {
+  color: var(--theme-dark) !important;
+}
+
+.media-card .ant-card-actions .page-card-btn-soft .anticon,
+.slider-card .ant-card-actions .page-card-btn-soft .anticon,
+.page-list-card .ant-card-actions .page-card-btn-soft .anticon {
+  color: var(--gray-dark) !important;
+}
+
+.media-card .ant-card-actions .page-card-btn-soft:hover .anticon,
+.media-card .ant-card-actions .page-card-btn-soft:focus .anticon,
+.slider-card .ant-card-actions .page-card-btn-soft:hover .anticon,
+.slider-card .ant-card-actions .page-card-btn-soft:focus .anticon,
+.page-list-card .ant-card-actions .page-card-btn-soft:hover .anticon,
+.page-list-card .ant-card-actions .page-card-btn-soft:focus .anticon {
+  color: var(--theme-dark) !important;
+}
+
+.media-card .ant-card-actions .headlesscancelbutton .anticon,
+.media-card .ant-card-actions .page-card-btn-danger .anticon,
+.slider-card .ant-card-actions .headlesscancelbutton .anticon,
+.slider-card .ant-card-actions .page-card-btn-danger .anticon,
+.page-list-card .ant-card-actions .headlesscancelbutton .anticon,
+.page-list-card .ant-card-actions .page-card-btn-danger .anticon {
+  color: #ffffff !important;
 }
 
 .ant-modal-content {

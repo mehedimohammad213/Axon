@@ -15,34 +15,35 @@ const idBadgeStyle = {
 const MediaCard = ({ media, mediaType, handleDelete, handlePreview, handleEdit }) => {
   const actions = [
     <Button
-      key="preview"
-      icon={<EyeOutlined />}
-      onClick={() => handlePreview(media)}
-      className="headlessbutton headlessbutton-pill !mr-0"
-    >
-      Preview
-    </Button>,
-    <Button
       key="edit"
       icon={<EditOutlined />}
       onClick={() => handleEdit?.(media)}
-      className="headlessbutton headlessbutton-pill !mr-0"
+      className="page-card-btn page-card-btn-primary !mr-0"
     >
       Edit
     </Button>,
+    <Button
+      key="preview"
+      icon={<EyeOutlined />}
+      onClick={() => handlePreview(media)}
+      className="page-card-btn page-card-btn-soft !mr-0"
+    >
+      Preview
+    </Button>,
     <Popconfirm
       key="delete"
-      title="Are you sure you want to delete this media?"
+      title="Move this media to trash?"
+      description="You can restore it later from Trash."
       onConfirm={() => handleDelete(media.id)}
-      okText="Yes"
-      cancelText="No"
+      okText="Move to trash"
+      cancelText="Cancel"
       okButtonProps={{ danger: true }}
     >
       <Button
-        className="headlesscancelbutton headlessbutton-pill !mr-0"
+        className="page-card-btn page-card-btn-danger !mr-0"
         icon={<DeleteOutlined />}
       >
-        Delete
+        Trash
       </Button>
     </Popconfirm>,
   ];

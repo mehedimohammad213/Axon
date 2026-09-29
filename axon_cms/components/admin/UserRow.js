@@ -50,31 +50,31 @@ const UserRow = ({
   const roleTitle = getRoleTitle(user.role_id);
 
   const actions = [
-    <Button
-      key="view"
-      icon={<EyeOutlined />}
-      onClick={() => onView(user)}
-      className="headlessbutton headlessbutton-pill !mr-0"
-    >
-      View
-    </Button>,
     canEdit && (
       <Button
         key="edit"
         icon={<EditOutlined />}
         onClick={() => onEdit(user)}
-        className="headlessbutton headlessbutton-pill !mr-0"
+        className="page-card-btn page-card-btn-primary !mr-0"
       >
         Edit
       </Button>
     ),
+    <Button
+      key="view"
+      icon={<EyeOutlined />}
+      onClick={() => onView(user)}
+      className="page-card-btn page-card-btn-soft !mr-0"
+    >
+      Preview
+    </Button>,
     canDelete && (
       <Popconfirm
         key="delete"
-        title="Delete this user?"
+        title="Move this user to trash?"
         description="This cannot be undone."
         onConfirm={() => onDelete(user.id)}
-        okText="Delete"
+        okText="Move to trash"
         cancelText="Cancel"
         okButtonProps={{
           danger: true,
@@ -85,10 +85,10 @@ const UserRow = ({
         }}
       >
         <Button
-          className="headlesscancelbutton headlessbutton-pill !mr-0"
+          className="page-card-btn page-card-btn-danger !mr-0"
           icon={<DeleteOutlined />}
         >
-          Delete
+          Trash
         </Button>
       </Popconfirm>
     ),

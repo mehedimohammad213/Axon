@@ -25,27 +25,27 @@ const TableRow = ({ table, onPreview, onEdit, onDelete }) => {
 
   const actions = [
     <Button
-      key="preview"
-      icon={<EyeOutlined />}
-      onClick={() => onPreview?.(table)}
-      className="headlessbutton headlessbutton-pill !mr-0"
-    >
-      Preview
-    </Button>,
-    <Button
       key="edit"
       icon={<EditOutlined />}
       onClick={() => onEdit?.(table)}
-      className="headlessbutton headlessbutton-pill !mr-0"
+      className="page-card-btn page-card-btn-primary !mr-0"
     >
       Edit
     </Button>,
+    <Button
+      key="preview"
+      icon={<EyeOutlined />}
+      onClick={() => onPreview?.(table)}
+      className="page-card-btn page-card-btn-soft !mr-0"
+    >
+      Preview
+    </Button>,
     <Popconfirm
       key="delete"
-      title="Delete this table?"
-      description="This cannot be undone."
+      title="Move this table to trash?"
+      description="You can restore it later from Trash."
       onConfirm={() => onDelete?.(table.id)}
-      okText="Delete"
+      okText="Move to trash"
       cancelText="Cancel"
       okButtonProps={{
         danger: true,
@@ -56,10 +56,10 @@ const TableRow = ({ table, onPreview, onEdit, onDelete }) => {
       }}
     >
       <Button
-        className="headlesscancelbutton headlessbutton-pill !mr-0"
+        className="page-card-btn page-card-btn-danger !mr-0"
         icon={<DeleteOutlined />}
       >
-        Delete
+        Trash
       </Button>
     </Popconfirm>,
   ];
