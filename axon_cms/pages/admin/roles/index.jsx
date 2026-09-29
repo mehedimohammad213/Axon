@@ -240,7 +240,7 @@ export default function AdminRolesPage() {
         placement="right"
         width="min(800px, 92vw)"
         destroyOnClose
-        rootClassName="media-preview-drawer"
+        rootClassName="media-preview-drawer org-form-drawer"
         footer={
           <div className="flex w-full justify-end">
             <Button

@@ -197,13 +197,20 @@ export const RoleViewDrawer = ({ open, onClose, role }) => {
       onClose={onClose}
       placement="right"
       width="min(720px, 92vw)"
-      rootClassName="media-preview-drawer"
+      rootClassName="media-preview-drawer org-form-drawer"
     >
       {role && (
-        <div className="space-y-5">
-          <div>
+        <div className="space-y-4">
+          <div
+            style={{
+              border: "1px solid #e8eef5",
+              borderRadius: 12,
+              padding: 16,
+              background: "#ffffff",
+            }}
+          >
             <div className="flex flex-wrap items-center gap-2">
-              <span className="rounded-md bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-500">
+              <span className="rounded-md bg-brand-light px-2 py-0.5 text-xs font-medium text-brand-dark">
                 #{role.id}
               </span>
               <Tag className="mb-0 border-gray-200 bg-gray-50 text-gray-700">
@@ -214,11 +221,18 @@ export const RoleViewDrawer = ({ open, onClose, role }) => {
               {role.title || "Untitled role"}
             </h2>
             {role.description && (
-              <p className="mt-1 text-sm text-gray-500">{role.description}</p>
+              <p className="mb-0 mt-1 text-sm text-gray-500">{role.description}</p>
             )}
           </div>
 
-          <div className="rounded-xl border border-gray-200 bg-white p-4 sm:p-5">
+          <div
+            style={{
+              border: "1px solid #e8eef5",
+              borderRadius: 12,
+              padding: 16,
+              background: "#ffffff",
+            }}
+          >
             <dl className="grid gap-4 sm:grid-cols-2">
               <InfoRow label="Role name">{role.title || "—"}</InfoRow>
               <InfoRow label="Status">{isActive ? "Active" : "Inactive"}</InfoRow>
@@ -227,10 +241,14 @@ export const RoleViewDrawer = ({ open, onClose, role }) => {
             </dl>
           </div>
 
-          <div>
-            <h3 className="mb-3 text-sm font-semibold text-gray-800">
-              Permissions
-            </h3>
+          <div
+            style={{
+              border: "1px solid #e8eef5",
+              borderRadius: 12,
+              padding: 16,
+              background: "#ffffff",
+            }}
+          >
             <Table
               columns={columns}
               dataSource={role.permission_headless || []}

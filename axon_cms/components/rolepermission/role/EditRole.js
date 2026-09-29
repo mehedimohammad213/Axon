@@ -78,44 +78,67 @@ export default function EditRole({
       onFinish={updateRole}
       autoComplete="off"
     >
-      <Form.Item
-        label="Title"
-        name="title"
-        rules={[{ required: true, message: "Please input the role title!" }]}
+      <div
+        style={{
+          border: "1px solid #e8eef5",
+          borderRadius: 12,
+          padding: 16,
+          marginBottom: 16,
+          background: "#ffffff",
+        }}
       >
-        <Input allowClear placeholder="Enter role title" />
-      </Form.Item>
+        <div className="grid gap-x-4 md:grid-cols-2">
+          <Form.Item
+            label="Title"
+            name="title"
+            rules={[{ required: true, message: "Please input the role title!" }]}
+          >
+            <Input allowClear placeholder="Enter role title" />
+          </Form.Item>
 
-      <Form.Item
-        label="Description"
-        name="description"
-        rules={[
-          { required: true, message: "Please input the role description!" },
-        ]}
+          <Form.Item label="Status" name="status" valuePropName="checked">
+            <Switch checkedChildren="Active" unCheckedChildren="Inactive" />
+          </Form.Item>
+        </div>
+
+        <Form.Item
+          label="Description"
+          name="description"
+          rules={[
+            { required: true, message: "Please input the role description!" },
+          ]}
+          style={{ marginBottom: 0 }}
+        >
+          <Input.TextArea allowClear placeholder="Enter role description" rows={3} />
+        </Form.Item>
+      </div>
+
+      <div
+        style={{
+          border: "1px solid #e8eef5",
+          borderRadius: 12,
+          padding: 16,
+          background: "#ffffff",
+        }}
       >
-        <Input.TextArea allowClear placeholder="Enter role description" />
-      </Form.Item>
-
-      <Form.Item label="Status" name="status" valuePropName="checked">
-        <Switch checkedChildren="Active" unCheckedChildren="Inactive" />
-      </Form.Item>
-
-      <Form.Item
-        label="Permissions"
-        name="selectedPermissions"
-        rules={[
-          {
-            validator: (_, value) =>
-              value?.length
-                ? Promise.resolve()
-                : Promise.reject(
-                    new Error("Please select at least one permission!")
-                  ),
-          },
-        ]}
-      >
-        <PermissionPicker permissions={permissions} />
-      </Form.Item>
+        <Form.Item
+          label="Permissions"
+          name="selectedPermissions"
+          rules={[
+            {
+              validator: (_, value) =>
+                value?.length
+                  ? Promise.resolve()
+                  : Promise.reject(
+                      new Error("Please select at least one permission!")
+                    ),
+            },
+          ]}
+          style={{ marginBottom: 0 }}
+        >
+          <PermissionPicker permissions={permissions} />
+        </Form.Item>
+      </div>
     </Form>
   );
 }
