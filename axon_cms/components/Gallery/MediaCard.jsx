@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Button, Tag, Popconfirm, Badge } from "antd";
-import { DeleteOutlined, EditOutlined, EyeOutlined } from "@ant-design/icons";
+import { DeleteOutlined, EditOutlined, EyeOutlined, CloseCircleOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import { capitalize } from "lodash";
 import { resolveMediaUrl } from "../../utils/mediaUrl";
@@ -37,7 +37,14 @@ const MediaCard = ({ media, mediaType, handleDelete, handlePreview, handleEdit }
       onConfirm={() => handleDelete(media.id)}
       okText="Move to trash"
       cancelText="Cancel"
-      okButtonProps={{ danger: true }}
+      okButtonProps={{
+        danger: true,
+        icon: <DeleteOutlined />,
+      }}
+      cancelButtonProps={{
+        icon: <CloseCircleOutlined />,
+        shape: "round",
+      }}
     >
       <Button
         className="page-card-btn page-card-btn-danger !mr-0"

@@ -1,7 +1,7 @@
 // components/cards/CardItem.jsx
 import React from "react";
 import { Card, Button, Popconfirm, List, Tag, Badge } from "antd";
-import { EyeOutlined, DeleteOutlined, EditOutlined } from "@ant-design/icons";
+import { EyeOutlined, DeleteOutlined, EditOutlined, CloseCircleOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import { resolveMediaUrl } from "../../utils/mediaUrl";
 
@@ -166,7 +166,14 @@ const CardItem = ({
       onConfirm={() => onDeleteCard(card.id)}
       okText="Move to trash"
       cancelText="Cancel"
-      okButtonProps={{ danger: true }}
+      okButtonProps={{
+        danger: true,
+        icon: <DeleteOutlined />,
+      }}
+      cancelButtonProps={{
+        icon: <CloseCircleOutlined />,
+        shape: "round",
+      }}
     >
       <Button
         className="page-card-btn page-card-btn-danger !mr-0"

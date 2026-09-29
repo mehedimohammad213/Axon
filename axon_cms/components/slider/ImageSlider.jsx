@@ -1,6 +1,6 @@
 import React from "react";
 import { Carousel, Button, Popconfirm, Card, Tag, Badge } from "antd";
-import { DeleteOutlined, EditOutlined, EyeOutlined } from "@ant-design/icons";
+import { DeleteOutlined, EditOutlined, EyeOutlined, CloseCircleOutlined } from "@ant-design/icons";
 import Image from "next/image";
 import { capitalize } from "lodash";
 import { orderByIds } from "./SliderForm/orderByIds";
@@ -47,7 +47,14 @@ const ImageSlider = ({
       onConfirm={() => handleDeleteSlider(slider.id)}
       okText="Move to trash"
       cancelText="Cancel"
-      okButtonProps={{ danger: true }}
+      okButtonProps={{
+        danger: true,
+        icon: <DeleteOutlined />,
+      }}
+      cancelButtonProps={{
+        icon: <CloseCircleOutlined />,
+        shape: "round",
+      }}
     >
       <Button className="page-card-btn page-card-btn-danger !mr-0" icon={<DeleteOutlined />}>
         Trash

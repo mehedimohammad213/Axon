@@ -1002,6 +1002,11 @@ a:hover {
   border: 1px solid var(--theme-dark) !important;
 }
 
+.headlessbutton .anticon,
+.headlessbutton svg {
+  color: #ffffff !important;
+}
+
 .headlessbutton:hover,
 .headlessbutton:focus,
 .ant-btn.headlessbutton:not(:disabled):not(.ant-btn-disabled):hover,

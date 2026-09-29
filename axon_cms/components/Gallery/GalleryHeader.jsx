@@ -85,6 +85,7 @@ const GalleryHeader = ({
 
           <div className="flex flex-wrap items-center gap-2 sm:gap-3">
             <Button
+              type="primary"
               icon={<PlusCircleOutlined />}
               onClick={onCreate}
               className="headlessbutton headlessbutton-pill !mr-0"
