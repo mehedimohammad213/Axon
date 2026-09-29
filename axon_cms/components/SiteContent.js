@@ -145,8 +145,8 @@ const SiteContent = ({ children }) => {
     <Layout className="min-h-screen overflow-x-hidden bg-surface">
       {/* Fixed Header */}
       <Header
-        className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md flex
-      items-center px-[var(--shell-gap)] h-16"
+        className="fixed top-0 left-0 right-0 z-50 flex h-16 items-center
+      bg-white px-4 shadow-md sm:px-6 md:px-8 lg:px-10"
       >
         <NavItems
           user={user}

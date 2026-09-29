@@ -185,12 +185,12 @@ export default function NavItems({
     >
       {/* Brand column matches sidebar so content section lines up with page cards */}
       <div
-        className="flex shrink-0 items-center gap-2 sm:gap-4"
+        className="flex shrink-0 items-center gap-2 pl-1 sm:gap-4 sm:pl-2"
         style={
           sidebarWidth
             ? {
-                width: `${sidebarWidth}px`,
-                minWidth: `${sidebarWidth}px`,
+                width: `calc(${sidebarWidth}px + var(--shell-gap) - 1.5rem)`,
+                minWidth: `calc(${sidebarWidth}px + var(--shell-gap) - 1.5rem)`,
               }
             : undefined
         }
@@ -273,7 +273,7 @@ export default function NavItems({
           </div>
 
           {/* User Actions */}
-          <div className="flex h-10 flex-shrink-0 items-center gap-2 sm:gap-3">
+          <div className="flex h-10 flex-shrink-0 items-center gap-2 pr-1 sm:gap-3 sm:pr-2 md:pr-3">
             {/* Search Bar - Desktop only on larger screens */}
             <div className="hidden h-10 items-center xl:flex">
               <div className="relative h-10" ref={searchRef}>
@@ -388,7 +388,7 @@ export default function NavItems({
           </div>
         </>
       ) : (
-        <div className="flex flex-shrink-0 justify-end">
+        <div className="flex flex-shrink-0 justify-end pr-1 sm:pr-2 md:pr-3">
           <Button
             icon={<LoginOutlined className="text-base" />}
             onClick={() => router.push("/login")}
