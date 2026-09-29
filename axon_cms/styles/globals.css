@@ -1618,3 +1618,34 @@ main.headlesscontainer {
   background: #f3f4f6;
   border-radius: 3px;
 }
+
+/* Sidebar: pin Trash to the bottom */
+.ant-layout-sider-children {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+.side-menu-trash-footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.35);
+  margin-top: auto;
+}
+
+.side-menu-trash-btn {
+  display: flex;
+  align-items: center;
+  min-height: 44px;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.side-menu-trash-btn:focus-visible {
+  box-shadow: 0 0 0 2px rgba(244, 63, 94, 0.25);
+}
+
+.side-menu-trash-btn.is-active [role="img"],
+.side-menu-trash-btn:hover [role="img"] {
+  background-color: #e11d48 !important;
+}

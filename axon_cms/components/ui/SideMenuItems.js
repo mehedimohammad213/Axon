@@ -15,7 +15,7 @@ import { filterMenuByPermissions } from "../../utils/permissions";
 
 const { SubMenu, Item } = Menu;
 
-const MenuIcon = ({ src, alt, active, size = 20 }) => (
+const MenuIcon = ({ src, alt, active, size = 20, activeColor }) => (
   <span
     role="img"
     aria-label={alt}
@@ -23,7 +23,9 @@ const MenuIcon = ({ src, alt, active, size = 20 }) => (
     style={{
       width: size,
       height: size,
-      backgroundColor: active ? "var(--theme)" : "var(--gray-dark)",
+      backgroundColor: active
+        ? activeColor || "var(--theme)"
+        : "var(--gray-dark)",
       WebkitMaskImage: `url(${src})`,
       WebkitMaskSize: "contain",
       WebkitMaskRepeat: "no-repeat",
@@ -239,18 +241,23 @@ const SideMenuItems = ({
         }
       }
 
-      const filteredMenu = filterMenuByPermissions(menuData, user);
-      const trashItem = filteredMenu.find((item) => item.link === "/trash");
-      if (!trashItem) {
-        return filteredMenu;
-      }
-
-      return [...filteredMenu.filter((item) => item.link !== "/trash"), trashItem];
+      return filterMenuByPermissions(menuData, user);
     } catch (error) {
       console.error("Error processing menu data:", error);
       return allMenuData;
     }
   }, [allMenuData, customModels, token, user]);
+
+  const { mainMenuData, trashMenuItem } = useMemo(() => {
+    const trashItem = finalMenuData.find((item) => item.link === "/trash");
+    if (!trashItem) {
+      return { mainMenuData: finalMenuData, trashMenuItem: null };
+    }
+    return {
+      mainMenuData: finalMenuData.filter((item) => item.link !== "/trash"),
+      trashMenuItem: trashItem,
+    };
+  }, [finalMenuData]);
 
   // Manage selected menu item based on current path
   useEffect(() => {
@@ -329,6 +336,13 @@ const SideMenuItems = ({
       console.error("Error opening login modal:", error);
     }
   }, [setIsModalOpen]);
+
+  const handleTrashClick = useCallback(() => {
+    if (!trashMenuItem?.link) return;
+    setSelectedMenuItem(trashMenuItem.id.toString());
+    setOpenKeys([]);
+    router.push(trashMenuItem.link);
+  }, [trashMenuItem, router]);
 
   const renderMenuItem = useCallback((item) => {
     if (!item?.id) return null;
@@ -439,46 +453,92 @@ const SideMenuItems = ({
   // Show loading state during initialization
   if (isInitializing) {
     return (
-      <div className="flex justify-center items-center h-full">
+      <div className="flex justify-center items-center h-full w-full">
         <Spin tip={CONSTANTS.LOADING_MESSAGES.MENU_INITIALIZATION} />
       </div>
     );
   }
 
+  const isTrashActive =
+    trashMenuItem && selectedMenuItem === trashMenuItem.id.toString();
+
   return (
     <MenuErrorBoundary>
-      <Menu
-        theme={theme === "dark" ? "dark" : "light"}
-        mode="inline"
-        selectedKeys={[selectedMenuItem]}
-        openKeys={openKeys}
-        onOpenChange={onOpenChange}
-        onClick={handleMenuClick}
-        className="w-full h-full"
-      >
-        {finalMenuData && finalMenuData.length > 0 ? (
-          finalMenuData.map(renderMenuItem).filter(Boolean)
-        ) : (
-          <Empty
-            description={CONSTANTS.ERROR_MESSAGES.NO_MENU_DATA}
-            className="my-8"
-          />
-        )}
+      <div className="side-menu-shell flex h-full min-h-0 w-full flex-col">
+        <div className="min-h-0 flex-1 overflow-x-hidden overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
+          <Menu
+            theme={theme === "dark" ? "dark" : "light"}
+            mode="inline"
+            selectedKeys={[selectedMenuItem]}
+            openKeys={openKeys}
+            onOpenChange={onOpenChange}
+            onClick={handleMenuClick}
+            className="w-full border-none bg-transparent"
+          >
+            {mainMenuData && mainMenuData.length > 0 ? (
+              mainMenuData.map(renderMenuItem).filter(Boolean)
+            ) : (
+              <Empty
+                description={CONSTANTS.ERROR_MESSAGES.NO_MENU_DATA}
+                className="my-8"
+              />
+            )}
 
-        {/* Login Menu Item for Unauthorized Users */}
-        {!token && (
-          <Tooltip title="Click to login" placement="right">
-            <Item
-              key="login"
-              icon={<LoginOutlined />}
-              onClick={handleLoginClick}
-              className="border-2 border-gray-400 mt-4 hover:border-blue-400 transition-colors"
-            >
-              {!collapsed && <span>Login</span>}
-            </Item>
-          </Tooltip>
+            {/* Login Menu Item for Unauthorized Users */}
+            {!token && (
+              <Tooltip title="Click to login" placement="right">
+                <Item
+                  key="login"
+                  icon={<LoginOutlined />}
+                  onClick={handleLoginClick}
+                  className="border-2 border-gray-400 mt-4 hover:border-blue-400 transition-colors"
+                >
+                  {!collapsed && <span>Login</span>}
+                </Item>
+              </Tooltip>
+            )}
+          </Menu>
+        </div>
+
+        {trashMenuItem && (
+          <div className="side-menu-trash-footer shrink-0 pt-2">
+            <Tooltip title={collapsed ? "Trash" : ""} placement="right">
+              <button
+                type="button"
+                onClick={handleTrashClick}
+                aria-label="Trash"
+                aria-current={isTrashActive ? "page" : undefined}
+                className={`side-menu-trash-btn group w-full border-2 transition-all duration-200 ${
+                  token ? "border-brand/20" : "border-gray-400"
+                } ${
+                  isTrashActive
+                    ? "is-active border-rose-200 bg-rose-50"
+                    : "bg-white hover:border-rose-200 hover:bg-rose-50/70"
+                } ${collapsed ? "justify-center px-0" : "justify-start gap-2 px-3"}`}
+              >
+                <span className="flex items-center justify-center w-6 h-6">
+                  <MenuIcon
+                    src={trashMenuItem.icon}
+                    alt="Trash icon"
+                    active={isTrashActive}
+                    activeColor="#e11d48"
+                    size={20}
+                  />
+                </span>
+                {!collapsed && (
+                  <span
+                    className={`font-semibold ${
+                      isTrashActive ? "text-rose-600" : "text-gray-600 group-hover:text-rose-600"
+                    }`}
+                  >
+                    {trashMenuItem.title}
+                  </span>
+                )}
+              </button>
+            </Tooltip>
+          </div>
         )}
-      </Menu>
+      </div>
     </MenuErrorBoundary>
   );
 };

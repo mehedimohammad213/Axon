@@ -192,12 +192,12 @@ const SiteContent = ({ children }) => {
                 minHeight: "100%",
                 maxHeight: "100%",
               }}
-              className="overflow-x-hidden overflow-y-auto rounded-2xl bg-white px-2
-                shadow-lg scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent"
+              className="overflow-hidden rounded-2xl bg-white px-2
+                shadow-lg [&_.ant-layout-sider-children]:flex [&_.ant-layout-sider-children]:h-full [&_.ant-layout-sider-children]:min-h-0 [&_.ant-layout-sider-children]:flex-col"
               collapsedWidth={isMobile ? 0 : 80}
               trigger={null}
             >
-              <div className="flex py-2">
+              <div className="flex h-full min-h-0 w-full flex-1 flex-col py-2">
                 <SideMenuItems
                   token={token}
                   user={user}
