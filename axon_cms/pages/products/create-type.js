@@ -19,7 +19,7 @@ export default function CreateProductType() {
               href: "/products/types",
             },
             {
-              title: "Create Product Type",
+              title: "Create Product",
             },
         ]}
       />

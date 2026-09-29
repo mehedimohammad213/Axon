@@ -85,7 +85,7 @@ const TrashHeader = ({
                     className="[&_.ant-badge-count]:bg-brand [&_.ant-badge-count]:text-white [&_.ant-badge-count]:text-xs [&_.ant-badge-count]:min-w-[20px] [&_.ant-badge-count]:h-5 [&_.ant-badge-count]:leading-5"
                   />
                   <span className="ml-0.5 text-xs font-medium text-blue-700">
-                    {itemCount === 1 ? "Item" : "Items"}
+                    Trash
                   </span>
                 </div>
               )}

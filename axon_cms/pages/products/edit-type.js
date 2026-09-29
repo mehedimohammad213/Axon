@@ -54,7 +54,7 @@ export default function EditProductType() {
               href: "/products/types",
             },
             {
-              title: "Edit Product Type",
+              title: "Edit Product",
             },
         ]}
       />

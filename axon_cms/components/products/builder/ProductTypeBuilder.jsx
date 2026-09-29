@@ -113,7 +113,7 @@ const ProductTypeBuilder = ({ editingType = null }) => {
       <div className="mb-4 flex items-start justify-between gap-3">
         <div>
           <h1 className="text-xl font-semibold text-gray-900">
-            {editingType?.id ? "Edit Product Type" : "Create Product Type"}
+            {editingType?.id ? "Edit Product" : "Create Product"}
           </h1>
           <p className="text-sm text-gray-500 mt-1">
             Build a product form by dragging fields, just like Form Builder.

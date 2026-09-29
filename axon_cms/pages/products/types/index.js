@@ -135,7 +135,7 @@ const ProductTypesPage = () => {
     <div className="headlesscontainer">
       <ProductsHeader
         title="Product"
-        countLabel={productTypes.length === 1 ? "Product" : "Products"}
+        countLabel="Product"
         itemCount={productTypes.length}
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
@@ -147,7 +147,7 @@ const ProductTypesPage = () => {
         filterTitle="Filter product types"
         onRefresh={fetchProductTypes}
         searchPlaceholder="Search product types..."
-        primaryActionLabel="Create Product Type"
+        primaryActionLabel="Create Product"
         onPrimaryAction={handleCreate}
         apiEndpoint="/product-types"
       />
