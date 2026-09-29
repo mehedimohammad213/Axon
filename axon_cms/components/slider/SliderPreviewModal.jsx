@@ -1,5 +1,5 @@
 import React from "react";
-import { Drawer, Tag, Badge, Space, Descriptions, Empty } from "antd";
+import { Drawer, Tag, Badge, Space, Empty } from "antd";
 import { capitalize } from "lodash";
 import SliderRenderer from "../PageBuilder/Components/SliderComponent/SliderRenderer";
 import { orderByIds } from "./SliderForm/orderByIds";
@@ -13,11 +13,18 @@ const idBadgeStyle = {
   fontWeight: "500",
 };
 
-const SliderPreviewModal = ({
-  visible,
-  slider,
-  onClose,
-}) => {
+const InfoRow = ({ label, children }) => (
+  <div className="min-w-0">
+    <dt className="text-xs font-medium uppercase tracking-wide text-gray-400">
+      {label}
+    </dt>
+    <dd className="mt-1 break-words text-sm font-medium text-gray-800">
+      {children}
+    </dd>
+  </div>
+);
+
+const SliderPreviewModal = ({ visible, slider, onClose }) => {
   if (!slider) return null;
 
   const type = (slider.type || "image").toLowerCase();
@@ -34,7 +41,7 @@ const SliderPreviewModal = ({
       placement="right"
       width="50%"
       destroyOnClose
-      rootClassName="media-preview-drawer"
+      rootClassName="media-preview-drawer org-form-drawer"
       title={
         <div className="flex items-center gap-2 flex-wrap pr-2">
           <Badge count={`ID-${slider.id}`} style={idBadgeStyle} />
@@ -45,65 +52,81 @@ const SliderPreviewModal = ({
         </div>
       }
     >
-      <div className="space-y-6 pb-6">
-        <div className="rounded-xl border border-gray-200 bg-white p-3 overflow-hidden">
-          <SliderRenderer
-            sliderData={slider}
-            config={{ autoplay: true, dots: true }}
-          />
+      <div className="space-y-4 pb-6">
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            background: "#ffffff",
+          }}
+        >
+          <div className="overflow-hidden rounded-lg">
+            <SliderRenderer
+              sliderData={slider}
+              config={{ autoplay: true, dots: true }}
+            />
+          </div>
         </div>
 
-        <Descriptions
-          bordered
-          size="small"
-          column={1}
-          labelStyle={{ width: 140, fontWeight: 600 }}
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            background: "#ffffff",
+          }}
         >
-          <Descriptions.Item label="Title (EN)">
-            {slider.title_en || "—"}
-          </Descriptions.Item>
-          <Descriptions.Item label="Title (BN)">
-            {slider.title_bn || "—"}
-          </Descriptions.Item>
-          <Descriptions.Item label="Description (EN)">
-            <div
-              dangerouslySetInnerHTML={{
-                __html: slider.description_en || "—",
-              }}
-            />
-          </Descriptions.Item>
-          <Descriptions.Item label="Type">
-            {capitalize(slider.type || "image")}
-          </Descriptions.Item>
-          <Descriptions.Item label="Status">
-            {Number(slider.status) === 1 ? (
-              <Tag color="green">Active</Tag>
-            ) : (
-              <Tag color="default">Inactive</Tag>
-            )}
-          </Descriptions.Item>
-          <Descriptions.Item label="Tags">
-            {tags.length ? (
-              <Space wrap size={[4, 4]}>
-                {tags.map((tag) => (
-                  <Tag key={tag} color="gold">
-                    {tag}
-                  </Tag>
-                ))}
-              </Space>
-            ) : (
-              "—"
-            )}
-          </Descriptions.Item>
-          <Descriptions.Item label="Media / Cards">
-            {type === "card"
-              ? `${cards.length} card(s)`
-              : `${medias.length} media item(s)`}
-          </Descriptions.Item>
-        </Descriptions>
+          <dl className="grid gap-4 sm:grid-cols-2">
+            <InfoRow label="Title (EN)">{slider.title_en || "—"}</InfoRow>
+            <InfoRow label="Title (BN)">{slider.title_bn || "—"}</InfoRow>
+            <InfoRow label="Type">
+              {capitalize(slider.type || "image")}
+            </InfoRow>
+            <InfoRow label="Status">
+              {Number(slider.status) === 1 ? (
+                <Tag color="green">Active</Tag>
+              ) : (
+                <Tag color="default">Inactive</Tag>
+              )}
+            </InfoRow>
+            <InfoRow label="Description (EN)">
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: slider.description_en || "—",
+                }}
+              />
+            </InfoRow>
+            <InfoRow label="Media / Cards">
+              {type === "card"
+                ? `${cards.length} card(s)`
+                : `${medias.length} media item(s)`}
+            </InfoRow>
+            <InfoRow label="Tags">
+              {tags.length ? (
+                <Space wrap size={[4, 4]}>
+                  {tags.map((tag) => (
+                    <Tag key={tag} color="gold">
+                      {tag}
+                    </Tag>
+                  ))}
+                </Space>
+              ) : (
+                "—"
+              )}
+            </InfoRow>
+          </dl>
+        </div>
 
         {type !== "card" && medias.length > 0 && (
-          <div>
+          <div
+            style={{
+              border: "1px solid #e8eef5",
+              borderRadius: 12,
+              padding: 16,
+              background: "#ffffff",
+            }}
+          >
             <h4 className="mb-3 text-sm font-semibold text-gray-700">
               Media Items
             </h4>

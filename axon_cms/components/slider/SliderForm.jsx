@@ -1,7 +1,7 @@
 // components/slider/SliderForm.jsx
 
 import React, { useEffect, useState, useCallback, useMemo } from "react";
-import { Drawer, Form, Modal, message } from "antd";
+import { Drawer, Form, Button, message } from "antd";
 import MediaSelectionModal from "../PageBuilder/Modals/MediaSelectionModal";
 import UploadMediaTabs from "../Gallery/UploadMediaTabs";
 import CreateCardForm from "../cards/CreateCardForm";
@@ -10,7 +10,6 @@ import BasicInfoForm from "./SliderForm/BasicInfoForm";
 import SliderTypeTabs from "./SliderForm/SliderTypeTabs";
 import MediaSelector from "./SliderForm/MediaSelector";
 import CardSelector from "./SliderForm/CardSelector";
-import FormActions from "./SliderForm/FormActions";
 import { orderByIds } from "./SliderForm/orderByIds";
 
 const SliderForm = ({
@@ -227,67 +226,81 @@ const SliderForm = ({
       title={editingItemId ? "Edit Slider" : "Create Slider"}
       open={isFormVisible}
       onClose={onCancelEdit}
-      footer={null}
       width={`calc(100% - 40vw)`}
       destroyOnClose
-      rootClassName="media-preview-drawer"
+      rootClassName="media-preview-drawer org-form-drawer"
+      footer={
+        <div className="flex justify-end">
+          <Button
+            type="primary"
+            onClick={() => form.submit()}
+            className="headlessbutton headlessbutton-pill !mr-0"
+          >
+            {editingItemId ? "Update Slider" : "Create Slider"}
+          </Button>
+        </div>
+      }
     >
       <Form
         form={form}
         layout="vertical"
         onFinish={handleSubmit}
         initialValues={{ type: "image" }}
-        className="bg-white p-6 rounded-lg shadow-md"
       >
-        {/* Basic Information */}
-        <BasicInfoForm
-          allTags={allTags}
-          form={form}
-          imagePlaceholder={imagePlaceholder}
-          cardPlaceholder={cardPlaceholder}
-        />
-
-        {/* Slider Type Selection */}
-        <Form.Item
-          label="Slider Type"
-          name="type"
-          rules={[
-            { required: true, message: "Please select the slider type." },
-          ]}
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            marginBottom: 16,
+            background: "#ffffff",
+          }}
         >
-          <SliderTypeTabs type={type} handleTypeChange={handleTypeChange} />
-        </Form.Item>
+          <BasicInfoForm form={form} />
+        </div>
 
-        {/* Media or Card Selection */}
-        {type === "image" ? (
-          <Form.Item label="Media">
-            <MediaSelector
-              selectedMedia={selectedMedia}
-              setSelectedMedia={setSelectedMedia}
-              setIsMediaModalVisible={setIsMediaModalVisible}
-              onCreateImage={() => setIsUploadModalVisible(true)}
-              imagePlaceholder={imagePlaceholder}
-            />
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            marginBottom: 16,
+            background: "#ffffff",
+          }}
+        >
+          <Form.Item
+            label="Slider Type"
+            name="type"
+            rules={[
+              { required: true, message: "Please select the slider type." },
+            ]}
+          >
+            <SliderTypeTabs type={type} handleTypeChange={handleTypeChange} />
           </Form.Item>
-        ) : (
-          <Form.Item label="Select Cards">
-            <CardSelector
-              selectedCards={selectedCards}
-              setSelectedCards={setSelectedCards}
-              cards={cards}
-              onCreateCard={() => setIsCreateCardVisible(true)}
-            />
-          </Form.Item>
-        )}
 
-        {/* Form Actions */}
-        <FormActions
-          editingItemId={editingItemId}
-          onCancelEdit={onCancelEdit}
-        />
+          {type === "image" ? (
+            <Form.Item label="Media">
+              <MediaSelector
+                selectedMedia={selectedMedia}
+                setSelectedMedia={setSelectedMedia}
+                setIsMediaModalVisible={setIsMediaModalVisible}
+                onCreateImage={() => setIsUploadModalVisible(true)}
+                imagePlaceholder={imagePlaceholder}
+              />
+            </Form.Item>
+          ) : (
+            <Form.Item label="Select Cards">
+              <CardSelector
+                selectedCards={selectedCards}
+                setSelectedCards={setSelectedCards}
+                cards={cards}
+                onCreateCard={() => setIsCreateCardVisible(true)}
+              />
+            </Form.Item>
+          )}
+        </div>
       </Form>
 
-      {/* Media Selection Modal */}
       <MediaSelectionModal
         isVisible={isMediaModalVisible}
         onClose={() => setIsMediaModalVisible(false)}
@@ -297,22 +310,31 @@ const SliderForm = ({
         selectionMode={selectionMode}
       />
 
-      <Modal
+      <Drawer
         title="Upload Image"
         open={isUploadModalVisible}
-        onCancel={() => setIsUploadModalVisible(false)}
+        onClose={() => setIsUploadModalVisible(false)}
         destroyOnClose
-        footer={null}
         width={800}
         zIndex={1100}
+        rootClassName="media-preview-drawer org-form-drawer"
       >
         {isUploadModalVisible && (
-          <UploadMediaTabs
-            onUploadSuccess={handleImageUploadSuccess}
-            addMedia={() => {}}
-          />
+          <div
+            style={{
+              border: "1px solid #e8eef5",
+              borderRadius: 12,
+              padding: 16,
+              background: "#ffffff",
+            }}
+          >
+            <UploadMediaTabs
+              onUploadSuccess={handleImageUploadSuccess}
+              addMedia={() => {}}
+            />
+          </div>
         )}
-      </Modal>
+      </Drawer>
 
       {isCreateCardVisible && (
         <CreateCardForm

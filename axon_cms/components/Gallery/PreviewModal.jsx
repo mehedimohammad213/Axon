@@ -9,6 +9,17 @@ import { resolveMediaUrl } from "../../utils/mediaUrl";
 
 const { Option } = Select;
 
+const InfoRow = ({ label, children }) => (
+  <div className="min-w-0">
+    <dt className="text-xs font-medium uppercase tracking-wide text-gray-400">
+      {label}
+    </dt>
+    <dd className="mt-1 break-words text-sm font-medium text-gray-800">
+      {children}
+    </dd>
+  </div>
+);
+
 const PreviewModal = ({
   visible,
   onClose,
@@ -16,41 +27,11 @@ const PreviewModal = ({
   mediaType,
   handleEdit,
   initialEditMode = false,
-  availableTags, // New prop for available tags
+  availableTags,
 }) => {
   const [editMode, setEditMode] = useState(false);
   const [form] = Form.useForm();
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  // Info displayed in table if not editing
-  const infoRows = [
-    { key: "title", label: "Title", value: media.title || media.file_name },
-    {
-      key: "size",
-      label: "Size",
-      value: media.file_size
-        ? `${(media.file_size / (1024 * 1024)).toFixed(2)} MB`
-        : "Size not available",
-    },
-    { key: "type", label: "Type", value: media.file_type },
-    {
-      key: "uploadDate",
-      label: "Upload Date",
-      value: new Date(media.created_at).toLocaleString(),
-    },
-    {
-      key: "tags",
-      label: "Tags",
-      value:
-        media.tags && media.tags.length > 0
-          ? media.tags.map((t) => (
-              <Tag color="orange" key={t}>
-                {t}
-              </Tag>
-            ))
-          : "None",
-    },
-  ];
 
   useEffect(() => {
     if (editMode) {
@@ -81,7 +62,7 @@ const PreviewModal = ({
       const response = await instance.put(`/media/${media.id}`, updatedMedia);
       if (response.status === 200) {
         message.success("Media updated successfully.");
-        handleEdit(updatedMedia); // parent updates cache and IndexedDB
+        handleEdit(updatedMedia);
         setEditMode(false);
         onClose();
       } else {
@@ -101,11 +82,10 @@ const PreviewModal = ({
 
   const mediaUrl = resolveMediaUrl(media.file_path);
 
-  const renderNonEditContent = () => (
-    <>
-      {/* Show preview differently based on mediaType */}
-      {mediaType === "image" && (
-        <div className="mb-4 flex w-full items-center justify-center overflow-hidden rounded-lg bg-gray-50 p-3">
+  const renderPreview = () => {
+    if (mediaType === "image") {
+      return (
+        <div className="flex w-full items-center justify-center overflow-hidden rounded-lg bg-gray-50 p-3">
           {isSvgImage ? (
             <img
               src={mediaUrl}
@@ -125,9 +105,11 @@ const PreviewModal = ({
             />
           )}
         </div>
-      )}
-      {mediaType === "video" && (
-        <div className="mb-4 w-full overflow-hidden rounded-lg bg-black">
+      );
+    }
+    if (mediaType === "video") {
+      return (
+        <div className="w-full overflow-hidden rounded-lg bg-black">
           <video
             className="mx-auto max-h-[420px] w-full object-contain"
             controls
@@ -136,24 +118,61 @@ const PreviewModal = ({
             Your browser does not support the video tag.
           </video>
         </div>
-      )}
-      {mediaType === "document" && (
-        <div className="mb-4 w-full overflow-hidden rounded-lg border border-gray-200">
-          <iframe
-            src={mediaUrl}
-            title={media.file_name || "Document preview"}
-            className="h-[420px] w-full"
-          />
-        </div>
-      )}
+      );
+    }
+    return (
+      <div className="w-full overflow-hidden rounded-lg border border-gray-200">
+        <iframe
+          src={mediaUrl}
+          title={media.file_name || "Document preview"}
+          className="h-[420px] w-full"
+        />
+      </div>
+    );
+  };
 
-      <div className="my-4">
-        {infoRows.map((row) => (
-          <div key={row.key} className="mb-2">
-            <strong>{row.label}:</strong>{" "}
-            {Array.isArray(row.value) ? row.value : row.value}
-          </div>
-        ))}
+  const renderNonEditContent = () => (
+    <div className="space-y-4">
+      <div
+        style={{
+          border: "1px solid #e8eef5",
+          borderRadius: 12,
+          padding: 16,
+          background: "#ffffff",
+        }}
+      >
+        {renderPreview()}
+      </div>
+
+      <div
+        style={{
+          border: "1px solid #e8eef5",
+          borderRadius: 12,
+          padding: 16,
+          background: "#ffffff",
+        }}
+      >
+        <dl className="grid gap-4 sm:grid-cols-2">
+          <InfoRow label="Title">{media.title || media.file_name}</InfoRow>
+          <InfoRow label="Size">
+            {media.file_size
+              ? `${(media.file_size / (1024 * 1024)).toFixed(2)} MB`
+              : "Size not available"}
+          </InfoRow>
+          <InfoRow label="Type">{media.file_type}</InfoRow>
+          <InfoRow label="Upload Date">
+            {new Date(media.created_at).toLocaleString()}
+          </InfoRow>
+          <InfoRow label="Tags">
+            {media.tags && media.tags.length > 0
+              ? media.tags.map((t) => (
+                  <Tag color="orange" key={t}>
+                    {t}
+                  </Tag>
+                ))
+              : "None"}
+          </InfoRow>
+        </dl>
       </div>
 
       <div className="flex flex-wrap items-center justify-end gap-3">
@@ -178,44 +197,53 @@ const PreviewModal = ({
           Copy Link
         </Button>
       </div>
-    </>
+    </div>
   );
 
   const renderEditForm = () => (
     <Form layout="vertical" form={form} onFinish={handleFormSubmit}>
-      <Form.Item
-        label="Title"
-        name="title"
-        rules={[{ required: true, message: "Please enter a title." }]}
+      <div
+        style={{
+          border: "1px solid #e8eef5",
+          borderRadius: 12,
+          padding: 16,
+          marginBottom: 16,
+          background: "#ffffff",
+        }}
       >
-        <Input />
-      </Form.Item>
-      <Form.Item label="Tags" name="tags">
-        {/* mode="tags" so user can add new or pick existing from availableTags */}
-        <Select
-          mode="tags"
-          placeholder="Enter tags"
-          style={{ width: "100%" }}
-          tokenSeparators={[","]}
-        >
-          {availableTags.map((tag) => (
-            <Option key={tag} value={tag}>
-              {tag}
-            </Option>
-          ))}
-        </Select>
-      </Form.Item>
-
-      <div className="flex justify-end">
-        <Button
-          type="primary"
-          htmlType="submit"
-          icon={<CloudOutlined />}
-          loading={isSubmitting}
-          className="headlessbutton headlessbutton-pill"
-        >
-          Update Media
-        </Button>
+        {renderPreview()}
+      </div>
+      <div
+        style={{
+          border: "1px solid #e8eef5",
+          borderRadius: 12,
+          padding: 16,
+          background: "#ffffff",
+        }}
+      >
+        <div className="grid gap-x-4 md:grid-cols-2">
+          <Form.Item
+            label="Title"
+            name="title"
+            rules={[{ required: true, message: "Please enter a title." }]}
+          >
+            <Input />
+          </Form.Item>
+          <Form.Item label="Tags" name="tags">
+            <Select
+              mode="tags"
+              placeholder="Enter tags"
+              style={{ width: "100%" }}
+              tokenSeparators={[","]}
+            >
+              {(availableTags || []).map((tag) => (
+                <Option key={tag} value={tag}>
+                  {tag}
+                </Option>
+              ))}
+            </Select>
+          </Form.Item>
+        </div>
       </div>
     </Form>
   );
@@ -227,8 +255,23 @@ const PreviewModal = ({
       placement="right"
       width="50%"
       destroyOnClose
-      rootClassName="media-preview-drawer"
+      rootClassName="media-preview-drawer org-form-drawer"
       title={media.title || media.file_name}
+      footer={
+        editMode ? (
+          <div className="flex justify-end">
+            <Button
+              type="primary"
+              icon={<CloudOutlined />}
+              loading={isSubmitting}
+              onClick={() => form.submit()}
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
+              Update Media
+            </Button>
+          </div>
+        ) : null
+      }
     >
       {editMode ? renderEditForm() : renderNonEditContent()}
     </Drawer>

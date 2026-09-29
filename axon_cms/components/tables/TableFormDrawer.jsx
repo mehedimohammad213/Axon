@@ -152,7 +152,7 @@ const TableFormDrawer = ({
       onClose={onClose}
       width="min(1100px, 92vw)"
       destroyOnClose
-      rootClassName="media-preview-drawer"
+      rootClassName="media-preview-drawer org-form-drawer"
       footer={
         <div className="flex justify-end">
           <Button
@@ -167,74 +167,98 @@ const TableFormDrawer = ({
       }
     >
       <Form form={form} layout="vertical" className="space-y-4">
-        <div className="grid gap-4 md:grid-cols-2">
-          <Form.Item
-            label="Title"
-            name="title_en"
-            rules={[{ required: true, message: "Title is required" }]}
-          >
-            <Input
-              placeholder="Table title"
-              onChange={(e) => {
-                const value = e.target.value;
-                form.setFieldsValue({
-                  title_en: value,
-                  title_bn: form.getFieldValue("title_bn") || value,
-                });
-              }}
-            />
-          </Form.Item>
-          <Form.Item label="Alternate Title" name="title_bn">
-            <Input placeholder="Alternate title" />
-          </Form.Item>
-        </div>
-
-        <div className="grid gap-4 md:grid-cols-2">
-          <Form.Item label="Page Name" name="page_name">
-            <Input placeholder="Optional page label" />
-          </Form.Item>
-          <Form.Item label="Active" name="status" valuePropName="checked">
-            <Switch />
-          </Form.Item>
-        </div>
-
-        <CSVImportSection setHeaders={setHeaders} setRows={setRows} />
-
-        <HeadersSection
-          headers={headers}
-          setHeaders={setHeaders}
-          visibleColumns={visibleColumns}
-          setVisibleColumns={setVisibleColumns}
-          rows={rows}
-          setRows={setRows}
-          filterColumns={filterColumns}
-          setFilterColumns={setFilterColumns}
-        />
-
-        <RowsSection headers={headers} rows={rows} setRows={setRows} />
-
-        <div className="mt-8 grid items-start gap-4 md:grid-cols-10">
-          <Title level={5} className="col-span-7 !mb-0 !text-gray-900">
-            Preview
-          </Title>
-          <div className="col-span-3">
-            <Title level={5} className="!mb-2 !text-gray-900">
-              Filterable Columns
-            </Title>
-            <FilterableColumns
-              headers={headers}
-              filterColumns={filterColumns}
-              setFilterColumns={setFilterColumns}
-            />
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            background: "#ffffff",
+          }}
+        >
+          <div className="grid gap-x-4 md:grid-cols-2">
+            <Form.Item
+              label="Title"
+              name="title_en"
+              rules={[{ required: true, message: "Title is required" }]}
+            >
+              <Input
+                placeholder="Table title"
+                onChange={(e) => {
+                  const value = e.target.value;
+                  form.setFieldsValue({
+                    title_en: value,
+                    title_bn: form.getFieldValue("title_bn") || value,
+                  });
+                }}
+              />
+            </Form.Item>
+            <Form.Item label="Alternate Title" name="title_bn">
+              <Input placeholder="Alternate title" />
+            </Form.Item>
+            <Form.Item label="Page Name" name="page_name">
+              <Input placeholder="Optional page label" />
+            </Form.Item>
+            <Form.Item label="Active" name="status" valuePropName="checked">
+              <Switch />
+            </Form.Item>
           </div>
         </div>
 
-        <PreviewTable
-          headers={headers}
-          rows={rows}
-          visibleColumns={visibleColumns}
-          filterColumns={filterColumns}
-        />
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            background: "#ffffff",
+          }}
+        >
+          <CSVImportSection setHeaders={setHeaders} setRows={setRows} />
+
+          <HeadersSection
+            headers={headers}
+            setHeaders={setHeaders}
+            visibleColumns={visibleColumns}
+            setVisibleColumns={setVisibleColumns}
+            rows={rows}
+            setRows={setRows}
+            filterColumns={filterColumns}
+            setFilterColumns={setFilterColumns}
+          />
+
+          <RowsSection headers={headers} rows={rows} setRows={setRows} />
+        </div>
+
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            background: "#ffffff",
+          }}
+        >
+          <div className="grid items-start gap-4 md:grid-cols-10">
+            <Title level={5} className="col-span-7 !mb-0 !text-gray-900">
+              Preview
+            </Title>
+            <div className="col-span-3">
+              <Title level={5} className="!mb-2 !text-gray-900">
+                Filterable Columns
+              </Title>
+              <FilterableColumns
+                headers={headers}
+                filterColumns={filterColumns}
+                setFilterColumns={setFilterColumns}
+              />
+            </div>
+          </div>
+
+          <PreviewTable
+            headers={headers}
+            rows={rows}
+            visibleColumns={visibleColumns}
+            filterColumns={filterColumns}
+          />
+        </div>
       </Form>
     </Drawer>
   );

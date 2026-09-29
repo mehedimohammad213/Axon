@@ -145,7 +145,19 @@ const CreateCardForm = ({ onSuccess, onCancel, pages, media, uniqueTags }) => {
       width={`50%`}
       placement="right"
       destroyOnClose
-      rootClassName="media-preview-drawer"
+      rootClassName="media-preview-drawer org-form-drawer"
+      footer={
+        <div className="flex justify-end">
+          <Button
+            type="primary"
+            loading={submitting}
+            onClick={() => form.submit()}
+            className="headlessbutton headlessbutton-pill !mr-0"
+          >
+            Create Card
+          </Button>
+        </div>
+      }
     >
       <Form
         form={form}
@@ -162,7 +174,16 @@ const CreateCardForm = ({ onSuccess, onCancel, pages, media, uniqueTags }) => {
         </Form.Item>
 
         {/* Basic Settings */}
-        <div className="space-y-4">
+        <div
+          className="space-y-4"
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            marginBottom: 16,
+            background: "#ffffff",
+          }}
+        >
           {/* Title (English) */}
           <Form.Item
             label="Title (English)"
@@ -242,7 +263,15 @@ const CreateCardForm = ({ onSuccess, onCancel, pages, media, uniqueTags }) => {
         </div>
 
         {/* Advanced Settings */}
-        <div className="mt-4">
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            marginBottom: 16,
+            background: "#ffffff",
+          }}
+        >
           <Button
             type="link"
             onClick={() => setShowAdvanced(!showAdvanced)}
@@ -252,10 +281,25 @@ const CreateCardForm = ({ onSuccess, onCancel, pages, media, uniqueTags }) => {
           </Button>
           {showAdvanced && (
             <div className="mt-4 space-y-4">
-              {/* Title (Alternate) */}
-              <Form.Item label="Title (Alternate)" name="title_bn">
-                <Input placeholder="Enter title in Alternate" />
-              </Form.Item>
+              <div className="grid gap-x-4 md:grid-cols-2">
+                {/* Title (Alternate) */}
+                <Form.Item label="Title (Alternate)" name="title_bn">
+                  <Input placeholder="Enter title in Alternate" />
+                </Form.Item>
+
+                {/* Page Association */}
+                <Form.Item label="Page" name="page_name">
+                  <Select placeholder="Select Page" allowClear showSearch>
+                    {pages
+                      ?.filter((p) => p.page_name_en)
+                      ?.map((p) => (
+                        <Option key={p.id} value={p.page_name_en}>
+                          {p.page_name_en}
+                        </Option>
+                      ))}
+                  </Select>
+                </Form.Item>
+              </div>
 
               {/* Description (Alternate) */}
               <Form.Item label="Description (Alternate)" name="description_bn">
@@ -267,19 +311,6 @@ const CreateCardForm = ({ onSuccess, onCancel, pages, media, uniqueTags }) => {
                   value={form.getFieldValue("description_bn")}
                   editMode={true}
                 />
-              </Form.Item>
-
-              {/* Page Association */}
-              <Form.Item label="Page" name="page_name">
-                <Select placeholder="Select Page" allowClear showSearch>
-                  {pages
-                    ?.filter((p) => p.page_name_en)
-                    ?.map((p) => (
-                      <Option key={p.id} value={p.page_name_en}>
-                        {p.page_name_en}
-                      </Option>
-                    ))}
-                </Select>
               </Form.Item>
 
               {/* Link Type */}
@@ -338,39 +369,30 @@ const CreateCardForm = ({ onSuccess, onCancel, pages, media, uniqueTags }) => {
                 </Form.Item>
               )}
 
-              {/* Tags */}
-              <Form.Item label="Tags" name="tags">
-                <Select
-                  mode="tags"
-                  placeholder="Add or select tags"
-                  style={{ width: "100%" }}
-                  showSearch
-                >
-                  {uniqueTags?.map((tag) => (
-                    <Option key={tag} value={tag}>
-                      {tag}
-                    </Option>
-                  ))}
-                </Select>
-              </Form.Item>
+              <div className="grid gap-x-4 md:grid-cols-2">
+                {/* Tags */}
+                <Form.Item label="Tags" name="tags">
+                  <Select
+                    mode="tags"
+                    placeholder="Add or select tags"
+                    style={{ width: "100%" }}
+                    showSearch
+                  >
+                    {uniqueTags?.map((tag) => (
+                      <Option key={tag} value={tag}>
+                        {tag}
+                      </Option>
+                    ))}
+                  </Select>
+                </Form.Item>
 
-              {/* Status */}
-              <Form.Item label="Status" name="status" valuePropName="checked">
-                <Switch checkedChildren="Active" unCheckedChildren="Inactive" />
-              </Form.Item>
+                {/* Status */}
+                <Form.Item label="Status" name="status" valuePropName="checked">
+                  <Switch checkedChildren="Active" unCheckedChildren="Inactive" />
+                </Form.Item>
+              </div>
             </div>
           )}
-        </div>
-
-        <div className="flex justify-end">
-          <Button
-            type="primary"
-            htmlType="submit"
-            loading={submitting}
-            className="headlessbutton headlessbutton-pill"
-          >
-            Create Card
-          </Button>
         </div>
       </Form>
 

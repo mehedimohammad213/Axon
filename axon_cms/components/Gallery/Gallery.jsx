@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useMemo } from "react";
-import { Modal, Spin } from "antd";
+import { Drawer, Spin } from "antd";
 import GalleryHeader from "./GalleryHeader";
 import MediaTabs, { getMediaTabItems } from "./MediaTabs";
 import PaginationComponent from "./PaginationComponent";
@@ -106,23 +106,28 @@ const Gallery = () => {
 
   return (
     <div className="gallery-page">
-      <Modal
-        title={
-          <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
-            <span>Upload Media</span>
-          </div>
-        }
+      <Drawer
+        title="Upload Media"
         open={isUploadModalVisible}
-        onCancel={handleUploadModalClose}
-        footer={null}
+        onClose={handleUploadModalClose}
         width={800}
         destroyOnClose
+        rootClassName="media-preview-drawer org-form-drawer"
       >
-        <UploadMediaTabs
-          onUploadSuccess={handleMediaUploadSuccess}
-          addMedia={addMedia}
-        />
-      </Modal>
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            background: "#ffffff",
+          }}
+        >
+          <UploadMediaTabs
+            onUploadSuccess={handleMediaUploadSuccess}
+            addMedia={addMedia}
+          />
+        </div>
+      </Drawer>
 
       {selectedMedia && (
         <PreviewModal

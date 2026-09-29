@@ -6,7 +6,6 @@ import {
   Input,
   Select,
   Button,
-  Table,
   message,
   Switch,
   Radio,
@@ -283,20 +282,6 @@ const CardsPreviewModal = ({
       ]
     : [];
 
-  const columns = [
-    {
-      title: "Info Type",
-      dataIndex: "infoType",
-      key: "infoType",
-      width: "30%",
-    },
-    {
-      title: "Details",
-      dataIndex: "details",
-      key: "details",
-    },
-  ];
-
   // Build final link
   const buildLink = (values, pages) => {
     if (values.link_type === "page" && values.link_page_id) {
@@ -345,16 +330,39 @@ const CardsPreviewModal = ({
   };
 
   // Wrap the handleCancelEdit prop to include media change state reset
+  const InfoRow = ({ label, children }) => (
+    <div className="min-w-0">
+      <dt className="text-xs font-medium uppercase tracking-wide text-gray-400">
+        {label}
+      </dt>
+      <dd className="mt-1 break-words text-sm font-medium text-gray-800">
+        {children}
+      </dd>
+    </div>
+  );
+
   return (
     <Drawer
       title={isEditing ? "Edit Card" : "Card Details"}
       open={visible}
       onClose={onCancel}
-      footer={null}
+      footer={
+        isEditing ? (
+          <div className="flex justify-end">
+            <Button
+              type="primary"
+              onClick={() => form.submit()}
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
+              Update Card
+            </Button>
+          </div>
+        ) : null
+      }
       width="50%"
       placement="right"
       destroyOnClose
-      rootClassName="media-preview-drawer"
+      rootClassName="media-preview-drawer org-form-drawer"
     >
       {selectedCard && (
         <>
@@ -365,8 +373,16 @@ const CardsPreviewModal = ({
               </Form.Item>
 
               {/* Basic Settings */}
-              <div className="space-y-4">
-                {/* Title (English) */}
+              <div
+                className="space-y-4"
+                style={{
+                  border: "1px solid #e8eef5",
+                  borderRadius: 12,
+                  padding: 16,
+                  marginBottom: 16,
+                  background: "#ffffff",
+                }}
+              >
                 <Form.Item
                   label="Title (English)"
                   name="title_en"
@@ -455,7 +471,15 @@ const CardsPreviewModal = ({
               </div>
 
               {/* Advanced Settings */}
-              <div className="mt-4">
+              <div
+                style={{
+                  border: "1px solid #e8eef5",
+                  borderRadius: 12,
+                  padding: 16,
+                  marginBottom: 16,
+                  background: "#ffffff",
+                }}
+              >
                 <Button
                   type="link"
                   onClick={() => setShowAdvanced(!showAdvanced)}
@@ -467,12 +491,23 @@ const CardsPreviewModal = ({
                 </Button>
                 {showAdvanced && (
                   <div className="mt-4 space-y-4">
-                    {/* Title (Alternate) */}
-                    <Form.Item label="Title (Alternate)" name="title_bn">
-                      <Input />
-                    </Form.Item>
+                    <div className="grid gap-x-4 md:grid-cols-2">
+                      <Form.Item label="Title (Alternate)" name="title_bn">
+                        <Input />
+                      </Form.Item>
+                      <Form.Item label="Page" name="page_name">
+                        <Select placeholder="Select Page" allowClear showSearch>
+                          {pages
+                            ?.filter((p) => p.page_name_en)
+                            ?.map((p) => (
+                              <Option key={p.id} value={p.page_name_en}>
+                                {p.page_name_en}
+                              </Option>
+                            ))}
+                        </Select>
+                      </Form.Item>
+                    </div>
 
-                    {/* Description (Alternate) */}
                     <Form.Item
                       label="Description (Alternate)"
                       name="description_bn"
@@ -486,20 +521,6 @@ const CardsPreviewModal = ({
                       />
                     </Form.Item>
 
-                    {/* Page Association */}
-                    <Form.Item label="Page" name="page_name">
-                      <Select placeholder="Select Page" allowClear showSearch>
-                        {pages
-                          ?.filter((p) => p.page_name_en)
-                          ?.map((p) => (
-                            <Option key={p.id} value={p.page_name_en}>
-                              {p.page_name_en}
-                            </Option>
-                          ))}
-                      </Select>
-                    </Form.Item>
-
-                    {/* Link Type */}
                     <Form.Item label="Link Type" name="link_type">
                       <Radio.Group onChange={handleLinkTypeChange}>
                         <Radio value="page">Page Link</Radio>
@@ -509,7 +530,6 @@ const CardsPreviewModal = ({
                       </Radio.Group>
                     </Form.Item>
 
-                    {/* Link Fields */}
                     {linkType === "page" && (
                       <Form.Item
                         label="Select the page to link"
@@ -558,48 +578,37 @@ const CardsPreviewModal = ({
                       </Form.Item>
                     )}
 
-                    {/* Tags */}
-                    <Form.Item label="Tags" name="tags">
-                      <Select
-                        mode="tags"
-                        placeholder="Add or select tags"
-                        style={{ width: "100%" }}
-                        showSearch
-                      >
-                        {uniqueTags?.map((tag) => (
-                          <Option key={tag} value={tag}>
-                            {tag}
-                          </Option>
-                        ))}
-                      </Select>
-                    </Form.Item>
+                    <div className="grid gap-x-4 md:grid-cols-2">
+                      <Form.Item label="Tags" name="tags">
+                        <Select
+                          mode="tags"
+                          placeholder="Add or select tags"
+                          style={{ width: "100%" }}
+                          showSearch
+                        >
+                          {uniqueTags?.map((tag) => (
+                            <Option key={tag} value={tag}>
+                              {tag}
+                            </Option>
+                          ))}
+                        </Select>
+                      </Form.Item>
 
-                    {/* Status */}
-                    <Form.Item
-                      label="Status"
-                      name="status"
-                      valuePropName="checked"
-                    >
-                      <Switch
-                        checkedChildren="Active"
-                        unCheckedChildren="Inactive"
-                      />
-                    </Form.Item>
+                      <Form.Item
+                        label="Status"
+                        name="status"
+                        valuePropName="checked"
+                      >
+                        <Switch
+                          checkedChildren="Active"
+                          unCheckedChildren="Inactive"
+                        />
+                      </Form.Item>
+                    </div>
                   </div>
                 )}
               </div>
 
-              <div className="flex justify-end">
-                <Button
-                  type="primary"
-                  htmlType="submit"
-                  className="headlessbutton headlessbutton-pill"
-                >
-                  Update Card
-                </Button>
-              </div>
-
-              {/* Media Selection Modal */}
               <MediaSelectionModal
                 isVisible={isMediaModalVisible}
                 onClose={() => setIsMediaModalVisible(false)}
@@ -608,14 +617,58 @@ const CardsPreviewModal = ({
               />
             </Form>
           ) : (
-            <>
-              <Table
-                columns={columns}
-                dataSource={data}
-                pagination={false}
-                showHeader={false}
-              />
-            </>
+            <div className="space-y-4">
+              {selectedCard.media_files?.file_path && (
+                <div
+                  style={{
+                    border: "1px solid #e8eef5",
+                    borderRadius: 12,
+                    padding: 16,
+                    background: "#ffffff",
+                  }}
+                >
+                  <div className="flex justify-center overflow-hidden rounded-lg bg-gray-50 p-3">
+                    <Image
+                      src={resolveMediaUrl(selectedCard.media_files.file_path)}
+                      alt={selectedCard.title_en || "Card media"}
+                      width={400}
+                      height={240}
+                      objectFit="cover"
+                      className="rounded-lg"
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = PLACEHOLDER_IMAGE;
+                      }}
+                    />
+                  </div>
+                </div>
+              )}
+              <div
+                style={{
+                  border: "1px solid #e8eef5",
+                  borderRadius: 12,
+                  padding: 16,
+                  background: "#ffffff",
+                }}
+              >
+                <dl className="grid gap-4 sm:grid-cols-2">
+                  {data
+                    .filter((row) => row.infoType !== "Media")
+                    .map((row) => (
+                      <InfoRow key={row.key} label={row.infoType}>
+                        {typeof row.details === "string" &&
+                        row.details.includes("<") ? (
+                          <span
+                            dangerouslySetInnerHTML={{ __html: row.details }}
+                          />
+                        ) : (
+                          row.details
+                        )}
+                      </InfoRow>
+                    ))}
+                </dl>
+              </div>
+            </div>
           )}
         </>
       )}
