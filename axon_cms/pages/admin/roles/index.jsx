@@ -250,7 +250,7 @@ export default function AdminRolesPage() {
               loading={createSubmitting}
               className="headlessbutton headlessbutton-pill !mr-0"
             >
-              Create
+              Create Role
             </Button>
           </div>
         }

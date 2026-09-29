@@ -87,7 +87,7 @@ const RolesList = ({
               onClick={onCreate}
               className="headlessbutton headlessbutton-pill !mr-0 mt-2"
             >
-              Create role
+              Create Role
             </Button>
           )}
         </Empty>
@@ -147,7 +147,7 @@ const RolesList = ({
               loading={editSubmitting}
               className="headlessbutton headlessbutton-pill !mr-0"
             >
-              Save
+              Update Role
             </Button>
           </div>
         }
