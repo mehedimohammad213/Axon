@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Modal, Input, Button, Row, Col, message } from "antd";
+import { Drawer, Input, Button, Form, message } from "antd";
 import { PlusCircleOutlined } from "@ant-design/icons";
 import instance from "../../axios";
 
@@ -9,47 +9,39 @@ const CreateFooterModal = ({
   onFooterCreated,
   fetchPages,
 }) => {
-  const [newPageTitleEn, setNewPageTitleEn] = useState("");
-  const [newPageTitleBn, setNewPageTitleBn] = useState("");
-  const [newSlug, setNewSlug] = useState("");
+  const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
   const [isAltTitleManuallyEdited, setIsAltTitleManuallyEdited] =
     useState(false);
 
-  // Sync Alt Title with Main Title unless manually edited
   useEffect(() => {
-    if (!isAltTitleManuallyEdited) {
-      setNewPageTitleBn(newPageTitleEn);
+    if (!visible) {
+      form.resetFields();
+      setIsAltTitleManuallyEdited(false);
     }
-  }, [newPageTitleEn, isAltTitleManuallyEdited]);
+  }, [visible, form]);
 
-  const handleCreateFooter = async () => {
-    if (newPageTitleEn.trim() === "" || newPageTitleBn.trim() === "") {
+  const handleCreateFooter = async (values) => {
+    const titleEn = (values.title_en || "").trim();
+    const titleBn = (values.title_bn || "").trim();
+
+    if (!titleEn || !titleBn) {
       message.error("All fields are required.");
       return;
     }
 
-    // Validate slug format
-    // const slugRegex = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-    // if (!slugRegex.test(newSlug)) {
-    //   message.error(
-    //     "Invalid slug format. Use only lowercase letters, numbers, and hyphens."
-    //   );
-    //   return;
-    // }
-
     try {
       setLoading(true);
       const response = await instance.post("/pages", {
-        page_name_en: newPageTitleEn,
-        page_name_bn: newPageTitleBn,
+        page_name_en: titleEn,
+        page_name_bn: titleBn,
         type: "Footer",
-        favicon_id: null, // Assuming default favicon_id; adjust as needed
+        favicon_id: null,
         slug: null,
         additional: [
           {
             pageType: "Footer",
-            metaTitle: newPageTitleEn,
+            metaTitle: titleEn,
             metaDescription: "",
             keywords: [],
             metaImage: "",
@@ -61,96 +53,106 @@ const CreateFooterModal = ({
       if (response.status === 201) {
         message.success("Footer created successfully.");
         onFooterCreated(response.data);
-        // Reset form fields
-        setNewPageTitleEn("");
-        setNewPageTitleBn("");
-        setNewSlug("");
+        form.resetFields();
         setIsAltTitleManuallyEdited(false);
         fetchPages();
-        handleCancel();
+        onCancel();
       } else {
-        message.error("Failed to create page.");
+        message.error("Failed to create footer.");
       }
     } catch (error) {
-      console.error("Error creating page:", error);
-      message.error("An error occurred while creating the page.");
+      console.error("Error creating footer:", error);
+      message.error("An error occurred while creating the footer.");
     } finally {
       setLoading(false);
     }
   };
 
   const handleCancel = () => {
-    // Reset form fields on cancel
-    setNewPageTitleEn("");
-    setNewPageTitleBn("");
-    setNewSlug("");
+    form.resetFields();
     setIsAltTitleManuallyEdited(false);
     onCancel();
   };
 
-  // Generate slug from page title with hyphens instead of spaces and lowercase
-  const generateSlug = () => {
-    if (newPageTitleEn.trim() === "") {
-      message.info("Please enter the page title first.");
-      return;
-    }
-    const slug = newPageTitleEn.trim().toLowerCase().replace(/\s+/g, "-");
-    setNewSlug(slug);
-  };
-
   return (
-    <Modal
+    <Drawer
       open={visible}
-      title="Create New Footer"
-      onCancel={handleCancel}
-      footer={null}
-      centered
-      className="create-modal"
-      width={600}
-    >
-      <div className="flex flex-col gap-6 p-4">
-        <div className="flex flex-col gap-2">
-          <label className="text-sm font-medium text-gray-700">
-            Footer Title
-          </label>
-          <Input
-            placeholder="Enter footer title"
-            value={newPageTitleEn}
-            onChange={(e) => setNewPageTitleEn(e.target.value)}
-            className="text-lg h-12"
-            size="large"
-          />
-        </div>
-
-        <div className="flex flex-col gap-2">
-          <label className="text-sm font-medium text-gray-700">
-            Footer Alt Title
-          </label>
-          <Input
-            placeholder="Enter footer alt title"
-            value={newPageTitleBn}
-            onChange={(e) => {
-              setNewPageTitleBn(e.target.value);
-              setIsAltTitleManuallyEdited(true);
+      title={
+        <div className="flex items-center gap-2">
+          <img
+            src="/icons/headless/footer.svg"
+            alt="Footer"
+            className="w-6"
+            onError={(e) => {
+              e.currentTarget.style.display = "none";
             }}
-            className="text-lg h-12"
-            size="large"
           />
+          <span>Create Footer</span>
         </div>
-
-        <div className="flex justify-end mt-4">
+      }
+      onClose={handleCancel}
+      placement="right"
+      width="min(720px, 92vw)"
+      destroyOnClose
+      rootClassName="media-preview-drawer org-form-drawer"
+      footer={
+        <div className="flex w-full justify-end">
           <Button
-            onClick={handleCreateFooter}
+            type="primary"
+            form="create-footer-form"
+            htmlType="submit"
             icon={<PlusCircleOutlined />}
             loading={loading}
             className="headlessbutton headlessbutton-pill !mr-0"
-            type="primary"
           >
             Create Footer
           </Button>
         </div>
-      </div>
-    </Modal>
+      }
+    >
+      <Form
+        id="create-footer-form"
+        form={form}
+        layout="vertical"
+        onFinish={handleCreateFooter}
+      >
+        <div
+          style={{
+            border: "1px solid #e8eef5",
+            borderRadius: 12,
+            padding: 16,
+            background: "#ffffff",
+          }}
+        >
+          <div className="grid gap-x-4 md:grid-cols-2">
+            <Form.Item
+              label="Footer Title"
+              name="title_en"
+              rules={[{ required: true, message: "Title is required" }]}
+            >
+              <Input
+                placeholder="Enter footer title"
+                onChange={(e) => {
+                  if (!isAltTitleManuallyEdited) {
+                    form.setFieldsValue({ title_bn: e.target.value });
+                  }
+                }}
+              />
+            </Form.Item>
+            <Form.Item
+              label="Footer Alt Title"
+              name="title_bn"
+              rules={[{ required: true, message: "Alt title is required" }]}
+            >
+              <Input
+                placeholder="Enter footer alt title"
+                onChange={() => setIsAltTitleManuallyEdited(true)}
+              />
+            </Form.Item>
+          </div>
+        </div>
+      </Form>
+    </Drawer>
   );
 };
 

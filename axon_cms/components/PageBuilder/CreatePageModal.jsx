@@ -1,7 +1,7 @@
 // components/PageBuilder/CreatePageModal.jsx
 
 import React, { useState, useEffect, useCallback, useMemo } from "react";
-import { Modal, Input, Button, Select, message } from "antd";
+import { Drawer, Input, Button, Select, Form, message } from "antd";
 import { PlusCircleOutlined, ThunderboltOutlined } from "@ant-design/icons";
 import instance from "../../axios";
 import AddMenuItemForm from "../MenuItems/AddMenuItemForm";
@@ -52,9 +52,7 @@ const CreatePageModal = ({
   fetchPages,
   type = "Page",
 }) => {
-  const [newPageTitleEn, setNewPageTitleEn] = useState("");
-  const [newPageTitleBn, setNewPageTitleBn] = useState("");
-  const [newSlug, setNewSlug] = useState("");
+  const [form] = Form.useForm();
   const [loading, setLoading] = useState(false);
   const [isAltTitleManuallyEdited, setIsAltTitleManuallyEdited] =
     useState(false);
@@ -65,12 +63,7 @@ const CreatePageModal = ({
   const [selectedNavbarId, setSelectedNavbarId] = useState(undefined);
   const [isAddMenuItemOpen, setIsAddMenuItemOpen] = useState(false);
   const [isAddNavbarOpen, setIsAddNavbarOpen] = useState(false);
-
-  useEffect(() => {
-    if (!isAltTitleManuallyEdited) {
-      setNewPageTitleBn(newPageTitleEn);
-    }
-  }, [newPageTitleEn, isAltTitleManuallyEdited]);
+  const [nestedSubmitting, setNestedSubmitting] = useState(false);
 
   const fetchMenuItems = useCallback(async () => {
     try {
@@ -119,6 +112,17 @@ const CreatePageModal = ({
     fetchNavbars();
   }, [visible, type, fetchMenuItems, fetchPagesList, fetchNavbars]);
 
+  useEffect(() => {
+    if (!visible) {
+      form.resetFields();
+      setSelectedMenuItemId(undefined);
+      setSelectedNavbarId(undefined);
+      setIsAddMenuItemOpen(false);
+      setIsAddNavbarOpen(false);
+      setIsAltTitleManuallyEdited(false);
+    }
+  }, [visible, form]);
+
   const selectedNavbar = useMemo(
     () => navbars.find((navbar) => navbar.id === selectedNavbarId) || null,
     [navbars, selectedNavbarId]
@@ -141,17 +145,6 @@ const CreatePageModal = ({
     slugs.push(generateSlug(title || page.page_name_en || page.slug));
     const pageName = generateSlug(page.page_name_en || "");
     return `/${slugs.join("/")}?pageId=${page.id}&pageName=${pageName}`;
-  };
-
-  const resetFormState = () => {
-    setNewPageTitleEn("");
-    setNewPageTitleBn("");
-    setNewSlug("");
-    setSelectedMenuItemId(undefined);
-    setSelectedNavbarId(undefined);
-    setIsAddMenuItemOpen(false);
-    setIsAddNavbarOpen(false);
-    setIsAltTitleManuallyEdited(false);
   };
 
   const handleMenuItemCreated = (createdItems = []) => {
@@ -189,7 +182,7 @@ const CreatePageModal = ({
     setIsAddNavbarOpen(false);
   };
 
-  const linkSelectedMenuItemToPage = async (page) => {
+  const linkSelectedMenuItemToPage = async (page, titleEn, titleBn) => {
     if (!selectedMenuItemId) return;
 
     const existing =
@@ -198,13 +191,13 @@ const CreatePageModal = ({
 
     const link = buildPageLink(
       page,
-      existing.title || newPageTitleEn,
+      existing.title || titleEn,
       existing.parent_id || null
     );
 
     await instance.put(`/menuitems/${existing.id}`, {
       title: existing.title,
-      title_bn: existing.title_bn || newPageTitleBn || existing.title,
+      title_bn: existing.title_bn || titleBn || existing.title,
       link,
       parent_id: existing.parent_id || null,
     });
@@ -232,19 +225,19 @@ const CreatePageModal = ({
     message.success("Menu item added to navbar.");
   };
 
-  const handleCreatePage = async () => {
-    if (
-      newPageTitleEn.trim() === "" ||
-      newPageTitleBn.trim() === "" ||
-      (type !== "Footer" && newSlug.trim() === "")
-    ) {
+  const handleCreatePage = async (values) => {
+    const titleEn = (values.title_en || "").trim();
+    const titleBn = (values.title_bn || "").trim();
+    const slug = (values.slug || "").trim();
+
+    if (!titleEn || !titleBn || (type !== "Footer" && !slug)) {
       message.error("All fields are required.");
       return;
     }
 
     if (type !== "Footer") {
       const slugRegex = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-      if (!slugRegex.test(newSlug)) {
+      if (!slugRegex.test(slug)) {
         message.error(
           "Invalid slug format. Use only lowercase letters, numbers, and hyphens."
         );
@@ -255,13 +248,13 @@ const CreatePageModal = ({
     try {
       setLoading(true);
       const pagePayload = {
-        page_name_en: newPageTitleEn,
-        page_name_bn: newPageTitleBn,
+        page_name_en: titleEn,
+        page_name_bn: titleBn,
         type: type,
         favicon_id: null,
-        slug: type !== "Footer" ? newSlug : null,
+        slug: type !== "Footer" ? slug : null,
         head: {
-          title: newPageTitleEn,
+          title: titleEn,
           description: "",
           keywords: [],
           image: "",
@@ -270,7 +263,7 @@ const CreatePageModal = ({
         additional: [
           {
             pageType: type,
-            metaTitle: newPageTitleEn,
+            metaTitle: titleEn,
             metaDescription: "",
             keywords: [],
             metaImage: "",
@@ -288,7 +281,7 @@ const CreatePageModal = ({
       if (response.status === 201) {
         if (type !== "Footer" && selectedMenuItemId) {
           try {
-            await linkSelectedMenuItemToPage(response.data);
+            await linkSelectedMenuItemToPage(response.data, titleEn, titleBn);
           } catch (menuError) {
             console.error("Error linking menu item:", menuError);
             message.warning(
@@ -310,7 +303,10 @@ const CreatePageModal = ({
 
         message.success(`${type} created successfully.`);
         onPageCreated(response.data);
-        resetFormState();
+        form.resetFields();
+        setSelectedMenuItemId(undefined);
+        setSelectedNavbarId(undefined);
+        setIsAltTitleManuallyEdited(false);
         fetchPages();
         onCancel();
       } else {
@@ -327,178 +323,230 @@ const CreatePageModal = ({
   };
 
   const handleCancel = () => {
-    resetFormState();
+    form.resetFields();
+    setSelectedMenuItemId(undefined);
+    setSelectedNavbarId(undefined);
+    setIsAddMenuItemOpen(false);
+    setIsAddNavbarOpen(false);
+    setIsAltTitleManuallyEdited(false);
     onCancel();
   };
 
   const handleGenerateSlug = () => {
-    if (newPageTitleEn.trim() === "") {
+    const titleEn = (form.getFieldValue("title_en") || "").trim();
+    if (!titleEn) {
       message.info("Please enter the title first.");
       return;
     }
-    const slug = newPageTitleEn.trim().toLowerCase().replace(/\s+/g, "-");
-    setNewSlug(slug);
+    form.setFieldsValue({
+      slug: titleEn.toLowerCase().replace(/\s+/g, "-"),
+    });
   };
 
   return (
     <>
-      <Modal
+      <Drawer
         open={visible}
-        title={`Create New ${type}`}
-        onCancel={handleCancel}
-        footer={null}
-        centered
-        className="create-modal"
-        width={640}
-        destroyOnClose
-      >
-        <div className="flex flex-col gap-6 p-4">
-          <div className="flex flex-col gap-2">
-            <label className="text-sm font-medium text-gray-700">
-              {type} Title
-            </label>
-            <Input
-              placeholder={`Enter ${type.toLowerCase()} title`}
-              value={newPageTitleEn}
-              onChange={(e) => setNewPageTitleEn(e.target.value)}
-              className="text-lg h-12"
-              size="large"
-            />
-          </div>
-
-          <div className="flex flex-col gap-2">
-            <label className="text-sm font-medium text-gray-700">
-              {type} Alt Title
-            </label>
-            <Input
-              placeholder={`Enter ${type.toLowerCase()} alt title`}
-              value={newPageTitleBn}
-              onChange={(e) => {
-                setNewPageTitleBn(e.target.value);
-                setIsAltTitleManuallyEdited(true);
+        title={
+          <div className="flex items-center gap-2">
+            <img
+              src={
+                type === "Footer"
+                  ? "/icons/headless/footer.svg"
+                  : "/icons/headless/forms.svg"
+              }
+              alt={type}
+              className="w-6"
+              onError={(e) => {
+                e.currentTarget.style.display = "none";
               }}
-              className="text-lg h-12"
-              size="large"
             />
+            <span>Create {type}</span>
           </div>
-
-          {type !== "Footer" && (
-            <div className="flex flex-col gap-2">
-              <label className="text-sm font-medium text-gray-700">
-                {type} Slug
-              </label>
-              <div className="flex gap-2">
-                <Input
-                  placeholder={`Enter ${type.toLowerCase()} slug (e.g., about-us)`}
-                  value={newSlug}
-                  onChange={(e) => setNewSlug(e.target.value)}
-                  className="text-lg h-12 flex-1"
-                  size="large"
-                />
-                <Button
-                  icon={<ThunderboltOutlined />}
-                  onClick={handleGenerateSlug}
-                  className="headlessbutton headlessbutton-pill !mr-0"
-                  type="primary"
-                >
-                  Generate
-                </Button>
-              </div>
-              <span className="text-xs text-gray-500">
-                *Use only lowercase letters, numbers, and hyphens.
-              </span>
-            </div>
-          )}
-
-          {type !== "Footer" && (
-            <div className="pt-4 border-t border-gray-200 space-y-5">
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <label className="block text-sm font-semibold text-gray-700">
-                    Menu Item
-                  </label>
-                  <Button
-                    icon={<PlusCircleOutlined />}
-                    onClick={() => setIsAddMenuItemOpen(true)}
-                    className="headlessbutton headlessbutton-pill !mr-0"
-                  >
-                    Create Item
-                  </Button>
-                </div>
-                <Select
-                  showSearch
-                  allowClear
-                  placeholder="Select a Menu Item"
-                  optionFilterProp="children"
-                  value={selectedMenuItemId}
-                  onChange={(value) => setSelectedMenuItemId(value ?? undefined)}
-                  className="w-full [&_.ant-select-selector]:h-10 [&_.ant-select-selector]:border-2 [&_.ant-select-selector]:border-gray-200 [&_.ant-select-selector]:rounded-lg hover:[&_.ant-select-selector]:border-blue-300"
-                >
-                  {menuItems.map((item) => (
-                    <Option key={item.id} value={item.id}>
-                      {item.title}
-                    </Option>
-                  ))}
-                </Select>
-                <span className="text-xs text-gray-500">
-                  This page will be created under the selected menu item.
-                </span>
-              </div>
-
-              <div className="space-y-3">
-                <div className="flex items-center justify-between">
-                  <label className="block text-sm font-semibold text-gray-700">
-                    Navbar
-                  </label>
-                  <Button
-                    icon={<PlusCircleOutlined />}
-                    onClick={() => setIsAddNavbarOpen(true)}
-                    className="headlessbutton headlessbutton-pill !mr-0"
-                  >
-                    Create Navbar
-                  </Button>
-                </div>
-                <Select
-                  showSearch
-                  allowClear
-                  placeholder="Select a Navbar"
-                  optionFilterProp="children"
-                  value={selectedNavbarId}
-                  onChange={(value) => setSelectedNavbarId(value ?? undefined)}
-                  className="w-full [&_.ant-select-selector]:h-10 [&_.ant-select-selector]:border-2 [&_.ant-select-selector]:border-gray-200 [&_.ant-select-selector]:rounded-lg hover:[&_.ant-select-selector]:border-blue-300"
-                >
-                  {navbars.map((navbar) => (
-                    <Option key={navbar.id} value={navbar.id}>
-                      {navbar.title_en || navbar.name || `Navbar #${navbar.id}`}
-                    </Option>
-                  ))}
-                </Select>
-                <span className="text-xs text-gray-500">
-                  The selected menu item will be added under this navbar.
-                </span>
-              </div>
-            </div>
-          )}
-
-          <div className="flex justify-end mt-4">
+        }
+        onClose={handleCancel}
+        placement="right"
+        width="min(720px, 92vw)"
+        destroyOnClose
+        rootClassName="media-preview-drawer org-form-drawer"
+        footer={
+          <div className="flex w-full justify-end">
             <Button
-              onClick={handleCreatePage}
+              type="primary"
+              form="create-page-form"
+              htmlType="submit"
               icon={<PlusCircleOutlined />}
               loading={loading}
               className="headlessbutton headlessbutton-pill !mr-0"
-              type="primary"
             >
               Create {type}
             </Button>
           </div>
-        </div>
-      </Modal>
+        }
+      >
+        <Form
+          id="create-page-form"
+          form={form}
+          layout="vertical"
+          onFinish={handleCreatePage}
+        >
+          <div
+            style={{
+              border: "1px solid #e8eef5",
+              borderRadius: 12,
+              padding: 16,
+              marginBottom: 16,
+              background: "#ffffff",
+            }}
+          >
+            <div className="grid gap-x-4 md:grid-cols-2">
+              <Form.Item
+                label={`${type} Title`}
+                name="title_en"
+                rules={[{ required: true, message: "Title is required" }]}
+              >
+                <Input
+                  placeholder={`Enter ${type.toLowerCase()} title`}
+                  onChange={(e) => {
+                    if (!isAltTitleManuallyEdited) {
+                      form.setFieldsValue({ title_bn: e.target.value });
+                    }
+                  }}
+                />
+              </Form.Item>
+              <Form.Item
+                label={`${type} Alt Title`}
+                name="title_bn"
+                rules={[{ required: true, message: "Alt title is required" }]}
+              >
+                <Input
+                  placeholder={`Enter ${type.toLowerCase()} alt title`}
+                  onChange={() => setIsAltTitleManuallyEdited(true)}
+                />
+              </Form.Item>
+            </div>
 
-      <Modal
+            {type !== "Footer" && (
+              <Form.Item
+                label={`${type} Slug`}
+                required
+                extra="Use only lowercase letters, numbers, and hyphens."
+              >
+                <div className="flex gap-2">
+                  <Form.Item
+                    name="slug"
+                    noStyle
+                    rules={[{ required: true, message: "Slug is required" }]}
+                  >
+                    <Input
+                      placeholder={`Enter ${type.toLowerCase()} slug (e.g., about-us)`}
+                      className="flex-1"
+                    />
+                  </Form.Item>
+                  <Button
+                    icon={<ThunderboltOutlined />}
+                    onClick={handleGenerateSlug}
+                    className="headlessbutton headlessbutton-pill !mr-0"
+                    type="primary"
+                  >
+                    Generate
+                  </Button>
+                </div>
+              </Form.Item>
+            )}
+          </div>
+
+          {type !== "Footer" && (
+            <div
+              style={{
+                border: "1px solid #e8eef5",
+                borderRadius: 12,
+                padding: 16,
+                background: "#ffffff",
+              }}
+            >
+              <div className="space-y-4">
+                <div>
+                  <div className="mb-2 flex items-center justify-between">
+                    <label className="block text-sm font-semibold text-gray-700">
+                      Menu Item
+                    </label>
+                    <Button
+                      icon={<PlusCircleOutlined />}
+                      onClick={() => setIsAddMenuItemOpen(true)}
+                      className="headlessbutton headlessbutton-pill !mr-0"
+                    >
+                      Create Item
+                    </Button>
+                  </div>
+                  <Select
+                    showSearch
+                    allowClear
+                    placeholder="Select a Menu Item"
+                    optionFilterProp="children"
+                    value={selectedMenuItemId}
+                    onChange={(value) =>
+                      setSelectedMenuItemId(value ?? undefined)
+                    }
+                    className="w-full"
+                  >
+                    {menuItems.map((item) => (
+                      <Option key={item.id} value={item.id}>
+                        {item.title}
+                      </Option>
+                    ))}
+                  </Select>
+                  <span className="mt-1 block text-xs text-gray-500">
+                    This page will be created under the selected menu item.
+                  </span>
+                </div>
+
+                <div>
+                  <div className="mb-2 flex items-center justify-between">
+                    <label className="block text-sm font-semibold text-gray-700">
+                      Navbar
+                    </label>
+                    <Button
+                      icon={<PlusCircleOutlined />}
+                      onClick={() => setIsAddNavbarOpen(true)}
+                      className="headlessbutton headlessbutton-pill !mr-0"
+                    >
+                      Create Navbar
+                    </Button>
+                  </div>
+                  <Select
+                    showSearch
+                    allowClear
+                    placeholder="Select a Navbar"
+                    optionFilterProp="children"
+                    value={selectedNavbarId}
+                    onChange={(value) =>
+                      setSelectedNavbarId(value ?? undefined)
+                    }
+                    className="w-full"
+                  >
+                    {navbars.map((navbar) => (
+                      <Option key={navbar.id} value={navbar.id}>
+                        {navbar.title_en ||
+                          navbar.name ||
+                          `Navbar #${navbar.id}`}
+                      </Option>
+                    ))}
+                  </Select>
+                  <span className="mt-1 block text-xs text-gray-500">
+                    The selected menu item will be added under this navbar.
+                  </span>
+                </div>
+              </div>
+            </div>
+          )}
+        </Form>
+      </Drawer>
+
+      <Drawer
         open={isAddMenuItemOpen}
-        onCancel={() => setIsAddMenuItemOpen(false)}
+        onClose={() => setIsAddMenuItemOpen(false)}
         destroyOnClose
-        footer={null}
         title={
           <div className="flex items-center gap-2">
             <img
@@ -509,26 +557,41 @@ const CreatePageModal = ({
             <span>Add Menu Item</span>
           </div>
         }
-        width={900}
+        width="min(720px, 92vw)"
         zIndex={1300}
-        getContainer={() => document.body}
+        rootClassName="media-preview-drawer org-form-drawer"
+        footer={
+          <div className="flex w-full justify-end">
+            <Button
+              type="primary"
+              form="add-menu-item-form-create-page"
+              htmlType="submit"
+              loading={nestedSubmitting}
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
+              Create Menu
+            </Button>
+          </div>
+        }
       >
         {isAddMenuItemOpen && (
           <AddMenuItemForm
+            formId="add-menu-item-form-create-page"
             pages={pages}
             menuItems={menuItems}
             onCancel={() => setIsAddMenuItemOpen(false)}
             fetchMenuItems={fetchMenuItems}
             onMenuItemCreated={handleMenuItemCreated}
+            onLoadingChange={setNestedSubmitting}
+            showSubmitButton={false}
           />
         )}
-      </Modal>
+      </Drawer>
 
-      <Modal
+      <Drawer
         open={isAddNavbarOpen}
-        onCancel={() => setIsAddNavbarOpen(false)}
+        onClose={() => setIsAddNavbarOpen(false)}
         destroyOnClose
-        footer={null}
         title={
           <div className="flex items-center gap-2">
             <img
@@ -539,21 +602,37 @@ const CreatePageModal = ({
             <span>Add Navbar</span>
           </div>
         }
-        width={900}
+        width="min(800px, 92vw)"
         zIndex={1300}
-        getContainer={() => document.body}
+        rootClassName="media-preview-drawer org-form-drawer"
+        footer={
+          <div className="flex w-full justify-end">
+            <Button
+              type="primary"
+              form="add-navbar-form-create-page"
+              htmlType="submit"
+              loading={nestedSubmitting}
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
+              Create Navbar
+            </Button>
+          </div>
+        }
       >
         {isAddNavbarOpen && (
           <AddNavbarForm
+            formId="add-navbar-form-create-page"
             onCancel={() => setIsAddNavbarOpen(false)}
             fetchNavbars={fetchNavbars}
             onNavbarCreated={handleNavbarCreated}
             initialMenuItemIds={
               selectedMenuItemId ? [selectedMenuItemId] : []
             }
+            onLoadingChange={setNestedSubmitting}
+            showSubmitButton={false}
           />
         )}
-      </Modal>
+      </Drawer>
     </>
   );
 };

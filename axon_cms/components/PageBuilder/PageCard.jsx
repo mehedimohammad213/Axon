@@ -6,11 +6,10 @@ import {
   EditOutlined,
   CopyOutlined,
   EyeOutlined,
-  CheckCircleOutlined,
   CloseCircleOutlined,
   LinkOutlined,
 } from "@ant-design/icons";
-import { Button, Card, Popconfirm, Badge, Tag } from "antd";
+import { Button, Card, Popconfirm, Badge, Tag, Drawer } from "antd";
 import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import PageEditForm from "./PageEditForm";
@@ -31,6 +30,7 @@ const PageCard = ({
 }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [type, setType] = useState("Page");
+  const [saving, setSaving] = useState(false);
   const editFormRef = useRef(null);
 
   useEffect(() => {
@@ -38,6 +38,7 @@ const PageCard = ({
   }, [page?.type]);
 
   const itemLabel = type === "Footer" ? "footer" : "page";
+  const entityLabel = type === "Footer" ? "Footer" : "Page";
   const additional = page.additional?.[0] || {};
   const keywords = Array.isArray(additional.keywords)
     ? additional.keywords
@@ -50,36 +51,22 @@ const PageCard = ({
     setIsEditing(true);
   };
 
-  const cancelEditing = (e) => {
-    e?.stopPropagation?.();
+  const cancelEditing = () => {
     setIsEditing(false);
+    setSaving(false);
   };
 
-  const confirmEdit = (updatedData) => {
-    handleEditPageInfo(updatedData);
-    setIsEditing(false);
+  const confirmEdit = async (updatedData) => {
+    try {
+      setSaving(true);
+      await handleEditPageInfo(updatedData);
+      setIsEditing(false);
+    } finally {
+      setSaving(false);
+    }
   };
 
-  const editingActions = [
-    <Button
-      key="save"
-      icon={<CheckCircleOutlined />}
-      onClick={() => editFormRef.current?.submit()}
-      className="page-card-btn page-card-btn-primary !mr-0"
-    >
-      Update Page
-    </Button>,
-    <Button
-      key="cancel"
-      icon={<CloseCircleOutlined />}
-      onClick={cancelEditing}
-      className="page-card-btn page-card-btn-muted !mr-0"
-    >
-      Cancel
-    </Button>,
-  ];
-
-  const defaultActions = [
+  const actions = [
     <Button
       key="edit"
       icon={<EditOutlined />}
@@ -133,16 +120,12 @@ const PageCard = ({
   ].filter(Boolean);
 
   return (
-    <Card
-      hoverable
-      actions={isEditing ? editingActions : defaultActions}
-      className="media-card slider-card page-list-card overflow-hidden shadow-md rounded-md"
-    >
-      {isEditing ? (
-        <div className="pt-3" onClick={(e) => e.stopPropagation()}>
-          <PageEditForm ref={editFormRef} page={page} onSubmit={confirmEdit} />
-        </div>
-      ) : (
+    <>
+      <Card
+        hoverable
+        actions={actions}
+        className="media-card slider-card page-list-card overflow-hidden shadow-md rounded-md"
+      >
         <div className="flex flex-col pt-3">
           <div className="media-card-meta flex items-center justify-between gap-3">
             <div className="flex min-w-0 items-center gap-2">
@@ -206,8 +189,50 @@ const PageCard = ({
             </div>
           )}
         </div>
-      )}
-    </Card>
+      </Card>
+
+      <Drawer
+        open={isEditing}
+        onClose={cancelEditing}
+        title={
+          <div className="flex items-center gap-2">
+            <img
+              src={
+                type === "Footer"
+                  ? "/icons/headless/footer.svg"
+                  : "/icons/headless/forms.svg"
+              }
+              alt={entityLabel}
+              className="w-6"
+              onError={(e) => {
+                e.currentTarget.style.display = "none";
+              }}
+            />
+            <span>Edit {entityLabel}</span>
+          </div>
+        }
+        placement="right"
+        width="min(720px, 92vw)"
+        destroyOnClose
+        rootClassName="media-preview-drawer org-form-drawer"
+        footer={
+          <div className="flex w-full justify-end">
+            <Button
+              type="primary"
+              loading={saving}
+              onClick={() => editFormRef.current?.submit()}
+              className="headlessbutton headlessbutton-pill !mr-0"
+            >
+              Update {entityLabel}
+            </Button>
+          </div>
+        }
+      >
+        {isEditing && (
+          <PageEditForm ref={editFormRef} page={page} onSubmit={confirmEdit} />
+        )}
+      </Drawer>
+    </>
   );
 };
 
