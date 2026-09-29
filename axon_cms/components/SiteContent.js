@@ -146,7 +146,7 @@ const SiteContent = ({ children }) => {
       {/* Fixed Header */}
       <Header
         className="fixed top-0 left-0 right-0 z-50 bg-white shadow-md flex
-      items-center px-3 sm:px-4 md:px-6 lg:px-8 h-16"
+      items-center px-[var(--shell-gap)] h-16"
       >
         <NavItems
           user={user}
@@ -158,6 +158,7 @@ const SiteContent = ({ children }) => {
           showMenuButton={shouldShowSidebar && isMobile}
           mobileMenuOpen={mobileOpen}
           onMenuToggle={() => setMobileOpen((open) => !open)}
+          sidebarWidth={shouldShowSidebar && !isMobile ? sidebarWidth : 0}
         />
       </Header>
 

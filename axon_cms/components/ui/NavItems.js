@@ -11,7 +11,7 @@ import {
   CloseOutlined,
   StopOutlined,
 } from "@ant-design/icons";
-import { Input, Layout, Dropdown, Button, Tooltip, message, Modal } from "antd";
+import { Layout, Dropdown, Button, Tooltip, message, Modal } from "antd";
 import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/router";
 import TopNavData from "../../src/data/topnavdata.json";
@@ -33,6 +33,7 @@ export default function NavItems({
   showMenuButton = false,
   mobileMenuOpen = false,
   onMenuToggle,
+  sidebarWidth = 0,
 }) {
   const [hovered, setHovered] = useState(false);
   const [topNavData, setTopNavData] = useState([]);
@@ -180,9 +181,20 @@ export default function NavItems({
 
   return (
     <Layout.Header
-      className="flex h-16 w-full items-center justify-between gap-2 bg-transparent px-0"
+      className="flex h-16 w-full items-center gap-2 bg-transparent px-0"
     >
-      <div className="flex min-w-0 items-center gap-2 sm:gap-4 md:gap-8">
+      {/* Brand column matches sidebar so content section lines up with page cards */}
+      <div
+        className="flex shrink-0 items-center gap-2 sm:gap-4"
+        style={
+          sidebarWidth
+            ? {
+                width: `${sidebarWidth}px`,
+                minWidth: `${sidebarWidth}px`,
+              }
+            : undefined
+        }
+      >
         {showMenuButton && (
           <button
             type="button"
@@ -209,14 +221,23 @@ export default function NavItems({
             objectPosition="left"
           />
         </div>
+      </div>
+
+      {/* Aligns with page header cards (e.g. Organizations) */}
+      <div
+        className="flex min-w-0 flex-1 items-center justify-between gap-2"
+        style={{
+          paddingLeft: sidebarWidth ? "var(--shell-gap)" : undefined,
+        }}
+      >
         {user?.is_super_admin ? (
           <OrganizationSelector />
         ) : (
           organization?.name && (
-            <div className="hidden md:flex items-center gap-2">
+            <div className="hidden h-10 items-center md:flex">
               <div
-                className="px-3 py-1 rounded-lg text-xs font-semibold text-white
-                  bg-brand shadow-sm max-w-[180px] truncate"
+                className="flex h-10 max-w-[180px] items-center truncate rounded-lg bg-brand
+                  px-3 text-xs font-semibold text-white shadow-sm"
                 title={organization.name}
               >
                 {organization.name}
@@ -224,17 +245,16 @@ export default function NavItems({
             </div>
           )
         )}
-      </div>
 
       {user && token ? (
         <>
           {/* Navigation Tabs */}
-          <div className="hidden lg:flex items-center gap-4 mx-2 flex-1 justify-center">
+          <div className="mx-2 hidden flex-1 items-center justify-center gap-4 lg:flex">
             {topNavData &&
               topNavData?.map((item) => (
                 <Link key={item.name} href={item.link}>
                   <div
-                    className={`px-3.5 py-1 rounded-lg text-base font-semibold cursor-pointer
+                    className={`cursor-pointer rounded-lg px-3.5 py-1 text-base font-semibold
                       ${topNavData && item === topNavData[topNavData.length - 1] ? "flex gap-2 text-white headlessaibutton" : "headlesstopnavbutton"}
                       transition-all duration-200 ${selectedMenuItem === item.name
                         ? "text-brand bg-brand-light"
@@ -253,19 +273,28 @@ export default function NavItems({
           </div>
 
           {/* User Actions */}
-          <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
+          <div className="flex h-10 flex-shrink-0 items-center gap-2 sm:gap-3">
             {/* Search Bar - Desktop only on larger screens */}
-            <div className="hidden xl:flex items-center gap-2 mr-2">
-              <div className="relative" ref={searchRef}>
-              <Input
-                placeholder="Search..."
-                prefix={<SearchOutlined className="text-gray-400 text-base" />}
-                className="h-10 w-64 rounded-lg border-gray-200 text-base
-                  focus:border-brand hover:border-brand xl:w-80 2xl:w-[28rem]"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-                onFocus={() => searchQuery && setShowSearchResults(true)}
-              />
+            <div className="hidden h-10 items-center xl:flex">
+              <div className="relative h-10" ref={searchRef}>
+              <label
+                className="box-border flex h-10 w-64 cursor-text items-center gap-2
+                  rounded-lg border border-gray-200 bg-white px-3 shadow-none
+                  transition duration-200 hover:border-brand focus-within:border-brand
+                  xl:w-80 2xl:w-[28rem]"
+              >
+                <SearchOutlined className="shrink-0 text-base text-gray-400" />
+                <input
+                  type="search"
+                  placeholder="Search..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onFocus={() => searchQuery && setShowSearchResults(true)}
+                  className="h-full min-w-0 flex-1 appearance-none border-0 bg-transparent p-0
+                    text-base text-gray-800 outline-none placeholder:text-gray-400
+                    [&::-webkit-search-cancel-button]:hidden"
+                />
+              </label>
 
               {/* Search Results Dropdown */}
               {showSearchResults && searchResults.length > 0 && (
@@ -349,18 +378,17 @@ export default function NavItems({
               overlayClassName="user-profile-dropdown"
             >
               <div
-                className="w-10 h-10 flex items-center justify-center rounded-lg
-                  bg-brand hover:bg-brand-dark
-                  cursor-pointer transition-all duration-200 hover:scale-105
-                  shadow-sm hover:shadow-md"
+                className="flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg
+                  bg-brand shadow-sm transition-all duration-200
+                  hover:scale-105 hover:bg-brand-dark hover:shadow-md"
               >
-                <UserOutlined className="text-white text-lg" />
+                <UserOutlined className="text-lg text-white" />
               </div>
             </Dropdown>
           </div>
         </>
       ) : (
-        <div className="flex justify-end flex-shrink-0">
+        <div className="flex flex-shrink-0 justify-end">
           <Button
             icon={<LoginOutlined className="text-base" />}
             onClick={() => router.push("/login")}
@@ -371,6 +399,7 @@ export default function NavItems({
           </Button>
         </div>
       )}
+      </div>
     </Layout.Header>
   );
 }
