@@ -6,11 +6,16 @@ import instance from "../../axios";
 import { cachedApiCall } from "../../utils/apiUtils";
 import { useGlobalRefresh } from "../../src/context/MenuRefreshContext";
 import { useRouter } from "next/router";
+import { setPageTitle } from "../../global/constants/pageTitle";
 import PagesHeader from "../../components/PageBuilder/PagesHeader";
 import CreateFooterModal from "../../components/PageBuilder/CreateFooterModal";
 import RenderPages from "../../components/PageBuilder/Renderpages";
 
 const Footers = () => {
+  useEffect(() => {
+    setPageTitle("Footers");
+  }, []);
+
   const [allFooters, setAllFooters] = useState([]);
   const [loading, setLoading] = useState(true);
   const [createFooterModalVisible, setCreateFooterModalVisible] =

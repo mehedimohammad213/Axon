@@ -6,12 +6,17 @@ import instance from "../../axios";
 import { cachedApiCall, fetchAllPaginated } from "../../utils/apiUtils";
 import { useGlobalRefresh } from "../../src/context/MenuRefreshContext";
 import { useRouter } from "next/router";
+import { setPageTitle } from "../../global/constants/pageTitle";
 import PagesHeader from "../../components/PageBuilder/PagesHeader";
 import CreatePageModal from "../../components/PageBuilder/CreatePageModal";
 import RenderPages from "../../components/PageBuilder/Renderpages";
 import { menuItemLinksToPage } from "../../utils/menuItemPageLink";
 
 const Pages = () => {
+  useEffect(() => {
+    setPageTitle("Pages");
+  }, []);
+
   const [allPages, setAllPages] = useState([]);
   const [menuItems, setMenuItems] = useState([]);
   const [loading, setLoading] = useState(true);
