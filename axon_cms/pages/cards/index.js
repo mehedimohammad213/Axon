@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Empty, message, Spin, Pagination, Form } from "antd";
 import { AppstoreOutlined } from "@ant-design/icons";
 import instance from "../../axios";
-import CardsHeader from "../../components/cards/CardsHeader";
+import CardsHeader, { getCardTabItems } from "../../components/cards/CardsHeader";
 import CardsList from "../../components/cards/CardsList";
 import CreateCardForm from "../../components/cards/CreateCardForm";
 import CardsPreviewModal from "../../components/cards/CardsPreviewModal";
@@ -283,6 +283,9 @@ const CardsPage = () => {
         handleTagFilterChange={handleTagFilterChange}
         onRefresh={fetchData}
         itemCount={cardsData.length}
+        tabItems={getCardTabItems(filteredCards.length)}
+        activeTab={viewType}
+        onTabChange={setViewType}
       />
 
       {isCreateCardFormVisible && (
@@ -313,7 +316,6 @@ const CardsPage = () => {
             onDeleteCard={handleDeleteCard}
             onPreviewCard={handlePreviewCard}
             onEditCard={handleEditClick}
-            onViewTypeChange={setViewType}
           />
         </div>
       ) : (

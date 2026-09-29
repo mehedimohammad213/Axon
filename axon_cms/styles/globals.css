@@ -1912,121 +1912,84 @@ main.headlesscontainer {
   background-color: #e11d48 !important;
 }
 
-/* Media gallery filter tabs — separate cards for filters + content */
-.media-filter-tabs > .ant-tabs-nav {
-  margin-bottom: 1rem !important;
-  padding: 0.75rem 1rem;
-  background: #ffffff;
-  border: 1px solid #e5e7eb;
-  border-radius: 1rem;
-  box-shadow: 0 1px 2px rgb(15 23 42 / 0.04);
-  width: 100%;
-  max-width: 100%;
-}
-
-.media-filter-tabs > .ant-tabs-nav::before {
-  display: none !important;
-  border: none !important;
-}
-
-.media-filter-tabs .ant-tabs-nav-wrap {
-  overflow-x: auto;
-}
-
-.media-filter-tabs .ant-tabs-nav-list {
+/* Shared media/content tab bar — matches Sort (Newest/Oldest) toggle */
+.media-tab-bar {
   display: flex;
-  gap: 0.25rem;
-  padding: 0;
-  background: transparent;
-  border-radius: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.15rem;
   width: fit-content;
   max-width: 100%;
-}
-
-.media-filter-tabs .ant-tabs-tab {
-  margin: 0 !important;
-  padding: 0.4rem 0.85rem !important;
-  border: none !important;
-  border-radius: 9999px !important;
-  background: transparent !important;
-  transition:
-    background-color 0.15s ease,
-    color 0.15s ease,
-    box-shadow 0.15s ease;
-}
-
-.media-filter-tabs .ant-tabs-tab + .ant-tabs-tab {
-  margin-left: 0 !important;
-}
-
-.media-filter-tabs .ant-tabs-tab-btn {
-  color: var(--gray-dark) !important;
-  font-size: 0.8125rem !important;
-  font-weight: 600 !important;
-  letter-spacing: 0 !important;
-}
-
-.media-filter-tabs .ant-tabs-tab:hover {
-  background: var(--theme-transparent) !important;
-}
-
-.media-filter-tabs .ant-tabs-tab:hover .ant-tabs-tab-btn {
-  color: var(--theme) !important;
-}
-
-.media-filter-tabs .ant-tabs-tab-active {
-  background: var(--theme-transparent) !important;
+  margin: 0 auto;
+  padding: 0.15rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.5rem;
   box-shadow: none;
 }
 
-.media-filter-tabs .ant-tabs-tab-active .ant-tabs-tab-btn {
-  color: var(--theme) !important;
-}
-
-.media-filter-tabs .ant-tabs-ink-bar {
-  display: none !important;
-}
-
-.media-filter-tabs .media-tab-label {
+.media-tab-bar-item {
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
+  margin: 0;
+  padding: 0.35rem 0.75rem;
+  border: none;
+  border-radius: 0.375rem;
+  background: transparent;
+  color: #4b5563;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  line-height: 1.25;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
 }
 
-.media-filter-tabs .media-tab-icon {
+.media-tab-bar-item:hover {
+  background: #ffffff;
+  color: #1f2937;
+}
+
+.media-tab-bar-item.is-active {
+  background: var(--theme) !important;
+  color: #ffffff !important;
+}
+
+.media-tab-bar .media-tab-label {
   display: inline-flex;
   align-items: center;
-  font-size: 0.9rem;
-  opacity: 0.85;
-  color: inherit;
+  gap: 0.35rem;
 }
 
-.media-filter-tabs .ant-tabs-tab-active .media-tab-icon {
-  color: var(--theme) !important;
-  opacity: 1;
-}
-
-.media-filter-tabs .media-tab-count {
+.media-tab-bar .media-tab-count {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 1.35rem;
-  height: 1.35rem;
-  padding: 0 0.4rem;
-  border-radius: 9999px;
-  background: rgba(15, 23, 42, 0.06);
-  color: var(--gray-dark);
-  font-size: 0.7rem;
-  font-weight: 700;
+  min-width: auto;
+  height: auto;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  font-size: 0.8125rem;
+  font-weight: 600;
   line-height: 1;
 }
 
-.media-filter-tabs .ant-tabs-tab-active .media-tab-count {
-  background: rgba(58, 142, 230, 0.15);
-  color: var(--theme) !important;
+.media-tab-bar-item.is-active .media-tab-count {
+  background: transparent;
+  color: inherit;
 }
 
-.media-filter-tabs .ant-tabs-content-holder {
+/* Content-only white card (no tab nav) */
+.media-filter-tabs.media-filter-tabs--content-only > .ant-tabs-nav {
+  display: none !important;
+}
+
+.media-filter-tabs .ant-tabs-content-holder,
+.media-content-card {
   background: #ffffff;
   border: 1px solid #e5e7eb;
   border-radius: 1rem;
@@ -2034,28 +1997,8 @@ main.headlesscontainer {
   padding: 1rem;
 }
 
-.media-filter-tabs .ant-tabs-content,
-.media-filter-tabs .ant-tabs-tabpane {
-  outline: none;
-}
-
 @media (max-width: 640px) {
-  .media-filter-tabs > .ant-tabs-nav {
-    padding: 0.65rem;
-  }
-
-  .media-filter-tabs .ant-tabs-nav-list {
-    width: 100%;
-  }
-
-  .media-filter-tabs .media-tab-text {
-    display: none;
-  }
-
-  .media-filter-tabs .media-tab-label {
-    gap: 0.25rem;
-  }
-
+  .media-content-card,
   .media-filter-tabs .ant-tabs-content-holder {
     padding: 0.75rem;
   }

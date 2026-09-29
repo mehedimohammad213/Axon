@@ -9,8 +9,20 @@ import {
 } from "@ant-design/icons";
 import Image from "next/image";
 import { copyApiEndpoint } from "../../utils/copyApiEndpoint";
+import MediaTabBar, { MediaTabLabel } from "../ui/MediaTabBar";
 
 const { Option } = Select;
+
+export const getCardTabItems = (count = 0) => [
+  {
+    key: "grid",
+    label: <MediaTabLabel label="Grid" count={count} />,
+  },
+  {
+    key: "list",
+    label: <MediaTabLabel label="List" count={count} />,
+  },
+];
 
 const CardsHeader = ({
   onAddCard,
@@ -27,6 +39,9 @@ const CardsHeader = ({
   handlePageFilterChange,
   onRefresh,
   itemCount,
+  tabItems,
+  activeTab,
+  onTabChange,
 }) => {
   const [isFilterModalVisible, setIsFilterModalVisible] = useState(false);
   const [form] = Form.useForm();
@@ -119,8 +134,8 @@ const CardsHeader = ({
       </div>
 
       <div className="rounded-2xl border border-gray-200 bg-white p-4 shadow-sm sm:p-5">
-        <div className="flex flex-col items-stretch justify-between gap-4 lg:flex-row lg:items-center">
-          <div className="flex flex-wrap items-center gap-4">
+        <div className="grid grid-cols-1 items-center gap-4 lg:grid-cols-[1fr_auto_1fr]">
+          <div className="flex flex-wrap items-center gap-4 lg:justify-start">
             <div className="flex items-center gap-2">
               <span className="text-sm font-medium text-gray-600">Sort</span>
               <div className="flex items-center rounded-lg border border-gray-200 bg-gray-50 p-0.5">
@@ -160,7 +175,15 @@ const CardsHeader = ({
             </Button>
           </div>
 
-          <div className="flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center lg:w-auto">
+          <div className="flex justify-center order-first lg:order-none">
+            <MediaTabBar
+              items={tabItems}
+              activeKey={activeTab}
+              onChange={onTabChange}
+            />
+          </div>
+
+          <div className="flex w-full flex-col items-stretch gap-3 sm:flex-row sm:items-center lg:w-auto lg:justify-end">
             <div className="flex items-center gap-2">
               <span className="text-sm font-medium text-gray-600">Show</span>
               <Select

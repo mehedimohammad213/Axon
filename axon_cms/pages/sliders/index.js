@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { message, Spin, Form } from "antd";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import instance from "../../axios";
-import SliderList from "../../components/slider/SliderList";
+import SliderList, { getSliderTabItems } from "../../components/slider/SliderList";
 import SliderForm from "../../components/slider/SliderForm";
 import SlidersHeader from "../../components/slider/SlidersHeader";
 import SliderPreviewModal from "../../components/slider/SliderPreviewModal";
@@ -26,6 +26,7 @@ const Sliders = () => {
   const [itemsPerPage, setItemsPerPage] = useState(10);
   const [previewSlider, setPreviewSlider] = useState(null);
   const [isPreviewVisible, setIsPreviewVisible] = useState(false);
+  const [activeTab, setActiveTab] = useState("1");
 
   // NEW: We’ll collect all unique tags here
   const [allTags, setAllTags] = useState([]);
@@ -262,6 +263,12 @@ const Sliders = () => {
         setSelectedTag={setSelectedTag}
         onRefresh={fetchSliders}
         itemCount={allSliders.length}
+        tabItems={getSliderTabItems({
+          imageCount: imageSliders.length,
+          cardCount: cardSliders.length,
+        })}
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
       />
 
       {/* Slider Form Modal */}
@@ -294,6 +301,7 @@ const Sliders = () => {
       ) : (
         <div className="mt-6">
           <SliderList
+            activeTab={activeTab}
             imageSliders={imageSliders}
             cardSliders={cardSliders}
             CustomNextArrow={CustomNextArrow}

@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useMemo } from "react";
 import { Modal, Spin } from "antd";
 import GalleryHeader from "./GalleryHeader";
-import MediaTabs from "./MediaTabs";
+import MediaTabs, { getMediaTabItems } from "./MediaTabs";
 import PaginationComponent from "./PaginationComponent";
 import PreviewModal from "./PreviewModal";
 import UploadMediaTabs from "./UploadMediaTabs";
@@ -10,7 +10,6 @@ import { setPageTitle } from "../../global/constants/pageTitle";
 import { useGlobalRefresh } from "../../src/context/MenuRefreshContext";
 
 const Gallery = () => {
-  // Use the custom hook to manage media data
   const {
     mediaAssets,
     totalMediaAssets,
@@ -18,37 +17,30 @@ const Gallery = () => {
     currentPage,
     itemsPerPage,
     sortType,
-    searchText,
-    selectedTag,
     handlePageChange,
     handleItemsPerPageChange,
     handleSortTypeChange,
     handleSearch,
     handleTagFilterChange,
-    addMedia, // This function adds media to the state and IndexedDB
+    addMedia,
     editMedia,
     deleteMedia,
-    isIndexedDBLoaded,
     refreshMedia,
   } = useMediaData();
 
-  // UI States for Modals
   const [isPreviewModalVisible, setIsPreviewModalVisible] = useState(false);
-  const [selectedMedia, setSelectedMedia] = React.useState(null);
-  const [isUploadModalVisible, setIsUploadModalVisible] = React.useState(false);
+  const [selectedMedia, setSelectedMedia] = useState(null);
+  const [isUploadModalVisible, setIsUploadModalVisible] = useState(false);
   const [isEditMode, setIsEditMode] = useState(false);
-
-  // State for Unique Tags
+  const [activeTab, setActiveTab] = useState("0");
   const [uniqueTags, setUniqueTags] = useState([]);
 
-  // Set the page title
   useEffect(() => {
     setPageTitle("Media Library");
   }, []);
 
   useGlobalRefresh(refreshMedia);
 
-  // Extract unique tags from mediaAssets
   useEffect(() => {
     const tagsSet = new Set();
     mediaAssets.forEach((media) => {
@@ -59,7 +51,30 @@ const Gallery = () => {
     setUniqueTags([...tagsSet]);
   }, [mediaAssets]);
 
-  // Handlers for opening and closing modals
+  const images = useMemo(
+    () => mediaAssets.filter((m) => m.file_type?.startsWith("image/")),
+    [mediaAssets]
+  );
+  const videos = useMemo(
+    () => mediaAssets.filter((m) => m.file_type?.startsWith("video/")),
+    [mediaAssets]
+  );
+  const docs = useMemo(
+    () => mediaAssets.filter((m) => m.file_type === "application/pdf"),
+    [mediaAssets]
+  );
+
+  const tabItems = useMemo(
+    () =>
+      getMediaTabItems({
+        allMedia: mediaAssets,
+        images,
+        videos,
+        docs,
+      }),
+    [mediaAssets, images, videos, docs]
+  );
+
   const handleAddMedia = () => setIsUploadModalVisible(true);
   const handleUploadModalClose = () => setIsUploadModalVisible(false);
 
@@ -81,7 +96,6 @@ const Gallery = () => {
     setIsEditMode(false);
   };
 
-  // Callback function to update mediaAssets after upload
   const handleMediaUploadSuccess = async (newMedia) => {
     if (newMedia?.length || newMedia?.id) {
       await addMedia(newMedia);
@@ -92,7 +106,6 @@ const Gallery = () => {
 
   return (
     <div className="gallery-page">
-      {/* Upload Modal */}
       <Modal
         title={
           <div className="flex items-center gap-2 border-b border-gray-200 pb-4">
@@ -106,12 +119,11 @@ const Gallery = () => {
         destroyOnClose
       >
         <UploadMediaTabs
-          onUploadSuccess={handleMediaUploadSuccess} // Pass the callback
+          onUploadSuccess={handleMediaUploadSuccess}
           addMedia={addMedia}
         />
       </Modal>
 
-      {/* Preview Modal */}
       {selectedMedia && (
         <PreviewModal
           visible={isPreviewModalVisible}
@@ -126,16 +138,12 @@ const Gallery = () => {
           }
           handleEdit={editMedia}
           initialEditMode={isEditMode}
-          availableTags={uniqueTags} // Pass uniqueTags to PreviewModal
+          availableTags={uniqueTags}
         />
       )}
 
-      {/* Gallery Header */}
       <GalleryHeader
         onCreate={handleAddMedia}
-        onFilter={() => {
-          /* Implement if needed */
-        }}
         onSearch={handleSearch}
         onTagFilterChange={handleTagFilterChange}
         onItemsPerPageChange={handleItemsPerPageChange}
@@ -145,9 +153,11 @@ const Gallery = () => {
         availableTags={uniqueTags}
         onRefresh={refreshMedia}
         itemCount={totalMediaAssets}
+        tabItems={tabItems}
+        activeTab={activeTab}
+        onTabChange={setActiveTab}
       />
 
-      {/* Media Grid or Loading Spinner */}
       {isLoading ? (
         <div className="mt-6 flex items-center justify-center py-20">
           <Spin size="large" />
@@ -155,14 +165,15 @@ const Gallery = () => {
       ) : (
         <div className="mt-6">
           <MediaTabs
-          allMedia={mediaAssets}
-          images={mediaAssets.filter((m) => m.file_type?.startsWith("image/"))}
-          videos={mediaAssets.filter((m) => m.file_type?.startsWith("video/"))}
-          docs={mediaAssets.filter((m) => m.file_type === "application/pdf")}
-          handleEdit={handleEditClick}
-          handleDelete={deleteMedia}
-          handlePreview={handlePreview}
-        />
+            activeTab={activeTab}
+            allMedia={mediaAssets}
+            images={images}
+            videos={videos}
+            docs={docs}
+            handleEdit={handleEditClick}
+            handleDelete={deleteMedia}
+            handlePreview={handlePreview}
+          />
         </div>
       )}
 

@@ -1,29 +1,63 @@
 // components/Gallery/MediaTabs.jsx
 
 import React, { useMemo } from "react";
-import { Tabs } from "antd";
-import {
-  AppstoreOutlined,
-  CloudOutlined,
-  FileOutlined,
-  FileTextOutlined,
-  PictureOutlined,
-  VideoCameraOutlined,
-} from "@ant-design/icons";
 import MediaGrid from "./MediaGrid";
 import Cloudinary from "./Cloudinary";
+import { MediaTabLabel } from "../ui/MediaTabBar";
 
-const TabLabel = ({ icon, label, count }) => (
-  <span className="media-tab-label">
-    <span className="media-tab-icon">{icon}</span>
-    <span className="media-tab-text">{label}</span>
-    {typeof count === "number" && (
-      <span className="media-tab-count">{count}</span>
-    )}
-  </span>
-);
+export const getMediaTabItems = ({ allMedia, images, videos, docs }) => {
+  const officeDocs = (docs || []).filter(
+    (doc) =>
+      doc.file_type?.includes("word") ||
+      doc.file_type?.includes("excel") ||
+      doc.file_type?.includes("powerpoint") ||
+      doc.file_type?.includes("officedocument") ||
+      doc.file_type?.includes("msword") ||
+      doc.file_type?.includes("spreadsheet") ||
+      doc.file_type?.includes("presentation")
+  );
+
+  const otherDocs = (docs || []).filter(
+    (doc) =>
+      !doc.file_type?.includes("word") &&
+      !doc.file_type?.includes("excel") &&
+      !doc.file_type?.includes("powerpoint") &&
+      !doc.file_type?.includes("officedocument") &&
+      !doc.file_type?.includes("msword") &&
+      !doc.file_type?.includes("spreadsheet") &&
+      !doc.file_type?.includes("presentation")
+  );
+
+  return [
+    {
+      key: "0",
+      label: <MediaTabLabel label="All" count={allMedia?.length || 0} />,
+    },
+    {
+      key: "1",
+      label: <MediaTabLabel label="Images" count={images?.length || 0} />,
+    },
+    {
+      key: "2",
+      label: <MediaTabLabel label="Videos" count={videos?.length || 0} />,
+    },
+    {
+      key: "3",
+      label: <MediaTabLabel label="Office" count={officeDocs.length} />,
+    },
+    {
+      key: "4",
+      label: <MediaTabLabel label="Docs" count={otherDocs.length} />,
+    },
+    {
+      key: "5",
+      label: <MediaTabLabel label="Cloudinary" />,
+    },
+  ];
+};
 
 const MediaTabs = ({
+  activeTab = "0",
   allMedia,
   images,
   videos,
@@ -35,7 +69,7 @@ const MediaTabs = ({
 }) => {
   const officeDocs = useMemo(
     () =>
-      docs.filter(
+      (docs || []).filter(
         (doc) =>
           doc.file_type?.includes("word") ||
           doc.file_type?.includes("excel") ||
@@ -50,7 +84,7 @@ const MediaTabs = ({
 
   const otherDocs = useMemo(
     () =>
-      docs.filter(
+      (docs || []).filter(
         (doc) =>
           !doc.file_type?.includes("word") &&
           !doc.file_type?.includes("excel") &&
@@ -63,133 +97,63 @@ const MediaTabs = ({
     [docs]
   );
 
-  const items = useMemo(
-    () => [
-      {
-        key: "0",
-        label: (
-          <TabLabel
-            icon={<AppstoreOutlined />}
-            label="All"
-            count={allMedia.length}
-          />
-        ),
-        children: (
-          <MediaGrid
-            mediaItems={allMedia}
-            handleEdit={handleEdit}
-            handleDelete={handleDelete}
-            handlePreview={handlePreview}
-            availableTags={availableTags}
-          />
-        ),
-      },
-      {
-        key: "1",
-        label: (
-          <TabLabel
-            icon={<PictureOutlined />}
-            label="Images"
-            count={images.length}
-          />
-        ),
-        children: (
-          <MediaGrid
-            mediaItems={images}
-            mediaType="image"
-            handleEdit={handleEdit}
-            handleDelete={handleDelete}
-            handlePreview={handlePreview}
-            availableTags={availableTags}
-          />
-        ),
-      },
-      {
-        key: "2",
-        label: (
-          <TabLabel
-            icon={<VideoCameraOutlined />}
-            label="Videos"
-            count={videos.length}
-          />
-        ),
-        children: (
-          <MediaGrid
-            mediaItems={videos}
-            mediaType="video"
-            handleEdit={handleEdit}
-            handleDelete={handleDelete}
-            handlePreview={handlePreview}
-            availableTags={availableTags}
-          />
-        ),
-      },
-      {
-        key: "3",
-        label: (
-          <TabLabel
-            icon={<FileTextOutlined />}
-            label="Office"
-            count={officeDocs.length}
-          />
-        ),
-        children: (
-          <MediaGrid
-            mediaItems={officeDocs}
-            mediaType="document"
-            handleEdit={handleEdit}
-            handleDelete={handleDelete}
-            handlePreview={handlePreview}
-            availableTags={availableTags}
-          />
-        ),
-      },
-      {
-        key: "4",
-        label: (
-          <TabLabel
-            icon={<FileOutlined />}
-            label="Docs"
-            count={otherDocs.length}
-          />
-        ),
-        children: (
-          <MediaGrid
-            mediaItems={otherDocs}
-            mediaType="document"
-            handleEdit={handleEdit}
-            handleDelete={handleDelete}
-            handlePreview={handlePreview}
-            availableTags={availableTags}
-          />
-        ),
-      },
-      {
-        key: "5",
-        label: <TabLabel icon={<CloudOutlined />} label="Cloudinary" />,
-        children: <Cloudinary availableTags={availableTags} />,
-      },
-    ],
-    [
-      allMedia,
-      images,
-      videos,
-      officeDocs,
-      otherDocs,
-      handleEdit,
-      handleDelete,
-      handlePreview,
-      availableTags,
-    ]
-  );
+  const contentByKey = {
+    "0": (
+      <MediaGrid
+        mediaItems={allMedia}
+        handleEdit={handleEdit}
+        handleDelete={handleDelete}
+        handlePreview={handlePreview}
+        availableTags={availableTags}
+      />
+    ),
+    "1": (
+      <MediaGrid
+        mediaItems={images}
+        mediaType="image"
+        handleEdit={handleEdit}
+        handleDelete={handleDelete}
+        handlePreview={handlePreview}
+        availableTags={availableTags}
+      />
+    ),
+    "2": (
+      <MediaGrid
+        mediaItems={videos}
+        mediaType="video"
+        handleEdit={handleEdit}
+        handleDelete={handleDelete}
+        handlePreview={handlePreview}
+        availableTags={availableTags}
+      />
+    ),
+    "3": (
+      <MediaGrid
+        mediaItems={officeDocs}
+        mediaType="document"
+        handleEdit={handleEdit}
+        handleDelete={handleDelete}
+        handlePreview={handlePreview}
+        availableTags={availableTags}
+      />
+    ),
+    "4": (
+      <MediaGrid
+        mediaItems={otherDocs}
+        mediaType="document"
+        handleEdit={handleEdit}
+        handleDelete={handleDelete}
+        handlePreview={handlePreview}
+        availableTags={availableTags}
+      />
+    ),
+    "5": <Cloudinary availableTags={availableTags} />,
+  };
 
   return (
-    <Tabs
-      defaultActiveKey="0"
-      animated
-      items={items}
-      className="media-filter-tabs"
-    />
+    <div className="media-content-card">
+      {contentByKey[activeTab] || contentByKey["0"]}
+    </div>
   );
 };
 
