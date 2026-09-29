@@ -167,13 +167,10 @@ export default function Login() {
 
         <div className="absolute inset-0 flex flex-col items-center justify-center p-12 xl:p-16 z-10 text-center">
           <div className="max-w-md">
-            <p className="text-sm font-medium text-white/80 mb-3 tracking-wide">
-              Axon
-            </p>
-            <h2 className="text-3xl xl:text-4xl font-semibold text-white leading-tight tracking-tight mb-4">
+            <h2 className="text-3xl xl:text-4xl font-semibold text-black leading-tight tracking-tight mb-4">
               Manage content with clarity and speed
             </h2>
-            <p className="text-[15px] text-white/85 leading-relaxed">
+            <p className="text-[15px] text-black leading-relaxed">
               Build pages, organize media, and publish across sites from one
               calm workspace designed for modern teams.
             </p>
