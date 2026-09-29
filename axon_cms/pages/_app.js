@@ -23,8 +23,8 @@ function MyApp({ Component, pageProps }) {
     <Provider store={store}>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="icon" type="image/svg+xml" href="/images/headless_favicon.svg" />
+        <link rel="icon" href="/favicon.ico?v=axon2" />
+        <link rel="icon" type="image/svg+xml" href="/images/headless_favicon.svg?v=axon2" />
       </Head>
       <AuthProvider>
         <MenuRefreshProvider>
