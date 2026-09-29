@@ -303,15 +303,15 @@ const NavbarRow = ({
       key="save"
       icon={<CheckCircleOutlined />}
       onClick={handleUpdate}
-      className="headlessbutton headlessbutton-pill !mr-0"
+      className="page-card-btn page-card-btn-primary !mr-0"
     >
-      Save changes
+      Save
     </Button>,
     <Button
       key="cancel"
       icon={<CloseCircleOutlined />}
       onClick={cancelEditing}
-      className="headlesscancelbutton headlessbutton-pill !mr-0"
+      className="page-card-btn page-card-btn-muted !mr-0"
     >
       Cancel
     </Button>,
@@ -322,16 +322,16 @@ const NavbarRow = ({
       key="edit"
       icon={<EditOutlined />}
       onClick={startEditing}
-      className="headlessbutton headlessbutton-pill !mr-0"
+      className="page-card-btn page-card-btn-primary !mr-0"
     >
       Edit
     </Button>,
     <Popconfirm
       key="delete"
-      title="Delete this navbar?"
-      description="This cannot be undone."
+      title="Move this navbar to trash?"
+      description="You can restore it later from Trash."
       onConfirm={handleDelete}
-      okText="Delete"
+      okText="Move to trash"
       cancelText="Cancel"
       okButtonProps={{
         danger: true,
@@ -342,10 +342,10 @@ const NavbarRow = ({
       }}
     >
       <Button
-        className="headlesscancelbutton headlessbutton-pill !mr-0"
+        className="page-card-btn page-card-btn-danger !mr-0"
         icon={<DeleteOutlined />}
       >
-        Delete
+        Trash
       </Button>
     </Popconfirm>,
   ];

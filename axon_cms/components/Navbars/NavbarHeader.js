@@ -101,7 +101,7 @@ const NavbarHeader = ({
               onClick={onAddNavbar}
               className="headlessbutton headlessbutton-pill !mr-0"
             >
-              Add Navbar
+              Create Navbar
             </Button>
             <Tooltip title="Refresh">
               <Button
