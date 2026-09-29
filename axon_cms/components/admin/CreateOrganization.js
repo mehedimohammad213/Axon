@@ -120,34 +120,33 @@ export default function CreateOrganization({
         users: [{ role_title: "Admin" }],
       }}
     >
-      <Form.Item
-        label="Organization Name"
-        name="name"
-        rules={[{ required: true, message: "Please enter the organization name" }]}
-      >
-        <Input placeholder="Acme Corp" />
-      </Form.Item>
-
-      <Form.Item label="Organization Email" name="email">
-        <Input type="email" placeholder="contact@acme.com" />
-      </Form.Item>
-
-      <Form.Item label="Phone" name="phone">
-        <Input placeholder="+1 555 0100" />
-      </Form.Item>
-
       <div
         style={{
-          fontWeight: 600,
-          marginBottom: 12,
-          marginTop: 8,
+          border: "1px solid #e8eef5",
+          borderRadius: 12,
+          padding: 16,
+          marginBottom: 16,
+          background: "#ffffff",
         }}
       >
-        Organization Users
+        <div className="grid gap-x-4 md:grid-cols-2">
+          <Form.Item
+            label="Organization Name"
+            name="name"
+            rules={[{ required: true, message: "Please enter the organization name" }]}
+          >
+            <Input placeholder="Acme Corp" />
+          </Form.Item>
+
+          <Form.Item label="Organization Email" name="email">
+            <Input type="email" placeholder="contact@acme.com" />
+          </Form.Item>
+
+          <Form.Item label="Phone" name="phone" style={{ marginBottom: 0 }}>
+            <Input placeholder="+1 555 0100" />
+          </Form.Item>
+        </div>
       </div>
-      <p style={{ color: "#888", marginTop: -8, marginBottom: 12 }}>
-        Add one or more users. Each user can have a different role.
-      </p>
 
       <Form.List name="users">
         {(fields, { add, remove }) => (
@@ -156,11 +155,11 @@ export default function CreateOrganization({
               <div
                 key={field.key}
                 style={{
-                  border: "1px solid #f0f0f0",
-                  borderRadius: 8,
+                  border: "1px solid #e8eef5",
+                  borderRadius: 12,
                   padding: 16,
                   marginBottom: 12,
-                  background: "#fafafa",
+                  background: "#ffffff",
                 }}
               >
                 <div
@@ -184,65 +183,68 @@ export default function CreateOrganization({
                   )}
                 </div>
 
-                <Form.Item
-                  {...field}
-                  label="Name"
-                  name={[field.name, "name"]}
-                  rules={[{ required: true, message: "Please enter the name" }]}
-                >
-                  <Input placeholder="Jane Admin" />
-                </Form.Item>
+                <div className="grid gap-x-4 md:grid-cols-2">
+                  <Form.Item
+                    {...field}
+                    label="Name"
+                    name={[field.name, "name"]}
+                    rules={[{ required: true, message: "Please enter the name" }]}
+                  >
+                    <Input placeholder="Jane Admin" />
+                  </Form.Item>
 
-                <Form.Item
-                  {...field}
-                  label="Email"
-                  name={[field.name, "email"]}
-                  rules={[
-                    { required: true, message: "Please enter the email" },
-                    { type: "email", message: "Please enter a valid email" },
-                    {
-                      validator: (_, value) => {
-                        if (!value) return Promise.resolve();
-                        const users = form.getFieldValue("users") || [];
-                        const matches = users.filter(
-                          (user) =>
-                            user?.email &&
-                            user.email.toLowerCase() === value.toLowerCase()
-                        );
-                        if (matches.length > 1) {
-                          return Promise.reject(
-                            new Error("Each user must have a unique email")
+                  <Form.Item
+                    {...field}
+                    label="Email"
+                    name={[field.name, "email"]}
+                    rules={[
+                      { required: true, message: "Please enter the email" },
+                      { type: "email", message: "Please enter a valid email" },
+                      {
+                        validator: (_, value) => {
+                          if (!value) return Promise.resolve();
+                          const users = form.getFieldValue("users") || [];
+                          const matches = users.filter(
+                            (user) =>
+                              user?.email &&
+                              user.email.toLowerCase() === value.toLowerCase()
                           );
-                        }
-                        return Promise.resolve();
+                          if (matches.length > 1) {
+                            return Promise.reject(
+                              new Error("Each user must have a unique email")
+                            );
+                          }
+                          return Promise.resolve();
+                        },
                       },
-                    },
-                  ]}
-                >
-                  <Input type="email" placeholder="user@acme.com" />
-                </Form.Item>
+                    ]}
+                  >
+                    <Input type="email" placeholder="user@acme.com" />
+                  </Form.Item>
 
-                <Form.Item
-                  {...field}
-                  label="Password"
-                  name={[field.name, "password"]}
-                  rules={[
-                    { required: true, message: "Please enter a password" },
-                    { min: 8, message: "Password must be at least 8 characters" },
-                  ]}
-                >
-                  <Input.Password placeholder="Minimum 8 characters" />
-                </Form.Item>
+                  <Form.Item
+                    {...field}
+                    label="Password"
+                    name={[field.name, "password"]}
+                    rules={[
+                      { required: true, message: "Please enter a password" },
+                      { min: 8, message: "Password must be at least 8 characters" },
+                    ]}
+                  >
+                    <Input.Password placeholder="Minimum 8 characters" />
+                  </Form.Item>
 
-                <Form.Item
-                  {...field}
-                  label="Role"
-                  name={[field.name, "role_title"]}
-                  rules={[{ required: true, message: "Please select a role" }]}
-                  extra="Default roles are created for this organization."
-                >
-                  <RoleSelect roleTemplates={roleTemplates} />
-                </Form.Item>
+                  <Form.Item
+                    {...field}
+                    label="Role"
+                    name={[field.name, "role_title"]}
+                    rules={[{ required: true, message: "Please select a role" }]}
+                    extra="Default roles are created for this organization."
+                    style={{ marginBottom: 0 }}
+                  >
+                    <RoleSelect roleTemplates={roleTemplates} />
+                  </Form.Item>
+                </div>
               </div>
             ))}
 

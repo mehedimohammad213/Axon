@@ -127,17 +127,24 @@ const OrganizationViewDrawer = ({
       onClose={onClose}
       placement="right"
       width="min(720px, 92vw)"
-      rootClassName="media-preview-drawer"
+      rootClassName="media-preview-drawer org-form-drawer"
     >
       {loading && !details ? (
         <div className="flex justify-center py-16">
           <Spin size="large" />
         </div>
       ) : (
-        <div className="space-y-5">
-          <div>
+        <div className="space-y-4">
+          <div
+            style={{
+              border: "1px solid #e8eef5",
+              borderRadius: 12,
+              padding: 16,
+              background: "#ffffff",
+            }}
+          >
             <div className="flex flex-wrap items-center gap-2">
-              <span className="rounded-md bg-gray-100 px-2 py-0.5 text-xs font-medium text-gray-500">
+              <span className="rounded-md bg-brand-light px-2 py-0.5 text-xs font-medium text-brand-dark">
                 #{details?.id}
               </span>
               <span
@@ -153,10 +160,17 @@ const OrganizationViewDrawer = ({
             <h2 className="mt-2 text-xl font-semibold text-gray-900">
               {details?.name || "Organization"}
             </h2>
-            <p className="text-sm text-gray-500">{details?.slug}</p>
+            <p className="mb-0 text-sm text-gray-500">{details?.slug}</p>
           </div>
 
-          <div className="rounded-xl border border-gray-200 bg-white p-4 sm:p-5">
+          <div
+            style={{
+              border: "1px solid #e8eef5",
+              borderRadius: 12,
+              padding: 16,
+              background: "#ffffff",
+            }}
+          >
             <dl className="grid gap-4 sm:grid-cols-2">
               <InfoRow label="Name">{details?.name || "—"}</InfoRow>
               <InfoRow label="Slug">{details?.slug || "—"}</InfoRow>
@@ -174,10 +188,7 @@ const OrganizationViewDrawer = ({
               <div className="sm:col-span-2">
                 <InfoRow label="Site key">
                   <Space direction="vertical" size={8} className="w-full">
-                    <Typography.Text
-                      code
-                      className="break-all"
-                    >
+                    <Typography.Text code className="break-all">
                       {details?.site_key || "—"}
                     </Typography.Text>
                     <Space>
@@ -185,6 +196,7 @@ const OrganizationViewDrawer = ({
                         icon={<CopyOutlined />}
                         disabled={!details?.site_key}
                         onClick={copySiteKey}
+                        className="headlessbutton headlessbutton-pill !mr-0"
                       >
                         Copy
                       </Button>
@@ -199,6 +211,7 @@ const OrganizationViewDrawer = ({
                           icon={<ReloadOutlined />}
                           loading={regeneratingKey}
                           danger
+                          className="headlesscancelbutton headlessbutton-pill !mr-0"
                         >
                           Regenerate
                         </Button>
@@ -210,8 +223,14 @@ const OrganizationViewDrawer = ({
             </dl>
           </div>
 
-          <div>
-            <h3 className="mb-3 text-sm font-semibold text-gray-800">Users</h3>
+          <div
+            style={{
+              border: "1px solid #e8eef5",
+              borderRadius: 12,
+              padding: 16,
+              background: "#ffffff",
+            }}
+          >
             <Table
               columns={userColumns}
               dataSource={users}

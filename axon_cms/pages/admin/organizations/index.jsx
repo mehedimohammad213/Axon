@@ -201,7 +201,7 @@ export default function OrganizationsPage() {
         placement="right"
         width="min(720px, 92vw)"
         destroyOnClose
-        rootClassName="media-preview-drawer"
+        rootClassName="media-preview-drawer org-form-drawer"
         footer={
           <div className="flex w-full justify-end">
             <Button
@@ -242,7 +242,7 @@ export default function OrganizationsPage() {
         placement="right"
         width="min(720px, 92vw)"
         destroyOnClose
-        rootClassName="media-preview-drawer"
+        rootClassName="media-preview-drawer org-form-drawer"
         footer={
           <div className="flex w-full justify-end">
             <Button
