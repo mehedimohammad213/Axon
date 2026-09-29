@@ -4,6 +4,7 @@ import React, { useEffect, useState } from "react";
 import { Empty, message, Spin, Pagination, Form } from "antd";
 import { AppstoreOutlined } from "@ant-design/icons";
 import instance from "../../axios";
+import { setPageTitle } from "../../global/constants/pageTitle";
 import CardsHeader, { getCardTabItems } from "../../components/cards/CardsHeader";
 import CardsList from "../../components/cards/CardsList";
 import CreateCardForm from "../../components/cards/CreateCardForm";
@@ -11,6 +12,10 @@ import CardsPreviewModal from "../../components/cards/CardsPreviewModal";
 import { useGlobalRefresh } from "../../src/context/MenuRefreshContext";
 
 const CardsPage = () => {
+  useEffect(() => {
+    setPageTitle("Cards");
+  }, []);
+
   const [loading, setLoading] = useState(false);
   const [cardsData, setCardsData] = useState([]);
   const [filteredCards, setFilteredCards] = useState([]);

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { message, Spin, Form } from "antd";
 import { LeftOutlined, RightOutlined } from "@ant-design/icons";
 import instance from "../../axios";
+import { setPageTitle } from "../../global/constants/pageTitle";
 import SliderList, { getSliderTabItems } from "../../components/slider/SliderList";
 import SliderForm from "../../components/slider/SliderForm";
 import SlidersHeader from "../../components/slider/SlidersHeader";
@@ -10,6 +11,10 @@ import { orderByIds } from "../../components/slider/SliderForm/orderByIds";
 import { useGlobalRefresh } from "../../src/context/MenuRefreshContext";
 
 const Sliders = () => {
+  useEffect(() => {
+    setPageTitle("Sliders");
+  }, []);
+
   const [isFormVisible, setIsFormVisible] = useState(false);
   const [allSliders, setAllSliders] = useState([]);
   const [displayedSliders, setDisplayedSliders] = useState([]);
