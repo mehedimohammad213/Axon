@@ -112,8 +112,8 @@ const CellEditor = ({
   if (isImage) {
     return (
       <div
-        className="flex items-center gap-1.5 px-2 py-1.5 border-b border-r border-gray-300 bg-white"
-        style={{ minWidth: 170, minHeight: 44 }}
+        className="flex shrink-0 items-center gap-1.5 border-b border-r border-gray-300 bg-white px-2 py-1.5"
+        style={{ width: 220, minHeight: 44 }}
       >
         <CellImagePreview value={value} />
         <div className="flex items-center gap-1">
@@ -156,8 +156,8 @@ const CellEditor = ({
 
   return (
     <div
-      className="flex items-stretch border-b border-r border-gray-300 bg-white"
-      style={{ minWidth: 170 }}
+      className="flex shrink-0 items-stretch border-b border-r border-gray-300 bg-white"
+      style={{ width: 220 }}
     >
       <Input
         placeholder={placeholder}
@@ -227,16 +227,46 @@ const SortableRow = ({
       style={style}
       className={`bg-white ${isDragging ? "shadow-lg" : ""}`}
     >
-      <button
-        type="button"
-        className="flex items-center px-2 border-b border-l border-gray-300 bg-gray-50 text-gray-600"
-        style={{ cursor: "grab", touchAction: "none" }}
-        aria-label="Drag row"
-        {...attributes}
-        {...listeners}
-      >
-        <DragOutlined />
-      </button>
+      <div className="sticky left-0 z-10 flex shrink-0 bg-gray-50">
+        <button
+          type="button"
+          className="flex items-center border-b border-l border-gray-300 bg-gray-50 px-2 text-gray-600"
+          style={{ cursor: "grab", touchAction: "none" }}
+          aria-label="Drag row"
+          {...attributes}
+          {...listeners}
+        >
+          <DragOutlined />
+        </button>
+        {rowsCount > 1 && (
+          <div className="flex items-center border-b border-gray-300 bg-gray-50 px-1">
+            <Popconfirm
+              title="Are you sure you want to delete this row?"
+              onConfirm={() => removeRow(rowIndex)}
+              okText="Yes"
+              cancelText="No"
+              okButtonProps={{ danger: true }}
+            >
+              <Tooltip title="Delete row">
+                <Button
+                  type="text"
+                  shape="circle"
+                  icon={<MinusOutlined style={{ fontSize: 12 }} />}
+                  style={{
+                    width: 28,
+                    height: 28,
+                    minWidth: 28,
+                    padding: 0,
+                    border: "1px solid #fecaca",
+                    background: "#fef2f2",
+                    color: "#dc2626",
+                  }}
+                />
+              </Tooltip>
+            </Popconfirm>
+          </div>
+        )}
+      </div>
 
       {headers.map((colObj, colIndex) => (
         <CellEditor
@@ -252,35 +282,6 @@ const SortableRow = ({
           onClearImage={onClearImage}
         />
       ))}
-
-      {rowsCount > 1 && (
-        <div className="flex items-center px-2 border-b border-gray-300">
-          <Popconfirm
-            title="Are you sure you want to delete this row?"
-            onConfirm={() => removeRow(rowIndex)}
-            okText="Yes"
-            cancelText="No"
-            okButtonProps={{ danger: true }}
-          >
-            <Tooltip title="Delete row">
-              <Button
-                type="text"
-                shape="circle"
-                icon={<MinusOutlined style={{ fontSize: 12 }} />}
-                style={{
-                  width: 28,
-                  height: 28,
-                  minWidth: 28,
-                  padding: 0,
-                  border: "1px solid #fecaca",
-                  background: "#fef2f2",
-                  color: "#dc2626",
-                }}
-              />
-            </Tooltip>
-          </Popconfirm>
-        </div>
-      )}
     </div>
   );
 };
@@ -415,11 +416,10 @@ const RowsSection = ({ headers, rows, setRows }) => {
       </Typography.Text>
 
       <div
-        className={`my-4 overflow-hidden rounded-2xl border border-gray-200 bg-gray-50/80 p-3 ${
-          headers.length > 5 ? "overflow-x-auto" : ""
-        }`}
+        className="table-rows-scroll my-4 max-h-[420px] overflow-auto rounded-2xl border border-gray-200 bg-gray-50/80 p-3"
         style={{ maxWidth: "100%" }}
       >
+        <div style={{ width: "max-content", minWidth: "100%" }}>
         <DndContext
           sensors={sensors}
           collisionDetection={closestCenter}
@@ -446,6 +446,7 @@ const RowsSection = ({ headers, rows, setRows }) => {
             ))}
           </SortableContext>
         </DndContext>
+        </div>
       </div>
 
       <div className="flex justify-center">
