@@ -1,6 +1,6 @@
 // TableSelectionModal/PreviewTable.jsx
 
-import React, { useMemo, useState } from "react";
+import React, { useEffect, useMemo, useRef, useState } from "react";
 import { Table, Input, Button, Space, Tooltip } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 import { resolveMediaUrl } from "../../../../utils/mediaUrl";
@@ -73,11 +73,31 @@ const PreviewTable = ({ headers, visibleColumns, rows, filterColumns }) => {
           title: colObj.name,
           dataIndex: String(colIndex),
           key: colObj.id,
+          width: 220,
+          fixed: colIndex === 0 ? "left" : undefined,
           render: (value) => {
             if (isImageCellValue(value)) {
               return <HoverImage value={value} alt={colObj.name} />;
             }
-            return value;
+            if (value == null || value === "") return null;
+            const text = String(value);
+            return (
+              <Tooltip title={text.length > 90 ? text : undefined}>
+                <div
+                  style={{
+                    display: "-webkit-box",
+                    WebkitLineClamp: 3,
+                    WebkitBoxOrient: "vertical",
+                    overflow: "hidden",
+                    whiteSpace: "normal",
+                    wordBreak: "break-word",
+                    lineHeight: 1.4,
+                  }}
+                >
+                  {text}
+                </div>
+              </Tooltip>
+            );
           },
         };
 
@@ -151,7 +171,40 @@ const PreviewTable = ({ headers, visibleColumns, rows, filterColumns }) => {
     });
   }, [rows]);
 
-  return <Table columns={columns} dataSource={dataSource} />;
+  const frameRef = useRef(null);
+  const [scrollY, setScrollY] = useState(320);
+
+  useEffect(() => {
+    const frame = frameRef.current;
+    if (!frame) return undefined;
+
+    const measure = () => {
+      const header = frame.querySelector(".ant-table-header");
+      const headerHeight = header ? header.getBoundingClientRect().height : 48;
+      const next = Math.max(200, Math.floor(frame.clientHeight - headerHeight));
+      setScrollY(next);
+    };
+
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(frame);
+    return () => observer.disconnect();
+  }, [columns.length, dataSource.length]);
+
+  return (
+    <div ref={frameRef} className="table-preview-frame h-full min-h-[280px]">
+      <Table
+        className="table-preview-scroll"
+        columns={columns}
+        dataSource={dataSource}
+        pagination={false}
+        scroll={{
+          x: Math.max(columns.length * 220, 640),
+          y: scrollY,
+        }}
+      />
+    </div>
+  );
 };
 
 export default PreviewTable;

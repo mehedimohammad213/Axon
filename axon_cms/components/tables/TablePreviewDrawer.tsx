@@ -44,11 +44,18 @@ const TablePreviewDrawer = ({ open, onClose, table }) => {
       title={headless.title_en || "Untitled Table"}
       open={open}
       onClose={onClose}
-      width="min(900px, 92vw)"
-      rootClassName="media-preview-drawer org-form-drawer"
+      width="min(1100px, 96vw)"
+      rootClassName="media-preview-drawer org-form-drawer table-preview-drawer"
+      styles={{
+        body: {
+          display: "flex",
+          flexDirection: "column",
+          overflow: "hidden",
+        },
+      }}
     >
-      <div className="space-y-4">
-        <div
+      <div className="flex min-h-0 flex-1 flex-col gap-4">
+        <div className="shrink-0"
           style={{
             border: "1px solid #e8eef5",
             borderRadius: 12,
@@ -78,6 +85,7 @@ const TablePreviewDrawer = ({ open, onClose, table }) => {
         </div>
 
         <div
+          className="flex min-h-0 flex-1 flex-col"
           style={{
             border: "1px solid #e8eef5",
             borderRadius: 12,
@@ -85,9 +93,10 @@ const TablePreviewDrawer = ({ open, onClose, table }) => {
             background: "#ffffff",
           }}
         >
-          <Title level={5} className="!mt-0">
+          <Title level={5} className="!mt-0 shrink-0">
             Preview
           </Title>
+          <div className="min-h-0 flex-1">
           <PreviewTable
             headers={(headless.headers || []).map((name, index) => ({
               id: `preview-h-${index}`,
@@ -100,6 +109,7 @@ const TablePreviewDrawer = ({ open, onClose, table }) => {
             visibleColumns={headless.visibleColumns}
             filterColumns={headless.filterColumns}
           />
+          </div>
         </div>
       </div>
     </Drawer>

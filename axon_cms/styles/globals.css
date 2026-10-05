@@ -71,6 +71,32 @@ body {
 .ant-card-meta,
 .ant-card-cover,
 .ant-list-item,
+.table-preview-scroll .ant-table-body,
+.table-preview-scroll .ant-table-content {
+  scrollbar-gutter: stable;
+  scrollbar-width: thin;
+  scrollbar-color: #64748b #e8eef5;
+}
+
+.table-preview-scroll .ant-table-body::-webkit-scrollbar,
+.table-preview-scroll .ant-table-content::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.table-preview-scroll .ant-table-body::-webkit-scrollbar-thumb,
+.table-preview-scroll .ant-table-content::-webkit-scrollbar-thumb {
+  background: #64748b;
+  border-radius: 999px;
+  border: 2px solid #e8eef5;
+}
+
+.table-preview-scroll .ant-table-body::-webkit-scrollbar-track,
+.table-preview-scroll .ant-table-content::-webkit-scrollbar-track {
+  background: #e8eef5;
+  border-radius: 999px;
+}
+
 .ant-table,
 .ant-table-tbody > tr > td,
 .ant-typography {
