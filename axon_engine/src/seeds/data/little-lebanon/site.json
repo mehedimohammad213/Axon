@@ -1,0 +1,302 @@
+{
+  "bakery": {
+    "name": "Little Lebanon Bakery",
+    "eyebrow": "Lebanese bakery in Bankstown",
+    "tagline": "Fresh manoush, Lebanese pizza, pide, mini pastries, and party-sized bakery favourites on Chapel Rd.",
+    "address": "14B Chapel Rd, Bankstown NSW 2200, Australia",
+    "phoneDisplay": "(02) 9790 1123",
+    "phoneHref": "tel:+61297901123",
+    "mapsHref": "https://maps.app.goo.gl/dgbMYG4rg13rxADCA",
+    "mapsEmbed": "https://www.google.com/maps?q=14B%20Chapel%20Rd%2C%20Bankstown%20NSW%202200%2C%20Australia&output=embed",
+    "instagram": {
+      "handle": "@littlelebanonbakery",
+      "href": "https://www.instagram.com/littlelebanonbakery"
+    },
+    "tiktok": {
+      "label": "TikTok",
+      "href": "https://www.tiktok.com/@little.lebanon.bakery"
+    },
+    "hours": "Call or check Google Maps for today's hours."
+  },
+  "nav": [
+    {
+      "href": "#menu",
+      "label": "Menu"
+    },
+    {
+      "href": "#catering",
+      "label": "Catering"
+    },
+    {
+      "href": "#visit",
+      "label": "Visit"
+    }
+  ],
+  "highlights": [
+    "Oven fresh",
+    "Full menu",
+    "Pickup ready"
+  ],
+  "marquee": [
+    "Manoush",
+    "Oregano",
+    "Labne Wraps",
+    "Meat & Cheese",
+    "Pizza",
+    "Pide",
+    "Mini Pastries",
+    "Party Orders"
+  ],
+  "menu": [
+    {
+      "title": "Manoush",
+      "columns": true,
+      "items": [
+        {
+          "name": "Oregano",
+          "price": "$4"
+        },
+        {
+          "name": "Oregano Brushetta",
+          "price": "$8"
+        },
+        {
+          "name": "Oregano | Veg Wrap",
+          "price": "$8"
+        },
+        {
+          "name": "Oregano | Labne | Veg Wrap",
+          "price": "$10"
+        },
+        {
+          "name": "Oregano | Labne | Veg Pizza",
+          "price": "$12"
+        },
+        {
+          "name": "Labne | Veg Pizza",
+          "price": "$10"
+        },
+        {
+          "name": "Meat",
+          "price": "$10"
+        },
+        {
+          "name": "Cheese",
+          "price": "$10"
+        },
+        {
+          "name": "Cheese | Pepperoni",
+          "price": "$12"
+        },
+        {
+          "name": "Triple Cheese",
+          "price": "$12"
+        },
+        {
+          "name": "Oregano | Cheese",
+          "price": "$10"
+        },
+        {
+          "name": "Meat | Cheese",
+          "price": "$12"
+        },
+        {
+          "name": "Half Oregano | Cheese",
+          "price": "$8"
+        },
+        {
+          "name": "Half Meat | Cheese",
+          "price": "$10"
+        },
+        {
+          "name": "Cheese | Tomato | Olive",
+          "price": "$12"
+        },
+        {
+          "name": "Sujuk | Tomato | Olive",
+          "price": "$14"
+        },
+        {
+          "name": "Meat | Cheese | Cabanossi",
+          "price": "$15"
+        }
+      ]
+    },
+    {
+      "title": "Pizza",
+      "items": [
+        {
+          "name": "Vegetarian Pizza",
+          "price": "$18"
+        },
+        {
+          "name": "Supreme Pizza",
+          "price": "$18"
+        },
+        {
+          "name": "Chicken Pizza",
+          "price": "$18"
+        }
+      ]
+    },
+    {
+      "title": "Pide",
+      "columns": true,
+      "items": [
+        {
+          "name": "Halloumi",
+          "price": "$12"
+        },
+        {
+          "name": "Spinach",
+          "price": "$12"
+        },
+        {
+          "name": "Shanklish",
+          "price": "$12"
+        },
+        {
+          "name": "Spinach & Cheese",
+          "price": "$12"
+        },
+        {
+          "name": "Spinach & Ricotta",
+          "price": "$12"
+        },
+        {
+          "name": "Cheese & Mushroom",
+          "price": "$12"
+        },
+        {
+          "name": "Chicken & Mushroom",
+          "price": "$15"
+        },
+        {
+          "name": "Triple Cheese",
+          "price": "$15"
+        },
+        {
+          "name": "Egg Boat",
+          "price": "$15"
+        },
+        {
+          "name": "Add Cheese",
+          "price": "$2"
+        },
+        {
+          "name": "Add Sujuk",
+          "price": "$3"
+        },
+        {
+          "name": "Foul",
+          "price": "$12"
+        }
+      ]
+    },
+    {
+      "title": "Pastries",
+      "columns": true,
+      "items": [
+        {
+          "name": "Oregano",
+          "price": "$2"
+        },
+        {
+          "name": "Halloumi",
+          "price": "$2.5"
+        },
+        {
+          "name": "Ricotta",
+          "price": "$2.5"
+        },
+        {
+          "name": "Meat",
+          "price": "$2.5"
+        },
+        {
+          "name": "Shanklish",
+          "price": "$2.5"
+        },
+        {
+          "name": "Spinach",
+          "price": "$2.5"
+        },
+        {
+          "name": "Spinach & Cheese",
+          "price": "$2.5"
+        },
+        {
+          "name": "Vegetarian Pizza",
+          "price": "$2.5"
+        },
+        {
+          "name": "Supreme Pizza",
+          "price": "$3"
+        },
+        {
+          "name": "Chicken Pizza",
+          "price": "$3"
+        },
+        {
+          "name": "Pastrami & Cheese",
+          "price": "$3"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "title": "Zaatar Wrap",
+      "text": "A fresh zaatar wrap filled with crisp vegetables.",
+      "image": "/assets/zaatar.jpg",
+      "alt": "Sliced zaatar wrap served with fresh vegetables"
+    },
+    {
+      "title": "Meat & Cheese",
+      "text": "A classic bakery favourite with spiced meat and melted cheese.",
+      "image": "/assets/meat-cheese.jpg",
+      "alt": "Sliced meat and cheese manoush on a wooden serving board"
+    },
+    {
+      "title": "Party Pastries",
+      "text": "Clean trays of mini pastries for family gatherings and events.",
+      "image": "/assets/pastries.jpg",
+      "alt": "Tray of assorted mini Lebanese pastries"
+    },
+    {
+      "title": "Egg Boat & Wraps",
+      "text": "Freshly baked egg boats served with flavour-packed wraps.",
+      "image": "/assets/egg-boat.jpg",
+      "alt": "Egg boat beside fresh vegetable wraps"
+    }
+  ],
+  "partyOptions": [
+    "Mini pastries for gatherings",
+    "Party-sized pastry trays",
+    "Manoush and Lebanese pizza selections",
+    "Bakery favourites prepared for pickup"
+  ],
+  "menuIntro": {
+    "eyebrow": "Full Menu",
+    "title": "A clean menu board for manoush, pizza, pide, and pastries.",
+    "text": "Prices are shown as provided. Menu items and availability may change, so call the bakery for today's options."
+  },
+  "cateringCopy": {
+    "eyebrow": "Catering / Party Orders",
+    "title": "Party-sized Lebanese bakery favourites for gatherings.",
+    "text": "Call Little Lebanon Bakery to ask about availability, quantities, pickup timing, and suitable options for your gathering.",
+    "image": "/assets/tray.jpg",
+    "alt": "Assorted Lebanese mini pastries prepared on a tray",
+    "captionEyebrow": "Made to share",
+    "caption": "Mini pastry trays",
+    "badge": "Call to order"
+  },
+  "visitCopy": {
+    "eyebrow": "Visit / Contact",
+    "title": "Find Little Lebanon Bakery on Chapel Rd in Bankstown.",
+    "text": "Drop in for fresh manoush, Lebanese pizza, mini pastries, wraps, beverages, and party-sized bakery favourites.",
+    "captionEyebrow": "Chapel Rd pickup",
+    "image": "/assets/hero.jpg",
+    "alt": "Bakery counter with Lebanese flatbreads and pastries"
+  }
+}
