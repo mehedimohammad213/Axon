@@ -542,7 +542,7 @@ export async function seed(db: DbContext): Promise<void> {
       status: true,
       created_at: now,
       updated_at: now,
-    });
+    }));
   }
 
   const partyCards: { id: number }[] = [];
@@ -558,7 +558,7 @@ export async function seed(db: DbContext): Promise<void> {
       status: true,
       created_at: now,
       updated_at: now,
-    });
+    }));
   }
 
   const navItems = [];
