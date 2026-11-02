@@ -42,14 +42,76 @@ function publishBakeryAsset(fileName: string) {
   };
 }
 
-function mediaSnapshot(media: BakeryMedia | undefined, fallbackPath: string) {
-  if (!media) return { file_path: fallbackPath, title: fallbackPath };
+function mediaSnapshot(media: BakeryMedia | undefined, fallbackPath: string, alt?: string) {
+  if (!media) return { file_path: fallbackPath, title: alt || fallbackPath };
   return {
     id: media.id,
-    title: media.title,
+    title: alt || media.title,
     file_name: media.file_name,
     file_type: media.file_type,
     file_path: media.file_path,
+  };
+}
+
+function html(value: string) {
+  const trimmed = value.trim();
+  if (!trimmed) return '';
+  return trimmed.includes('<') ? trimmed : `<p>${trimmed}</p>`;
+}
+
+function componentFields(fields: Record<string, unknown>) {
+  return { _mave: fields, _headless: fields };
+}
+
+function titleBlock(id: string, value: string) {
+  return { _id: id, type: 'title', value: html(value) };
+}
+
+function titleDescription(
+  id: string,
+  fields: { eyebrow?: string; title: string; description: string; link?: string; altDescription?: string },
+) {
+  const link = fields.link || '';
+  const external = /^https?:/i.test(link);
+  return {
+    _id: id,
+    type: 'titledescription',
+    ...componentFields({
+      eyebrow: fields.eyebrow || '',
+      title: fields.title,
+      altTitle: fields.eyebrow || '',
+      description: html(fields.description),
+      altDescription: fields.altDescription ? html(fields.altDescription) : '',
+      link,
+      linkType: 'independent',
+      isExternal: external,
+      target: external ? '_blank' : '_self',
+      showAltContent: Boolean(fields.altDescription),
+    }),
+  };
+}
+
+function iconList(id: string, items: { id: number; text: string; altText?: string }[]) {
+  return {
+    _id: id,
+    type: 'iconlist',
+    ...componentFields({
+      items,
+      orientation: 'horizontal',
+      iconSize: 24,
+      iconColor: '#000000',
+      showAltContent: items.some((item) => item.altText),
+    }),
+  };
+}
+
+function mediaBlock(id: string, media: BakeryMedia | undefined, fallbackPath: string, alt?: string) {
+  const snapshot = mediaSnapshot(media, fallbackPath, alt);
+  return {
+    _id: id,
+    type: 'media',
+    id: media?.id,
+    ...componentFields(snapshot),
   };
 }
 type SiteFixture = {
@@ -112,7 +174,6 @@ function field(name: string, label: string, fieldType: string, extra: Record<str
 
 function homePageBody(
   site: SiteFixture,
-  profileId: number,
   featureCards: { id: number }[],
   partyCards: { id: number }[],
   mediaByFile: Record<string, BakeryMedia>,
@@ -123,21 +184,23 @@ function homePageBody(
       title: 'Hero',
       layout: 'hero',
       data: [
-        {
-          _id: 'hero-copy',
-          type: 'titledescription',
-          _mave: {
-            eyebrow: site.bakery.eyebrow,
-            title: site.bakery.name,
-            description: site.bakery.tagline,
-          },
-        },
-        {
-          _id: 'hero-media',
-          type: 'media',
-          id: mediaByFile['hero.jpg']?.id,
-          _mave: mediaSnapshot(mediaByFile['hero.jpg'], '/assets/hero.jpg'),
-        },
+        titleBlock('hero-eyebrow', site.bakery.eyebrow),
+        titleDescription('hero-copy', {
+          eyebrow: site.bakery.eyebrow,
+          title: site.bakery.name,
+          description: site.bakery.tagline,
+          link: '#menu',
+        }),
+        iconList(
+          'hero-highlights',
+          site.highlights.map((label, index) => ({ id: index + 1, text: label })),
+        ),
+        mediaBlock(
+          'hero-media',
+          mediaByFile['hero.jpg'],
+          '/assets/hero.jpg',
+          'Warm Lebanese bakery counter filled with manoush, pastries, and pies',
+        ),
       ],
     },
     {
@@ -145,13 +208,10 @@ function homePageBody(
       title: 'Marquee',
       layout: 'marquee',
       data: [
-        {
-          _id: 'marquee-list',
-          type: 'iconlist',
-          _mave: {
-            items: site.marquee.map((label, index) => ({ id: index + 1, text: label })),
-          },
-        },
+        iconList(
+          'marquee-list',
+          site.marquee.map((label, index) => ({ id: index + 1, text: label })),
+        ),
       ],
     },
     {
@@ -159,29 +219,31 @@ function homePageBody(
       title: 'Menu',
       layout: 'menu',
       data: [
-        {
-          _id: 'menu-copy',
-          type: 'titledescription',
-          _mave: {
-            eyebrow: site.menuIntro.eyebrow,
-            title: site.menuIntro.title,
-            description: site.menuIntro.text,
-          },
-        },
+        titleBlock('menu-eyebrow', site.menuIntro.eyebrow),
+        titleDescription('menu-copy', {
+          eyebrow: site.menuIntro.eyebrow,
+          title: site.menuIntro.title,
+          description: site.menuIntro.text,
+          link: site.bakery.phoneHref,
+        }),
         { _id: 'menu-products', type: 'product', product_type: 'menu-item' },
-        ...site.features.map((feature, index) => ({
-          _id: `feature-card-${featureCards[index]?.id || index}`,
-          type: 'card',
-          id: featureCards[index]?.id,
-          _mave: {
+        ...site.features.map((feature, index) => {
+          const assetName = feature.image.replace(/^\/assets\//, '');
+          const payload = {
             title_en: feature.title,
             description_en: feature.text,
             link_url: feature.image,
-            media_ids: mediaByFile[feature.image.replace(/^\/assets\//, '')]?.id,
-            media_files: mediaSnapshot(mediaByFile[feature.image.replace(/^\/assets\//, '')], feature.image),
+            media_ids: mediaByFile[assetName]?.id,
+            media_files: mediaSnapshot(mediaByFile[assetName], feature.image, feature.alt),
             additional: { image: feature.image, alt: feature.alt },
-          },
-        })),
+          };
+          return {
+            _id: `feature-card-${featureCards[index]?.id || index}`,
+            type: 'card',
+            id: featureCards[index]?.id,
+            ...componentFields(payload),
+          };
+        }),
       ],
     },
     {
@@ -189,26 +251,25 @@ function homePageBody(
       title: 'Catering',
       layout: 'catering',
       data: [
-        {
-          _id: 'catering-copy',
-          type: 'titledescription',
-          _mave: {
-            eyebrow: site.cateringCopy.eyebrow,
-            title: site.cateringCopy.title,
-            description: site.cateringCopy.text,
-          },
-        },
-        {
-          _id: 'catering-media',
-          type: 'media',
-          id: mediaByFile['tray.jpg']?.id,
-          _mave: mediaSnapshot(mediaByFile['tray.jpg'], site.cateringCopy.image),
-        },
+        titleBlock('catering-eyebrow', site.cateringCopy.eyebrow),
+        titleDescription('catering-copy', {
+          eyebrow: site.cateringCopy.eyebrow,
+          title: site.cateringCopy.title,
+          description: site.cateringCopy.text,
+          link: site.bakery.phoneHref,
+        }),
+        mediaBlock('catering-media', mediaByFile['tray.jpg'], site.cateringCopy.image, site.cateringCopy.alt),
+        titleDescription('catering-caption', {
+          eyebrow: site.cateringCopy.badge,
+          title: site.cateringCopy.captionEyebrow,
+          description: site.cateringCopy.caption,
+          link: '#catering',
+        }),
         ...site.partyOptions.map((option, index) => ({
           _id: `party-card-${partyCards[index]?.id || index}`,
           type: 'card',
           id: partyCards[index]?.id,
-          _mave: { title_en: option, description_en: option },
+          ...componentFields({ title_en: option, description_en: option }),
         })),
       ],
     },
@@ -217,27 +278,15 @@ function homePageBody(
       title: 'Visit',
       layout: 'visit',
       data: [
-        {
-          _id: 'visit-copy',
-          type: 'titledescription',
-          _mave: {
-            eyebrow: site.visitCopy.eyebrow,
-            title: site.visitCopy.title,
-            description: site.visitCopy.text,
-          },
-        },
-        {
-          _id: 'visit-profile',
-          type: 'product',
-          id: profileId,
-          product_type: 'restaurant-profile',
-        },
-        {
-          _id: 'visit-media',
-          type: 'media',
-          id: mediaByFile['hero.jpg']?.id,
-          _mave: mediaSnapshot(mediaByFile['hero.jpg'], site.visitCopy.image),
-        },
+        titleBlock('visit-eyebrow', site.visitCopy.eyebrow),
+        titleDescription('visit-copy', {
+          eyebrow: site.visitCopy.eyebrow,
+          title: site.visitCopy.title,
+          description: site.visitCopy.text,
+          altDescription: site.visitCopy.captionEyebrow,
+          link: site.bakery.mapsHref,
+        }),
+        mediaBlock('visit-media', mediaByFile['hero.jpg'], site.visitCopy.image, site.visitCopy.alt),
       ],
     },
     {
@@ -245,23 +294,17 @@ function homePageBody(
       title: 'About',
       layout: 'about',
       data: [
-        { _id: 'about-title', type: 'title', value: '<p>About Little Lebanon Bakery</p>' },
+        titleBlock('about-title', 'About Little Lebanon Bakery'),
         {
           _id: 'about-copy',
           type: 'description',
           value:
             "<p>We bake manoush, Lebanese pizza, pide, and party pastries on Chapel Rd in Bankstown. Call the shop for today's hours and party orders.</p>",
         },
-        {
-          _id: 'about-list',
-          type: 'iconlist',
-          _mave: {
-            items: [
-              { id: 1, text: 'Oven-fresh manoush', altText: 'Oregano, cheese, meat, and wraps.' },
-              { id: 2, text: 'Party trays', altText: 'Mini pastries prepared for pickup.' },
-            ],
-          },
-        },
+        iconList('about-list', [
+          { id: 1, text: 'Oven-fresh manoush', altText: 'Oregano, cheese, meat, and wraps.' },
+          { id: 2, text: 'Party trays', altText: 'Mini pastries prepared for pickup.' },
+        ]),
       ],
     },
   ];
@@ -273,18 +316,13 @@ function footerPageBody(site: SiteFixture, logo: BakeryMedia) {
       _id: 'footer-brand',
       title: 'Brand',
       data: [
-        {
-          _id: 'footer-logo',
-          type: 'media',
-          id: logo.id,
-          _mave: mediaSnapshot(logo, '/assets/logo.png'),
-        },
-        { _id: 'footer-title', type: 'title', value: `<p>${site.bakery.name}</p>` },
+        mediaBlock('footer-logo', logo, '/assets/logo.png'),
+        titleBlock('footer-title', site.bakery.name),
         {
           _id: 'footer-address',
           type: 'description',
-          value: `<p>${site.bakery.address}</p>`,
-          _mave: { altText: 'Address' },
+          value: html(site.bakery.address),
+          ...componentFields({ altText: 'Address' }),
         },
       ],
     },
@@ -292,57 +330,115 @@ function footerPageBody(site: SiteFixture, logo: BakeryMedia) {
       _id: 'footer-contact',
       title: 'Contact',
       data: [
-        {
-          _id: 'footer-phone',
-          type: 'titledescription',
-          _mave: { title: 'Phone', description: `<p>${site.bakery.phoneDisplay}</p>` },
-        },
-        {
-          _id: 'footer-hours',
-          type: 'titledescription',
-          _mave: { title: 'Hours', description: `<p>${site.bakery.hours}</p>` },
-        },
+        titleDescription('footer-phone', {
+          title: 'Phone',
+          description: site.bakery.phoneDisplay,
+          link: site.bakery.phoneHref,
+        }),
+        titleDescription('footer-hours', {
+          title: 'Hours',
+          description: site.bakery.hours,
+          link: '#visit',
+        }),
+        titleDescription('footer-directions', {
+          title: 'Directions',
+          description: site.bakery.mapsEmbed,
+          link: site.bakery.mapsHref,
+        }),
       ],
     },
     {
       _id: 'footer-links',
       title: 'Links',
       data: [
-        {
-          _id: 'footer-menu',
-          type: 'iconlist',
-          _mave: {
-            items: [
-              ...site.nav.map((item, index) => ({ id: index + 1, text: item.label, altText: item.href })),
-              { id: site.nav.length + 1, text: 'About', altText: '#about' },
-            ],
-          },
-        },
+        iconList('footer-menu', [
+          ...site.nav.map((item, index) => ({ id: index + 1, text: item.label, altText: item.href })),
+          { id: site.nav.length + 1, text: 'About', altText: '#about' },
+        ]),
       ],
     },
     {
       _id: 'footer-bottom',
       title: 'Bottom',
       data: [
-        {
-          _id: 'footer-social',
-          type: 'iconlist',
-          _mave: {
-            items: [
-              { id: 1, text: 'Instagram', altText: site.bakery.instagram.href },
-              { id: 2, text: site.bakery.tiktok.label, altText: site.bakery.tiktok.href },
-            ],
-          },
-        },
+        iconList('footer-social', [
+          { id: 1, text: site.bakery.instagram.handle, altText: site.bakery.instagram.href },
+          { id: 2, text: site.bakery.tiktok.label, altText: site.bakery.tiktok.href },
+        ]),
       ],
     },
   ];
 }
 
+async function publishSitePages(
+  db: DbContext,
+  orgId: number,
+  site: SiteFixture,
+  featureCards: { id: number }[],
+  partyCards: { id: number }[],
+  mediaByFile: Record<string, BakeryMedia>,
+) {
+  const now = new Date();
+  const logo = mediaByFile['logo.png'];
+  const home = await db.findOne('pages', { organization_id: orgId, slug: 'home', type: 'Page' });
+  const footer = await db.findOne('pages', { organization_id: orgId, slug: 'footer', type: 'Footer' });
+  if (home) {
+    await db.updateById('pages', home.id, {
+      page_name_en: site.bakery.name,
+      page_name_bn: site.bakery.name,
+      body: JSON.stringify(homePageBody(site, featureCards, partyCards, mediaByFile)),
+      updated_at: now,
+    });
+  }
+  if (footer && logo) {
+    await db.updateById('pages', footer.id, {
+      page_name_en: site.bakery.name,
+      page_name_bn: site.bakery.name,
+      body: JSON.stringify(footerPageBody(site, logo)),
+      updated_at: now,
+    });
+  }
+
+  const menuItems = await db.findAll('menu_items', { organization_id: orgId });
+  const instagram = menuItems.find((item) => item.link === site.bakery.instagram.href);
+  if (instagram && instagram.title !== site.bakery.instagram.handle) {
+    await db.updateById('menu_items', instagram.id, {
+      title: site.bakery.instagram.handle,
+      title_bn: site.bakery.instagram.handle,
+      updated_at: now,
+    });
+  }
+
+  await db.remove('products', { organization_id: orgId, slug: 'restaurant-profile' });
+  await db.remove('product_types', { organization_id: orgId, slug: 'restaurant-profile' });
+}
+
 export async function seed(db: DbContext): Promise<void> {
   const existing = await db.findOne('organizations', { slug: ORG_SLUG });
   if (existing) {
-    console.log(`Little Lebanon Bakery already seeded. Site key: ${existing.site_key}`);
+    const site = loadFixture();
+    const mediaRows = await db.findAll('media', { organization_id: existing.id });
+    const mediaByFile: Record<string, BakeryMedia> = {};
+    for (const row of mediaRows) {
+      const file = String(row.file_name || '').replace(/^little-lebanon-/, '');
+      if (!BAKERY_ASSETS.some((asset) => asset.file === file)) continue;
+      mediaByFile[file] = {
+        id: row.id,
+        title: row.title,
+        file_name: row.file_name,
+        file_type: row.file_type,
+        file_path: row.file_path,
+      };
+    }
+    const cards = await db.findAll('cards', { organization_id: existing.id });
+    const featureCards = cards
+      .filter((card) => card.page_name === 'feature')
+      .sort((a, b) => Number(a.id) - Number(b.id));
+    const partyCards = cards
+      .filter((card) => card.page_name === 'party')
+      .sort((a, b) => Number(a.id) - Number(b.id));
+    await publishSitePages(db, existing.id, site, featureCards, partyCards, mediaByFile);
+    console.log(`Little Lebanon Bakery home page and footer now hold the restaurant profile. Site key: ${existing.site_key}`);
     return;
   }
 
@@ -372,49 +468,6 @@ export async function seed(db: DbContext): Promise<void> {
   });
 
   const categories = site.menu.map((category) => category.title);
-  const profileType = await db.insert('product_types', {
-    organization_id: org.id,
-    name: 'Restaurant Profile',
-    slug: 'restaurant-profile',
-    description: 'Homepage copy, contact details, and section text for the restaurant website.',
-    field_schema: JSON.stringify([
-      field('eyebrow', 'Eyebrow', 'text'),
-      field('tagline', 'Tagline', 'textarea'),
-      field('address', 'Address', 'textarea'),
-      field('phone_display', 'Phone', 'text'),
-      field('phone_href', 'Phone link', 'text'),
-      field('maps_href', 'Maps link', 'url'),
-      field('maps_embed', 'Maps embed URL', 'url'),
-      field('instagram_handle', 'Instagram handle', 'text'),
-      field('instagram_href', 'Instagram URL', 'url'),
-      field('tiktok_label', 'TikTok label', 'text'),
-      field('tiktok_href', 'TikTok URL', 'url'),
-      field('hours', 'Hours', 'textarea'),
-      field('highlights', 'Highlights (one per line)', 'textarea'),
-      field('marquee', 'Marquee words (one per line)', 'textarea'),
-      field('menu_eyebrow', 'Menu eyebrow', 'text'),
-      field('menu_title', 'Menu title', 'text'),
-      field('menu_text', 'Menu text', 'textarea'),
-      field('catering_eyebrow', 'Catering eyebrow', 'text'),
-      field('catering_title', 'Catering title', 'text'),
-      field('catering_text', 'Catering text', 'textarea'),
-      field('catering_image', 'Catering image', 'text'),
-      field('catering_alt', 'Catering image alt', 'text'),
-      field('catering_caption_eyebrow', 'Catering caption eyebrow', 'text'),
-      field('catering_caption', 'Catering caption', 'text'),
-      field('catering_badge', 'Catering badge', 'text'),
-      field('visit_eyebrow', 'Visit eyebrow', 'text'),
-      field('visit_title', 'Visit title', 'text'),
-      field('visit_text', 'Visit text', 'textarea'),
-      field('visit_caption_eyebrow', 'Visit caption eyebrow', 'text'),
-      field('visit_image', 'Visit image', 'text'),
-      field('visit_alt', 'Visit image alt', 'text'),
-    ]),
-    status: true,
-    created_at: now,
-    updated_at: now,
-  });
-
   const menuType = await db.insert('product_types', {
     organization_id: org.id,
     name: 'Menu Item',
@@ -427,52 +480,6 @@ export async function seed(db: DbContext): Promise<void> {
       field('price', 'Price', 'text'),
       field('wide', 'Two columns', 'checkbox'),
     ]),
-    status: true,
-    created_at: now,
-    updated_at: now,
-  });
-
-  const profileProduct = await db.insert('products', {
-    organization_id: org.id,
-    product_type_id: profileType.id,
-    title: site.bakery.name,
-    slug: 'restaurant-profile',
-    description: site.bakery.tagline,
-    field_values: JSON.stringify({
-      eyebrow: site.bakery.eyebrow,
-      tagline: site.bakery.tagline,
-      address: site.bakery.address,
-      phone_display: site.bakery.phoneDisplay,
-      phone_href: site.bakery.phoneHref,
-      maps_href: site.bakery.mapsHref,
-      maps_embed: site.bakery.mapsEmbed,
-      instagram_handle: site.bakery.instagram.handle,
-      instagram_href: site.bakery.instagram.href,
-      tiktok_label: site.bakery.tiktok.label,
-      tiktok_href: site.bakery.tiktok.href,
-      hours: site.bakery.hours,
-      highlights: site.highlights.join('\n'),
-      marquee: site.marquee.join('\n'),
-      menu_eyebrow: site.menuIntro.eyebrow,
-      menu_title: site.menuIntro.title,
-      menu_text: site.menuIntro.text,
-      catering_eyebrow: site.cateringCopy.eyebrow,
-      catering_title: site.cateringCopy.title,
-      catering_text: site.cateringCopy.text,
-      catering_image: site.cateringCopy.image,
-      catering_alt: site.cateringCopy.alt,
-      catering_caption_eyebrow: site.cateringCopy.captionEyebrow,
-      catering_caption: site.cateringCopy.caption,
-      catering_badge: site.cateringCopy.badge,
-      visit_eyebrow: site.visitCopy.eyebrow,
-      visit_title: site.visitCopy.title,
-      visit_text: site.visitCopy.text,
-      visit_caption_eyebrow: site.visitCopy.captionEyebrow,
-      visit_image: site.visitCopy.image,
-      visit_alt: site.visitCopy.alt,
-    }),
-    media_ids: JSON.stringify([]),
-    additional: JSON.stringify({}),
     status: true,
     created_at: now,
     updated_at: now,
@@ -587,8 +594,8 @@ export async function seed(db: DbContext): Promise<void> {
   });
   const instagramItem = await db.insert('menu_items', {
     organization_id: org.id,
-    title: 'Instagram',
-    title_bn: 'Instagram',
+    title: site.bakery.instagram.handle,
+    title_bn: site.bakery.instagram.handle,
     link: site.bakery.instagram.href,
     parent_id: null,
     created_at: now,
@@ -680,7 +687,7 @@ export async function seed(db: DbContext): Promise<void> {
       image: null,
       imageAlt: null,
     }),
-    body: JSON.stringify(homePageBody(site, profileProduct.id, featureCards, partyCards, mediaByFile)),
+    body: JSON.stringify(homePageBody(site, featureCards, partyCards, mediaByFile)),
     additional: JSON.stringify([
       {
         pageType: 'Page',
