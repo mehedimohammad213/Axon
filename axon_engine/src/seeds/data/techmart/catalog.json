@@ -1,0 +1,251 @@
+{
+  "store": {
+    "name": "TechMart",
+    "eyebrow": "IT & Electronics",
+    "tagline": "Laptops, mobiles, cameras, and networking gear — curated and ready to ship.",
+    "address": "12 Gulshan Avenue, Dhaka 1212",
+    "phoneDisplay": "+880 1700-000000",
+    "phoneHref": "tel:+8801700000000",
+    "email": "hello@techmart.local",
+    "hours": "Sat–Thu 10:00–20:00 · Fri closed"
+  },
+  "nav": [
+    { "href": "/", "label": "Home" },
+    { "href": "/shop", "label": "Shop" },
+    { "href": "/shop?type=laptop", "label": "Laptops" },
+    { "href": "/shop?type=mobile", "label": "Mobiles" },
+    { "href": "/shop?type=camera", "label": "Cameras" },
+    { "href": "/shop?type=router", "label": "Routers" }
+  ],
+  "highlights": [
+    "Genuine warranty",
+    "Same-day Dhaka delivery",
+    "Expert setup support"
+  ],
+  "types": [
+    {
+      "name": "Laptop",
+      "slug": "laptop",
+      "description": "Notebooks for work, study, and creative production.",
+      "fields": ["brand", "processor", "ram", "storage", "display", "sku", "stock", "price"]
+    },
+    {
+      "name": "Mobile",
+      "slug": "mobile",
+      "description": "Smartphones with the specs that matter day to day.",
+      "fields": ["brand", "processor", "ram", "storage", "display", "sku", "stock", "price"]
+    },
+    {
+      "name": "Camera",
+      "slug": "camera",
+      "description": "Mirrorless and compact cameras for photo and video.",
+      "fields": ["brand", "sensor", "resolution", "lens", "sku", "stock", "price"]
+    },
+    {
+      "name": "Router",
+      "slug": "router",
+      "description": "Wi-Fi routers and mesh systems for home and office.",
+      "fields": ["brand", "wifi", "speed", "ports", "sku", "stock", "price"]
+    }
+  ],
+  "products": [
+    {
+      "type": "laptop",
+      "title": "NovaBook Pro 14",
+      "slug": "novabook-pro-14",
+      "description": "Thin magnesium chassis with all-day battery and a sharp 14-inch OLED panel for editing and meetings.",
+      "image": "laptop-pro.svg",
+      "values": {
+        "brand": "Nova",
+        "processor": "Intel Core Ultra 7",
+        "ram": "32 GB LPDDR5X",
+        "storage": "1 TB SSD",
+        "display": "14\" 2.8K OLED 120Hz",
+        "sku": "NB-PRO-14",
+        "stock": 18,
+        "price": { "amount": 189999, "currency": "BDT" }
+      }
+    },
+    {
+      "type": "laptop",
+      "title": "PulseAir 15",
+      "slug": "pulseair-15",
+      "description": "Everyday productivity laptop with a bright IPS display and quiet cooling.",
+      "image": "laptop-air.svg",
+      "values": {
+        "brand": "Pulse",
+        "processor": "AMD Ryzen 7 7730U",
+        "ram": "16 GB DDR4",
+        "storage": "512 GB SSD",
+        "display": "15.6\" FHD IPS",
+        "sku": "PA-15-512",
+        "stock": 24,
+        "price": { "amount": 89999, "currency": "BDT" }
+      }
+    },
+    {
+      "type": "laptop",
+      "title": "Forge Gaming 16",
+      "slug": "forge-gaming-16",
+      "description": "High-refresh gaming notebook with discrete graphics for competitive play and content creation.",
+      "image": "laptop-gaming.svg",
+      "values": {
+        "brand": "Forge",
+        "processor": "Intel Core i7-14700HX",
+        "ram": "32 GB DDR5",
+        "storage": "1 TB SSD",
+        "display": "16\" QHD 240Hz",
+        "sku": "FG-16-1T",
+        "stock": 9,
+        "price": { "amount": 249999, "currency": "BDT" }
+      }
+    },
+    {
+      "type": "mobile",
+      "title": "Orbit X1",
+      "slug": "orbit-x1",
+      "description": "Flagship phone with a bright AMOLED screen, fast charging, and dual stereo speakers.",
+      "image": "mobile-flagship.svg",
+      "values": {
+        "brand": "Orbit",
+        "processor": "Snapdragon 8 Gen 3",
+        "ram": "12 GB",
+        "storage": "256 GB",
+        "display": "6.7\" AMOLED 120Hz",
+        "sku": "OR-X1-256",
+        "stock": 40,
+        "price": { "amount": 99999, "currency": "BDT" }
+      }
+    },
+    {
+      "type": "mobile",
+      "title": "Pixelate SE",
+      "slug": "pixelate-se",
+      "description": "Compact daily driver with clean software and excellent camera tuning.",
+      "image": "mobile-se.svg",
+      "values": {
+        "brand": "Pixelate",
+        "processor": "Tensor G3",
+        "ram": "8 GB",
+        "storage": "128 GB",
+        "display": "6.1\" OLED 90Hz",
+        "sku": "PX-SE-128",
+        "stock": 55,
+        "price": { "amount": 54999, "currency": "BDT" }
+      }
+    },
+    {
+      "type": "mobile",
+      "title": "Aura Note 5G",
+      "slug": "aura-note-5g",
+      "description": "Large battery phone for streaming, note-taking, and long travel days.",
+      "image": "mobile-note.svg",
+      "values": {
+        "brand": "Aura",
+        "processor": "Dimensity 7020",
+        "ram": "8 GB",
+        "storage": "256 GB",
+        "display": "6.67\" AMOLED 120Hz",
+        "sku": "AU-NOTE-256",
+        "stock": 33,
+        "price": { "amount": 32999, "currency": "BDT" }
+      }
+    },
+    {
+      "type": "camera",
+      "title": "Lumen Mirrorless A7",
+      "slug": "lumen-mirrorless-a7",
+      "description": "Full-frame hybrid camera with in-body stabilization and 4K60 video.",
+      "image": "camera-mirrorless.svg",
+      "values": {
+        "brand": "Lumen",
+        "sensor": "Full-frame CMOS",
+        "resolution": "33 MP",
+        "lens": "FE 28-70mm kit",
+        "sku": "LM-A7-KIT",
+        "stock": 12,
+        "price": { "amount": 219999, "currency": "BDT" }
+      }
+    },
+    {
+      "type": "camera",
+      "title": "Vista Compact Z",
+      "slug": "vista-compact-z",
+      "description": "Pocket travel camera with a versatile zoom and strong low-light performance.",
+      "image": "camera-compact.svg",
+      "values": {
+        "brand": "Vista",
+        "sensor": "1\" CMOS",
+        "resolution": "20 MP",
+        "lens": "24-200mm equiv.",
+        "sku": "VS-Z-20",
+        "stock": 21,
+        "price": { "amount": 74999, "currency": "BDT" }
+      }
+    },
+    {
+      "type": "camera",
+      "title": "ActionCam Rugged 4K",
+      "slug": "actioncam-rugged-4k",
+      "description": "Waterproof action camera for sports, travel vlogs, and helmet mounts.",
+      "image": "camera-action.svg",
+      "values": {
+        "brand": "ActionCam",
+        "sensor": "1/1.9\" CMOS",
+        "resolution": "24 MP / 4K60",
+        "lens": "Ultra-wide fixed",
+        "sku": "AC-R4K",
+        "stock": 28,
+        "price": { "amount": 42999, "currency": "BDT" }
+      }
+    },
+    {
+      "type": "router",
+      "title": "MeshLink AX5400",
+      "slug": "meshlink-ax5400",
+      "description": "Tri-band Wi-Fi 6 mesh starter kit that covers multi-floor apartments cleanly.",
+      "image": "router-mesh.svg",
+      "values": {
+        "brand": "MeshLink",
+        "wifi": "Wi-Fi 6 (802.11ax)",
+        "speed": "Up to 5400 Mbps",
+        "ports": "2.5G WAN + 3× Gigabit",
+        "sku": "ML-AX5400",
+        "stock": 30,
+        "price": { "amount": 24999, "currency": "BDT" }
+      }
+    },
+    {
+      "type": "router",
+      "title": "NetGate Pro Wi-Fi 7",
+      "slug": "netgate-pro-wifi-7",
+      "description": "Wi-Fi 7 gateway for creators and small offices that need low-latency multi-gig backhaul.",
+      "image": "router-pro.svg",
+      "values": {
+        "brand": "NetGate",
+        "wifi": "Wi-Fi 7 (802.11be)",
+        "speed": "Up to 10 Gbps aggregate",
+        "ports": "10G WAN/LAN + 4× 2.5G",
+        "sku": "NG-W7-PRO",
+        "stock": 14,
+        "price": { "amount": 39999, "currency": "BDT" }
+      }
+    },
+    {
+      "type": "router",
+      "title": "HomeLink Dual Band",
+      "slug": "homelink-dual-band",
+      "description": "Affordable dual-band router for apartments, student housing, and guest Wi-Fi.",
+      "image": "router-home.svg",
+      "values": {
+        "brand": "HomeLink",
+        "wifi": "Wi-Fi 5 (802.11ac)",
+        "speed": "Up to 1200 Mbps",
+        "ports": "4× Gigabit LAN",
+        "sku": "HL-AC1200",
+        "stock": 60,
+        "price": { "amount": 3999, "currency": "BDT" }
+      }
+    }
+  ]
+}
