@@ -80,11 +80,68 @@ function mediaPath(fileName: string) {
   return `media/techmart-${fileName}`;
 }
 
+const PRODUCT_LABELS: Record<string, string> = {
+  'laptop-pro.svg': 'NovaBook Pro 14',
+  'laptop-air.svg': 'PulseAir 15',
+  'laptop-gaming.svg': 'Forge Gaming 16',
+  'mobile-flagship.svg': 'Orbit X1',
+  'mobile-se.svg': 'Pixelate SE',
+  'mobile-note.svg': 'Aura Note 5G',
+  'camera-mirrorless.svg': 'Lumen A7',
+  'camera-compact.svg': 'Vista Compact Z',
+  'camera-action.svg': 'ActionCam 4K',
+  'router-mesh.svg': 'MeshLink AX5400',
+  'router-pro.svg': 'NetGate Wi-Fi 7',
+  'router-home.svg': 'HomeLink Dual Band',
+};
+
+const PRODUCT_COLORS: Record<string, [string, string, string]> = {
+  'laptop-pro.svg': ['#E8EEF3', '#1B2A3A', '#1FA7A0'],
+  'laptop-air.svg': ['#EDF2F6', '#274056', '#4F7CAC'],
+  'laptop-gaming.svg': ['#1A1423', '#2A1F3D', '#7B2CBF'],
+  'mobile-flagship.svg': ['#E9F2F1', '#102A2A', '#1FA7A0'],
+  'mobile-se.svg': ['#F3F0EA', '#2C241B', '#D97706'],
+  'mobile-note.svg': ['#EEF1F8', '#1E293B', '#3B82F6'],
+  'camera-mirrorless.svg': ['#ECE7E1', '#2F2A26', '#6B7280'],
+  'camera-compact.svg': ['#E8F0F5', '#0F766E', '#99F6E4'],
+  'camera-action.svg': ['#F3F4F6', '#111827', '#F59E0B'],
+  'router-mesh.svg': ['#EAF2FF', '#1D4ED8', '#DBEAFE'],
+  'router-pro.svg': ['#F5F3FF', '#5B21B6', '#DDD6FE'],
+  'router-home.svg': ['#ECFDF5', '#047857', '#A7F3D0'],
+};
+
+function buildSvg(fileName: string): string {
+  if (fileName === 'logo.svg') {
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="320" height="80" viewBox="0 0 320 80"><rect width="320" height="80" rx="12" fill="#0B1F33"/><rect x="16" y="18" width="44" height="44" rx="10" fill="#1FA7A0"/><path d="M28 40h20M38 30v20" stroke="#E8F7F6" stroke-width="3" stroke-linecap="round"/><text x="78" y="48" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#F4F8FB">TechMart</text></svg>`;
+  }
+
+  if (fileName === 'hero.svg') {
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#0B1F33"/><stop offset="55%" stop-color="#12324D"/><stop offset="100%" stop-color="#1FA7A0"/></linearGradient></defs><rect width="1600" height="900" fill="url(#g)"/><circle cx="1180" cy="220" r="180" fill="#F4C95F" opacity="0.18"/><rect x="180" y="240" width="420" height="280" rx="24" fill="#F4F8FB" opacity="0.12"/><rect x="640" y="300" width="220" height="380" rx="28" fill="#F4F8FB" opacity="0.14"/><rect x="920" y="360" width="300" height="180" rx="20" fill="#F4F8FB" opacity="0.12"/><text x="180" y="180" font-family="Arial,sans-serif" font-size="64" font-weight="700" fill="#F4F8FB">IT products, ready to ship</text><text x="180" y="240" font-family="Arial,sans-serif" font-size="28" fill="#C9D7E3">Laptops · Mobiles · Cameras · Routers</text></svg>`;
+  }
+
+  const label = PRODUCT_LABELS[fileName] || fileName.replace(/\.svg$/, '');
+  const [bg, dark, accent] = PRODUCT_COLORS[fileName] || ['#E8EEF3', '#1B2A3A', '#1FA7A0'];
+
+  if (fileName.startsWith('mobile-')) {
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="${bg}"/><rect x="300" y="60" width="200" height="420" rx="28" fill="${dark}"/><rect x="315" y="90" width="170" height="350" rx="12" fill="${accent}"/><text x="400" y="560" text-anchor="middle" font-family="Arial" font-size="28" fill="${dark}">${label}</text></svg>`;
+  }
+  if (fileName.startsWith('camera-')) {
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="${bg}"/><rect x="180" y="180" width="440" height="260" rx="28" fill="${dark}"/><circle cx="400" cy="310" r="90" fill="${accent}"/><circle cx="400" cy="310" r="50" fill="#111827"/><text x="400" y="540" text-anchor="middle" font-family="Arial" font-size="28" fill="${dark}">${label}</text></svg>`;
+  }
+  if (fileName.startsWith('router-')) {
+    return `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="${bg}"/><rect x="200" y="230" width="400" height="150" rx="20" fill="${dark}"/><circle cx="320" cy="305" r="14" fill="${accent}"/><circle cx="400" cy="305" r="14" fill="${accent}"/><circle cx="480" cy="305" r="14" fill="${accent}"/><text x="400" y="520" text-anchor="middle" font-family="Arial" font-size="28" fill="${dark}">${label}</text></svg>`;
+  }
+
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600"><rect width="800" height="600" fill="${bg}"/><rect x="140" y="120" width="520" height="320" rx="18" fill="${dark}"/><rect x="160" y="140" width="480" height="260" rx="8" fill="${accent}"/><rect x="100" y="450" width="600" height="28" rx="8" fill="${dark}"/><text x="400" y="560" text-anchor="middle" font-family="Arial" font-size="28" fill="${dark}">${label}</text></svg>`;
+}
+
 function ensureMediaFile(fileName: string) {
   const stored = `techmart-${fileName}`;
-  const dest = path.resolve(__dirname, '../../uploads/media', stored);
+  const destDir = path.resolve(__dirname, '../../uploads/media');
+  const dest = path.join(destDir, stored);
+  fs.mkdirSync(destDir, { recursive: true });
   if (!fs.existsSync(dest)) {
-    throw new Error(`Missing TechMart media asset: ${dest}`);
+    fs.writeFileSync(dest, buildSvg(fileName), 'utf8');
   }
   return {
     file_name: stored,
